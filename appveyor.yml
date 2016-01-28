@@ -1,0 +1,32 @@
+version: 1.0.{build}
+configuration: Release
+
+init:
+- if "%APPVEYOR_REPO_NAME%" == "JeremyAnsel/JeremyAnsel.DirectX" if "%APPVEYOR_REPO_BRANCH%"=="master" if not defined APPVEYOR_PULL_REQUEST_NUMBER set DEPLOY=True
+
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: 1.0.0
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+
+nuget:
+  disable_publish_on_pr: true
+
+before_build:
+- nuget restore JeremyAnsel.DirectX\JeremyAnsel.DirectX.sln
+
+build:
+  project: JeremyAnsel.DirectX\JeremyAnsel.DirectX.sln
+  publish_nuget: true
+  verbosity: minimal
+
+deploy:
+- provider: NuGet
+  api_key:
+    secure: 8B7BSDgsTQqRD0xPzQjGcUFHitr2KvJHpFUlZQIPIcj4la6FAVxUzfj+7FVsb4o/
+  skip_symbols: true
+  on:
+    branch: master
+    DEPLOY: True
