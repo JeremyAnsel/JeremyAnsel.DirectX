@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="VersionHistory-v1_0" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        Release notes for the latest version 1.0.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>DirectXMath</para>
+          </listItem>
+
+          <listItem>
+            <para>DXGI</para>
+          </listItem>
+
+          <listItem>
+            <para>DirectWrite</para>
+          </listItem>
+
+          <listItem>
+            <para>Direct2D</para>
+          </listItem>
+
+          <listItem>
+            <para>Direct3D 10</para>
+          </listItem>
+
+          <listItem>
+            <para>Direct3D 11</para>
+          </listItem>
+
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="VersionHistory" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

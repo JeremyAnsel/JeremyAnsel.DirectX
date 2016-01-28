@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="Welcome" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        This is the documentation for JeremyAnsel.DirectX.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Description</title>
+      <content>
+        <para>
+          JeremyAnsel.DirectX contains managed wrappers around DirectX APIs.
+        </para>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="VersionHistory" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

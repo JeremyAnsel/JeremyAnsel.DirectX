@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="Welcome" visible="True" isDefault="true" title="Welcome">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="Welcome" />
+    </HelpKeywords>
+  </Topic>
+  <Topic id="VersionHistory" visible="True" isExpanded="true" title="Version History">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="version, history" />
+    </HelpKeywords>
+    <Topic id="VersionHistory-v1_0" visible="True" isSelected="true" title="Version 1.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 1.0" />
+      </HelpKeywords>
+    </Topic>
+  </Topic>
+</Topics>
