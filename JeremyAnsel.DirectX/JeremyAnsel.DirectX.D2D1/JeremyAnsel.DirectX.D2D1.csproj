@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D1A4809-44C5-47B4-99B0-197140A8CC5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JeremyAnsel.DirectX.D2D1</RootNamespace>
+    <AssemblyName>JeremyAnsel.DirectX.D2D1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\JeremyAnsel.DirectX.D2D1.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\JeremyAnsel.DirectX.D2D1.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\sgKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComInterfaces\ID2D1Bitmap.cs" />
+    <Compile Include="ComInterfaces\ID2D1BitmapBrush.cs" />
+    <Compile Include="ComInterfaces\ID2D1BitmapRenderTarget.cs" />
+    <Compile Include="ComInterfaces\ID2D1Brush.cs" />
+    <Compile Include="ComInterfaces\ID2D1DCRenderTarget.cs" />
+    <Compile Include="ComInterfaces\ID2D1DrawingStateBlock.cs" />
+    <Compile Include="ComInterfaces\ID2D1EllipseGeometry.cs" />
+    <Compile Include="ComInterfaces\ID2D1Factory.cs" />
+    <Compile Include="ComInterfaces\ID2D1GdiInteropRenderTarget.cs" />
+    <Compile Include="ComInterfaces\ID2D1Geometry.cs" />
+    <Compile Include="ComInterfaces\ID2D1GeometryGroup.cs" />
+    <Compile Include="ComInterfaces\ID2D1GeometrySink.cs" />
+    <Compile Include="ComInterfaces\ID2D1GradientStopCollection.cs" />
+    <Compile Include="ComInterfaces\ID2D1HwndRenderTarget.cs" />
+    <Compile Include="ComInterfaces\ID2D1Image.cs" />
+    <Compile Include="ComInterfaces\ID2D1Layer.cs" />
+    <Compile Include="ComInterfaces\ID2D1LinearGradientBrush.cs" />
+    <Compile Include="ComInterfaces\ID2D1Mesh.cs" />
+    <Compile Include="ComInterfaces\ID2D1PathGeometry.cs" />
+    <Compile Include="ComInterfaces\ID2D1RadialGradientBrush.cs" />
+    <Compile Include="ComInterfaces\ID2D1RectangleGeometry.cs" />
+    <Compile Include="ComInterfaces\ID2D1RenderTarget.cs" />
+    <Compile Include="ComInterfaces\ID2D1Resource.cs" />
+    <Compile Include="ComInterfaces\ID2D1RoundedRectangleGeometry.cs" />
+    <Compile Include="ComInterfaces\ID2D1SimplifiedGeometrySink.cs" />
+    <Compile Include="ComInterfaces\ID2D1SolidColorBrush.cs" />
+    <Compile Include="ComInterfaces\ID2D1StrokeStyle.cs" />
+    <Compile Include="ComInterfaces\ID2D1TessellationSink.cs" />
+    <Compile Include="ComInterfaces\ID2D1TransformedGeometry.cs" />
+    <Compile Include="ComInteropInterfaces\IDWriteRenderingParams.cs" />
+    <Compile Include="ComInteropInterfaces\IDWriteTextFormat.cs" />
+    <Compile Include="ComInteropInterfaces\IDWriteTextLayout.cs" />
+    <Compile Include="ComInteropInterfaces\IDxgiSurface.cs" />
+    <Compile Include="ComInteropInterfaces\IWICBitmap.cs" />
+    <Compile Include="ComInteropInterfaces\IWICBitmapSource.cs" />
+    <Compile Include="D2D1Bitmap.cs" />
+    <Compile Include="D2D1BitmapBrush.cs" />
+    <Compile Include="D2D1BitmapRenderTarget.cs" />
+    <Compile Include="D2D1Brush.cs" />
+    <Compile Include="D2D1BrushBase.cs" />
+    <Compile Include="D2D1Constants.cs" />
+    <Compile Include="D2D1DCRenderTarget.cs" />
+    <Compile Include="D2D1DrawingStateBlock.cs" />
+    <Compile Include="D2D1EllipseGeometry.cs" />
+    <Compile Include="D2D1Error.cs" />
+    <Compile Include="D2D1Factory.cs" />
+    <Compile Include="D2D1Geometry.cs" />
+    <Compile Include="D2D1GeometryBase.cs" />
+    <Compile Include="D2D1GeometryGroup.cs" />
+    <Compile Include="D2D1GeometrySink.cs" />
+    <Compile Include="D2D1GradientStopCollection.cs" />
+    <Compile Include="D2D1HwndRenderTarget.cs" />
+    <Compile Include="D2D1Image.cs" />
+    <Compile Include="D2D1Layer.cs" />
+    <Compile Include="D2D1LinearGradientBrush.cs" />
+    <Compile Include="D2D1Mesh.cs" />
+    <Compile Include="D2D1PathGeometry.cs" />
+    <Compile Include="D2D1RadialGradientBrush.cs" />
+    <Compile Include="D2D1RectangleGeometry.cs" />
+    <Compile Include="D2D1RenderTarget.cs" />
+    <Compile Include="D2D1RenderTargetBase.cs" />
+    <Compile Include="D2D1Resource.cs" />
+    <Compile Include="D2D1RoundedRectangleGeometry.cs" />
+    <Compile Include="D2D1SimplifiedGeometrySink.cs" />
+    <Compile Include="D2D1SolidColorBrush.cs" />
+    <Compile Include="D2D1StrokeStyle.cs" />
+    <Compile Include="D2D1TessellationSink.cs" />
+    <Compile Include="D2D1TransformedGeometry.cs" />
+    <Compile Include="D2D1Utils.cs" />
+    <Compile Include="Enumerations\D2D1AlphaMode.cs" />
+    <Compile Include="Enumerations\D2D1AntialiasMode.cs" />
+    <Compile Include="Enumerations\D2D1ArcSize.cs" />
+    <Compile Include="Enumerations\D2D1BitmapInterpolationMode.cs" />
+    <Compile Include="Enumerations\D2D1CapStyle.cs" />
+    <Compile Include="Enumerations\D2D1CombineMode.cs" />
+    <Compile Include="Enumerations\D2D1CompatibleRenderTargetOptions.cs" />
+    <Compile Include="Enumerations\D2D1DashStyle.cs" />
+    <Compile Include="Enumerations\D2D1DCInitializeMode.cs" />
+    <Compile Include="Enumerations\D2D1DebugLevel.cs" />
+    <Compile Include="Enumerations\D2D1DrawTextOptions.cs" />
+    <Compile Include="Enumerations\D2D1ExtendMode.cs" />
+    <Compile Include="Enumerations\D2D1FactoryType.cs" />
+    <Compile Include="Enumerations\D2D1FeatureLevel.cs" />
+    <Compile Include="Enumerations\D2D1FigureBegin.cs" />
+    <Compile Include="Enumerations\D2D1FigureEnd.cs" />
+    <Compile Include="Enumerations\D2D1FillMode.cs" />
+    <Compile Include="Enumerations\D2D1Gamma.cs" />
+    <Compile Include="Enumerations\D2D1GeometryRelation.cs" />
+    <Compile Include="Enumerations\D2D1GeometrySimplificationOption.cs" />
+    <Compile Include="Enumerations\D2D1InterpolationModeDefinition.cs" />
+    <Compile Include="Enumerations\D2D1KnownColor.cs" />
+    <Compile Include="Enumerations\D2D1LayerOptions.cs" />
+    <Compile Include="Enumerations\D2D1LineJoin.cs" />
+    <Compile Include="Enumerations\D2D1OpacityMaskContent.cs" />
+    <Compile Include="Enumerations\D2D1PathSegmentOptions.cs" />
+    <Compile Include="Enumerations\D2D1PresentOptions.cs" />
+    <Compile Include="Enumerations\D2D1RenderTargetType.cs" />
+    <Compile Include="Enumerations\D2D1RenderTargetUsages.cs" />
+    <Compile Include="Enumerations\D2D1SweepDirection.cs" />
+    <Compile Include="Enumerations\D2D1TextAntialiasMode.cs" />
+    <Compile Include="Enumerations\D2D1WindowStates.cs" />
+    <Compile Include="ID2D1Releasable.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structures\D2D1ArcSegment.cs" />
+    <Compile Include="Structures\D2D1BezierSegment.cs" />
+    <Compile Include="Structures\D2D1BitmapBrushProperties.cs" />
+    <Compile Include="Structures\D2D1BitmapProperties.cs" />
+    <Compile Include="Structures\D2D1BrushProperties.cs" />
+    <Compile Include="Structures\D2D1ColorF.cs" />
+    <Compile Include="Structures\D2D1DrawingStateDescription.cs" />
+    <Compile Include="Structures\D2D1Ellipse.cs" />
+    <Compile Include="Structures\D2D1FactoryOptions.cs" />
+    <Compile Include="Structures\D2D1GradientStop.cs" />
+    <Compile Include="Structures\D2D1HwndRenderTargetProperties.cs" />
+    <Compile Include="Structures\D2D1LayerParameters.cs" />
+    <Compile Include="Structures\D2D1LinearGradientBrushProperties.cs" />
+    <Compile Include="Structures\D2D1Matrix3X2F.cs" />
+    <Compile Include="Structures\D2D1Matrix4X3F.cs" />
+    <Compile Include="Structures\D2D1Matrix4X4F.cs" />
+    <Compile Include="Structures\D2D1Matrix5X4F.cs" />
+    <Compile Include="Structures\D2D1PixelFormat.cs" />
+    <Compile Include="Structures\D2D1Point2F.cs" />
+    <Compile Include="Structures\D2D1Point2L.cs" />
+    <Compile Include="Structures\D2D1Point2U.cs" />
+    <Compile Include="Structures\D2D1QuadraticBezierSegment.cs" />
+    <Compile Include="Structures\D2D1RadialGradientBrushProperties.cs" />
+    <Compile Include="Structures\D2D1RectF.cs" />
+    <Compile Include="Structures\D2D1RectL.cs" />
+    <Compile Include="Structures\D2D1RectU.cs" />
+    <Compile Include="Structures\D2D1RenderTargetProperties.cs" />
+    <Compile Include="Structures\D2D1RoundedRect.cs" />
+    <Compile Include="Structures\D2D1SizeF.cs" />
+    <Compile Include="Structures\D2D1SizeU.cs" />
+    <Compile Include="Structures\D2D1StrokeStyleProperties.cs" />
+    <Compile Include="Structures\D2D1Triangle.cs" />
+    <Compile Include="Structures\D2D1Vector2F.cs" />
+    <Compile Include="Structures\D2D1Vector3F.cs" />
+    <Compile Include="Structures\D2D1Vector4F.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\sgKey.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JeremyAnsel.DirectX.DWrite\JeremyAnsel.DirectX.DWrite.csproj">
+      <Project>{599e5afe-be53-4b9f-b43c-315a36d5212d}</Project>
+      <Name>JeremyAnsel.DirectX.DWrite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JeremyAnsel.DirectX.Dxgi\JeremyAnsel.DirectX.Dxgi.csproj">
+      <Project>{28c546e8-0fec-413d-a951-5c3285196737}</Project>
+      <Name>JeremyAnsel.DirectX.Dxgi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\StyleCop.MSBuild.4.7.49.1\build\StyleCop.MSBuild.Targets" Condition="Exists('..\packages\StyleCop.MSBuild.4.7.49.1\build\StyleCop.MSBuild.Targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\StyleCop.MSBuild.4.7.49.1\build\StyleCop.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StyleCop.MSBuild.4.7.49.1\build\StyleCop.MSBuild.Targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
