@@ -159,9 +159,10 @@
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
+  -->
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
+    <Exec Condition="'$(CI)' == 'True'" Command="..\packages\SourceLink.1.1.0\tools\SourceLink.exe index -r &quot;..\..&quot; -pr &quot;$(ProjectFileName)&quot; -pp Configuration &quot;$(Configuration)&quot; -u &quot;https://raw.githubusercontent.com/JeremyAnsel/JeremyAnsel.DirectX/{0}/%%var2%%&quot; -nf &quot;Properties\AssemblyInfo.cs&quot;" />
   </Target>
-  -->
 </Project>
