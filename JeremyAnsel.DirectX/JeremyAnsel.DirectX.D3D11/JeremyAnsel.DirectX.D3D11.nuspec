@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/JeremyAnsel/JeremyAnsel.DirectX</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A managed wrapper around D3D11.</description>
+    <copyright>Copyright © 2014-2016 Jérémy Ansel</copyright>
+    <tags>DirectX D3D11</tags>
+    <dependencies>
+      <dependency id="JeremyAnsel.DirectX.Dxgi" version="$version$" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\$configuration$\$id$.pdb" target="lib\net452\" />
+  </files>
+</package>
