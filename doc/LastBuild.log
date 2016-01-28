@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2015.10.10.0" projectFile="C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\Documentation.shfbproj" started="1/28/2016 6:00:57 PM">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2015.10.10.0" projectFile="C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\Documentation.shfbproj" started="1/28/2016 7:20:19 PM">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\packages\EWSoftware.SHFB.2015.10.10.0\Tools\&#39;
@@ -54,12 +54,12 @@ Generating shared content files (en-US, English (United States))...
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.4609
+    Last step completed in 00:00:00.0938
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateRefInfo.proj]
-Build started 1/28/2016 6:01:01 PM.
+Build started 1/28/2016 7:20:21 PM.
 The target &quot;BeforeGenerateProjectPriFile&quot; listed in a BeforeTargets attribute at &quot;C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)&quot; does not exist in the project, and will be ignored.
 The target &quot;_ConvertPdbFiles&quot; listed in a BeforeTargets attribute at &quot;C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)&quot; does not exist in the project, and will be ignored.
 The target &quot;_CollectPdbFiles&quot; listed in an AfterTargets attribute at &quot;C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)&quot; does not exist in the project, and will be ignored.
@@ -83,13 +83,13 @@ Done Building Project &quot;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\
 
 Build succeeded.
 
-Time Elapsed 00:00:04.74
-    Last step completed in 00:00:05.0160
+Time Elapsed 00:00:01.32
+    Last step completed in 00:00:01.4219
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - TransformManifest.proj]
-Build started 1/28/2016 6:01:06 PM.
+Build started 1/28/2016 7:20:22 PM.
 Project &quot;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2015.10.10.0)
@@ -898,12 +898,12 @@ Done Building Project &quot;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\
 
 Build succeeded.
 
-Time Elapsed 00:00:11.64
-    Last step completed in 00:00:11.8760
+Time Elapsed 00:00:12.88
+    Last step completed in 00:00:12.9456
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.3594
+    Last step completed in 00:00:00.7598
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -918,28 +918,28 @@ Generating conceptual topic files
     C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\Content\VersionHistory\VersionHistory.aml -&gt; C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\ddueXml\VersionHistory.xml
     Parsing topic file &#39;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\Content\VersionHistory\v1.0.aml&#39;
     C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\Content\VersionHistory\v1.0.aml -&gt; C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\ddueXml\VersionHistory-v1_0.xml
-    Last step completed in 00:00:00.5001
+    Last step completed in 00:00:00.1993
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     ConceptualManifest.xml
-    Last step completed in 00:00:00.0079
+    Last step completed in 00:00:00.0117
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\icons\Help.png -&gt; C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\Output\Website\icons\Help.png
-    Last step completed in 00:00:00.0077
+    Last step completed in 00:00:00.0078
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0079
+    Last step completed in 00:00:00.0039
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 1/28/2016 6:01:19 PM.
+Build started 1/28/2016 7:20:36 PM.
 Project &quot;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2015.10.10.0)
@@ -950,27 +950,27 @@ Done Building Project &quot;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\
 
 Build succeeded.
 
-Time Elapsed 00:00:01.17
+Time Elapsed 00:00:00.96
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:01.2657
+    Last step completed in 00:00:01.0411
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
     conceptual.config
-    Last step completed in 00:00:01.2189
+    Last step completed in 00:00:00.9375
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\sandcastle.config
 C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\conceptual.config
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00.2265
+    Last step completed in 00:00:00.0059
 </buildStep>
 <buildStep step="BuildConceptualTopics">
 Building conceptual help topics...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - BuildConceptualTopics.proj]
-Build started 1/28/2016 6:01:22 PM.
+Build started 1/28/2016 7:20:38 PM.
 Project &quot;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\BuildConceptualTopics.proj&quot; on node 1 (default targets).
 BuildConceptualTopics:
   BuildAssembler (v2015.10.10.0)
@@ -985,13 +985,13 @@ Done Building Project &quot;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\
 
 Build succeeded.
 
-Time Elapsed 00:00:16.82
-    Last step completed in 00:00:16.8998
+Time Elapsed 00:00:15.02
+    Last step completed in 00:00:15.2758
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - BuildReferenceTopics.proj]
-Build started 1/28/2016 6:01:39 PM.
+Build started 1/28/2016 7:20:53 PM.
 Project &quot;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\BuildReferenceTopics.proj&quot; on node 1 (default targets).
 BuildReferenceTopics:
   BuildAssembler (v2015.10.10.0)
@@ -1008,12 +1008,12 @@ Done Building Project &quot;C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\
 
 Build succeeded.
 
-Time Elapsed 00:01:53.57
-    Last step completed in 00:01:54.1088
+Time Elapsed 00:01:56.50
+    Last step completed in 00:01:56.7432
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00.0491
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -1029,7 +1029,7 @@ Processed 6507 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\WebKI.xml
 Saving website table of contents to C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\WebTOC.xml
-    Last step completed in 00:00:42.7066
+    Last step completed in 00:00:45.6984
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -1108,7 +1108,7 @@ C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\packages\EWSoftware.SHFB.201
 C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\packages\EWSoftware.SHFB.2015.10.10.0\tools\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\Output\Website\icons\TocOpen.gif
 C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\packages\EWSoftware.SHFB.2015.10.10.0\tools\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\Output\Website\scripts\branding-Website.js
 C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\packages\EWSoftware.SHFB.2015.10.10.0\tools\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; C:\projects\jeremyansel-directx\JeremyAnsel.DirectX\Documentation\build\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:00.4844
+    Last step completed in 00:00:01.5156
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
@@ -1119,7 +1119,7 @@ Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:01:07.7869
+</plugIn>    Last step completed in 00:01:05.4861
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
@@ -1141,15 +1141,15 @@ Copied 7000 files
 Copied 7500 files
 Copied 8000 files
 Copied 8202 files for the website content
-    Last step completed in 00:00:25.0333
+    Last step completed in 00:00:32.2352
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:13.5966
+    Last step completed in 00:00:10.2737
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 1/28/2016 6:06:02 PM.  Total time: 00:05:05.5271
+Build completed successfully at 1/28/2016 7:25:25 PM.  Total time: 00:05:06.7031
 
 </buildStep>
 </shfbBuild>
