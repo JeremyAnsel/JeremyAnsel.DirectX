@@ -2854,10 +2854,10 @@
   <HelpKINode Title="D3D11DeviceContext.OutputMergerGetDepthStencilState method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerGetDepthStencilState.htm" />
   <HelpKINode Title="D3D11DeviceContext.OutputMergerGetRenderTargets method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerGetRenderTargets.htm" />
   <HelpKINode Title="D3D11DeviceContext.OutputMergerGetRenderTargetsAndUnorderedAccessViews method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerGetRenderTargetsAndUnorderedAccessViews.htm" />
+  <HelpKINode Title="D3D11DeviceContext.OutputMergerSetBlendState method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerSetBlendState.htm" />
   <HelpKINode Title="D3D11DeviceContext.OutputMergerSetDepthStencilState method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerSetDepthStencilState.htm" />
   <HelpKINode Title="D3D11DeviceContext.OutputMergerSetRenderTargets method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerSetRenderTargets.htm" />
-  <HelpKINode Title="D3D11DeviceContext.OutputMergetSetBlendState method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergetSetBlendState.htm" />
-  <HelpKINode Title="D3D11DeviceContext.OutputMergetSetRenderTargetsAndUnorderedAccessViews method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergetSetRenderTargetsAndUnorderedAccessViews.htm" />
+  <HelpKINode Title="D3D11DeviceContext.OutputMergerSetRenderTargetsAndUnorderedAccessViews method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerSetRenderTargetsAndUnorderedAccessViews.htm" />
   <HelpKINode Title="D3D11DeviceContext.PixelShaderGetConstantBuffers method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_PixelShaderGetConstantBuffers.htm" />
   <HelpKINode Title="D3D11DeviceContext.PixelShaderGetSamplers method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_PixelShaderGetSamplers.htm" />
   <HelpKINode Title="D3D11DeviceContext.PixelShaderGetShader method" Url="html/Overload_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_PixelShaderGetShader.htm" />
@@ -9209,10 +9209,10 @@
   <HelpKINode Title="OutputMergerGetRenderTargets method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerGetRenderTargets.htm" />
   <HelpKINode Title="OutputMergerGetRenderTargetsAndUnorderedAccessViews method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerGetRenderTargetsAndUnorderedAccessViews.htm" />
   <HelpKINode Title="OutputMergerLogicOperation enumeration member" Url="html/T_JeremyAnsel_DirectX_D3D11_D3D11FormatSupport2.htm" />
+  <HelpKINode Title="OutputMergerSetBlendState method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerSetBlendState.htm" />
   <HelpKINode Title="OutputMergerSetDepthStencilState method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerSetDepthStencilState.htm" />
   <HelpKINode Title="OutputMergerSetRenderTargets method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerSetRenderTargets.htm" />
-  <HelpKINode Title="OutputMergetSetBlendState method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergetSetBlendState.htm" />
-  <HelpKINode Title="OutputMergetSetRenderTargetsAndUnorderedAccessViews method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergetSetRenderTargetsAndUnorderedAccessViews.htm" />
+  <HelpKINode Title="OutputMergerSetRenderTargetsAndUnorderedAccessViews method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_OutputMergerSetRenderTargetsAndUnorderedAccessViews.htm" />
   <HelpKINode Title="OutputSlot property" Url="html/P_JeremyAnsel_DirectX_D3D11_D3D11StreamOutputDeclarationEntry_OutputSlot.htm" />
   <HelpKINode Title="OutputWindowHandle property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChainDesc_OutputWindowHandle.htm" />
   <HelpKINode Title="OutstandingBitmapReferences field" Url="html/F_JeremyAnsel_DirectX_D2D1_D2D1Error_OutstandingBitmapReferences.htm" />
