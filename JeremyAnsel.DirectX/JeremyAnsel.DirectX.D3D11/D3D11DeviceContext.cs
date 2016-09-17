@@ -327,12 +327,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void InputAssemblerSetIndexBuffer(D3D11Buffer indexBuffer, DxgiFormat format, uint offset)
         {
-            if (indexBuffer == null)
-            {
-                throw new ArgumentNullException("indexBuffer");
-            }
-
-            this.deviceContext.InputAssemblerSetIndexBuffer(indexBuffer.GetHandle<ID3D11Buffer>(), format, offset);
+            this.deviceContext.InputAssemblerSetIndexBuffer(indexBuffer == null ? null : indexBuffer.GetHandle<ID3D11Buffer>(), format, offset);
         }
 
         /// <summary>
@@ -1736,7 +1731,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             ID3D11Buffer buffer;
             this.deviceContext.InputAssemblerGetIndexBuffer(out buffer, out format, out offset);
-            indexBuffer = new D3D11Buffer(buffer);
+            indexBuffer = buffer == null ? null : new D3D11Buffer(buffer);
         }
 
         /// <summary>
