@@ -616,7 +616,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="uavInitialCounts">An array of append and consume buffer offsets. A value of <value>-1</value> indicates to keep the current offset.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void OutputMergetSetRenderTargetsAndUnorderedAccessViews(
+        public void OutputMergerSetRenderTargetsAndUnorderedAccessViews(
             D3D11RenderTargetView[] renderTargetViews,
             D3D11DepthStencilView depthStencilView,
             uint uavStartSlot,
@@ -654,7 +654,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="sampleMask">32-bit sample coverage. The default value is <value>0xffffffff</value>.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void OutputMergetSetBlendState(D3D11BlendState blendState, float[] blendFactor, uint sampleMask)
+        public void OutputMergerSetBlendState(D3D11BlendState blendState, float[] blendFactor, uint sampleMask)
         {
             if (blendFactor != null && blendFactor.Length != 4)
             {

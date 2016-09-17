@@ -73,12 +73,12 @@ namespace JeremyAnsel.DirectX.D3D11
         SourceAlphaSaturate = 11,
 
         /// <summary>
-        /// The blend factor is the blend factor set with <see cref="D3D11DeviceContext.OutputMergetSetBlendState"/>. No pre-blend operation.
+        /// The blend factor is the blend factor set with <see cref="D3D11DeviceContext.OutputMergerSetBlendState"/>. No pre-blend operation.
         /// </summary>
         BlendFactor = 14,
 
         /// <summary>
-        /// The blend factor is the blend factor set with <see cref="D3D11DeviceContext.OutputMergetSetBlendState"/>. The pre-blend operation inverts the blend factor, generating <c>1 - blend_factor</c>.
+        /// The blend factor is the blend factor set with <see cref="D3D11DeviceContext.OutputMergerSetBlendState"/>. The pre-blend operation inverts the blend factor, generating <c>1 - blend_factor</c>.
         /// </summary>
         InverseBlendFactor = 15,
 
