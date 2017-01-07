@@ -5,12 +5,14 @@
 namespace JeremyAnsel.DirectX.D3D11
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Identify which components of each pixel of a render target are writable during blending.
     /// </summary>
+    [SuppressMessage("Microsoft.Design", "CA1028:EnumStorageShouldBeInt32", Justification = "Reviewed")]
     [Flags]
-    public enum D3D11ColorWriteEnables
+    public enum D3D11ColorWriteEnables : byte
     {
         /// <summary>
         /// No value.
