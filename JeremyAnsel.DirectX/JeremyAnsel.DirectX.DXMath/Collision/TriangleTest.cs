@@ -25,8 +25,10 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2)
         {
+            float uCoordinate;
+            float vCoordinate;
             float distance;
-            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out distance);
+            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out uCoordinate, out vCoordinate, out distance);
         }
 
         /// <summary>
@@ -42,6 +44,29 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "5#", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float distance)
+        {
+            float uCoordinate;
+            float vCoordinate;
+            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out uCoordinate, out vCoordinate, out distance);
+        }
+
+        /// <summary>
+        /// Test whether a triangle intersects with a ray.
+        /// </summary>
+        /// <param name="origin">The origin of the ray.</param>
+        /// <param name="direction">The direction of the ray.</param>
+        /// <param name="v0">The first vector defining the triangle.</param>
+        /// <param name="v1">The second vector defining the triangle.</param>
+        /// <param name="v2">The third vector defining the triangle.</param>
+        /// <param name="uCoordinate">The first barycentric hit coordinate.</param>
+        /// <param name="vCoordinate">The second barycentric hit coordinate.</param>
+        /// <param name="distance">The distance along the ray where the intersection occurs.</param>
+        /// <returns>A boolean value indicating whether the triangle intersects with the ray.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "5#", Justification = "Reviewed")]
+        [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "6#", Justification = "Reviewed")]
+        [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "7#", Justification = "Reviewed")]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float uCoordinate, out float vCoordinate, out float distance)
         {
             Debug.Assert(Internal.XMVector3IsUnit(direction), "Reviewed");
 
@@ -85,6 +110,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
 
                 if (XMVector4.EqualInt(noIntersection, XMVector.TrueInt))
                 {
+                    uCoordinate = 0.0f;
+                    vCoordinate = 0.0f;
                     distance = 0.0f;
                     return false;
                 }
@@ -116,6 +143,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
 
                 if (XMVector4.EqualInt(noIntersection, XMVector.TrueInt))
                 {
+                    uCoordinate = 0.0f;
+                    vCoordinate = 0.0f;
                     distance = 0.0f;
                     return false;
                 }
@@ -123,15 +152,21 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             else
             {
                 // Parallel ray.
+                uCoordinate = 0.0f;
+                vCoordinate = 0.0f;
                 distance = 0.0f;
                 return false;
             }
 
+            // (u / det) and (v / dev) are the barycentric coordinates of the intersection.
+
+            u = XMVector.Divide(u, det);
+            v = XMVector.Divide(v, det);
             t = XMVector.Divide(t, det);
 
-            // (u / det) and (v / dev) are the barycentric cooridinates of the intersection.
-
             // Store the x-component to *pDist
+            u.StoreFloat(out uCoordinate);
+            v.StoreFloat(out vCoordinate);
             t.StoreFloat(out distance);
 
             return true;
