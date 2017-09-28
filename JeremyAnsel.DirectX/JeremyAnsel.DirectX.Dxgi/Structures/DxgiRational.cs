@@ -86,7 +86,7 @@ namespace JeremyAnsel.DirectX.Dxgi
 
             if (this.denominator == 0 || this.denominator == 1)
             {
-                return this.denominator.ToString(CultureInfo.InvariantCulture);
+                return this.numerator.ToString(CultureInfo.InvariantCulture);
             }
 
             return string.Format(CultureInfo.InvariantCulture, "{0}/{1}", this.numerator, this.denominator);
