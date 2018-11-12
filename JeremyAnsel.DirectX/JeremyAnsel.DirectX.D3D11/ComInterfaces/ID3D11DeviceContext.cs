@@ -320,7 +320,10 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="dataPtr">Address of memory that will receive the data.</param>
         /// <param name="dataSize">Size of the data to retrieve or 0.</param>
         /// <param name="options">Optional flags.</param>
-        void GetData(
+        /// <returns>A boolean value indicating whether the operation succeeded.</returns>
+        [PreserveSig]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        bool GetData(
             [In] ID3D11Asynchronous async,
             [Out] IntPtr dataPtr,
             [In] uint dataSize,

@@ -510,10 +510,11 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <typeparam name="T">The type of data.</typeparam>
         /// <param name="async">A <see cref="D3D11Asynchronous"/> interface for the object about which <c>GetData</c> retrieves data.</param>
         /// <param name="options">Optional flags.</param>
-        /// <returns>The data.</returns>
+        /// <param name="data">The data.</param>
+        /// <returns>A boolean value indicating whether the operation succeeded.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public T GetData<T>(D3D11Asynchronous async, D3D11AsyncGetDataOptions options)
+        public bool GetData<T>(D3D11Asynchronous async, D3D11AsyncGetDataOptions options, out T data)
             where T : struct
         {
             if (async == null)
@@ -526,9 +527,10 @@ namespace JeremyAnsel.DirectX.D3D11
 
             try
             {
-                this.deviceContext.GetData(async.GetHandle<ID3D11Asynchronous>(), dataPtr, (uint)dataSize, options);
+                bool result = this.deviceContext.GetData(async.GetHandle<ID3D11Asynchronous>(), dataPtr, (uint)dataSize, options);
 
-                return (T)Marshal.PtrToStructure(dataPtr, typeof(T));
+                data = (T)Marshal.PtrToStructure(dataPtr, typeof(T));
+                return result;
             }
             finally
             {
