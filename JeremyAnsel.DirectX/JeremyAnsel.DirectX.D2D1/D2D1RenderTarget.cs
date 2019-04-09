@@ -109,7 +109,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// Creates a Direct2D bitmap from a pointer to in-memory source data.
         /// </summary>
         /// <param name="size">The dimension of the bitmap to create in pixels.</param>
-        /// <param name="srcData">A pointer to the memory location of the image data, or NULL to create an uninitialized bitmap</param>
+        /// <param name="srcData">A pointer to the memory location of the image data, or NULL to create an uninitialized bitmap.</param>
         /// <param name="pitch">The byte count of each scanline, which is equal to <c>(the image width in pixels × the number of bytes per pixel) + memory padding</c>. If <paramref name="srcData"/> is NULL, this value is ignored. (Note that pitch is also sometimes called stride.)</param>
         /// <param name="bitmapProperties">The pixel format and dots per inch (DPI) of the bitmap to create.</param>
         /// <returns>The new bitmap.</returns>
@@ -118,6 +118,22 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1Bitmap bitmap;
             this.GetHandle<ID2D1RenderTarget>().CreateBitmap(size, srcData, pitch, ref bitmapProperties, out bitmap);
+            return new D2D1Bitmap(bitmap);
+        }
+
+        /// <summary>
+        /// Creates a Direct2D bitmap from a pointer to in-memory source data.
+        /// </summary>
+        /// <param name="size">The dimension of the bitmap to create in pixels.</param>
+        /// <param name="srcData">The image data, or null to create an uninitialized bitmap.</param>
+        /// <param name="pitch">The byte count of each scanline, which is equal to <c>(the image width in pixels × the number of bytes per pixel) + memory padding</c>. If <paramref name="srcData"/> is NULL, this value is ignored. (Note that pitch is also sometimes called stride.)</param>
+        /// <param name="bitmapProperties">The pixel format and dots per inch (DPI) of the bitmap to create.</param>
+        /// <returns>The new bitmap.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D2D1Bitmap CreateBitmap(D2D1SizeU size, byte[] srcData, uint pitch, D2D1BitmapProperties bitmapProperties)
+        {
+            ID2D1Bitmap bitmap;
+            this.GetHandle<ID2D1RenderTarget>().CreateBitmap(size, srcData == null ? IntPtr.Zero : Marshal.UnsafeAddrOfPinnedArrayElement(srcData, 0), pitch, ref bitmapProperties, out bitmap);
             return new D2D1Bitmap(bitmap);
         }
 
