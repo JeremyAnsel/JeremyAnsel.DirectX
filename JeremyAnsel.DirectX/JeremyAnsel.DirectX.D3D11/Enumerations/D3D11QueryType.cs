@@ -37,7 +37,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Similar to <see cref="D3D11QueryType.Occlusion"/>, except <see cref="D3D11DeviceContext.GetData"/> returns a BOOL indicating whether or not any samples passed the depth and stencil tests - <c>TRUE</c> meaning at least one passed, <c>FALSE</c> meaning none passed.
         /// </summary>
-        OccusionPredicate,
+        OcclusionPredicate,
 
         /// <summary>
         /// Get streaming output statistics.
