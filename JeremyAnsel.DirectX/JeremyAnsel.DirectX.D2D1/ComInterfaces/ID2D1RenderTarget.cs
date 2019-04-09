@@ -62,7 +62,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="bitmap">The new bitmap.</param>
         void CreateSharedBitmap(
             [In] ref Guid riid,
-            [In, Out] IntPtr data,
+            [In, MarshalAs(UnmanagedType.IUnknown)] object data,
             [In] IntPtr bitmapProperties,
             [Out] out ID2D1Bitmap bitmap);
 

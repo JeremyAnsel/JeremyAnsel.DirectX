@@ -190,8 +190,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="data">The data to share.</param>
         /// <returns>The new bitmap.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1Bitmap CreateSharedBitmap(Guid riid, IntPtr data)
+        public D2D1Bitmap CreateSharedBitmap(Guid riid, object data)
         {
+            if (data == null)
+            {
+                throw new ArgumentNullException("data");
+            }
+
             ID2D1Bitmap bitmap;
             this.GetHandle<ID2D1RenderTarget>().CreateSharedBitmap(ref riid, data, IntPtr.Zero, out bitmap);
             return new D2D1Bitmap(bitmap);
@@ -205,8 +210,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="bitmapProperties">The pixel format and DPI of the bitmap to create.</param>
         /// <returns>The new bitmap.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1Bitmap CreateSharedBitmap(Guid riid, IntPtr data, D2D1BitmapProperties bitmapProperties)
+        public D2D1Bitmap CreateSharedBitmap(Guid riid, object data, D2D1BitmapProperties bitmapProperties)
         {
+            if (data == null)
+            {
+                throw new ArgumentNullException("data");
+            }
+
             ID2D1Bitmap bitmap;
 
             GCHandle bitmapPropertiesHandle = GCHandle.Alloc(bitmapProperties, GCHandleType.Pinned);
