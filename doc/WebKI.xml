@@ -2828,8 +2828,7 @@
   <HelpKINode Title="D3D11DeviceContext.GeometryShaderSetSamplers method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GeometryShaderSetSamplers.htm" />
   <HelpKINode Title="D3D11DeviceContext.GeometryShaderSetShader method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GeometryShaderSetShader.htm" />
   <HelpKINode Title="D3D11DeviceContext.GeometryShaderSetShaderResources method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GeometryShaderSetShaderResources.htm" />
-  <HelpKINode Title="D3D11DeviceContext.GetData(Of T) method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GetData__1.htm" />
-  <HelpKINode Title="D3D11DeviceContext.GetData&lt;T&gt; method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GetData__1.htm" />
+  <HelpKINode Title="D3D11DeviceContext.GetData method" Url="html/Overload_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GetData.htm" />
   <HelpKINode Title="D3D11DeviceContext.GetPredication method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GetPredication.htm" />
   <HelpKINode Title="D3D11DeviceContext.GetResourceMinLod method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GetResourceMinLod.htm" />
   <HelpKINode Title="D3D11DeviceContext.Handle property" Url="html/P_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_Handle.htm" />
@@ -6799,8 +6798,7 @@
   <HelpKINode Title="GetCount method" Url="html/M_JeremyAnsel_DirectX_DWrite_DWriteLocalizedStrings_GetCount.htm" />
   <HelpKINode Title="GetDashes method" Url="html/M_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_GetDashes.htm" />
   <HelpKINode Title="GetDashesCount method" Url="html/M_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_GetDashesCount.htm" />
-  <HelpKINode Title="GetData(Of T) method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GetData__1.htm" />
-  <HelpKINode Title="GetData&lt;T&gt; method" Url="html/M_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GetData__1.htm" />
+  <HelpKINode Title="GetData method" Url="html/Overload_JeremyAnsel_DirectX_D3D11_D3D11DeviceContext_GetData.htm" />
   <HelpKINode Title="GetDC method">
     <HelpKINode Title="DxgiSurface1.GetDC Method " Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSurface1_GetDC.htm" />
     <HelpKINode Title="DxgiSurface2.GetDC Method " Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSurface2_GetDC.htm" />
@@ -9134,7 +9132,7 @@
   </HelpKINode>
   <HelpKINode Title="Occluded enumeration member" Url="html/T_JeremyAnsel_DirectX_D2D1_D2D1WindowStates.htm" />
   <HelpKINode Title="Occlusion enumeration member" Url="html/T_JeremyAnsel_DirectX_D3D11_D3D11QueryType.htm" />
-  <HelpKINode Title="OccusionPredicate enumeration member" Url="html/T_JeremyAnsel_DirectX_D3D11_D3D11QueryType.htm" />
+  <HelpKINode Title="OcclusionPredicate enumeration member" Url="html/T_JeremyAnsel_DirectX_D3D11_D3D11QueryType.htm" />
   <HelpKINode Title="OfferResources method">
     <HelpKINode Title="DxgiDevice2.OfferResources Method " Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiDevice2_OfferResources.htm" />
     <HelpKINode Title="DxgiDevice3.OfferResources Method " Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiDevice3_OfferResources.htm" />
