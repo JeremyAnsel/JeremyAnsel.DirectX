@@ -82,6 +82,21 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Copies the specified region from the specified bitmap into the current bitmap.
         /// </summary>
+        /// <param name="srcBitmap">The bitmap to copy from.</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void CopyFromBitmap(D2D1Bitmap srcBitmap)
+        {
+            if (srcBitmap == null)
+            {
+                throw new ArgumentNullException("srcBitmap");
+            }
+
+            this.bitmap.CopyFromBitmap(IntPtr.Zero, srcBitmap.bitmap, IntPtr.Zero);
+        }
+
+        /// <summary>
+        /// Copies the specified region from the specified bitmap into the current bitmap.
+        /// </summary>
         /// <param name="destPoint">In the current bitmap, the upper-left corner of the area to which the region is copied.</param>
         /// <param name="srcBitmap">The bitmap to copy from.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -155,6 +170,22 @@ namespace JeremyAnsel.DirectX.D2D1
                 destPointHandle.Free();
                 srcRectHandle.Free();
             }
+        }
+
+        /// <summary>
+        /// Copies the specified region from the specified render target into the current bitmap.
+        /// </summary>
+        /// <param name="renderTarget">The render target that contains the region to copy.</param>
+        [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void CopyFromRenderTarget(D2D1RenderTarget renderTarget)
+        {
+            if (renderTarget == null)
+            {
+                throw new ArgumentNullException("renderTarget");
+            }
+
+            this.bitmap.CopyFromRenderTarget(IntPtr.Zero, renderTarget.GetHandle<ID2D1RenderTarget>(), IntPtr.Zero);
         }
 
         /// <summary>
@@ -252,6 +283,22 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Copies the specified region from memory into the current bitmap.
         /// </summary>
+        /// <param name="srcData">The data to copy.</param>
+        /// <param name="pitch">The stride, or pitch, of the source bitmap stored in <paramref name="srcData"/>. The stride is the byte count of a scanline (one row of pixels in memory). The stride can be computed from the following formula: <c>pixel width * bytes per pixel + memory padding</c>.</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void CopyFromMemory(byte[] srcData, uint pitch)
+        {
+            if (srcData == null)
+            {
+                throw new ArgumentNullException("srcData");
+            }
+
+            this.bitmap.CopyFromMemory(IntPtr.Zero, Marshal.UnsafeAddrOfPinnedArrayElement(srcData, 0), pitch);
+        }
+
+        /// <summary>
+        /// Copies the specified region from memory into the current bitmap.
+        /// </summary>
         /// <param name="destRect">In the current bitmap, the upper-left corner of the area to which the region specified by <paramref name="srcData"/> is copied.</param>
         /// <param name="srcData">The data to copy.</param>
         /// <param name="pitch">The stride, or pitch, of the source bitmap stored in <paramref name="srcData"/>. The stride is the byte count of a scanline (one row of pixels in memory). The stride can be computed from the following formula: <c>pixel width * bytes per pixel + memory padding</c>.</param>
@@ -263,6 +310,32 @@ namespace JeremyAnsel.DirectX.D2D1
             try
             {
                 this.bitmap.CopyFromMemory(destRectHandle.AddrOfPinnedObject(), srcData, pitch);
+            }
+            finally
+            {
+                destRectHandle.Free();
+            }
+        }
+
+        /// <summary>
+        /// Copies the specified region from memory into the current bitmap.
+        /// </summary>
+        /// <param name="destRect">In the current bitmap, the upper-left corner of the area to which the region specified by <paramref name="srcData"/> is copied.</param>
+        /// <param name="srcData">The data to copy.</param>
+        /// <param name="pitch">The stride, or pitch, of the source bitmap stored in <paramref name="srcData"/>. The stride is the byte count of a scanline (one row of pixels in memory). The stride can be computed from the following formula: <c>pixel width * bytes per pixel + memory padding</c>.</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void CopyFromMemory(D2D1RectU destRect, byte[] srcData, uint pitch)
+        {
+            if (srcData == null)
+            {
+                throw new ArgumentNullException("srcData");
+            }
+
+            GCHandle destRectHandle = GCHandle.Alloc(destRect, GCHandleType.Pinned);
+
+            try
+            {
+                this.bitmap.CopyFromMemory(destRectHandle.AddrOfPinnedObject(), Marshal.UnsafeAddrOfPinnedArrayElement(srcData, 0), pitch);
             }
             finally
             {
