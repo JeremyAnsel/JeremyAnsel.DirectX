@@ -507,11 +507,81 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Get data from the graphics processing unit (GPU) asynchronously.
         /// </summary>
+        /// <param name="async">A <see cref="D3D11Asynchronous"/> interface for the object about which <c>GetData</c> retrieves data.</param>
+        /// <returns>A boolean value indicating whether the operation succeeded.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool GetData(D3D11Asynchronous async)
+        {
+            if (async == null)
+            {
+                throw new ArgumentNullException("async");
+            }
+
+            return this.deviceContext.GetData(async.GetHandle<ID3D11Asynchronous>(), IntPtr.Zero, 0U, D3D11AsyncGetDataOptions.None);
+        }
+
+        /// <summary>
+        /// Get data from the graphics processing unit (GPU) asynchronously.
+        /// </summary>
+        /// <param name="async">A <see cref="D3D11Asynchronous"/> interface for the object about which <c>GetData</c> retrieves data.</param>
+        /// <param name="options">Optional flags.</param>
+        /// <returns>A boolean value indicating whether the operation succeeded.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool GetData(D3D11Asynchronous async, D3D11AsyncGetDataOptions options)
+        {
+            if (async == null)
+            {
+                throw new ArgumentNullException("async");
+            }
+
+            return this.deviceContext.GetData(async.GetHandle<ID3D11Asynchronous>(), IntPtr.Zero, 0U, options);
+        }
+
+        /// <summary>
+        /// Get data from the graphics processing unit (GPU) asynchronously.
+        /// </summary>
+        /// <typeparam name="T">The type of data.</typeparam>
+        /// <param name="async">A <see cref="D3D11Asynchronous"/> interface for the object about which <c>GetData</c> retrieves data.</param>
+        /// <param name="data">The data.</param>
+        /// <returns>A boolean value indicating whether the operation succeeded.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool GetData<T>(D3D11Asynchronous async, out T data)
+            where T : struct
+        {
+            if (async == null)
+            {
+                throw new ArgumentNullException("async");
+            }
+
+            int dataSize = Marshal.SizeOf(typeof(T));
+            IntPtr dataPtr = Marshal.AllocHGlobal(dataSize);
+
+            try
+            {
+                bool result = this.deviceContext.GetData(async.GetHandle<ID3D11Asynchronous>(), dataPtr, (uint)dataSize, D3D11AsyncGetDataOptions.None);
+
+                data = (T)Marshal.PtrToStructure(dataPtr, typeof(T));
+                return result;
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(dataPtr);
+            }
+        }
+
+        /// <summary>
+        /// Get data from the graphics processing unit (GPU) asynchronously.
+        /// </summary>
         /// <typeparam name="T">The type of data.</typeparam>
         /// <param name="async">A <see cref="D3D11Asynchronous"/> interface for the object about which <c>GetData</c> retrieves data.</param>
         /// <param name="options">Optional flags.</param>
         /// <param name="data">The data.</param>
         /// <returns>A boolean value indicating whether the operation succeeded.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "2#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool GetData<T>(D3D11Asynchronous async, D3D11AsyncGetDataOptions options, out T data)

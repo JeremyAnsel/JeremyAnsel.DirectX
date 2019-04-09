@@ -7,7 +7,7 @@ namespace JeremyAnsel.DirectX.D3D11
     using System;
 
     /// <summary>
-    /// Optional flags that control the behavior of <see cref="D3D11DeviceContext.GetData"/>.
+    /// Optional flags that control the behavior of GetData.
     /// </summary>
     [Flags]
     public enum D3D11AsyncGetDataOptions
