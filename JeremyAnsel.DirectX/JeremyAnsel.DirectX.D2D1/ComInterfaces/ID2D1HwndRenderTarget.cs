@@ -558,16 +558,18 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <summary>
         /// Returns the size of the render target in device-independent pixels.
         /// </summary>
-        /// <returns>The current size of the render target in device-independent pixels.</returns>
+        /// <param name="size">The current size of the render target in device-independent pixels.</param>
         [PreserveSig]
-        D2D1SizeF GetSize();
+        void GetSize(
+            [Out] out D2D1SizeF size);
 
         /// <summary>
         /// Returns the size of the render target in device pixels.
         /// </summary>
-        /// <returns>The size of the render target in device pixels.</returns>
+        /// <param name="size">The size of the render target in device pixels.</param>
         [PreserveSig]
-        D2D1SizeU GetPixelSize();
+        void GetPixelSize(
+            [Out] out D2D1SizeU size);
 
         /// <summary>
         /// Gets the maximum size, in device-dependent units (pixels), of any one bitmap dimension supported by the render target.

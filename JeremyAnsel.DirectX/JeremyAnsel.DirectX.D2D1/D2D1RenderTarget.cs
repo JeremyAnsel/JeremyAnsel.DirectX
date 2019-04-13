@@ -84,7 +84,12 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1SizeF Size
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.GetHandle<ID2D1RenderTarget>().GetSize(); }
+            get
+            {
+                D2D1SizeF size;
+                this.GetHandle<ID2D1RenderTarget>().GetSize(out size);
+                return size;
+            }
         }
 
         /// <summary>
@@ -93,7 +98,12 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1SizeU PixelSize
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.GetHandle<ID2D1RenderTarget>().GetPixelSize(); }
+            get
+            {
+                D2D1SizeU size;
+                this.GetHandle<ID2D1RenderTarget>().GetPixelSize(out size);
+                return size;
+            }
         }
 
         /// <summary>
