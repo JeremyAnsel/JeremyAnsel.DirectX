@@ -110,6 +110,55 @@ namespace JeremyAnsel.DirectX.Dxgi
         }
 
         /// <summary>
+        /// Sets the display state to windowed or full screen.
+        /// </summary>
+        /// <param name="fullscreen">A value indicating whether to set the display state to windowed or full screen.</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void SetFullscreenState(bool fullscreen)
+        {
+            this.swapChain.SetFullscreenState(fullscreen, null);
+        }
+
+        /// <summary>
+        /// Sets the display state to windowed or full screen.
+        /// </summary>
+        /// <param name="fullscreen">A value indicating whether to set the display state to windowed or full screen.</param>
+        /// <param name="target">A pointer to an <c>DXGIOutput</c> interface for the output target that contains the swap chain.</param>
+        [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void SetFullscreenState(bool fullscreen, DxgiOutput target)
+        {
+            this.swapChain.SetFullscreenState(fullscreen, target == null ? null : target.GetHandle<IDxgiOutput>());
+        }
+
+        /// <summary>
+        /// Get the state associated with full-screen mode.
+        /// </summary>
+        /// <returns>A value indicating whether to set the display state to windowed or full screen.</returns>
+        public bool GetFullscreenState()
+        {
+            bool fullscreen;
+            IDxgiOutput itarget;
+            this.swapChain.GetFullscreenState(out fullscreen, out itarget);
+            return fullscreen;
+        }
+
+        /// <summary>
+        /// Get the state associated with full-screen mode.
+        /// </summary>
+        /// <param name="target">The output target when the mode is full screen.</param>
+        /// <returns>A value indicating whether to set the display state to windowed or full screen.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
+        public bool GetFullscreenState(out DxgiOutput target)
+        {
+            bool fullscreen;
+            IDxgiOutput itarget;
+            this.swapChain.GetFullscreenState(out fullscreen, out itarget);
+            target = new DxgiOutput(itarget);
+            return fullscreen;
+        }
+
+        /// <summary>
         /// Changes the swap chain's back buffer size, format, and number of buffers. This should be called when the application window is resized.
         /// </summary>
         /// <param name="bufferCount">The number of buffers in the swap chain (including all back and front buffers). This number can be different from the number of buffers with which you created the swap chain.</param>

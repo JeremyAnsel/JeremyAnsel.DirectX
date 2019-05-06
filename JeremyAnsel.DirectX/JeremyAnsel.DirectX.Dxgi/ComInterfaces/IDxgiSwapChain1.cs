@@ -90,10 +90,10 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// Sets the display state to windowed or full screen.
         /// </summary>
         /// <param name="fullscreen">A value indicating whether to set the display state to windowed or full screen.</param>
-        /// <param name="target">A pointer to an <c>IDXGIOutput</c> interface for the output target that contains the swap chain.</param>
+        /// <param name="target">A pointer to an <c>IDXGIOutput1</c> interface for the output target that contains the swap chain.</param>
         void SetFullscreenState(
             [In, MarshalAs(UnmanagedType.Bool)] bool fullscreen,
-            [In] IDxgiOutput target);
+            [In] IDxgiOutput1 target);
 
         /// <summary>
         /// Get the state associated with full-screen mode.
@@ -102,7 +102,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="target">The output target when the mode is full screen.</param>
         void GetFullscreenState(
             [Out, MarshalAs(UnmanagedType.Bool)] out bool fullscreen,
-            [Out] out IDxgiOutput target);
+            [Out] out IDxgiOutput1 target);
 
         /// <summary>
         /// Get a description of the swap chain.
@@ -136,7 +136,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// Get the output (the display monitor) that contains the majority of the client area of the target window.
         /// </summary>
         /// <returns>The output interface.</returns>
-        IDxgiOutput GetContainingOutput();
+        IDxgiOutput1 GetContainingOutput();
 
         /// <summary>
         /// Gets performance statistics about the last render frame.
@@ -199,7 +199,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// Gets the output (the display monitor) to which you can restrict the contents of a present operation.
         /// </summary>
         /// <returns>The <c>IDXGIOutput</c> interface for the restrict-to output.</returns>
-        IDxgiOutput GetRestrictToOutput();
+        IDxgiOutput1 GetRestrictToOutput();
 
         /// <summary>
         /// Changes the background color of the swap chain.
