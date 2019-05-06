@@ -5778,12 +5778,14 @@
   <HelpKINode Title="DxgiSwapChain.FrameStatistics property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_FrameStatistics.htm" />
   <HelpKINode Title="DxgiSwapChain.GetBuffer method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_GetBuffer.htm" />
   <HelpKINode Title="DxgiSwapChain.GetContainingOutput method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_GetContainingOutput.htm" />
+  <HelpKINode Title="DxgiSwapChain.GetFullscreenState method" Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_GetFullscreenState.htm" />
   <HelpKINode Title="DxgiSwapChain.GetSurface method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_GetSurface.htm" />
   <HelpKINode Title="DxgiSwapChain.Handle property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_Handle.htm" />
   <HelpKINode Title="DxgiSwapChain.LastPresentCount property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_LastPresentCount.htm" />
   <HelpKINode Title="DxgiSwapChain.Present method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_Present.htm" />
   <HelpKINode Title="DxgiSwapChain.ResizeBuffers method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_ResizeBuffers.htm" />
   <HelpKINode Title="DxgiSwapChain.ResizeTarget method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_ResizeTarget.htm" />
+  <HelpKINode Title="DxgiSwapChain.SetFullscreenState method" Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_SetFullscreenState.htm" />
   <HelpKINode Title="DxgiSwapChain1 class">
     <HelpKINode Title="DxgiSwapChain1 Class" Url="html/T_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1.htm" />
     <HelpKINode Title="about DxgiSwapChain1 class" Url="html/T_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1.htm" />
@@ -5794,12 +5796,14 @@
   <HelpKINode Title="DxgiSwapChain1.FrameStatistics property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_FrameStatistics.htm" />
   <HelpKINode Title="DxgiSwapChain1.GetBuffer method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_GetBuffer.htm" />
   <HelpKINode Title="DxgiSwapChain1.GetContainingOutput method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_GetContainingOutput.htm" />
+  <HelpKINode Title="DxgiSwapChain1.GetFullscreenState method" Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_GetFullscreenState.htm" />
   <HelpKINode Title="DxgiSwapChain1.GetSurface method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_GetSurface.htm" />
   <HelpKINode Title="DxgiSwapChain1.Handle property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_Handle.htm" />
   <HelpKINode Title="DxgiSwapChain1.LastPresentCount property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_LastPresentCount.htm" />
   <HelpKINode Title="DxgiSwapChain1.Present method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_Present.htm" />
   <HelpKINode Title="DxgiSwapChain1.ResizeBuffers method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_ResizeBuffers.htm" />
   <HelpKINode Title="DxgiSwapChain1.ResizeTarget method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_ResizeTarget.htm" />
+  <HelpKINode Title="DxgiSwapChain1.SetFullscreenState method" Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_SetFullscreenState.htm" />
   <HelpKINode Title="DxgiSwapChain2 class">
     <HelpKINode Title="DxgiSwapChain2 Class" Url="html/T_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2.htm" />
     <HelpKINode Title="about DxgiSwapChain2 class" Url="html/T_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2.htm" />
@@ -5812,6 +5816,7 @@
   <HelpKINode Title="DxgiSwapChain2.FullscreenDescription property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_FullscreenDescription.htm" />
   <HelpKINode Title="DxgiSwapChain2.GetBuffer method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_GetBuffer.htm" />
   <HelpKINode Title="DxgiSwapChain2.GetContainingOutput method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_GetContainingOutput.htm" />
+  <HelpKINode Title="DxgiSwapChain2.GetFullscreenState method" Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_GetFullscreenState.htm" />
   <HelpKINode Title="DxgiSwapChain2.GetRestrictToOutput method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_GetRestrictToOutput.htm" />
   <HelpKINode Title="DxgiSwapChain2.GetSurface method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_GetSurface.htm" />
   <HelpKINode Title="DxgiSwapChain2.Handle property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Handle.htm" />
@@ -5821,6 +5826,7 @@
   <HelpKINode Title="DxgiSwapChain2.ResizeBuffers method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_ResizeBuffers.htm" />
   <HelpKINode Title="DxgiSwapChain2.ResizeTarget method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_ResizeTarget.htm" />
   <HelpKINode Title="DxgiSwapChain2.Rotation property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Rotation.htm" />
+  <HelpKINode Title="DxgiSwapChain2.SetFullscreenState method" Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState.htm" />
   <HelpKINode Title="DxgiSwapChain2.WindowHandle property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_WindowHandle.htm" />
   <HelpKINode Title="DxgiSwapChain3 class">
     <HelpKINode Title="DxgiSwapChain3 Class" Url="html/T_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3.htm" />
@@ -5834,6 +5840,7 @@
   <HelpKINode Title="DxgiSwapChain3.FullscreenDescription property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_FullscreenDescription.htm" />
   <HelpKINode Title="DxgiSwapChain3.GetBuffer method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_GetBuffer.htm" />
   <HelpKINode Title="DxgiSwapChain3.GetContainingOutput method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_GetContainingOutput.htm" />
+  <HelpKINode Title="DxgiSwapChain3.GetFullscreenState method" Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_GetFullscreenState.htm" />
   <HelpKINode Title="DxgiSwapChain3.GetRestrictToOutput method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_GetRestrictToOutput.htm" />
   <HelpKINode Title="DxgiSwapChain3.GetSourceSize method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_GetSourceSize.htm" />
   <HelpKINode Title="DxgiSwapChain3.GetSurface method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_GetSurface.htm" />
@@ -5846,6 +5853,7 @@
   <HelpKINode Title="DxgiSwapChain3.ResizeBuffers method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_ResizeBuffers.htm" />
   <HelpKINode Title="DxgiSwapChain3.ResizeTarget method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_ResizeTarget.htm" />
   <HelpKINode Title="DxgiSwapChain3.Rotation property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_Rotation.htm" />
+  <HelpKINode Title="DxgiSwapChain3.SetFullscreenState method" Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_SetFullscreenState.htm" />
   <HelpKINode Title="DxgiSwapChain3.SetSourceSize method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_SetSourceSize.htm" />
   <HelpKINode Title="DxgiSwapChain3.WindowHandle property" Url="html/P_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_WindowHandle.htm" />
   <HelpKINode Title="DxgiSwapChainDesc structure">
@@ -6870,6 +6878,12 @@
     <HelpKINode Title="DxgiOutput1.GetFrameStatistics Method " Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiOutput1_GetFrameStatistics.htm" />
     <HelpKINode Title="DxgiOutput2.GetFrameStatistics Method " Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiOutput2_GetFrameStatistics.htm" />
     <HelpKINode Title="DxgiOutput3.GetFrameStatistics Method " Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiOutput3_GetFrameStatistics.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetFullscreenState method">
+    <HelpKINode Title="DxgiSwapChain.GetFullscreenState Method " Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_GetFullscreenState.htm" />
+    <HelpKINode Title="DxgiSwapChain1.GetFullscreenState Method " Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_GetFullscreenState.htm" />
+    <HelpKINode Title="DxgiSwapChain2.GetFullscreenState Method " Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_GetFullscreenState.htm" />
+    <HelpKINode Title="DxgiSwapChain3.GetFullscreenState Method " Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_GetFullscreenState.htm" />
   </HelpKINode>
   <HelpKINode Title="GetGammaControlPointPositions method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiGammaControlCapabilities_GetGammaControlPointPositions.htm" />
   <HelpKINode Title="GetGammaCurve method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiGammaControl_GetGammaCurve.htm" />
@@ -9910,6 +9924,12 @@
   <HelpKINode Title="SetFontStretch method" Url="html/M_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontStretch.htm" />
   <HelpKINode Title="SetFontStyle method" Url="html/M_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontStyle.htm" />
   <HelpKINode Title="SetFontWeight method" Url="html/M_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontWeight.htm" />
+  <HelpKINode Title="SetFullscreenState method">
+    <HelpKINode Title="DxgiSwapChain.SetFullscreenState Method " Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain_SetFullscreenState.htm" />
+    <HelpKINode Title="DxgiSwapChain1.SetFullscreenState Method " Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain1_SetFullscreenState.htm" />
+    <HelpKINode Title="DxgiSwapChain2.SetFullscreenState Method " Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState.htm" />
+    <HelpKINode Title="DxgiSwapChain3.SetFullscreenState Method " Url="html/Overload_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain3_SetFullscreenState.htm" />
+  </HelpKINode>
   <HelpKINode Title="SetGammaCurve method" Url="html/M_JeremyAnsel_DirectX_Dxgi_DxgiGammaControl_SetGammaCurve.htm" />
   <HelpKINode Title="SetGlyphIndicesAdvancesOffsets method" Url="html/M_JeremyAnsel_DirectX_DWrite_DWriteGlyphRun_SetGlyphIndicesAdvancesOffsets.htm" />
   <HelpKINode Title="SetIntByIndex method" Url="html/M_JeremyAnsel_DirectX_DXMath_XMVector_SetIntByIndex.htm" />
