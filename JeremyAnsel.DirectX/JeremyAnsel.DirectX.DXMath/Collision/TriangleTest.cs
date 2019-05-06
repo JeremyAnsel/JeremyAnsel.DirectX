@@ -158,8 +158,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
                 return false;
             }
 
-            // (u / det) and (v / dev) are the barycentric coordinates of the intersection.
-
+            // (u / det) and (v / det) are the barycentric coordinates of the intersection.
             u = XMVector.Divide(u, det);
             v = XMVector.Divide(v, det);
             t = XMVector.Divide(t, det);
