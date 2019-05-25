@@ -12,6 +12,1141 @@ namespace JeremyAnsel.DirectX.D3D11
     public static class D3D11Constants
     {
         /// <summary>
+        /// D3D10 Index Strip Cut Value 16-Bit.
+        /// </summary>
+        public const uint D3D10IndexStripCutValue16Bit = 0xffff;
+
+        /// <summary>
+        /// D3D10 Index Strip Cut Value 32-Bit.
+        /// </summary>
+        public const uint D3D10IndexStripCutValue32Bit = 0xffffffff;
+
+        /// <summary>
+        /// D3D10 Index Strip Cut Value 8-Bit.
+        /// </summary>
+        public const uint D3D10IndexStripCutValue8Bit = 0xff;
+
+        /// <summary>
+        /// D3D10 Array Axis Address Range Bit Count.
+        /// </summary>
+        public const uint D3D10ArrayAxisAddressRangeBitCount = 9;
+
+        /// <summary>
+        /// D3D10 Clip Or Cull Distance Count.
+        /// </summary>
+        public const uint D3D10ClipOrCullDistanceCount = 8;
+
+        /// <summary>
+        /// D3D10 Clip Or Cull Distance Element Count.
+        /// </summary>
+        public const uint D3D10ClipOrCullDistanceElementCount = 2;
+
+        /// <summary>
+        /// D3D10 Compute Shader Constant Buffer Api Slot Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderConstantBufferApiSlotCount = 14;
+
+        /// <summary>
+        /// D3D10 Compute Shader Constant Buffer Components.
+        /// </summary>
+        public const uint D3D10ComputeShaderConstantBufferComponents = 4;
+
+        /// <summary>
+        /// D3D10 Compute Shader Buffer Component Bit Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderBufferComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Compute Shader Constant Buffer Hardware Slot Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderConstantBufferHardwareSlotCount = 15;
+
+        /// <summary>
+        /// D3D10 Compute Shader Constant Buffer Register Components.
+        /// </summary>
+        public const uint D3D10ComputeShaderConstantBufferRegisterComponents = 4;
+
+        /// <summary>
+        /// D3D10 Compute Shader Constant Buffer Register Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderConstantBufferRegisterCount = 15;
+
+        /// <summary>
+        /// D3D10 Compute Shader Constant Buffer Register Reads Per Instance.
+        /// </summary>
+        public const uint D3D10ComputeShaderConstantBufferRegisterReadsPerInstance = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Constant Buffer Register Read Ports.
+        /// </summary>
+        public const uint D3D10ComputeShaderConstantBufferRegisterReadPorts = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Flow Control Nesting Limit.
+        /// </summary>
+        public const uint D3D10ComputeShaderFlowControlNestingLimit = 64;
+
+        /// <summary>
+        /// D3D10 Compute Shader Immediate Constant Buffer Register Components.
+        /// </summary>
+        public const uint D3D10ComputeShaderImmediateConstantBufferRegisterComponents = 4;
+
+        /// <summary>
+        /// D3D10 Compute Shader Immediate Constant Buffer Register Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderImmediateConstantBufferRegisterCount = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Immediate Constant Buffer Register Reads Per Instance.
+        /// </summary>
+        public const uint D3D10ComputeShaderImmediateConstantBufferRegisterReadsPerInstance = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Immediate Constant Buffer Register Read Ports.
+        /// </summary>
+        public const uint D3D10ComputeShaderImmediateConstantBufferRegisterReadPorts = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Immediate Value Component Bit Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderImmediateValueComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Compute Shader Input Resource Register Components.
+        /// </summary>
+        public const uint D3D10ComputeShaderInputResourceRegisterComponents = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Input Resource Register Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderInputResourceRegisterCount = 128;
+
+        /// <summary>
+        /// D3D10 Compute Shader Input Resource Register Reads Per Instance.
+        /// </summary>
+        public const uint D3D10ComputeShaderInputResourceRegisterReadsPerInstance = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Input Resource Register Read Ports.
+        /// </summary>
+        public const uint D3D10ComputeShaderInputResourceRegisterReadPorts = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Input Resource Slot Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderInputResourceSlotCount = 128;
+
+        /// <summary>
+        /// D3D10 Compute Shader Sampler Register Components.
+        /// </summary>
+        public const uint D3D10ComputeShaderSamplerRegisterComponents = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Sampler Register Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderSamplerRegisterCount = 16;
+
+        /// <summary>
+        /// D3D10 Compute Shader Sampler Register Reads Per Instance.
+        /// </summary>
+        public const uint D3D10ComputeShaderSamplerRegisterReadsPerInstance = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Sampler Register Read Ports.
+        /// </summary>
+        public const uint D3D10ComputeShaderSamplerRegisterReadPorts = 1;
+
+        /// <summary>
+        /// D3D10 Compute Shader Sampler Slot Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderSamplerSlotCount = 16;
+
+        /// <summary>
+        /// D3D10 Compute Shader Subroutine Nesting Limit.
+        /// </summary>
+        public const uint D3D10ComputeShaderSubroutineNestingLimit = 32;
+
+        /// <summary>
+        /// D3D10 Compute Shader Temp Register Components.
+        /// </summary>
+        public const uint D3D10ComputeShaderTempRegisterComponents = 4;
+
+        /// <summary>
+        /// D3D10 Compute Shader Temp Register Component Bit Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderTempRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Compute Shader Temp Register Count.
+        /// </summary>
+        public const uint D3D10ComputeShaderTempRegisterCount = 4096;
+
+        /// <summary>
+        /// D3D10 Compute Shader Temp Register Reads Per Instance.
+        /// </summary>
+        public const uint D3D10ComputeShaderTempRegisterReadsPerInstance = 3;
+
+        /// <summary>
+        /// D3D10 Compute Shader Temp Register Read Ports.
+        /// </summary>
+        public const uint D3D10ComputeShaderTempRegisterReadPorts = 3;
+
+        /// <summary>
+        /// D3D10 Compute Shader Tex Coord Range Reduction Max.
+        /// </summary>
+        public const int D3D10ComputeShaderTexCoordRangeReductionMax = 10;
+
+        /// <summary>
+        /// D3D10 Compute Shader Tex Coord Range Reduction Min.
+        /// </summary>
+        public const int D3D10ComputeShaderTexCoordRangeReductionMin = -10;
+
+        /// <summary>
+        /// D3D10 Compute Shader Texel Offset Max Negative.
+        /// </summary>
+        public const int D3D10ComputeShaderTexelOffsetMaxNegative = -8;
+
+        /// <summary>
+        /// D3D10 Compute Shader Texel Offset Max Positive.
+        /// </summary>
+        public const int D3D10ComputeShaderTexelOffsetMaxPositive = 7;
+
+        /// <summary>
+        /// D3D10 Default Blend Factor Alpha.
+        /// </summary>
+        public const float D3D10DefaultBlendFactorAlpha = 1.0f;
+
+        /// <summary>
+        /// D3D10 Default Blend Factor Blue.
+        /// </summary>
+        public const float D3D10DefaultBlendFactorBlue = 1.0f;
+
+        /// <summary>
+        /// D3D10 Default Blend Factor Green.
+        /// </summary>
+        public const float D3D10DefaultBlendFactorGreen = 1.0f;
+
+        /// <summary>
+        /// D3D10 Default Blend Factor Red.
+        /// </summary>
+        public const float D3D10DefaultBlendFactorRed = 1.0f;
+
+        /// <summary>
+        /// D3D10 Default Border Color Component.
+        /// </summary>
+        public const float D3D10DefaultBorderColorComponent = 0.0f;
+
+        /// <summary>
+        /// D3D10 Default Depth Bias.
+        /// </summary>
+        public const uint D3D10DefaultDepthBias = 0;
+
+        /// <summary>
+        /// D3D10 Default Depth Bias Clamp.
+        /// </summary>
+        public const float D3D10DefaultDepthBiasClamp = 0.0f;
+
+        /// <summary>
+        /// D3D10 Default Max Anisotropy.
+        /// </summary>
+        public const uint D3D10DefaultMaxAnisotropy = 16;
+
+        /// <summary>
+        /// D3D10 Default Mip Lod Bias.
+        /// </summary>
+        public const float D3D10DefaultMipLodBias = 0.0f;
+
+        /// <summary>
+        /// D3D10 Default Render Target Array Index.
+        /// </summary>
+        public const uint D3D10DefaultRenderTargetArrayIndex = 0;
+
+        /// <summary>
+        /// D3D10 Default Sample Mask.
+        /// </summary>
+        public const uint D3D10DefaultSampleMask = 0xffffffff;
+
+        /// <summary>
+        /// D3D10 Default Scissor End X.
+        /// </summary>
+        public const uint D3D10DefaultScissorEndX = 0;
+
+        /// <summary>
+        /// D3D10 Default Scissor End Y.
+        /// </summary>
+        public const uint D3D10DefaultScissorEndY = 0;
+
+        /// <summary>
+        /// D3D10 Default Scissor Start X.
+        /// </summary>
+        public const uint D3D10DefaultScissorStartX = 0;
+
+        /// <summary>
+        /// D3D10 Default Scissor Start Y.
+        /// </summary>
+        public const uint D3D10DefaultScissorStartY = 0;
+
+        /// <summary>
+        /// D3D10 Default Slope Scaled Depth Bias.
+        /// </summary>
+        public const float D3D10DefaultSlopeScaledDepthBias = 0.0f;
+
+        /// <summary>
+        /// D3D10 Default Stencil Read Mask.
+        /// </summary>
+        public const uint D3D10DefaultStencilReadMask = 0xff;
+
+        /// <summary>
+        /// D3D10 Default Stencil Reference.
+        /// </summary>
+        public const uint D3D10DefaultStencilReference = 0;
+
+        /// <summary>
+        /// D3D10 Default Stencil Write Mask.
+        /// </summary>
+        public const uint D3D10DefaultStencilWriteMask = 0xff;
+
+        /// <summary>
+        /// D3D10 Default Viewport And Scissor Rect Index.
+        /// </summary>
+        public const uint D3D10DefaultViewportAndScissorRectIndex = 0;
+
+        /// <summary>
+        /// D3D10 Default Viewport Height.
+        /// </summary>
+        public const uint D3D10DefaultViewportHeight = 0;
+
+        /// <summary>
+        /// D3D10 Default Viewport Max Depth.
+        /// </summary>
+        public const float D3D10DefaultViewportMaxDepth = 0.0f;
+
+        /// <summary>
+        /// D3D10 Default Viewport Min Depth.
+        /// </summary>
+        public const float D3D10DefaultViewportMinDepth = 0.0f;
+
+        /// <summary>
+        /// D3D10 Default Viewport Top Left X.
+        /// </summary>
+        public const uint D3D10DefaultViewportTopLeftX = 0;
+
+        /// <summary>
+        /// D3D10 Default Viewport Top Left Y.
+        /// </summary>
+        public const uint D3D10DefaultViewportTopLeftY = 0;
+
+        /// <summary>
+        /// D3D10 Default Viewport Width.
+        /// </summary>
+        public const uint D3D10DefaultViewportWidth = 0;
+
+        /// <summary>
+        /// D3D10 Float16 Fused Tolerance In Ulp.
+        /// </summary>
+        public const float D3D10Float16FusedToleranceInUlp = 0.6f;
+
+        /// <summary>
+        /// D3D10 Float32 Max.
+        /// </summary>
+        public const float D3D10Float32Max = 3.402823466e+38f;
+
+        /// <summary>
+        /// D3D10 Float32 To Integer Tolerance In Ulp.
+        /// </summary>
+        public const float D3D10Float32ToIntegerToleranceInUlp = 0.6f;
+
+        /// <summary>
+        /// D3D10 Float To Srgb Exponent Denominator.
+        /// </summary>
+        public const float D3D10FloatToSrgbExponentDenominator = 2.4f;
+
+        /// <summary>
+        /// D3D10 Float To Srgb Exponent Numerator.
+        /// </summary>
+        public const float D3D10FloatToSrgbExponentNumerator = 1.0f;
+
+        /// <summary>
+        /// D3D10 Float To Srgb Offset.
+        /// </summary>
+        public const float D3D10FloatToSrgbOffset = 0.055f;
+
+        /// <summary>
+        /// D3D10 Float To Srgb Scale 1.
+        /// </summary>
+        public const float D3D10FloatToSrgbScale1 = 12.92f;
+
+        /// <summary>
+        /// D3D10 Float To Srgb Scale 2.
+        /// </summary>
+        public const float D3D10FloatToSrgbScale2 = 1.055f;
+
+        /// <summary>
+        /// D3D10 Float To Srgb Threshold.
+        /// </summary>
+        public const float D3D10FloatToSrgbThreshold = 0.0031308f;
+
+        /// <summary>
+        /// D3D10 Float To Int Instruction Max Input.
+        /// </summary>
+        public const float D3D10FloatToIntInstructionMaxInput = 2147483647.999f;
+
+        /// <summary>
+        /// D3D10 Float To Int Instruction Min Input.
+        /// </summary>
+        public const float D3D10FloatToIntInstructionMinInput = -2147483648.999f;
+
+        /// <summary>
+        /// D3D10 Float To UInt Instruction Max Input.
+        /// </summary>
+        public const float D3D10FloatToUIntInstructionMaxInput = 4294967295.999f;
+
+        /// <summary>
+        /// D3D10 Float To UInt Instruction Min Input.
+        /// </summary>
+        public const float D3D10FloatToUIntInstructionMinInput = 0.0f;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Prim Const Register Components.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputPrimConstRegisterComponents = 1;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Prim Const Register Component Bit Count.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputPrimConstRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Prim Const Register Count.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputPrimConstRegisterCount = 1;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Prim Const Register Reads Per Instance.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputPrimConstRegisterReadsPerInstance = 2;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Prim Const Register Read Ports.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputPrimConstRegisterReadPorts = 1;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Register Components.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputRegisterComponents = 4;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Register Component Bit Count.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Register Count.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputRegisterCount = 16;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Register Reads Per Instance.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputRegisterReadsPerInstance = 2;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Register Read Ports.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputRegisterReadPorts = 1;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Input Register Vertices.
+        /// </summary>
+        public const uint D3D10GeometryShaderInputRegisterVertices = 6;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Output Elements.
+        /// </summary>
+        public const uint D3D10GeometryShaderOutputElements = 32;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Output Register Components.
+        /// </summary>
+        public const uint D3D10GeometryShaderOutputRegisterComponents = 4;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Output Register Component Bit Count.
+        /// </summary>
+        public const uint D3D10GeometryShaderOutputRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Geometry Shader Output Register Count.
+        /// </summary>
+        public const uint D3D10GeometryShaderOutputRegisterCount = 32;
+
+        /// <summary>
+        /// D3D10 Input Assembler Default Index Buffer Offset In Bytes.
+        /// </summary>
+        public const uint D3D10InputAssemblerDefaultIndexBufferOffsetInBytes = 0;
+
+        /// <summary>
+        /// D3D10 Input Assembler Default Primitive Topology.
+        /// </summary>
+        public const uint D3D10InputAssemblerDefaultPrimitiveTopology = 0;
+
+        /// <summary>
+        /// D3D10 Input Assembler Default Vertex Buffer Offset In Bytes.
+        /// </summary>
+        public const uint D3D10InputAssemblerDefaultVertexBufferOffsetInBytes = 0;
+
+        /// <summary>
+        /// D3D10 Input Assembler Index Input Resource Slot Count.
+        /// </summary>
+        public const uint D3D10InputAssemblerIndexInputResourceSlotCount = 1;
+
+        /// <summary>
+        /// D3D10 Input Assembler Instance Id Bit Count.
+        /// </summary>
+        public const uint D3D10InputAssemblerInstanceIdBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Input Assembler Integer Arithmetic Bit Count.
+        /// </summary>
+        public const uint D3D10InputAssemblerIntegerArithmeticBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Input Assembler Primitive Id Bit Count.
+        /// </summary>
+        public const uint D3D10InputAssemblerPrimitiveIdBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Input Assembler Vertex Id Bit Count.
+        /// </summary>
+        public const uint D3D10InputAssemblerVertexIdBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Input Assembler Vertex Input Resource Slot Count.
+        /// </summary>
+        public const uint D3D10InputAssemblerVertexInputResourceSlotCount = 16;
+
+        /// <summary>
+        /// D3D10 Input Assembler Vertex Input Structure Elements Components.
+        /// </summary>
+        public const uint D3D10InputAssemblerVertexInputStructureElementsComponents = 64;
+
+        /// <summary>
+        /// D3D10 Input Assembler Vertex Input Structure Element Count.
+        /// </summary>
+        public const uint D3D10InputAssemblerVertexInputStructureElementCount = 16;
+
+        /// <summary>
+        /// D3D10 Integer Divide By Zero Quotient.
+        /// </summary>
+        public const uint D3D10IntegerDivideByZeroQuotient = 0xffffffff;
+
+        /// <summary>
+        /// D3D10 Integer Divide By Zero Remainder.
+        /// </summary>
+        public const uint D3D10IntegerDivideByZeroRemainder = 0xffffffff;
+
+        /// <summary>
+        /// D3D10 Linear Gamma.
+        /// </summary>
+        public const float D3D10LinearGamma = 1.0f;
+
+        /// <summary>
+        /// D3D10 Max Border Color Component.
+        /// </summary>
+        public const float D3D10MaxBorderColorComponent = 1.0f;
+
+        /// <summary>
+        /// D3D10 Max Depth.
+        /// </summary>
+        public const float D3D10MaxDepth = 1.0f;
+
+        /// <summary>
+        /// D3D10 Max Anisotropy.
+        /// </summary>
+        public const uint D3D10MaxAnisotropy = 16;
+
+        /// <summary>
+        /// D3D10 Max Multisample Sample Count.
+        /// </summary>
+        public const uint D3D10MaxMultisampleSampleCount = 32;
+
+        /// <summary>
+        /// D3D10 Max Position Value.
+        /// </summary>
+        public const float D3D10MaxPositionValue = 3.402823466e+34f;
+
+        /// <summary>
+        /// D3D10 Max Texture Dimension 2 To Exp.
+        /// </summary>
+        public const uint D3D10MaxTextureDimension2ToExp = 17;
+
+        /// <summary>
+        /// D3D10 Min Border Color Component.
+        /// </summary>
+        public const float D3D10MinBorderColorComponent = 0.0f;
+
+        /// <summary>
+        /// D3D10 Min Depth.
+        /// </summary>
+        public const float D3D10MinDepth = 0.0f;
+
+        /// <summary>
+        /// D3D10 Min Max Anisotropy.
+        /// </summary>
+        public const uint D3D10MinMaxAnisotropy = 0;
+
+        /// <summary>
+        /// D3D10 Mip Lod Bias Max.
+        /// </summary>
+        public const float D3D10MipLodBiasMax = 15.99f;
+
+        /// <summary>
+        /// D3D10 Mip Lod Bias Min.
+        /// </summary>
+        public const float D3D10MipLodBiasMin = -16.0f;
+
+        /// <summary>
+        /// D3D10 Mip Lod Fractional Bit Count.
+        /// </summary>
+        public const uint D3D10MipLodFractionalBitCount = 6;
+
+        /// <summary>
+        /// D3D10 Mip Lod Range Bit Count.
+        /// </summary>
+        public const uint D3D10MipLodRangeBitCount = 8;
+
+        /// <summary>
+        /// D3D10 Multisample Antialias Line Width.
+        /// </summary>
+        public const float D3D10MultisampleAntialiasLineWidth = 1.4f;
+
+        /// <summary>
+        /// D3D10 Non Sample Fetch Out Of Range Access Result.
+        /// </summary>
+        public const uint D3D10NonSampleFetchOutOfRangeAccessResult = 0;
+
+        /// <summary>
+        /// D3D10 Pixel Address Range Bit Count.
+        /// </summary>
+        public const uint D3D10PixelAddressRangeBitCount = 13;
+
+        /// <summary>
+        /// D3D10 Pre Scissor Pixel Address Range Bit Count.
+        /// </summary>
+        public const uint D3D10PreScissorPixelAddressRangeBitCount = 15;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Front Facing Default Value.
+        /// </summary>
+        public const uint D3D10PixelShaderFrontFacingDefaultValue = 0xFFFFFFFF;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Front Facing False Value.
+        /// </summary>
+        public const uint D3D10PixelShaderFrontFacingFalseValue = 0x00000000;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Front Facing True Value.
+        /// </summary>
+        public const uint D3D10PixelShaderFrontFacingTrueValue = 0xFFFFFFFF;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Register Components.
+        /// </summary>
+        public const uint D3D10PixelShaderRegisterComponents = 4;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Input Register Component Bit Count.
+        /// </summary>
+        public const uint D3D10PixelShaderInputRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Input Register Count.
+        /// </summary>
+        public const uint D3D10PixelShaderInputRegisterCount = 32;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Input Register Reads Per Instance.
+        /// </summary>
+        public const uint D3D10PixelShaderInputRegisterReadsPerInstance = 2;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Input Register Read Ports.
+        /// </summary>
+        public const uint D3D10PixelShaderInputRegisterReadPorts = 1;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Legacy Pixel Center Fractional Component.
+        /// </summary>
+        public const float D3D10PixelShaderLegacyPixelCenterFractionalComponent = 0.0f;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Output Depth Register Components.
+        /// </summary>
+        public const uint D3D10PixelShaderOutputDepthRegisterComponents = 1;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Output Depth Register Component Bit Count.
+        /// </summary>
+        public const uint D3D10PixelShaderOutputDepthRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Output Depth Register Count.
+        /// </summary>
+        public const uint D3D10PixelShaderOutputDepthRegisterCount = 1;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Output Register Components.
+        /// </summary>
+        public const uint D3D10PixelShaderOutputRegisterComponents = 4;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Output Register Component Bit Count.
+        /// </summary>
+        public const uint D3D10PixelShaderOutputRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Output Register Count.
+        /// </summary>
+        public const uint D3D10PixelShaderOutputRegisterCount = 8;
+
+        /// <summary>
+        /// D3D10 Pixel Shader Pixel Center Fractional Component.
+        /// </summary>
+        public const float D3D10PixelShaderPixelCenterFractionalComponent = 0.5f;
+
+        /// <summary>
+        /// D3D10 Req Blend Object Count Per Context.
+        /// </summary>
+        public const uint D3D10ReqBlendObjectCountPerContext = 4096;
+
+        /// <summary>
+        /// D3D10 Req Buffer Resource Texel Count 2 To Exp.
+        /// </summary>
+        public const uint D3D10ReqBufferResourceTexelCount2ToExp = 27;
+
+        /// <summary>
+        /// D3D10 Req Constant Buffer Element Count.
+        /// </summary>
+        public const uint D3D10ReqConstantBufferElementCount = 4096;
+
+        /// <summary>
+        /// D3D10 Req Depth Stencil Object Count Per Context.
+        /// </summary>
+        public const uint D3D10ReqDepthStencilObjectCountPerContext = 4096;
+
+        /// <summary>
+        /// D3D10 Req Draw Indexed Index Count 2 To Exp.
+        /// </summary>
+        public const uint D3D10ReqDrawIndexedIndexCount2ToExp = 32;
+
+        /// <summary>
+        /// D3D10 Req Draw Vertex Count 2 To Exp.
+        /// </summary>
+        public const uint D3D10ReqDrawVertexCount2ToExp = 32;
+
+        /// <summary>
+        /// D3D10 Req Filtering Hardware Addressable Resource Dimension.
+        /// </summary>
+        public const uint D3D10ReqFilteringHardwareAddressableResourceDimension = 8192;
+
+        /// <summary>
+        /// D3D10 Req Geometry Shader Invocation 32-Bit Output Component Limit.
+        /// </summary>
+        public const uint D3D10ReqGeometryShaderInvocation32BitOutputComponentLimit = 1024;
+
+        /// <summary>
+        /// D3D10 Req Immediate Constant Buffer Element Count.
+        /// </summary>
+        public const uint D3D10ReqImmediateConstantBufferElementCount = 4096;
+
+        /// <summary>
+        /// D3D10 Req Max Anisotropy.
+        /// </summary>
+        public const uint D3D10ReqMaxAnisotropy = 16;
+
+        /// <summary>
+        /// D3D10 Req Mip Levels.
+        /// </summary>
+        public const uint D3D10ReqMipLevels = 14;
+
+        /// <summary>
+        /// D3D10 Req Multi Element Structure Size In Bytes.
+        /// </summary>
+        public const uint D3D10ReqMultiElementStructureSizeInBytes = 2048;
+
+        /// <summary>
+        /// D3D10 Req Rasterizer Object Count Per Context.
+        /// </summary>
+        public const uint D3D10ReqRasterizerObjectCountPerContext = 4096;
+
+        /// <summary>
+        /// D3D10 Req Render To Buffer Window Width.
+        /// </summary>
+        public const uint D3D10ReqRenderToBufferWindowWidth = 8192;
+
+        /// <summary>
+        /// D3D10 Req Resource Size In Megabytes.
+        /// </summary>
+        public const uint D3D10ReqResourceSizeInMegabytes = 128;
+
+        /// <summary>
+        /// D3D10 Req Resource View Count Per Context 2 To Exp.
+        /// </summary>
+        public const uint D3D10ReqResourceViewCountPerContext2ToExp = 20;
+
+        /// <summary>
+        /// D3D10 Req Sampler Object Count Per Context.
+        /// </summary>
+        public const uint D3D10ReqSamplerObjectCountPerContext = 4096;
+
+        /// <summary>
+        /// D3D10 Req Texture 1D Array Axis Dimension.
+        /// </summary>
+        public const uint D3D10ReqTexture1DArrayAxisDimension = 512;
+
+        /// <summary>
+        /// D3D10 Req Texture 1D Dimension.
+        /// </summary>
+        public const uint D3D10ReqTexture1DDimension = 8192;
+
+        /// <summary>
+        /// D3D10 Req Texture 2D Array Axis Dimension.
+        /// </summary>
+        public const uint D3D10ReqTexture2DArrayAxisDimension = 512;
+
+        /// <summary>
+        /// D3D10 Req Texture 2D Dimension.
+        /// </summary>
+        public const uint D3D10ReqTexture2DDimension = 8192;
+
+        /// <summary>
+        /// D3D10 Req Texture 3D Dimension.
+        /// </summary>
+        public const uint D3D10ReqTexture3DDimension = 2048;
+
+        /// <summary>
+        /// D3D10 Req Texture Cube Dimension.
+        /// </summary>
+        public const uint D3D10ReqTextureCubeDimension = 8192;
+
+        /// <summary>
+        /// D3D10 Resinfo Instruction Missing Component Retval.
+        /// </summary>
+        public const uint D3D10ResinfoInstructionMissingComponentRetval = 0;
+
+        /// <summary>
+        /// D3D10 Shift Instruction Pad Value.
+        /// </summary>
+        public const uint D3D10ShiftInstructionPadValue = 0;
+
+        /// <summary>
+        /// D3D10 Shift Instruction Shift Value Bit Count.
+        /// </summary>
+        public const uint D3D10ShiftInstructionShiftValueBitCount = 5;
+
+        /// <summary>
+        /// D3D10 Simultaneous Render Target Count.
+        /// </summary>
+        public const uint D3D10SimultaneousRenderTargetCount = 8;
+
+        /// <summary>
+        /// D3D10 Stream Output Buffer Max Stride In Bytes.
+        /// </summary>
+        public const uint D3D10StreamOutputBufferMaxStrideInBytes = 2048;
+
+        /// <summary>
+        /// D3D10 Stream Output Buffer Max Write Window In Bytes.
+        /// </summary>
+        public const uint D3D10StreamOutputBufferMaxWriteWindowInBytes = 256;
+
+        /// <summary>
+        /// D3D10 Stream Output Buffer Slot Count.
+        /// </summary>
+        public const uint D3D10StreamOutputBufferSlotCount = 4;
+
+        /// <summary>
+        /// D3D10 Stream Output Ddi Register Index Denoting Gap.
+        /// </summary>
+        public const uint D3D10StreamOutputDdiRegisterIndexDenotingGap = 0xffffffff;
+
+        /// <summary>
+        /// D3D10 Stream Output Multiple Buffer Elements Per Buffer.
+        /// </summary>
+        public const uint D3D10StreamOutputMultipleBufferElementsPerBuffer = 1;
+
+        /// <summary>
+        /// D3D10 Stream Output Single Buffer Component Limit.
+        /// </summary>
+        public const uint D3D10StreamOutputSingleBufferComponentLimit = 64;
+
+        /// <summary>
+        /// D3D10 Srgb Gamma.
+        /// </summary>
+        public const float D3D10SrgbGamma = 2.2f;
+
+        /// <summary>
+        /// D3D10 Srgb To Float Denominator 1.
+        /// </summary>
+        public const float D3D10SrgbToFloatDenominator1 = 12.92f;
+
+        /// <summary>
+        /// D3D10 Srgb To Float Denominator 2.
+        /// </summary>
+        public const float D3D10SrgbToFloatDenominator2 = 1.055f;
+
+        /// <summary>
+        /// D3D10 Srgb To Float Exponent.
+        /// </summary>
+        public const float D3D10SrgbToFloatExponent = 2.4f;
+
+        /// <summary>
+        /// D3D10 Srgb To Float Offset.
+        /// </summary>
+        public const float D3D10SrgbToFloatOffset = 0.055f;
+
+        /// <summary>
+        /// D3D10 Srgb To Float Threshold.
+        /// </summary>
+        public const float D3D10SrgbToFloatThreshold = 0.04045f;
+
+        /// <summary>
+        /// D3D10 Srgb To Float Tolerance In Ulp.
+        /// </summary>
+        public const float D3D10SrgbToFloatToleranceInUlp = 0.5f;
+
+        /// <summary>
+        /// D3D10 Standard Component Bit Count.
+        /// </summary>
+        public const uint D3D10StandardComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Standard Component Bit Count Doubled.
+        /// </summary>
+        public const uint D3D10StandardComponentBitCountDoubled = 64;
+
+        /// <summary>
+        /// D3D10 Standard Maximum Element Alignment Byte Multiple.
+        /// </summary>
+        public const uint D3D10StandardMaximumElementAlignmentByteMultiple = 4;
+
+        /// <summary>
+        /// D3D10 Standard Pixel Component Count.
+        /// </summary>
+        public const uint D3D10StandardPixelComponentCount = 128;
+
+        /// <summary>
+        /// D3D10 Standard Pixel Element Count.
+        /// </summary>
+        public const uint D3D10StandardPixelElementCount = 32;
+
+        /// <summary>
+        /// D3D10 Standard Vector Size.
+        /// </summary>
+        public const uint D3D10StandardVectorSize = 4;
+
+        /// <summary>
+        /// D3D10 Standard Vertex Element Count.
+        /// </summary>
+        public const uint D3D10StandardVertexElementCount = 16;
+
+        /// <summary>
+        /// D3D10 Standard Vertex Total Component Count.
+        /// </summary>
+        public const uint D3D10StandardVertexTotalComponentCount = 64;
+
+        /// <summary>
+        /// D3D10 Subpixel Fractional Bit Count.
+        /// </summary>
+        public const uint D3D10SubpixelFractionalBitCount = 8;
+
+        /// <summary>
+        /// D3D10 Subtexel Fractional Bit Count.
+        /// </summary>
+        public const uint D3D10SubtexelFractionalBitCount = 6;
+
+        /// <summary>
+        /// D3D10 Texel Address Range Bit Count.
+        /// </summary>
+        public const uint D3D10TexelAddressRangeBitCount = 18;
+
+        /// <summary>
+        /// D3D10 Unbound Memory Access Result.
+        /// </summary>
+        public const uint D3D10UnboundMemoryAccessResult = 0;
+
+        /// <summary>
+        /// D3D10 Viewport And Scissor Rect Max Index.
+        /// </summary>
+        public const uint D3D10ViewportAndScissorRectMaxIndex = 15;
+
+        /// <summary>
+        /// D3D10 Viewport And Scissor Rect Object Count Per Pipeline.
+        /// </summary>
+        public const uint D3D10ViewportAndScissorRectObjectCountPerPipeline = 16;
+
+        /// <summary>
+        /// D3D10 Viewport Bounds Max.
+        /// </summary>
+        public const int D3D10ViewportBoundsMax = 16383;
+
+        /// <summary>
+        /// D3D10 Viewport Bounds Min.
+        /// </summary>
+        public const int D3D10ViewportBoundsMin = -16384;
+
+        /// <summary>
+        /// D3D10 Vertex Shader Input Register Components.
+        /// </summary>
+        public const uint D3D10VertexShaderInputRegisterComponents = 4;
+
+        /// <summary>
+        /// D3D10 Vertex Shader Input Register Component Bit Count.
+        /// </summary>
+        public const uint D3D10VertexShaderInputRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Vertex Shader Input Register Count.
+        /// </summary>
+        public const uint D3D10VertexShaderInputRegisterCount = 16;
+
+        /// <summary>
+        /// D3D10 Vertex Shader Input Register Reads Per Instance.
+        /// </summary>
+        public const uint D3D10VertexShaderInputRegisterReadsPerInstance = 2;
+
+        /// <summary>
+        /// D3D10 Vertex Shader Input Register Read Ports.
+        /// </summary>
+        public const uint D3D10VertexShaderInputRegisterReadPorts = 1;
+
+        /// <summary>
+        /// D3D10 Vertex Shader Output Register Components.
+        /// </summary>
+        public const uint D3D10VertexShaderOutputRegisterComponents = 4;
+
+        /// <summary>
+        /// D3D10 Vertex Shader Output Register Component Bit Count.
+        /// </summary>
+        public const uint D3D10VertexShaderOutputRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10 Vertex Shader Output Register Count.
+        /// </summary>
+        public const uint D3D10VertexShaderOutputRegisterCount = 16;
+
+        /// <summary>
+        /// D3D10 WHQL Context Count For Resource Limit.
+        /// </summary>
+        public const uint D3D10WhqlContextCountForResourceLimit = 10;
+
+        /// <summary>
+        /// D3D10 WHQL Draw Indexed Index Count 2 To Exp.
+        /// </summary>
+        public const uint D3D10WhqlDrawIndexedIndexCount2ToExp = 25;
+
+        /// <summary>
+        /// D3D10 WHQL Draw Vertex Count 2 To Exp.
+        /// </summary>
+        public const uint D3D10WhqlDrawVertexCount2ToExp = 25;
+
+        /// <summary>
+        /// D3D10.1 Default Sample Mask.
+        /// </summary>
+        public const uint D3D101DefaultSampleMask = 0xffffffff;
+
+        /// <summary>
+        /// D3D10.1 Float16 Fused Tolerance In Ulp.
+        /// </summary>
+        public const float D3D101Float16FusedToleranceInUlp = 0.6f;
+
+        /// <summary>
+        /// D3D10.1 Float32 To Integer Tolerance In Ulp.
+        /// </summary>
+        public const float D3D101Float32ToIntegerToleranceInUlp = 0.6f;
+
+        /// <summary>
+        /// D3D10.1 Geometry Shader Input Register Count.
+        /// </summary>
+        public const uint D3D101GeometryShaderInputRegisterCount = 32;
+
+        /// <summary>
+        /// D3D10.1 Input Assembler Vertex Input Resource Slot Count.
+        /// </summary>
+        public const uint D3D101InputAssemblerVertexInputResourceSlotCount = 32;
+
+        /// <summary>
+        /// D3D10.1 Input Assembler Vertex Input Structure Elements Components.
+        /// </summary>
+        public const uint D3D101InputAssemblerVertexInputStructureElementsComponents = 128;
+
+        /// <summary>
+        /// D3D10.1 Input Assembler Vertex Input Structure Element Count.
+        /// </summary>
+        public const uint D3D101InputAssemblerVertexInputStructureElementCount = 32;
+
+        /// <summary>
+        /// D3D10.1 Pixel Shader Output Mask Register Components.
+        /// </summary>
+        public const uint D3D101PixelShaderOutputMaskRegisterComponents = 1;
+
+        /// <summary>
+        /// D3D10.1 Pixel Shader Output Mask Register Component BitCount.
+        /// </summary>
+        public const uint D3D101PixelShaderOutputMaskRegisterComponentBitCount = 32;
+
+        /// <summary>
+        /// D3D10.1 Pixel Shader Output Mask Register Count.
+        /// </summary>
+        public const uint D3D101PixelShaderOutputMaskRegisterCount = 1;
+
+        /// <summary>
+        /// D3D10.1 Stream Output Buffer Max Stride In Bytes.
+        /// </summary>
+        public const uint D3D101StreamOutputBufferMaxStrideInBytes = 2048;
+
+        /// <summary>
+        /// D3D10.1 Stream Output Buffer Max Write Window In Bytes.
+        /// </summary>
+        public const uint D3D101StreamOutputBufferMaxWriteWindowInBytes = 256;
+
+        /// <summary>
+        /// D3D10.1 Stream Output Buffer Slot Count.
+        /// </summary>
+        public const uint D3D101StreamOutputBufferSlotCount = 4;
+
+        /// <summary>
+        /// D3D10.1 Stream Output Multiple Buffer Elements Per Buffer.
+        /// </summary>
+        public const uint D3D101StreamOutputMultipleBufferElementsPerBuffer = 1;
+
+        /// <summary>
+        /// D3D10.1 Stream Output Single Buffer Component Limit.
+        /// </summary>
+        public const uint D3D101StreamOutputSingleBufferComponentLimit = 64;
+
+        /// <summary>
+        /// D3D10.1 Standard Vertex Element Count.
+        /// </summary>
+        public const uint D3D101StandardVertexElementCount = 32;
+
+        /// <summary>
+        /// D3D10.1 Subpixel Fractional Bit Count.
+        /// </summary>
+        public const uint D3D101SubpixelFractionalBitCount = 8;
+
+        /// <summary>
+        /// D3D10.1 Vertex Shader Input Register Count.
+        /// </summary>
+        public const uint D3D101VertexShaderInputRegisterCount = 32;
+
+        /// <summary>
+        /// D3D10.1 Vertex Shader Output Register Count.
+        /// </summary>
+        public const uint D3D101VertexShaderOutputRegisterCount = 32;
+
+        /// <summary>
         /// Feature Level 9.1 Req Texture 1D Dimension.
         /// </summary>
         public const uint FeatureLevel91ReqTexture1DDimension = 2048;
@@ -117,179 +1252,179 @@ namespace JeremyAnsel.DirectX.D3D11
         public const uint ClipOrCullDistanceElementCount = 2;
 
         /// <summary>
-        /// Common Shader Constant Buffer Api Slot Count.
+        /// Compute Shader Constant Buffer Api Slot Count.
         /// </summary>
-        public const uint CommonShaderConstantBufferApiSlotCount = 14;
+        public const uint ComputeShaderConstantBufferApiSlotCount = 14;
 
         /// <summary>
-        /// Common Shader Constant Buffer Components.
+        /// Compute Shader Constant Buffer Components.
         /// </summary>
-        public const uint CommonShaderConstantBufferComponents = 4;
+        public const uint ComputeShaderConstantBufferComponents = 4;
 
         /// <summary>
-        /// Common Shader Constant Buffer Component Bit Count.
+        /// Compute Shader Constant Buffer Component Bit Count.
         /// </summary>
-        public const uint CommonShaderConstantBufferComponentBitCount = 32;
+        public const uint ComputeShaderConstantBufferComponentBitCount = 32;
 
         /// <summary>
-        /// Common Shader Constant Buffer Hardware Slot Count.
+        /// Compute Shader Constant Buffer Hardware Slot Count.
         /// </summary>
-        public const uint CommonShaderConstantBufferHardwareSlotCount = 15;
+        public const uint ComputeShaderConstantBufferHardwareSlotCount = 15;
 
         /// <summary>
-        /// Common Shader Constant Buffer Partial Update Extents Byte Alignment.
+        /// Compute Shader Constant Buffer Partial Update Extents Byte Alignment.
         /// </summary>
-        public const uint CommonShaderConstantBufferPartialUpdateExtentsByteAlignment = 16;
+        public const uint ComputeShaderConstantBufferPartialUpdateExtentsByteAlignment = 16;
 
         /// <summary>
-        /// Common Shader Constant Buffer Register Components.
+        /// Compute Shader Constant Buffer Register Components.
         /// </summary>
-        public const uint CommonShaderConstantBufferRegisterComponents = 4;
+        public const uint ComputeShaderConstantBufferRegisterComponents = 4;
 
         /// <summary>
-        /// Common Shader Constant Buffer Register Count.
+        /// Compute Shader Constant Buffer Register Count.
         /// </summary>
-        public const uint CommonShaderConstantBufferRegisterCount = 15;
+        public const uint ComputeShaderConstantBufferRegisterCount = 15;
 
         /// <summary>
-        /// Common Shader Constant Buffer Register Reads Per Instance.
+        /// Compute Shader Constant Buffer Register Reads Per Instance.
         /// </summary>
-        public const uint CommonShaderConstantBufferRegisterReadsPerInstance = 1;
+        public const uint ComputeShaderConstantBufferRegisterReadsPerInstance = 1;
 
         /// <summary>
-        /// Common Shader Constant Buffer Register Read Ports.
+        /// Compute Shader Constant Buffer Register Read Ports.
         /// </summary>
-        public const uint CommonShaderConstantBufferRegisterReadPorts = 1;
+        public const uint ComputeShaderConstantBufferRegisterReadPorts = 1;
 
         /// <summary>
-        /// Common Shader Flow Control Nesting Limit.
+        /// Compute Shader Flow Control Nesting Limit.
         /// </summary>
-        public const uint CommonShaderFlowControlNestingLimit = 64;
+        public const uint ComputeShaderFlowControlNestingLimit = 64;
 
         /// <summary>
-        /// Common Shader Immediate Constant Buffer Register Components.
+        /// Compute Shader Immediate Constant Buffer Register Components.
         /// </summary>
-        public const uint CommonShaderImmediateConstantBufferRegisterComponents = 4;
+        public const uint ComputeShaderImmediateConstantBufferRegisterComponents = 4;
 
         /// <summary>
-        /// Common Shader Immediate Constant Buffer Register Count.
+        /// Compute Shader Immediate Constant Buffer Register Count.
         /// </summary>
-        public const uint CommonShaderImmediateConstantBufferRegisterCount = 1;
+        public const uint ComputeShaderImmediateConstantBufferRegisterCount = 1;
 
         /// <summary>
-        /// Common Shader Immediate Constant Buffer Register Reads Per Instance.
+        /// Compute Shader Immediate Constant Buffer Register Reads Per Instance.
         /// </summary>
-        public const uint CommonShaderImmediateConstantBufferRegisterReadsPerInstance = 1;
+        public const uint ComputeShaderImmediateConstantBufferRegisterReadsPerInstance = 1;
 
         /// <summary>
-        /// Common Shader Immediate Constant Buffer Register Read Ports.
+        /// Compute Shader Immediate Constant Buffer Register Read Ports.
         /// </summary>
-        public const uint CommonShaderImmediateConstantBufferRegisterReadPorts = 1;
+        public const uint ComputeShaderImmediateConstantBufferRegisterReadPorts = 1;
 
         /// <summary>
-        /// Common Shader Immediate Value Component Bit Count.
+        /// Compute Shader Immediate Value Component Bit Count.
         /// </summary>
-        public const uint CommonShaderImmediateValueComponentBitCount = 32;
+        public const uint ComputeShaderImmediateValueComponentBitCount = 32;
 
         /// <summary>
-        /// Common Shader Input Resource Register Components.
+        /// Compute Shader Input Resource Register Components.
         /// </summary>
-        public const uint CommonShaderInputResourceRegisterComponents = 1;
+        public const uint ComputeShaderInputResourceRegisterComponents = 1;
 
         /// <summary>
-        /// Common Shader Input Resource Register Count.
+        /// Compute Shader Input Resource Register Count.
         /// </summary>
-        public const uint CommonShaderInputResourceRegisterCount = 128;
+        public const uint ComputeShaderInputResourceRegisterCount = 128;
 
         /// <summary>
-        /// Common Shader Input Resource Register Reads Per Instance.
+        /// Compute Shader Input Resource Register Reads Per Instance.
         /// </summary>
-        public const uint CommonShaderInputResourceRegisterReadsPerInstance = 1;
+        public const uint ComputeShaderInputResourceRegisterReadsPerInstance = 1;
 
         /// <summary>
-        /// Common Shader Input Resource Register Read Ports.
+        /// Compute Shader Input Resource Register Read Ports.
         /// </summary>
-        public const uint CommonShaderInputResourceRegisterReadPorts = 1;
+        public const uint ComputeShaderInputResourceRegisterReadPorts = 1;
 
         /// <summary>
-        /// Common Shader Input Resource Slot Count.
+        /// Compute Shader Input Resource Slot Count.
         /// </summary>
-        public const uint CommonShaderInputResourceSlotCount = 128;
+        public const uint ComputeShaderInputResourceSlotCount = 128;
 
         /// <summary>
-        /// Common Shader Sampler Register Components.
+        /// Compute Shader Sampler Register Components.
         /// </summary>
-        public const uint CommonShaderSamplerRegisterComponents = 1;
+        public const uint ComputeShaderSamplerRegisterComponents = 1;
 
         /// <summary>
-        /// Common Shader Sampler Register Count.
+        /// Compute Shader Sampler Register Count.
         /// </summary>
-        public const uint CommonShaderSamplerRegisterCount = 16;
+        public const uint ComputeShaderSamplerRegisterCount = 16;
 
         /// <summary>
-        /// Common Shader Sampler Register Reads Per Instance.
+        /// Compute Shader Sampler Register Reads Per Instance.
         /// </summary>
-        public const uint CommonShaderSamplerRegisterReadsPerInstance = 1;
+        public const uint ComputeShaderSamplerRegisterReadsPerInstance = 1;
 
         /// <summary>
-        /// Common Shader Sampler Register Read Ports.
+        /// Compute Shader Sampler Register Read Ports.
         /// </summary>
-        public const uint CommonShaderSamplerRegisterReadPorts = 1;
+        public const uint ComputeShaderSamplerRegisterReadPorts = 1;
 
         /// <summary>
-        /// Common Shader Sampler Slot Count.
+        /// Compute Shader Sampler Slot Count.
         /// </summary>
-        public const uint CommonShaderSamplerSlotCount = 16;
+        public const uint ComputeShaderSamplerSlotCount = 16;
 
         /// <summary>
-        /// Common Shader Subroutine Nesting Limit.
+        /// Compute Shader Subroutine Nesting Limit.
         /// </summary>
-        public const uint CommonShaderSubroutineNestingLimit = 32;
+        public const uint ComputeShaderSubroutineNestingLimit = 32;
 
         /// <summary>
-        /// Common Shader Temp Register Components.
+        /// Compute Shader Temp Register Components.
         /// </summary>
-        public const uint CommonShaderTempRegisterComponents = 4;
+        public const uint ComputeShaderTempRegisterComponents = 4;
 
         /// <summary>
-        /// Common Shader Temp Register Component Bit Count.
+        /// Compute Shader Temp Register Component Bit Count.
         /// </summary>
-        public const uint CommonShaderTempRegisterComponentBitCount = 32;
+        public const uint ComputeShaderTempRegisterComponentBitCount = 32;
 
         /// <summary>
-        /// Common Shader Temp Register Count.
+        /// Compute Shader Temp Register Count.
         /// </summary>
-        public const uint CommonShaderTempRegisterCount = 4096;
+        public const uint ComputeShaderTempRegisterCount = 4096;
 
         /// <summary>
-        /// Common Shader Temp Register Reads Per Instance.
+        /// Compute Shader Temp Register Reads Per Instance.
         /// </summary>
-        public const uint CommonShaderTempRegisterReadsPerInstance = 3;
+        public const uint ComputeShaderTempRegisterReadsPerInstance = 3;
 
         /// <summary>
-        /// Common Shader Temp Register Read Ports.
+        /// Compute Shader Temp Register Read Ports.
         /// </summary>
-        public const uint CommonShaderTempRegisterReadPorts = 3;
+        public const uint ComputeShaderTempRegisterReadPorts = 3;
 
         /// <summary>
-        /// Common Shader Tex Coord Range Reduction Max.
+        /// Compute Shader Tex Coord Range Reduction Max.
         /// </summary>
-        public const uint CommonShaderTexCoordRangeReductionMax = 10;
+        public const int ComputeShaderTexCoordRangeReductionMax = 10;
 
         /// <summary>
-        /// Common Shader Tex Coord Range Reduction Min.
+        /// Compute Shader Tex Coord Range Reduction Min.
         /// </summary>
-        public const int CommonShaderTexCoordRangeReductionMin = -10;
+        public const int ComputeShaderTexCoordRangeReductionMin = -10;
 
         /// <summary>
-        /// Common Shader Texel Offset Max Negative.
+        /// Compute Shader Texel Offset Max Negative.
         /// </summary>
-        public const int CommonShaderTexelOffsetMaxNegative = -8;
+        public const int ComputeShaderTexelOffsetMaxNegative = -8;
 
         /// <summary>
-        /// Common Shader Texel Offset Max Positive.
+        /// Compute Shader Texel Offset Max Positive.
         /// </summary>
-        public const uint CommonShaderTexelOffsetMaxPositive = 7;
+        public const int ComputeShaderTexelOffsetMaxPositive = 7;
 
         /// <summary>
         /// Compute Shader 4X Bucket 00 Max Bytes Tgsm Writable Per Thread.
@@ -909,10 +2044,10 @@ namespace JeremyAnsel.DirectX.D3D11
         public const float FloatToUIntInstructionMaxInput = 4294967295.999f;
 
         /// <summary>
-        /// Float To Uint Instruction Min Input.
+        /// Float To UInt Instruction Min Input.
         /// </summary>
         [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
-        public const float FloatToUintInstructionMinInput = 0.0f;
+        public const float FloatToUIntInstructionMinInput = 0.0f;
 
         /// <summary>
         /// Geometry Shader Input Instance Id Reads Per Instance.
@@ -1954,13 +3089,13 @@ namespace JeremyAnsel.DirectX.D3D11
         public const uint WhqlDrawVertexCount2ToExp = 25;
 
         /// <summary>
-        /// Unordered Access View Slot Count.
+        /// D3D11.1 Unordered Access View Slot Count.
         /// </summary>
-        public const uint UnorderedAccessViewSlotCount = 64;
+        public const uint D3D111UnorderedAccessViewSlotCount = 64;
 
         /// <summary>
-        /// Tiled Resource Tile Size In Bytes.
+        /// D3D11.2 Tiled Resource Tile Size In Bytes.
         /// </summary>
-        public const uint TiledResourceTileSizeInBytes = 65536;
+        public const uint D3D112TiledResourceTileSizeInBytes = 65536;
     }
 }
