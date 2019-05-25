@@ -16,7 +16,7 @@ namespace JeremyAnsel.DirectX.D2D1
         Unknown = 0,
 
         /// <summary>
-        /// Treat the alpha as premultipled.
+        /// Treat the alpha as pre multipled.
         /// </summary>
         Premultiplied = 1,
 

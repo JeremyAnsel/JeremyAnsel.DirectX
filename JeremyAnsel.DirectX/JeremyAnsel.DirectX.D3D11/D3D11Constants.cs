@@ -344,66 +344,79 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// D3D10 Float16 Fused Tolerance In Ulp.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10Float16FusedToleranceInUlp = 0.6f;
 
         /// <summary>
         /// D3D10 Float32 Max.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float32", Justification = "Reviewed")]
         public const float D3D10Float32Max = 3.402823466e+38f;
 
         /// <summary>
         /// D3D10 Float32 To Integer Tolerance In Ulp.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float32", Justification = "Reviewed")]
         public const float D3D10Float32ToIntegerToleranceInUlp = 0.6f;
 
         /// <summary>
         /// D3D10 Float To Srgb Exponent Denominator.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToSrgbExponentDenominator = 2.4f;
 
         /// <summary>
         /// D3D10 Float To Srgb Exponent Numerator.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToSrgbExponentNumerator = 1.0f;
 
         /// <summary>
         /// D3D10 Float To Srgb Offset.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToSrgbOffset = 0.055f;
 
         /// <summary>
         /// D3D10 Float To Srgb Scale 1.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToSrgbScale1 = 12.92f;
 
         /// <summary>
         /// D3D10 Float To Srgb Scale 2.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToSrgbScale2 = 1.055f;
 
         /// <summary>
         /// D3D10 Float To Srgb Threshold.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToSrgbThreshold = 0.0031308f;
 
         /// <summary>
         /// D3D10 Float To Int Instruction Max Input.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToIntInstructionMaxInput = 2147483647.999f;
 
         /// <summary>
         /// D3D10 Float To Int Instruction Min Input.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToIntInstructionMinInput = -2147483648.999f;
 
         /// <summary>
         /// D3D10 Float To UInt Instruction Max Input.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToUIntInstructionMaxInput = 4294967295.999f;
 
         /// <summary>
         /// D3D10 Float To UInt Instruction Min Input.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10FloatToUIntInstructionMinInput = 0.0f;
 
         /// <summary>
@@ -509,6 +522,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// D3D10 Input Assembler Integer Arithmetic Bit Count.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "integer", Justification = "Reviewed")]
         public const uint D3D10InputAssemblerIntegerArithmeticBitCount = 32;
 
         /// <summary>
@@ -539,11 +553,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// D3D10 Integer Divide By Zero Quotient.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "integer", Justification = "Reviewed")]
         public const uint D3D10IntegerDivideByZeroQuotient = 0xffffffff;
 
         /// <summary>
         /// D3D10 Integer Divide By Zero Remainder.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "integer", Justification = "Reviewed")]
         public const uint D3D10IntegerDivideByZeroRemainder = 0xffffffff;
 
         /// <summary>
@@ -889,31 +905,37 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// D3D10 Srgb To Float Denominator 1.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10SrgbToFloatDenominator1 = 12.92f;
 
         /// <summary>
         /// D3D10 Srgb To Float Denominator 2.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10SrgbToFloatDenominator2 = 1.055f;
 
         /// <summary>
         /// D3D10 Srgb To Float Exponent.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10SrgbToFloatExponent = 2.4f;
 
         /// <summary>
         /// D3D10 Srgb To Float Offset.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10SrgbToFloatOffset = 0.055f;
 
         /// <summary>
         /// D3D10 Srgb To Float Threshold.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10SrgbToFloatThreshold = 0.04045f;
 
         /// <summary>
         /// D3D10 Srgb To Float Tolerance In Ulp.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D10SrgbToFloatToleranceInUlp = 0.5f;
 
         /// <summary>
@@ -1059,11 +1081,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// D3D10.1 Float16 Fused Tolerance In Ulp.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float", Justification = "Reviewed")]
         public const float D3D101Float16FusedToleranceInUlp = 0.6f;
 
         /// <summary>
         /// D3D10.1 Float32 To Integer Tolerance In Ulp.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "float32", Justification = "Reviewed")]
         public const float D3D101Float32ToIntegerToleranceInUlp = 0.6f;
 
         /// <summary>

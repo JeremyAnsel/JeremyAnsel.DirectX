@@ -25,10 +25,10 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2)
         {
-            float uCoordinate;
-            float vCoordinate;
+            float coordinateU;
+            float coordinateV;
             float distance;
-            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out uCoordinate, out vCoordinate, out distance);
+            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out coordinateU, out coordinateV, out distance);
         }
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float distance)
         {
-            float uCoordinate;
-            float vCoordinate;
-            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out uCoordinate, out vCoordinate, out distance);
+            float coordinateU;
+            float coordinateV;
+            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out coordinateU, out coordinateV, out distance);
         }
 
         /// <summary>
@@ -58,15 +58,15 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         /// <param name="v0">The first vector defining the triangle.</param>
         /// <param name="v1">The second vector defining the triangle.</param>
         /// <param name="v2">The third vector defining the triangle.</param>
-        /// <param name="uCoordinate">The first barycentric hit coordinate.</param>
-        /// <param name="vCoordinate">The second barycentric hit coordinate.</param>
+        /// <param name="coordinateU">The first barycentric hit coordinate.</param>
+        /// <param name="coordinateV">The second barycentric hit coordinate.</param>
         /// <param name="distance">The distance along the ray where the intersection occurs.</param>
         /// <returns>A boolean value indicating whether the triangle intersects with the ray.</returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "5#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "6#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "7#", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float uCoordinate, out float vCoordinate, out float distance)
+        public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float coordinateU, out float coordinateV, out float distance)
         {
             Debug.Assert(Internal.XMVector3IsUnit(direction), "Reviewed");
 
@@ -110,8 +110,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
 
                 if (XMVector4.EqualInt(noIntersection, XMVector.TrueInt))
                 {
-                    uCoordinate = 0.0f;
-                    vCoordinate = 0.0f;
+                    coordinateU = 0.0f;
+                    coordinateV = 0.0f;
                     distance = 0.0f;
                     return false;
                 }
@@ -143,8 +143,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
 
                 if (XMVector4.EqualInt(noIntersection, XMVector.TrueInt))
                 {
-                    uCoordinate = 0.0f;
-                    vCoordinate = 0.0f;
+                    coordinateU = 0.0f;
+                    coordinateV = 0.0f;
                     distance = 0.0f;
                     return false;
                 }
@@ -152,8 +152,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             else
             {
                 // Parallel ray.
-                uCoordinate = 0.0f;
-                vCoordinate = 0.0f;
+                coordinateU = 0.0f;
+                coordinateV = 0.0f;
                 distance = 0.0f;
                 return false;
             }
@@ -164,8 +164,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             t = XMVector.Divide(t, det);
 
             // Store the x-component to *pDist
-            u.StoreFloat(out uCoordinate);
-            v.StoreFloat(out vCoordinate);
+            u.StoreFloat(out coordinateU);
+            v.StoreFloat(out coordinateV);
             t.StoreFloat(out distance);
 
             return true;

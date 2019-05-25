@@ -52,7 +52,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static uint CalcSubresource(uint mipSlice, uint arraySlice, uint mipLevels)
         {
-            return mipSlice + arraySlice * mipLevels;
+            return mipSlice + (arraySlice * mipLevels);
         }
     }
 }

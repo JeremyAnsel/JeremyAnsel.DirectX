@@ -449,7 +449,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <summary>
         /// Converts YUV color values to RGB color values.
         /// </summary>
-        /// <param name="yuv">Color value to convert in Luma-Chrominance (YUV) aka YCbCr. The X element contains Luma (Y, 0.0 to 1.0), the Y element contains Blue-difference chroma (U, -0.5 to 0.5), the Z element contains the Red-difference chroma (V, -0.5 to 0.5), and the W element contains the Alpha (0.0 to 1.0).</param>
+        /// <param name="yuv">Color value to convert in Luma-Chrominance (YUV) aka <c>YCbCr</c>. The X element contains Luma (Y, 0.0 to 1.0), the Y element contains Blue-difference chroma (U, -0.5 to 0.5), the Z element contains the Red-difference chroma (V, -0.5 to 0.5), and the W element contains the Alpha (0.0 to 1.0).</param>
         /// <returns>The converted color value. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha (a copy of <c>yuv.w</c>). Each has a range of 0.0 to 1.0.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static XMVector YuvToRgb(XMVector yuv)
@@ -484,7 +484,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <summary>
         /// Converts YUV color values to RGB HD color values.
         /// </summary>
-        /// <param name="yuv">Color value to convert in Luma-Chrominance (YUV) aka YCbCr. The X element contains Luma (Y, 0.0 to 1.0), the Y element contains Blue-difference chroma (U, -0.5 to 0.5), the Z element contains the Red-difference chroma (V, -0.5 to 0.5), and the W element contains the Alpha (0.0 to 1.0).</param>
+        /// <param name="yuv">Color value to convert in Luma-Chrominance (YUV) aka <c>YCbCr</c>. The X element contains Luma (Y, 0.0 to 1.0), the Y element contains Blue-difference chroma (U, -0.5 to 0.5), the Z element contains the Red-difference chroma (V, -0.5 to 0.5), and the W element contains the Alpha (0.0 to 1.0).</param>
         /// <returns>The converted color value. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha (a copy of <c>yuv.w</c>). Each has a range of 0.0 to 1.0.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static XMVector YuvToRgbHD(XMVector yuv)
