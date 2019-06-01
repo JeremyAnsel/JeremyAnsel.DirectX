@@ -990,45 +990,46 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException("destinationResource");
             }
 
-            if (destinationBox == null)
-            {
-                GCHandle sourceDataHandle = GCHandle.Alloc(sourceData, GCHandleType.Pinned);
+            int sourceDataSize = Marshal.SizeOf(typeof(T));
+            IntPtr sourceDataPtr = Marshal.AllocHGlobal(sourceDataSize);
 
-                try
+            try
+            {
+                Marshal.StructureToPtr(sourceData, sourceDataPtr, false);
+
+                if (destinationBox == null)
                 {
                     this.deviceContext.UpdateSubresource(
                         destinationResource.GetHandle<ID3D11Resource>(),
                         destinationSubresource,
                         IntPtr.Zero,
-                        sourceDataHandle.AddrOfPinnedObject(),
+                        sourceDataPtr,
                         sourceRowPitch,
                         sourceDepthPitch);
                 }
-                finally
+                else
                 {
-                    sourceDataHandle.Free();
+                    GCHandle destinationBoxHandle = GCHandle.Alloc(destinationBox.Value, GCHandleType.Pinned);
+
+                    try
+                    {
+                        this.deviceContext.UpdateSubresource(
+                            destinationResource.GetHandle<ID3D11Resource>(),
+                            destinationSubresource,
+                            destinationBoxHandle.AddrOfPinnedObject(),
+                            sourceDataPtr,
+                            sourceRowPitch,
+                            sourceDepthPitch);
+                    }
+                    finally
+                    {
+                        destinationBoxHandle.Free();
+                    }
                 }
             }
-            else
+            finally
             {
-                GCHandle sourceDataHandle = GCHandle.Alloc(sourceData, GCHandleType.Pinned);
-                GCHandle destinationBoxHandle = GCHandle.Alloc(destinationBox.Value, GCHandleType.Pinned);
-
-                try
-                {
-                    this.deviceContext.UpdateSubresource(
-                        destinationResource.GetHandle<ID3D11Resource>(),
-                        destinationSubresource,
-                        destinationBoxHandle.AddrOfPinnedObject(),
-                        sourceDataHandle.AddrOfPinnedObject(),
-                        sourceRowPitch,
-                        sourceDepthPitch);
-                }
-                finally
-                {
-                    sourceDataHandle.Free();
-                    destinationBoxHandle.Free();
-                }
+                Marshal.FreeHGlobal(sourceDataPtr);
             }
         }
 
@@ -1063,45 +1064,54 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException("sourceData");
             }
 
-            if (destinationBox == null)
+            if (sourceData.Length == 0)
             {
-                GCHandle sourceDataHandle = GCHandle.Alloc(sourceData, GCHandleType.Pinned);
+                throw new ArgumentOutOfRangeException("sourceData");
+            }
 
-                try
+            int sourceDataSize = Marshal.SizeOf(typeof(T));
+            IntPtr sourceDataPtr = Marshal.AllocHGlobal(sourceDataSize * sourceData.Length);
+
+            try
+            {
+                for (int i = 0; i < sourceData.Length; i++)
+                {
+                    Marshal.StructureToPtr(sourceData[i], IntPtr.Add(sourceDataPtr, sourceDataSize * i), false);
+                }
+
+                if (destinationBox == null)
                 {
                     this.deviceContext.UpdateSubresource(
                         destinationResource.GetHandle<ID3D11Resource>(),
                         destinationSubresource,
                         IntPtr.Zero,
-                        sourceDataHandle.AddrOfPinnedObject(),
+                        sourceDataPtr,
                         sourceRowPitch,
                         sourceDepthPitch);
                 }
-                finally
+                else
                 {
-                    sourceDataHandle.Free();
+                    GCHandle destinationBoxHandle = GCHandle.Alloc(destinationBox.Value, GCHandleType.Pinned);
+
+                    try
+                    {
+                        this.deviceContext.UpdateSubresource(
+                            destinationResource.GetHandle<ID3D11Resource>(),
+                            destinationSubresource,
+                            destinationBoxHandle.AddrOfPinnedObject(),
+                            sourceDataPtr,
+                            sourceRowPitch,
+                            sourceDepthPitch);
+                    }
+                    finally
+                    {
+                        destinationBoxHandle.Free();
+                    }
                 }
             }
-            else
+            finally
             {
-                GCHandle sourceDataHandle = GCHandle.Alloc(sourceData, GCHandleType.Pinned);
-                GCHandle destinationBoxHandle = GCHandle.Alloc(destinationBox.Value, GCHandleType.Pinned);
-
-                try
-                {
-                    this.deviceContext.UpdateSubresource(
-                        destinationResource.GetHandle<ID3D11Resource>(),
-                        destinationSubresource,
-                        destinationBoxHandle.AddrOfPinnedObject(),
-                        sourceDataHandle.AddrOfPinnedObject(),
-                        sourceRowPitch,
-                        sourceDepthPitch);
-                }
-                finally
-                {
-                    sourceDataHandle.Free();
-                    destinationBoxHandle.Free();
-                }
+                Marshal.FreeHGlobal(sourceDataPtr);
             }
         }
 

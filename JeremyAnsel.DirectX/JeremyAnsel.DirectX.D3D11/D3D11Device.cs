@@ -324,25 +324,34 @@ namespace JeremyAnsel.DirectX.D3D11
         public D3D11Buffer CreateBuffer<T>(D3D11BufferDesc desc, T data, uint sysMemPitch, uint sysMemSlicePitch)
             where T : struct
         {
-            GCHandle dataHandle = GCHandle.Alloc(data, GCHandleType.Pinned);
-
-            D3D11SubResourceDataPtr resource = new D3D11SubResourceDataPtr
-            {
-                SysMem = dataHandle.AddrOfPinnedObject(),
-                SysMemPitch = sysMemPitch,
-                SysMemSlicePitch = sysMemSlicePitch
-            };
-
-            GCHandle resourceHandle = GCHandle.Alloc(resource, GCHandleType.Pinned);
+            int dataSize = Marshal.SizeOf(typeof(T));
+            IntPtr dataPtr = Marshal.AllocHGlobal(dataSize);
 
             try
             {
-                return new D3D11Buffer(this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject()));
+                Marshal.StructureToPtr(data, dataPtr, false);
+
+                D3D11SubResourceDataPtr resource = new D3D11SubResourceDataPtr
+                {
+                    SysMem = dataPtr,
+                    SysMemPitch = sysMemPitch,
+                    SysMemSlicePitch = sysMemSlicePitch
+                };
+
+                GCHandle resourceHandle = GCHandle.Alloc(resource, GCHandleType.Pinned);
+
+                try
+                {
+                    return new D3D11Buffer(this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject()));
+                }
+                finally
+                {
+                    resourceHandle.Free();
+                }
             }
             finally
             {
-                resourceHandle.Free();
-                dataHandle.Free();
+                Marshal.FreeHGlobal(dataPtr);
             }
         }
 
@@ -365,22 +374,42 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException("data");
             }
 
-            D3D11SubResourceDataPtr resource = new D3D11SubResourceDataPtr
+            if (data.Length == 0)
             {
-                SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data, 0),
-                SysMemPitch = sysMemPitch,
-                SysMemSlicePitch = sysMemSlicePitch
-            };
+                throw new ArgumentOutOfRangeException("data");
+            }
 
-            GCHandle resourceHandle = GCHandle.Alloc(resource, GCHandleType.Pinned);
+            int dataSize = Marshal.SizeOf(typeof(T));
+            IntPtr dataPtr = Marshal.AllocHGlobal(dataSize * data.Length);
 
             try
             {
-                return new D3D11Buffer(this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject()));
+                for (int i = 0; i < data.Length; i++)
+                {
+                    Marshal.StructureToPtr(data[i], IntPtr.Add(dataPtr, dataSize * i), false);
+                }
+
+                D3D11SubResourceDataPtr resource = new D3D11SubResourceDataPtr
+                {
+                    SysMem = dataPtr,
+                    SysMemPitch = sysMemPitch,
+                    SysMemSlicePitch = sysMemSlicePitch
+                };
+
+                GCHandle resourceHandle = GCHandle.Alloc(resource, GCHandleType.Pinned);
+
+                try
+                {
+                    return new D3D11Buffer(this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject()));
+                }
+                finally
+                {
+                    resourceHandle.Free();
+                }
             }
             finally
             {
-                resourceHandle.Free();
+                Marshal.FreeHGlobal(dataPtr);
             }
         }
 
