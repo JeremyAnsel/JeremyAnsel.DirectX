@@ -1,5 +1,5 @@
 ﻿// <copyright file="ID3D11ClassLinkage.cs" company="Jérémy Ansel">
-// Copyright (c) 2014-2016 Jérémy Ansel
+// Copyright (c) 2014-2016, 2019 Jérémy Ansel
 // </copyright>
 
 namespace JeremyAnsel.DirectX.D3D11.ComInterfaces

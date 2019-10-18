@@ -1,5 +1,5 @@
 ﻿// <copyright file="IDxgiFactory1.cs" company="Jérémy Ansel">
-// Copyright (c) 2014-2016 Jérémy Ansel
+// Copyright (c) 2014-2016, 2019 Jérémy Ansel
 // </copyright>
 
 namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
