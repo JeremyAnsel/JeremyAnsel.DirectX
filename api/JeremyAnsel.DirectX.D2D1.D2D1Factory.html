@@ -1,0 +1,1470 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class D2D1Factory
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class D2D1Factory
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_D2D1_D2D1Factory" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory" class="text-break">Class D2D1Factory
+  </h1>
+  <div class="markdown level0 summary"><p>Creates Direct2D resources.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">D2D1Factory</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="JeremyAnsel.DirectX.D2D1.ID2D1Releasable.html">ID2D1Releasable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.D2D1.html">JeremyAnsel.DirectX.D2D1</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.D2D1.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class D2D1Factory : IDisposable, ID2D1Releasable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_Handle.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L39">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Handle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Handle*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Handle" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Handle">Handle</h4>
+  <div class="markdown level1 summary"><p>Gets an handle representing the D2D1 object interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_Create_JeremyAnsel_DirectX_D2D1_D2D1FactoryType_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.Create(JeremyAnsel.DirectX.D2D1.D2D1FactoryType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L61">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Create_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Create*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Create_JeremyAnsel_DirectX_D2D1_D2D1FactoryType_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Create(JeremyAnsel.DirectX.D2D1.D2D1FactoryType)">Create(D2D1FactoryType)</h4>
+  <div class="markdown level1 summary"><p>Creates a factory object that can be used to create Direct2D resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static D2D1Factory Create(D2D1FactoryType factoryType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1FactoryType.html">D2D1FactoryType</a></td>
+        <td><span class="parametername">factoryType</span></td>
+        <td><p>The threading model of the factory and the resources it creates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Factory.html">D2D1Factory</a></td>
+        <td><p>The new factory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_Create_JeremyAnsel_DirectX_D2D1_D2D1FactoryType_JeremyAnsel_DirectX_D2D1_D2D1DebugLevel_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.Create(JeremyAnsel.DirectX.D2D1.D2D1FactoryType%2CJeremyAnsel.DirectX.D2D1.D2D1DebugLevel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L100">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Create_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Create*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Create_JeremyAnsel_DirectX_D2D1_D2D1FactoryType_JeremyAnsel_DirectX_D2D1_D2D1DebugLevel_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Create(JeremyAnsel.DirectX.D2D1.D2D1FactoryType,JeremyAnsel.DirectX.D2D1.D2D1DebugLevel)">Create(D2D1FactoryType, D2D1DebugLevel)</h4>
+  <div class="markdown level1 summary"><p>Creates a factory object that can be used to create Direct2D resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static D2D1Factory Create(D2D1FactoryType factoryType, D2D1DebugLevel debugLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1FactoryType.html">D2D1FactoryType</a></td>
+        <td><span class="parametername">factoryType</span></td>
+        <td><p>The threading model of the factory and the resources it creates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DebugLevel.html">D2D1DebugLevel</a></td>
+        <td><span class="parametername">debugLevel</span></td>
+        <td><p>The level of detail provided to the debugging layer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Factory.html">D2D1Factory</a></td>
+        <td><p>The new factory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_Create_JeremyAnsel_DirectX_D2D1_D2D1FactoryType_JeremyAnsel_DirectX_D2D1_D2D1FactoryOptions_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.Create(JeremyAnsel.DirectX.D2D1.D2D1FactoryType%2CJeremyAnsel.DirectX.D2D1.D2D1FactoryOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L75">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Create_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Create*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Create_JeremyAnsel_DirectX_D2D1_D2D1FactoryType_JeremyAnsel_DirectX_D2D1_D2D1FactoryOptions_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Create(JeremyAnsel.DirectX.D2D1.D2D1FactoryType,JeremyAnsel.DirectX.D2D1.D2D1FactoryOptions)">Create(D2D1FactoryType, D2D1FactoryOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a factory object that can be used to create Direct2D resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static D2D1Factory Create(D2D1FactoryType factoryType, D2D1FactoryOptions factoryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1FactoryType.html">D2D1FactoryType</a></td>
+        <td><span class="parametername">factoryType</span></td>
+        <td><p>The threading model of the factory and the resources it creates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1FactoryOptions.html">D2D1FactoryOptions</a></td>
+        <td><span class="parametername">factoryOptions</span></td>
+        <td><p>The level of detail provided to the debugging layer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Factory.html">D2D1Factory</a></td>
+        <td><p>The new factory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDCRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDCRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L461">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDCRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDCRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDCRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDCRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)">CreateDCRenderTarget(D2D1RenderTargetProperties)</h4>
+  <div class="markdown level1 summary"><p>Creates a render target that draws to a Windows Graphics Device Interface (GDI) device context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1DCRenderTarget CreateDCRenderTarget(D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties.html">D2D1RenderTargetProperties</a></td>
+        <td><span class="parametername">renderTargetProperties</span></td>
+        <td><p>The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DCRenderTarget.html">D2D1DCRenderTarget</a></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DCRenderTarget.html">D2D1DCRenderTarget</a> created by the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L273">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock">CreateDrawingStateBlock()</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a> that can be used with the <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SaveDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">SaveDrawingState(D2D1DrawingStateBlock)</a> and <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_RestoreDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">RestoreDrawingState(D2D1DrawingStateBlock)</a> methods of a render target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1DrawingStateBlock CreateDrawingStateBlock()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a></td>
+        <td><p>The new drawing state block created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateDescription_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock(JeremyAnsel.DirectX.D2D1.D2D1DrawingStateDescription)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L286">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateDescription_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock(JeremyAnsel.DirectX.D2D1.D2D1DrawingStateDescription)">CreateDrawingStateBlock(D2D1DrawingStateDescription)</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a> that can be used with the <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SaveDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">SaveDrawingState(D2D1DrawingStateBlock)</a> and <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_RestoreDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">RestoreDrawingState(D2D1DrawingStateBlock)</a> methods of a render target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1DrawingStateBlock CreateDrawingStateBlock(D2D1DrawingStateDescription drawingStateDescription)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateDescription.html">D2D1DrawingStateDescription</a></td>
+        <td><span class="parametername">drawingStateDescription</span></td>
+        <td><p>A structure that contains antialiasing, transform, and tags information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a></td>
+        <td><p>The new drawing state block created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateDescription_JeremyAnsel_DirectX_DWrite_DWriteRenderingParams_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock(JeremyAnsel.DirectX.D2D1.D2D1DrawingStateDescription%2CJeremyAnsel.DirectX.DWrite.DWriteRenderingParams)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L324">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateDescription_JeremyAnsel_DirectX_DWrite_DWriteRenderingParams_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock(JeremyAnsel.DirectX.D2D1.D2D1DrawingStateDescription,JeremyAnsel.DirectX.DWrite.DWriteRenderingParams)">CreateDrawingStateBlock(D2D1DrawingStateDescription, DWriteRenderingParams)</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a> that can be used with the <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SaveDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">SaveDrawingState(D2D1DrawingStateBlock)</a> and <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_RestoreDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">RestoreDrawingState(D2D1DrawingStateBlock)</a> methods of a render target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1DrawingStateBlock CreateDrawingStateBlock(D2D1DrawingStateDescription drawingStateDescription, DWriteRenderingParams textRenderingParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateDescription.html">D2D1DrawingStateDescription</a></td>
+        <td><span class="parametername">drawingStateDescription</span></td>
+        <td><p>A structure that contains antialiasing, transform, and tags information.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.html">DWriteRenderingParams</a></td>
+        <td><span class="parametername">textRenderingParams</span></td>
+        <td><p>Optional text parameters that indicate how text should be rendered.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a></td>
+        <td><p>The new drawing state block created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_JeremyAnsel_DirectX_DWrite_DWriteRenderingParams_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock(JeremyAnsel.DirectX.DWrite.DWriteRenderingParams)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L310">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDrawingStateBlock_JeremyAnsel_DirectX_DWrite_DWriteRenderingParams_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDrawingStateBlock(JeremyAnsel.DirectX.DWrite.DWriteRenderingParams)">CreateDrawingStateBlock(DWriteRenderingParams)</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a> that can be used with the <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SaveDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">SaveDrawingState(D2D1DrawingStateBlock)</a> and <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_RestoreDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">RestoreDrawingState(D2D1DrawingStateBlock)</a> methods of a render target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1DrawingStateBlock CreateDrawingStateBlock(DWriteRenderingParams textRenderingParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.html">DWriteRenderingParams</a></td>
+        <td><span class="parametername">textRenderingParams</span></td>
+        <td><p>Optional text parameters that indicate how text should be rendered.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a></td>
+        <td><p>The new drawing state block created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_JeremyAnsel_DirectX_Dxgi_DxgiSurface_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget(JeremyAnsel.DirectX.Dxgi.DxgiSurface%2CJeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L382">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_JeremyAnsel_DirectX_Dxgi_DxgiSurface_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget(JeremyAnsel.DirectX.Dxgi.DxgiSurface,JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)">CreateDxgiSurfaceRenderTarget(DxgiSurface, D2D1RenderTargetProperties)</h4>
+  <div class="markdown level1 summary"><p>Creates a render target that draws to a DirectX Graphics Infrastructure (DXGI) surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1RenderTarget CreateDxgiSurfaceRenderTarget(DxgiSurface dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiSurface.html">DxgiSurface</a></td>
+        <td><span class="parametername">dxgiSurface</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiSurface.html">DxgiSurface</a> to which the render target will draw.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties.html">D2D1RenderTargetProperties</a></td>
+        <td><span class="parametername">renderTargetProperties</span></td>
+        <td><p>The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a> object created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_JeremyAnsel_DirectX_Dxgi_DxgiSurface1_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget(JeremyAnsel.DirectX.Dxgi.DxgiSurface1%2CJeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L402">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_JeremyAnsel_DirectX_Dxgi_DxgiSurface1_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget(JeremyAnsel.DirectX.Dxgi.DxgiSurface1,JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)">CreateDxgiSurfaceRenderTarget(DxgiSurface1, D2D1RenderTargetProperties)</h4>
+  <div class="markdown level1 summary"><p>Creates a render target that draws to a DirectX Graphics Infrastructure (DXGI) surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1RenderTarget CreateDxgiSurfaceRenderTarget(DxgiSurface1 dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiSurface1.html">DxgiSurface1</a></td>
+        <td><span class="parametername">dxgiSurface</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiSurface1.html">DxgiSurface1</a> to which the render target will draw.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties.html">D2D1RenderTargetProperties</a></td>
+        <td><span class="parametername">renderTargetProperties</span></td>
+        <td><p>The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a> object created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_JeremyAnsel_DirectX_Dxgi_DxgiSurface2_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget(JeremyAnsel.DirectX.Dxgi.DxgiSurface2%2CJeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L422">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_JeremyAnsel_DirectX_Dxgi_DxgiSurface2_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget(JeremyAnsel.DirectX.Dxgi.DxgiSurface2,JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)">CreateDxgiSurfaceRenderTarget(DxgiSurface2, D2D1RenderTargetProperties)</h4>
+  <div class="markdown level1 summary"><p>Creates a render target that draws to a DirectX Graphics Infrastructure (DXGI) surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1RenderTarget CreateDxgiSurfaceRenderTarget(DxgiSurface2 dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiSurface2.html">DxgiSurface2</a></td>
+        <td><span class="parametername">dxgiSurface</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiSurface2.html">DxgiSurface2</a> to which the render target will draw.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties.html">D2D1RenderTargetProperties</a></td>
+        <td><span class="parametername">renderTargetProperties</span></td>
+        <td><p>The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a> object created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_JeremyAnsel_DirectX_Dxgi_DxgiSurface3_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget(JeremyAnsel.DirectX.Dxgi.DxgiSurface3%2CJeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L442">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateDxgiSurfaceRenderTarget_JeremyAnsel_DirectX_Dxgi_DxgiSurface3_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateDxgiSurfaceRenderTarget(JeremyAnsel.DirectX.Dxgi.DxgiSurface3,JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)">CreateDxgiSurfaceRenderTarget(DxgiSurface3, D2D1RenderTargetProperties)</h4>
+  <div class="markdown level1 summary"><p>Creates a render target that draws to a DirectX Graphics Infrastructure (DXGI) surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1RenderTarget CreateDxgiSurfaceRenderTarget(DxgiSurface3 dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiSurface3.html">DxgiSurface3</a></td>
+        <td><span class="parametername">dxgiSurface</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiSurface3.html">DxgiSurface3</a> to which the render target will draw.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties.html">D2D1RenderTargetProperties</a></td>
+        <td><span class="parametername">renderTargetProperties</span></td>
+        <td><p>The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a> object created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateEllipseGeometry_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateEllipseGeometry(JeremyAnsel.DirectX.D2D1.D2D1Ellipse)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L191">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateEllipseGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateEllipseGeometry*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateEllipseGeometry_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateEllipseGeometry(JeremyAnsel.DirectX.D2D1.D2D1Ellipse)">CreateEllipseGeometry(D2D1Ellipse)</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1EllipseGeometry.html">D2D1EllipseGeometry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1EllipseGeometry CreateEllipseGeometry(D2D1Ellipse ellipse)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Ellipse.html">D2D1Ellipse</a></td>
+        <td><span class="parametername">ellipse</span></td>
+        <td><p>A value that describes the center point, x-radius, and y-radius of the ellipse geometry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1EllipseGeometry.html">D2D1EllipseGeometry</a></td>
+        <td><p>The ellipse geometry created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateGeometryGroup_JeremyAnsel_DirectX_D2D1_D2D1FillMode_JeremyAnsel_DirectX_D2D1_D2D1Geometry___.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateGeometryGroup(JeremyAnsel.DirectX.D2D1.D2D1FillMode%2CJeremyAnsel.DirectX.D2D1.D2D1Geometry%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L205">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateGeometryGroup_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateGeometryGroup*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateGeometryGroup_JeremyAnsel_DirectX_D2D1_D2D1FillMode_JeremyAnsel_DirectX_D2D1_D2D1Geometry___" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateGeometryGroup(JeremyAnsel.DirectX.D2D1.D2D1FillMode,JeremyAnsel.DirectX.D2D1.D2D1Geometry[])">CreateGeometryGroup(D2D1FillMode, D2D1Geometry[])</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1GeometryGroup.html">D2D1GeometryGroup</a>, which is an object that holds other geometries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1GeometryGroup CreateGeometryGroup(D2D1FillMode fillMode, D2D1Geometry[] geometries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1FillMode.html">D2D1FillMode</a></td>
+        <td><span class="parametername">fillMode</span></td>
+        <td><p>A value that specifies the rule that a composite shape uses to determine whether a given point is part of the geometry.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Geometry.html">D2D1Geometry</a>[]</td>
+        <td><span class="parametername">geometries</span></td>
+        <td><p>An array containing the geometry objects to add to the geometry group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1GeometryGroup.html">D2D1GeometryGroup</a></td>
+        <td><p>The geometry group created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateHwndRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTargetProperties_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateHwndRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties%2CJeremyAnsel.DirectX.D2D1.D2D1HwndRenderTargetProperties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L368">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateHwndRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateHwndRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateHwndRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTargetProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateHwndRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties,JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTargetProperties)">CreateHwndRenderTarget(D2D1RenderTargetProperties, D2D1HwndRenderTargetProperties)</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.html">D2D1HwndRenderTarget</a>, a render target that renders to a window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1HwndRenderTarget CreateHwndRenderTarget(D2D1RenderTargetProperties renderTargetProperties, D2D1HwndRenderTargetProperties hwndRenderTargetProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties.html">D2D1RenderTargetProperties</a></td>
+        <td><span class="parametername">renderTargetProperties</span></td>
+        <td><p>The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTargetProperties.html">D2D1HwndRenderTargetProperties</a></td>
+        <td><span class="parametername">hwndRenderTargetProperties</span></td>
+        <td><p>The window handle, initial size (in pixels), and present options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.html">D2D1HwndRenderTarget</a></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.html">D2D1HwndRenderTarget</a> object created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreatePathGeometry.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreatePathGeometry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L242">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreatePathGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreatePathGeometry*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreatePathGeometry" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreatePathGeometry">CreatePathGeometry()</h4>
+  <div class="markdown level1 summary"><p>Creates an empty <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1PathGeometry.html">D2D1PathGeometry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1PathGeometry CreatePathGeometry()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1PathGeometry.html">D2D1PathGeometry</a></td>
+        <td><p>The path geometry created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateRectangleGeometry_JeremyAnsel_DirectX_D2D1_D2D1RectF_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateRectangleGeometry(JeremyAnsel.DirectX.D2D1.D2D1RectF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L165">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateRectangleGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateRectangleGeometry*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateRectangleGeometry_JeremyAnsel_DirectX_D2D1_D2D1RectF_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateRectangleGeometry(JeremyAnsel.DirectX.D2D1.D2D1RectF)">CreateRectangleGeometry(D2D1RectF)</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RectangleGeometry.html">D2D1RectangleGeometry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1RectangleGeometry CreateRectangleGeometry(D2D1RectF rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RectF.html">D2D1RectF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The coordinates of the rectangle geometry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RectangleGeometry.html">D2D1RectangleGeometry</a></td>
+        <td><p>The rectangle geometry created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateRoundedRectangleGeometry_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateRoundedRectangleGeometry(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L178">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateRoundedRectangleGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateRoundedRectangleGeometry*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateRoundedRectangleGeometry_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateRoundedRectangleGeometry(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect)">CreateRoundedRectangleGeometry(D2D1RoundedRect)</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RoundedRectangleGeometry.html">D2D1RoundedRectangleGeometry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1RoundedRectangleGeometry CreateRoundedRectangleGeometry(D2D1RoundedRect roundedRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RoundedRect.html">D2D1RoundedRect</a></td>
+        <td><span class="parametername">roundedRectangle</span></td>
+        <td><p>The coordinates and corner radii of the rounded rectangle geometry.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RoundedRectangleGeometry.html">D2D1RoundedRectangleGeometry</a></td>
+        <td><p>The rounded rectangle geometry created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateStrokeStyle_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyleProperties_System_Single___.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateStrokeStyle(JeremyAnsel.DirectX.D2D1.D2D1StrokeStyleProperties%2CSystem.Single%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L256">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateStrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateStrokeStyle*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateStrokeStyle_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyleProperties_System_Single___" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateStrokeStyle(JeremyAnsel.DirectX.D2D1.D2D1StrokeStyleProperties,System.Single[])">CreateStrokeStyle(D2D1StrokeStyleProperties, Single[])</h4>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle.html">D2D1StrokeStyle</a> that describes start cap, dash pattern, and other features of a stroke.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1StrokeStyle CreateStrokeStyle(D2D1StrokeStyleProperties strokeStyleProperties, float[] dashes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1StrokeStyleProperties.html">D2D1StrokeStyleProperties</a></td>
+        <td><span class="parametername">strokeStyleProperties</span></td>
+        <td><p>A structure that describes the stroke's line cap, dash offset, and other details of a stroke.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>[]</td>
+        <td><span class="parametername">dashes</span></td>
+        <td><p>An array whose elements are set to the length of each dash and space in the dash pattern. The first element sets the length of a dash, the second element sets the length of a space, the third element sets the length of a dash, and so on. The length of each dash and space in the dash pattern is the product of the element value in the array and the stroke width.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle.html">D2D1StrokeStyle</a></td>
+        <td><p>The stroke style created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateTransformedGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Matrix3X2F_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateTransformedGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry%2CJeremyAnsel.DirectX.D2D1.D2D1Matrix3X2F)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L224">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateTransformedGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateTransformedGeometry*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateTransformedGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Matrix3X2F_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateTransformedGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Matrix3X2F)">CreateTransformedGeometry(D2D1Geometry, D2D1Matrix3X2F)</h4>
+  <div class="markdown level1 summary"><p>Transforms the specified geometry and stores the result as an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1TransformedGeometry.html">D2D1TransformedGeometry</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1TransformedGeometry CreateTransformedGeometry(D2D1Geometry sourceGeometry, D2D1Matrix3X2F transform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Geometry.html">D2D1Geometry</a></td>
+        <td><span class="parametername">sourceGeometry</span></td>
+        <td><p>The geometry to transform.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Matrix3X2F.html">D2D1Matrix3X2F</a></td>
+        <td><span class="parametername">transform</span></td>
+        <td><p>The transformation to apply.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1TransformedGeometry.html">D2D1TransformedGeometry</a></td>
+        <td><p>The new transformed geometry object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateWicBitmapRenderTarget_System_Object_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateWicBitmapRenderTarget(System.Object%2CJeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L349">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateWicBitmapRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateWicBitmapRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_CreateWicBitmapRenderTarget_System_Object_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.CreateWicBitmapRenderTarget(System.Object,JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties)">CreateWicBitmapRenderTarget(Object, D2D1RenderTargetProperties)</h4>
+  <div class="markdown level1 summary"><p>Creates a render target that renders to a Microsoft Windows Imaging Component (WIC) bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1RenderTarget CreateWicBitmapRenderTarget(object target, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The bitmap that receives the rendering output of the render target.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties.html">D2D1RenderTargetProperties</a></td>
+        <td><span class="parametername">renderTargetProperties</span></td>
+        <td><p>The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a> object created by this method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_Dispose.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L120">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Dispose_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Dispose*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Dispose" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Immediately releases the unmanaged resources used by the <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Factory.html">D2D1Factory</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_GetDesktopDpi_System_Single__System_Single__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.GetDesktopDpi(System.Single%40%2CSystem.Single%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L151">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_GetDesktopDpi_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.GetDesktopDpi*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_GetDesktopDpi_System_Single__System_Single__" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.GetDesktopDpi(System.Single@,System.Single@)">GetDesktopDpi(out Single, out Single)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the current desktop dots per inch (DPI). To refresh this value, call <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Factory.html#JeremyAnsel_DirectX_D2D1_D2D1Factory_ReloadSystemMetrics">ReloadSystemMetrics()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetDesktopDpi(out float dpiX, out float dpiY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">dpiX</span></td>
+        <td><p>The horizontal DPI of the desktop.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">dpiY</span></td>
+        <td><p>The vertical DPI of the desktop.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_Release.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.Release%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L131">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Release_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Release*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_Release" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.Release">Release()</h4>
+  <div class="markdown level1 summary"><p>Releases the managed reference to the COM D2D1 interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_ReloadSystemMetrics.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.ReloadSystemMetrics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L140">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_ReloadSystemMetrics_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.ReloadSystemMetrics*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_ReloadSystemMetrics" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.ReloadSystemMetrics">ReloadSystemMetrics()</h4>
+  <div class="markdown level1 summary"><p>Forces the factory to refresh any system defaults that it might have changed since factory creation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReloadSystemMetrics()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_ToBoolean.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.ToBoolean%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L111">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_ToBoolean_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.ToBoolean*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_ToBoolean" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.ToBoolean">ToBoolean()</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ToBoolean()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory_op_Implicit_JeremyAnsel_DirectX_D2D1_D2D1Factory__System_Boolean.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory.op_Implicit(JeremyAnsel.DirectX.D2D1.D2D1Factory)~System.Boolean%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L50">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Factory_op_Implicit_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.op_Implicit*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Factory_op_Implicit_JeremyAnsel_DirectX_D2D1_D2D1Factory__System_Boolean" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Factory.op_Implicit(JeremyAnsel.DirectX.D2D1.D2D1Factory)~System.Boolean">Implicit(D2D1Factory to Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator bool (D2D1Factory value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Factory.html">D2D1Factory</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A D2D1 object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.ID2D1Releasable.html">ID2D1Releasable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Factory.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Factory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Factory.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

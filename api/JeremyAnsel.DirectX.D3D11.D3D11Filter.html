@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enum D3D11Filter
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enum D3D11Filter
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Filter">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_D3D11_D3D11Filter" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Filter" class="text-break">Enum D3D11Filter
+  </h1>
+  <div class="markdown level0 summary"><p>Filtering options during texture sampling.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.D3D11.html">JeremyAnsel.DirectX.D3D11</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.D3D11.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_D3D11_D3D11Filter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum D3D11Filter</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_Anisotropic">Anisotropic</td>
+        <td><p>Use anisotropic interpolation for minification, magnification, and mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_ComparisonAnisotropic">ComparisonAnisotropic</td>
+        <td><p>Use anisotropic interpolation for minification, magnification, and mip-level sampling. Compare the result to the comparison value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_ComparisonMinLinearMagMipPoint">ComparisonMinLinearMagMipPoint</td>
+        <td><p>Use linear interpolation for minification; use point sampling for magnification and mip-level sampling. Compare the result to the comparison value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_ComparisonMinLinearMagPointMipLinear">ComparisonMinLinearMagPointMipLinear</td>
+        <td><p>Use linear interpolation for minification; use point sampling for magnification; use linear interpolation for mip-level sampling. Compare the result to the comparison value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_ComparisonMinMagLinearMipPoint">ComparisonMinMagLinearMipPoint</td>
+        <td><p>Use linear interpolation for minification and magnification; use point sampling for mip-level sampling. Compare the result to the comparison value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_ComparisonMinMagMipLinear">ComparisonMinMagMipLinear</td>
+        <td><p>Use linear interpolation for minification, magnification, and mip-level sampling. Compare the result to the comparison value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_ComparisonMinMagMipPoint">ComparisonMinMagMipPoint</td>
+        <td><p>Use point sampling for minification, magnification, and mip-level sampling. Compare the result to the comparison value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_ComparisonMinMagPointMipLinear">ComparisonMinMagPointMipLinear</td>
+        <td><p>Use point sampling for minification and magnification; use linear interpolation for mip-level sampling. Compare the result to the comparison value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_ComparisonMinPointMagLinearMipPoint">ComparisonMinPointMagLinearMipPoint</td>
+        <td><p>Use point sampling for minification; use linear interpolation for magnification; use point sampling for mip-level sampling. Compare the result to the comparison value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_ComparisonMinPointMagMipLinear">ComparisonMinPointMagMipLinear</td>
+        <td><p>Use point sampling for minification; use linear interpolation for magnification and mip-level sampling. Compare the result to the comparison value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MaximumAnisotropic">MaximumAnisotropic</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_ANISOTROPIC</code> and instead of filtering them return the maximum of the texels. Texels that are weighted 0 during filtering aren't counted towards the maximum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MaximumMinLinearMagMipPoint">MaximumMinLinearMagMipPoint</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_LINEAR_MAG_MIP_POINT</code> and instead of filtering them return the maximum of the texels. Texels that are weighted 0 during filtering aren't counted towards the maximum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MaximumMinLinearMagPointMipLinear">MaximumMinLinearMagPointMipLinear</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_LINEAR_MAG_POINT_MIP_LINEAR</code> and instead of filtering them return the maximum of the texels. Texels that are weighted 0 during filtering aren't counted towards the maximum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MaximumMinMagLinearMipPoint">MaximumMinMagLinearMipPoint</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT</code> and instead of filtering them return the maximum of the texels. Texels that are weighted 0 during filtering aren't counted towards the maximum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MaximumMinMagMipLinear">MaximumMinMagMipLinear</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_MAG_MIP_LINEAR</code> and instead of filtering them return the maximum of the texels. Texels that are weighted 0 during filtering aren't counted towards the maximum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MaximumMinMagMipPoint">MaximumMinMagMipPoint</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_MAG_MIP_POINT</code> and instead of filtering them return the maximum of the texels. Texels that are weighted 0 during filtering aren't counted towards the maximum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MaximumMinMagPointMipLinear">MaximumMinMagPointMipLinear</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_MAG_POINT_MIP_LINEAR</code> and instead of filtering them return the maximum of the texels. Texels that are weighted 0 during filtering aren't counted towards the maximum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MaximumMinPointMagLinearMipPoint">MaximumMinPointMagLinearMipPoint</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_POINT_MAG_LINEAR_MIP_POINT</code> and instead of filtering them return the maximum of the texels. Texels that are weighted 0 during filtering aren't counted towards the maximum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MaximumMinPointMagMipLinear">MaximumMinPointMagMipLinear</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_POINT_MAG_MIP_LINEAR</code> and instead of filtering them return the maximum of the texels. Texels that are weighted 0 during filtering aren't counted towards the maximum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumAnisotropic">MinimumAnisotropic</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_ANISOTROPIC</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumMinLinearMagMipPoint">MinimumMinLinearMagMipPoint</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_LINEAR_MAG_MIP_POINT</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumMinLinearMagPointMipLinear">MinimumMinLinearMagPointMipLinear</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_LINEAR_MAG_POINT_MIP_LINEAR</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumMinMagLinearMipPoint">MinimumMinMagLinearMipPoint</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumMinMagMipLinear">MinimumMinMagMipLinear</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_MAG_MIP_LINEAR</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumMinMagMipPoint">MinimumMinMagMipPoint</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_MAG_MIP_POINT</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumMinMagPointMipLinear">MinimumMinMagPointMipLinear</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_MAG_POINT_MIP_LINEAR</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumMinPointMagLinearMipPoint">MinimumMinPointMagLinearMipPoint</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_POINT_MAG_LINEAR_MIP_POINT</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumMinPointMagMipLinear">MinimumMinPointMagMipLinear</td>
+        <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_POINT_MAG_MIP_LINEAR</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinLinearMagMipPoint">MinLinearMagMipPoint</td>
+        <td><p>Use linear interpolation for minification; use point sampling for magnification and mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinLinearMagPointMipLinear">MinLinearMagPointMipLinear</td>
+        <td><p>Use linear interpolation for minification; use point sampling for magnification; use linear interpolation for mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagLinearMipPoint">MinMagLinearMipPoint</td>
+        <td><p>Use linear interpolation for minification and magnification; use point sampling for mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagMipLinear">MinMagMipLinear</td>
+        <td><p>Use linear interpolation for minification, magnification, and mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagMipPoint">MinMagMipPoint</td>
+        <td><p>Use point sampling for minification, magnification, and mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagPointMipLinear">MinMagPointMipLinear</td>
+        <td><p>Use point sampling for minification and magnification; use linear interpolation for mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinPointMagLinearMipPoint">MinPointMagLinearMipPoint</td>
+        <td><p>Use point sampling for minification; use linear interpolation for magnification; use point sampling for mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinPointMagMipLinear">MinPointMagMipLinear</td>
+        <td><p>Use point sampling for minification; use linear interpolation for magnification and mip-level sampling.</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Filter.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Filter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/Enumerations/D3D11Filter.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

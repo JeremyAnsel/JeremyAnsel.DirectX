@@ -1,0 +1,619 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class D2D1HwndRenderTarget
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class D2D1HwndRenderTarget
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget" class="text-break">Class D2D1HwndRenderTarget
+  </h1>
+  <div class="markdown level0 summary"><p>Renders drawing instructions to a window.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html">D2D1Resource</a></div>
+    <div class="level2"><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></div>
+    <div class="level3"><span class="xref">D2D1HwndRenderTarget</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="JeremyAnsel.DirectX.D2D1.ID2D1Releasable.html">ID2D1Releasable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_Transform">D2D1RenderTarget.Transform</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_AntialiasMode">D2D1RenderTarget.AntialiasMode</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_TextAntialiasMode">D2D1RenderTarget.TextAntialiasMode</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PixelFormat">D2D1RenderTarget.PixelFormat</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_Size">D2D1RenderTarget.Size</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PixelSize">D2D1RenderTarget.PixelSize</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_MaximumBitmapSize">D2D1RenderTarget.MaximumBitmapSize</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmap_JeremyAnsel_DirectX_D2D1_D2D1SizeU_System_IntPtr_System_UInt32_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_">D2D1RenderTarget.CreateBitmap(D2D1SizeU, IntPtr, UInt32, D2D1BitmapProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmap_JeremyAnsel_DirectX_D2D1_D2D1SizeU_System_Byte___System_UInt32_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_">D2D1RenderTarget.CreateBitmap(D2D1SizeU, Byte[], UInt32, D2D1BitmapProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmap_JeremyAnsel_DirectX_D2D1_D2D1SizeU_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_">D2D1RenderTarget.CreateBitmap(D2D1SizeU, D2D1BitmapProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapFromWicBitmap_System_Object_">D2D1RenderTarget.CreateBitmapFromWicBitmap(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapFromWicBitmap_System_Object_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_">D2D1RenderTarget.CreateBitmapFromWicBitmap(Object, D2D1BitmapProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSharedBitmap_System_Guid_System_Object_">D2D1RenderTarget.CreateSharedBitmap(Guid, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSharedBitmap_System_Guid_System_Object_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_">D2D1RenderTarget.CreateSharedBitmap(Guid, Object, D2D1BitmapProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_">D2D1RenderTarget.CreateBitmapBrush(D2D1Bitmap)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1BitmapBrushProperties_">D2D1RenderTarget.CreateBitmapBrush(D2D1Bitmap, D2D1BitmapBrushProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1BitmapBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_">D2D1RenderTarget.CreateBitmapBrush(D2D1Bitmap, D2D1BitmapBrushProperties, D2D1BrushProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSolidColorBrush_JeremyAnsel_DirectX_D2D1_D2D1ColorF_">D2D1RenderTarget.CreateSolidColorBrush(D2D1ColorF)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSolidColorBrush_JeremyAnsel_DirectX_D2D1_D2D1ColorF_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_">D2D1RenderTarget.CreateSolidColorBrush(D2D1ColorF, D2D1BrushProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateGradientStopCollection_JeremyAnsel_DirectX_D2D1_D2D1GradientStop___JeremyAnsel_DirectX_D2D1_D2D1Gamma_JeremyAnsel_DirectX_D2D1_D2D1ExtendMode_">D2D1RenderTarget.CreateGradientStopCollection(D2D1GradientStop[], D2D1Gamma, D2D1ExtendMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateGradientStopCollection_JeremyAnsel_DirectX_D2D1_D2D1GradientStop___">D2D1RenderTarget.CreateGradientStopCollection(D2D1GradientStop[])</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLinearGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1LinearGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_">D2D1RenderTarget.CreateLinearGradientBrush(D2D1LinearGradientBrushProperties, D2D1GradientStopCollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLinearGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1LinearGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_">D2D1RenderTarget.CreateLinearGradientBrush(D2D1LinearGradientBrushProperties, D2D1BrushProperties, D2D1GradientStopCollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateRadialGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1RadialGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_">D2D1RenderTarget.CreateRadialGradientBrush(D2D1RadialGradientBrushProperties, D2D1GradientStopCollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateRadialGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1RadialGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_">D2D1RenderTarget.CreateRadialGradientBrush(D2D1RadialGradientBrushProperties, D2D1BrushProperties, D2D1GradientStopCollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1CompatibleRenderTargetOptions_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1CompatibleRenderTargetOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1SizeF_JeremyAnsel_DirectX_D2D1_D2D1CompatibleRenderTargetOptions_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1SizeF, D2D1CompatibleRenderTargetOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1SizeU_JeremyAnsel_DirectX_D2D1_D2D1CompatibleRenderTargetOptions_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1SizeU, D2D1CompatibleRenderTargetOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1SizeF_JeremyAnsel_DirectX_D2D1_D2D1SizeU_JeremyAnsel_DirectX_D2D1_D2D1CompatibleRenderTargetOptions_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1SizeF, D2D1SizeU, D2D1CompatibleRenderTargetOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1PixelFormat_JeremyAnsel_DirectX_D2D1_D2D1CompatibleRenderTargetOptions_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1PixelFormat, D2D1CompatibleRenderTargetOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1SizeF_JeremyAnsel_DirectX_D2D1_D2D1PixelFormat_JeremyAnsel_DirectX_D2D1_D2D1CompatibleRenderTargetOptions_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1SizeF, D2D1PixelFormat, D2D1CompatibleRenderTargetOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1SizeU_JeremyAnsel_DirectX_D2D1_D2D1PixelFormat_JeremyAnsel_DirectX_D2D1_D2D1CompatibleRenderTargetOptions_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1SizeU, D2D1PixelFormat, D2D1CompatibleRenderTargetOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1SizeF_JeremyAnsel_DirectX_D2D1_D2D1SizeU_JeremyAnsel_DirectX_D2D1_D2D1PixelFormat_JeremyAnsel_DirectX_D2D1_D2D1CompatibleRenderTargetOptions_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1SizeF, D2D1SizeU, D2D1PixelFormat, D2D1CompatibleRenderTargetOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget">D2D1RenderTarget.CreateCompatibleRenderTarget()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1SizeF_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1SizeF)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1SizeF_JeremyAnsel_DirectX_D2D1_D2D1SizeU_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1SizeF, D2D1SizeU)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateCompatibleRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1SizeF_JeremyAnsel_DirectX_D2D1_D2D1SizeU_JeremyAnsel_DirectX_D2D1_D2D1PixelFormat_">D2D1RenderTarget.CreateCompatibleRenderTarget(D2D1SizeF, D2D1SizeU, D2D1PixelFormat)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLayer">D2D1RenderTarget.CreateLayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLayer_JeremyAnsel_DirectX_D2D1_D2D1SizeF_">D2D1RenderTarget.CreateLayer(D2D1SizeF)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateMesh">D2D1RenderTarget.CreateMesh()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.DrawLine(D2D1Point2F, D2D1Point2F, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_">D2D1RenderTarget.DrawLine(D2D1Point2F, D2D1Point2F, D2D1Brush, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_">D2D1RenderTarget.DrawLine(D2D1Point2F, D2D1Point2F, D2D1Brush, Single, D2D1StrokeStyle)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.DrawRectangle(D2D1RectF, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_">D2D1RenderTarget.DrawRectangle(D2D1RectF, D2D1Brush, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_">D2D1RenderTarget.DrawRectangle(D2D1RectF, D2D1Brush, Single, D2D1StrokeStyle)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.FillRectangle(D2D1RectF, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.DrawRoundedRectangle(D2D1RoundedRect, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_">D2D1RenderTarget.DrawRoundedRectangle(D2D1RoundedRect, D2D1Brush, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_">D2D1RenderTarget.DrawRoundedRectangle(D2D1RoundedRect, D2D1Brush, Single, D2D1StrokeStyle)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.FillRoundedRectangle(D2D1RoundedRect, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.DrawEllipse(D2D1Ellipse, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_">D2D1RenderTarget.DrawEllipse(D2D1Ellipse, D2D1Brush, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_">D2D1RenderTarget.DrawEllipse(D2D1Ellipse, D2D1Brush, Single, D2D1StrokeStyle)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.FillEllipse(D2D1Ellipse, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.DrawGeometry(D2D1Geometry, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_">D2D1RenderTarget.DrawGeometry(D2D1Geometry, D2D1Brush, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_">D2D1RenderTarget.DrawGeometry(D2D1Geometry, D2D1Brush, Single, D2D1StrokeStyle)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.FillGeometry(D2D1Geometry, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.FillGeometry(D2D1Geometry, D2D1Brush, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillMesh_JeremyAnsel_DirectX_D2D1_D2D1Mesh_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.FillMesh(D2D1Mesh, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1OpacityMaskContent_">D2D1RenderTarget.FillOpacityMask(D2D1Bitmap, D2D1Brush, D2D1OpacityMaskContent)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1OpacityMaskContent_JeremyAnsel_DirectX_D2D1_D2D1RectF_">D2D1RenderTarget.FillOpacityMask(D2D1Bitmap, D2D1Brush, D2D1OpacityMaskContent, D2D1RectF)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1OpacityMaskContent_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1RectF_">D2D1RenderTarget.FillOpacityMask(D2D1Bitmap, D2D1Brush, D2D1OpacityMaskContent, D2D1RectF, D2D1RectF)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_">D2D1RenderTarget.DrawBitmap(D2D1Bitmap)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_">D2D1RenderTarget.DrawBitmap(D2D1Bitmap, D2D1RectF)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_System_Single_">D2D1RenderTarget.DrawBitmap(D2D1Bitmap, D2D1RectF, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_System_Single_JeremyAnsel_DirectX_D2D1_D2D1BitmapInterpolationMode_">D2D1RenderTarget.DrawBitmap(D2D1Bitmap, D2D1RectF, Single, D2D1BitmapInterpolationMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_System_Single_JeremyAnsel_DirectX_D2D1_D2D1BitmapInterpolationMode_JeremyAnsel_DirectX_D2D1_D2D1RectF_">D2D1RenderTarget.DrawBitmap(D2D1Bitmap, D2D1RectF, Single, D2D1BitmapInterpolationMode, D2D1RectF)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.DrawText(String, DWriteTextFormat, D2D1RectF, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1DrawTextOptions_">D2D1RenderTarget.DrawText(String, DWriteTextFormat, D2D1RectF, D2D1Brush, D2D1DrawTextOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1DrawTextOptions_JeremyAnsel_DirectX_DWrite_DWriteMeasuringMode_">D2D1RenderTarget.DrawText(String, DWriteTextFormat, D2D1RectF, D2D1Brush, D2D1DrawTextOptions, DWriteMeasuringMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.DrawTextLayout(D2D1Point2F, DWriteTextLayout, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1DrawTextOptions_">D2D1RenderTarget.DrawTextLayout(D2D1Point2F, DWriteTextLayout, D2D1Brush, D2D1DrawTextOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Brush_">D2D1RenderTarget.DrawGlyphRun(D2D1Point2F, DWriteGlyphRun, D2D1Brush)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_DWrite_DWriteMeasuringMode_">D2D1RenderTarget.DrawGlyphRun(D2D1Point2F, DWriteGlyphRun, D2D1Brush, DWriteMeasuringMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SetTextRenderingParams">D2D1RenderTarget.SetTextRenderingParams()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SetTextRenderingParams_JeremyAnsel_DirectX_DWrite_DWriteRenderingParams_">D2D1RenderTarget.SetTextRenderingParams(DWriteRenderingParams)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_GetTextRenderingParams">D2D1RenderTarget.GetTextRenderingParams()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SetTags_System_UInt64_System_UInt64_">D2D1RenderTarget.SetTags(UInt64, UInt64)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_GetTags_System_UInt64__System_UInt64__">D2D1RenderTarget.GetTags(UInt64, UInt64)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PushLayer_JeremyAnsel_DirectX_D2D1_D2D1LayerParameters_JeremyAnsel_DirectX_D2D1_D2D1Layer_">D2D1RenderTarget.PushLayer(D2D1LayerParameters, D2D1Layer)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PopLayer">D2D1RenderTarget.PopLayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_Flush">D2D1RenderTarget.Flush()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_Flush_System_UInt64__System_UInt64__">D2D1RenderTarget.Flush(UInt64, UInt64)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SaveDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">D2D1RenderTarget.SaveDrawingState(D2D1DrawingStateBlock)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_RestoreDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_">D2D1RenderTarget.RestoreDrawingState(D2D1DrawingStateBlock)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PushAxisAlignedClip_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1AntialiasMode_">D2D1RenderTarget.PushAxisAlignedClip(D2D1RectF, D2D1AntialiasMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PopAxisAlignedClip">D2D1RenderTarget.PopAxisAlignedClip()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_Clear">D2D1RenderTarget.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_Clear_JeremyAnsel_DirectX_D2D1_D2D1ColorF_">D2D1RenderTarget.Clear(D2D1ColorF)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_BeginDraw">D2D1RenderTarget.BeginDraw()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_EndDraw">D2D1RenderTarget.EndDraw()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_EndDraw_System_UInt64__System_UInt64__">D2D1RenderTarget.EndDraw(UInt64, UInt64)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_EndDrawIgnoringRecreateTargetError">D2D1RenderTarget.EndDrawIgnoringRecreateTargetError()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SetDpi_System_Single_System_Single_">D2D1RenderTarget.SetDpi(Single, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_GetDpi_System_Single__System_Single__">D2D1RenderTarget.GetDpi(Single, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_IsSupported_JeremyAnsel_DirectX_D2D1_D2D1RenderTargetProperties_">D2D1RenderTarget.IsSupported(D2D1RenderTargetProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_ToBoolean">D2D1Resource.ToBoolean()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_Dispose">D2D1Resource.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_Release">D2D1Resource.Release()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_GetFactory">D2D1Resource.GetFactory()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.D2D1.html">JeremyAnsel.DirectX.D2D1</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.D2D1.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class D2D1HwndRenderTarget : D2D1RenderTarget, IDisposable, ID2D1Releasable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_Handle.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1HwndRenderTarget.cs/#L34">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_Handle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.Handle*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_Handle" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.Handle">Handle</h4>
+  <div class="markdown level1 summary"><p>Gets an handle representing the D2D1 object interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_Handle">D2D1Resource.Handle</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_Hwnd.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.Hwnd%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1HwndRenderTarget.cs/#L43">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_Hwnd_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.Hwnd*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_Hwnd" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.Hwnd">Hwnd</h4>
+  <div class="markdown level1 summary"><p>Gets the HWND associated with this render target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr Hwnd { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_CheckWindowState.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.CheckWindowState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1HwndRenderTarget.cs/#L53">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_CheckWindowState_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.CheckWindowState*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_CheckWindowState" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.CheckWindowState">CheckWindowState()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the HWND associated with this render target is occluded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1WindowStates CheckWindowState()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1WindowStates.html">D2D1WindowStates</a></td>
+        <td><p>A value that indicates whether the HWND associated with this render target is occluded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_Resize_JeremyAnsel_DirectX_D2D1_D2D1SizeU_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.Resize(JeremyAnsel.DirectX.D2D1.D2D1SizeU)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1HwndRenderTarget.cs/#L63">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_Resize_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.Resize*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget_Resize_JeremyAnsel_DirectX_D2D1_D2D1SizeU_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.Resize(JeremyAnsel.DirectX.D2D1.D2D1SizeU)">Resize(D2D1SizeU)</h4>
+  <div class="markdown level1 summary"><p>Changes the size of the render target to the specified pixel size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resize(D2D1SizeU pixelSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1SizeU.html">D2D1SizeU</a></td>
+        <td><span class="parametername">pixelSize</span></td>
+        <td><p>The new size of the render target in device pixels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.ID2D1Releasable.html">ID2D1Releasable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1HwndRenderTarget.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1HwndRenderTarget.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

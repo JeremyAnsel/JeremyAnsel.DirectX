@@ -1,0 +1,853 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class D2D1Bitmap
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class D2D1Bitmap
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap" class="text-break">Class D2D1Bitmap
+  </h1>
+  <div class="markdown level0 summary"><p>Root bitmap resource, linearly scaled on a draw call.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html">D2D1Resource</a></div>
+    <div class="level2"><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Image.html">D2D1Image</a></div>
+    <div class="level3"><span class="xref">D2D1Bitmap</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="JeremyAnsel.DirectX.D2D1.ID2D1Releasable.html">ID2D1Releasable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_ToBoolean">D2D1Resource.ToBoolean()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_Dispose">D2D1Resource.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_Release">D2D1Resource.Release()</a>
+    </div>
+    <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_GetFactory">D2D1Resource.GetFactory()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.D2D1.html">JeremyAnsel.DirectX.D2D1</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.D2D1.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class D2D1Bitmap : D2D1Image, IDisposable, ID2D1Releasable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_Handle.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L36">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_Handle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.Handle*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_Handle" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.Handle">Handle</h4>
+  <div class="markdown level1 summary"><p>Gets an handle representing the D2D1 object interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Resource.html#JeremyAnsel_DirectX_D2D1_D2D1Resource_Handle">D2D1Resource.Handle</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_PixelFormat.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.PixelFormat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L63">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_PixelFormat_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.PixelFormat*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_PixelFormat" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.PixelFormat">PixelFormat</h4>
+  <div class="markdown level1 summary"><p>Gets the format of the bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1PixelFormat PixelFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1PixelFormat.html">D2D1PixelFormat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_PixelSize.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.PixelSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L54">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_PixelSize_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.PixelSize*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_PixelSize" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.PixelSize">PixelSize</h4>
+  <div class="markdown level1 summary"><p>Gets the size of the bitmap in resolution dependent units, (pixels).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1SizeU PixelSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1SizeU.html">D2D1SizeU</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_Size.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L45">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_Size_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.Size*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_Size" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.Size">Size</h4>
+  <div class="markdown level1 summary"><p>Gets the size of the bitmap in resolution independent units.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D2D1SizeF Size { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1SizeF.html">D2D1SizeF</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L87">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap)">CopyFromBitmap(D2D1Bitmap)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from the specified bitmap into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromBitmap(D2D1Bitmap srcBitmap)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.html">D2D1Bitmap</a></td>
+        <td><span class="parametername">srcBitmap</span></td>
+        <td><p>The bitmap to copy from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectU_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap%2CJeremyAnsel.DirectX.D2D1.D2D1RectU)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L128">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectU_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectU)">CopyFromBitmap(D2D1Bitmap, D2D1RectU)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from the specified bitmap into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromBitmap(D2D1Bitmap srcBitmap, D2D1RectU srcRect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.html">D2D1Bitmap</a></td>
+        <td><span class="parametername">srcBitmap</span></td>
+        <td><p>The bitmap to copy from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RectU.html">D2D1RectU</a></td>
+        <td><span class="parametername">srcRect</span></td>
+        <td><p>The area of bitmap to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_JeremyAnsel_DirectX_D2D1_D2D1Point2U_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap(JeremyAnsel.DirectX.D2D1.D2D1Point2U%2CJeremyAnsel.DirectX.D2D1.D2D1Bitmap)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L103">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_JeremyAnsel_DirectX_D2D1_D2D1Point2U_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap(JeremyAnsel.DirectX.D2D1.D2D1Point2U,JeremyAnsel.DirectX.D2D1.D2D1Bitmap)">CopyFromBitmap(D2D1Point2U, D2D1Bitmap)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from the specified bitmap into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromBitmap(D2D1Point2U destPoint, D2D1Bitmap srcBitmap)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Point2U.html">D2D1Point2U</a></td>
+        <td><span class="parametername">destPoint</span></td>
+        <td><p>In the current bitmap, the upper-left corner of the area to which the region is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.html">D2D1Bitmap</a></td>
+        <td><span class="parametername">srcBitmap</span></td>
+        <td><p>The bitmap to copy from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_JeremyAnsel_DirectX_D2D1_D2D1Point2U_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectU_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap(JeremyAnsel.DirectX.D2D1.D2D1Point2U%2CJeremyAnsel.DirectX.D2D1.D2D1Bitmap%2CJeremyAnsel.DirectX.D2D1.D2D1RectU)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L154">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromBitmap_JeremyAnsel_DirectX_D2D1_D2D1Point2U_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectU_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromBitmap(JeremyAnsel.DirectX.D2D1.D2D1Point2U,JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectU)">CopyFromBitmap(D2D1Point2U, D2D1Bitmap, D2D1RectU)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from the specified bitmap into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromBitmap(D2D1Point2U destPoint, D2D1Bitmap srcBitmap, D2D1RectU srcRect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Point2U.html">D2D1Point2U</a></td>
+        <td><span class="parametername">destPoint</span></td>
+        <td><p>In the current bitmap, the upper-left corner of the area to which the region specified by <code data-dev-comment-type="paramref" class="paramref">srcRect</code> is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.html">D2D1Bitmap</a></td>
+        <td><span class="parametername">srcBitmap</span></td>
+        <td><p>The bitmap to copy from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RectU.html">D2D1RectU</a></td>
+        <td><span class="parametername">srcRect</span></td>
+        <td><p>The area of bitmap to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_JeremyAnsel_DirectX_D2D1_D2D1RectU_System_Byte___System_UInt32_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory(JeremyAnsel.DirectX.D2D1.D2D1RectU%2CSystem.Byte%5B%5D%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L327">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_JeremyAnsel_DirectX_D2D1_D2D1RectU_System_Byte___System_UInt32_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory(JeremyAnsel.DirectX.D2D1.D2D1RectU,System.Byte[],System.UInt32)">CopyFromMemory(D2D1RectU, Byte[], UInt32)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from memory into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromMemory(D2D1RectU destRect, byte[] srcData, uint pitch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RectU.html">D2D1RectU</a></td>
+        <td><span class="parametername">destRect</span></td>
+        <td><p>In the current bitmap, the upper-left corner of the area to which the region specified by <code data-dev-comment-type="paramref" class="paramref">srcData</code> is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">srcData</span></td>
+        <td><p>The data to copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">pitch</span></td>
+        <td><p>The stride, or pitch, of the source bitmap stored in <code data-dev-comment-type="paramref" class="paramref">srcData</code>. The stride is the byte count of a scanline (one row of pixels in memory). The stride can be computed from the following formula: <code>pixel width * bytes per pixel + memory padding</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_JeremyAnsel_DirectX_D2D1_D2D1RectU_System_IntPtr_System_UInt32_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory(JeremyAnsel.DirectX.D2D1.D2D1RectU%2CSystem.IntPtr%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L306">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_JeremyAnsel_DirectX_D2D1_D2D1RectU_System_IntPtr_System_UInt32_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory(JeremyAnsel.DirectX.D2D1.D2D1RectU,System.IntPtr,System.UInt32)">CopyFromMemory(D2D1RectU, IntPtr, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from memory into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromMemory(D2D1RectU destRect, IntPtr srcData, uint pitch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RectU.html">D2D1RectU</a></td>
+        <td><span class="parametername">destRect</span></td>
+        <td><p>In the current bitmap, the upper-left corner of the area to which the region specified by <code data-dev-comment-type="paramref" class="paramref">srcData</code> is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">srcData</span></td>
+        <td><p>The data to copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">pitch</span></td>
+        <td><p>The stride, or pitch, of the source bitmap stored in <code data-dev-comment-type="paramref" class="paramref">srcData</code>. The stride is the byte count of a scanline (one row of pixels in memory). The stride can be computed from the following formula: <code>pixel width * bytes per pixel + memory padding</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_System_Byte___System_UInt32_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory(System.Byte%5B%5D%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L289">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_System_Byte___System_UInt32_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory(System.Byte[],System.UInt32)">CopyFromMemory(Byte[], UInt32)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from memory into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromMemory(byte[] srcData, uint pitch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">srcData</span></td>
+        <td><p>The data to copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">pitch</span></td>
+        <td><p>The stride, or pitch, of the source bitmap stored in <code data-dev-comment-type="paramref" class="paramref">srcData</code>. The stride is the byte count of a scanline (one row of pixels in memory). The stride can be computed from the following formula: <code>pixel width * bytes per pixel + memory padding</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_System_IntPtr_System_UInt32_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory(System.IntPtr%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L278">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromMemory_System_IntPtr_System_UInt32_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromMemory(System.IntPtr,System.UInt32)">CopyFromMemory(IntPtr, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from memory into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromMemory(IntPtr srcData, uint pitch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">srcData</span></td>
+        <td><p>The data to copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">pitch</span></td>
+        <td><p>The stride, or pitch, of the source bitmap stored in <code data-dev-comment-type="paramref" class="paramref">srcData</code>. The stride is the byte count of a scanline (one row of pixels in memory). The stride can be computed from the following formula: <code>pixel width * bytes per pixel + memory padding</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1Point2U_JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1Point2U%2CJeremyAnsel.DirectX.D2D1.D2D1RenderTarget)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L197">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1Point2U_JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1Point2U,JeremyAnsel.DirectX.D2D1.D2D1RenderTarget)">CopyFromRenderTarget(D2D1Point2U, D2D1RenderTarget)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from the specified render target into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromRenderTarget(D2D1Point2U destPoint, D2D1RenderTarget renderTarget)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Point2U.html">D2D1Point2U</a></td>
+        <td><span class="parametername">destPoint</span></td>
+        <td><p>In the current bitmap, the upper-left corner of the area to which the region is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></td>
+        <td><span class="parametername">renderTarget</span></td>
+        <td><p>The render target that contains the region to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1Point2U_JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RectU_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1Point2U%2CJeremyAnsel.DirectX.D2D1.D2D1RenderTarget%2CJeremyAnsel.DirectX.D2D1.D2D1RectU)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L250">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1Point2U_JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RectU_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1Point2U,JeremyAnsel.DirectX.D2D1.D2D1RenderTarget,JeremyAnsel.DirectX.D2D1.D2D1RectU)">CopyFromRenderTarget(D2D1Point2U, D2D1RenderTarget, D2D1RectU)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from the specified render target into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromRenderTarget(D2D1Point2U destPoint, D2D1RenderTarget renderTarget, D2D1RectU srcRect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Point2U.html">D2D1Point2U</a></td>
+        <td><span class="parametername">destPoint</span></td>
+        <td><p>In the current bitmap, the upper-left corner of the area to which the region specified by <code data-dev-comment-type="paramref" class="paramref">srcRect</code> is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></td>
+        <td><span class="parametername">renderTarget</span></td>
+        <td><p>The render target that contains the region to copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RectU.html">D2D1RectU</a></td>
+        <td><span class="parametername">srcRect</span></td>
+        <td><p>The area of renderTarget to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1RenderTarget)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L180">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1RenderTarget)">CopyFromRenderTarget(D2D1RenderTarget)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from the specified render target into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromRenderTarget(D2D1RenderTarget renderTarget)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></td>
+        <td><span class="parametername">renderTarget</span></td>
+        <td><p>The render target that contains the region to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RectU_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1RenderTarget%2CJeremyAnsel.DirectX.D2D1.D2D1RectU)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L223">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_CopyFromRenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_JeremyAnsel_DirectX_D2D1_D2D1RectU_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.CopyFromRenderTarget(JeremyAnsel.DirectX.D2D1.D2D1RenderTarget,JeremyAnsel.DirectX.D2D1.D2D1RectU)">CopyFromRenderTarget(D2D1RenderTarget, D2D1RectU)</h4>
+  <div class="markdown level1 summary"><p>Copies the specified region from the specified render target into the current bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFromRenderTarget(D2D1RenderTarget renderTarget, D2D1RectU srcRect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html">D2D1RenderTarget</a></td>
+        <td><span class="parametername">renderTarget</span></td>
+        <td><p>The render target that contains the region to copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RectU.html">D2D1RectU</a></td>
+        <td><span class="parametername">srcRect</span></td>
+        <td><p>The area of renderTarget to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap_GetDpi_System_Single__System_Single__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap.GetDpi(System.Single%40%2CSystem.Single%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L74">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_GetDpi_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.GetDpi*"></a>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1Bitmap_GetDpi_System_Single__System_Single__" data-uid="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.GetDpi(System.Single@,System.Single@)">GetDpi(out Single, out Single)</h4>
+  <div class="markdown level1 summary"><p>Return the dots per inch (DPI) of the bitmap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetDpi(out float dpiX, out float dpiY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">dpiX</span></td>
+        <td><p>The horizontal DPI of the image.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">dpiY</span></td>
+        <td><p>The vertical DPI of the image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="JeremyAnsel.DirectX.D2D1.ID2D1Releasable.html">ID2D1Releasable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D2D1_D2D1Bitmap.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D2D1.D2D1Bitmap%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1Bitmap.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

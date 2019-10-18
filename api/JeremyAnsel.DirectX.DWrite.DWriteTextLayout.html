@@ -1,0 +1,2204 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DWriteTextLayout
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DWriteTextLayout
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout" class="text-break">Class DWriteTextLayout
+  </h1>
+  <div class="markdown level0 summary"><p>The IDWriteTextLayout interface represents a block of text after it has
+been fully analyzed and formatted.
+All coordinates are in device independent pixels (DIPs).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DWriteTextLayout</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="JeremyAnsel.DirectX.DWrite.IDWriteReleasable.html">IDWriteReleasable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.DWrite.html">JeremyAnsel.DirectX.DWrite</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DWrite.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DWriteTextLayout : IDisposable, IDWriteReleasable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_FlowDirection.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.FlowDirection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L106">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_FlowDirection_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.FlowDirection*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_FlowDirection" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.FlowDirection">FlowDirection</h4>
+  <div class="markdown level1 summary"><p>Gets or sets paragraph flow direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFlowDirection FlowDirection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFlowDirection.html">DWriteFlowDirection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_FlowDirection_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The flow direction must be perpendicular to the reading direction.
+Setting both to a vertical direction or both to horizontal yields
+DWRITE_E_FLOWDIRECTIONCONFLICTS when calling GetMetrics or Draw.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_Handle.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L39">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_Handle_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.Handle*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_Handle" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.Handle">Handle</h4>
+  <div class="markdown level1 summary"><p>Gets an handle representing the DWrite object interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_IncrementalTabStop.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.IncrementalTabStop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L118">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_IncrementalTabStop_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.IncrementalTabStop*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_IncrementalTabStop" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.IncrementalTabStop">IncrementalTabStop</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the incremental tab stop position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float IncrementalTabStop { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_MaxHeight.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.MaxHeight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L142">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_MaxHeight_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.MaxHeight*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_MaxHeight" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.MaxHeight">MaxHeight</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the layout maximum height</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MaxHeight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_MaxWidth.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.MaxWidth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L130">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_MaxWidth_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.MaxWidth*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_MaxWidth" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.MaxWidth">MaxWidth</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the layout maximum width</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MaxWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ParagraphAlignment.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.ParagraphAlignment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L60">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ParagraphAlignment_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.ParagraphAlignment*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ParagraphAlignment" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.ParagraphAlignment">ParagraphAlignment</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the alignment option of paragraph relative to layout box's top and bottom edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteParagraphAlignment ParagraphAlignment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteParagraphAlignment.html">DWriteParagraphAlignment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ReadingDirection.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.ReadingDirection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L89">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ReadingDirection_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.ReadingDirection*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ReadingDirection" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.ReadingDirection">ReadingDirection</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the paragraph reading direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteReadingDirection ReadingDirection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteReadingDirection.html">DWriteReadingDirection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ReadingDirection_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The flow direction must be perpendicular to the reading direction.
+Setting both to a vertical direction or both to horizontal yields
+DWRITE_E_FLOWDIRECTIONCONFLICTS when calling GetMetrics or Draw.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_TextAlignment.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.TextAlignment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L48">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_TextAlignment_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.TextAlignment*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_TextAlignment" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.TextAlignment">TextAlignment</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the alignment option of text relative to layout box's leading and trailing edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteTextAlignment TextAlignment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextAlignment.html">DWriteTextAlignment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_WordWrapping.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.WordWrapping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L72">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_WordWrapping_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.WordWrapping*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_WordWrapping" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.WordWrapping">WordWrapping</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the word wrapping option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteWordWrapping WordWrapping { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteWordWrapping.html">DWriteWordWrapping</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_DetermineMinWidth.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.DetermineMinWidth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L657">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_DetermineMinWidth_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.DetermineMinWidth*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_DetermineMinWidth" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.DetermineMinWidth">DetermineMinWidth()</h4>
+  <div class="markdown level1 summary"><p>Determines the minimum possible width the layout can be set to without
+emergency breaking between the characters of whole words.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DetermineMinWidth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_Dispose.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L175">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_Dispose_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.Dispose*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_Dispose" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Immediately releases the unmanaged resources used by the DWrite object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L251">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection">GetFontCollection()</h4>
+  <div class="markdown level1 summary"><p>Get the font collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontCollection GetFontCollection()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L420">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontCollection(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the font collection where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontCollection GetFontCollection(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L264">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName">GetFontFamilyName()</h4>
+  <div class="markdown level1 summary"><p>Get a copy of the font family name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetFontFamilyName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L435">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontFamilyName(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Copy the font family name where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetFontFamilyName(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontSize.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L528">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontSize_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontSize*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontSize" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontSize">GetFontSize()</h4>
+  <div class="markdown level1 summary"><p>Gets the font em height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetFontSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontSize_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontSize(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L540">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontSize_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontSize*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontSize_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontSize(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontSize(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the font em height where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetFontSize(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStretch.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStretch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L503">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStretch_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStretch*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStretch" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStretch">GetFontStretch()</h4>
+  <div class="markdown level1 summary"><p>Gets the font stretch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontStretch GetFontStretch()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStretch.html">DWriteFontStretch</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStretch.html">DWriteFontStretch</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStretch_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStretch(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L515">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStretch_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStretch*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStretch_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStretch(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontStretch(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the font stretch where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontStretch GetFontStretch(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStretch.html">DWriteFontStretch</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStretch.html">DWriteFontStretch</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStyle.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStyle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L478">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStyle_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStyle*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStyle" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStyle">GetFontStyle()</h4>
+  <div class="markdown level1 summary"><p>Gets the font style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontStyle GetFontStyle()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStyle.html">DWriteFontStyle</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStyle.html">DWriteFontStyle</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStyle_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStyle(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L490">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStyle_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStyle*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStyle_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStyle(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontStyle(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the font style where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontStyle GetFontStyle(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStyle.html">DWriteFontStyle</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStyle.html">DWriteFontStyle</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontWeight.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontWeight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L453">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontWeight_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontWeight*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontWeight" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontWeight">GetFontWeight()</h4>
+  <div class="markdown level1 summary"><p>Gets the font weight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontWeight GetFontWeight()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontWeight.html">DWriteFontWeight</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontWeight.html">DWriteFontWeight</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontWeight_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontWeight(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L465">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontWeight_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontWeight*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontWeight_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontWeight(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontWeight(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the font weight where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontWeight GetFontWeight(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontWeight.html">DWriteFontWeight</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontWeight.html">DWriteFontWeight</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLineSpacing_JeremyAnsel_DirectX_DWrite_DWriteLineSpacingMethod__System_Single__System_Single__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLineSpacing(JeremyAnsel.DirectX.DWrite.DWriteLineSpacingMethod%40%2CSystem.Single%40%2CSystem.Single%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L238">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLineSpacing_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLineSpacing*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLineSpacing_JeremyAnsel_DirectX_DWrite_DWriteLineSpacingMethod__System_Single__System_Single__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLineSpacing(JeremyAnsel.DirectX.DWrite.DWriteLineSpacingMethod@,System.Single@,System.Single@)">GetLineSpacing(out DWriteLineSpacingMethod, out Single, out Single)</h4>
+  <div class="markdown level1 summary"><p>Get line spacing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetLineSpacing(out DWriteLineSpacingMethod lineSpacingMethod, out float lineSpacing, out float baseline)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteLineSpacingMethod.html">DWriteLineSpacingMethod</a></td>
+        <td><span class="parametername">lineSpacingMethod</span></td>
+        <td><p>How line height is determined.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">lineSpacing</span></td>
+        <td><p>The line height, or rather distance between one baseline to another.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">baseline</span></td>
+        <td><p>Distance from top of line to baseline.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L281">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName">GetLocaleName()</h4>
+  <div class="markdown level1 summary"><p>Get a copy of the locale name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetLocaleName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L600">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetLocaleName(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the locale name where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetLocaleName(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetMetrics.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetMetrics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L624">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetMetrics_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetMetrics*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetMetrics" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetMetrics">GetMetrics()</h4>
+  <div class="markdown level1 summary"><p>GetMetrics retrieves overall metrics for the formatted string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteTextMetrics GetMetrics()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextMetrics.html">DWriteTextMetrics</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextMetrics.html">DWriteTextMetrics</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetMetrics_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Drawing effects like underline and strikethrough do not contribute
+to the text size, which is essentially the sum of advance widths and
+line heights. Additionally, visible swashes and other graphic
+adornments may extend outside the returned width and height.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetOverhangMetrics.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetOverhangMetrics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L643">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetOverhangMetrics_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetOverhangMetrics*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetOverhangMetrics" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetOverhangMetrics">GetOverhangMetrics()</h4>
+  <div class="markdown level1 summary"><p>GetOverhangMetrics returns the overhangs (in DIPs) of the layout and all
+objects contained in it, including text glyphs and inline objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteOverhangMetrics GetOverhangMetrics()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteOverhangMetrics.html">DWriteOverhangMetrics</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteOverhangMetrics.html">DWriteOverhangMetrics</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetOverhangMetrics_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Any underline and strikethrough do not contribute to the black box
+determination, since these are actually drawn by the renderer, which
+is allowed to draw them in any variety of styles.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetStrikethrough_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetStrikethrough(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L570">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetStrikethrough_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetStrikethrough*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetStrikethrough_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetStrikethrough(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetStrikethrough(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the strikethrough presence where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetStrikethrough(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetTrimming.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetTrimming%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L223">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetTrimming_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetTrimming*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetTrimming" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetTrimming">GetTrimming()</h4>
+  <div class="markdown level1 summary"><p>Get trimming options for text overflowing the layout width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteTrimming GetTrimming()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTrimming.html">DWriteTrimming</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTrimming.html">DWriteTrimming</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetTypography_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetTypography(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L585">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetTypography_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetTypography*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetTypography_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetTypography(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetTypography(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the typography setting where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteTypography GetTypography(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTypography.html">DWriteTypography</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTypography.html">DWriteTypography</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetUnderline_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetUnderline(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L555">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetUnderline_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetUnderline*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetUnderline_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetUnderline(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetUnderline(UInt32, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the underline presence where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetUnderline(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestPoint_System_Single_System_Single_System_Boolean__System_Boolean__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestPoint(System.Single%2CSystem.Single%2CSystem.Boolean%40%2CSystem.Boolean%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L681">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestPoint_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestPoint*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestPoint_System_Single_System_Single_System_Boolean__System_Boolean__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestPoint(System.Single,System.Single,System.Boolean@,System.Boolean@)">HitTestPoint(Single, Single, out Boolean, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Given a coordinate (in DIPs) relative to the top-left of the layout box,
+this returns the corresponding hit-test metrics of the text string where
+the hit-test has occurred. This is useful for mapping mouse clicks to caret
+positions. When the given coordinate is outside the text string, the function
+sets the output value isInside to false but returns the nearest character
+position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteHitTestMetrics HitTestPoint(float pointX, float pointY, out bool isTrailingHit, out bool isInside)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">pointX</span></td>
+        <td><p>X coordinate to hit-test, relative to the top-left location of the layout box.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">pointY</span></td>
+        <td><p>Y coordinate to hit-test, relative to the top-left location of the layout box.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isTrailingHit</span></td>
+        <td><p>Output flag indicating whether the hit-test location is at the leading or the trailing
+side of the character. When the output isInside value is set to false, this value is set according to the output
+position value to represent the edge closest to the hit-test location.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isInside</span></td>
+        <td><p>Output flag indicating whether the hit-test location is inside the text string.
+When false, the position nearest the text's edge is returned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteHitTestMetrics.html">DWriteHitTestMetrics</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteHitTestMetrics.html">DWriteHitTestMetrics</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestTextPosition_System_UInt32_System_Boolean_System_Single__System_Single__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestTextPosition(System.UInt32%2CSystem.Boolean%2CSystem.Single%40%2CSystem.Single%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L715">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestTextPosition_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestTextPosition*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestTextPosition_System_UInt32_System_Boolean_System_Single__System_Single__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestTextPosition(System.UInt32,System.Boolean,System.Single@,System.Single@)">HitTestTextPosition(UInt32, Boolean, out Single, out Single)</h4>
+  <div class="markdown level1 summary"><p>Given a text position and whether the caret is on the leading or trailing
+edge of that position, this returns the corresponding coordinate (in DIPs)
+relative to the top-left of the layout box. This is most useful for drawing
+the caret's current position, but it could also be used to anchor an IME to the
+typed text or attach a floating menu near the point of interest. It may also be
+used to programmatically obtain the geometry of a particular text position
+for UI automation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteHitTestMetrics HitTestTextPosition(uint textPosition, bool isTrailingHit, out float pointX, out float pointY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">textPosition</span></td>
+        <td><p>Text position to get the coordinate of.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isTrailingHit</span></td>
+        <td><p>Flag indicating whether the location is of the leading or the trailing side of the specified text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">pointX</span></td>
+        <td><p>Output caret X, relative to the top-left of the layout box.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">pointY</span></td>
+        <td><p>Output caret Y, relative to the top-left of the layout box.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteHitTestMetrics.html">DWriteHitTestMetrics</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteHitTestMetrics.html">DWriteHitTestMetrics</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestTextPosition_System_UInt32_System_Boolean_System_Single__System_Single___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When drawing a caret at the returned X,Y, it should be centered on X
+and drawn from the Y coordinate down. The height will be the size of the
+hit-tested text (which can vary in size within a line).
+Reading direction also affects which side of the character the caret is drawn.
+However, the returned X coordinate will be correct for either case.
+You can get a text length back that is larger than a single character.
+This happens for complex scripts when multiple characters form a single cluster,
+when diacritics join their base character, or when you test a surrogate pair.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_Release.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.Release%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L186">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_Release_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.Release*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_Release" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.Release">Release()</h4>
+  <div class="markdown level1 summary"><p>Releases the managed reference to the COM DWrite interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontCollection_JeremyAnsel_DirectX_DWrite_DWriteFontCollection_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontCollection(JeremyAnsel.DirectX.DWrite.DWriteFontCollection%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L299">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontCollection_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontCollection*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontCollection_JeremyAnsel_DirectX_DWrite_DWriteFontCollection_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontCollection(JeremyAnsel.DirectX.DWrite.DWriteFontCollection,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetFontCollection(DWriteFontCollection, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set the font collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFontCollection(DWriteFontCollection fontCollection, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></td>
+        <td><span class="parametername">fontCollection</span></td>
+        <td><p>The font collection to set</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontFamilyName_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontFamilyName(System.String%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L315">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontFamilyName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontFamilyName*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontFamilyName_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontFamilyName(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetFontFamilyName(String, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set null-terminated font family name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFontFamilyName(string fontFamilyName, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fontFamilyName</span></td>
+        <td><p>Font family name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontSize_System_Single_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontSize(System.Single%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L359">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontSize_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontSize*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontSize_System_Single_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontSize(System.Single,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetFontSize(Single, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set font em height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFontSize(float fontSize, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">fontSize</span></td>
+        <td><p>Font em height</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontStretch_JeremyAnsel_DirectX_DWrite_DWriteFontStretch_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontStretch(JeremyAnsel.DirectX.DWrite.DWriteFontStretch%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L348">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontStretch_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontStretch*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontStretch_JeremyAnsel_DirectX_DWrite_DWriteFontStretch_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontStretch(JeremyAnsel.DirectX.DWrite.DWriteFontStretch,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetFontStretch(DWriteFontStretch, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set font stretch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFontStretch(DWriteFontStretch fontStretch, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStretch.html">DWriteFontStretch</a></td>
+        <td><span class="parametername">fontStretch</span></td>
+        <td><p>font stretch</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontStyle_JeremyAnsel_DirectX_DWrite_DWriteFontStyle_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontStyle(JeremyAnsel.DirectX.DWrite.DWriteFontStyle%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L337">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontStyle_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontStyle*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontStyle_JeremyAnsel_DirectX_DWrite_DWriteFontStyle_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontStyle(JeremyAnsel.DirectX.DWrite.DWriteFontStyle,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetFontStyle(DWriteFontStyle, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set font style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFontStyle(DWriteFontStyle fontStyle, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStyle.html">DWriteFontStyle</a></td>
+        <td><span class="parametername">fontStyle</span></td>
+        <td><p>Font style</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontWeight_JeremyAnsel_DirectX_DWrite_DWriteFontWeight_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontWeight(JeremyAnsel.DirectX.DWrite.DWriteFontWeight%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L326">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontWeight_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontWeight*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontWeight_JeremyAnsel_DirectX_DWrite_DWriteFontWeight_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontWeight(JeremyAnsel.DirectX.DWrite.DWriteFontWeight,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetFontWeight(DWriteFontWeight, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set font weight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFontWeight(DWriteFontWeight fontWeight, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontWeight.html">DWriteFontWeight</a></td>
+        <td><span class="parametername">fontWeight</span></td>
+        <td><p>Font weight</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLineSpacing_JeremyAnsel_DirectX_DWrite_DWriteLineSpacingMethod_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLineSpacing(JeremyAnsel.DirectX.DWrite.DWriteLineSpacingMethod%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L213">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLineSpacing_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLineSpacing*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLineSpacing_JeremyAnsel_DirectX_DWrite_DWriteLineSpacingMethod_System_Single_System_Single_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLineSpacing(JeremyAnsel.DirectX.DWrite.DWriteLineSpacingMethod,System.Single,System.Single)">SetLineSpacing(DWriteLineSpacingMethod, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Set line spacing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLineSpacing(DWriteLineSpacingMethod lineSpacingMethod, float lineSpacing, float baseline)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteLineSpacingMethod.html">DWriteLineSpacingMethod</a></td>
+        <td><span class="parametername">lineSpacingMethod</span></td>
+        <td><p>How to determine line height.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">lineSpacing</span></td>
+        <td><p>The line height, or rather distance between one baseline to another.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">baseline</span></td>
+        <td><p>Distance from top of line to baseline. A reasonable ratio to lineSpacing is 80%.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLineSpacing_JeremyAnsel_DirectX_DWrite_DWriteLineSpacingMethod_System_Single_System_Single__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For the default method, spacing depends solely on the content.
+For uniform spacing, the given line height will override the content.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLocaleName_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLocaleName(System.String%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L408">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLocaleName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLocaleName*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLocaleName_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLocaleName(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetLocaleName(String, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set locale name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLocaleName(string localeName, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">localeName</span></td>
+        <td><p>Locale name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetStrikethrough_System_Boolean_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetStrikethrough(System.Boolean%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L381">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetStrikethrough_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetStrikethrough*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetStrikethrough_System_Boolean_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetStrikethrough(System.Boolean,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetStrikethrough(Boolean, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set strikethrough.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStrikethrough(bool hasStrikethrough, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">hasStrikethrough</span></td>
+        <td><p>The Boolean flag indicates whether strikethrough takes place</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetTrimming_JeremyAnsel_DirectX_DWrite_DWriteTrimming_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetTrimming(JeremyAnsel.DirectX.DWrite.DWriteTrimming)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L197">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetTrimming_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetTrimming*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetTrimming_JeremyAnsel_DirectX_DWrite_DWriteTrimming_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetTrimming(JeremyAnsel.DirectX.DWrite.DWriteTrimming)">SetTrimming(DWriteTrimming)</h4>
+  <div class="markdown level1 summary"><p>Set trimming options for any trailing text exceeding the layout width
+or for any far text exceeding the layout height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTrimming(DWriteTrimming trimmingOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTrimming.html">DWriteTrimming</a></td>
+        <td><span class="parametername">trimmingOptions</span></td>
+        <td><p>Text trimming options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetTypography_JeremyAnsel_DirectX_DWrite_DWriteTypography_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetTypography(JeremyAnsel.DirectX.DWrite.DWriteTypography%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L392">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetTypography_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetTypography*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetTypography_JeremyAnsel_DirectX_DWrite_DWriteTypography_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetTypography(JeremyAnsel.DirectX.DWrite.DWriteTypography,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetTypography(DWriteTypography, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set font typography features.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTypography(DWriteTypography typography, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTypography.html">DWriteTypography</a></td>
+        <td><span class="parametername">typography</span></td>
+        <td><p>Pointer to font typography setting.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetUnderline_System_Boolean_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetUnderline(System.Boolean%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L370">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetUnderline_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetUnderline*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetUnderline_System_Boolean_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetUnderline(System.Boolean,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetUnderline(Boolean, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set underline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUnderline(bool hasUnderline, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">hasUnderline</span></td>
+        <td><p>The Boolean flag indicates whether underline takes place</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ToBoolean.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.ToBoolean%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L166">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ToBoolean_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.ToBoolean*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_ToBoolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.ToBoolean">ToBoolean()</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ToBoolean()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteTextLayout__System_Boolean.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteTextLayout)~System.Boolean%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L156">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_op_Implicit_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.op_Implicit*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteTextLayout__System_Boolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteTextLayout)~System.Boolean">Implicit(DWriteTextLayout to Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator bool (DWriteTextLayout value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html">DWriteTextLayout</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A DWrite object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="JeremyAnsel.DirectX.DWrite.IDWriteReleasable.html">IDWriteReleasable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1521 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class XMColor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class XMColor
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.DXMath.XMColor">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_DXMath_XMColor" data-uid="JeremyAnsel.DirectX.DXMath.XMColor" class="text-break">Class XMColor
+  </h1>
+  <div class="markdown level0 summary"><p>The color functions provided by DirectXMath.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">XMColor</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.DXMath.html">JeremyAnsel.DirectX.DXMath</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DXMath.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_DXMath_XMColor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class XMColor</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_AdjustContrast_JeremyAnsel_DirectX_DXMath_XMVector_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.AdjustContrast(JeremyAnsel.DirectX.DXMath.XMVector%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L168">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_AdjustContrast_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.AdjustContrast*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_AdjustContrast_JeremyAnsel_DirectX_DXMath_XMVector_System_Single_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.AdjustContrast(JeremyAnsel.DirectX.DXMath.XMVector,System.Single)">AdjustContrast(XMVector, Single)</h4>
+  <div class="markdown level1 summary"><p>Adjusts the contrast value of a color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector AdjustContrast(XMVector color, float contrast)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The color. Each of the components of C should be in the range 0.0f to 1.0f.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">contrast</span></td>
+        <td><p>Contrast value. This parameter linearly interpolates between 50 percent gray and the color C. If this parameter is 0.0f, the returned color is 50 percent gray. If this parameter is 1.0f, the returned color is the original color.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The color resulting from the contrast adjustment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_AdjustSaturation_JeremyAnsel_DirectX_DXMath_XMVector_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.AdjustSaturation(JeremyAnsel.DirectX.DXMath.XMVector%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L145">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_AdjustSaturation_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.AdjustSaturation*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_AdjustSaturation_JeremyAnsel_DirectX_DXMath_XMVector_System_Single_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.AdjustSaturation(JeremyAnsel.DirectX.DXMath.XMVector,System.Single)">AdjustSaturation(XMVector, Single)</h4>
+  <div class="markdown level1 summary"><p>Adjusts the saturation value of a color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector AdjustSaturation(XMVector color, float saturation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The color. Each of the components of C should be in the range 0.0f to 1.0f.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">saturation</span></td>
+        <td><p>Saturation value. This parameter linearly interpolates between the color converted to gray-scale and the original color, C. If Saturation is 0.0f, the function returns the gray-scale color. If Saturation is 1.0f, the function returns the original color.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The color resulting from the saturation adjustment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_Equal_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.Equal(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L21">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_Equal_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Equal*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_Equal_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Equal(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Equal(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests for the equality of two colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Equal(XMVector c1, XMVector c2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c1</span></td>
+        <td><p>The first color to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c2</span></td>
+        <td><p>The second color to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if each of the components of the two colors are equal, or false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_Greater_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.Greater(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L45">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_Greater_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Greater*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_Greater_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Greater(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Greater(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether all the components of the first color are greater than the corresponding components in the second color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Greater(XMVector c1, XMVector c2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c1</span></td>
+        <td><p>The first color to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c2</span></td>
+        <td><p>The second color to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if every component of C1 is greater than the corresponding component in C2. Returns false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_GreaterOrEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.GreaterOrEqual(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L57">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_GreaterOrEqual_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.GreaterOrEqual*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_GreaterOrEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.GreaterOrEqual(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">GreaterOrEqual(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether all the components of the first color are greater than or equal to the corresponding components of the second color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GreaterOrEqual(XMVector c1, XMVector c2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c1</span></td>
+        <td><p>The first color to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c2</span></td>
+        <td><p>The second color to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if every component of C1 is greater than or equal to the corresponding component in C2. Returns false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_HslToRgb_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.HslToRgb(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L257">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_HslToRgb_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.HslToRgb*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_HslToRgb_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.HslToRgb(JeremyAnsel.DirectX.DXMath.XMVector)">HslToRgb(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts HSL color values to RGB color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector HslToRgb(XMVector hsl)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">hsl</span></td>
+        <td><p>Color value to convert. The X element is Hue (H), the Y element is Saturation (S), the Z element is Luminance (L), and the W element is Alpha. Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha (a copy of <code>hsl.w</code>) . Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_HsvToRgb_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.HsvToRgb(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L365">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_HsvToRgb_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.HsvToRgb*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_HsvToRgb_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.HsvToRgb(JeremyAnsel.DirectX.DXMath.XMVector)">HsvToRgb(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts HSV color values to RGB color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector HsvToRgb(XMVector hsv)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">hsv</span></td>
+        <td><p>Color value to convert. The X element is Hue (H), the Y element is Saturation (S), the Z element is Value (V), and the W element is Alpha. Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha (a copy of <code>hsv.w</code>) . Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_IsInfinite_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.IsInfinite(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L104">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_IsInfinite_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.IsInfinite*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_IsInfinite_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.IsInfinite(JeremyAnsel.DirectX.DXMath.XMVector)">IsInfinite(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests to see whether any of the components of a color are either positive or negative infinity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInfinite(XMVector c)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c</span></td>
+        <td><p>The color.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if any components of C are either positive or negative infinity. Returns false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_IsNaN_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.IsNaN(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L92">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_IsNaN_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.IsNaN*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_IsNaN_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.IsNaN(JeremyAnsel.DirectX.DXMath.XMVector)">IsNaN(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests to see whether any component of a color is not a number (NaN).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNaN(XMVector c)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c</span></td>
+        <td><p>The color.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if any components of C are NaN, or false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_Less_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.Less(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L69">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_Less_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Less*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_Less_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Less(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Less(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether all the components of the first color are less than the corresponding components of the second color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Less(XMVector c1, XMVector c2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c1</span></td>
+        <td><p>The first color to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c2</span></td>
+        <td><p>The second color to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if every component of C1 is less than the corresponding component in C2. Returns false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_LessOrEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.LessOrEqual(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L81">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_LessOrEqual_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.LessOrEqual*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_LessOrEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.LessOrEqual(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">LessOrEqual(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether all the components of the first color are less than or equal to the corresponding components of the second color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LessOrEqual(XMVector c1, XMVector c2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c1</span></td>
+        <td><p>The first color to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c2</span></td>
+        <td><p>The second color to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if every component of C1 is less than or equal to the corresponding component in C2. Returns false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_Modulate_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.Modulate(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L133">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_Modulate_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Modulate*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_Modulate_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Modulate(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Modulate(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Blends two colors by multiplying corresponding components together.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Modulate(XMVector c1, XMVector c2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c1</span></td>
+        <td><p>The first color.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c2</span></td>
+        <td><p>The second color.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The color resulting from the modulation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_Negative_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.Negative(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L116">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_Negative_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Negative*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_Negative_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.Negative(JeremyAnsel.DirectX.DXMath.XMVector)">Negative(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Determines the negative RGB color value of a color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Negative(XMVector c)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c</span></td>
+        <td><p>The color. Each of the components of C should be in the range 0.0f to 1.0f.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The negative color. The w-component (alpha) is copied unmodified from the input vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_NotEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.NotEqual(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L33">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_NotEqual_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.NotEqual*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_NotEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.NotEqual(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">NotEqual(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests to see whether two colors are unequal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool NotEqual(XMVector c1, XMVector c2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c1</span></td>
+        <td><p>The first color to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">c2</span></td>
+        <td><p>The second color to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if any component of C1 is different from the corresponding component of C2. Returns false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_RgbToHsl_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.RgbToHsl(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L185">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToHsl_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToHsl*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToHsl_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToHsl(JeremyAnsel.DirectX.DXMath.XMVector)">RgbToHsl(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts RGB color values to HSL color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector RgbToHsl(XMVector rgb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rgb</span></td>
+        <td><p>Color value to convert. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha. Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value. The X element is Hue (H), the Y element is Saturation (S), the Z element is Luminance (L), and the W element is Alpha (a copy of the input's Alpha value). Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_RgbToHsv_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.RgbToHsv(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L303">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToHsv_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToHsv*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToHsv_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToHsv(JeremyAnsel.DirectX.DXMath.XMVector)">RgbToHsv(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts RGB color values to HSV color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector RgbToHsv(XMVector rgb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rgb</span></td>
+        <td><p>Color value to convert. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha. Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value. The X element is Hue (H), the Y element is Saturation (S), the Z element is Value (V), and the W element is Alpha (a copy of <code>rgb.w</code>). Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_RgbToSrgb_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.RgbToSrgb(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L602">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToSrgb_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToSrgb*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToSrgb_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToSrgb(JeremyAnsel.DirectX.DXMath.XMVector)">RgbToSrgb(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts an RGB color vector to sRGB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector RgbToSrgb(XMVector rgb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rgb</span></td>
+        <td><p>The original RGB color vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted sRGBA color vector. The x element is red, the y element is green, the z element is blue, and the w element is the alpha value (which is a copy of <code>rgb.w</code>). Each element value has a range of 0.0 to 1.0 in the sRGB colorspace.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_RgbToXyz_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.RgbToXyz(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L506">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToXyz_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToXyz*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToXyz_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToXyz(JeremyAnsel.DirectX.DXMath.XMVector)">RgbToXyz(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts RGB color values to XYZ color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector RgbToXyz(XMVector rgb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rgb</span></td>
+        <td><p>Color value to convert. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha. Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value with the trisimulus values of X, Y, and Z in the corresponding element, and the W element with Alpha (a copy of <code>rgb.w</code>). Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_RgbToYuv_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.RgbToYuv(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L436">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToYuv_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToYuv*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToYuv_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToYuv(JeremyAnsel.DirectX.DXMath.XMVector)">RgbToYuv(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts RGB color values to YUV color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector RgbToYuv(XMVector rgb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rgb</span></td>
+        <td><p>Color value to convert. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha. Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value in Luma-Chrominance (YUV) aka YCbCr. The X element contains Luma (Y, 0.0 to 1.0), the Y element contains Blue-difference chroma (-0.5 to 0.5), the Z element contains the Red-difference chroma (-0.5 to 0.5), and the W element contains the Alpha (a copy of <code>rgb.w</code>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_RgbToYuvHD_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.RgbToYuvHD(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L471">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToYuvHD_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToYuvHD*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_RgbToYuvHD_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.RgbToYuvHD(JeremyAnsel.DirectX.DXMath.XMVector)">RgbToYuvHD(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts RGB color values to YUV HD color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector RgbToYuvHD(XMVector rgb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rgb</span></td>
+        <td><p>Color value to convert. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha. Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value in Luma-Chrominance (YUV) aka YCbCr. The X element contains Luma (Y, 0.0 to 1.0), the Y element contains Blue-difference chroma (-0.5 to 0.5), the Z element contains the Red-difference chroma (-0.5 to 0.5), and the W element contains the Alpha (a copy of <code>rgb.w</code>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_SrgbToRgb_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.SrgbToRgb(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L625">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_SrgbToRgb_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.SrgbToRgb*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_SrgbToRgb_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.SrgbToRgb(JeremyAnsel.DirectX.DXMath.XMVector)">SrgbToRgb(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts an sRGB color vector to RGB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector SrgbToRgb(XMVector srgb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">srgb</span></td>
+        <td><p>An sRGB color vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted RGBA color vector. The x element is red, the y element is green, the z element is blue, and the w element is the alpha value (which is a copy of <code>srgb.w</code>). Each element value has a range of 0.0 to 1.0 in the RGB colorspace.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_SrgbToXyz_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.SrgbToXyz(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L572">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_SrgbToXyz_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.SrgbToXyz*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_SrgbToXyz_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.SrgbToXyz(JeremyAnsel.DirectX.DXMath.XMVector)">SrgbToXyz(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts SRGB color values to XYZ color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector SrgbToXyz(XMVector srgb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">srgb</span></td>
+        <td><p>Color value to convert. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha. Each has a range of 0.0 to 1.0 and is in the linear sRGB colorspace.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value with the trisimulus values of X, Y, and Z in the corresponding element, and the W element with Alpha (a copy of <code>rgb.w</code>). Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_XyzToRgb_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.XyzToRgb(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L525">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_XyzToRgb_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.XyzToRgb*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_XyzToRgb_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.XyzToRgb(JeremyAnsel.DirectX.DXMath.XMVector)">XyzToRgb(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts XYZ color values to RGB color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector XyzToRgb(XMVector xyz)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">xyz</span></td>
+        <td><p>Color value to convert with the trisimulus values of X, Y, and Z in the corresponding element, and the W element with Alpha. Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha (a copy of <code>xyz.w</code>). Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_XyzToSrgb_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.XyzToSrgb(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L544">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_XyzToSrgb_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.XyzToSrgb*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_XyzToSrgb_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.XyzToSrgb(JeremyAnsel.DirectX.DXMath.XMVector)">XyzToSrgb(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts XYZ color values to SRGB color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector XyzToSrgb(XMVector xyz)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">xyz</span></td>
+        <td><p>Color value to convert with the trisimulus values of X, Y, and Z in the corresponding element, and the W element with Alpha. Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha (a copy of <code>xyz.w</code>). Each has a range of 0.0 to 1.0 in the linear sRGB colorspace.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_YuvToRgb_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.YuvToRgb(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L454">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_YuvToRgb_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.YuvToRgb*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_YuvToRgb_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.YuvToRgb(JeremyAnsel.DirectX.DXMath.XMVector)">YuvToRgb(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts YUV color values to RGB color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector YuvToRgb(XMVector yuv)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">yuv</span></td>
+        <td><p>Color value to convert in Luma-Chrominance (YUV) aka <code>YCbCr</code>. The X element contains Luma (Y, 0.0 to 1.0), the Y element contains Blue-difference chroma (U, -0.5 to 0.5), the Z element contains the Red-difference chroma (V, -0.5 to 0.5), and the W element contains the Alpha (0.0 to 1.0).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha (a copy of <code>yuv.w</code>). Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor_YuvToRgbHD_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor.YuvToRgbHD(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L489">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMColor_YuvToRgbHD_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.YuvToRgbHD*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMColor_YuvToRgbHD_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMColor.YuvToRgbHD(JeremyAnsel.DirectX.DXMath.XMVector)">YuvToRgbHD(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Converts YUV color values to RGB HD color values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector YuvToRgbHD(XMVector yuv)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">yuv</span></td>
+        <td><p>Color value to convert in Luma-Chrominance (YUV) aka <code>YCbCr</code>. The X element contains Luma (Y, 0.0 to 1.0), the Y element contains Blue-difference chroma (U, -0.5 to 0.5), the Z element contains the Red-difference chroma (V, -0.5 to 0.5), and the W element contains the Alpha (0.0 to 1.0).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>The converted color value. X element is Red, Y element is Green, Z element is Blue, and W element is Alpha (a copy of <code>yuv.w</code>). Each has a range of 0.0 to 1.0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMColor.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMColor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMColor.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

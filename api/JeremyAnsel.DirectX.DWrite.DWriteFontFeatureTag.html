@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enum DWriteFontFeatureTag
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enum DWriteFontFeatureTag
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFeatureTag">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFeatureTag" class="text-break">Enum DWriteFontFeatureTag
+  </h1>
+  <div class="markdown level0 summary"><p>Typographic feature of text supplied by the font.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.DWrite.html">JeremyAnsel.DirectX.DWrite</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DWrite.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum DWriteFontFeatureTag</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_AlternateAnnotationForms">AlternateAnnotationForms</td>
+        <td><p>Replaces default glyphs with various notational forms (such as glyphs placed in open or solid circles, squares, parentheses, diamonds or rounded boxes). In some cases an annotation form may already be present, but the user may want a different one.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_AlternateHalfWidth">AlternateHalfWidth</td>
+        <td><p>Respaces glyphs designed to be set on full-em widths, fitting them onto half-em widths. This differs from hwid in that it does not substitute new glyphs.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_AlternativeFractions">AlternativeFractions</td>
+        <td><p>Replaces figures separated by a slash with an alternative form.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_CapitalSpacing">CapitalSpacing</td>
+        <td><p>Globally adjusts inter-glyph spacing for all-capital text. Most typefaces contain capitals and lowercase characters, and the capitals are positioned to work with the lowercase. When capitals are used for words, they need more space between them for legibility and esthetics. This feature would not apply to monospaced designs. Of course the user may want to override this behavior in order to do more pronounced letter spacing for esthetic reasons.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_CaseSensitiveForms">CaseSensitiveForms</td>
+        <td><p>Shifts various punctuation marks up to a position that works better with all-capital sequences or sets of lining figures; also changes oldstyle figures to lining figures. By default, glyphs in a text face are designed to work with lowercase characters. Some characters should be shifted vertically to fit the higher visual center of all-capital or lining text. Also, lining figures are the same height (or close to it) as capitals, and fit much better with all-capital text.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_ContextualAlternates">ContextualAlternates</td>
+        <td><p>In specified situations, replaces default glyphs with alternate forms which provide better joining behavior. Used in script typefaces which are designed to have some or all of their glyphs join.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_ContextualLigatures">ContextualLigatures</td>
+        <td><p>Replaces a sequence of glyphs with a single glyph which is preferred for typographic purposes. Unlike other ligature features, clig specifies the context in which the ligature is recommended. This capability is important in some script designs and for swash ligatures.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_ContextualSwash">ContextualSwash</td>
+        <td><p>Replaces default character glyphs with corresponding swash glyphs in a specified context. Note that there may be more than one swash alternate for a given character.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_CursivePositioning">CursivePositioning</td>
+        <td><p>In cursive scripts like Arabic, this feature cursively positions adjacent glyphs.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Default">Default</td>
+        <td><p>The default.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_DiscretionaryLigatures">DiscretionaryLigatures</td>
+        <td><p>Replaces a sequence of glyphs with a single glyph which is preferred for typographic purposes. This feature covers those ligatures which may be used for special effect, at the user's preference.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_ExpertForms">ExpertForms</td>
+        <td><p>Replaces standard forms in Japanese fonts with corresponding forms preferred by typographers. For example, a user would invoke this feature to replace kanji character U+5516 with U+555E.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Fractions">Fractions</td>
+        <td><p>Replaces figures separated by a slash with 'common' (diagonal) fractions.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_FullWidth">FullWidth</td>
+        <td><p>Replaces glyphs set on other widths with glyphs set on full (usually em) widths. In a CJKV font, this may include &quot;lower ASCII&quot; Latin characters and various symbols. In a European font, this feature replaces proportionally-spaced glyphs with monospaced glyphs, which are generally set on widths of 0.6 em. For example, a user may invoke this feature in a Japanese font to get full monospaced Latin glyphs instead of the corresponding proportionally-spaced versions.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_GlyphCompositionDecomposition">GlyphCompositionDecomposition</td>
+        <td><p>To minimize the number of glyph alternates, it is sometimes desired to decompose a character into two glyphs. Additionally, it may be preferable to compose two characters into a single glyph for better glyph processing. This feature permits such composition/decomposition. The feature should be processed as the first feature processed, and should be processed only when it is called.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_HalantForms">HalantForms</td>
+        <td><p>Produces the halant forms of consonants in Indic scripts. For example, in Sanskrit (Devanagari script), syllable final consonants are frequently required in their halant form.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_HalfForms">HalfForms</td>
+        <td><p>Produces the half forms of consonants in Indic scripts. For example, in Hindi (Devanagari script), the conjunct KKa, obtained by doubling the Ka, is denoted with a half form of Ka followed by the full form.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_HalfWidth">HalfWidth</td>
+        <td><p>Replaces glyphs on proportional widths, or fixed widths other than half an em, with glyphs on half-em (en) widths. Many CJKV fonts have glyphs which are set on multiple widths; this feature selects the half-em version. There are various contexts in which this is the preferred behavior, including compatibility with older desktop documents.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_HistoricalForms">HistoricalForms</td>
+        <td><p>Replaces the default (current) forms with the historical alternates. While some ligatures are also used for historical effect, this feature deals only with single characters. Some fonts include the historical forms as alternates, so they can be used for a 'period' effect.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_HistoricalLigatures">HistoricalLigatures</td>
+        <td><p>Replaces the default (current) forms with the historical alternates. Some ligatures were in common use in the past, but appear anachronistic today. Some fonts include the historical forms as alternates, so they can be used for a 'period' effect.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_HojoKanjiForms">HojoKanjiForms</td>
+        <td><p>Used to access the JIS X 0212-1990 glyphs for the cases when the JIS X 0213:2004 form is encoded. The JIS X 0212-1990 (aka, &quot;Hojo Kanji&quot;) and JIS X 0213:2004 character sets overlap significantly. In some cases their prototypical glyphs differ. When building fonts that support both JIS X 0212-1990 and JIS X 0213:2004 (such as those supporting the Adobe-Japan 1-6 character collection), it is recommended that JIS X 0213:2004 forms be the preferred encoded form.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_HorizontalKanaAlternates">HorizontalKanaAlternates</td>
+        <td><p>Replaces standard kana with forms that have been specially designed for only horizontal writing. This is a typographic optimization for improved fit and more even color.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Jis04Forms">Jis04Forms</td>
+        <td><p>The National Language Council (NLC) of Japan has defined new glyph shapes for a number of JIS characters, which were incorporated into JIS X 0213:2004 as new prototypical forms. The 'jp04' feature is A subset of the 'nlck' feature, and is used to access these prototypical glyphs in a manner that maintains the integrity of JIS X 0213:2004.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Jis78Forms">Jis78Forms</td>
+        <td><p>Replaces default (JIS90) Japanese glyphs with the corresponding forms from the JIS C 6226-1978 (JIS78) specification.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Jis83Forms">Jis83Forms</td>
+        <td><p>Replaces default (JIS90) Japanese glyphs with the corresponding forms from the JIS X 0208-1983 (JIS83) specification.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Jis90Forms">Jis90Forms</td>
+        <td><p>Replaces Japanese glyphs from the JIS78 or JIS83 specifications with the corresponding forms from the JIS X 0208-1990 (JIS90) specification.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Kerning">Kerning</td>
+        <td><p>Adjusts amount of space between glyphs, generally to provide optically consistent spacing between glyphs. Although a well-designed typeface has consistent inter-glyph spacing overall, some glyph combinations require adjustment for improved legibility. Besides standard adjustment in the horizontal direction, this feature can supply size-dependent kerning data via device tables, &quot;cross-stream&quot; kerning in the Y text direction, and adjustment of glyph placement independent of the advance adjustment. Note that this feature may apply to runs of more than two glyphs, and would not be used in monospaced fonts. Also note that this feature does not apply to text set vertically.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_LiningFigures">LiningFigures</td>
+        <td><p>Changes selected figures from oldstyle to the default lining form. For example, a user may invoke this feature in order to get lining figures, which fit better with all-capital text. This feature overrides results of the Oldstyle Figures feature (onum).</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_LocalizedForms">LocalizedForms</td>
+        <td><p>Enables localized forms of glyphs to be substituted for default forms. Many scripts used to write multiple languages over wide geographical areas have developed localized variant forms of specific letters, which are used by individual literary communities. For example, a number of letters in the Bulgarian and Serbian alphabets have forms distinct from their Russian counterparts and from each other. In some cases the localized form differs only subtly from the script 'norm', in others the forms are radically distinct.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_MarkPositioning">MarkPositioning</td>
+        <td><p>Positions mark glyphs with respect to base glyphs. For example, in Arabic script positioning the Hamza above the Yeh.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_MarkToMarkPositioning">MarkToMarkPositioning</td>
+        <td><p>Positions marks with respect to other marks. Required in various non-Latin scripts like Arabic. For example, in Arabic, the ligaturised mark Ha with Hamza above it can also be obtained by positioning these marks relative to one another.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_MathematicalGreek">MathematicalGreek</td>
+        <td><p>Replaces standard typographic forms of Greek glyphs with corresponding forms commonly used in mathematical notation (which are a subset of the Greek alphabet).</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_NlcKanjiForms">NlcKanjiForms</td>
+        <td><p>Used to access glyphs made from glyph shapes defined by the National Language Council (NLC) of Japan for a number of JIS characters in 2000.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_OldStyleFigures">OldStyleFigures</td>
+        <td><p>Changes selected figures from the default lining style to oldstyle form. For example, a user may invoke this feature to get oldstyle figures, which fit better into the flow of normal upper- and lowercase text. This feature overrides results of the Lining Figures feature (lnum).</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Ordinals">Ordinals</td>
+        <td><p>Replaces default alphabetic glyphs with the corresponding ordinal forms for use after figures. One exception to the follows-a-figure rule is the numero character (U+2116), which is actually a ligature substitution, but is best accessed through this feature.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_PetiteCapitals">PetiteCapitals</td>
+        <td><p>Turns lowercase characters into petite capitals. Forms related to petite capitals, such as specially designed figures, may be included. Some fonts contain an additional size of capital letters, shorter than the regular smallcaps and it is referred to as petite caps. Such forms are most likely to be found in designs with a small lowercase x-height, where they better harmonise with lowercase text than the taller smallcaps.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_PetiteCapitalsFromCapitals">PetiteCapitalsFromCapitals</td>
+        <td><p>Turns capital characters into petite capitals. It is generally used for words which would otherwise be set in all caps, such as acronyms, but which are desired in petite-cap form to avoid disrupting the flow of text. See the pcap feature description for notes on the relationship of caps, smallcaps and petite caps.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_ProportionalAlternateWidth">ProportionalAlternateWidth</td>
+        <td><p>Respaces glyphs designed to be set on full-em widths, fitting them onto individual (more or less proportional) horizontal widths. This differs from pwid in that it does not substitute new glyphs (GPOS, not GSUB feature). The user may prefer the monospaced form, or may simply want to ensure that the glyph is well-fit and not rotated in vertical setting (Latin forms designed for proportional spacing would be rotated).</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_ProportionalFigures">ProportionalFigures</td>
+        <td><p>Replaces figure glyphs set on uniform (tabular) widths with corresponding glyphs set on glyph-specific (proportional) widths. Tabular widths will generally be the default, but this cannot be safely assumed. Of course this feature would not be present in monospaced designs.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_ProportionalWidths">ProportionalWidths</td>
+        <td><p>Replaces glyphs set on uniform widths (typically full or half-em) with proportionally spaced glyphs. The proportional variants are often used for the Latin characters in CJKV fonts, but may also be used for Kana in Japanese fonts.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_QuarterWidths">QuarterWidths</td>
+        <td><p>Replaces glyphs on other widths with glyphs set on widths of one quarter of an em (half an en). The characters involved are normally figures and some forms of punctuation.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_RequiredLigatures">RequiredLigatures</td>
+        <td><p>Replaces a sequence of glyphs with a single glyph which is preferred for typographic purposes. This feature covers those ligatures, which the script determines as required to be used in normal conditions. This feature is important for some scripts to ensure correct glyph formation.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_RubyNotationForms">RubyNotationForms</td>
+        <td><p>Identifies glyphs in the font which have been designed for &quot;ruby&quot;, from the old typesetting term for four-point-sized type. Japanese typesetting often uses smaller kana glyphs, generally in superscripted form, to clarify the meaning of kanji which may be unfamiliar to the reader.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_ScientificInferiors">ScientificInferiors</td>
+        <td><p>Replaces lining or oldstyle figures with inferior figures (smaller glyphs which sit lower than the standard baseline, primarily for chemical or mathematical notation). May also replace lowercase characters with alphabetic inferiors.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_SimplifiedForms">SimplifiedForms</td>
+        <td><p>Replaces 'traditional' Chinese or Japanese forms with the corresponding 'simplified' forms.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_SlashedZero">SlashedZero</td>
+        <td><p>Allows the user to change from the default 0 to a slashed form. Some fonts contain both a default form of zero, and an alternative form which uses a diagonal slash through the counter. Especially in condensed designs, it can be difficult to distinguish between 0 and O (zero and capital O) in any situation where capitals and lining figures may be arbitrarily mixed.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_SmallCapitals">SmallCapitals</td>
+        <td><p>Turns lowercase characters into small capitals. This corresponds to the common SC font layout. It is generally used for display lines set in Large &amp; small caps, such as titles. Forms related to small capitals, such as oldstyle figures, may be included.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_SmallCapitalsFromCapitals">SmallCapitalsFromCapitals</td>
+        <td><p>Turns capital characters into small capitals. It is generally used for words which would otherwise be set in all caps, such as acronyms, but which are desired in small-cap form to avoid disrupting the flow of text.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StandardLigatures">StandardLigatures</td>
+        <td><p>Replaces a sequence of glyphs with a single glyph which is preferred for typographic purposes. This feature covers the ligatures which the designer/manufacturer judges should be used in normal conditions.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticAlternates">StylisticAlternates</td>
+        <td><p>Replaces the default forms with the stylistic alternates. Many fonts contain alternate glyph designs for a purely esthetic effect; these don't always fit into a clear category like swash or historical. As in the case of swash glyphs, there may be more than one alternate form.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet1">StylisticSet1</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet10">StylisticSet10</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet11">StylisticSet11</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet12">StylisticSet12</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet13">StylisticSet13</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet14">StylisticSet14</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet15">StylisticSet15</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet16">StylisticSet16</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet17">StylisticSet17</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet18">StylisticSet18</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet19">StylisticSet19</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet2">StylisticSet2</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet20">StylisticSet20</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet3">StylisticSet3</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet4">StylisticSet4</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet5">StylisticSet5</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet6">StylisticSet6</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet7">StylisticSet7</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet8">StylisticSet8</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_StylisticSet9">StylisticSet9</td>
+        <td><p>In addition to, or instead of, stylistic alternatives of individual glyphs (see 'salt' feature), some fonts may contain sets of stylistic variant glyphs corresponding to portions of the character set, such as multiple variants for lowercase letters in a Latin font. Glyphs in stylistic sets may be designed to harmonise visually, interract in particular ways, or otherwise work together. Individual features numbered sequentially with the tag name convention 'ss01' 'ss02' 'ss03' . 'ss20' provide a mechanism for glyphs in these sets to be associated via GSUB lookup indexes to default forms and to each other, and for users to select from available stylistic sets.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Subscript">Subscript</td>
+        <td><p>May replace a default glyph with a subscript glyph, or it may combine a glyph substitution with positioning adjustments for proper placement.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Superscript">Superscript</td>
+        <td><p>Replaces lining or oldstyle figures with superior figures (primarily for footnote indication), and replaces lowercase letters with superior letters (primarily for abbreviated French titles).</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Swash">Swash</td>
+        <td><p>Replaces default character glyphs with corresponding swash glyphs. Note that there may be more than one swash alternate for a given character.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_TabularFigures">TabularFigures</td>
+        <td><p>Replaces figure glyphs set on proportional widths with corresponding glyphs set on uniform (tabular) widths. Tabular widths will generally be the default, but this cannot be safely assumed. Of course this feature would not be present in monospaced designs.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_ThirdWidths">ThirdWidths</td>
+        <td><p>Replaces glyphs on other widths with glyphs set on widths of one third of an em. The characters involved are normally figures and some forms of punctuation.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Titling">Titling</td>
+        <td><p>Replaces the default glyphs with corresponding forms designed specifically for titling. These may be all-capital and/or larger on the body, and adjusted for viewing at larger sizes.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_TraditionalForms">TraditionalForms</td>
+        <td><p>Replaces 'simplified' Chinese hanzi or Japanese kanji forms with the corresponding 'traditional' forms.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_TraditionalNameForms">TraditionalNameForms</td>
+        <td><p>Replaces 'simplified' Japanese kanji forms with the corresponding 'traditional' forms. This is equivalent to the Traditional Forms feature, but explicitly limited to the traditional forms considered proper for use in personal names (as many as 205 glyphs in some fonts).</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_Unicase">Unicase</td>
+        <td><p>Maps upper- and lowercase letters to a mixed set of lowercase and small capital forms, resulting in a single case alphabet (for an example of unicase, see the Emigre type family Filosofia). The letters substituted may vary from font to font, as appropriate to the design. If aligning to the x-height, smallcap glyphs may be substituted, or specially designed unicase forms might be used. Substitutions might also include specially designed figures.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_VerticalAlternatesAndRotation">VerticalAlternatesAndRotation</td>
+        <td><p>Replaces normal figures with figures adjusted for vertical display.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag_VerticalWriting">VerticalWriting</td>
+        <td><p>Indicates that the font is displayed vertically.</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFeatureTag.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFeatureTag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/Enumerations/DWriteFontFeatureTag.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

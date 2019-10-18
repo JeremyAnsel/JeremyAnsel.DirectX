@@ -1,0 +1,1935 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct BoundingFrustum
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct BoundingFrustum
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum" class="text-break">Struct BoundingFrustum
+  </h1>
+  <div class="markdown level0 summary"><p>A bounding frustum object.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.html">JeremyAnsel.DirectX.DXMath.Collision</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DXMath.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct BoundingFrustum : IEquatable&lt;BoundingFrustum&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum__ctor_JeremyAnsel_DirectX_DXMath_XMFloat3_JeremyAnsel_DirectX_DXMath_XMFloat4_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.%23ctor(JeremyAnsel.DirectX.DXMath.XMFloat3%2CJeremyAnsel.DirectX.DXMath.XMFloat4%2CSystem.Single%2CSystem.Single%2CSystem.Single%2CSystem.Single%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L75">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum__ctor_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.#ctor*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum__ctor_JeremyAnsel_DirectX_DXMath_XMFloat3_JeremyAnsel_DirectX_DXMath_XMFloat4_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.#ctor(JeremyAnsel.DirectX.DXMath.XMFloat3,JeremyAnsel.DirectX.DXMath.XMFloat4,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">BoundingFrustum(XMFloat3, XMFloat4, Single, Single, Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingFrustum(XMFloat3 origin, XMFloat4 orientation, float rightSlope, float leftSlope, float topSlope, float bottomSlope, float near, float far)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMFloat3.html">XMFloat3</a></td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The origin of the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMFloat4.html">XMFloat4</a></td>
+        <td><span class="parametername">orientation</span></td>
+        <td><p>The orientation of the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">rightSlope</span></td>
+        <td><p>The slope of the right side of the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">leftSlope</span></td>
+        <td><p>The slope of the left side of the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">topSlope</span></td>
+        <td><p>The slope of the top of the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">bottomSlope</span></td>
+        <td><p>The slope of the bottom of the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">near</span></td>
+        <td><p>The distance of the near plane from the origin of the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">far</span></td>
+        <td><p>The distance of the far plane from the origin of the frustum.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum__ctor_JeremyAnsel_DirectX_DXMath_XMMatrix_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.%23ctor(JeremyAnsel.DirectX.DXMath.XMMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L102">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum__ctor_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.#ctor*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum__ctor_JeremyAnsel_DirectX_DXMath_XMMatrix_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.#ctor(JeremyAnsel.DirectX.DXMath.XMMatrix)">BoundingFrustum(XMMatrix)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> struct from a left-handed projection matrix..</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingFrustum(XMMatrix projection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMMatrix.html">XMMatrix</a></td>
+        <td><span class="parametername">projection</span></td>
+        <td><p>The left-handed projection matrix to create the frustum from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_CornerCount.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.CornerCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L22">View Source</a>
+  </span>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_CornerCount" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.CornerCount">CornerCount</h4>
+  <div class="markdown level1 summary"><p>The number of corners defining the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int CornerCount = 8</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_BottomSlope.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.BottomSlope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L156">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_BottomSlope_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.BottomSlope*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_BottomSlope" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.BottomSlope">BottomSlope</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the slope of the bottom of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BottomSlope { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Far.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Far%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L174">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Far_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Far*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Far" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Far">Far</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the distance of the far plane from the origin of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Far { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_LeftSlope.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.LeftSlope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L138">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_LeftSlope_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.LeftSlope*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_LeftSlope" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.LeftSlope">LeftSlope</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the slope of the left side of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LeftSlope { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Near.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Near%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L165">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Near_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Near*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Near" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Near">Near</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the distance of the near plane of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> from its origin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Near { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Orientation.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Orientation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L120">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Orientation_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Orientation*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Orientation" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Orientation">Orientation</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the orientation of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> represented as a quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XMFloat4 Orientation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMFloat4.html">XMFloat4</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Origin.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Origin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L111">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Origin_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Origin*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Origin" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Origin">Origin</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the origin of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XMFloat3 Origin { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMFloat3.html">XMFloat3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_RightSlope.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.RightSlope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L129">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_RightSlope_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.RightSlope*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_RightSlope" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.RightSlope">RightSlope</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the slope of the right side of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RightSlope { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_TopSlope.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.TopSlope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L147">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_TopSlope_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.TopSlope*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_TopSlope" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.TopSlope">TopSlope</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the slope of the top of the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float TopSlope { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_ContainedBy_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.ContainedBy(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L1730">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_ContainedBy_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.ContainedBy*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_ContainedBy_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.ContainedBy(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">ContainedBy(XMVector, XMVector, XMVector, XMVector, XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> is contained by the specified frustum.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType ContainedBy(XMVector plane0, XMVector plane1, XMVector plane2, XMVector plane3, XMVector plane4, XMVector plane5)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">plane0</span></td>
+        <td><p>The first plane describing the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">plane1</span></td>
+        <td><p>The second plane describing the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">plane2</span></td>
+        <td><p>The third plane describing the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">plane3</span></td>
+        <td><p>The fourth plane describing the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">plane4</span></td>
+        <td><p>The fifth plane describing the frustum.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">plane5</span></td>
+        <td><p>The sixth plane describing the frustum.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the frustum contains the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_ContainedBy_JeremyAnsel_DirectX_DXMath_XMVector___.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.ContainedBy(JeremyAnsel.DirectX.DXMath.XMVector%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L1704">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_ContainedBy_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.ContainedBy*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_ContainedBy_JeremyAnsel_DirectX_DXMath_XMVector___" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.ContainedBy(JeremyAnsel.DirectX.DXMath.XMVector[])">ContainedBy(XMVector[])</h4>
+  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> is contained by the specified frustum.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType ContainedBy(XMVector[] planes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a>[]</td>
+        <td><span class="parametername">planes</span></td>
+        <td><p>The planes describing the frustum.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the frustum contains the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_Collision_BoundingBox_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.Collision.BoundingBox)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L589">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_Collision_BoundingBox_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.Collision.BoundingBox)">Contains(BoundingBox)</h4>
+  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> contains the specified <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html">BoundingBox</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType Contains(BoundingBox box)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html">BoundingBox</a></td>
+        <td><span class="parametername">box</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html">BoundingBox</a> to test against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html">BoundingBox</a> is contained in the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L669">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)">Contains(BoundingFrustum)</h4>
+  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> contains the specified <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType Contains(BoundingFrustum fr)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><span class="parametername">fr</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> to test against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> is contained in the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_Collision_BoundingOrientedBox_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L629">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_Collision_BoundingOrientedBox_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox)">Contains(BoundingOrientedBox)</h4>
+  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> contains the specified <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html">BoundingOrientedBox</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType Contains(BoundingOrientedBox box)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html">BoundingOrientedBox</a></td>
+        <td><span class="parametername">box</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html">BoundingOrientedBox</a> to test against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html">BoundingOrientedBox</a> is contained in the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L549">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere)">Contains(BoundingSphere)</h4>
+  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> contains the specified <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType Contains(BoundingSphere sh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a></td>
+        <td><span class="parametername">sh</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> to test against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> is contained in the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L465">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.XMVector)">Contains(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> contains the specified point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType Contains(XMVector point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to test against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the point is contained in the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L509">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Contains_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Contains(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Contains(XMVector, XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> contains the specified triangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType Contains(XMVector v0, XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v0</span></td>
+        <td><p>The first corner of the triangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The second corner of the triangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The third corner of the triangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the triangle is contained in the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_CreateFromMatrix_JeremyAnsel_DirectX_DXMath_XMMatrix_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.CreateFromMatrix(JeremyAnsel.DirectX.DXMath.XMMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L209">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_CreateFromMatrix_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.CreateFromMatrix*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_CreateFromMatrix_JeremyAnsel_DirectX_DXMath_XMMatrix_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.CreateFromMatrix(JeremyAnsel.DirectX.DXMath.XMMatrix)">CreateFromMatrix(XMMatrix)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> from the specified projection matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingFrustum CreateFromMatrix(XMMatrix projection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMMatrix.html">XMMatrix</a></td>
+        <td><span class="parametername">projection</span></td>
+        <td><p>The left-handed projection matrix to create the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><p>The new <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Equals_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Equals(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L282">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Equals_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Equals*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Equals_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Equals(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)">Equals(BoundingFrustum)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(BoundingFrustum other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The object to compare with the current object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><returns>true</returns> if the specified object is equal to the current object; otherwise, <returns>false</returns>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Equals_System_Object_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L267">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Equals_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Equals*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Equals_System_Object_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The object to compare with the current object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><returns>true</returns> if the specified object is equal to the current object; otherwise, <returns>false</returns>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_GetCorners.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.GetCorners%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L415">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_GetCorners_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.GetCorners*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_GetCorners" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.GetCorners">GetCorners()</h4>
+  <div class="markdown level1 summary"><p>Gets the corners making up the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XMFloat3[] GetCorners()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMFloat3.html">XMFloat3</a>[]</td>
+        <td><p>The corners.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_GetHashCode.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L299">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_GetHashCode_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.GetHashCode*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_GetHashCode" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_GetPlanes_JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.GetPlanes(JeremyAnsel.DirectX.DXMath.XMVector%40%2CJeremyAnsel.DirectX.DXMath.XMVector%40%2CJeremyAnsel.DirectX.DXMath.XMVector%40%2CJeremyAnsel.DirectX.DXMath.XMVector%40%2CJeremyAnsel.DirectX.DXMath.XMVector%40%2CJeremyAnsel.DirectX.DXMath.XMVector%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L1894">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_GetPlanes_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.GetPlanes*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_GetPlanes_JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMVector__" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.GetPlanes(JeremyAnsel.DirectX.DXMath.XMVector@,JeremyAnsel.DirectX.DXMath.XMVector@,JeremyAnsel.DirectX.DXMath.XMVector@,JeremyAnsel.DirectX.DXMath.XMVector@,JeremyAnsel.DirectX.DXMath.XMVector@,JeremyAnsel.DirectX.DXMath.XMVector@)">GetPlanes(out XMVector, out XMVector, out XMVector, out XMVector, out XMVector, out XMVector)</h4>
+  <div class="markdown level1 summary"><p>Gets the planes making up the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetPlanes(out XMVector nearPlane, out XMVector farPlane, out XMVector rightPlane, out XMVector leftPlane, out XMVector topPlane, out XMVector bottomPlane)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">nearPlane</span></td>
+        <td><p>The near plane.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">farPlane</span></td>
+        <td><p>The far plane.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rightPlane</span></td>
+        <td><p>The right plane.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">leftPlane</span></td>
+        <td><p>The left plane.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">topPlane</span></td>
+        <td><p>The top plane.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">bottomPlane</span></td>
+        <td><p>The bottom plane.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_Collision_BoundingBox_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.Collision.BoundingBox)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L902">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_Collision_BoundingBox_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.Collision.BoundingBox)">Intersects(BoundingBox)</h4>
+  <div class="markdown level1 summary"><p>Test the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> for intersection with a <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html">BoundingBox</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(BoundingBox box)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html">BoundingBox</a></td>
+        <td><span class="parametername">box</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html">BoundingBox</a> to test for intersection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> intersects the specified <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html">BoundingBox</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L1118">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)">Intersects(BoundingFrustum)</h4>
+  <div class="markdown level1 summary"><p>Test the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> for intersection with another <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(BoundingFrustum fr)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><span class="parametername">fr</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> to test for intersection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> intersects the specified <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_Collision_BoundingOrientedBox_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L915">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_Collision_BoundingOrientedBox_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox)">Intersects(BoundingOrientedBox)</h4>
+  <div class="markdown level1 summary"><p>Test the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> for intersection with a <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html">BoundingOrientedBox</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(BoundingOrientedBox box)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html">BoundingOrientedBox</a></td>
+        <td><span class="parametername">box</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html">BoundingOrientedBox</a> to test for intersection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> intersects the specified <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html">BoundingOrientedBox</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L709">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere)">Intersects(BoundingSphere)</h4>
+  <div class="markdown level1 summary"><p>Test the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> for intersection with a <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(BoundingSphere sh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a></td>
+        <td><span class="parametername">sh</span></td>
+        <td><p>The <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> to test for intersection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> intersects the specified <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L1512">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.XMVector)">Intersects(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Test the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> for intersection with a plane.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlaneIntersectionType Intersects(XMVector plane)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">plane</span></td>
+        <td><p>A vector describing the plane.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.PlaneIntersectionType.html">PlaneIntersectionType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.PlaneIntersectionType.html">PlaneIntersectionType</a> value indicating the intersection status.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L1584">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Intersects(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Test the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> for intersection with a ray.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(XMVector rayOrigin, XMVector direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rayOrigin</span></td>
+        <td><p>The origin of the ray.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>The direction of the ray.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> intersects with the ray.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L1347">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Intersects(XMVector, XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Test the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> for intersection with a triangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(XMVector v0, XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v0</span></td>
+        <td><p>The first vector describing the triangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The second vector describing the triangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The third vector describing the triangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> intersects the triangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_System_Single__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CSystem.Single%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L1598">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_System_Single__" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Intersects(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,System.Single@)">Intersects(XMVector, XMVector, out Single)</h4>
+  <div class="markdown level1 summary"><p>Test the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> for intersection with a ray.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(XMVector rayOrigin, XMVector direction, out float dist)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rayOrigin</span></td>
+        <td><p>The origin of the ray.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>The direction of the ray.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">dist</span></td>
+        <td><p>The length of the ray.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> intersects with the ray.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Transform_JeremyAnsel_DirectX_DXMath_XMMatrix_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Transform(JeremyAnsel.DirectX.DXMath.XMMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L320">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Transform_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Transform*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Transform_JeremyAnsel_DirectX_DXMath_XMMatrix_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Transform(JeremyAnsel.DirectX.DXMath.XMMatrix)">Transform(XMMatrix)</h4>
+  <div class="markdown level1 summary"><p>Transforms the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> by the specified transformation matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingFrustum Transform(XMMatrix m)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMMatrix.html">XMMatrix</a></td>
+        <td><span class="parametername">m</span></td>
+        <td><p>The transformation matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><p>The transformed <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Transform_System_Single_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Transform(System.Single%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L375">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Transform_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Transform*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_Transform_System_Single_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.Transform(System.Single,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Transform(Single, XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Transforms the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> using the specified scale, rotation and translation vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingFrustum Transform(float scale, XMVector rotation, XMVector translation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">scale</span></td>
+        <td><p>The value to scale the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> by.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>The value to rotate the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> by.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">translation</span></td>
+        <td><p>The value to translate the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><p>The transformed <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_op_Equality_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.op_Equality(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum%2CJeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L186">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_op_Equality_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.op_Equality*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_op_Equality_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.op_Equality(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum,JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)">Equality(BoundingFrustum, BoundingFrustum)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> objects. The result specifies whether the values of the two objects are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(BoundingFrustum left, BoundingFrustum right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The left <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The right <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><returns>true</returns> if the values of left and right are equal; otherwise, <returns>false</returns>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_op_Inequality_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.op_Inequality(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum%2CJeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L198">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_op_Inequality_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.op_Inequality*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_op_Inequality_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.op_Inequality(JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum,JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum)">Inequality(BoundingFrustum, BoundingFrustum)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> objects. The result specifies whether the values of the two objects are unequal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(BoundingFrustum left, BoundingFrustum right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The left <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The right <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html">BoundingFrustum</a> to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><returns>true</returns> if the values of left and right differ; otherwise, <returns>false</returns>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingFrustum.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingFrustum.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

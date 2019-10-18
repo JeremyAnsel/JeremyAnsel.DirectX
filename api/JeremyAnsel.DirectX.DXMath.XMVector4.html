@@ -1,0 +1,2103 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class XMVector4
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class XMVector4
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_DXMath_XMVector4" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4" class="text-break">Class XMVector4
+  </h1>
+  <div class="markdown level0 summary"><p>The 4D vector functions provided by DirectXMath.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">XMVector4</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.DXMath.html">JeremyAnsel.DirectX.DXMath</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DXMath.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_DXMath_XMVector4_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class XMVector4</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_AngleBetweenNormals_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.AngleBetweenNormals(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L596">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_AngleBetweenNormals_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.AngleBetweenNormals*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_AngleBetweenNormals_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.AngleBetweenNormals(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">AngleBetweenNormals(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Compute the radian angle between two normalized 4D vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector AngleBetweenNormals(XMVector n1, XMVector n2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">n1</span></td>
+        <td><p>The first normalized vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">n2</span></td>
+        <td><p>The second normalized vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a vector. The radian angle between N1 and N2 is replicated to each of the components.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_AngleBetweenNormalsEst_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.AngleBetweenNormalsEst(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L581">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_AngleBetweenNormalsEst_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.AngleBetweenNormalsEst*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_AngleBetweenNormalsEst_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.AngleBetweenNormalsEst(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">AngleBetweenNormalsEst(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Estimates the radian angle between two normalized 4D vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector AngleBetweenNormalsEst(XMVector n1, XMVector n2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">n1</span></td>
+        <td><p>The first normalized vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">n2</span></td>
+        <td><p>The second normalized vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a vector. The estimate of the radian angle (between N1 and N2) is replicated to each of the components.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_AngleBetweenVectors_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.AngleBetweenVectors(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L611">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_AngleBetweenVectors_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.AngleBetweenVectors*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_AngleBetweenVectors_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.AngleBetweenVectors(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">AngleBetweenVectors(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Compute the radian angle between two 4D vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector AngleBetweenVectors(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a vector. The radian angle between V1 and V2 is replicated to each of the components.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_ClampLength_JeremyAnsel_DirectX_DXMath_XMVector_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.ClampLength(JeremyAnsel.DirectX.DXMath.XMVector%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L434">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_ClampLength_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.ClampLength*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_ClampLength_JeremyAnsel_DirectX_DXMath_XMVector_System_Single_System_Single_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.ClampLength(JeremyAnsel.DirectX.DXMath.XMVector,System.Single,System.Single)">ClampLength(XMVector, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Clamps the length of a 4D vector to a given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector ClampLength(XMVector v, float lengthMin, float lengthMax)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">lengthMin</span></td>
+        <td><p>The minimum clamp length.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">lengthMax</span></td>
+        <td><p>The maximum clamp length.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a 4D vector whose length is clamped to the specified minimum and maximum.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_ClampLengthV_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.ClampLengthV(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L451">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_ClampLengthV_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.ClampLengthV*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_ClampLengthV_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.ClampLengthV(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">ClampLengthV(XMVector, XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Clamps the length of a 4D vector to a given range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector ClampLengthV(XMVector v, XMVector lengthMin, XMVector lengthMax)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">lengthMin</span></td>
+        <td><p>A 4D vector, all of whose components are equal to the minimum clamp length. The components must be greater-than-or-equal to zero.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">lengthMax</span></td>
+        <td><p>A 4D vector, all of whose components are equal to the maximum clamp length. The components must be greater-than-or-equal to zero.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a 4D vector whose length is clamped to the specified minimum and maximum.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Cross_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Cross(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L300">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Cross_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Cross*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Cross_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Cross(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Cross(XMVector, XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Computes the 4D cross product.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Cross(XMVector v1, XMVector v2, XMVector v3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v3</span></td>
+        <td><p>The third vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns the 4D cross product of V1, V2, and V3.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Dot_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Dot(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L287">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Dot_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Dot*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Dot_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Dot(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Dot(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Computes the dot product between 4D vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Dot(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a vector. The dot product between V1 and V2 is replicated into each component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Equal_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Equal(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L23">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Equal_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Equal*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Equal_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Equal(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Equal(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether two 4D vectors are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Equal(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if the 4D vectors are equal and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_EqualInt_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.EqualInt(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L58">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_EqualInt_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.EqualInt*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_EqualInt_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.EqualInt(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">EqualInt(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether two 4D vectors are equal, treating each component as an unsigned integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EqualInt(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if the 4D vectors are equal and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_EqualIntR_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.EqualIntR(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L73">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_EqualIntR_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.EqualIntR*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_EqualIntR_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.EqualIntR(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">EqualIntR(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether two 4D vectors are equal, treating each component as an unsigned integer. In addition, this function returns a comparison value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMComparisonRecord EqualIntR(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMComparisonRecord.html">XMComparisonRecord</a></td>
+        <td><p>Returns a comparison value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_EqualR_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.EqualR(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L35">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_EqualR_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.EqualR*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_EqualR_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.EqualR(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">EqualR(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether two 4D vectors are equal. In addition, this function returns a comparison value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMComparisonRecord EqualR(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMComparisonRecord.html">XMComparisonRecord</a></td>
+        <td><p>Returns a comparison value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Greater_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Greater(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L147">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Greater_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Greater*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Greater_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Greater(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Greater(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether one 4D vector is greater than another 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Greater(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if V1 is greater than V2 and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_GreaterOrEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.GreaterOrEqual(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L182">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_GreaterOrEqual_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.GreaterOrEqual*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_GreaterOrEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.GreaterOrEqual(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">GreaterOrEqual(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether one 4D vector is greater-than-or-equal-to another 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GreaterOrEqual(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if V1 is greater-than-or-equal-to V2 and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_GreaterOrEqualR_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.GreaterOrEqualR(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L194">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_GreaterOrEqualR_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.GreaterOrEqualR*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_GreaterOrEqualR_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.GreaterOrEqualR(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">GreaterOrEqualR(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether one 4D vector is greater-than-or-equal-to another 4D vector and returns a comparison value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMComparisonRecord GreaterOrEqualR(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMComparisonRecord.html">XMComparisonRecord</a></td>
+        <td><p>Returns a comparison value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_GreaterR_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.GreaterR(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L159">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_GreaterR_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.GreaterR*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_GreaterR_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.GreaterR(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">GreaterR(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether one 4D vector is greater than another 4D vector and returns a comparison value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMComparisonRecord GreaterR(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMComparisonRecord.html">XMComparisonRecord</a></td>
+        <td><p>Returns a comparison value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_InBounds_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.InBounds(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L241">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_InBounds_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.InBounds*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_InBounds_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.InBounds(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">InBounds(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether the components of a 4D vector are within set bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InBounds(XMVector v, XMVector bounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector to test.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">bounds</span></td>
+        <td><p>The vector that determines the bounds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if all of the components of V are within the set bounds, and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_IsInfinite_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.IsInfinite(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L271">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_IsInfinite_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.IsInfinite*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_IsInfinite_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.IsInfinite(JeremyAnsel.DirectX.DXMath.XMVector)">IsInfinite(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether any component of a 4D vector is positive or negative infinity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInfinite(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if any component of V is positive or negative infinity, and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_IsNaN_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.IsNaN(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L256">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_IsNaN_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.IsNaN*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_IsNaN_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.IsNaN(JeremyAnsel.DirectX.DXMath.XMVector)">IsNaN(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether any component of a 4D vector is a NaN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNaN(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if any component of V is a NaN, and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Length_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Length(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L374">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Length_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Length*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Length_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Length(JeremyAnsel.DirectX.DXMath.XMVector)">Length(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Computes the length of a 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Length(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a vector. The length of V is replicated into each component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_LengthEst_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.LengthEst(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L360">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_LengthEst_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.LengthEst*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_LengthEst_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.LengthEst(JeremyAnsel.DirectX.DXMath.XMVector)">LengthEst(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Estimates the length of a 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector LengthEst(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a vector, each of whose components are estimates of the length of V.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_LengthSquare_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.LengthSquare(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L320">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_LengthSquare_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.LengthSquare*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_LengthSquare_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.LengthSquare(JeremyAnsel.DirectX.DXMath.XMVector)">LengthSquare(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Computes the square of the length of a 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector LengthSquare(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a vector. The square of the length of V is replicated into each component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Less_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Less(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L217">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Less_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Less*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Less_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Less(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Less(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether one 4D vector is less than another 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Less(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if V1 is less than V2 and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_LessOrEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.LessOrEqual(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L229">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_LessOrEqual_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.LessOrEqual*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_LessOrEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.LessOrEqual(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">LessOrEqual(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether one 4D vector is less-than-or-equal-to another 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LessOrEqual(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if V1 is less-than-or-equal-to V2, and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_NearEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.NearEqual(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L103">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_NearEqual_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.NearEqual*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_NearEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.NearEqual(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">NearEqual(XMVector, XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether one 4D vector is near another 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool NearEqual(XMVector v1, XMVector v2, XMVector epsilon)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">epsilon</span></td>
+        <td><p>The tolerance value used for judging equality.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if V1 is near V2 and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Normalize_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Normalize(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L407">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Normalize_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Normalize*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Normalize_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Normalize(JeremyAnsel.DirectX.DXMath.XMVector)">Normalize(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Returns the normalized version of a 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Normalize(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns the normalized version of V.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_NormalizeEst_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.NormalizeEst(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L388">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_NormalizeEst_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.NormalizeEst*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_NormalizeEst_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.NormalizeEst(JeremyAnsel.DirectX.DXMath.XMVector)">NormalizeEst(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Estimates the normalized version of a 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector NormalizeEst(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns an estimate of the normalized version of V.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_NotEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.NotEqual(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L120">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_NotEqual_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.NotEqual*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_NotEqual_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.NotEqual(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">NotEqual(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether two 4D vectors are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool NotEqual(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if the 4D vectors are not equal and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_NotEqualInt_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.NotEqualInt(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L132">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_NotEqualInt_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.NotEqualInt*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_NotEqualInt_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.NotEqualInt(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">NotEqualInt(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Test whether two 4D vectors are not equal, treating each component as an unsigned integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool NotEqualInt(XMVector v1, XMVector v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v1</span></td>
+        <td><p>The first vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>The second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Returns true if the 4D vectors are not equal and false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Orthogonal_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Orthogonal(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L568">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Orthogonal_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Orthogonal*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Orthogonal_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Orthogonal(JeremyAnsel.DirectX.DXMath.XMVector)">Orthogonal(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Computes a vector perpendicular to a 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Orthogonal(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns the 4D vector orthogonal to V.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_ReciprocalLength_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.ReciprocalLength(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L346">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_ReciprocalLength_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.ReciprocalLength*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_ReciprocalLength_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.ReciprocalLength(JeremyAnsel.DirectX.DXMath.XMVector)">ReciprocalLength(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Computes the reciprocal of the length of a 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector ReciprocalLength(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>he vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns the reciprocal of the length of V.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_ReciprocalLengthEst_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.ReciprocalLengthEst(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L332">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_ReciprocalLengthEst_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.ReciprocalLengthEst*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_ReciprocalLengthEst_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.ReciprocalLengthEst(JeremyAnsel.DirectX.DXMath.XMVector)">ReciprocalLengthEst(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Estimates the reciprocal of the length of a 4D vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector ReciprocalLengthEst(XMVector v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns a vector, each of whose components are estimates of the reciprocal of the length of V.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Reflect_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Reflect(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L496">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Reflect_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Reflect*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Reflect_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Reflect(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Reflect(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Reflects an incident 4D vector across a 4D normal vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Reflect(XMVector incident, XMVector normal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">incident</span></td>
+        <td><p>The incident vector to reflect.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">normal</span></td>
+        <td><p>The normal vector to reflect the incident vector across.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns the reflected incident angle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Refract_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Refract(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L515">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Refract_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Refract*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Refract_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_System_Single_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Refract(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,System.Single)">Refract(XMVector, XMVector, Single)</h4>
+  <div class="markdown level1 summary"><p>Refracts an incident 4D vector across a 4D normal vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Refract(XMVector incident, XMVector normal, float refractionIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">incident</span></td>
+        <td><p>The incident vector to refract.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">normal</span></td>
+        <td><p>The normal vector to refract the incident vector through.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">refractionIndex</span></td>
+        <td><p>The index of refraction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns the refracted incident vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_RefractV_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.RefractV(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L530">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_RefractV_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.RefractV*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_RefractV_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.RefractV(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">RefractV(XMVector, XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Refracts an incident 4D vector across a 4D normal vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector RefractV(XMVector incident, XMVector normal, XMVector refractionIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">incident</span></td>
+        <td><p>The incident vector to refract.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">normal</span></td>
+        <td><p>The normal vector to refract the incident vector through.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">refractionIndex</span></td>
+        <td><p>A 4D vector, all of whose components are equal to the index of refraction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns the refracted incident vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4_Transform_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMMatrix_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4.Transform(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L632">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMVector4_Transform_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Transform*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMVector4_Transform_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMMatrix_" data-uid="JeremyAnsel.DirectX.DXMath.XMVector4.Transform(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMMatrix)">Transform(XMVector, XMMatrix)</h4>
+  <div class="markdown level1 summary"><p>Transforms a 4D vector by a matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XMVector Transform(XMVector v, XMMatrix m)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMMatrix.html">XMMatrix</a></td>
+        <td><span class="parametername">m</span></td>
+        <td><p>The transformation matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><p>Returns the transformed vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMVector4.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMVector4%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMVector4.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

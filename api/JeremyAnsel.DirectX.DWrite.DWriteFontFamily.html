@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DWriteFontFamily
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DWriteFontFamily
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily" class="text-break">Class DWriteFontFamily
+  </h1>
+  <div class="markdown level0 summary"><p>The IDWriteFontFamily interface represents a set of fonts that share the same design but are differentiated
+by weight, stretch, and style.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DWriteFontFamily</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="JeremyAnsel.DirectX.DWrite.IDWriteReleasable.html">IDWriteReleasable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.DWrite.html">JeremyAnsel.DirectX.DWrite</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DWrite.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DWriteFontFamily : IDisposable, IDWriteReleasable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_Handle.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L37">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_Handle_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.Handle*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_Handle" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.Handle">Handle</h4>
+  <div class="markdown level1 summary"><p>Gets an handle representing the DWrite object interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_Dispose.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L67">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_Dispose_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.Dispose*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_Dispose" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Immediately releases the unmanaged resources used by the DWrite object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFamilyNames.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFamilyNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L125">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFamilyNames_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFamilyNames*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFamilyNames" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFamilyNames">GetFamilyNames()</h4>
+  <div class="markdown level1 summary"><p>Creates a localized strings object that contains the family names for the font family, indexed by locale name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteLocalizedStrings GetFamilyNames()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteLocalizedStrings.html">DWriteLocalizedStrings</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteLocalizedStrings.html">DWriteLocalizedStrings</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFirstMatchingFont_JeremyAnsel_DirectX_DWrite_DWriteFontWeight_JeremyAnsel_DirectX_DWrite_DWriteFontStretch_JeremyAnsel_DirectX_DWrite_DWriteFontStyle_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFirstMatchingFont(JeremyAnsel.DirectX.DWrite.DWriteFontWeight%2CJeremyAnsel.DirectX.DWrite.DWriteFontStretch%2CJeremyAnsel.DirectX.DWrite.DWriteFontStyle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L141">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFirstMatchingFont_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFirstMatchingFont*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFirstMatchingFont_JeremyAnsel_DirectX_DWrite_DWriteFontWeight_JeremyAnsel_DirectX_DWrite_DWriteFontStretch_JeremyAnsel_DirectX_DWrite_DWriteFontStyle_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFirstMatchingFont(JeremyAnsel.DirectX.DWrite.DWriteFontWeight,JeremyAnsel.DirectX.DWrite.DWriteFontStretch,JeremyAnsel.DirectX.DWrite.DWriteFontStyle)">GetFirstMatchingFont(DWriteFontWeight, DWriteFontStretch, DWriteFontStyle)</h4>
+  <div class="markdown level1 summary"><p>Gets the font that best matches the specified properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFont GetFirstMatchingFont(DWriteFontWeight weight, DWriteFontStretch stretch, DWriteFontStyle style)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontWeight.html">DWriteFontWeight</a></td>
+        <td><span class="parametername">weight</span></td>
+        <td><p>Requested font weight.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStretch.html">DWriteFontStretch</a></td>
+        <td><span class="parametername">stretch</span></td>
+        <td><p>Requested font stretch.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStyle.html">DWriteFontStyle</a></td>
+        <td><span class="parametername">style</span></td>
+        <td><p>Requested font style.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFont.html">DWriteFont</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFont.html">DWriteFont</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFont_System_UInt32_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFont(System.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L113">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFont_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFont*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFont_System_UInt32_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFont(System.UInt32)">GetFont(UInt32)</h4>
+  <div class="markdown level1 summary"><p>Gets a font given its zero-based index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFont GetFont(uint index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Zero-based index of the font in the font list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFont.html">DWriteFont</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFont.html">DWriteFont</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFontCollection.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFontCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L88">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFontCollection_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFontCollection*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFontCollection" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFontCollection">GetFontCollection()</h4>
+  <div class="markdown level1 summary"><p>Gets the font collection that contains the fonts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontCollection GetFontCollection()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFontCount.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFontCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L101">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFontCount_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFontCount*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetFontCount" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetFontCount">GetFontCount()</h4>
+  <div class="markdown level1 summary"><p>Gets the number of fonts in the font list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint GetFontCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetMatchingFonts_JeremyAnsel_DirectX_DWrite_DWriteFontWeight_JeremyAnsel_DirectX_DWrite_DWriteFontStretch_JeremyAnsel_DirectX_DWrite_DWriteFontStyle_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetMatchingFonts(JeremyAnsel.DirectX.DWrite.DWriteFontWeight%2CJeremyAnsel.DirectX.DWrite.DWriteFontStretch%2CJeremyAnsel.DirectX.DWrite.DWriteFontStyle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L156">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetMatchingFonts_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetMatchingFonts*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_GetMatchingFonts_JeremyAnsel_DirectX_DWrite_DWriteFontWeight_JeremyAnsel_DirectX_DWrite_DWriteFontStretch_JeremyAnsel_DirectX_DWrite_DWriteFontStyle_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.GetMatchingFonts(JeremyAnsel.DirectX.DWrite.DWriteFontWeight,JeremyAnsel.DirectX.DWrite.DWriteFontStretch,JeremyAnsel.DirectX.DWrite.DWriteFontStyle)">GetMatchingFonts(DWriteFontWeight, DWriteFontStretch, DWriteFontStyle)</h4>
+  <div class="markdown level1 summary"><p>Gets a list of fonts in the font family ranked in order of how well they match the specified properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontList GetMatchingFonts(DWriteFontWeight weight, DWriteFontStretch stretch, DWriteFontStyle style)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontWeight.html">DWriteFontWeight</a></td>
+        <td><span class="parametername">weight</span></td>
+        <td><p>Requested font weight.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStretch.html">DWriteFontStretch</a></td>
+        <td><span class="parametername">stretch</span></td>
+        <td><p>Requested font stretch.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStyle.html">DWriteFontStyle</a></td>
+        <td><span class="parametername">style</span></td>
+        <td><p>Requested font style.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontList.html">DWriteFontList</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontList.html">DWriteFontList</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_Release.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.Release%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L78">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_Release_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.Release*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_Release" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.Release">Release()</h4>
+  <div class="markdown level1 summary"><p>Releases the managed reference to the COM DWrite interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_ToBoolean.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.ToBoolean%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L58">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_ToBoolean_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.ToBoolean*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_ToBoolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.ToBoolean">ToBoolean()</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ToBoolean()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteFontFamily__System_Boolean.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteFontFamily)~System.Boolean%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L48">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_op_Implicit_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.op_Implicit*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFamily_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteFontFamily__System_Boolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteFontFamily)~System.Boolean">Implicit(DWriteFontFamily to Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator bool (DWriteFontFamily value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontFamily.html">DWriteFontFamily</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A DWrite object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="JeremyAnsel.DirectX.DWrite.IDWriteReleasable.html">IDWriteReleasable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFontFamily.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFontFamily%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFamily.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enum DxgiPresentOptions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enum DxgiPresentOptions
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions" class="text-break">Enum DxgiPresentOptions
+  </h1>
+  <div class="markdown level0 summary"><p>Options for presenting frames to the output.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.Dxgi.html">JeremyAnsel.DirectX.Dxgi</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.Dxgi.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Flags]
+public enum DxgiPresentOptions</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_DoNotSequence">DoNotSequence</td>
+        <td><p>Present a frame from the current buffer to the output. Use this flag so that the presentation can use vertical-blank synchronization instead of sequencing buffers in the chain in the usual manner.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_DoNotWait">DoNotWait</td>
+        <td><p>Specifies that the runtime will fail the presentation with the <returns>DXGI_ERROR_WAS_STILL_DRAWING</returns> error code if the calling thread is blocked; the runtime returns <returns>DXGI_ERROR_WAS_STILL_DRAWING</returns> instead of sleeping until the dependency is resolved.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_None">None</td>
+        <td><p>Present a frame from each buffer (starting with the current buffer) to the output.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_Restart">Restart</td>
+        <td><p>Specifies that the runtime will discard outstanding queued presents.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_RestrictToOutput">RestrictToOutput</td>
+        <td><p>Indicates that presentation content will be shown only on the particular output. The content will not be visible on other outputs. For example, if the user tries to relocate video content on another output, the video content will not be visible.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_StereoPreferRight">StereoPreferRight</td>
+        <td><p>Indicates that if the stereo present must be reduced to mono, right-eye viewing is used rather than left-eye viewing.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_StereoTemporaryMono">StereoTemporaryMono</td>
+        <td><p>Indicates that the presentation should use the left buffer as a mono buffer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_Test">Test</td>
+        <td><p>Do not present the frame to the output. The status of the swap chain will be tested and appropriate errors returned. <returns>Test</returns> is intended for use only when switching from the idle state; do not use it to determine when to switch to the idle state because doing so can leave the swap chain unable to exit full-screen mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_UseDuration">UseDuration</td>
+        <td><p>Must be set by media apps that are currently using a custom present duration (custom refresh rate).</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/Enumerations/DxgiPresentOptions.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

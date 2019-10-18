@@ -1,0 +1,947 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DWriteFactory
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DWriteFactory
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_DWrite_DWriteFactory" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory" class="text-break">Class DWriteFactory
+  </h1>
+  <div class="markdown level0 summary"><p>The root factory interface for all DWrite objects.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DWriteFactory</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="JeremyAnsel.DirectX.DWrite.IDWriteReleasable.html">IDWriteReleasable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.DWrite.html">JeremyAnsel.DirectX.DWrite</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DWrite.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DWriteFactory : IDisposable, IDWriteReleasable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_Handle.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L36">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_Handle_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.Handle*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_Handle" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.Handle">Handle</h4>
+  <div class="markdown level1 summary"><p>Gets an handle representing the DWrite object interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_Create_JeremyAnsel_DirectX_DWrite_DWriteFactoryType_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.Create(JeremyAnsel.DirectX.DWrite.DWriteFactoryType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L68">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_Create_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.Create*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_Create_JeremyAnsel_DirectX_DWrite_DWriteFactoryType_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.Create(JeremyAnsel.DirectX.DWrite.DWriteFactoryType)">Create(DWriteFactoryType)</h4>
+  <div class="markdown level1 summary"><p>Creates a DirectWrite factory object that is used for subsequent creation of individual DirectWrite objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DWriteFactory Create(DWriteFactoryType factoryType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFactoryType.html">DWriteFactoryType</a></td>
+        <td><span class="parametername">factoryType</span></td>
+        <td><p>Identifies whether the factory object will be shared or isolated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFactory.html">DWriteFactory</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFactory.html">DWriteFactory</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_Create_JeremyAnsel_DirectX_DWrite_DWriteFactoryType__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Obtains DirectWrite factory object that is used for subsequent creation of individual DirectWrite classes.
+DirectWrite factory contains internal state such as font loader registration and cached font data.
+In most cases it is recommended to use the shared factory object, because it allows multiple components
+that use DirectWrite to share internal DirectWrite state and reduce memory usage.
+However, there are cases when it is desirable to reduce the impact of a component,
+such as a plug-in from an untrusted source, on the rest of the process by sandboxing and isolating it
+from the rest of the process components. In such cases, it is recommended to use an isolated factory for the sandboxed
+component.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateCustomRenderingParams_System_Single_System_Single_System_Single_JeremyAnsel_DirectX_DWrite_DWritePixelGeometry_JeremyAnsel_DirectX_DWrite_DWriteRenderingMode_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateCustomRenderingParams(System.Single%2CSystem.Single%2CSystem.Single%2CJeremyAnsel.DirectX.DWrite.DWritePixelGeometry%2CJeremyAnsel.DirectX.DWrite.DWriteRenderingMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L209">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateCustomRenderingParams_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateCustomRenderingParams*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateCustomRenderingParams_System_Single_System_Single_System_Single_JeremyAnsel_DirectX_DWrite_DWritePixelGeometry_JeremyAnsel_DirectX_DWrite_DWriteRenderingMode_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateCustomRenderingParams(System.Single,System.Single,System.Single,JeremyAnsel.DirectX.DWrite.DWritePixelGeometry,JeremyAnsel.DirectX.DWrite.DWriteRenderingMode)">CreateCustomRenderingParams(Single, Single, Single, DWritePixelGeometry, DWriteRenderingMode)</h4>
+  <div class="markdown level1 summary"><p>Creates a rendering parameters object with the specified properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteRenderingParams CreateCustomRenderingParams(float gamma, float enhancedContrast, float clearTypeLevel, DWritePixelGeometry pixelGeometry, DWriteRenderingMode renderingMode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">gamma</span></td>
+        <td><p>The gamma value used for gamma correction, which must be greater than zero and cannot exceed 256.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">enhancedContrast</span></td>
+        <td><p>The amount of contrast enhancement, zero or greater.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">clearTypeLevel</span></td>
+        <td><p>The degree of ClearType level, from 0.0f (no ClearType) to 1.0f (full ClearType).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWritePixelGeometry.html">DWritePixelGeometry</a></td>
+        <td><span class="parametername">pixelGeometry</span></td>
+        <td><p>The geometry of a device pixel.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteRenderingMode.html">DWriteRenderingMode</a></td>
+        <td><span class="parametername">renderingMode</span></td>
+        <td><p>Method of rendering glyphs. In most cases, this should be DWRITE_RENDERING_MODE_DEFAULT to automatically use an appropriate mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.html">DWriteRenderingParams</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.html">DWriteRenderingParams</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateFontFace_JeremyAnsel_DirectX_DWrite_DWriteFontFaceType_JeremyAnsel_DirectX_DWrite_DWriteFontFile___System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteFontSimulations_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateFontFace(JeremyAnsel.DirectX.DWrite.DWriteFontFaceType%2CJeremyAnsel.DirectX.DWrite.DWriteFontFile%5B%5D%2CSystem.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteFontSimulations)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L162">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateFontFace_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateFontFace*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateFontFace_JeremyAnsel_DirectX_DWrite_DWriteFontFaceType_JeremyAnsel_DirectX_DWrite_DWriteFontFile___System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteFontSimulations_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateFontFace(JeremyAnsel.DirectX.DWrite.DWriteFontFaceType,JeremyAnsel.DirectX.DWrite.DWriteFontFile[],System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteFontSimulations)">CreateFontFace(DWriteFontFaceType, DWriteFontFile[], UInt32, DWriteFontSimulations)</h4>
+  <div class="markdown level1 summary"><p>Creates a font face object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontFace CreateFontFace(DWriteFontFaceType fontFaceType, DWriteFontFile[] fontFiles, uint faceIndex, DWriteFontSimulations fontFaceSimulation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontFaceType.html">DWriteFontFaceType</a></td>
+        <td><span class="parametername">fontFaceType</span></td>
+        <td><p>The file format of the font face.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontFile.html">DWriteFontFile</a>[]</td>
+        <td><span class="parametername">fontFiles</span></td>
+        <td><p>Font files representing the font face. Since IDWriteFontFace maintains its own references
+to the input font file objects, it's OK to release them after this call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">faceIndex</span></td>
+        <td><p>The zero based index of a font face in cases when the font files contain a collection of font faces.
+If the font files contain a single face, this value should be zero.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontSimulations.html">DWriteFontSimulations</a></td>
+        <td><span class="parametername">fontFaceSimulation</span></td>
+        <td><p>Font face simulation flags for algorithmic emboldening and italicization.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontFace.html">DWriteFontFace</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontFace.html">DWriteFontFace</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateFontFileReference_System_String_System_UInt64_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateFontFileReference(System.String%2CSystem.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L144">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateFontFileReference_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateFontFileReference*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateFontFileReference_System_String_System_UInt64_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateFontFileReference(System.String,System.UInt64)">CreateFontFileReference(String, UInt64)</h4>
+  <div class="markdown level1 summary"><p>CreateFontFileReference creates a font file reference object from a local font file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontFile CreateFontFileReference(string filePath, ulong lastWriteTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>Absolute file path. Subsequent operations on the constructed object may fail
+if the user provided filePath doesn't correspond to a valid file on the disk.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">lastWriteTime</span></td>
+        <td><p>Last modified time of the input file path. If the parameter is omitted,
+the function will access the font file to obtain its last write time, so the clients are encouraged to specify this value
+to avoid extra disk access. Subsequent operations on the constructed object may fail
+if the user provided lastWriteTime doesn't match the file on the disk.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontFile.html">DWriteFontFile</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontFile.html">DWriteFontFile</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateMonitorRenderingParams_System_IntPtr_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateMonitorRenderingParams(System.IntPtr)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L192">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateMonitorRenderingParams_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateMonitorRenderingParams*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateMonitorRenderingParams_System_IntPtr_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateMonitorRenderingParams(System.IntPtr)">CreateMonitorRenderingParams(IntPtr)</h4>
+  <div class="markdown level1 summary"><p>Creates a rendering parameters object with default settings for the specified monitor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteRenderingParams CreateMonitorRenderingParams(IntPtr monitor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">monitor</span></td>
+        <td><p>The monitor to read the default values from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.html">DWriteRenderingParams</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.html">DWriteRenderingParams</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateRenderingParams.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateRenderingParams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L179">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateRenderingParams_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateRenderingParams*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateRenderingParams" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateRenderingParams">CreateRenderingParams()</h4>
+  <div class="markdown level1 summary"><p>Creates a rendering parameters object with default settings for the primary monitor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteRenderingParams CreateRenderingParams()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.html">DWriteRenderingParams</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.html">DWriteRenderingParams</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateTextFormat_System_String_JeremyAnsel_DirectX_DWrite_DWriteFontCollection_JeremyAnsel_DirectX_DWrite_DWriteFontWeight_JeremyAnsel_DirectX_DWrite_DWriteFontStyle_JeremyAnsel_DirectX_DWrite_DWriteFontStretch_System_Single_System_String_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateTextFormat(System.String%2CJeremyAnsel.DirectX.DWrite.DWriteFontCollection%2CJeremyAnsel.DirectX.DWrite.DWriteFontWeight%2CJeremyAnsel.DirectX.DWrite.DWriteFontStyle%2CJeremyAnsel.DirectX.DWrite.DWriteFontStretch%2CSystem.Single%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L228">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateTextFormat_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateTextFormat*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateTextFormat_System_String_JeremyAnsel_DirectX_DWrite_DWriteFontCollection_JeremyAnsel_DirectX_DWrite_DWriteFontWeight_JeremyAnsel_DirectX_DWrite_DWriteFontStyle_JeremyAnsel_DirectX_DWrite_DWriteFontStretch_System_Single_System_String_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateTextFormat(System.String,JeremyAnsel.DirectX.DWrite.DWriteFontCollection,JeremyAnsel.DirectX.DWrite.DWriteFontWeight,JeremyAnsel.DirectX.DWrite.DWriteFontStyle,JeremyAnsel.DirectX.DWrite.DWriteFontStretch,System.Single,System.String)">CreateTextFormat(String, DWriteFontCollection, DWriteFontWeight, DWriteFontStyle, DWriteFontStretch, Single, String)</h4>
+  <div class="markdown level1 summary"><p>Create a text format object used for text layout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteTextFormat CreateTextFormat(string fontFamilyName, DWriteFontCollection fontCollection, DWriteFontWeight fontWeight, DWriteFontStyle fontStyle, DWriteFontStretch fontStretch, float fontSize, string localeName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fontFamilyName</span></td>
+        <td><p>Name of the font family</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></td>
+        <td><span class="parametername">fontCollection</span></td>
+        <td><p>Font collection. NULL indicates the system font collection.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontWeight.html">DWriteFontWeight</a></td>
+        <td><span class="parametername">fontWeight</span></td>
+        <td><p>Font weight</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStyle.html">DWriteFontStyle</a></td>
+        <td><span class="parametername">fontStyle</span></td>
+        <td><p>Font style</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontStretch.html">DWriteFontStretch</a></td>
+        <td><span class="parametername">fontStretch</span></td>
+        <td><p>Font stretch</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">fontSize</span></td>
+        <td><p>Logical size of the font in DIP units. A DIP (&quot;device-independent pixel&quot;) equals 1/96 inch.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">localeName</span></td>
+        <td><p>Locale name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextFormat.html">DWriteTextFormat</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextFormat.html">DWriteTextFormat</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateTextLayout_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateTextLayout(System.String%2CJeremyAnsel.DirectX.DWrite.DWriteTextFormat%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L273">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateTextLayout_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateTextLayout*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateTextLayout_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_System_Single_System_Single_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateTextLayout(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextFormat,System.Single,System.Single)">CreateTextLayout(String, DWriteTextFormat, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>CreateTextLayout takes a string, format, and associated constraints
+and produces an object representing the fully analyzed
+and formatted result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteTextLayout CreateTextLayout(string text, DWriteTextFormat textFormat, float maxWidth, float maxHeight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The string to layout.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextFormat.html">DWriteTextFormat</a></td>
+        <td><span class="parametername">textFormat</span></td>
+        <td><p>The format to apply to the string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">maxWidth</span></td>
+        <td><p>Width of the layout box.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">maxHeight</span></td>
+        <td><p>Height of the layout box.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html">DWriteTextLayout</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html">DWriteTextLayout</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateTypography.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateTypography%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L255">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateTypography_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateTypography*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_CreateTypography" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.CreateTypography">CreateTypography()</h4>
+  <div class="markdown level1 summary"><p>Create a typography object used in conjunction with text format for text layout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteTypography CreateTypography()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTypography.html">DWriteTypography</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTypography.html">DWriteTypography</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_Dispose.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L89">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_Dispose_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.Dispose*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_Dispose" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Immediately releases the unmanaged resources used by the DWrite object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_GetSystemFontCollection.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.GetSystemFontCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L110">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_GetSystemFontCollection_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.GetSystemFontCollection*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_GetSystemFontCollection" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.GetSystemFontCollection">GetSystemFontCollection()</h4>
+  <div class="markdown level1 summary"><p>Gets a font collection representing the set of installed fonts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontCollection GetSystemFontCollection()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_GetSystemFontCollection_System_Boolean_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.GetSystemFontCollection(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L126">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_GetSystemFontCollection_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.GetSystemFontCollection*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_GetSystemFontCollection_System_Boolean_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.GetSystemFontCollection(System.Boolean)">GetSystemFontCollection(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a font collection representing the set of installed fonts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DWriteFontCollection GetSystemFontCollection(bool checkForUpdates)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">checkForUpdates</span></td>
+        <td><p>If this parameter is nonzero, the function performs an immediate check for changes to the set of
+installed fonts. If this parameter is FALSE, the function will still detect changes if the font cache service is running, but
+there may be some latency. For example, an application might specify TRUE if it has itself just installed a font and wants to
+be sure the font collection contains that font.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></td>
+        <td><p><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html">DWriteFontCollection</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_Release.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.Release%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L100">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_Release_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.Release*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_Release" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.Release">Release()</h4>
+  <div class="markdown level1 summary"><p>Releases the managed reference to the COM DWrite interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_ToBoolean.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.ToBoolean%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L80">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_ToBoolean_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.ToBoolean*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_ToBoolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.ToBoolean">ToBoolean()</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ToBoolean()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteFactory__System_Boolean.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteFactory)~System.Boolean%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L47">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteFactory_op_Implicit_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.op_Implicit*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFactory_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteFactory__System_Boolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFactory.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteFactory)~System.Boolean">Implicit(DWriteFactory to Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator bool (DWriteFactory value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteFactory.html">DWriteFactory</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A DWrite object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>A boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="JeremyAnsel.DirectX.DWrite.IDWriteReleasable.html">IDWriteReleasable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteFactory.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteFactory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFactory.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
