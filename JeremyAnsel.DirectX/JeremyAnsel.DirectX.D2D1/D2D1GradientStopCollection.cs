@@ -16,7 +16,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 gradient stop collection interface.
         /// </summary>
-        private ID2D1GradientStopCollection gradientStopCollection;
+        private readonly ID2D1GradientStopCollection gradientStopCollection;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1GradientStopCollection"/> class.
@@ -71,6 +71,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>The collection's gradient stops.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D2D1GradientStop[] GetGradientStops()
         {
             uint count = this.gradientStopCollection.GetGradientStopCount();

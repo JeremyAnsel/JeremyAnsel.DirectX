@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D2D1
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D2D1.ComInterfaces;
 
@@ -15,7 +16,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 brush interface.
         /// </summary>
-        private ID2D1BitmapBrush brush;
+        private readonly ID2D1BitmapBrush brush;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1BitmapBrush"/> class.
@@ -45,6 +46,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetExtendModeX(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetExtendModeX(value); }
         }
 
@@ -57,6 +59,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetExtendModeY(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetExtendModeY(value); }
         }
 
@@ -69,6 +72,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetInterpolationMode(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetInterpolationMode(value); }
         }
 
@@ -78,6 +82,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1Bitmap Bitmap
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 ID2D1Bitmap bitmap;
@@ -92,9 +97,10 @@ namespace JeremyAnsel.DirectX.D2D1
             }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set
             {
-                this.brush.SetBitmap(value == null ? null : value.GetHandle<ID2D1Bitmap>());
+                this.brush.SetBitmap(value?.GetHandle<ID2D1Bitmap>());
             }
         }
     }

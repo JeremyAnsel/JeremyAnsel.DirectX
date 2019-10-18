@@ -17,12 +17,12 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The <see cref="DxgiFormat"/> to return information on.
         /// </summary>
-        private DxgiFormat inFormat;
+        private readonly DxgiFormat inFormat;
 
         /// <summary>
         /// Combination of <see cref="D3D11FormatSupport2"/> flags indicating which unordered resource options are supported.
         /// </summary>
-        private D3D11FormatSupport2 outFormatSupport2;
+        private readonly D3D11FormatSupport2 outFormatSupport2;
 
         /// <summary>
         /// Gets the <see cref="DxgiFormat"/> to return information on.

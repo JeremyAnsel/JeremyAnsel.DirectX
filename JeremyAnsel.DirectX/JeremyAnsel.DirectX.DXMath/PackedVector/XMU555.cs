@@ -59,12 +59,12 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (array.Length != 3)
             {
-                throw new ArgumentOutOfRangeException("array");
+                throw new ArgumentOutOfRangeException(nameof(array));
             }
 
             this.v = (ushort)((array[0] & 0x1FU) | ((array[1] & 0x1FU) << 5) | ((array[2] & 0x1FU) << 10) | (w ? 0x8000U : 0U));
@@ -147,6 +147,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMU555"/>.</param>
         /// <returns>A packed value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator ushort(XMU555 value)
         {
             return value.v;
@@ -158,6 +159,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A packed value.</param>
         /// <returns>A <see cref="XMU555"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMU555(ushort value)
         {
             return new XMU555(value);
@@ -169,6 +171,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMU555"/>.</param>
         /// <returns>A <see cref="XMVector"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMVector(XMU555 value)
         {
             return new XMVector(
@@ -184,6 +187,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMVector"/>.</param>
         /// <returns>A <see cref="XMU555"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMU555(XMVector value)
         {
             XMVector max = XMVector.FromFloat(31.0f, 31.0f, 31.0f, 1.0f);

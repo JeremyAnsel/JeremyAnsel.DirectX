@@ -16,7 +16,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 brush interface.
         /// </summary>
-        private ID2D1RadialGradientBrush brush;
+        private readonly ID2D1RadialGradientBrush brush;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1RadialGradientBrush"/> class.
@@ -46,6 +46,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetCenter(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetCenter(value); }
         }
 
@@ -58,6 +59,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetGradientOriginOffset(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetGradientOriginOffset(value); }
         }
 
@@ -70,6 +72,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetRadiusX(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetRadiusX(value); }
         }
 
@@ -82,6 +85,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetRadiusY(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetRadiusY(value); }
         }
 
@@ -90,6 +94,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>The <see cref="D2D1GradientStopCollection"/> object associated with this linear gradient brush object.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1GradientStopCollection GetGradientStopCollection()
         {

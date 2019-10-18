@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 input layout interface.
         /// </summary>
-        private ID3D11InputLayout inputLayout;
+        private readonly ID3D11InputLayout inputLayout;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11InputLayout"/> class.

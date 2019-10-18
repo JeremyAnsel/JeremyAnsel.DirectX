@@ -5,11 +5,13 @@
 namespace JeremyAnsel.DirectX.D3D11
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Unordered resource support options for a compute shader resource.
     /// </summary>
     [Flags]
+    [SuppressMessage("Naming", "CA1714:Les noms des enums Flags doivent être au pluriel", Justification = "Reviewed.")]
     public enum D3D11FormatSupport2
     {
         /// <summary>

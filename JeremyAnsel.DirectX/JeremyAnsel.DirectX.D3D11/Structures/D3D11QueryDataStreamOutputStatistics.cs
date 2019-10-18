@@ -16,12 +16,12 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The number of primitives (that is, points, lines, and triangles) written to the stream-output buffers.
         /// </summary>
-        private ulong numPrimitivesWritten;
+        private readonly ulong numPrimitivesWritten;
 
         /// <summary>
         /// The number of primitives that would have been written to the stream-output buffers if there had been enough space for them all.
         /// </summary>
-        private ulong primitivesStorageNeeded;
+        private readonly ulong primitivesStorageNeeded;
 
         /// <summary>
         /// Gets the number of primitives (that is, points, lines, and triangles) written to the stream-output buffers.

@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1
     using System.Runtime.InteropServices;
     using JeremyAnsel.DirectX.D2D1.ComInterfaces;
 
+
     /// <summary>
     /// The root interface for all resources in D2D.
     /// </summary>
+    [SuppressMessage("Design", "CA1063:Implémenter IDisposable correctement", Justification = "Reviewed")]
     public abstract class D2D1Resource : IDisposable, ID2D1Releasable
     {
         /// <summary>
@@ -78,6 +80,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>The factory that created this resource.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1Factory GetFactory()
         {

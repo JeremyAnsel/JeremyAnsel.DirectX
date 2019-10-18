@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI keyed mutex interface.
         /// </summary>
-        private IDxgiKeyedMutex keyedMutex;
+        private readonly IDxgiKeyedMutex keyedMutex;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiKeyedMutex"/> class.

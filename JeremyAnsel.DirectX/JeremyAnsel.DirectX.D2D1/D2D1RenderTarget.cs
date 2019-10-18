@@ -31,6 +31,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1Matrix3X2F Transform
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 D2D1Matrix3X2F transform;
@@ -39,6 +40,7 @@ namespace JeremyAnsel.DirectX.D2D1
             }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set
             {
                 this.GetHandle<ID2D1RenderTarget>().SetTransform(ref value);
@@ -54,6 +56,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.GetHandle<ID2D1RenderTarget>().GetAntialiasMode(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.GetHandle<ID2D1RenderTarget>().SetAntialiasMode(value); }
         }
 
@@ -66,6 +69,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.GetHandle<ID2D1RenderTarget>().GetTextAntialiasMode(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.GetHandle<ID2D1RenderTarget>().SetTextAntialiasMode(value); }
         }
 
@@ -84,6 +88,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1SizeF Size
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 D2D1SizeF size;
@@ -98,6 +103,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1SizeU PixelSize
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 D2D1SizeU size;
@@ -171,7 +177,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (wicBitmapSource == null)
             {
-                throw new ArgumentNullException("wicBitmapSource");
+                throw new ArgumentNullException(nameof(wicBitmapSource));
             }
 
             ID2D1Bitmap bitmap;
@@ -190,7 +196,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (wicBitmapSource == null)
             {
-                throw new ArgumentNullException("wicBitmapSource");
+                throw new ArgumentNullException(nameof(wicBitmapSource));
             }
 
             ID2D1Bitmap bitmap;
@@ -220,7 +226,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (data == null)
             {
-                throw new ArgumentNullException("data");
+                throw new ArgumentNullException(nameof(data));
             }
 
             ID2D1Bitmap bitmap;
@@ -240,7 +246,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (data == null)
             {
-                throw new ArgumentNullException("data");
+                throw new ArgumentNullException(nameof(data));
             }
 
             ID2D1Bitmap bitmap;
@@ -270,7 +276,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (bitmap == null)
             {
-                throw new ArgumentNullException("bitmap");
+                throw new ArgumentNullException(nameof(bitmap));
             }
 
             ID2D1BitmapBrush bitmapBrush;
@@ -290,7 +296,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (bitmap == null)
             {
-                throw new ArgumentNullException("bitmap");
+                throw new ArgumentNullException(nameof(bitmap));
             }
 
             ID2D1BitmapBrush bitmapBrush;
@@ -322,7 +328,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (bitmap == null)
             {
-                throw new ArgumentNullException("bitmap");
+                throw new ArgumentNullException(nameof(bitmap));
             }
 
             ID2D1BitmapBrush bitmapBrush;
@@ -393,12 +399,12 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (gradientStops == null)
             {
-                throw new ArgumentNullException("gradientStops");
+                throw new ArgumentNullException(nameof(gradientStops));
             }
 
             if (gradientStops.Length < 1)
             {
-                throw new ArgumentOutOfRangeException("gradientStops");
+                throw new ArgumentOutOfRangeException(nameof(gradientStops));
             }
 
             ID2D1GradientStopCollection gradientStopCollection;
@@ -416,12 +422,12 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (gradientStops == null)
             {
-                throw new ArgumentNullException("gradientStops");
+                throw new ArgumentNullException(nameof(gradientStops));
             }
 
             if (gradientStops.Length < 1)
             {
-                throw new ArgumentOutOfRangeException("gradientStops");
+                throw new ArgumentOutOfRangeException(nameof(gradientStops));
             }
 
             ID2D1GradientStopCollection gradientStopCollection;
@@ -441,7 +447,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (gradientStopCollection == null)
             {
-                throw new ArgumentNullException("gradientStopCollection");
+                throw new ArgumentNullException(nameof(gradientStopCollection));
             }
 
             ID2D1LinearGradientBrush linearGradientBrush;
@@ -462,7 +468,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (gradientStopCollection == null)
             {
-                throw new ArgumentNullException("gradientStopCollection");
+                throw new ArgumentNullException(nameof(gradientStopCollection));
             }
 
             ID2D1LinearGradientBrush linearGradientBrush;
@@ -493,7 +499,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (gradientStopCollection == null)
             {
-                throw new ArgumentOutOfRangeException("gradientStopCollection");
+                throw new ArgumentOutOfRangeException(nameof(gradientStopCollection));
             }
 
             ID2D1RadialGradientBrush radialGradientBrush;
@@ -514,7 +520,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (gradientStopCollection == null)
             {
-                throw new ArgumentOutOfRangeException("gradientStopCollection");
+                throw new ArgumentOutOfRangeException(nameof(gradientStopCollection));
             }
 
             ID2D1RadialGradientBrush radialGradientBrush;
@@ -948,12 +954,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="point1">The end point of the line, in device-independent pixels.</param>
         /// <param name="brush">The brush used to paint the line's stroke.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawLine(D2D1Point2F point0, D2D1Point2F point1, D2D1Brush brush)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawLine(point0, point1, brush.GetHandle<ID2D1Brush>(), 1.0f, null);
@@ -967,12 +974,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="brush">The brush used to paint the line's stroke.</param>
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawLine(D2D1Point2F point0, D2D1Point2F point1, D2D1Brush brush, float strokeWidth)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawLine(point0, point1, brush.GetHandle<ID2D1Brush>(), strokeWidth, null);
@@ -987,15 +995,16 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         /// <param name="strokeStyle">The style of stroke to paint.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawLine(D2D1Point2F point0, D2D1Point2F point1, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
-            this.GetHandle<ID2D1RenderTarget>().DrawLine(point0, point1, brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>());
+            this.GetHandle<ID2D1RenderTarget>().DrawLine(point0, point1, brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>());
         }
 
         /// <summary>
@@ -1004,12 +1013,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="rect">The dimensions of the rectangle to draw, in device-independent pixels.</param>
         /// <param name="brush">The brush used to paint the rectangle's stroke.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawRectangle(D2D1RectF rect, D2D1Brush brush)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawRectangle(ref rect, brush.GetHandle<ID2D1Brush>(), 1.0f, null);
@@ -1022,12 +1032,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="brush">The brush used to paint the rectangle's stroke.</param>
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawRectangle(D2D1RectF rect, D2D1Brush brush, float strokeWidth)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawRectangle(ref rect, brush.GetHandle<ID2D1Brush>(), strokeWidth, null);
@@ -1041,15 +1052,16 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         /// <param name="strokeStyle">The style of stroke to paint.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawRectangle(D2D1RectF rect, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
-            this.GetHandle<ID2D1RenderTarget>().DrawRectangle(ref rect, brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>());
+            this.GetHandle<ID2D1RenderTarget>().DrawRectangle(ref rect, brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>());
         }
 
         /// <summary>
@@ -1058,12 +1070,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="rect">The dimension of the rectangle to paint, in device-independent pixels.</param>
         /// <param name="brush">The brush used to paint the rectangle's interior.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void FillRectangle(D2D1RectF rect, D2D1Brush brush)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().FillRectangle(ref rect, brush.GetHandle<ID2D1Brush>());
@@ -1075,12 +1088,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="roundedRect">The dimensions of the rounded rectangle to draw, in device-independent pixels.</param>
         /// <param name="brush">The brush used to paint the rounded rectangle's outline.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush brush)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawRoundedRectangle(ref roundedRect, brush.GetHandle<ID2D1Brush>(), 1.0f, null);
@@ -1093,12 +1107,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="brush">The brush used to paint the rounded rectangle's outline.</param>
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush brush, float strokeWidth)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawRoundedRectangle(ref roundedRect, brush.GetHandle<ID2D1Brush>(), strokeWidth, null);
@@ -1112,15 +1127,16 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         /// <param name="strokeStyle">The style of the rounded rectangle's stroke.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
-            this.GetHandle<ID2D1RenderTarget>().DrawRoundedRectangle(ref roundedRect, brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>());
+            this.GetHandle<ID2D1RenderTarget>().DrawRoundedRectangle(ref roundedRect, brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>());
         }
 
         /// <summary>
@@ -1129,12 +1145,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="roundedRect">The dimensions of the rounded rectangle to paint, in device-independent pixels.</param>
         /// <param name="brush">The brush used to paint the interior of the rounded rectangle.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void FillRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush brush)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().FillRoundedRectangle(ref roundedRect, brush.GetHandle<ID2D1Brush>());
@@ -1146,12 +1163,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="ellipse">The position and radius of the ellipse to draw, in device-independent pixels.</param>
         /// <param name="brush">The brush used to paint the ellipse's outline.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawEllipse(D2D1Ellipse ellipse, D2D1Brush brush)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawEllipse(ref ellipse, brush.GetHandle<ID2D1Brush>(), 1.0f, null);
@@ -1164,12 +1182,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="brush">The brush used to paint the ellipse's outline.</param>
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawEllipse(D2D1Ellipse ellipse, D2D1Brush brush, float strokeWidth)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawEllipse(ref ellipse, brush.GetHandle<ID2D1Brush>(), strokeWidth, null);
@@ -1183,15 +1202,16 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         /// <param name="strokeStyle">The style of stroke to apply to the ellipse's outline.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawEllipse(D2D1Ellipse ellipse, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
-            this.GetHandle<ID2D1RenderTarget>().DrawEllipse(ref ellipse, brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>());
+            this.GetHandle<ID2D1RenderTarget>().DrawEllipse(ref ellipse, brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>());
         }
 
         /// <summary>
@@ -1200,12 +1220,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="ellipse">The position and radius, in device-independent pixels, of the ellipse to paint.</param>
         /// <param name="brush">The brush used to paint the interior of the ellipse.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void FillEllipse(D2D1Ellipse ellipse, D2D1Brush brush)
         {
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().FillEllipse(ref ellipse, brush.GetHandle<ID2D1Brush>());
@@ -1217,17 +1238,18 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometry">The geometry to draw.</param>
         /// <param name="brush">The brush used to paint the geometry's stroke.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawGeometry(D2D1Geometry geometry, D2D1Brush brush)
         {
             if (geometry == null)
             {
-                throw new ArgumentNullException("geometry");
+                throw new ArgumentNullException(nameof(geometry));
             }
 
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawGeometry(geometry.GetHandle<ID2D1Geometry>(), brush.GetHandle<ID2D1Brush>(), 1.0f, null);
@@ -1240,17 +1262,18 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="brush">The brush used to paint the geometry's stroke.</param>
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawGeometry(D2D1Geometry geometry, D2D1Brush brush, float strokeWidth)
         {
             if (geometry == null)
             {
-                throw new ArgumentNullException("geometry");
+                throw new ArgumentNullException(nameof(geometry));
             }
 
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawGeometry(geometry.GetHandle<ID2D1Geometry>(), brush.GetHandle<ID2D1Brush>(), strokeWidth, null);
@@ -1264,20 +1287,21 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
         /// <param name="strokeStyle">The style of stroke to apply to the geometry's outline.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawGeometry(D2D1Geometry geometry, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)
         {
             if (geometry == null)
             {
-                throw new ArgumentNullException("geometry");
+                throw new ArgumentNullException(nameof(geometry));
             }
 
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
-            this.GetHandle<ID2D1RenderTarget>().DrawGeometry(geometry.GetHandle<ID2D1Geometry>(), brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>());
+            this.GetHandle<ID2D1RenderTarget>().DrawGeometry(geometry.GetHandle<ID2D1Geometry>(), brush.GetHandle<ID2D1Brush>(), strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>());
         }
 
         /// <summary>
@@ -1286,17 +1310,18 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometry">The geometry to paint.</param>
         /// <param name="brush">The brush used to paint the geometry's interior.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void FillGeometry(D2D1Geometry geometry, D2D1Brush brush)
         {
             if (geometry == null)
             {
-                throw new ArgumentNullException("geometry");
+                throw new ArgumentNullException(nameof(geometry));
             }
 
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().FillGeometry(geometry.GetHandle<ID2D1Geometry>(), brush.GetHandle<ID2D1Brush>(), null);
@@ -1309,20 +1334,21 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="brush">The brush used to paint the geometry's interior.</param>
         /// <param name="opacityBrush">The opacity mask to apply to the geometry.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void FillGeometry(D2D1Geometry geometry, D2D1Brush brush, D2D1Brush opacityBrush)
         {
             if (geometry == null)
             {
-                throw new ArgumentNullException("geometry");
+                throw new ArgumentNullException(nameof(geometry));
             }
 
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
-            this.GetHandle<ID2D1RenderTarget>().FillGeometry(geometry.GetHandle<ID2D1Geometry>(), brush.GetHandle<ID2D1Brush>(), opacityBrush == null ? null : opacityBrush.GetHandle<ID2D1Brush>());
+            this.GetHandle<ID2D1RenderTarget>().FillGeometry(geometry.GetHandle<ID2D1Geometry>(), brush.GetHandle<ID2D1Brush>(), opacityBrush?.GetHandle<ID2D1Brush>());
         }
 
         /// <summary>
@@ -1331,17 +1357,18 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="mesh">The mesh to paint.</param>
         /// <param name="brush">The brush used to paint the mesh.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void FillMesh(D2D1Mesh mesh, D2D1Brush brush)
         {
             if (mesh == null)
             {
-                throw new ArgumentNullException("mesh");
+                throw new ArgumentNullException(nameof(mesh));
             }
 
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().FillMesh(mesh.GetHandle<ID2D1Mesh>(), brush.GetHandle<ID2D1Brush>());
@@ -1354,17 +1381,18 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="brush">The brush used to paint the region of the render target specified by destinationRectangle.</param>
         /// <param name="content">The type of content the opacity mask contains. The value is used to determine the color space in which the opacity mask is blended.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void FillOpacityMask(D2D1Bitmap opacityMask, D2D1Brush brush, D2D1OpacityMaskContent content)
         {
             if (opacityMask == null)
             {
-                throw new ArgumentNullException("opacityMask");
+                throw new ArgumentNullException(nameof(opacityMask));
             }
 
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().FillOpacityMask(opacityMask.GetHandle<ID2D1Bitmap>(), brush.GetHandle<ID2D1Brush>(), content, IntPtr.Zero, IntPtr.Zero);
@@ -1378,17 +1406,18 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="content">The type of content the opacity mask contains. The value is used to determine the color space in which the opacity mask is blended.</param>
         /// <param name="destinationRectangle">The region of the render target to paint, in device-independent pixels.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void FillOpacityMask(D2D1Bitmap opacityMask, D2D1Brush brush, D2D1OpacityMaskContent content, D2D1RectF destinationRectangle)
         {
             if (opacityMask == null)
             {
-                throw new ArgumentNullException("opacityMask");
+                throw new ArgumentNullException(nameof(opacityMask));
             }
 
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
@@ -1412,17 +1441,18 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="destinationRectangle">The region of the render target to paint, in device-independent pixels.</param>
         /// <param name="sourceRectangle">The region of the bitmap to use as the opacity mask, in device-independent pixels.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void FillOpacityMask(D2D1Bitmap opacityMask, D2D1Brush brush, D2D1OpacityMaskContent content, D2D1RectF destinationRectangle, D2D1RectF sourceRectangle)
         {
             if (opacityMask == null)
             {
-                throw new ArgumentNullException("opacityMask");
+                throw new ArgumentNullException(nameof(opacityMask));
             }
 
             if (brush == null)
             {
-                throw new ArgumentNullException("brush");
+                throw new ArgumentNullException(nameof(brush));
             }
 
             GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
@@ -1444,12 +1474,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="bitmap">The bitmap to render.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawBitmap(D2D1Bitmap bitmap)
         {
             if (bitmap == null)
             {
-                throw new ArgumentNullException("bitmap");
+                throw new ArgumentNullException(nameof(bitmap));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawBitmap(bitmap.GetHandle<ID2D1Bitmap>(), IntPtr.Zero, 1.0f, D2D1BitmapInterpolationMode.Linear, IntPtr.Zero);
@@ -1461,12 +1492,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="bitmap">The bitmap to render.</param>
         /// <param name="destinationRectangle">The size and position, in device-independent pixels in the render target's coordinate space, of the area to which the bitmap is drawn.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawBitmap(D2D1Bitmap bitmap, D2D1RectF destinationRectangle)
         {
             if (bitmap == null)
             {
-                throw new ArgumentNullException("bitmap");
+                throw new ArgumentNullException(nameof(bitmap));
             }
 
             GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
@@ -1488,12 +1520,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="destinationRectangle">The size and position, in device-independent pixels in the render target's coordinate space, of the area to which the bitmap is drawn.</param>
         /// <param name="opacity">A value between 0.0f and 1.0f, inclusive, that specifies an opacity value to apply to the bitmap; this value is multiplied against the alpha values of the bitmap's contents.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawBitmap(D2D1Bitmap bitmap, D2D1RectF destinationRectangle, float opacity)
         {
             if (bitmap == null)
             {
-                throw new ArgumentNullException("bitmap");
+                throw new ArgumentNullException(nameof(bitmap));
             }
 
             GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
@@ -1516,12 +1549,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="opacity">A value between 0.0f and 1.0f, inclusive, that specifies an opacity value to apply to the bitmap; this value is multiplied against the alpha values of the bitmap's contents.</param>
         /// <param name="interpolationMode">The interpolation mode to use if the bitmap is scaled or rotated by the drawing operation.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawBitmap(D2D1Bitmap bitmap, D2D1RectF destinationRectangle, float opacity, D2D1BitmapInterpolationMode interpolationMode)
         {
             if (bitmap == null)
             {
-                throw new ArgumentNullException("bitmap");
+                throw new ArgumentNullException(nameof(bitmap));
             }
 
             GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
@@ -1545,12 +1579,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="interpolationMode">The interpolation mode to use if the bitmap is scaled or rotated by the drawing operation.</param>
         /// <param name="sourceRectangle">The size and position, in device-independent pixels in the bitmap's coordinate space, of the area within the bitmap to be drawn.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawBitmap(D2D1Bitmap bitmap, D2D1RectF destinationRectangle, float opacity, D2D1BitmapInterpolationMode interpolationMode, D2D1RectF sourceRectangle)
         {
             if (bitmap == null)
             {
-                throw new ArgumentNullException("bitmap");
+                throw new ArgumentNullException(nameof(bitmap));
             }
 
             GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
@@ -1575,22 +1610,23 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="layoutRect">The size and position of the area in which the text is drawn.</param>
         /// <param name="defaultForegroundBrush">The brush used to paint the text.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawText(string text, DWriteTextFormat textFormat, D2D1RectF layoutRect, D2D1Brush defaultForegroundBrush)
         {
             if (text == null)
             {
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             }
 
             if (textFormat == null)
             {
-                throw new ArgumentNullException("textFormat");
+                throw new ArgumentNullException(nameof(textFormat));
             }
 
             if (defaultForegroundBrush == null)
             {
-                throw new ArgumentNullException("defaultForegroundBrush");
+                throw new ArgumentNullException(nameof(defaultForegroundBrush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawText(text, (uint)text.Length, (IDWriteTextFormat)textFormat.Handle, ref layoutRect, defaultForegroundBrush.GetHandle<ID2D1Brush>(), D2D1DrawTextOptions.None, DWriteMeasuringMode.Natural);
@@ -1605,22 +1641,23 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="defaultForegroundBrush">The brush used to paint the text.</param>
         /// <param name="options">A value that indicates whether the text should be snapped to pixel boundaries and whether the text should be clipped to the layout rectangle.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawText(string text, DWriteTextFormat textFormat, D2D1RectF layoutRect, D2D1Brush defaultForegroundBrush, D2D1DrawTextOptions options)
         {
             if (text == null)
             {
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             }
 
             if (textFormat == null)
             {
-                throw new ArgumentNullException("textFormat");
+                throw new ArgumentNullException(nameof(textFormat));
             }
 
             if (defaultForegroundBrush == null)
             {
-                throw new ArgumentNullException("defaultForegroundBrush");
+                throw new ArgumentNullException(nameof(defaultForegroundBrush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawText(text, (uint)text.Length, (IDWriteTextFormat)textFormat.Handle, ref layoutRect, defaultForegroundBrush.GetHandle<ID2D1Brush>(), options, DWriteMeasuringMode.Natural);
@@ -1636,22 +1673,23 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="options">A value that indicates whether the text should be snapped to pixel boundaries and whether the text should be clipped to the layout rectangle.</param>
         /// <param name="measuringMode">A value that indicates how glyph metrics are used to measure text when it is formatted.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawText(string text, DWriteTextFormat textFormat, D2D1RectF layoutRect, D2D1Brush defaultForegroundBrush, D2D1DrawTextOptions options, DWriteMeasuringMode measuringMode)
         {
             if (text == null)
             {
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             }
 
             if (textFormat == null)
             {
-                throw new ArgumentNullException("textFormat");
+                throw new ArgumentNullException(nameof(textFormat));
             }
 
             if (defaultForegroundBrush == null)
             {
-                throw new ArgumentNullException("defaultForegroundBrush");
+                throw new ArgumentNullException(nameof(defaultForegroundBrush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawText(text, (uint)text.Length, (IDWriteTextFormat)textFormat.Handle, ref layoutRect, defaultForegroundBrush.GetHandle<ID2D1Brush>(), options, measuringMode);
@@ -1664,17 +1702,18 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="textLayout">The formatted text to draw.</param>
         /// <param name="defaultForegroundBrush">The brush used to paint any text in textLayout that does not already have a brush associated with it as a drawing effect.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawTextLayout(D2D1Point2F origin, DWriteTextLayout textLayout, D2D1Brush defaultForegroundBrush)
         {
             if (textLayout == null)
             {
-                throw new ArgumentNullException("textLayout");
+                throw new ArgumentNullException(nameof(textLayout));
             }
 
             if (defaultForegroundBrush == null)
             {
-                throw new ArgumentNullException("defaultForegroundBrush");
+                throw new ArgumentNullException(nameof(defaultForegroundBrush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawTextLayout(origin, (IDWriteTextLayout)textLayout.Handle, defaultForegroundBrush.GetHandle<ID2D1Brush>(), D2D1DrawTextOptions.None);
@@ -1688,17 +1727,18 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="defaultForegroundBrush">The brush used to paint any text in textLayout that does not already have a brush associated with it as a drawing effect.</param>
         /// <param name="options">A value that indicates whether the text should be snapped to pixel boundaries and whether the text should be clipped to the layout rectangle.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawTextLayout(D2D1Point2F origin, DWriteTextLayout textLayout, D2D1Brush defaultForegroundBrush, D2D1DrawTextOptions options)
         {
             if (textLayout == null)
             {
-                throw new ArgumentNullException("textLayout");
+                throw new ArgumentNullException(nameof(textLayout));
             }
 
             if (defaultForegroundBrush == null)
             {
-                throw new ArgumentNullException("defaultForegroundBrush");
+                throw new ArgumentNullException(nameof(defaultForegroundBrush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawTextLayout(origin, (IDWriteTextLayout)textLayout.Handle, defaultForegroundBrush.GetHandle<ID2D1Brush>(), options);
@@ -1711,12 +1751,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="glyphRun">The glyphs to render.</param>
         /// <param name="foregroundBrush">The brush used to paint the specified glyphs.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawGlyphRun(D2D1Point2F baselineOrigin, DWriteGlyphRun glyphRun, D2D1Brush foregroundBrush)
         {
             if (foregroundBrush == null)
             {
-                throw new ArgumentNullException("foregroundBrush");
+                throw new ArgumentNullException(nameof(foregroundBrush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawGlyphRun(baselineOrigin, ref glyphRun, foregroundBrush.GetHandle<ID2D1Brush>(), DWriteMeasuringMode.Natural);
@@ -1730,12 +1771,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="foregroundBrush">The brush used to paint the specified glyphs.</param>
         /// <param name="measuringMode">A value that indicates how glyph metrics are used to measure text when it is formatted.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawGlyphRun(D2D1Point2F baselineOrigin, DWriteGlyphRun glyphRun, D2D1Brush foregroundBrush, DWriteMeasuringMode measuringMode)
         {
             if (foregroundBrush == null)
             {
-                throw new ArgumentNullException("foregroundBrush");
+                throw new ArgumentNullException(nameof(foregroundBrush));
             }
 
             this.GetHandle<ID2D1RenderTarget>().DrawGlyphRun(baselineOrigin, ref glyphRun, foregroundBrush.GetHandle<ID2D1Brush>(), measuringMode);
@@ -1744,6 +1786,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Specifies text rendering options to be applied to all subsequent text and glyph drawing operations.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetTextRenderingParams()
         {
@@ -1754,6 +1797,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// Specifies text rendering options to be applied to all subsequent text and glyph drawing operations.
         /// </summary>
         /// <param name="textRenderingParams">The text rendering options to be applied to all subsequent text and glyph drawing operations.</param>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetTextRenderingParams(DWriteRenderingParams textRenderingParams)
         {
@@ -1766,6 +1810,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The render target's current text rendering options.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteRenderingParams GetTextRenderingParams()
         {
@@ -1785,6 +1830,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="tag1">The first to apply to subsequent drawing operations.</param>
         /// <param name="tag2">The second to apply to subsequent drawing operations.</param>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetTags(ulong tag1, ulong tag2)
         {
@@ -1798,6 +1844,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="tag2">The second label for subsequent drawing operations.</param>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void GetTags(out ulong tag1, out ulong tag2)
         {
@@ -1810,15 +1857,17 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="layerParameters">The content bounds, geometric mask, opacity, opacity mask, and antialiasing options for the layer.</param>
         /// <param name="layer">The layer that receives subsequent drawing operations.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void PushLayer(D2D1LayerParameters layerParameters, D2D1Layer layer)
         {
-            this.GetHandle<ID2D1RenderTarget>().PushLayer(ref layerParameters, layer == null ? null : layer.GetHandle<ID2D1Layer>());
+            this.GetHandle<ID2D1RenderTarget>().PushLayer(ref layerParameters, layer?.GetHandle<ID2D1Layer>());
         }
 
         /// <summary>
         /// Stops redirecting drawing operations to the layer that is specified by the last <see cref="PushLayer"/> call.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void PopLayer()
         {
@@ -1854,12 +1903,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="drawingStateBlock">The current drawing state of the render target.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SaveDrawingState(D2D1DrawingStateBlock drawingStateBlock)
         {
             if (drawingStateBlock == null)
             {
-                throw new ArgumentNullException("drawingStateBlock");
+                throw new ArgumentNullException(nameof(drawingStateBlock));
             }
 
             this.GetHandle<ID2D1RenderTarget>().SaveDrawingState(drawingStateBlock.GetHandle<ID2D1DrawingStateBlock>());
@@ -1870,12 +1920,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="drawingStateBlock">The new drawing state of the render target.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void RestoreDrawingState(D2D1DrawingStateBlock drawingStateBlock)
         {
             if (drawingStateBlock == null)
             {
-                throw new ArgumentNullException("drawingStateBlock");
+                throw new ArgumentNullException(nameof(drawingStateBlock));
             }
 
             this.GetHandle<ID2D1RenderTarget>().RestoreDrawingState(drawingStateBlock.GetHandle<ID2D1DrawingStateBlock>());
@@ -1886,6 +1937,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="clipRect">The size and position of the clipping area, in device-independent pixels.</param>
         /// <param name="antialiasMode">The antialiasing mode that is used to draw the edges of clip rectangles that have subpixel boundaries, and to blend the clip with the scene contents. The blending is performed once when the <see cref="PopAxisAlignedClip"/> method is called, and does not apply to each primitive within the layer.</param>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void PushAxisAlignedClip(D2D1RectF clipRect, D2D1AntialiasMode antialiasMode)
         {
@@ -1896,6 +1948,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// Removes the last axis-aligned clip from the render target. After this method is called, the clip is no longer applied to subsequent drawing operations.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void PopAxisAlignedClip()
         {
             this.GetHandle<ID2D1RenderTarget>().PopAxisAlignedClip();
@@ -1905,6 +1958,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// Clears the drawing area to the specified color.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void Clear()
         {
             this.GetHandle<ID2D1RenderTarget>().Clear(IntPtr.Zero);
@@ -1914,6 +1968,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// Clears the drawing area to the specified color.
         /// </summary>
         /// <param name="clearColor">The color to which the drawing area is cleared.</param>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Clear(D2D1ColorF clearColor)
         {
@@ -1933,6 +1988,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// Initiates drawing on this render target.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void BeginDraw()
         {
             this.GetHandle<ID2D1RenderTarget>().BeginDraw();
@@ -1985,6 +2041,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="dpiX">A value greater than or equal to zero that specifies the horizontal DPI of the render target.</param>
         /// <param name="dpiY">A value greater than or equal to zero that specifies the vertical DPI of the render target.</param>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetDpi(float dpiX, float dpiY)
         {
@@ -1998,6 +2055,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="dpiY">The vertical DPI of the render target.</param>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void GetDpi(out float dpiX, out float dpiY)
         {

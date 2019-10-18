@@ -81,7 +81,7 @@ namespace JeremyAnsel.DirectX.DWrite
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 }
 
                 this.fontFace = (IDWriteFontFace)value.Handle;
@@ -244,27 +244,27 @@ namespace JeremyAnsel.DirectX.DWrite
         {
             if (indices == null)
             {
-                throw new ArgumentNullException("indices");
+                throw new ArgumentNullException(nameof(indices));
             }
 
             if (advances == null)
             {
-                throw new ArgumentNullException("advances");
+                throw new ArgumentNullException(nameof(advances));
             }
 
             if (offsets == null)
             {
-                throw new ArgumentNullException("offsets");
+                throw new ArgumentNullException(nameof(offsets));
             }
 
             if (advances.Length != indices.Length)
             {
-                throw new ArgumentOutOfRangeException("advances");
+                throw new ArgumentOutOfRangeException(nameof(advances));
             }
 
             if (offsets.Length != indices.Length)
             {
-                throw new ArgumentOutOfRangeException("offsets");
+                throw new ArgumentOutOfRangeException(nameof(offsets));
             }
 
             this.glyphCount = (uint)indices.Length;

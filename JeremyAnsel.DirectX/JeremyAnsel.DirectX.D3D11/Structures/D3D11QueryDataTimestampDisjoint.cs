@@ -16,13 +16,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// How frequently the GPU counter increments in Hz.
         /// </summary>
-        private ulong frequency;
+        private readonly ulong frequency;
 
         /// <summary>
         /// Indicates whether the timestamp counter is discontinuous or disjoint.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isDisjoint;
+        private readonly bool isDisjoint;
 
         /// <summary>
         /// Gets a value indicating how frequently the GPU counter increments in Hz.

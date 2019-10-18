@@ -37,7 +37,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <summary>
         /// The comparison record.
         /// </summary>
-        private uint record;
+        private readonly uint record;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="XMComparisonRecord"/> struct.

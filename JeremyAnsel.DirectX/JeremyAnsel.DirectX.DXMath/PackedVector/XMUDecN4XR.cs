@@ -104,6 +104,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMUDecN4XR"/>.</param>
         /// <returns>A packed value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator uint(XMUDecN4XR value)
         {
             return value.v;
@@ -115,6 +116,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A packed value.</param>
         /// <returns>A <see cref="XMUDecN4XR"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMUDecN4XR(uint value)
         {
             return new XMUDecN4XR(value);
@@ -126,6 +128,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMUDecN4XR"/>.</param>
         /// <returns>A <see cref="XMVector"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMVector(XMUDecN4XR value)
         {
             uint elementX = value.v & 0x3FFU;
@@ -146,6 +149,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMVector"/>.</param>
         /// <returns>A <see cref="XMUDecN4XR"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMUDecN4XR(XMVector value)
         {
             XMVector scale = XMVector.FromFloat(510.0f, 510.0f, 510.0f, 3.0f);

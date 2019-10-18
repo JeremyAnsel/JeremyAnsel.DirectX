@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 mesh interface.
         /// </summary>
-        private ID2D1Mesh mesh;
+        private readonly ID2D1Mesh mesh;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1Mesh"/> class.

@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// A string that contains the name of the output device.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
-        private string deviceName;
+        private readonly string deviceName;
 
         /// <summary>
         /// A <see cref="DxgiRect"/> structure containing the bounds of the output in desktop coordinates. Desktop coordinates depend on the dots per inch (DPI) of the desktop.
@@ -29,17 +29,17 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <value>true</value> if the output is attached to the desktop; otherwise, <value>false</value>.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isAttachedToDesktop;
+        private readonly bool isAttachedToDesktop;
 
         /// <summary>
         /// A member of the <see cref="DxgiModeRotation"/> enumeration describing on how an image is rotated by the output.
         /// </summary>
-        private DxgiModeRotation rotation;
+        private readonly DxgiModeRotation rotation;
 
         /// <summary>
         /// An handle that represents the display monitor.
         /// </summary>
-        private IntPtr monitor;
+        private readonly IntPtr monitor;
 
         /// <summary>
         /// Gets a string that contains the name of the output device.

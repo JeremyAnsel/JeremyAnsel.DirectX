@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 compute shader interface.
         /// </summary>
-        private ID3D11ComputeShader computeShader;
+        private readonly ID3D11ComputeShader computeShader;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11ComputeShader"/> class.

@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D3D11
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
 
@@ -15,7 +16,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 query interface.
         /// </summary>
-        private ID3D11Query query;
+        private readonly ID3D11Query query;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11Query"/> class.
@@ -42,6 +43,7 @@ namespace JeremyAnsel.DirectX.D3D11
         public D3D11QueryDesc Description
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 D3D11QueryDesc desc;

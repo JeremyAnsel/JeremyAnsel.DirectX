@@ -13,6 +13,7 @@ namespace JeremyAnsel.DirectX.D2D1
     /// <summary>
     /// Describes a geometric path that does not contain quadratic bezier curves or arcs.
     /// </summary>
+    [SuppressMessage("Design", "CA1063:Implémenter IDisposable correctement", Justification = "Reviewed")]
     public abstract class D2D1SimplifiedGeometrySink : IDisposable, ID2D1Releasable
     {
         /// <summary>
@@ -78,6 +79,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="fillMode">The method used to determine whether a given point is part of the geometry.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void SetFillMode(D2D1FillMode fillMode)
         {
             this.GetHandle<ID2D1SimplifiedGeometrySink>().SetFillMode(fillMode);
@@ -88,6 +90,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="vertexOptions">Stroke and join options to be applied to new segments added to the geometry sink.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void SetSegmentOptions(D2D1PathSegmentOptions vertexOptions)
         {
             this.GetHandle<ID2D1SimplifiedGeometrySink>().SetSegmentFlags(vertexOptions);
@@ -99,6 +102,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="startPoint">The point at which to begin the new figure.</param>
         /// <param name="figureBegin">Whether the new figure should be hollow or filled.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void BeginFigure(D2D1Point2F startPoint, D2D1FigureBegin figureBegin)
         {
             this.GetHandle<ID2D1SimplifiedGeometrySink>().BeginFigure(startPoint, figureBegin);
@@ -109,11 +113,12 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="points">An array of one or more points that describe the lines to draw. A line is drawn from the geometry sink's current point (the end point of the last segment drawn or the location specified by <see cref="BeginFigure"/>) to the first point in the array. if the array contains additional points, a line is drawn from the first point to the second point in the array, from the second point to the third point, and so on.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void AddLines(D2D1Point2F[] points)
         {
             if (points == null)
             {
-                throw new ArgumentNullException("points");
+                throw new ArgumentNullException(nameof(points));
             }
 
             this.GetHandle<ID2D1SimplifiedGeometrySink>().AddLines(points, (uint)points.Length);
@@ -124,11 +129,12 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="beziers">An array of Bezier segments that describes the Bezier curves to create. A curve is drawn from the geometry sink's current point (the end point of the last segment drawn or the location specified by <see cref="BeginFigure"/>) to the end point of the first Bezier segment in the array. if the array contains additional Bezier segments, each subsequent Bezier segment uses the end point of the preceding Bezier segment as its start point.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void AddBeziers(D2D1BezierSegment[] beziers)
         {
             if (beziers == null)
             {
-                throw new ArgumentNullException("beziers");
+                throw new ArgumentNullException(nameof(beziers));
             }
 
             this.GetHandle<ID2D1SimplifiedGeometrySink>().AddBeziers(beziers, (uint)beziers.Length);
@@ -139,6 +145,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="figureEnd">A value that indicates whether the current figure is closed. If the figure is closed, a line is drawn between the current point and the start point specified by <see cref="BeginFigure"/>.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void EndFigure(D2D1FigureEnd figureEnd)
         {
             this.GetHandle<ID2D1SimplifiedGeometrySink>().EndFigure(figureEnd);

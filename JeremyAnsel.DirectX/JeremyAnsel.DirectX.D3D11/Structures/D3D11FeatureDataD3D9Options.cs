@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Specifies whether the driver supports the nonpowers-of-2-unconditionally feature.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isFullNonPow2TextureSupported;
+        private readonly bool isFullNonPow2TextureSupported;
 
         /// <summary>
         /// Gets a value indicating whether the driver supports the nonpowers-of-2-unconditionally feature.

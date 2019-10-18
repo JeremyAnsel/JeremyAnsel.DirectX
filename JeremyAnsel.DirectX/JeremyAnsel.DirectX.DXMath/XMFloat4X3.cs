@@ -128,12 +128,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (array.Length != 12)
             {
-                throw new ArgumentOutOfRangeException("array");
+                throw new ArgumentOutOfRangeException(nameof(array));
             }
 
             this.m11 = array[0];
@@ -272,12 +272,12 @@ namespace JeremyAnsel.DirectX.DXMath
             {
                 if (row < 0 || row >= 4)
                 {
-                    throw new ArgumentOutOfRangeException("row");
+                    throw new ArgumentOutOfRangeException(nameof(row));
                 }
 
                 if (column < 0 || column >= 3)
                 {
-                    throw new ArgumentOutOfRangeException("column");
+                    throw new ArgumentOutOfRangeException(nameof(column));
                 }
 
                 fixed (XMFloat4X3* m = &this)
@@ -291,12 +291,12 @@ namespace JeremyAnsel.DirectX.DXMath
             {
                 if (row < 0 || row >= 4)
                 {
-                    throw new ArgumentOutOfRangeException("row");
+                    throw new ArgumentOutOfRangeException(nameof(row));
                 }
 
                 if (column < 0 || column >= 3)
                 {
-                    throw new ArgumentOutOfRangeException("column");
+                    throw new ArgumentOutOfRangeException(nameof(column));
                 }
 
                 fixed (XMFloat4X3* m = &this)
@@ -312,6 +312,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="value">A <see cref="XMFloat4X3"/>.</param>
         /// <returns>A <see cref="XMMatrix"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMMatrix(XMFloat4X3 value)
         {
             return XMMatrix.LoadFloat4X3(value);
@@ -323,6 +324,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="value">A <see cref="XMMatrix"/>.</param>
         /// <returns>A <see cref="XMFloat4X3"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMFloat4X3(XMMatrix value)
         {
             XMFloat4X3 ret;

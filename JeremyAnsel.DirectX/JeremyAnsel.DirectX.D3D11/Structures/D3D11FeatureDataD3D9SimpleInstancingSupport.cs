@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Specifies whether the hardware and driver support simple instancing.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isSimpleInstancingSupported;
+        private readonly bool isSimpleInstancingSupported;
 
         /// <summary>
         /// Gets a value indicating whether the hardware and driver support simple instancing.

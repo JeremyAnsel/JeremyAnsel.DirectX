@@ -16,43 +16,43 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The instance ID of an HLSL class; the default value is 0.
         /// </summary>
-        private uint instanceId;
+        private readonly uint instanceId;
 
         /// <summary>
         /// The instance index of an HLSL class; the default value is 0.
         /// </summary>
-        private uint instanceIndex;
+        private readonly uint instanceIndex;
 
         /// <summary>
         /// The type ID of an HLSL class; the default value is 0.
         /// </summary>
-        private uint typeId;
+        private readonly uint typeId;
 
         /// <summary>
         /// Describes the constant buffer associated with an HLSL class; the default value is 0.
         /// </summary>
-        private uint constantBuffer;
+        private readonly uint constantBuffer;
 
         /// <summary>
         /// The base constant buffer offset associated with an HLSL class; the default value is 0.
         /// </summary>
-        private uint baseConstantBufferOffset;
+        private readonly uint baseConstantBufferOffset;
 
         /// <summary>
         /// The base texture associated with an HLSL class; the default value is 127.
         /// </summary>
-        private uint baseTexture;
+        private readonly uint baseTexture;
 
         /// <summary>
         /// The base sampler associated with an HLSL class; the default value is 15.
         /// </summary>
-        private uint baseSampler;
+        private readonly uint baseSampler;
 
         /// <summary>
         /// Indicates whether the class was created; the default value is false.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isCreated;
+        private readonly bool isCreated;
 
         /// <summary>
         /// Gets the instance ID of an HLSL class; the default value is 0.

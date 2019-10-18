@@ -16,14 +16,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Immediately releases the unmanaged resources.
         /// </summary>
         /// <typeparam name="T">A releasable type.</typeparam>
-        /// <param name="obj">The object.</param>
+        /// <param name="o">The object.</param>
         [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference", MessageId = "0#", Justification = "Reviewed")]
-        public static void DisposeAndNull<T>(ref T obj) where T : class, ID3D11Releasable
+        public static void DisposeAndNull<T>(ref T o) where T : class, ID3D11Releasable
         {
-            if (obj != null)
+            if (o != null)
             {
-                obj.Dispose();
-                obj = null;
+                o.Dispose();
+                o = null;
             }
         }
 
@@ -31,14 +31,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Releases the managed reference to the COM interface.
         /// </summary>
         /// <typeparam name="T">A releasable type.</typeparam>
-        /// <param name="obj">The COM interface.</param>
+        /// <param name="o">The COM interface.</param>
         [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference", MessageId = "0#", Justification = "Reviewed")]
-        public static void ReleaseAndNull<T>(ref T obj) where T : class, ID3D11Releasable
+        public static void ReleaseAndNull<T>(ref T o) where T : class, ID3D11Releasable
         {
-            if (obj != null)
+            if (o != null)
             {
-                obj.Release();
-                obj = null;
+                o.Release();
+                o = null;
             }
         }
 

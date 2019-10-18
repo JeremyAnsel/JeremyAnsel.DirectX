@@ -5,6 +5,7 @@
 namespace JeremyAnsel.DirectX.D2D1
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D2D1.ComInterfaces;
 
@@ -16,7 +17,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 brush interface.
         /// </summary>
-        private ID2D1GeometrySink geometrySink;
+        private readonly ID2D1GeometrySink geometrySink;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1GeometrySink"/> class.
@@ -42,6 +43,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="point">The end point of the line to draw.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void AddLine(D2D1Point2F point)
         {
             this.geometrySink.AddLine(point);
@@ -52,6 +54,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="bezier">A structure that describes the control points and endpoint of the Bezier curve to add.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void AddBezier(D2D1BezierSegment bezier)
         {
             this.geometrySink.AddBezier(ref bezier);
@@ -62,6 +65,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="bezier">A structure that describes the control point and the endpoint of the quadratic Bezier curve to add.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void AddQuadraticBezier(D2D1QuadraticBezierSegment bezier)
         {
             this.geometrySink.AddQuadraticBezier(ref bezier);
@@ -72,11 +76,12 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="beziers">An array of a sequence of quadratic Bezier segments.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void AddQuadraticBeziers(D2D1QuadraticBezierSegment[] beziers)
         {
             if (beziers == null)
             {
-                throw new ArgumentNullException("beziers");
+                throw new ArgumentNullException(nameof(beziers));
             }
 
             this.geometrySink.AddQuadraticBeziers(beziers, (uint)beziers.Length);
@@ -87,6 +92,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="arc">The arc segment to add to the figure.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void AddArc(D2D1ArcSegment arc)
         {
             this.geometrySink.AddArc(ref arc);

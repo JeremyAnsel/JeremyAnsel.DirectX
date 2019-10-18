@@ -57,12 +57,12 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (array.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("array");
+                throw new ArgumentOutOfRangeException(nameof(array));
             }
 
             this.v = (ushort)((array[0] & 0xFU) | ((array[1] & 0xFU) << 4) | ((array[2] & 0xFU) << 8) | ((array[3] & 0xFU) << 12));
@@ -141,6 +141,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMUNibble4"/>.</param>
         /// <returns>A packed value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator ushort(XMUNibble4 value)
         {
             return value.v;
@@ -152,6 +153,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A packed value.</param>
         /// <returns>A <see cref="XMUNibble4"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMUNibble4(ushort value)
         {
             return new XMUNibble4(value);
@@ -163,6 +165,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMUNibble4"/>.</param>
         /// <returns>A <see cref="XMVector"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMVector(XMUNibble4 value)
         {
             return new XMVector(
@@ -178,6 +181,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMVector"/>.</param>
         /// <returns>A <see cref="XMUNibble4"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMUNibble4(XMVector value)
         {
             XMVector max = XMVector.FromFloat(15.0f, 15.0f, 15.0f, 15.0f);

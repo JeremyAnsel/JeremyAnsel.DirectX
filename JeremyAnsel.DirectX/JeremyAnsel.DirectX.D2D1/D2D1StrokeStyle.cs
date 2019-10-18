@@ -16,7 +16,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 stroke style interface.
         /// </summary>
-        private ID2D1StrokeStyle strokeStyle;
+        private readonly ID2D1StrokeStyle strokeStyle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1StrokeStyle"/> class.
@@ -116,6 +116,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>An array that will receive the dash pattern.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public float[] GetDashes()
         {
             uint count = this.strokeStyle.GetDashesCount();

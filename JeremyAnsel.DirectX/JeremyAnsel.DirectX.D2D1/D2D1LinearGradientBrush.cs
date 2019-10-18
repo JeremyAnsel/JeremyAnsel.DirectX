@@ -16,7 +16,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 brush interface.
         /// </summary>
-        private ID2D1LinearGradientBrush brush;
+        private readonly ID2D1LinearGradientBrush brush;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1LinearGradientBrush"/> class.
@@ -46,6 +46,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetStartPoint(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetStartPoint(value); }
         }
 
@@ -58,6 +59,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetEndPoint(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetEndPoint(value); }
         }
 
@@ -66,6 +68,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>The <see cref="D2D1GradientStopCollection"/> object associated with this linear gradient brush object.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1GradientStopCollection GetGradientStopCollection()
         {

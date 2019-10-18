@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D2D1
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D2D1.ComInterfaces;
 
@@ -15,7 +16,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 geometry interface.
         /// </summary>
-        private ID2D1TransformedGeometry geometry;
+        private readonly ID2D1TransformedGeometry geometry;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1TransformedGeometry"/> class.
@@ -42,6 +43,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1Geometry SourceGeometry
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 ID2D1Geometry sourceGeometry;
@@ -56,6 +58,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1Matrix3X2F Transform
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 D2D1Matrix3X2F transform;

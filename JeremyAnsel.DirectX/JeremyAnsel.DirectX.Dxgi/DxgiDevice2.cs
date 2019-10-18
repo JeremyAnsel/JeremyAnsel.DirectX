@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI device interface.
         /// </summary>
-        private IDxgiDevice2 device;
+        private readonly IDxgiDevice2 device;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiDevice2"/> class.
@@ -88,7 +88,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (resources == null)
             {
-                throw new ArgumentNullException("resources");
+                throw new ArgumentNullException(nameof(resources));
             }
 
             DxgiResidency[] residencies = new DxgiResidency[resources.Length];
@@ -111,7 +111,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (resources == null)
             {
-                throw new ArgumentNullException("resources");
+                throw new ArgumentNullException(nameof(resources));
             }
 
             this.device.OfferResources(
@@ -130,7 +130,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (resources == null)
             {
-                throw new ArgumentNullException("resources");
+                throw new ArgumentNullException(nameof(resources));
             }
 
             bool[] discarded = new bool[resources.Length];

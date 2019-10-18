@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 geometry interface.
         /// </summary>
-        private ID2D1GeometryGroup geometry;
+        private readonly ID2D1GeometryGroup geometry;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1GeometryGroup"/> class.
@@ -63,6 +63,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>An array of geometries to be filled by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D2D1Geometry[] GetSourceGeometries()
         {
             uint count = this.geometry.GetSourceGeometryCount();

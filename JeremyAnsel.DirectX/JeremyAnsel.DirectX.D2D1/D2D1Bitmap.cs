@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 bitmap interface.
         /// </summary>
-        private ID2D1Bitmap bitmap;
+        private readonly ID2D1Bitmap bitmap;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1Bitmap"/> class.
@@ -73,6 +73,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="dpiY">The vertical DPI of the image.</param>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void GetDpi(out float dpiX, out float dpiY)
         {
@@ -88,7 +89,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (srcBitmap == null)
             {
-                throw new ArgumentNullException("srcBitmap");
+                throw new ArgumentNullException(nameof(srcBitmap));
             }
 
             this.bitmap.CopyFromBitmap(IntPtr.Zero, srcBitmap.bitmap, IntPtr.Zero);
@@ -104,7 +105,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (srcBitmap == null)
             {
-                throw new ArgumentNullException("srcBitmap");
+                throw new ArgumentNullException(nameof(srcBitmap));
             }
 
             GCHandle destPointHandle = GCHandle.Alloc(destPoint, GCHandleType.Pinned);
@@ -129,7 +130,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (srcBitmap == null)
             {
-                throw new ArgumentNullException("srcBitmap");
+                throw new ArgumentNullException(nameof(srcBitmap));
             }
 
             GCHandle srcRectHandle = GCHandle.Alloc(srcRect, GCHandleType.Pinned);
@@ -155,7 +156,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (srcBitmap == null)
             {
-                throw new ArgumentNullException("srcBitmap");
+                throw new ArgumentNullException(nameof(srcBitmap));
             }
 
             GCHandle destPointHandle = GCHandle.Alloc(destPoint, GCHandleType.Pinned);
@@ -182,7 +183,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (renderTarget == null)
             {
-                throw new ArgumentNullException("renderTarget");
+                throw new ArgumentNullException(nameof(renderTarget));
             }
 
             this.bitmap.CopyFromRenderTarget(IntPtr.Zero, renderTarget.GetHandle<ID2D1RenderTarget>(), IntPtr.Zero);
@@ -199,7 +200,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (renderTarget == null)
             {
-                throw new ArgumentNullException("renderTarget");
+                throw new ArgumentNullException(nameof(renderTarget));
             }
 
             GCHandle destPointHandle = GCHandle.Alloc(destPoint, GCHandleType.Pinned);
@@ -225,7 +226,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (renderTarget == null)
             {
-                throw new ArgumentNullException("renderTarget");
+                throw new ArgumentNullException(nameof(renderTarget));
             }
 
             GCHandle srcRectHandle = GCHandle.Alloc(srcRect, GCHandleType.Pinned);
@@ -252,7 +253,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (renderTarget == null)
             {
-                throw new ArgumentNullException("renderTarget");
+                throw new ArgumentNullException(nameof(renderTarget));
             }
 
             GCHandle destPointHandle = GCHandle.Alloc(destPoint, GCHandleType.Pinned);
@@ -290,7 +291,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (srcData == null)
             {
-                throw new ArgumentNullException("srcData");
+                throw new ArgumentNullException(nameof(srcData));
             }
 
             this.bitmap.CopyFromMemory(IntPtr.Zero, Marshal.UnsafeAddrOfPinnedArrayElement(srcData, 0), pitch);
@@ -328,7 +329,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (srcData == null)
             {
-                throw new ArgumentNullException("srcData");
+                throw new ArgumentNullException(nameof(srcData));
             }
 
             GCHandle destRectHandle = GCHandle.Alloc(destRect, GCHandleType.Pinned);

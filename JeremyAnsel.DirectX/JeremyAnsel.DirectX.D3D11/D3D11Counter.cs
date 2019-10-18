@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D3D11
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
 
@@ -15,7 +16,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 counter interface.
         /// </summary>
-        private ID3D11Counter counter;
+        private readonly ID3D11Counter counter;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11Counter"/> class.
@@ -39,6 +40,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Gets a counter description.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11CounterDesc Description
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]

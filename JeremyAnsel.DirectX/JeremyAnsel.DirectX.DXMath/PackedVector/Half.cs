@@ -5,6 +5,7 @@
 namespace JeremyAnsel.DirectX.DXMath.PackedVector
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Runtime.CompilerServices;
     using System.Runtime.InteropServices;
@@ -29,6 +30,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">The <see cref="Half"/> value.</param>
         /// <returns>The <see cref="float"/> value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator float(Half value)
         {
             uint mantissa = value.half & 0x3FFU;
@@ -81,6 +83,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">The <see cref="Half"/> value.</param>
         /// <returns>The <see cref="double"/> value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator double(Half value)
         {
             return (double)(float)value;
@@ -92,6 +95,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">The <see cref="float"/> value.</param>
         /// <returns>The <see cref="Half"/> value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static explicit operator Half(float value)
         {
             uint result;
@@ -141,6 +145,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">The <see cref="double"/> value.</param>
         /// <returns>The <see cref="Half"/> value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static explicit operator Half(double value)
         {
             return (Half)(float)value;

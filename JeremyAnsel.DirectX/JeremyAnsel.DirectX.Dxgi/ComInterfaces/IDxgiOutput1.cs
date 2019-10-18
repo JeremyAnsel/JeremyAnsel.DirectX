@@ -95,7 +95,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <summary>
         /// Takes ownership of an output.
         /// </summary>
-        /// <param name="device">The <see cref="IUnknown"/> interface of a device.</param>
+        /// <param name="device">The <c>IUnknown</c> interface of a device.</param>
         /// <param name="exclusive">Set to <value>true</value> to enable other threads or applications to take ownership of the device; otherwise, set to <value>false</value>.</param>
         void TakeOwnership(
             [In, MarshalAs(UnmanagedType.IUnknown)] object device,

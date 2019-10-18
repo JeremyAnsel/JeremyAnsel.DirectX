@@ -62,12 +62,12 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (array.Length != 2)
             {
-                throw new ArgumentOutOfRangeException("array");
+                throw new ArgumentOutOfRangeException(nameof(array));
             }
 
             this.x = array[0];
@@ -123,6 +123,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMUByteN2"/>.</param>
         /// <returns>A <see cref="XMVector"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMVector(XMUByteN2 value)
         {
             return new XMVector(
@@ -138,6 +139,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMVector"/>.</param>
         /// <returns>A <see cref="XMUByteN2"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMUByteN2(XMVector value)
         {
             XMVector n = value.Saturate();

@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 tessellation sink interface.
         /// </summary>
-        private ID2D1TessellationSink tessellationSink;
+        private readonly ID2D1TessellationSink tessellationSink;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1TessellationSink"/> class.
@@ -85,11 +85,12 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="triangles">An array of <see cref="D2D1Triangle"/> structures that describe the triangles to add to the sink.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void AddTriangles(D2D1Triangle[] triangles)
         {
             if (triangles == null)
             {
-                throw new ArgumentNullException("triangles");
+                throw new ArgumentNullException(nameof(triangles));
             }
 
             this.tessellationSink.AddTriangles(triangles, (uint)triangles.Length);

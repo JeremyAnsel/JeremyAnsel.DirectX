@@ -104,6 +104,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMXDecN4"/>.</param>
         /// <returns>A packed value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator uint(XMXDecN4 value)
         {
             return value.v;
@@ -115,6 +116,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A packed value.</param>
         /// <returns>A <see cref="XMXDecN4"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMXDecN4(uint value)
         {
             return new XMXDecN4(value);
@@ -126,6 +128,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMXDecN4"/>.</param>
         /// <returns>A <see cref="XMVector"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMVector(XMXDecN4 value)
         {
             XMUInt2 signExtend = new XMUInt2(0x00000000U, 0xFFFFFC00U);
@@ -147,6 +150,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMVector"/>.</param>
         /// <returns>A <see cref="XMXDecN4"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMXDecN4(XMVector value)
         {
             XMVector min = XMVector.FromFloat(-1.0f, -1.0f, -1.0f, 0.0f);

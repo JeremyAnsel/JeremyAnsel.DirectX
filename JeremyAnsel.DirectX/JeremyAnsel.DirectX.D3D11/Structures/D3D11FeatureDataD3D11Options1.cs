@@ -16,25 +16,25 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Specifies whether the hardware and driver support tiled resources.
         /// </summary>
-        private D3D11TiledResourcesTier tiledResourcesTier;
+        private readonly D3D11TiledResourcesTier tiledResourcesTier;
 
         /// <summary>
         /// Specifies whether the hardware and driver support the filtering options of comparing the result to the minimum or maximum value during texture sampling.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isMinMaxFilteringSupported;
+        private readonly bool isMinMaxFilteringSupported;
 
         /// <summary>
         /// Specifies whether the hardware and driver also support the <c>ID3D11DeviceContext1.ClearView</c> method on depth formats.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isClearViewDepthInlyFormatsSupported;
+        private readonly bool isClearViewDepthInlyFormatsSupported;
 
         /// <summary>
         /// Specifies support for creating <see cref="D3D11Buffer"/> resources that can be passed to the <c>ID3D11DeviceContext.Map</c> and <c>ID3D11DeviceContext.Unmap</c> methods.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isMapOnDefaultBuffersSupported;
+        private readonly bool isMapOnDefaultBuffersSupported;
 
         /// <summary>
         /// Gets a value indicating whether the hardware and driver support tiled resources.

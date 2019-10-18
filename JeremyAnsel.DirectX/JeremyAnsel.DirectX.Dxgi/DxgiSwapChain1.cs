@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI swap chain interface.
         /// </summary>
-        private IDxgiSwapChain swapChain;
+        private readonly IDxgiSwapChain swapChain;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiSwapChain1"/> class.

@@ -17,17 +17,17 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The initialization data.
         /// </summary>
-        private Array data;
+        private readonly Array data;
 
         /// <summary>
         /// The distance (in bytes) from the beginning of one line of a texture to the next line.
         /// </summary>
-        private uint pitch;
+        private readonly uint pitch;
 
         /// <summary>
         /// The distance (in bytes) from the beginning of one depth level to the next.
         /// </summary>
-        private uint slicePitch;
+        private readonly uint slicePitch;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11SubResourceData"/> struct.

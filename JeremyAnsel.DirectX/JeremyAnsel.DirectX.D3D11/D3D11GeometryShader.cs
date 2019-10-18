@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 geometry shader interface.
         /// </summary>
-        private ID3D11GeometryShader geometryShader;
+        private readonly ID3D11GeometryShader geometryShader;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11GeometryShader"/> class.

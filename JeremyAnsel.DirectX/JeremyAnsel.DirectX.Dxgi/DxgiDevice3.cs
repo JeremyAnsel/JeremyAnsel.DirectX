@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI device interface.
         /// </summary>
-        private IDxgiDevice3 device;
+        private readonly IDxgiDevice3 device;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiDevice3"/> class.
@@ -88,7 +88,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (resources == null)
             {
-                throw new ArgumentNullException("resources");
+                throw new ArgumentNullException(nameof(resources));
             }
 
             DxgiResidency[] residencies = new DxgiResidency[resources.Length];
@@ -111,7 +111,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (resources == null)
             {
-                throw new ArgumentNullException("resources");
+                throw new ArgumentNullException(nameof(resources));
             }
 
             this.device.OfferResources(
@@ -130,7 +130,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (resources == null)
             {
-                throw new ArgumentNullException("resources");
+                throw new ArgumentNullException(nameof(resources));
             }
 
             bool[] discarded = new bool[resources.Length];
@@ -147,6 +147,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// Trims the graphics memory allocated by the <c>IDXGIDevice3</c> DXGI device on the app's behalf.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void Trim()
         {
             this.device.Trim();

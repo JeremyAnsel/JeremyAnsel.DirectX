@@ -117,12 +117,12 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (blendDescs == null)
             {
-                throw new ArgumentNullException("blendDescs");
+                throw new ArgumentNullException(nameof(blendDescs));
             }
 
             if (blendDescs.Length != 8)
             {
-                throw new ArgumentOutOfRangeException("blendDescs");
+                throw new ArgumentOutOfRangeException(nameof(blendDescs));
             }
 
             this.renderTargets = (D3D11RenderTargetBlendDesc[])blendDescs.Clone();

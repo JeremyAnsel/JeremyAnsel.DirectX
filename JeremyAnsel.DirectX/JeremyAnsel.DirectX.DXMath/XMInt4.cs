@@ -64,12 +64,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (array.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("array");
+                throw new ArgumentOutOfRangeException(nameof(array));
             }
 
             this.x = array[0];
@@ -124,6 +124,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="value">A <see cref="XMInt4"/>.</param>
         /// <returns>A <see cref="XMVector"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMVector(XMInt4 value)
         {
             return XMVector.LoadSInt4(value);
@@ -135,6 +136,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="value">A <see cref="XMVector"/>.</param>
         /// <returns>A <see cref="XMInt4"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMInt4(XMVector value)
         {
             XMInt4 ret;

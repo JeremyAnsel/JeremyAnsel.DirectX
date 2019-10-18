@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D3D11
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
     using JeremyAnsel.DirectX.Dxgi;
@@ -24,6 +25,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Gets the type of the resource.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ResourceDimension Dimension
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -44,6 +46,7 @@ namespace JeremyAnsel.DirectX.D3D11
             get { return this.GetHandle<ID3D11Resource>().GetEvictionPriority(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.GetHandle<ID3D11Resource>().SetEvictionPriority(value); }
         }
     }

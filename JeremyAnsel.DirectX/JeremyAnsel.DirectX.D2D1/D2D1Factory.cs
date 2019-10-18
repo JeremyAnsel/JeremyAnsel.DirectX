@@ -21,7 +21,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 factory interface.
         /// </summary>
-        private ID2D1Factory factory;
+        private readonly ID2D1Factory factory;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1Factory"/> class.
@@ -100,8 +100,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static D2D1Factory Create(D2D1FactoryType factoryType, D2D1DebugLevel debugLevel)
         {
-            D2D1FactoryOptions factoryOptions = new D2D1FactoryOptions();
-            factoryOptions.DebugLevel = debugLevel;
+            var factoryOptions = new D2D1FactoryOptions(debugLevel);
             return D2D1Factory.Create(factoryType, factoryOptions);
         }
 
@@ -151,6 +150,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="dpiY">The vertical DPI of the desktop.</param>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void GetDesktopDpi(out float dpiX, out float dpiY)
         {
@@ -207,7 +207,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometries == null)
             {
-                throw new ArgumentNullException("geometries");
+                throw new ArgumentNullException(nameof(geometries));
             }
 
             ID2D1GeometryGroup geometryGroup;
@@ -227,7 +227,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (sourceGeometry == null)
             {
-                throw new ArgumentNullException("sourceGeometry");
+                throw new ArgumentNullException(nameof(sourceGeometry));
             }
 
             ID2D1TransformedGeometry transformedGeometry;
@@ -258,7 +258,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (dashes == null)
             {
-                throw new ArgumentNullException("dashes");
+                throw new ArgumentNullException(nameof(dashes));
             }
 
             ID2D1StrokeStyle strokeStyle;
@@ -351,7 +351,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (target == null)
             {
-                throw new ArgumentNullException("target");
+                throw new ArgumentNullException(nameof(target));
             }
 
             ID2D1RenderTarget renderTarget;
@@ -385,7 +385,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (dxgiSurface == null)
             {
-                throw new ArgumentNullException("dxgiSurface");
+                throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
             ID2D1RenderTarget renderTarget;
@@ -405,7 +405,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (dxgiSurface == null)
             {
-                throw new ArgumentNullException("dxgiSurface");
+                throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
             ID2D1RenderTarget renderTarget;
@@ -425,7 +425,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (dxgiSurface == null)
             {
-                throw new ArgumentNullException("dxgiSurface");
+                throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
             ID2D1RenderTarget renderTarget;
@@ -445,7 +445,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (dxgiSurface == null)
             {
-                throw new ArgumentNullException("dxgiSurface");
+                throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
             ID2D1RenderTarget renderTarget;

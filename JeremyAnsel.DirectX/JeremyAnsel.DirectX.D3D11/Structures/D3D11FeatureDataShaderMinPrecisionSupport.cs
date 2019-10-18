@@ -16,12 +16,12 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The minimum precision levels that the driver supports for the pixel shader.
         /// </summary>
-        private D3D11ShaderMinPrecisionSupports pixelShaderMinPrecision;
+        private readonly D3D11ShaderMinPrecisionSupports pixelShaderMinPrecision;
 
         /// <summary>
         /// The minimum precision levels that the driver supports for all other shader stages.
         /// </summary>
-        private D3D11ShaderMinPrecisionSupports allOtherShaderStagesMinPrecision;
+        private readonly D3D11ShaderMinPrecisionSupports allOtherShaderStagesMinPrecision;
 
         /// <summary>
         /// Gets the minimum precision levels that the driver supports for the pixel shader.

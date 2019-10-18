@@ -11,9 +11,11 @@ namespace JeremyAnsel.DirectX.Dxgi
     using System.Text;
     using JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 
+
     /// <summary>
     /// An <c>IDXGIObject</c> interface is a base interface for all DXGI objects. <c>IDXGIObject</c> supports associating caller-defined (private data) with an object and retrieval of an interface to the parent object.
     /// </summary>
+    [SuppressMessage("Design", "CA1063:Implémenter IDisposable correctement", Justification = "Reviewed.")]
     public abstract class DxgiObject : IDisposable, IDxgiReleasable
     {
         /// <summary>
@@ -84,7 +86,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (name == null)
             {
-                throw new ArgumentNullException("name");
+                throw new ArgumentNullException(nameof(name));
             }
 
             if (string.IsNullOrEmpty(text))
@@ -111,7 +113,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (name == null)
             {
-                throw new ArgumentNullException("name");
+                throw new ArgumentNullException(nameof(name));
             }
 
             uint dataSize = 256;

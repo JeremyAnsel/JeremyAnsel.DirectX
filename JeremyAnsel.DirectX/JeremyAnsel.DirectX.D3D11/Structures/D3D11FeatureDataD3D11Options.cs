@@ -17,85 +17,85 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Specifies whether logic operations are available in blend state.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isOutputMergerLogicOperationsSupported;
+        private readonly bool isOutputMergerLogicOperationsSupported;
 
         /// <summary>
         /// Specifies whether the driver can render with no render target views (RTVs) or depth stencil views (DSVs), and only unordered access views (UAVs) bound.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isUavOnlyRenderingForcedSampleCountSupported;
+        private readonly bool isUavOnlyRenderingForcedSampleCountSupported;
 
         /// <summary>
         /// Specifies whether the driver supports the <c>ID3D11DeviceContext1.DiscardView</c> and <c>ID3D11DeviceContext1.DiscardResource</c> methods.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isDiscardApisSeenByDriverSupported;
+        private readonly bool isDiscardApisSeenByDriverSupported;
 
         /// <summary>
         /// Specifies whether the driver supports new semantics for copy and update.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isOptionsForUpdateAndCopySeenByDriverSupported;
+        private readonly bool isOptionsForUpdateAndCopySeenByDriverSupported;
 
         /// <summary>
         /// Specifies whether the driver supports the <c>ID3D11DeviceContext1.ClearView</c> method.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isClearViewSupported;
+        private readonly bool isClearViewSupported;
 
         /// <summary>
         /// Specifies whether you can call <c>ID3D11DeviceContext1.CopySubresourceRegion1</c> with overlapping source and destination rectangles.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isCopyWithOverlapSupported;
+        private readonly bool isCopyWithOverlapSupported;
 
         /// <summary>
         /// Specifies whether the driver supports partial updates of constant buffers.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isConstantBufferPartialUpdateSupported;
+        private readonly bool isConstantBufferPartialUpdateSupported;
 
         /// <summary>
         /// Specifies whether the driver supports new semantics for setting offsets in constant buffers for a shader.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isConstantBufferOffsettingSupported;
+        private readonly bool isConstantBufferOffsettingSupported;
 
         /// <summary>
         /// Specifies whether you can call <c>ID3D11DeviceContext.Map</c> with <see cref="D3D11MapCpuPermission.WriteNoOverwrite"/> on a dynamic constant buffer.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isMapNoOverwriteOnDynamicConstantBufferSupported;
+        private readonly bool isMapNoOverwriteOnDynamicConstantBufferSupported;
 
         /// <summary>
         /// Specifies whether you can call <c>ID3D11DeviceContext.Map</c> with <see cref="D3D11MapCpuPermission.WriteNoOverwrite"/> on a dynamic buffer SRV.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isMapNoOverwriteOnDynamicBufferSrvSupported;
+        private readonly bool isMapNoOverwriteOnDynamicBufferSrvSupported;
 
         /// <summary>
         /// Specifies whether the driver supports multisample rendering when you render with RTVs bound.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isMultisampleRtvWithForcedSampleCountOneSupported;
+        private readonly bool isMultisampleRtvWithForcedSampleCountOneSupported;
 
         /// <summary>
         /// Specifies whether the hardware and driver support the <c>msad4</c> intrinsic function in shaders.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isSad4ShaderInstructionsSupported;
+        private readonly bool isSad4ShaderInstructionsSupported;
 
         /// <summary>
         /// Specifies whether the hardware and driver support the <c>fma</c> intrinsic function and other extended doubles instructions ( <c>DDIV</c> and <c>DRCP</c>) in shaders.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isExtendedDoublesShaderInstructionsSupported;
+        private readonly bool isExtendedDoublesShaderInstructionsSupported;
 
         /// <summary>
         /// Specifies whether the hardware and driver support sharing a greater variety of Texture2D resource types and formats.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isExtendedResourceSharingSupported;
+        private readonly bool isExtendedResourceSharingSupported;
 
         /// <summary>
         /// Gets a value indicating whether logic operations are available in blend state.

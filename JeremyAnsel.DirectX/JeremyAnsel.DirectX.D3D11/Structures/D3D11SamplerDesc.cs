@@ -105,7 +105,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (borderColor != null && borderColor.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("borderColor");
+                throw new ArgumentOutOfRangeException(nameof(borderColor));
             }
 
             this.filter = filter;

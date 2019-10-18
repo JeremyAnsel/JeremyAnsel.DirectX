@@ -16,7 +16,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Unused field.
         /// </summary>
-        private uint unusedFieldNothingToDefine;
+        private readonly uint unusedFieldNothingToDefine;
 
         /// <summary>
         /// Compares two <see cref="D3D11Texture2DMsDsv"/> objects. The result specifies whether the values of the two objects are equal.

@@ -98,6 +98,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMFloat3SharedExponent"/>.</param>
         /// <returns>A packed value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator uint(XMFloat3SharedExponent value)
         {
             return value.v;
@@ -109,6 +110,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A packed value.</param>
         /// <returns>A <see cref="XMFloat3SharedExponent"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMFloat3SharedExponent(uint value)
         {
             return new XMFloat3SharedExponent(value);
@@ -120,6 +122,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMFloat3SharedExponent"/>.</param>
         /// <returns>A <see cref="XMVector"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMVector(XMFloat3SharedExponent value)
         {
             float scale;
@@ -138,6 +141,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMVector"/>.</param>
         /// <returns>A <see cref="XMFloat3SharedExponent"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMFloat3SharedExponent(XMVector value)
         {
             XMFloat3 tmp;

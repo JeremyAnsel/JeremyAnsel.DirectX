@@ -1706,12 +1706,12 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         {
             if (planes == null)
             {
-                throw new ArgumentNullException("planes");
+                throw new ArgumentNullException(nameof(planes));
             }
 
             if (planes.Length != 6)
             {
-                throw new ArgumentOutOfRangeException("planes");
+                throw new ArgumentOutOfRangeException(nameof(planes));
             }
 
             return this.ContainedBy(planes[0], planes[1], planes[2], planes[3], planes[4], planes[5]);

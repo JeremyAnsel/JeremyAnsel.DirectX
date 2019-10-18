@@ -112,12 +112,12 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (buffer == null)
             {
-                throw new ArgumentNullException("buffer");
+                throw new ArgumentNullException(nameof(buffer));
             }
 
             if (view == null)
             {
-                throw new ArgumentNullException("view");
+                throw new ArgumentNullException(nameof(view));
             }
 
             var description = view.Description;
@@ -131,7 +131,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("view");
+                    throw new ArgumentOutOfRangeException(nameof(view));
             }
 
             this.topLeftX = topLeftX;
@@ -175,12 +175,12 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (texture == null)
             {
-                throw new ArgumentNullException("texture");
+                throw new ArgumentNullException(nameof(texture));
             }
 
             if (view == null)
             {
-                throw new ArgumentNullException("view");
+                throw new ArgumentNullException(nameof(view));
             }
 
             var textureDescription = texture.Description;
@@ -199,7 +199,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("view");
+                    throw new ArgumentOutOfRangeException(nameof(view));
             }
 
             uint subResourceWidth = textureDescription.Width / (uint)(1 << (int)mipSlice);
@@ -247,12 +247,12 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (texture == null)
             {
-                throw new ArgumentNullException("texture");
+                throw new ArgumentNullException(nameof(texture));
             }
 
             if (view == null)
             {
-                throw new ArgumentNullException("view");
+                throw new ArgumentNullException(nameof(view));
             }
 
             var textureDescription = texture.Description;
@@ -276,7 +276,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("view");
+                    throw new ArgumentOutOfRangeException(nameof(view));
             }
 
             uint subResourceWidth = textureDescription.Width / (uint)(1 << (int)mipSlice);
@@ -325,12 +325,12 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (texture == null)
             {
-                throw new ArgumentNullException("texture");
+                throw new ArgumentNullException(nameof(texture));
             }
 
             if (view == null)
             {
-                throw new ArgumentNullException("view");
+                throw new ArgumentNullException(nameof(view));
             }
 
             var textureDescription = texture.Description;
@@ -345,7 +345,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("view");
+                    throw new ArgumentOutOfRangeException(nameof(view));
             }
 
             uint subResourceWidth = textureDescription.Width / (uint)(1 << (int)mipSlice);

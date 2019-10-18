@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 class instance interface.
         /// </summary>
-        private ID3D11ClassInstance classInstance;
+        private readonly ID3D11ClassInstance classInstance;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11ClassInstance"/> class.
@@ -42,6 +42,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Gets a description of the current HLSL class.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ClassInstanceDesc Description
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -56,6 +57,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Gets the instance name of the current HLSL class.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public string InstanceName
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -71,6 +73,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Gets the type of the current HLSL class.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public string TypeName
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -88,6 +91,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A class linkage object.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11ClassLinkage GetClassLinkage()
         {

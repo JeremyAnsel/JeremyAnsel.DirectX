@@ -133,7 +133,7 @@ namespace JeremyAnsel.DirectX.DWrite
         {
             if (fontFace == null)
             {
-                throw new ArgumentNullException("fontFace");
+                throw new ArgumentNullException(nameof(fontFace));
             }
 
             IDWriteFont font;

@@ -16,57 +16,57 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The number of vertices read by input assembler.
         /// </summary>
-        private ulong inputAssemblerVertices;
+        private readonly ulong inputAssemblerVertices;
 
         /// <summary>
         /// The number of primitives read by the input assembler.
         /// </summary>
-        private ulong inputAssemblerPrimitives;
+        private readonly ulong inputAssemblerPrimitives;
 
         /// <summary>
         /// The number of times a vertex shader was invoked.
         /// </summary>
-        private ulong vertexShaderInvocations;
+        private readonly ulong vertexShaderInvocations;
 
         /// <summary>
         /// The number of times a geometry shader was invoked.
         /// </summary>
-        private ulong geometryShaderInvocations;
+        private readonly ulong geometryShaderInvocations;
 
         /// <summary>
         /// The number of primitives output by a geometry shader.
         /// </summary>
-        private ulong geometryShaderPrimitives;
+        private readonly ulong geometryShaderPrimitives;
 
         /// <summary>
         /// The number of primitives that were sent to the rasterizer.
         /// </summary>
-        private ulong rasterizerInvocations;
+        private readonly ulong rasterizerInvocations;
 
         /// <summary>
         /// The number of primitives that were rendered.
         /// </summary>
-        private ulong rasterizerPrimitives;
+        private readonly ulong rasterizerPrimitives;
 
         /// <summary>
         /// The number of times a pixel shader was invoked.
         /// </summary>
-        private ulong pixelShaderInvocations;
+        private readonly ulong pixelShaderInvocations;
 
         /// <summary>
         /// The number of times a hull shader was invoked.
         /// </summary>
-        private ulong hullShaderInvocations;
+        private readonly ulong hullShaderInvocations;
 
         /// <summary>
         /// The number of times a domain shader was invoked.
         /// </summary>
-        private ulong domainShaderInvocations;
+        private readonly ulong domainShaderInvocations;
 
         /// <summary>
         /// The number of times a compute shader was invoked.
         /// </summary>
-        private ulong computeShaderInvocations;
+        private readonly ulong computeShaderInvocations;
 
         /// <summary>
         /// Gets the number of vertices read by input assembler.

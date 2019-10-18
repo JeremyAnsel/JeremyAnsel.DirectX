@@ -71,7 +71,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle strokeStyle, float flatteningTolerance)
         {
             D2D1RectF bounds;
-            this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out bounds);
+            this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out bounds);
             return bounds;
         }
 
@@ -93,7 +93,7 @@ namespace JeremyAnsel.DirectX.D2D1
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out bounds);
+                this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out bounds);
             }
             finally
             {
@@ -114,7 +114,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle strokeStyle)
         {
             D2D1RectF bounds;
-            this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out bounds);
+            this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out bounds);
             return bounds;
         }
 
@@ -135,7 +135,7 @@ namespace JeremyAnsel.DirectX.D2D1
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out bounds);
+                this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out bounds);
             }
             finally
             {
@@ -158,7 +158,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle strokeStyle, float flatteningTolerance)
         {
             bool contains;
-            this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out contains);
+            this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out contains);
             return contains;
         }
 
@@ -181,7 +181,7 @@ namespace JeremyAnsel.DirectX.D2D1
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out contains);
+                this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out contains);
             }
             finally
             {
@@ -203,7 +203,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle strokeStyle)
         {
             bool contains;
-            this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out contains);
+            this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out contains);
             return contains;
         }
 
@@ -225,7 +225,7 @@ namespace JeremyAnsel.DirectX.D2D1
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out contains);
+                this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out contains);
             }
             finally
             {
@@ -325,7 +325,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (inputGeometry == null)
             {
-                throw new ArgumentNullException("inputGeometry");
+                throw new ArgumentNullException(nameof(inputGeometry));
             }
 
             D2D1GeometryRelation relation;
@@ -346,7 +346,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (inputGeometry == null)
             {
-                throw new ArgumentNullException("inputGeometry");
+                throw new ArgumentNullException(nameof(inputGeometry));
             }
 
             D2D1GeometryRelation relation;
@@ -376,7 +376,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (inputGeometry == null)
             {
-                throw new ArgumentNullException("inputGeometry");
+                throw new ArgumentNullException(nameof(inputGeometry));
             }
 
             D2D1GeometryRelation relation;
@@ -396,7 +396,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (inputGeometry == null)
             {
-                throw new ArgumentNullException("inputGeometry");
+                throw new ArgumentNullException(nameof(inputGeometry));
             }
 
             D2D1GeometryRelation relation;
@@ -426,7 +426,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             this.GetHandle<ID2D1Geometry>().Simplify(simplificationOption, IntPtr.Zero, flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
@@ -444,7 +444,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
@@ -469,7 +469,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             this.GetHandle<ID2D1Geometry>().Simplify(simplificationOption, IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
@@ -486,7 +486,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
@@ -511,7 +511,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (tessellationSink == null)
             {
-                throw new ArgumentNullException("tessellationSink");
+                throw new ArgumentNullException(nameof(tessellationSink));
             }
 
             this.GetHandle<ID2D1Geometry>().Tessellate(IntPtr.Zero, flatteningTolerance, (ID2D1TessellationSink)tessellationSink.Handle);
@@ -528,7 +528,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (tessellationSink == null)
             {
-                throw new ArgumentNullException("tessellationSink");
+                throw new ArgumentNullException(nameof(tessellationSink));
             }
 
             GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
@@ -552,7 +552,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (tessellationSink == null)
             {
-                throw new ArgumentNullException("tessellationSink");
+                throw new ArgumentNullException(nameof(tessellationSink));
             }
 
             this.GetHandle<ID2D1Geometry>().Tessellate(IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, (ID2D1TessellationSink)tessellationSink.Handle);
@@ -568,7 +568,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (tessellationSink == null)
             {
-                throw new ArgumentNullException("tessellationSink");
+                throw new ArgumentNullException(nameof(tessellationSink));
             }
 
             GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
@@ -597,12 +597,12 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (inputGeometry == null)
             {
-                throw new ArgumentNullException("inputGeometry");
+                throw new ArgumentNullException(nameof(inputGeometry));
             }
 
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             this.GetHandle<ID2D1Geometry>().CombineWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), combineMode, IntPtr.Zero, flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
@@ -623,12 +623,12 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (inputGeometry == null)
             {
-                throw new ArgumentNullException("inputGeometry");
+                throw new ArgumentNullException(nameof(inputGeometry));
             }
 
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             GCHandle inputGeometryTransformHandle = GCHandle.Alloc(inputGeometryTransform, GCHandleType.Pinned);
@@ -656,12 +656,12 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (inputGeometry == null)
             {
-                throw new ArgumentNullException("inputGeometry");
+                throw new ArgumentNullException(nameof(inputGeometry));
             }
 
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             this.GetHandle<ID2D1Geometry>().CombineWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), combineMode, IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
@@ -681,12 +681,12 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (inputGeometry == null)
             {
-                throw new ArgumentNullException("inputGeometry");
+                throw new ArgumentNullException(nameof(inputGeometry));
             }
 
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             GCHandle inputGeometryTransformHandle = GCHandle.Alloc(inputGeometryTransform, GCHandleType.Pinned);
@@ -712,7 +712,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             this.GetHandle<ID2D1Geometry>().Outline(IntPtr.Zero, flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
@@ -730,7 +730,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
@@ -755,7 +755,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             this.GetHandle<ID2D1Geometry>().Outline(IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
@@ -772,7 +772,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
@@ -1026,10 +1026,10 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+            this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
         }
 
         /// <summary>
@@ -1046,14 +1046,14 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {
@@ -1073,10 +1073,10 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+            this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
         }
 
         /// <summary>
@@ -1092,14 +1092,14 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle == null ? null : strokeStyle.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {

@@ -16,7 +16,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// A handle to a shared resource.
         /// </summary>
-        private IntPtr handle;
+        private readonly IntPtr handle;
 
         /// <summary>
         /// Gets a handle to a shared resource.

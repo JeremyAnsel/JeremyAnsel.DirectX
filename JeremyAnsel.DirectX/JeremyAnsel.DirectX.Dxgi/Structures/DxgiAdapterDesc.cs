@@ -17,47 +17,47 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// A string that contains the adapter description. On feature level 9 graphics hardware, “Software Adapter”.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 128)]
-        private string adapterDescription;
+        private readonly string adapterDescription;
 
         /// <summary>
         /// The PCI ID of the hardware vendor. On feature level 9 graphics hardware, 0.
         /// </summary>
-        private uint vendorId;
+        private readonly uint vendorId;
 
         /// <summary>
         /// The PCI ID of the hardware device. On feature level 9 graphics hardware, 0.
         /// </summary>
-        private uint deviceId;
+        private readonly uint deviceId;
 
         /// <summary>
         /// The PCI ID of the sub system. On feature level 9 graphics hardware, 0.
         /// </summary>
-        private uint subSysId;
+        private readonly uint subSysId;
 
         /// <summary>
         /// The PCI ID of the revision number of the adapter. On feature level 9 graphics hardware, 0.
         /// </summary>
-        private uint revision;
+        private readonly uint revision;
 
         /// <summary>
         /// The number of bytes of dedicated video memory that are not shared with the CPU.
         /// </summary>
-        private UIntPtr dedicatedVideoMemory;
+        private readonly UIntPtr dedicatedVideoMemory;
 
         /// <summary>
         /// The number of bytes of dedicated system memory that are not shared with the CPU. This memory is allocated from available system memory at boot time.
         /// </summary>
-        private UIntPtr dedicatedSystemMemory;
+        private readonly UIntPtr dedicatedSystemMemory;
 
         /// <summary>
         /// The number of bytes of shared system memory. This is the maximum value of system memory that may be consumed by the adapter during operation. Any incidental memory consumed by the driver as it manages and uses video memory is additional.
         /// </summary>
-        private UIntPtr sharedSystemMemory;
+        private readonly UIntPtr sharedSystemMemory;
 
         /// <summary>
         /// A unique value that identifies the adapter.
         /// </summary>
-        private ulong adapterLuid;
+        private readonly ulong adapterLuid;
 
         /// <summary>
         /// Gets a string that contains the adapter description. On feature level 9 graphics hardware, “Software Adapter”.

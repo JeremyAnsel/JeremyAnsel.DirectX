@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Indicates whether compute shaders and raw and structured buffers are supported.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isComputeShadersPlusRawAndStructuredBuffersViaShader4XSupported;
+        private readonly bool isComputeShadersPlusRawAndStructuredBuffersViaShader4XSupported;
 
         /// <summary>
         /// Gets a value indicating whether compute shaders and raw and structured buffers are supported.

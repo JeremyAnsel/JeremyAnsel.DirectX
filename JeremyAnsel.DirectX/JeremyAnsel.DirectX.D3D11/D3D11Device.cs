@@ -21,7 +21,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 device interface.
         /// </summary>
-        private ID3D11Device device;
+        private readonly ID3D11Device device;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11Device"/> class.
@@ -210,7 +210,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (name == null)
             {
-                throw new ArgumentNullException("name");
+                throw new ArgumentNullException(nameof(name));
             }
 
             if (string.IsNullOrEmpty(text))
@@ -237,7 +237,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (name == null)
             {
-                throw new ArgumentNullException("name");
+                throw new ArgumentNullException(nameof(name));
             }
 
             uint dataSize = 256;
@@ -371,12 +371,12 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (data == null)
             {
-                throw new ArgumentNullException("data");
+                throw new ArgumentNullException(nameof(data));
             }
 
             if (data.Length == 0)
             {
-                throw new ArgumentOutOfRangeException("data");
+                throw new ArgumentOutOfRangeException(nameof(data));
             }
 
             int dataSize = Marshal.SizeOf(typeof(T));
@@ -442,7 +442,7 @@ namespace JeremyAnsel.DirectX.D3D11
 
             if (data.Length != length)
             {
-                throw new ArgumentOutOfRangeException("data");
+                throw new ArgumentOutOfRangeException(nameof(data));
             }
 
             var subResources = new D3D11SubResourceDataPtr[length];
@@ -486,7 +486,7 @@ namespace JeremyAnsel.DirectX.D3D11
 
             if (data.Length != length)
             {
-                throw new ArgumentOutOfRangeException("data");
+                throw new ArgumentOutOfRangeException(nameof(data));
             }
 
             var subResources = new D3D11SubResourceDataPtr[length];
@@ -530,7 +530,7 @@ namespace JeremyAnsel.DirectX.D3D11
 
             if (data.Length != length)
             {
-                throw new ArgumentOutOfRangeException("data");
+                throw new ArgumentOutOfRangeException(nameof(data));
             }
 
             var subResources = new D3D11SubResourceDataPtr[length];
@@ -558,7 +558,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (resource == null)
             {
-                throw new ArgumentNullException("resource");
+                throw new ArgumentNullException(nameof(resource));
             }
 
             if (desc == null)
@@ -594,7 +594,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (resource == null)
             {
-                throw new ArgumentNullException("resource");
+                throw new ArgumentNullException(nameof(resource));
             }
 
             if (desc == null)
@@ -630,7 +630,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (resource == null)
             {
-                throw new ArgumentNullException("resource");
+                throw new ArgumentNullException(nameof(resource));
             }
 
             if (desc == null)
@@ -666,7 +666,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (resource == null)
             {
-                throw new ArgumentNullException("resource");
+                throw new ArgumentNullException(nameof(resource));
             }
 
             if (desc == null)
@@ -700,7 +700,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (elementDescs == null)
             {
-                throw new ArgumentNullException("elementDescs");
+                throw new ArgumentNullException(nameof(elementDescs));
             }
 
             return new D3D11InputLayout(this.device.CreateInputLayout(
@@ -722,13 +722,13 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (shaderBytecode == null)
             {
-                throw new ArgumentNullException("shaderBytecode");
+                throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
             return new D3D11VertexShader(this.device.CreateVertexShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage == null ? null : classLinkage.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
         }
 
         /// <summary>
@@ -743,13 +743,13 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (shaderBytecode == null)
             {
-                throw new ArgumentNullException("shaderBytecode");
+                throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
             return new D3D11GeometryShader(this.device.CreateGeometryShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage == null ? null : classLinkage.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
         }
 
         /// <summary>
@@ -772,17 +772,17 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (shaderBytecode == null)
             {
-                throw new ArgumentNullException("shaderBytecode");
+                throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
             if (streamOutputDeclaration == null)
             {
-                throw new ArgumentNullException("streamOutputDeclaration");
+                throw new ArgumentNullException(nameof(streamOutputDeclaration));
             }
 
             if (bufferStrides == null)
             {
-                throw new ArgumentNullException("bufferStrides");
+                throw new ArgumentNullException(nameof(bufferStrides));
             }
 
             return new D3D11GeometryShader(this.device.CreateGeometryShaderWithStreamOutput(
@@ -793,7 +793,7 @@ namespace JeremyAnsel.DirectX.D3D11
                 bufferStrides,
                 (uint)bufferStrides.Length,
                 rasterizedStream,
-                classLinkage == null ? null : classLinkage.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
         }
 
         /// <summary>
@@ -808,13 +808,13 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (shaderBytecode == null)
             {
-                throw new ArgumentNullException("shaderBytecode");
+                throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
             return new D3D11PixelShader(this.device.CreatePixelShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage == null ? null : classLinkage.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
         }
 
         /// <summary>
@@ -829,13 +829,13 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (shaderBytecode == null)
             {
-                throw new ArgumentNullException("shaderBytecode");
+                throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
             return new D3D11HullShader(this.device.CreateHullShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage == null ? null : classLinkage.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
         }
 
         /// <summary>
@@ -850,13 +850,13 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (shaderBytecode == null)
             {
-                throw new ArgumentNullException("shaderBytecode");
+                throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
             return new D3D11DomainShader(this.device.CreateDomainShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage == null ? null : classLinkage.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
         }
 
         /// <summary>
@@ -871,13 +871,13 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (shaderBytecode == null)
             {
-                throw new ArgumentNullException("shaderBytecode");
+                throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
             return new D3D11ComputeShader(this.device.CreateComputeShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage == null ? null : classLinkage.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
         }
 
         /// <summary>
@@ -1021,6 +1021,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A counter information.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11CounterInfo CheckCounterInfo()
         {
             D3D11CounterInfo counterInfo;
@@ -1071,6 +1072,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "3#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "4#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "5#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool CheckCounter(
             D3D11CounterDesc desc,
@@ -1170,7 +1172,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     return this.CheckFeatureSupport<D3D11FeatureDataD3D9Options1>(D3D11Feature.D3D9Options1);
 
                 default:
-                    throw new ArgumentOutOfRangeException("feature");
+                    throw new ArgumentOutOfRangeException(nameof(feature));
             }
         }
 
@@ -1343,6 +1345,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>An immediate context.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11DeviceContext GetImmediateContext()
         {
@@ -1358,6 +1361,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="feature">Describes which feature to query for support.</param>
         /// <returns>A structure filled with data that describes the feature support.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         private T CheckFeatureSupport<T>(D3D11Feature feature)
             where T : struct
         {

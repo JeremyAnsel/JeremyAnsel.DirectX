@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 domain shader interface.
         /// </summary>
-        private ID3D11DomainShader domainShader;
+        private readonly ID3D11DomainShader domainShader;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11DomainShader"/> class.

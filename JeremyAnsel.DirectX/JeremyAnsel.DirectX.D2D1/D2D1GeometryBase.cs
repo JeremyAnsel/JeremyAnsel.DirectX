@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 geometry interface.
         /// </summary>
-        private ID2D1Geometry geometry;
+        private readonly ID2D1Geometry geometry;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1GeometryBase"/> class.

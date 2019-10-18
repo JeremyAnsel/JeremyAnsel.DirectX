@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Specifies whether a rendering device batches rendering commands and performs multipass rendering into tiles or bins over a render area.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isTileBasedDeferredRendererSupported;
+        private readonly bool isTileBasedDeferredRendererSupported;
 
         /// <summary>
         /// Gets a value indicating whether a rendering device batches rendering commands and performs multipass rendering into tiles or bins over a render area.

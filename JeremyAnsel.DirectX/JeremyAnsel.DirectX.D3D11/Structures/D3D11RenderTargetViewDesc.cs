@@ -219,7 +219,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("viewDimension");
+                    throw new ArgumentOutOfRangeException(nameof(viewDimension));
             }
         }
 
@@ -238,7 +238,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (buffer == null)
             {
-                throw new ArgumentNullException("buffer");
+                throw new ArgumentNullException(nameof(buffer));
             }
 
             this.buffer = new D3D11BufferRtv();
@@ -338,7 +338,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (texture == null)
             {
-                throw new ArgumentNullException("texture");
+                throw new ArgumentNullException(nameof(texture));
             }
 
             this.buffer = new D3D11BufferRtv();
@@ -389,7 +389,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("viewDimension");
+                    throw new ArgumentOutOfRangeException(nameof(viewDimension));
             }
         }
 
@@ -472,7 +472,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (texture == null)
             {
-                throw new ArgumentNullException("texture");
+                throw new ArgumentNullException(nameof(texture));
             }
 
             this.buffer = new D3D11BufferRtv();
@@ -539,7 +539,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("viewDimension");
+                    throw new ArgumentOutOfRangeException(nameof(viewDimension));
             }
         }
 
@@ -612,7 +612,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (texture == null)
             {
-                throw new ArgumentNullException("texture");
+                throw new ArgumentNullException(nameof(texture));
             }
 
             this.buffer = new D3D11BufferRtv();

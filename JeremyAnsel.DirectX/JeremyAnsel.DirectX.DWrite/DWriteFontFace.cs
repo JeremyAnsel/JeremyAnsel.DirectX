@@ -142,6 +142,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <remarks>The metrics returned by this function are in font design units.</remarks>
         /// <returns><see cref="DWriteFontMetrics"/></returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontMetrics GetMetrics()
         {

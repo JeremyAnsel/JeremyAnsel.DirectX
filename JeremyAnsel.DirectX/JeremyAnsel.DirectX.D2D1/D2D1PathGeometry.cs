@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 geometry interface.
         /// </summary>
-        private ID2D1PathGeometry geometry;
+        private readonly ID2D1PathGeometry geometry;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1PathGeometry"/> class.
@@ -88,7 +88,7 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (geometrySink == null)
             {
-                throw new ArgumentNullException("geometrySink");
+                throw new ArgumentNullException(nameof(geometrySink));
             }
 
             this.geometry.Stream(geometrySink.GetHandle<ID2D1GeometrySink>());

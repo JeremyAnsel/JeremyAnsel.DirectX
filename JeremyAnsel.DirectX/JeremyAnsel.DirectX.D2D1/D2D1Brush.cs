@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D2D1
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D2D1.ComInterfaces;
 
@@ -29,6 +30,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.GetHandle<ID2D1Brush>().GetOpacity(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.GetHandle<ID2D1Brush>().SetOpacity(value); }
         }
 
@@ -38,6 +40,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1Matrix3X2F Transform
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 D2D1Matrix3X2F transform;
@@ -46,6 +49,7 @@ namespace JeremyAnsel.DirectX.D2D1
             }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set
             {
                 this.GetHandle<ID2D1Brush>().SetTransform(ref value);

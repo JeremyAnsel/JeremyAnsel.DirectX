@@ -219,7 +219,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("viewDimension");
+                    throw new ArgumentOutOfRangeException(nameof(viewDimension));
             }
         }
 
@@ -324,7 +324,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (texture == null)
             {
-                throw new ArgumentNullException("texture");
+                throw new ArgumentNullException(nameof(texture));
             }
 
             this.texture1D = new D3D11Texture1DDsv();
@@ -374,7 +374,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("viewDimension");
+                    throw new ArgumentOutOfRangeException(nameof(viewDimension));
             }
         }
 
@@ -479,7 +479,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (texture == null)
             {
-                throw new ArgumentNullException("texture");
+                throw new ArgumentNullException(nameof(texture));
             }
 
             this.texture1D = new D3D11Texture1DDsv();
@@ -545,7 +545,7 @@ namespace JeremyAnsel.DirectX.D3D11
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("viewDimension");
+                    throw new ArgumentOutOfRangeException(nameof(viewDimension));
             }
         }
 

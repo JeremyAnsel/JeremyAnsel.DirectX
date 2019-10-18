@@ -16,12 +16,12 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// A value that describes the width, in bytes, of the surface.
         /// </summary>
-        private int pitch;
+        private readonly int pitch;
 
         /// <summary>
         /// A pointer to the image buffer of the surface.
         /// </summary>
-        private IntPtr bitsPointer;
+        private readonly IntPtr bitsPointer;
 
         /// <summary>
         /// Gets a value that describes the width, in bytes, of the surface.

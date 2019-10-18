@@ -117,6 +117,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="color">A <see cref="XMColorRgba"/>.</param>
         /// <returns>A packed value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator uint(XMColorRgba color)
         {
             return *(uint*)&color;
@@ -128,6 +129,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="color">A packed value.</param>
         /// <returns>A <see cref="XMColorRgba"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMColorRgba(uint color)
         {
             return *(XMColorRgba*)&color;
@@ -139,6 +141,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMColorRgba"/>.</param>
         /// <returns>A <see cref="XMVector"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMVector(XMColorRgba value)
         {
             //// int32_t -> Float conversions are done in one instruction.
@@ -159,6 +162,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <param name="value">A <see cref="XMVector"/>.</param>
         /// <returns>A <see cref="XMColorRgba"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMColorRgba(XMVector value)
         {
             XMVector n = value.Saturate();

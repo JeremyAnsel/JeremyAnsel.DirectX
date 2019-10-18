@@ -11,9 +11,11 @@ namespace JeremyAnsel.DirectX.D3D11
     using System.Text;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
 
+
     /// <summary>
     /// A device-child interface accesses data used by a device.
     /// </summary>
+    [SuppressMessage("Design", "CA1063:Implémenter IDisposable correctement", Justification = "Reviewed.")]
     public abstract class D3D11DeviceChild : IDisposable, ID3D11Releasable
     {
         /// <summary>
@@ -84,7 +86,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (name == null)
             {
-                throw new ArgumentNullException("name");
+                throw new ArgumentNullException(nameof(name));
             }
 
             if (string.IsNullOrEmpty(text))
@@ -111,7 +113,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (name == null)
             {
-                throw new ArgumentNullException("name");
+                throw new ArgumentNullException(nameof(name));
             }
 
             uint dataSize = 256;
@@ -149,6 +151,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A device.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Device GetDevice()
         {

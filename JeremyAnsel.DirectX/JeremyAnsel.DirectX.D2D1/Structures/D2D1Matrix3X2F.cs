@@ -72,12 +72,12 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             if (values == null)
             {
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
             }
 
             if (values.Length != 6)
             {
-                throw new ArgumentOutOfRangeException("values");
+                throw new ArgumentOutOfRangeException(nameof(values));
             }
 
             this.m11 = values[0];

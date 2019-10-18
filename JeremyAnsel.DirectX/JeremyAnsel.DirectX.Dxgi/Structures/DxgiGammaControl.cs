@@ -86,12 +86,12 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (curve == null)
             {
-                throw new ArgumentNullException("curve");
+                throw new ArgumentNullException(nameof(curve));
             }
 
             if (curve.Length != 1025)
             {
-                throw new ArgumentOutOfRangeException("curve");
+                throw new ArgumentOutOfRangeException(nameof(curve));
             }
 
             if (this.gammaCurve == null)

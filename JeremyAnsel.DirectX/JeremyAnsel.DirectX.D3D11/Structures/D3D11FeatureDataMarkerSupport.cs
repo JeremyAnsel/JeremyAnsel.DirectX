@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Specifies whether the hardware and driver support a GPU profiling technique that can be used with development tools.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isProfileSupported;
+        private readonly bool isProfileSupported;
 
         /// <summary>
         /// Gets a value indicating whether the hardware and driver support a GPU profiling technique that can be used with development tools.

@@ -164,7 +164,7 @@ namespace JeremyAnsel.DirectX.DWrite
         {
             if (fontFiles == null)
             {
-                throw new ArgumentNullException("fontFiles");
+                throw new ArgumentNullException(nameof(fontFiles));
             }
 
             IDWriteFontFace fontFace;
@@ -275,12 +275,12 @@ namespace JeremyAnsel.DirectX.DWrite
         {
             if (text == null)
             {
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             }
 
             if (textFormat == null)
             {
-                throw new ArgumentNullException("textFormat");
+                throw new ArgumentNullException(nameof(textFormat));
             }
 
             IDWriteTextLayout textLayout;

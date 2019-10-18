@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI swap chain interface.
         /// </summary>
-        private IDxgiSwapChain1 swapChain;
+        private readonly IDxgiSwapChain1 swapChain;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiSwapChain2"/> class.
@@ -173,7 +173,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (dirtyRects == null)
             {
-                throw new ArgumentNullException("dirtyRects");
+                throw new ArgumentNullException(nameof(dirtyRects));
             }
 
             var dirtyRectsHandle = GCHandle.Alloc(dirtyRects[0], GCHandleType.Pinned);

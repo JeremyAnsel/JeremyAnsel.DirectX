@@ -19,7 +19,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI factory interface.
         /// </summary>
-        private IDxgiFactory2 factory;
+        private readonly IDxgiFactory2 factory;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiFactory2"/> class.

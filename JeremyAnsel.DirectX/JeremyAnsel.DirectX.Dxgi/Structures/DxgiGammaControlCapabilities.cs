@@ -17,28 +17,28 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <value>true</value> if scaling and offset operations are supported during gamma correction; otherwise, <value>false</value>.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isScaleAndOffsetSupported;
+        private readonly bool isScaleAndOffsetSupported;
 
         /// <summary>
         /// A value describing the maximum range of the control-point positions.
         /// </summary>
-        private float maximumConvertedValue;
+        private readonly float maximumConvertedValue;
 
         /// <summary>
         /// A value describing the minimum range of the control-point positions.
         /// </summary>
-        private float minimumConvertedValue;
+        private readonly float minimumConvertedValue;
 
         /// <summary>
         /// A value describing the number of control points in the array.
         /// </summary>
-        private uint gammaControlPointsCount;
+        private readonly uint gammaControlPointsCount;
 
         /// <summary>
         /// An array of values describing control points; the maximum length of control points is 1025.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1025)]
-        private float[] gammaControlPointPositions;
+        private readonly float[] gammaControlPointPositions;
 
         /// <summary>
         /// Gets a value indicating whether scaling and offset operations are supported during gamma correction.

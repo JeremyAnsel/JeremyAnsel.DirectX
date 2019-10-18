@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 render target interface.
         /// </summary>
-        private ID2D1BitmapRenderTarget renderTarget;
+        private readonly ID2D1BitmapRenderTarget renderTarget;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1BitmapRenderTarget"/> class.

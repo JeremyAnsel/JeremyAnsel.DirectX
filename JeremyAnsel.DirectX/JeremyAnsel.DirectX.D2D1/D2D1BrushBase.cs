@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 brush interface.
         /// </summary>
-        private ID2D1Brush brush;
+        private readonly ID2D1Brush brush;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1BrushBase"/> class.

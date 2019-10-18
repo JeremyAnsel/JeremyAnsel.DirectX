@@ -25,7 +25,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (swapChain == null)
             {
-                throw new ArgumentNullException("swapChain");
+                throw new ArgumentNullException(nameof(swapChain));
             }
 
             return new D3D11Texture2D((ID3D11Texture2D)swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID));
@@ -42,7 +42,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (swapChain == null)
             {
-                throw new ArgumentNullException("swapChain");
+                throw new ArgumentNullException(nameof(swapChain));
             }
 
             return new D3D11Texture2D((ID3D11Texture2D)swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID));
@@ -59,7 +59,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (swapChain == null)
             {
-                throw new ArgumentNullException("swapChain");
+                throw new ArgumentNullException(nameof(swapChain));
             }
 
             return new D3D11Texture2D((ID3D11Texture2D)swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID));
@@ -76,7 +76,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (swapChain == null)
             {
-                throw new ArgumentNullException("swapChain");
+                throw new ArgumentNullException(nameof(swapChain));
             }
 
             return new D3D11Texture2D((ID3D11Texture2D)swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID));

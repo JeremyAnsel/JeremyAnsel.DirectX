@@ -65,12 +65,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (array.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("array");
+                throw new ArgumentOutOfRangeException(nameof(array));
             }
 
             this.x = array[0];
@@ -88,12 +88,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (array.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("array");
+                throw new ArgumentOutOfRangeException(nameof(array));
             }
 
             fixed (XMVector* v = &this)
@@ -114,12 +114,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (array.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("array");
+                throw new ArgumentOutOfRangeException(nameof(array));
             }
 
             fixed (XMVector* v = &this)
@@ -140,12 +140,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
 
             if (array.Length != 16)
             {
-                throw new ArgumentOutOfRangeException("array");
+                throw new ArgumentOutOfRangeException(nameof(array));
             }
 
             fixed (XMVector* v = &this)
@@ -417,7 +417,7 @@ namespace JeremyAnsel.DirectX.DXMath
             {
                 if (index < 0 || index >= 4)
                 {
-                    throw new ArgumentOutOfRangeException("index");
+                    throw new ArgumentOutOfRangeException(nameof(index));
                 }
 
                 fixed (XMVector* v = &this)
@@ -431,7 +431,7 @@ namespace JeremyAnsel.DirectX.DXMath
             {
                 if (index < 0 || index >= 4)
                 {
-                    throw new ArgumentOutOfRangeException("index");
+                    throw new ArgumentOutOfRangeException(nameof(index));
                 }
 
                 fixed (XMVector* v = &this)
@@ -561,6 +561,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="value">The vector.</param>
         /// <returns>An array of float.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator float[](XMVector value)
         {
             return value.ToArray();
@@ -621,12 +622,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (constants == null)
             {
-                throw new ArgumentNullException("constants");
+                throw new ArgumentNullException(nameof(constants));
             }
 
             if (constants.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("constants");
+                throw new ArgumentOutOfRangeException(nameof(constants));
             }
 
             XMVector result;
@@ -651,12 +652,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (intConstant < -16 || intConstant > 15)
             {
-                throw new ArgumentOutOfRangeException("intConstant");
+                throw new ArgumentOutOfRangeException(nameof(intConstant));
             }
 
             if (divExponent >= 32)
             {
-                throw new ArgumentOutOfRangeException("divExponent");
+                throw new ArgumentOutOfRangeException(nameof(divExponent));
             }
 
             XMVector v;
@@ -679,7 +680,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (intConstant < -16 || intConstant > 15)
             {
-                throw new ArgumentOutOfRangeException("intConstant");
+                throw new ArgumentOutOfRangeException(nameof(intConstant));
             }
 
             XMVector v;
@@ -735,12 +736,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             if (source.Length != 2)
             {
-                throw new ArgumentOutOfRangeException("source");
+                throw new ArgumentOutOfRangeException(nameof(source));
             }
 
             XMVector v;
@@ -813,12 +814,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             if (source.Length != 3)
             {
-                throw new ArgumentOutOfRangeException("source");
+                throw new ArgumentOutOfRangeException(nameof(source));
             }
 
             XMVector v;
@@ -891,12 +892,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             if (source.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("source");
+                throw new ArgumentOutOfRangeException(nameof(source));
             }
 
             XMVector v;
@@ -1092,22 +1093,22 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if ((uint)permuteX > 7)
             {
-                throw new ArgumentOutOfRangeException("permuteX");
+                throw new ArgumentOutOfRangeException(nameof(permuteX));
             }
 
             if ((uint)permuteY > 7)
             {
-                throw new ArgumentOutOfRangeException("permuteY");
+                throw new ArgumentOutOfRangeException(nameof(permuteY));
             }
 
             if ((uint)permuteZ > 7)
             {
-                throw new ArgumentOutOfRangeException("permuteZ");
+                throw new ArgumentOutOfRangeException(nameof(permuteZ));
             }
 
             if ((uint)permuteW > 7)
             {
-                throw new ArgumentOutOfRangeException("permuteW");
+                throw new ArgumentOutOfRangeException(nameof(permuteW));
             }
 
             uint*[] a_ptr = new uint*[] { (uint*)&v1, (uint*)&v2 };
@@ -1135,22 +1136,22 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (index0 >= 2)
             {
-                throw new ArgumentOutOfRangeException("index0");
+                throw new ArgumentOutOfRangeException(nameof(index0));
             }
 
             if (index1 >= 2)
             {
-                throw new ArgumentOutOfRangeException("index1");
+                throw new ArgumentOutOfRangeException(nameof(index1));
             }
 
             if (index2 >= 2)
             {
-                throw new ArgumentOutOfRangeException("index2");
+                throw new ArgumentOutOfRangeException(nameof(index2));
             }
 
             if (index3 >= 2)
             {
-                throw new ArgumentOutOfRangeException("index3");
+                throw new ArgumentOutOfRangeException(nameof(index3));
             }
 
             return XMVector.FromInt(
@@ -1170,12 +1171,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (indexes == null)
             {
-                throw new ArgumentNullException("indexes");
+                throw new ArgumentNullException(nameof(indexes));
             }
 
             if (indexes.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("indexes");
+                throw new ArgumentOutOfRangeException(nameof(indexes));
             }
 
             return XMVector.SelectControl(indexes[0], indexes[1], indexes[2], indexes[3]);
@@ -1249,7 +1250,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (elements >= 4)
             {
-                throw new ArgumentOutOfRangeException("elements");
+                throw new ArgumentOutOfRangeException(nameof(elements));
             }
 
             return XMVector.Permute(
@@ -2709,7 +2710,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (index < 0 || index >= 4)
             {
-                throw new ArgumentOutOfRangeException("index");
+                throw new ArgumentOutOfRangeException(nameof(index));
             }
 
             fixed (XMVector* v = &this)
@@ -2728,7 +2729,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (index < 0 || index >= 4)
             {
-                throw new ArgumentOutOfRangeException("index");
+                throw new ArgumentOutOfRangeException(nameof(index));
             }
 
             fixed (XMVector* v = &this)
@@ -2748,7 +2749,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (index < 0 || index >= 4)
             {
-                throw new ArgumentOutOfRangeException("index");
+                throw new ArgumentOutOfRangeException(nameof(index));
             }
 
             fixed (XMVector* v = &this)
@@ -2767,7 +2768,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (index < 0 || index >= 4)
             {
-                throw new ArgumentOutOfRangeException("index");
+                throw new ArgumentOutOfRangeException(nameof(index));
             }
 
             fixed (XMVector* v = &this)
@@ -2786,7 +2787,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (divExponent >= 32)
             {
-                throw new ArgumentOutOfRangeException("divExponent");
+                throw new ArgumentOutOfRangeException(nameof(divExponent));
             }
 
             float scale = 1.0f / (float)(1U << (int)divExponent);
@@ -2814,7 +2815,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (mulExponent >= 32)
             {
-                throw new ArgumentOutOfRangeException("mulExponent");
+                throw new ArgumentOutOfRangeException(nameof(mulExponent));
             }
 
             float scale = (float)(1U << (int)mulExponent);
@@ -2862,7 +2863,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (divExponent >= 32)
             {
-                throw new ArgumentOutOfRangeException("divExponent");
+                throw new ArgumentOutOfRangeException(nameof(divExponent));
             }
 
             float scale = 1.0f / (float)(1U << (int)divExponent);
@@ -2890,7 +2891,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (mulExponent >= 32)
             {
-                throw new ArgumentOutOfRangeException("mulExponent");
+                throw new ArgumentOutOfRangeException(nameof(mulExponent));
             }
 
             float scale = (float)(1U << (int)mulExponent);
@@ -3079,22 +3080,22 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if ((uint)e0 >= 4)
             {
-                throw new ArgumentOutOfRangeException("e0");
+                throw new ArgumentOutOfRangeException(nameof(e0));
             }
 
             if ((uint)e1 >= 4)
             {
-                throw new ArgumentOutOfRangeException("e1");
+                throw new ArgumentOutOfRangeException(nameof(e1));
             }
 
             if ((uint)e2 >= 4)
             {
-                throw new ArgumentOutOfRangeException("e2");
+                throw new ArgumentOutOfRangeException(nameof(e2));
             }
 
             if ((uint)e3 >= 4)
             {
-                throw new ArgumentOutOfRangeException("e3");
+                throw new ArgumentOutOfRangeException(nameof(e3));
             }
 
             return new XMVector(this[(int)e0], this[(int)e1], this[(int)e2], this[(int)e3]);
@@ -3110,12 +3111,12 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (elements == null)
             {
-                throw new ArgumentNullException("elements");
+                throw new ArgumentNullException(nameof(elements));
             }
 
             if (elements.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("elements");
+                throw new ArgumentOutOfRangeException(nameof(elements));
             }
 
             return new XMVector(this[(int)elements[0]], this[(int)elements[1]], this[(int)elements[2]], this[(int)elements[3]]);
@@ -3131,7 +3132,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (elements >= 4)
             {
-                throw new ArgumentOutOfRangeException("elements");
+                throw new ArgumentOutOfRangeException(nameof(elements));
             }
 
             return this.Swizzle(
@@ -3151,7 +3152,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             if (elements >= 4)
             {
-                throw new ArgumentOutOfRangeException("elements");
+                throw new ArgumentOutOfRangeException(nameof(elements));
             }
 
             return this.Swizzle(

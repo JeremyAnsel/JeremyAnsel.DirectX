@@ -22,7 +22,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI surface interface.
         /// </summary>
-        private IDxgiSurface1 surface;
+        private readonly IDxgiSurface1 surface;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiSurface1"/> class.

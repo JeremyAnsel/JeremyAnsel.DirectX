@@ -17,13 +17,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Indicates whether resources can be created concurrently on multiple threads while drawing.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isDriverConcurrentCreatesSupported;
+        private readonly bool isDriverConcurrentCreatesSupported;
 
         /// <summary>
         /// Indicates whether command lists are supported by the current driver.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isDriverCommandListsSupported;
+        private readonly bool isDriverCommandListsSupported;
 
         /// <summary>
         /// Gets a value indicating whether resources can be created concurrently on multiple threads while drawing.

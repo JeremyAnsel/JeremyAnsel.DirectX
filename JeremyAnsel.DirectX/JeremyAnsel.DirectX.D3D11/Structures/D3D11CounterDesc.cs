@@ -21,7 +21,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Reserved value.
         /// </summary>
-        private uint miscOptions;
+        private readonly uint miscOptions;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11CounterDesc"/> struct.

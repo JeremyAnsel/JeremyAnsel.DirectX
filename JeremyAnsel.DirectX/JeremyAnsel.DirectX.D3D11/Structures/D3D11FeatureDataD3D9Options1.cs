@@ -17,25 +17,25 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Specifies whether the driver supports the nonpowers-of-2-unconditionally feature.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isFullNonPow2TextureSupported;
+        private readonly bool isFullNonPow2TextureSupported;
 
         /// <summary>
         /// Specifies whether the driver supports the shadowing feature with the comparison-filtering mode set to less than or equal to.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isDepthAsTextureWithLessEqualComparisonFilterSupported;
+        private readonly bool isDepthAsTextureWithLessEqualComparisonFilterSupported;
 
         /// <summary>
         /// Specifies whether the hardware and driver support simple instancing.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isSimpleInstancingSupported;
+        private readonly bool isSimpleInstancingSupported;
 
         /// <summary>
         /// Specifies whether the hardware and driver support setting a single face of a <c>TextureCube</c> as a render target while the depth stencil surface that is bound alongside can be a <c>Texture2D</c> (as opposed to <c>TextureCube</c>).
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isTextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported;
+        private readonly bool isTextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported;
 
         /// <summary>
         /// Gets a value indicating whether the driver supports the nonpowers-of-2-unconditionally feature.

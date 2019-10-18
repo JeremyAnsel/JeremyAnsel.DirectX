@@ -17,12 +17,12 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// An unsigned integer value representing the top of the rational number.
         /// </summary>
-        private uint numerator;
+        private readonly uint numerator;
 
         /// <summary>
         /// An unsigned integer value representing the bottom of the rational number.
         /// </summary>
-        private uint denominator;
+        private readonly uint denominator;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiRational"/> struct.

@@ -26,6 +26,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>The resource that is accessed through this view.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Resource GetResource()
         {

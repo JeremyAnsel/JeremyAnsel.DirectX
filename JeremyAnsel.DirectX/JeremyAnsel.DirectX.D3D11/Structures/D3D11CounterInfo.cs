@@ -16,17 +16,17 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The largest device-dependent counter ID that the device supports. If none are supported, this value will be 0.
         /// </summary>
-        private D3D11CounterType lastDeviceDependentCounter;
+        private readonly D3D11CounterType lastDeviceDependentCounter;
 
         /// <summary>
         /// The number of counters that can be simultaneously supported.
         /// </summary>
-        private uint numSimultaneousCounters;
+        private readonly uint numSimultaneousCounters;
 
         /// <summary>
         /// The number of detectable parallel units that the counter is able to discern. Values are 1 ~ 4.
         /// </summary>
-        private byte numDetectableParallelUnits;
+        private readonly byte numDetectableParallelUnits;
 
         /// <summary>
         /// Gets the largest device-dependent counter ID that the device supports. If none are supported, this value will be 0.

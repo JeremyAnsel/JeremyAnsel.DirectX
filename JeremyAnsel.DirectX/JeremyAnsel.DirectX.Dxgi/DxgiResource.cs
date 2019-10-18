@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI resource interface.
         /// </summary>
-        private IDxgiResource resource;
+        private readonly IDxgiResource resource;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiResource"/> class.

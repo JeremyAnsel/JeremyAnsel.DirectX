@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Specifies whether the driver supports the shadowing feature with the comparison-filtering mode set to less than or equal to.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isDepthAsTextureWithLessEqualComparisonFilterSupported;
+        private readonly bool isDepthAsTextureWithLessEqualComparisonFilterSupported;
 
         /// <summary>
         /// Gets a value indicating whether the driver supports the shadowing feature with the comparison-filtering mode set to less than or equal to.

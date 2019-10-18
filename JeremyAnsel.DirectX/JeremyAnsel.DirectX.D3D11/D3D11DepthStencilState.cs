@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D3D11
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
 
@@ -15,7 +16,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 depth stencil state interface.
         /// </summary>
-        private ID3D11DepthStencilState depthStencilState;
+        private readonly ID3D11DepthStencilState depthStencilState;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11DepthStencilState"/> class.
@@ -39,6 +40,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Gets the description for depth-stencil state that you used to create the depth-stencil-state object.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11DepthStencilDesc Description
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]

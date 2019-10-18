@@ -301,7 +301,7 @@ namespace JeremyAnsel.DirectX.DWrite
         {
             if (fontCollection == null)
             {
-                throw new ArgumentNullException("fontCollection");
+                throw new ArgumentNullException(nameof(fontCollection));
             }
 
             this.handle.SetFontCollection((IDWriteFontCollection)fontCollection.Handle, textRange);
@@ -394,7 +394,7 @@ namespace JeremyAnsel.DirectX.DWrite
         {
             if (typography == null)
             {
-                throw new ArgumentNullException("typography");
+                throw new ArgumentNullException(nameof(typography));
             }
 
             this.handle.SetTypography((IDWriteTypography)typography.Handle, textRange);

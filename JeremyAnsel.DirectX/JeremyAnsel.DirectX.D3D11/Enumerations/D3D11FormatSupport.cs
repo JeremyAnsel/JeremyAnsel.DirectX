@@ -5,11 +5,13 @@
 namespace JeremyAnsel.DirectX.D3D11
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Which resources are supported for a given format and given device.
     /// </summary>
     [Flags]
+    [SuppressMessage("Naming", "CA1714:Les noms des enums Flags doivent être au pluriel", Justification = "Reviewed.")]
     public enum D3D11FormatSupport
     {
         /// <summary>

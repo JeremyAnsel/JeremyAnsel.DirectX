@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D3D11
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
 
@@ -15,7 +16,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 blend state interface.
         /// </summary>
-        private ID3D11BlendState blendState;
+        private readonly ID3D11BlendState blendState;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11BlendState"/> class.
@@ -36,9 +37,11 @@ namespace JeremyAnsel.DirectX.D3D11
             get { return this.blendState; }
         }
 
+
         /// <summary>
         /// Gets the description for blending state that you used to create the blend-state object.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11BlendDesc Description
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]

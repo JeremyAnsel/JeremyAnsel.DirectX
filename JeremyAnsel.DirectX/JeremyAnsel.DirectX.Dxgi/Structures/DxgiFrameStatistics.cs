@@ -17,27 +17,27 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// A value that represents the running total count of times that an image was presented to the monitor since the computer booted.
         /// </summary>
-        private uint presentCount;
+        private readonly uint presentCount;
 
         /// <summary>
         /// A value that represents the running total count of v-blanks at which the last image was presented to the monitor and that have happened since the computer booted (for windowed mode, since the swap chain was created).
         /// </summary>
-        private uint presentRefreshCount;
+        private readonly uint presentRefreshCount;
 
         /// <summary>
         /// A value that represents the running total count of v-blanks when the scheduler last sampled the machine time by calling <c>QueryPerformanceCounter</c> and that have happened since the computer booted (for windowed mode, since the swap chain was created).
         /// </summary>
-        private uint syncRefreshCount;
+        private readonly uint syncRefreshCount;
 
         /// <summary>
         /// A value that represents the high-resolution performance counter timer. This value is the same as the value returned by the <c>QueryPerformanceCounter</c> function.
         /// </summary>
-        private ulong syncQpcTime;
+        private readonly ulong syncQpcTime;
 
         /// <summary>
         /// The GPU time. Reserved. Always returns 0.
         /// </summary>
-        private ulong syncGpuTime;
+        private readonly ulong syncGpuTime;
 
         /// <summary>
         /// Gets a value that represents the running total count of times that an image was presented to the monitor since the computer booted.

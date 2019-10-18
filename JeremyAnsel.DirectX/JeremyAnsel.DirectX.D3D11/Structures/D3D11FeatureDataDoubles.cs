@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Specifies whether double types are allowed.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isDoublePrecisionFloatShaderOperationsSupported;
+        private readonly bool isDoublePrecisionFloatShaderOperationsSupported;
 
         /// <summary>
         /// Gets a value indicating whether double types are allowed.

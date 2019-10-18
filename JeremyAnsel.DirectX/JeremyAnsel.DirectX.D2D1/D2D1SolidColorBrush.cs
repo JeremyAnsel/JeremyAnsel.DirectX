@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D2D1
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D2D1.ComInterfaces;
 
@@ -15,7 +16,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 brush interface.
         /// </summary>
-        private ID2D1SolidColorBrush brush;
+        private readonly ID2D1SolidColorBrush brush;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1SolidColorBrush"/> class.
@@ -45,6 +46,7 @@ namespace JeremyAnsel.DirectX.D2D1
             get { return this.brush.GetColor(); }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set { this.brush.SetColor(ref value); }
         }
     }

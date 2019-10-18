@@ -19,7 +19,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 device context interface.
         /// </summary>
-        private ID3D11DeviceContext deviceContext;
+        private readonly ID3D11DeviceContext deviceContext;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11DeviceContext"/> class.
@@ -64,17 +64,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
         /// <param name="constantBuffers">Array of constant buffers being given to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void VertexShaderSetConstantBuffers(uint startSlot, D3D11Buffer[] constantBuffers)
         {
             if (constantBuffers == null)
             {
-                throw new ArgumentNullException("constantBuffers");
+                throw new ArgumentNullException(nameof(constantBuffers));
             }
 
             this.deviceContext.VertexShaderSetConstantBuffers(
                 startSlot,
                 (uint)constantBuffers.Length,
-                Array.ConvertAll(constantBuffers, i => i == null ? null : i.GetHandle<ID3D11Buffer>()));
+                Array.ConvertAll(constantBuffers, i => i?.GetHandle<ID3D11Buffer>()));
         }
 
         /// <summary>
@@ -83,17 +84,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
         /// <param name="shaderResourceViews">Array of shader resource view interfaces to set to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void PixelShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView[] shaderResourceViews)
         {
             if (shaderResourceViews == null)
             {
-                throw new ArgumentNullException("shaderResourceViews");
+                throw new ArgumentNullException(nameof(shaderResourceViews));
             }
 
             this.deviceContext.PixelShaderSetShaderResources(
                 startSlot,
                 (uint)shaderResourceViews.Length,
-                Array.ConvertAll(shaderResourceViews, i => i == null ? null : i.GetHandle<ID3D11ShaderResourceView>()));
+                Array.ConvertAll(shaderResourceViews, i => i?.GetHandle<ID3D11ShaderResourceView>()));
         }
 
         /// <summary>
@@ -102,13 +104,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="pixelShader">A pixel shader.</param>
         /// <param name="classInstances">An array of class-instance interfaces.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void PixelShaderSetShader(D3D11PixelShader pixelShader, D3D11ClassInstance[] classInstances)
         {
             if (classInstances == null)
             {
                 this.deviceContext.PixelShaderSetShader(
-                    pixelShader == null ? null : pixelShader.GetHandle<ID3D11PixelShader>(),
+                    pixelShader?.GetHandle<ID3D11PixelShader>(),
                     null,
                     0);
             }
@@ -116,12 +119,12 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 if (pixelShader == null)
                 {
-                    throw new ArgumentNullException("pixelShader");
+                    throw new ArgumentNullException(nameof(pixelShader));
                 }
 
                 this.deviceContext.PixelShaderSetShader(
                     pixelShader.GetHandle<ID3D11PixelShader>(),
-                    Array.ConvertAll(classInstances, i => i == null ? null : i.GetHandle<ID3D11ClassInstance>()),
+                    Array.ConvertAll(classInstances, i => i?.GetHandle<ID3D11ClassInstance>()),
                     (uint)classInstances.Length);
             }
         }
@@ -132,17 +135,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
         /// <param name="samplers">An array of sampler-state interfaces.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void PixelShaderSetSamplers(uint startSlot, D3D11SamplerState[] samplers)
         {
             if (samplers == null)
             {
-                throw new ArgumentNullException("samplers");
+                throw new ArgumentNullException(nameof(samplers));
             }
 
             this.deviceContext.PixelShaderSetSamplers(
                 startSlot,
                 (uint)samplers.Length,
-                Array.ConvertAll(samplers, i => i == null ? null : i.GetHandle<ID3D11SamplerState>()));
+                Array.ConvertAll(samplers, i => i?.GetHandle<ID3D11SamplerState>()));
         }
 
         /// <summary>
@@ -151,13 +155,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="vertexShader">A vertex shader.</param>
         /// <param name="classInstances">An array of class-instance interfaces.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void VertexShaderSetShader(D3D11VertexShader vertexShader, D3D11ClassInstance[] classInstances)
         {
             if (classInstances == null)
             {
                 this.deviceContext.VertexShaderSetShader(
-                    vertexShader == null ? null : vertexShader.GetHandle<ID3D11VertexShader>(),
+                    vertexShader?.GetHandle<ID3D11VertexShader>(),
                     null,
                     0);
             }
@@ -165,12 +170,12 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 if (vertexShader == null)
                 {
-                    throw new ArgumentNullException("vertexShader");
+                    throw new ArgumentNullException(nameof(vertexShader));
                 }
 
                 this.deviceContext.VertexShaderSetShader(
-                    vertexShader == null ? null : vertexShader.GetHandle<ID3D11VertexShader>(),
-                    Array.ConvertAll(classInstances, i => i == null ? null : i.GetHandle<ID3D11ClassInstance>()),
+                    vertexShader?.GetHandle<ID3D11VertexShader>(),
+                    Array.ConvertAll(classInstances, i => i?.GetHandle<ID3D11ClassInstance>()),
                     (uint)classInstances.Length);
             }
         }
@@ -182,6 +187,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startIndexLocation">The location of the first index read by the GPU from the index buffer.</param>
         /// <param name="baseVertexLocation">A value added to each index before reading a vertex from the vertex buffer.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void DrawIndexed(uint indexCount, uint startIndexLocation, int baseVertexLocation)
         {
             this.deviceContext.DrawIndexed(indexCount, startIndexLocation, baseVertexLocation);
@@ -193,6 +199,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="vertexCount">Number of vertices to draw.</param>
         /// <param name="startVertexLocation">Index of the first vertex, which is usually an offset in a vertex buffer.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void Draw(uint vertexCount, uint startVertexLocation)
         {
             this.deviceContext.Draw(vertexCount, startVertexLocation);
@@ -216,7 +223,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (resource == null)
             {
-                throw new ArgumentNullException("resource");
+                throw new ArgumentNullException(nameof(resource));
             }
 
             return this.deviceContext.Map(resource.GetHandle<ID3D11Resource>(), subresource, cpuPermission, options);
@@ -228,12 +235,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="resource">A <see cref="D3D11Resource"/> interface.</param>
         /// <param name="subresource">A subresource to be unmapped.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Unmap(D3D11Resource resource, uint subresource)
         {
             if (resource == null)
             {
-                throw new ArgumentNullException("resource");
+                throw new ArgumentNullException(nameof(resource));
             }
 
             this.deviceContext.Unmap(resource.GetHandle<ID3D11Resource>(), subresource);
@@ -245,17 +253,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
         /// <param name="constantBuffers">Array of constant buffers.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void PixelShaderSetConstantBuffers(uint startSlot, D3D11Buffer[] constantBuffers)
         {
             if (constantBuffers == null)
             {
-                throw new ArgumentNullException("constantBuffers");
+                throw new ArgumentNullException(nameof(constantBuffers));
             }
 
             this.deviceContext.PixelShaderSetConstantBuffers(
                 startSlot,
                 (uint)constantBuffers.Length,
-                Array.ConvertAll(constantBuffers, i => i == null ? null : i.GetHandle<ID3D11Buffer>()));
+                Array.ConvertAll(constantBuffers, i => i?.GetHandle<ID3D11Buffer>()));
         }
 
         /// <summary>
@@ -263,12 +272,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="inputLayout">The input-layout object.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void InputAssemblerSetInputLayout(D3D11InputLayout inputLayout)
         {
             if (inputLayout == null)
             {
-                throw new ArgumentNullException("inputLayout");
+                throw new ArgumentNullException(nameof(inputLayout));
             }
 
             this.deviceContext.InputAssemblerSetInputLayout(inputLayout.GetHandle<ID3D11InputLayout>());
@@ -282,37 +292,38 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="strides">An array of stride values; one stride value for each buffer in the vertex-buffer array.</param>
         /// <param name="offsets">An array of offset values; one offset value for each buffer in the vertex-buffer array.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void InputAssemblerSetVertexBuffers(uint startSlot, D3D11Buffer[] vertexBuffers, uint[] strides, uint[] offsets)
         {
             if (vertexBuffers == null)
             {
-                throw new ArgumentNullException("vertexBuffers");
+                throw new ArgumentNullException(nameof(vertexBuffers));
             }
 
             if (strides == null)
             {
-                throw new ArgumentNullException("strides");
+                throw new ArgumentNullException(nameof(strides));
             }
 
             if (offsets == null)
             {
-                throw new ArgumentNullException("offsets");
+                throw new ArgumentNullException(nameof(offsets));
             }
 
             if (strides.Length != vertexBuffers.Length)
             {
-                throw new ArgumentOutOfRangeException("strides");
+                throw new ArgumentOutOfRangeException(nameof(strides));
             }
 
             if (offsets.Length != vertexBuffers.Length)
             {
-                throw new ArgumentOutOfRangeException("offsets");
+                throw new ArgumentOutOfRangeException(nameof(offsets));
             }
 
             this.deviceContext.InputAssemblerSetVertexBuffers(
                 startSlot,
                 (uint)vertexBuffers.Length,
-                Array.ConvertAll(vertexBuffers, i => i == null ? null : i.GetHandle<ID3D11Buffer>()),
+                Array.ConvertAll(vertexBuffers, i => i?.GetHandle<ID3D11Buffer>()),
                 strides,
                 offsets);
         }
@@ -324,10 +335,11 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="format">The format of the data in the index buffer.</param>
         /// <param name="offset">Offset (in bytes) from the start of the index buffer to the first index to use.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void InputAssemblerSetIndexBuffer(D3D11Buffer indexBuffer, DxgiFormat format, uint offset)
         {
-            this.deviceContext.InputAssemblerSetIndexBuffer(indexBuffer == null ? null : indexBuffer.GetHandle<ID3D11Buffer>(), format, offset);
+            this.deviceContext.InputAssemblerSetIndexBuffer(indexBuffer?.GetHandle<ID3D11Buffer>(), format, offset);
         }
 
         /// <summary>
@@ -339,6 +351,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="baseVertexLocation">A value added to each index before reading a vertex from the vertex buffer.</param>
         /// <param name="startInstanceLocation">A value added to each index before reading per-instance data from a vertex buffer.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void DrawIndexedInstanced(
             uint indexCountPerInstance,
             uint instanceCount,
@@ -362,6 +375,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startVertexLocation">Index of the first vertex.</param>
         /// <param name="startInstanceLocation">A value added to each index before reading per-instance data from a vertex buffer.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void DrawInstanced(
             uint vertexCountPerInstance,
             uint instanceCount,
@@ -381,17 +395,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
         /// <param name="constantBuffers">Array of constant buffers.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void GeometryShaderSetConstantBuffers(uint startSlot, D3D11Buffer[] constantBuffers)
         {
             if (constantBuffers == null)
             {
-                throw new ArgumentNullException("constantBuffers");
+                throw new ArgumentNullException(nameof(constantBuffers));
             }
 
             this.deviceContext.GeometryShaderSetConstantBuffers(
                 startSlot,
                 (uint)constantBuffers.Length,
-                Array.ConvertAll(constantBuffers, i => i == null ? null : i.GetHandle<ID3D11Buffer>()));
+                Array.ConvertAll(constantBuffers, i => i?.GetHandle<ID3D11Buffer>()));
         }
 
         /// <summary>
@@ -400,13 +415,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="shader">A geometry shader.</param>
         /// <param name="classInstances">An array of class-instance interfaces.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void GeometryShaderSetShader(D3D11GeometryShader shader, D3D11ClassInstance[] classInstances)
         {
             if (classInstances == null)
             {
                 this.deviceContext.GeometryShaderSetShader(
-                    shader == null ? null : shader.GetHandle<ID3D11GeometryShader>(),
+                    shader?.GetHandle<ID3D11GeometryShader>(),
                     null,
                     0);
             }
@@ -414,12 +430,12 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 if (shader == null)
                 {
-                    throw new ArgumentNullException("shader");
+                    throw new ArgumentNullException(nameof(shader));
                 }
 
                 this.deviceContext.GeometryShaderSetShader(
                     shader.GetHandle<ID3D11GeometryShader>(),
-                    Array.ConvertAll(classInstances, i => i == null ? null : i.GetHandle<ID3D11ClassInstance>()),
+                    Array.ConvertAll(classInstances, i => i?.GetHandle<ID3D11ClassInstance>()),
                     (uint)classInstances.Length);
             }
         }
@@ -429,6 +445,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="topology">The type of primitive and ordering of the primitive data.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void InputAssemblerSetPrimitiveTopology(D3D11PrimitiveTopology topology)
         {
             this.deviceContext.InputAssemblerSetPrimitiveTopology(topology);
@@ -440,17 +457,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
         /// <param name="shaderResourceViews">Array of shader resource view interfaces to set to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void VertexShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView[] shaderResourceViews)
         {
             if (shaderResourceViews == null)
             {
-                throw new ArgumentNullException("shaderResourceViews");
+                throw new ArgumentNullException(nameof(shaderResourceViews));
             }
 
             this.deviceContext.VertexShaderSetShaderResources(
                 startSlot,
                 (uint)shaderResourceViews.Length,
-                Array.ConvertAll(shaderResourceViews, i => i == null ? null : i.GetHandle<ID3D11ShaderResourceView>()));
+                Array.ConvertAll(shaderResourceViews, i => i?.GetHandle<ID3D11ShaderResourceView>()));
         }
 
         /// <summary>
@@ -459,17 +477,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
         /// <param name="samplers">An array of sampler-state interfaces.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void VertexShaderSetSamplers(uint startSlot, D3D11SamplerState[] samplers)
         {
             if (samplers == null)
             {
-                throw new ArgumentNullException("samplers");
+                throw new ArgumentNullException(nameof(samplers));
             }
 
             this.deviceContext.VertexShaderSetSamplers(
                 startSlot,
                 (uint)samplers.Length,
-                Array.ConvertAll(samplers, i => i == null ? null : i.GetHandle<ID3D11SamplerState>()));
+                Array.ConvertAll(samplers, i => i?.GetHandle<ID3D11SamplerState>()));
         }
 
         /// <summary>
@@ -477,12 +496,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="async">A <see cref="D3D11Asynchronous"/> interface.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Begin(D3D11Asynchronous async)
         {
             if (async == null)
             {
-                throw new ArgumentNullException("async");
+                throw new ArgumentNullException(nameof(async));
             }
 
             this.deviceContext.Begin(async.GetHandle<ID3D11Asynchronous>());
@@ -493,12 +513,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="async">A <see cref="D3D11Asynchronous"/> interface.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void End(D3D11Asynchronous async)
         {
             if (async == null)
             {
-                throw new ArgumentNullException("async");
+                throw new ArgumentNullException(nameof(async));
             }
 
             this.deviceContext.End(async.GetHandle<ID3D11Asynchronous>());
@@ -515,7 +536,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (async == null)
             {
-                throw new ArgumentNullException("async");
+                throw new ArgumentNullException(nameof(async));
             }
 
             return this.deviceContext.GetData(async.GetHandle<ID3D11Asynchronous>(), IntPtr.Zero, 0U, D3D11AsyncGetDataOptions.None);
@@ -533,7 +554,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (async == null)
             {
-                throw new ArgumentNullException("async");
+                throw new ArgumentNullException(nameof(async));
             }
 
             return this.deviceContext.GetData(async.GetHandle<ID3D11Asynchronous>(), IntPtr.Zero, 0U, options);
@@ -554,7 +575,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (async == null)
             {
-                throw new ArgumentNullException("async");
+                throw new ArgumentNullException(nameof(async));
             }
 
             int dataSize = Marshal.SizeOf(typeof(T));
@@ -589,7 +610,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (async == null)
             {
-                throw new ArgumentNullException("async");
+                throw new ArgumentNullException(nameof(async));
             }
 
             int dataSize = Marshal.SizeOf(typeof(T));
@@ -614,10 +635,11 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="predicate">A predicate.</param>
         /// <param name="value">A value indicating whether rendering will be affected by when the predicate's conditions are met or not met.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetPredication(D3D11Predicate predicate, bool value)
         {
-            this.deviceContext.SetPredication(predicate == null ? null : predicate.GetHandle<ID3D11Predicate>(), value);
+            this.deviceContext.SetPredication(predicate?.GetHandle<ID3D11Predicate>(), value);
         }
 
         /// <summary>
@@ -626,17 +648,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
         /// <param name="shaderResourceViews">Array of shader resource view interfaces to set to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void GeometryShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView[] shaderResourceViews)
         {
             if (shaderResourceViews == null)
             {
-                throw new ArgumentNullException("shaderResourceViews");
+                throw new ArgumentNullException(nameof(shaderResourceViews));
             }
 
             this.deviceContext.GeometryShaderSetShaderResources(
                 startSlot,
                 (uint)shaderResourceViews.Length,
-                Array.ConvertAll(shaderResourceViews, i => i == null ? null : i.GetHandle<ID3D11ShaderResourceView>()));
+                Array.ConvertAll(shaderResourceViews, i => i?.GetHandle<ID3D11ShaderResourceView>()));
         }
 
         /// <summary>
@@ -645,17 +668,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
         /// <param name="samplers">An array of sampler-state interfaces.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void GeometryShaderSetSamplers(uint startSlot, D3D11SamplerState[] samplers)
         {
             if (samplers == null)
             {
-                throw new ArgumentNullException("samplers");
+                throw new ArgumentNullException(nameof(samplers));
             }
 
             this.deviceContext.GeometryShaderSetSamplers(
                 startSlot,
                 (uint)samplers.Length,
-                Array.ConvertAll(samplers, i => i == null ? null : i.GetHandle<ID3D11SamplerState>()));
+                Array.ConvertAll(samplers, i => i?.GetHandle<ID3D11SamplerState>()));
         }
 
         /// <summary>
@@ -664,13 +688,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="renderTargetViews">The render targets to bind to the device.</param>
         /// <param name="depthStencilView">The depth-stencil view to bind to the device.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerSetRenderTargets(D3D11RenderTargetView[] renderTargetViews, D3D11DepthStencilView depthStencilView)
         {
             this.deviceContext.OutputMergerSetRenderTargets(
                 renderTargetViews == null ? 0 : (uint)renderTargetViews.Length,
-                renderTargetViews == null ? null : Array.ConvertAll(renderTargetViews, i => i == null ? null : i.GetHandle<ID3D11RenderTargetView>()),
-                depthStencilView == null ? null : depthStencilView.GetHandle<ID3D11DepthStencilView>());
+                renderTargetViews == null ? null : Array.ConvertAll(renderTargetViews, i => i?.GetHandle<ID3D11RenderTargetView>()),
+                depthStencilView?.GetHandle<ID3D11DepthStencilView>());
         }
 
         /// <summary>
@@ -682,6 +707,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="unorderedAccessViews">The unordered-access views to bind to the device.</param>
         /// <param name="uavInitialCounts">An array of append and consume buffer offsets. A value of <value>-1</value> indicates to keep the current offset.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerSetRenderTargetsAndUnorderedAccessViews(
             D3D11RenderTargetView[] renderTargetViews,
@@ -694,22 +720,22 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 if (uavInitialCounts == null)
                 {
-                    throw new ArgumentNullException("uavInitialCounts");
+                    throw new ArgumentNullException(nameof(uavInitialCounts));
                 }
 
                 if (uavInitialCounts.Length != unorderedAccessViews.Length)
                 {
-                    throw new ArgumentOutOfRangeException("uavInitialCounts");
+                    throw new ArgumentOutOfRangeException(nameof(uavInitialCounts));
                 }
             }
 
             this.deviceContext.OutputMergerSetRenderTargetsAndUnorderedAccessViews(
                 renderTargetViews == null ? 0 : (uint)renderTargetViews.Length,
-                renderTargetViews == null ? null : Array.ConvertAll(renderTargetViews, i => i == null ? null : i.GetHandle<ID3D11RenderTargetView>()),
-                depthStencilView == null ? null : depthStencilView.GetHandle<ID3D11DepthStencilView>(),
+                renderTargetViews == null ? null : Array.ConvertAll(renderTargetViews, i => i?.GetHandle<ID3D11RenderTargetView>()),
+                depthStencilView?.GetHandle<ID3D11DepthStencilView>(),
                 uavStartSlot,
                 unorderedAccessViews == null ? 0 : (uint)unorderedAccessViews.Length,
-                unorderedAccessViews == null ? null : Array.ConvertAll(unorderedAccessViews, i => i == null ? null : i.GetHandle<ID3D11UnorderedAccessView>()),
+                unorderedAccessViews == null ? null : Array.ConvertAll(unorderedAccessViews, i => i?.GetHandle<ID3D11UnorderedAccessView>()),
                 unorderedAccessViews == null ? null : uavInitialCounts);
         }
 
@@ -720,16 +746,17 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="blendFactor">Array of blend factors, one for each RGBA component. The blend factors modulate values for the pixel shader, render target, or both.</param>
         /// <param name="sampleMask">32-bit sample coverage. The default value is <value>0xffffffff</value>.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerSetBlendState(D3D11BlendState blendState, float[] blendFactor, uint sampleMask)
         {
             if (blendFactor != null && blendFactor.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("blendFactor");
+                throw new ArgumentOutOfRangeException(nameof(blendFactor));
             }
 
             this.deviceContext.OutputMergerSetBlendState(
-                blendState == null ? null : blendState.GetHandle<ID3D11BlendState>(),
+                blendState?.GetHandle<ID3D11BlendState>(),
                 blendFactor,
                 sampleMask);
         }
@@ -740,11 +767,12 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="depthStencilState">A depth-stencil state interface.</param>
         /// <param name="stencilReference">Reference value to perform against when doing a depth-stencil test.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerSetDepthStencilState(D3D11DepthStencilState depthStencilState, uint stencilReference)
         {
             this.deviceContext.OutputMergerSetDepthStencilState(
-                depthStencilState == null ? null : depthStencilState.GetHandle<ID3D11DepthStencilState>(),
+                depthStencilState?.GetHandle<ID3D11DepthStencilState>(),
                 stencilReference);
         }
 
@@ -754,24 +782,25 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="targets">The array of output buffers to bind to the device.</param>
         /// <param name="offsets">Array of offsets to the output buffers.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void StreamOutputSetTargets(D3D11Buffer[] targets, uint[] offsets)
         {
             if (targets != null)
             {
                 if (offsets == null)
                 {
-                    throw new ArgumentNullException("offsets");
+                    throw new ArgumentNullException(nameof(offsets));
                 }
 
                 if (offsets.Length != targets.Length)
                 {
-                    throw new ArgumentOutOfRangeException("offsets");
+                    throw new ArgumentOutOfRangeException(nameof(offsets));
                 }
             }
 
             this.deviceContext.StreamOutputSetTargets(
                 targets == null ? 0 : (uint)targets.Length,
-                targets == null ? null : Array.ConvertAll(targets, i => i == null ? null : i.GetHandle<ID3D11Buffer>()),
+                targets == null ? null : Array.ConvertAll(targets, i => i?.GetHandle<ID3D11Buffer>()),
                 targets == null ? null : offsets);
         }
 
@@ -779,6 +808,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Draw geometry of an unknown size.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void DrawAuto()
         {
             this.deviceContext.DrawAuto();
@@ -791,12 +821,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="alignedByteOffsetForArgs">Offset to the start of the GPU generated primitives.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "byte", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawIndexedInstancedIndirect(D3D11Buffer bufferForArgs, uint alignedByteOffsetForArgs)
         {
             if (bufferForArgs == null)
             {
-                throw new ArgumentNullException("bufferForArgs");
+                throw new ArgumentNullException(nameof(bufferForArgs));
             }
 
             this.deviceContext.DrawIndexedInstancedIndirect(bufferForArgs.GetHandle<ID3D11Buffer>(), alignedByteOffsetForArgs);
@@ -809,12 +840,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="alignedByteOffsetForArgs">Offset to the start of the GPU generated primitives.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "byte", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DrawInstancedIndirect(D3D11Buffer bufferForArgs, uint alignedByteOffsetForArgs)
         {
             if (bufferForArgs == null)
             {
-                throw new ArgumentNullException("bufferForArgs");
+                throw new ArgumentNullException(nameof(bufferForArgs));
             }
 
             this.deviceContext.DrawInstancedIndirect(bufferForArgs.GetHandle<ID3D11Buffer>(), alignedByteOffsetForArgs);
@@ -827,6 +859,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="threadGroupCountY">The number of groups dispatched in the y direction.</param>
         /// <param name="threadGroupCountZ">The number of groups dispatched in the z direction.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void Dispatch(uint threadGroupCountX, uint threadGroupCountY, uint threadGroupCountZ)
         {
             this.deviceContext.Dispatch(threadGroupCountX, threadGroupCountY, threadGroupCountZ);
@@ -839,12 +872,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="alignedByteOffsetForArgs">A byte-aligned offset between the start of the buffer and the arguments.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "byte", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DispatchIndirect(D3D11Buffer bufferForArgs, uint alignedByteOffsetForArgs)
         {
             if (bufferForArgs == null)
             {
-                throw new ArgumentNullException("bufferForArgs");
+                throw new ArgumentNullException(nameof(bufferForArgs));
             }
 
             this.deviceContext.DispatchIndirect(bufferForArgs.GetHandle<ID3D11Buffer>(), alignedByteOffsetForArgs);
@@ -855,12 +889,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="rasterizerState">A rasterizer-state interface.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void RasterizerStageSetState(D3D11RasterizerState rasterizerState)
         {
             if (rasterizerState == null)
             {
-                throw new ArgumentNullException("rasterizerState");
+                throw new ArgumentNullException(nameof(rasterizerState));
             }
 
             this.deviceContext.RasterizerStageSetState(rasterizerState.GetHandle<ID3D11RasterizerState>());
@@ -871,11 +906,12 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="viewports">An array of <see cref="D3D11Viewport"/> structures to bind to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void RasterizerStageSetViewports(D3D11Viewport[] viewports)
         {
             if (viewports == null)
             {
-                throw new ArgumentNullException("viewports");
+                throw new ArgumentNullException(nameof(viewports));
             }
 
             this.deviceContext.RasterizerStageSetViewports((uint)viewports.Length, viewports);
@@ -886,11 +922,12 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="rects">An array of scissor rectangles.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void RasterizerStageSetScissorRects(D3D11Rect[] rects)
         {
             if (rects == null)
             {
-                throw new ArgumentNullException("rects");
+                throw new ArgumentNullException(nameof(rects));
             }
 
             this.deviceContext.RasterizerStageSetScissorRects((uint)rects.Length, rects);
@@ -909,6 +946,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="sourceBox">A 3D box that defines the source subresource that can be copied.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void CopySubresourceRegion(
             D3D11Resource destinationResource,
@@ -922,12 +960,12 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (destinationResource == null)
             {
-                throw new ArgumentNullException("destinationResource");
+                throw new ArgumentNullException(nameof(destinationResource));
             }
 
             if (sourceResource == null)
             {
-                throw new ArgumentNullException("sourceResource");
+                throw new ArgumentNullException(nameof(sourceResource));
             }
 
             this.deviceContext.CopySubresourceRegion(
@@ -948,17 +986,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="source">The source resource.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void CopyResource(D3D11Resource destination, D3D11Resource source)
         {
             if (destination == null)
             {
-                throw new ArgumentNullException("destination");
+                throw new ArgumentNullException(nameof(destination));
             }
 
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             this.deviceContext.CopyResource(destination.GetHandle<ID3D11Resource>(), source.GetHandle<ID3D11Resource>());
@@ -975,6 +1014,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="sourceRowPitch">The size of one row of the source data.</param>
         /// <param name="sourceDepthPitch">The size of one depth slice of source data.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void UpdateSubresource<T>(
             D3D11Resource destinationResource,
@@ -987,7 +1027,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (destinationResource == null)
             {
-                throw new ArgumentNullException("destinationResource");
+                throw new ArgumentNullException(nameof(destinationResource));
             }
 
             int sourceDataSize = Marshal.SizeOf(typeof(T));
@@ -1044,6 +1084,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="sourceRowPitch">The size of one row of the source data.</param>
         /// <param name="sourceDepthPitch">The size of one depth slice of source data.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void UpdateSubresource<T>(
             D3D11Resource destinationResource,
@@ -1056,17 +1097,17 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (destinationResource == null)
             {
-                throw new ArgumentNullException("destinationResource");
+                throw new ArgumentNullException(nameof(destinationResource));
             }
 
             if (sourceData == null)
             {
-                throw new ArgumentNullException("sourceData");
+                throw new ArgumentNullException(nameof(sourceData));
             }
 
             if (sourceData.Length == 0)
             {
-                throw new ArgumentOutOfRangeException("sourceData");
+                throw new ArgumentOutOfRangeException(nameof(sourceData));
             }
 
             int sourceDataSize = Marshal.SizeOf(typeof(T));
@@ -1124,17 +1165,18 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "byte", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void CopyStructureCount(D3D11Buffer destinationBuffer, uint destinationAlignedByteOffset, D3D11UnorderedAccessView sourceView)
         {
             if (destinationBuffer == null)
             {
-                throw new ArgumentNullException("destinationBuffer");
+                throw new ArgumentNullException(nameof(destinationBuffer));
             }
 
             if (sourceView == null)
             {
-                throw new ArgumentNullException("sourceView");
+                throw new ArgumentNullException(nameof(sourceView));
             }
 
             this.deviceContext.CopyStructureCount(
@@ -1149,22 +1191,23 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="renderTargetView">The render target.</param>
         /// <param name="colorRgba">A 4-component array that represents the color to fill the render target with.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ClearRenderTargetView(D3D11RenderTargetView renderTargetView, float[] colorRgba)
         {
             if (renderTargetView == null)
             {
-                throw new ArgumentNullException("renderTargetView");
+                throw new ArgumentNullException(nameof(renderTargetView));
             }
 
             if (colorRgba == null)
             {
-                throw new ArgumentNullException("colorRgba");
+                throw new ArgumentNullException(nameof(colorRgba));
             }
 
             if (colorRgba.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("colorRgba");
+                throw new ArgumentOutOfRangeException(nameof(colorRgba));
             }
 
             this.deviceContext.ClearRenderTargetView(renderTargetView.GetHandle<ID3D11RenderTargetView>(), colorRgba);
@@ -1176,22 +1219,23 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="unorderedAccessView">The unordered access resource to clear.</param>
         /// <param name="values">Values to copy to corresponding channels.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ClearUnorderedAccessViewUInt(D3D11UnorderedAccessView unorderedAccessView, uint[] values)
         {
             if (unorderedAccessView == null)
             {
-                throw new ArgumentNullException("unorderedAccessView");
+                throw new ArgumentNullException(nameof(unorderedAccessView));
             }
 
             if (values == null)
             {
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
             }
 
             if (values.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("values");
+                throw new ArgumentOutOfRangeException(nameof(values));
             }
 
             this.deviceContext.ClearUnorderedAccessViewUInt(unorderedAccessView.GetHandle<ID3D11UnorderedAccessView>(), values);
@@ -1203,22 +1247,23 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="unorderedAccessView">The unordered access resource to clear.</param>
         /// <param name="values">Values to copy to corresponding channels.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ClearUnorderedAccessViewFloat(D3D11UnorderedAccessView unorderedAccessView, float[] values)
         {
             if (unorderedAccessView == null)
             {
-                throw new ArgumentNullException("unorderedAccessView");
+                throw new ArgumentNullException(nameof(unorderedAccessView));
             }
 
             if (values == null)
             {
-                throw new ArgumentNullException("values");
+                throw new ArgumentNullException(nameof(values));
             }
 
             if (values.Length != 4)
             {
-                throw new ArgumentOutOfRangeException("values");
+                throw new ArgumentOutOfRangeException(nameof(values));
             }
 
             this.deviceContext.ClearUnorderedAccessViewFloat(unorderedAccessView.GetHandle<ID3D11UnorderedAccessView>(), values);
@@ -1232,12 +1277,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="depth">Clear the depth buffer with this value. This value will be clamped between 0 and 1.</param>
         /// <param name="stencil">Clear the stencil buffer with this value.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ClearDepthStencilView(D3D11DepthStencilView depthStencilView, D3D11ClearOptions clearOptions, float depth, byte stencil)
         {
             if (depthStencilView == null)
             {
-                throw new ArgumentNullException("depthStencilView");
+                throw new ArgumentNullException(nameof(depthStencilView));
             }
 
             this.deviceContext.ClearDepthStencilView(
@@ -1252,12 +1298,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="shaderResourceView">The shader resource.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void GenerateMips(D3D11ShaderResourceView shaderResourceView)
         {
             if (shaderResourceView == null)
             {
-                throw new ArgumentNullException("shaderResourceView");
+                throw new ArgumentNullException(nameof(shaderResourceView));
             }
 
             this.deviceContext.GenerateMips(shaderResourceView.GetHandle<ID3D11ShaderResourceView>());
@@ -1269,12 +1316,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="resource">The resource.</param>
         /// <param name="minLod">The level-of-detail, which ranges between 0 and the maximum number of mipmap levels of the resource.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetResourceMinLod(D3D11Resource resource, float minLod)
         {
             if (resource == null)
             {
-                throw new ArgumentNullException("resource");
+                throw new ArgumentNullException(nameof(resource));
             }
 
             this.deviceContext.SetResourceMinLod(resource.GetHandle<ID3D11Resource>(), minLod);
@@ -1286,12 +1334,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="resource">The resource.</param>
         /// <returns>The minimum LOD.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float GetResourceMinLod(D3D11Resource resource)
         {
             if (resource == null)
             {
-                throw new ArgumentNullException("resource");
+                throw new ArgumentNullException(nameof(resource));
             }
 
             return this.deviceContext.GetResourceMinLod(resource.GetHandle<ID3D11Resource>());
@@ -1306,6 +1355,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="sourceSubresource">The source subresource of the source resource.</param>
         /// <param name="format">Indicates how the multisampled resource will be resolved to a single-sampled resource.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ResolveSubresource(
             D3D11Resource destinationResource,
@@ -1316,12 +1366,12 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (destinationResource == null)
             {
-                throw new ArgumentNullException("destinationResource");
+                throw new ArgumentNullException(nameof(destinationResource));
             }
 
             if (sourceResource == null)
             {
-                throw new ArgumentNullException("sourceResource");
+                throw new ArgumentNullException(nameof(sourceResource));
             }
 
             this.deviceContext.ResolveSubresource(
@@ -1338,12 +1388,13 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="commandList">A command list.</param>
         /// <param name="restoreContextState">A value indicating whether the target context state is saved prior to and restored after the execution of a command list.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ExecuteCommandList(D3D11CommandList commandList, bool restoreContextState)
         {
             if (commandList == null)
             {
-                throw new ArgumentNullException("commandList");
+                throw new ArgumentNullException(nameof(commandList));
             }
 
             this.deviceContext.ExecuteCommandList(commandList.GetHandle<ID3D11CommandList>(), restoreContextState);
@@ -1355,17 +1406,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
         /// <param name="shaderResourceViews">Array of shader resource view interfaces to set to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void HullShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView[] shaderResourceViews)
         {
             if (shaderResourceViews == null)
             {
-                throw new ArgumentNullException("shaderResourceViews");
+                throw new ArgumentNullException(nameof(shaderResourceViews));
             }
 
             this.deviceContext.HullShaderSetShaderResources(
                 startSlot,
                 (uint)shaderResourceViews.Length,
-                Array.ConvertAll(shaderResourceViews, i => i == null ? null : i.GetHandle<ID3D11ShaderResourceView>()));
+                Array.ConvertAll(shaderResourceViews, i => i?.GetHandle<ID3D11ShaderResourceView>()));
         }
 
         /// <summary>
@@ -1374,13 +1426,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="hullShader">A hull shader.</param>
         /// <param name="classInstances">An array of class-instance interfaces.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void HullShaderSetShader(D3D11HullShader hullShader, D3D11ClassInstance[] classInstances)
         {
             if (classInstances == null)
             {
                 this.deviceContext.HullShaderSetShader(
-                    hullShader == null ? null : hullShader.GetHandle<ID3D11HullShader>(),
+                    hullShader?.GetHandle<ID3D11HullShader>(),
                     null,
                     0);
             }
@@ -1388,12 +1441,12 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 if (hullShader == null)
                 {
-                    throw new ArgumentNullException("hullShader");
+                    throw new ArgumentNullException(nameof(hullShader));
                 }
 
                 this.deviceContext.HullShaderSetShader(
                     hullShader.GetHandle<ID3D11HullShader>(),
-                    Array.ConvertAll(classInstances, i => i == null ? null : i.GetHandle<ID3D11ClassInstance>()),
+                    Array.ConvertAll(classInstances, i => i?.GetHandle<ID3D11ClassInstance>()),
                     (uint)classInstances.Length);
             }
         }
@@ -1404,17 +1457,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the zero-based array to begin setting samplers to.</param>
         /// <param name="samplers">An array of sampler-state interfaces.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void HullShaderSetSamplers(uint startSlot, D3D11SamplerState[] samplers)
         {
             if (samplers == null)
             {
-                throw new ArgumentNullException("samplers");
+                throw new ArgumentNullException(nameof(samplers));
             }
 
             this.deviceContext.HullShaderSetSamplers(
                 startSlot,
                 (uint)samplers.Length,
-                Array.ConvertAll(samplers, i => i == null ? null : i.GetHandle<ID3D11SamplerState>()));
+                Array.ConvertAll(samplers, i => i?.GetHandle<ID3D11SamplerState>()));
         }
 
         /// <summary>
@@ -1423,17 +1477,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
         /// <param name="constantBuffers">Array of constant buffers being given to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void HullShaderSetConstantBuffers(uint startSlot, D3D11Buffer[] constantBuffers)
         {
             if (constantBuffers == null)
             {
-                throw new ArgumentNullException("constantBuffers");
+                throw new ArgumentNullException(nameof(constantBuffers));
             }
 
             this.deviceContext.HullShaderSetConstantBuffers(
                 startSlot,
                 (uint)constantBuffers.Length,
-                Array.ConvertAll(constantBuffers, i => i == null ? null : i.GetHandle<ID3D11Buffer>()));
+                Array.ConvertAll(constantBuffers, i => i?.GetHandle<ID3D11Buffer>()));
         }
 
         /// <summary>
@@ -1442,17 +1497,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
         /// <param name="shaderResourceViews">Array of shader resource view interfaces to set to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void DomainShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView[] shaderResourceViews)
         {
             if (shaderResourceViews == null)
             {
-                throw new ArgumentNullException("shaderResourceViews");
+                throw new ArgumentNullException(nameof(shaderResourceViews));
             }
 
             this.deviceContext.DomainShaderSetShaderResources(
                 startSlot,
                 (uint)shaderResourceViews.Length,
-                Array.ConvertAll(shaderResourceViews, i => i == null ? null : i.GetHandle<ID3D11ShaderResourceView>()));
+                Array.ConvertAll(shaderResourceViews, i => i?.GetHandle<ID3D11ShaderResourceView>()));
         }
 
         /// <summary>
@@ -1461,13 +1517,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="domainShader">A domain shader.</param>
         /// <param name="classInstances">An array of class-instance interfaces.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void DomainShaderSetShader(D3D11DomainShader domainShader, D3D11ClassInstance[] classInstances)
         {
             if (classInstances == null)
             {
                 this.deviceContext.DomainShaderSetShader(
-                    domainShader == null ? null : domainShader.GetHandle<ID3D11DomainShader>(),
+                    domainShader?.GetHandle<ID3D11DomainShader>(),
                     null,
                     0);
             }
@@ -1475,12 +1532,12 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 if (domainShader == null)
                 {
-                    throw new ArgumentNullException("domainShader");
+                    throw new ArgumentNullException(nameof(domainShader));
                 }
 
                 this.deviceContext.DomainShaderSetShader(
                     domainShader.GetHandle<ID3D11DomainShader>(),
-                    Array.ConvertAll(classInstances, i => i == null ? null : i.GetHandle<ID3D11ClassInstance>()),
+                    Array.ConvertAll(classInstances, i => i?.GetHandle<ID3D11ClassInstance>()),
                     (uint)classInstances.Length);
             }
         }
@@ -1491,17 +1548,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
         /// <param name="samplers">An array of sampler-state interfaces.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void DomainShaderSetSamplers(uint startSlot, D3D11SamplerState[] samplers)
         {
             if (samplers == null)
             {
-                throw new ArgumentNullException("samplers");
+                throw new ArgumentNullException(nameof(samplers));
             }
 
             this.deviceContext.DomainShaderSetSamplers(
                 startSlot,
                 (uint)samplers.Length,
-                Array.ConvertAll(samplers, i => i == null ? null : i.GetHandle<ID3D11SamplerState>()));
+                Array.ConvertAll(samplers, i => i?.GetHandle<ID3D11SamplerState>()));
         }
 
         /// <summary>
@@ -1510,17 +1568,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the zero-based array to begin setting constant buffers to.</param>
         /// <param name="constantBuffers">Array of constant buffers being given to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void DomainShaderSetConstantBuffers(uint startSlot, D3D11Buffer[] constantBuffers)
         {
             if (constantBuffers == null)
             {
-                throw new ArgumentNullException("constantBuffers");
+                throw new ArgumentNullException(nameof(constantBuffers));
             }
 
             this.deviceContext.DomainShaderSetConstantBuffers(
                 startSlot,
                 (uint)constantBuffers.Length,
-                Array.ConvertAll(constantBuffers, i => i == null ? null : i.GetHandle<ID3D11Buffer>()));
+                Array.ConvertAll(constantBuffers, i => i?.GetHandle<ID3D11Buffer>()));
         }
 
         /// <summary>
@@ -1529,17 +1588,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
         /// <param name="shaderResourceViews">Array of shader resource view interfaces to set to the device.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void ComputeShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView[] shaderResourceViews)
         {
             if (shaderResourceViews == null)
             {
-                throw new ArgumentNullException("shaderResourceViews");
+                throw new ArgumentNullException(nameof(shaderResourceViews));
             }
 
             this.deviceContext.ComputeShaderSetShaderResources(
                 startSlot,
                 (uint)shaderResourceViews.Length,
-                Array.ConvertAll(shaderResourceViews, i => i == null ? null : i.GetHandle<ID3D11ShaderResourceView>()));
+                Array.ConvertAll(shaderResourceViews, i => i?.GetHandle<ID3D11ShaderResourceView>()));
         }
 
         /// <summary>
@@ -1549,27 +1609,28 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="unorderedAccessViews">An array of unordered access views to be set.</param>
         /// <param name="uavInitialCounts">An array of append and consume buffer offsets. A value of <value>-1</value> indicates to keep the current offset.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void ComputeShaderSetUnorderedAccessViews(uint startSlot, D3D11UnorderedAccessView[] unorderedAccessViews, uint[] uavInitialCounts)
         {
             if (unorderedAccessViews == null)
             {
-                throw new ArgumentNullException("unorderedAccessViews");
+                throw new ArgumentNullException(nameof(unorderedAccessViews));
             }
 
             if (uavInitialCounts == null)
             {
-                throw new ArgumentNullException("uavInitialCounts");
+                throw new ArgumentNullException(nameof(uavInitialCounts));
             }
 
             if (uavInitialCounts.Length != unorderedAccessViews.Length)
             {
-                throw new ArgumentOutOfRangeException("uavInitialCounts");
+                throw new ArgumentOutOfRangeException(nameof(uavInitialCounts));
             }
 
             this.deviceContext.ComputeShaderSetUnorderedAccessViews(
                 startSlot,
                 (uint)unorderedAccessViews.Length,
-                Array.ConvertAll(unorderedAccessViews, i => i == null ? null : i.GetHandle<ID3D11UnorderedAccessView>()),
+                Array.ConvertAll(unorderedAccessViews, i => i?.GetHandle<ID3D11UnorderedAccessView>()),
                 uavInitialCounts);
         }
 
@@ -1579,13 +1640,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="computeShader">A compute shader.</param>
         /// <param name="classInstances">An array of class-instance interfaces.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ComputeShaderSetShader(D3D11ComputeShader computeShader, D3D11ClassInstance[] classInstances)
         {
             if (classInstances == null)
             {
                 this.deviceContext.ComputeShaderSetShader(
-                    computeShader == null ? null : computeShader.GetHandle<ID3D11ComputeShader>(),
+                    computeShader?.GetHandle<ID3D11ComputeShader>(),
                     null,
                     0);
             }
@@ -1593,12 +1655,12 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 if (computeShader == null)
                 {
-                    throw new ArgumentNullException("computeShader");
+                    throw new ArgumentNullException(nameof(computeShader));
                 }
 
                 this.deviceContext.ComputeShaderSetShader(
                     computeShader.GetHandle<ID3D11ComputeShader>(),
-                    Array.ConvertAll(classInstances, i => i == null ? null : i.GetHandle<ID3D11ClassInstance>()),
+                    Array.ConvertAll(classInstances, i => i?.GetHandle<ID3D11ClassInstance>()),
                     (uint)classInstances.Length);
             }
         }
@@ -1609,17 +1671,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
         /// <param name="samplers">An array of sampler-state interfaces.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void ComputeShaderSetSamplers(uint startSlot, D3D11SamplerState[] samplers)
         {
             if (samplers == null)
             {
-                throw new ArgumentNullException("samplers");
+                throw new ArgumentNullException(nameof(samplers));
             }
 
             this.deviceContext.ComputeShaderSetSamplers(
                 startSlot,
                 (uint)samplers.Length,
-                Array.ConvertAll(samplers, i => i == null ? null : i.GetHandle<ID3D11SamplerState>()));
+                Array.ConvertAll(samplers, i => i?.GetHandle<ID3D11SamplerState>()));
         }
 
         /// <summary>
@@ -1628,17 +1691,18 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="startSlot">Index into the zero-based array to begin setting constant buffers to.</param>
         /// <param name="constantBuffers">Array of constant buffers.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void ComputeShaderSetConstantBuffers(uint startSlot, D3D11Buffer[] constantBuffers)
         {
             if (constantBuffers == null)
             {
-                throw new ArgumentNullException("constantBuffers");
+                throw new ArgumentNullException(nameof(constantBuffers));
             }
 
             this.deviceContext.ComputeShaderSetConstantBuffers(
                 startSlot,
                 (uint)constantBuffers.Length,
-                Array.ConvertAll(constantBuffers, i => i == null ? null : i.GetHandle<ID3D11Buffer>()));
+                Array.ConvertAll(constantBuffers, i => i?.GetHandle<ID3D11Buffer>()));
         }
 
         /// <summary>
@@ -1648,6 +1712,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numBuffers">Number of buffers to retrieve.</param>
         /// <returns>Array of constant buffer interface pointers to be returned.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11Buffer[] VertexShaderGetConstantBuffers(uint startSlot, uint numBuffers)
         {
             object[] constantBuffers = new object[numBuffers];
@@ -1662,6 +1727,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numViews">The number of resources to get from the device.</param>
         /// <returns>Array of shader resource view interfaces to be returned by the device.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ShaderResourceView[] PixelShaderGetShaderResources(uint startSlot, uint numViews)
         {
             object[] shaderResourceViews = new object[numViews];
@@ -1674,6 +1740,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A pixel shader.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11PixelShader PixelShaderGetShader()
         {
             ID3D11PixelShader pixelShader;
@@ -1689,6 +1756,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="classInstances">An array of class instance interfaces.</param>
         /// <returns>A pixel shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11PixelShader PixelShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
@@ -1708,6 +1776,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numSamplers">Number of samplers to get from a device context.</param>
         /// <returns>Array of sampler-state interface pointers.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11SamplerState[] PixelShaderGetSamplers(uint startSlot, uint numSamplers)
         {
             object[] samplers = new object[numSamplers];
@@ -1720,6 +1789,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A vertex shader.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11VertexShader VertexShaderGetShader()
         {
             ID3D11VertexShader vertexShader;
@@ -1735,6 +1805,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="classInstances">An array of class instance interfaces.</param>
         /// <returns>A vertex shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11VertexShader VertexShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
@@ -1754,6 +1825,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numBuffers">Number of buffers to retrieve.</param>
         /// <returns>Array of constant buffer interface pointers to be returned.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11Buffer[] PixelShaderGetConstantBuffers(uint startSlot, uint numBuffers)
         {
             object[] constantBuffers = new object[numBuffers];
@@ -1766,6 +1838,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>The input-layout object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11InputLayout InputAssemblerGetInputLayout()
         {
             ID3D11InputLayout inputLayout;
@@ -1784,6 +1857,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "2#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "3#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "4#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void InputAssemblerGetVertexBuffers(
             uint startSlot,
@@ -1807,6 +1881,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="offset">Offset (in bytes) from the start of the index buffer, to the first index to use.</param>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "2#", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void InputAssemblerGetIndexBuffer(out D3D11Buffer indexBuffer, out DxgiFormat format, out uint offset)
@@ -1823,6 +1898,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numBuffers">Number of buffers to retrieve.</param>
         /// <returns>Array of constant buffer interface pointers to be returned.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11Buffer[] GeometryShaderGetConstantBuffers(uint startSlot, uint numBuffers)
         {
             object[] constantBuffers = new object[numBuffers];
@@ -1835,6 +1911,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A geometry shader.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11GeometryShader GeometryShaderGetShader()
         {
             ID3D11GeometryShader geometryShader;
@@ -1850,6 +1927,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="classInstances">An array of class instance interfaces.</param>
         /// <returns>A geometry shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11GeometryShader GeometryShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
@@ -1867,6 +1945,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>The type of primitive, and ordering of the primitive data.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11PrimitiveTopology InputAssemblerGetPrimitiveTopology()
         {
             D3D11PrimitiveTopology topology;
@@ -1881,6 +1960,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numViews">The number of resources to get from the device.</param>
         /// <returns>Array of shader resource view interfaces to be returned by the device.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ShaderResourceView[] VertexShaderGetShaderResources(uint startSlot, uint numViews)
         {
             object[] shaderResourceViews = new object[numViews];
@@ -1895,6 +1975,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numSamplers">Number of samplers to get from a device context.</param>
         /// <returns>Array of sampler-state interface pointers to be returned by the device.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11SamplerState[] VertexShaderGetSamplers(uint startSlot, uint numSamplers)
         {
             object[] samplers = new object[numSamplers];
@@ -1909,6 +1990,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="predicateValue">The predicate comparison value.</param>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void GetPredication(out D3D11Predicate predicate, out bool predicateValue)
         {
@@ -1924,6 +2006,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numViews">The number of resources to get from the device.</param>
         /// <returns>Array of shader resource view interfaces to be returned by the device.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ShaderResourceView[] GeometryShaderGetShaderResources(uint startSlot, uint numViews)
         {
             object[] shaderResourceViews = new object[numViews];
@@ -1938,6 +2021,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numSamplers">Number of samplers to get from a device context.</param>
         /// <returns>An array of sampler-state interfaces.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11SamplerState[] GeometryShaderGetSamplers(uint startSlot, uint numSamplers)
         {
             object[] samplers = new object[numSamplers];
@@ -1953,6 +2037,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="depthStencilView">A depth-stencil view.</param>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "2#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerGetRenderTargets(
             uint numViews,
@@ -1978,6 +2063,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "2#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "5#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerGetRenderTargetsAndUnorderedAccessViews(
             uint numRenderTargetViews,
@@ -2013,6 +2099,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "2#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerGetBlendState(out D3D11BlendState blendState, out float[] blendFactor, out uint sampleMask)
         {
@@ -2029,6 +2116,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="stencilReference">The stencil reference value used in the depth-stencil test.</param>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerGetDepthStencilState(out D3D11DepthStencilState depthStencilState, out uint stencilReference)
         {
@@ -2043,6 +2131,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numBuffers">Number of buffers to get.</param>
         /// <returns>An array of output buffers to be retrieved from the device.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11Buffer[] StreamOutputGetTargets(uint numBuffers)
         {
             object[] targets = new object[numBuffers];
@@ -2055,6 +2144,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A rasterizer-state interface.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11RasterizerState RasterizerStageGetState()
         {
             ID3D11RasterizerState rasterizerState;
@@ -2067,6 +2157,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>The viewports that are bound to the rasterizer stage.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11Viewport[] RasterizerStageGetViewports()
         {
             uint numViewports = 0;
@@ -2081,6 +2172,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>An array of scissor rectangles.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11Rect[] RasterizerStageGetScissorRects()
         {
             uint numRects = 0;
@@ -2097,6 +2189,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numViews">The number of resources to get from the device.</param>
         /// <returns>Array of shader resource view interfaces to be returned by the device.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ShaderResourceView[] HullShaderGetShaderResources(uint startSlot, uint numViews)
         {
             object[] shaderResourceViews = new object[numViews];
@@ -2109,6 +2202,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A hull shader.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11HullShader HullShaderGetShader()
         {
             ID3D11HullShader hullShader;
@@ -2124,6 +2218,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="classInstances">An array of class instance interfaces.</param>
         /// <returns>A hull shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11HullShader HullShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
@@ -2143,6 +2238,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numSamplers">Number of samplers to get from a device context.</param>
         /// <returns>An array of sampler-state interfaces.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11SamplerState[] HullShaderGetSamplers(uint startSlot, uint numSamplers)
         {
             object[] samplers = new object[numSamplers];
@@ -2157,6 +2253,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numBuffers">Number of buffers to retrieve.</param>
         /// <returns>Array of constant buffer interface pointers to be returned by the method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11Buffer[] HullShaderGetConstantBuffers(uint startSlot, uint numBuffers)
         {
             object[] constantBuffers = new object[numBuffers];
@@ -2171,6 +2268,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numViews">The number of resources to get from the device.</param>
         /// <returns>Array of shader resource view interfaces to be returned by the device.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ShaderResourceView[] DomainShaderGetShaderResources(uint startSlot, uint numViews)
         {
             object[] shaderResourceViews = new object[numViews];
@@ -2183,6 +2281,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A domain shader.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11DomainShader DomainShaderGetShader()
         {
             ID3D11DomainShader domainShader;
@@ -2198,6 +2297,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="classInstances">An array of class instance interfaces.</param>
         /// <returns>A domain shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11DomainShader DomainShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
@@ -2217,6 +2317,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numSamplers">Number of samplers to get from a device context.</param>
         /// <returns>An array of sampler-state interfaces.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11SamplerState[] DomainShaderGetSamplers(uint startSlot, uint numSamplers)
         {
             object[] samplers = new object[numSamplers];
@@ -2231,6 +2332,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numBuffers">Number of buffers to retrieve.</param>
         /// <returns>Array of constant buffer interface pointers to be returned by the method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11Buffer[] DomainShaderGetConstantBuffers(uint startSlot, uint numBuffers)
         {
             object[] constantBuffers = new object[numBuffers];
@@ -2245,6 +2347,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numViews">The number of resources to get from the device.</param>
         /// <returns>Array of shader resource view interfaces to be returned by the device.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ShaderResourceView[] ComputeShaderGetShaderResources(uint startSlot, uint numViews)
         {
             object[] shaderResourceViews = new object[numViews];
@@ -2259,6 +2362,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numUnorderedAccessViews">Number of views to get.</param>
         /// <returns>An array of interface pointers.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11UnorderedAccessView[] ComputeShaderGetUnorderedAccessViews(uint startSlot, uint numUnorderedAccessViews)
         {
             object[] unorderedAccessViews = new object[numUnorderedAccessViews];
@@ -2271,6 +2375,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>A compute shader.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ComputeShader ComputeShaderGetShader()
         {
             ID3D11ComputeShader computeShader;
@@ -2286,6 +2391,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="classInstances">An array of class instance interfaces.</param>
         /// <returns>A compute shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11ComputeShader ComputeShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
@@ -2305,6 +2411,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numSamplers">Number of samplers to get from a device context.</param>
         /// <returns>An array of sampler-state interfaces.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11SamplerState[] ComputeShaderGetSamplers(uint startSlot, uint numSamplers)
         {
             object[] samplers = new object[numSamplers];
@@ -2319,6 +2426,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="numBuffers">Number of buffers to retrieve.</param>
         /// <returns>Array of constant buffer interface pointers to be returned by the method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11Buffer[] ComputeShaderGetConstantBuffers(uint startSlot, uint numBuffers)
         {
             object[] constantBuffers = new object[numBuffers];
@@ -2330,6 +2438,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Restore all default settings.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void ClearState()
         {
             this.deviceContext.ClearState();
@@ -2339,6 +2448,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// Sends queued-up commands in the command buffer to the graphics processing unit (GPU).
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public void Flush()
         {
             this.deviceContext.Flush();

@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.D2D1
 {
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D2D1.ComInterfaces;
     using JeremyAnsel.DirectX.D2D1.ComInteropInterfaces;
@@ -17,7 +18,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 drawing state block interface.
         /// </summary>
-        private ID2D1DrawingStateBlock drawingStateBlock;
+        private readonly ID2D1DrawingStateBlock drawingStateBlock;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1DrawingStateBlock"/> class.
@@ -44,6 +45,7 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1DrawingStateDescription Description
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 D2D1DrawingStateDescription stateDescription;
@@ -52,6 +54,7 @@ namespace JeremyAnsel.DirectX.D2D1
             }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set
             {
                 this.drawingStateBlock.SetDescription(ref value);
@@ -63,6 +66,8 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         public DWriteRenderingParams TextRenderingParams
         {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
                 IDWriteRenderingParams textRenderingParams;
@@ -76,6 +81,8 @@ namespace JeremyAnsel.DirectX.D2D1
                 return new DWriteRenderingParams(textRenderingParams);
             }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             set
             {
                 this.drawingStateBlock.SetTextRenderingParams(value == null ? null : (IDWriteRenderingParams)value.Handle);

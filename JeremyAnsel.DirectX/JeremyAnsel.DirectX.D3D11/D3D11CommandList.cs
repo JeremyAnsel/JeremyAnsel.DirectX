@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 command list interface.
         /// </summary>
-        private ID3D11CommandList commandList;
+        private readonly ID3D11CommandList commandList;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11CommandList"/> class.

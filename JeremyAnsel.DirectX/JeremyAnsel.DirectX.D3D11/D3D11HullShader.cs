@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 hull shader interface.
         /// </summary>
-        private ID3D11HullShader hullShader;
+        private readonly ID3D11HullShader hullShader;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11HullShader"/> class.

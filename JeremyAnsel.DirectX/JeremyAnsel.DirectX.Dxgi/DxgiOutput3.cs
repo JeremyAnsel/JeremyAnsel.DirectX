@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI output interface.
         /// </summary>
-        private IDxgiOutput2 output;
+        private readonly IDxgiOutput2 output;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiOutput3"/> class.
@@ -114,7 +114,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         {
             if (destination == null)
             {
-                throw new ArgumentNullException("destination");
+                throw new ArgumentNullException(nameof(destination));
             }
 
             this.output.GetDisplaySurfaceData1(destination.GetHandle<IDxgiResource>());

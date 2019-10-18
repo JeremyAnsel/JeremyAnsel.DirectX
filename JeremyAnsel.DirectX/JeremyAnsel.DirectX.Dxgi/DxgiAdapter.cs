@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <summary>
         /// The DXGI adapter interface.
         /// </summary>
-        private IDxgiAdapter adapter;
+        private readonly IDxgiAdapter adapter;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DxgiAdapter"/> class.

@@ -237,7 +237,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (data == null)
             {
-                throw new ArgumentNullException("data");
+                throw new ArgumentNullException(nameof(data));
             }
 
             return new D3D11BufferDesc((uint)Marshal.SizeOf(typeof(T)) * (uint)data.Length, bindOptions);
@@ -256,7 +256,7 @@ namespace JeremyAnsel.DirectX.D3D11
         {
             if (data == null)
             {
-                throw new ArgumentNullException("data");
+                throw new ArgumentNullException(nameof(data));
             }
 
             return new D3D11BufferDesc((uint)Marshal.SizeOf(typeof(T)) * (uint)data.Length, bindOptions, usage);

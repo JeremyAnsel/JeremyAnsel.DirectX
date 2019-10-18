@@ -69,11 +69,11 @@ namespace JeremyAnsel.DirectX.D2D1
             D2D1LayerOptions layerOptions)
         {
             this.contentBounds = contentBounds;
-            this.geometricMask = geometricMask == null ? null : geometricMask.GetHandle<ID2D1Geometry>();
+            this.geometricMask = geometricMask?.GetHandle<ID2D1Geometry>();
             this.maskAntialiasMode = maskAntialiasMode;
             this.maskTransform = maskTransform;
             this.opacity = opacity;
-            this.opacityBrush = opacityBrush == null ? null : opacityBrush.GetHandle<ID2D1Brush>();
+            this.opacityBrush = opacityBrush?.GetHandle<ID2D1Brush>();
             this.layerOptions = layerOptions;
         }
 
@@ -106,7 +106,7 @@ namespace JeremyAnsel.DirectX.D2D1
 
             set
             {
-                this.geometricMask = value == null ? null : value.GetHandle<ID2D1Geometry>();
+                this.geometricMask = value?.GetHandle<ID2D1Geometry>();
             }
         }
 
@@ -149,7 +149,7 @@ namespace JeremyAnsel.DirectX.D2D1
 
             set
             {
-                this.opacityBrush = value == null ? null : value.GetHandle<ID2D1Brush>();
+                this.opacityBrush = value?.GetHandle<ID2D1Brush>();
             }
         }
 

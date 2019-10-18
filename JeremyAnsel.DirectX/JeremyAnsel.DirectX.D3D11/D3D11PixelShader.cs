@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// The D3D11 pixel shader interface.
         /// </summary>
-        private ID3D11PixelShader pixelShader;
+        private readonly ID3D11PixelShader pixelShader;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11PixelShader"/> class.

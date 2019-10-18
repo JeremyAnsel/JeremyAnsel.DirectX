@@ -1,5 +1,5 @@
 ﻿// <copyright file="D2D1Layer.cs" company="Jérémy Ansel">
-// Copyright (c) 2014-2016, 2019 Jérémy Ansel
+// Copyright (c) 2014-2016 Jérémy Ansel
 // </copyright>
 
 namespace JeremyAnsel.DirectX.D2D1
@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The D2D1 layer interface.
         /// </summary>
-        private ID2D1Layer layer;
+        private readonly ID2D1Layer layer;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1Layer"/> class.
