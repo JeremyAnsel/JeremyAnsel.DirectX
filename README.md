@@ -25,6 +25,7 @@ JeremyAnsel.DirectX contains managed wrappers around DirectX APIs.
 
 Description     | Value
 ----------------|----------------
+License         | [The MIT License (MIT)](https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/LICENSE.txt)
 Documentation   | http://jeremyansel.github.io/JeremyAnsel.DirectX
 Source code     | https://github.com/JeremyAnsel/JeremyAnsel.DirectX
 Nuget           | https://www.nuget.org/packages?q=jeremyansel.directx
