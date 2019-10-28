@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.D3D10",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.D3D11", "JeremyAnsel.DirectX.D3D11\JeremyAnsel.DirectX.D3D11.csproj", "{B6F78507-4B82-4E1F-ACB3-01FF598FB00A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentation\Documentation.csproj", "{A7F51AA9-7E8C-487A-B9F7-0948ACE4FC5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation", "Documentation\Documentation.csproj", "{A7F51AA9-7E8C-487A-B9F7-0948ACE4FC5A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B6F78507-4B82-4E1F-ACB3-01FF598FB00A} = {B6F78507-4B82-4E1F-ACB3-01FF598FB00A}
 		{8611E420-C80B-414E-A184-389761150D3A} = {8611E420-C80B-414E-A184-389761150D3A}
@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentat
 		{FBBB92CC-6734-4AEB-845D-70EC73DF6B47} = {FBBB92CC-6734-4AEB-845D-70EC73DF6B47}
 		{3F7580D0-9251-4230-A3B0-91305002E390} = {3F7580D0-9251-4230-A3B0-91305002E390}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D3DCompiler", "JeremyAnsel.DirectX.D3DCompiler\JeremyAnsel.DirectX.D3DCompiler.csproj", "{78BDE2AF-27B0-424B-962D-91C108722AA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{A7F51AA9-7E8C-487A-B9F7-0948ACE4FC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7F51AA9-7E8C-487A-B9F7-0948ACE4FC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7F51AA9-7E8C-487A-B9F7-0948ACE4FC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78BDE2AF-27B0-424B-962D-91C108722AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BDE2AF-27B0-424B-962D-91C108722AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BDE2AF-27B0-424B-962D-91C108722AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BDE2AF-27B0-424B-962D-91C108722AA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

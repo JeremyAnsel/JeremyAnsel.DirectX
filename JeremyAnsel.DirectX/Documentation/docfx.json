@@ -7,6 +7,7 @@
             "JeremyAnsel.DirectX.D2D1/**.csproj",
             "JeremyAnsel.DirectX.D3D10/**.csproj",
             "JeremyAnsel.DirectX.D3D11/**.csproj",
+            "JeremyAnsel.DirectX.D3DCompiler/**.csproj",
             "JeremyAnsel.DirectX.DWrite/**.csproj",
             "JeremyAnsel.DirectX.Dxgi/**.csproj",
             "JeremyAnsel.DirectX.DXMath/**.csproj"

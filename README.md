@@ -21,6 +21,9 @@ JeremyAnsel.DirectX.D3D10:
 JeremyAnsel.DirectX.D3D11:
 [![NuGet Version](https://buildstats.info/nuget/JeremyAnsel.DirectX.D3D11)](https://www.nuget.org/packages/JeremyAnsel.DirectX.D3D11)
 
+JeremyAnsel.DirectX.D3DCompiler:
+[![NuGet Version](https://buildstats.info/nuget/JeremyAnsel.DirectX.D3DCompiler)](https://www.nuget.org/packages/JeremyAnsel.DirectX.D3DCompiler)
+
 JeremyAnsel.DirectX contains managed wrappers around DirectX APIs.
 
 Description     | Value
