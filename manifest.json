@@ -3170,6 +3170,78 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DCompile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DCompile.html",
+          "hash": "Lsk6x0r0Q6FOhhlKw9WG0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DCompileOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DCompileOptions.html",
+          "hash": "taKFQkbkgEajVLaUze2LAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DDisassembleOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DDisassembleOptions.html",
+          "hash": "nou+IkfO5TKxY4ulgHdG5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DShaderMacro.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DShaderMacro.html",
+          "hash": "eLtfrI49aCJCUAqIXMaSWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DTargets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DTargets.html",
+          "hash": "omdxLTZAj6/YtdNPcM2Cmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.html",
+          "hash": "vHs6Hm04Ovpyooeqdmzjmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteBreakCondition.yml",
       "output": {
         ".html": {
@@ -5706,7 +5778,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "BUnsc2JfHiN7Ebkz2zLALg=="
+          "hash": "f4CIJowF+3ntnLvP0LS3MA=="
         }
       },
       "is_incremental": false,
@@ -5718,7 +5790,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "VezuQV8fmJA4gsqlyFAxEQ=="
+          "hash": "2i3m+o4MXncPgBcuCFQQ5A=="
         }
       },
       "is_incremental": false,
@@ -5764,7 +5836,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 473,
+          "total_file_count": 479,
           "skipped_file_count": 0
         }
       }
