@@ -195,7 +195,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CompileFromFile(string sourceFileName, string entrypoint, string target, D3DCompileOptions options, out byte[] code, out string errorMessages)
         {
-            D3DCompile.CompileFromFile(sourceFileName, entrypoint, target, options, out code, out errorMessages);
+            D3DCompile.CompileFromFile(sourceFileName, null, entrypoint, target, options, out code, out errorMessages);
         }
 
         /// <summary>
