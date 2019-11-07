@@ -6,6 +6,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
 {
     using JeremyAnsel.DirectX.D3DCompiler.ComInterfaces;
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using System.Runtime.CompilerServices;
     using System.Runtime.InteropServices;
@@ -16,6 +17,43 @@ namespace JeremyAnsel.DirectX.D3DCompiler
     /// </summary>
     public static class D3DCompile
     {
+        private static string _includeRootDirectory;
+        private static readonly Stack<string> _includeDirectories = new Stack<string>();
+
+        private static readonly IncludeOpenCallBack _includeOpenCallback = new IncludeOpenCallBack(IncludeOpen);
+        private static readonly IncludeCloseCallBack _includeCloseCallback = new IncludeCloseCallBack(IncludeClose);
+
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate int IncludeOpenCallBack(IntPtr thisPtr, D3DIncludeLocation includeLocation, IntPtr fileNameRef, IntPtr pParentData, out IntPtr dataRef, out int bytesRef);
+
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate int IncludeCloseCallBack(IntPtr thisPtr, IntPtr pData);
+
+        private static int IncludeOpen(IntPtr thisPtr, D3DIncludeLocation includeLocation, IntPtr fileNameRef, IntPtr pParentData, out IntPtr dataRef, out int bytesRef)
+        {
+            string fileName = Marshal.PtrToStringAnsi(fileNameRef);
+            string includeDirectory = includeLocation == D3DIncludeLocation.Local ? _includeDirectories.Peek() : _includeRootDirectory;
+            string sourceFileName = Path.GetFullPath(Path.Combine(includeDirectory, fileName));
+
+            string sourceData = File.ReadAllText(sourceFileName);
+            byte[] sourceBytes = Encoding.UTF8.GetBytes(sourceData);
+
+            dataRef = Marshal.AllocHGlobal(sourceBytes.Length);
+            bytesRef = sourceBytes.Length;
+            Marshal.Copy(sourceBytes, 0, dataRef, sourceBytes.Length);
+
+            _includeDirectories.Push(Path.GetDirectoryName(sourceFileName));
+            return 0;
+        }
+
+        private static int IncludeClose(IntPtr thisPtr, IntPtr pData)
+        {
+            Marshal.FreeHGlobal(pData);
+
+            _includeDirectories.Pop();
+            return 0;
+        }
+
         /// <summary>
         /// Compile HLSL code or an effect file into bytecode for a given target.
         /// </summary>
@@ -66,6 +104,16 @@ namespace JeremyAnsel.DirectX.D3DCompiler
                 definesPtr[defines.Length * 2 + 1] = IntPtr.Zero;
             }
 
+            IntPtr includePointer = IntPtr.Zero;
+
+            if (_includeDirectories.Count != 0)
+            {
+                includePointer = Marshal.AllocHGlobal(IntPtr.Size * 3);
+                Marshal.WriteIntPtr(includePointer, includePointer + IntPtr.Size);
+                Marshal.WriteIntPtr(includePointer + IntPtr.Size, Marshal.GetFunctionPointerForDelegate(_includeOpenCallback));
+                Marshal.WriteIntPtr(includePointer + IntPtr.Size * 2, Marshal.GetFunctionPointerForDelegate(_includeCloseCallback));
+            }
+
             int hr = 0;
             ID3DBlob codeBlob = null;
             ID3DBlob errorMessagesBlob = null;
@@ -74,10 +122,10 @@ namespace JeremyAnsel.DirectX.D3DCompiler
             {
                 hr = NativeMethods.D3DCompile(
                     sourceData,
-                    new IntPtr(Encoding.ASCII.GetByteCount(sourceData)),
+                    new IntPtr(Encoding.UTF8.GetByteCount(sourceData)),
                     sourceName,
                     definesPtr,
-                    new IntPtr(1), // D3D_COMPILE_STANDARD_FILE_INCLUDE
+                    includePointer != IntPtr.Zero ? includePointer : new IntPtr(1), // D3D_COMPILE_STANDARD_FILE_INCLUDE
                     entrypoint,
                     target,
                     options,
@@ -87,6 +135,11 @@ namespace JeremyAnsel.DirectX.D3DCompiler
             }
             finally
             {
+                if (includePointer != IntPtr.Zero)
+                {
+                    Marshal.FreeHGlobal(includePointer);
+                }
+
                 if (definesPtr != null)
                 {
                     for (int i = 0; i < definesPtr.Length; i++)
@@ -119,7 +172,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
 
                     var bytes = new byte[length];
                     Marshal.Copy(ptr, bytes, 0, length);
-                    errorMessages = Encoding.ASCII.GetString(bytes);
+                    errorMessages = Encoding.UTF8.GetString(bytes);
                 }
                 else
                 {
@@ -180,7 +233,19 @@ namespace JeremyAnsel.DirectX.D3DCompiler
             }
 
             string sourceData = File.ReadAllText(sourceFileName);
-            D3DCompile.Compile(sourceData, Path.GetFileName(sourceFileName), defines, entrypoint, target, options, out code, out errorMessages);
+
+            _includeRootDirectory = Path.GetDirectoryName(sourceFileName);
+            _includeDirectories.Push(_includeRootDirectory);
+
+            try
+            {
+                D3DCompile.Compile(sourceData, sourceFileName, defines, entrypoint, target, options, out code, out errorMessages);
+            }
+            finally
+            {
+                _includeRootDirectory = null;
+                _includeDirectories.Clear();
+            }
         }
 
         /// <summary>
@@ -227,7 +292,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
 
                 var bytes = new byte[length];
                 Marshal.Copy(ptr, bytes, 0, length);
-                return Encoding.ASCII.GetString(bytes);
+                return Encoding.UTF8.GetString(bytes);
             }
             finally
             {
