@@ -30,6 +30,7 @@ Description     | Value
 ----------------|----------------
 License         | [The MIT License (MIT)](https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/LICENSE.txt)
 Documentation   | http://jeremyansel.github.io/JeremyAnsel.DirectX
+Samples         | https://github.com/JeremyAnsel/JeremyAnsel.DirectX-Samples
 Source code     | https://github.com/JeremyAnsel/JeremyAnsel.DirectX
 Nuget           | https://www.nuget.org/packages?q=jeremyansel.directx
 Build           | https://ci.appveyor.com/project/JeremyAnsel/jeremyansel-directx/branch/master
