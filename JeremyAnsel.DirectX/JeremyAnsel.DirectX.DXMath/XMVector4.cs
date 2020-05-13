@@ -635,9 +635,9 @@ namespace JeremyAnsel.DirectX.DXMath
         public static XMVector Transform(XMVector v, XMMatrix m)
         {
             float fx = (m.M11 * v.X) + (m.M21 * v.Y) + (m.M31 * v.Z) + (m.M41 * v.W);
-            float fy = (m.M12 * v.X) + (m.M21 * v.Y) + (m.M31 * v.Z) + (m.M41 * v.W);
-            float fz = (m.M13 * v.X) + (m.M21 * v.Y) + (m.M31 * v.Z) + (m.M41 * v.W);
-            float fw = (m.M14 * v.X) + (m.M21 * v.Y) + (m.M31 * v.Z) + (m.M41 * v.W);
+            float fy = (m.M12 * v.X) + (m.M22 * v.Y) + (m.M32 * v.Z) + (m.M42 * v.W);
+            float fz = (m.M13 * v.X) + (m.M23 * v.Y) + (m.M33 * v.Z) + (m.M43 * v.W);
+            float fw = (m.M14 * v.X) + (m.M24 * v.Y) + (m.M34 * v.Z) + (m.M44 * v.W);
 
             return new XMVector(fx, fy, fz, fw);
         }
