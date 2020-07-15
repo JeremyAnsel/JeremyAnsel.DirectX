@@ -23,6 +23,8 @@ before_build:
 build:
   project: JeremyAnsel.DirectX\JeremyAnsel.DirectX.sln
   publish_nuget: true
+  publish_nuget_symbols: true
+  use_snupkg_format: true
   verbosity: minimal
 
 after_build:
@@ -33,7 +35,7 @@ deploy:
 - provider: NuGet
   api_key:
     secure: ez3RLsSaraf05zX77AqWyz+gYbT+5eM7jdIq7Fv43DXPp5+YscPbW5yb7owDfyHd
-  skip_symbols: true
+  skip_symbols: false
   on:
     branch: master
     DEPLOY: True
