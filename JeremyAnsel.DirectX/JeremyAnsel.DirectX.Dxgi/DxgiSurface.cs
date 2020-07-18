@@ -82,8 +82,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DxgiMappedRect Map(DxgiMapOptions options)
         {
-            DxgiMappedRect lockedRect;
-            this.surface.Map(out lockedRect, options);
+            this.surface.Map(out DxgiMappedRect lockedRect, options);
             return lockedRect;
         }
 

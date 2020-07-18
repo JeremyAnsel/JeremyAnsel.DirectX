@@ -736,8 +736,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             // Set w of the center to one so we can dot4 with a plane.
             v_center.W = 1.0f;
 
-            XMVector outside, inside;
-            Internal.FastIntersectSpherePlane(v_center, v_radius, plane, out outside, out inside);
+            Internal.FastIntersectSpherePlane(v_center, v_radius, plane, out XMVector outside, out XMVector inside);
 
             // If the sphere is outside any plane it is outside.
             if (XMVector4.EqualInt(outside, XMVector.TrueInt))
@@ -764,8 +763,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool Intersects(XMVector origin, XMVector direction)
         {
-            float distance;
-            return this.Intersects(origin, direction, out distance);
+            return this.Intersects(origin, direction, out _);
         }
 
         /// <summary>
@@ -873,10 +871,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             // Set w of the center to one so we can dot4 with a plane.
             v_center.W = 1.0f;
 
-            XMVector outside, inside;
-
             // Test against each plane.
-            Internal.FastIntersectSpherePlane(v_center, v_radius, plane0, out outside, out inside);
+            Internal.FastIntersectSpherePlane(v_center, v_radius, plane0, out XMVector outside, out XMVector inside);
 
             XMVector anyOutside = outside;
             XMVector allInside = inside;

@@ -34,8 +34,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D2D1Matrix3X2F transform;
-                this.GetHandle<ID2D1RenderTarget>().GetTransform(out transform);
+                this.GetHandle<ID2D1RenderTarget>().GetTransform(out D2D1Matrix3X2F transform);
                 return transform;
             }
 
@@ -91,8 +90,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D2D1SizeF size;
-                this.GetHandle<ID2D1RenderTarget>().GetSize(out size);
+                this.GetHandle<ID2D1RenderTarget>().GetSize(out D2D1SizeF size);
                 return size;
             }
         }
@@ -106,8 +104,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D2D1SizeU size;
-                this.GetHandle<ID2D1RenderTarget>().GetPixelSize(out size);
+                this.GetHandle<ID2D1RenderTarget>().GetPixelSize(out D2D1SizeU size);
                 return size;
             }
         }
@@ -132,8 +129,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1Bitmap CreateBitmap(D2D1SizeU size, IntPtr srcData, uint pitch, D2D1BitmapProperties bitmapProperties)
         {
-            ID2D1Bitmap bitmap;
-            this.GetHandle<ID2D1RenderTarget>().CreateBitmap(size, srcData, pitch, ref bitmapProperties, out bitmap);
+            this.GetHandle<ID2D1RenderTarget>().CreateBitmap(size, srcData, pitch, ref bitmapProperties, out ID2D1Bitmap bitmap);
+
+            if (bitmap == null)
+            {
+                return null;
+            }
+
             return new D2D1Bitmap(bitmap);
         }
 
@@ -148,8 +150,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1Bitmap CreateBitmap(D2D1SizeU size, byte[] srcData, uint pitch, D2D1BitmapProperties bitmapProperties)
         {
-            ID2D1Bitmap bitmap;
-            this.GetHandle<ID2D1RenderTarget>().CreateBitmap(size, srcData == null ? IntPtr.Zero : Marshal.UnsafeAddrOfPinnedArrayElement(srcData, 0), pitch, ref bitmapProperties, out bitmap);
+            this.GetHandle<ID2D1RenderTarget>().CreateBitmap(size, srcData == null ? IntPtr.Zero : Marshal.UnsafeAddrOfPinnedArrayElement(srcData, 0), pitch, ref bitmapProperties, out ID2D1Bitmap bitmap);
+
+            if (bitmap == null)
+            {
+                return null;
+            }
+
             return new D2D1Bitmap(bitmap);
         }
 
@@ -162,8 +169,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1Bitmap CreateBitmap(D2D1SizeU size, D2D1BitmapProperties bitmapProperties)
         {
-            ID2D1Bitmap bitmap;
-            this.GetHandle<ID2D1RenderTarget>().CreateBitmap(size, IntPtr.Zero, 0U, ref bitmapProperties, out bitmap);
+            this.GetHandle<ID2D1RenderTarget>().CreateBitmap(size, IntPtr.Zero, 0U, ref bitmapProperties, out ID2D1Bitmap bitmap);
+
+            if (bitmap == null)
+            {
+                return null;
+            }
+
             return new D2D1Bitmap(bitmap);
         }
 
@@ -180,8 +192,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(wicBitmapSource));
             }
 
-            ID2D1Bitmap bitmap;
-            this.GetHandle<ID2D1RenderTarget>().CreateBitmapFromWicBitmap((IWICBitmapSource)wicBitmapSource, IntPtr.Zero, out bitmap);
+            this.GetHandle<ID2D1RenderTarget>().CreateBitmapFromWicBitmap((IWICBitmapSource)wicBitmapSource, IntPtr.Zero, out ID2D1Bitmap bitmap);
+
+            if (bitmap == null)
+            {
+                return null;
+            }
+
             return new D2D1Bitmap(bitmap);
         }
 
@@ -212,6 +229,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 bitmapPropertiesHandle.Free();
             }
 
+            if (bitmap == null)
+            {
+                return null;
+            }
+
             return new D2D1Bitmap(bitmap);
         }
 
@@ -229,8 +251,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(data));
             }
 
-            ID2D1Bitmap bitmap;
-            this.GetHandle<ID2D1RenderTarget>().CreateSharedBitmap(ref riid, data, IntPtr.Zero, out bitmap);
+            this.GetHandle<ID2D1RenderTarget>().CreateSharedBitmap(ref riid, data, IntPtr.Zero, out ID2D1Bitmap bitmap);
+
+            if (bitmap == null)
+            {
+                return null;
+            }
+
             return new D2D1Bitmap(bitmap);
         }
 
@@ -262,6 +289,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 bitmapPropertiesHandle.Free();
             }
 
+            if (bitmap == null)
+            {
+                return null;
+            }
+
             return new D2D1Bitmap(bitmap);
         }
 
@@ -279,8 +311,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(bitmap));
             }
 
-            ID2D1BitmapBrush bitmapBrush;
-            this.GetHandle<ID2D1RenderTarget>().CreateBitmapBrush(bitmap.GetHandle<ID2D1Bitmap>(), IntPtr.Zero, IntPtr.Zero, out bitmapBrush);
+            this.GetHandle<ID2D1RenderTarget>().CreateBitmapBrush(bitmap.GetHandle<ID2D1Bitmap>(), IntPtr.Zero, IntPtr.Zero, out ID2D1BitmapBrush bitmapBrush);
+
+            if (bitmapBrush == null)
+            {
+                return null;
+            }
+
             return new D2D1BitmapBrush(bitmapBrush);
         }
 
@@ -310,6 +347,11 @@ namespace JeremyAnsel.DirectX.D2D1
             finally
             {
                 bitmapBrushPropertiesHandle.Free();
+            }
+
+            if (bitmapBrush == null)
+            {
+                return null;
             }
 
             return new D2D1BitmapBrush(bitmapBrush);
@@ -346,6 +388,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 brushPropertiesHandle.Free();
             }
 
+            if (bitmapBrush == null)
+            {
+                return null;
+            }
+
             return new D2D1BitmapBrush(bitmapBrush);
         }
 
@@ -357,8 +404,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1SolidColorBrush CreateSolidColorBrush(D2D1ColorF color)
         {
-            ID2D1SolidColorBrush solidColorBrush;
-            this.GetHandle<ID2D1RenderTarget>().CreateSolidColorBrush(ref color, IntPtr.Zero, out solidColorBrush);
+            this.GetHandle<ID2D1RenderTarget>().CreateSolidColorBrush(ref color, IntPtr.Zero, out ID2D1SolidColorBrush solidColorBrush);
+
+            if (solidColorBrush == null)
+            {
+                return null;
+            }
+
             return new D2D1SolidColorBrush(solidColorBrush);
         }
 
@@ -384,6 +436,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 brushPropertiesHandle.Free();
             }
 
+            if (solidColorBrush == null)
+            {
+                return null;
+            }
+
             return new D2D1SolidColorBrush(solidColorBrush);
         }
 
@@ -407,8 +464,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentOutOfRangeException(nameof(gradientStops));
             }
 
-            ID2D1GradientStopCollection gradientStopCollection;
-            this.GetHandle<ID2D1RenderTarget>().CreateGradientStopCollection(gradientStops, (uint)gradientStops.Length, colorInterpolationGamma, extendMode, out gradientStopCollection);
+            this.GetHandle<ID2D1RenderTarget>().CreateGradientStopCollection(gradientStops, (uint)gradientStops.Length, colorInterpolationGamma, extendMode, out ID2D1GradientStopCollection gradientStopCollection);
+
+            if (gradientStopCollection == null)
+            {
+                return null;
+            }
+
             return new D2D1GradientStopCollection(gradientStopCollection);
         }
 
@@ -430,8 +492,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentOutOfRangeException(nameof(gradientStops));
             }
 
-            ID2D1GradientStopCollection gradientStopCollection;
-            this.GetHandle<ID2D1RenderTarget>().CreateGradientStopCollection(gradientStops, (uint)gradientStops.Length, D2D1Gamma.Gamma22, D2D1ExtendMode.Clamp, out gradientStopCollection);
+            this.GetHandle<ID2D1RenderTarget>().CreateGradientStopCollection(gradientStops, (uint)gradientStops.Length, D2D1Gamma.Gamma22, D2D1ExtendMode.Clamp, out ID2D1GradientStopCollection gradientStopCollection);
+
+            if (gradientStopCollection == null)
+            {
+                return null;
+            }
+
             return new D2D1GradientStopCollection(gradientStopCollection);
         }
 
@@ -450,8 +517,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(gradientStopCollection));
             }
 
-            ID2D1LinearGradientBrush linearGradientBrush;
-            this.GetHandle<ID2D1RenderTarget>().CreateLinearGradientBrush(ref linearGradientBrushProperties, IntPtr.Zero, gradientStopCollection.GetHandle<ID2D1GradientStopCollection>(), out linearGradientBrush);
+            this.GetHandle<ID2D1RenderTarget>().CreateLinearGradientBrush(ref linearGradientBrushProperties, IntPtr.Zero, gradientStopCollection.GetHandle<ID2D1GradientStopCollection>(), out ID2D1LinearGradientBrush linearGradientBrush);
+
+            if (linearGradientBrush == null)
+            {
+                return null;
+            }
+
             return new D2D1LinearGradientBrush(linearGradientBrush);
         }
 
@@ -484,6 +556,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 brushPropertiesHandle.Free();
             }
 
+            if (linearGradientBrush == null)
+            {
+                return null;
+            }
+
             return new D2D1LinearGradientBrush(linearGradientBrush);
         }
 
@@ -502,8 +579,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentOutOfRangeException(nameof(gradientStopCollection));
             }
 
-            ID2D1RadialGradientBrush radialGradientBrush;
-            this.GetHandle<ID2D1RenderTarget>().CreateRadialGradientBrush(ref radialGradientBrushProperties, IntPtr.Zero, gradientStopCollection.GetHandle<ID2D1GradientStopCollection>(), out radialGradientBrush);
+            this.GetHandle<ID2D1RenderTarget>().CreateRadialGradientBrush(ref radialGradientBrushProperties, IntPtr.Zero, gradientStopCollection.GetHandle<ID2D1GradientStopCollection>(), out ID2D1RadialGradientBrush radialGradientBrush);
+
+            if (radialGradientBrush == null)
+            {
+                return null;
+            }
+
             return new D2D1RadialGradientBrush(radialGradientBrush);
         }
 
@@ -536,6 +618,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 brushPropertiesHandle.Free();
             }
 
+            if (radialGradientBrush == null)
+            {
+                return null;
+            }
+
             return new D2D1RadialGradientBrush(radialGradientBrush);
         }
 
@@ -547,14 +634,17 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1CompatibleRenderTargetOptions options)
         {
-            ID2D1BitmapRenderTarget bitmapRenderTarget;
-
             this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
                 IntPtr.Zero,
                 IntPtr.Zero,
                 IntPtr.Zero,
                 options,
-                out bitmapRenderTarget);
+                out ID2D1BitmapRenderTarget bitmapRenderTarget);
+
+            if (bitmapRenderTarget == null)
+            {
+                return null;
+            }
 
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
         }
@@ -586,6 +676,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 desiredSizeHandle.Free();
             }
 
+            if (bitmapRenderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
         }
 
@@ -614,6 +709,11 @@ namespace JeremyAnsel.DirectX.D2D1
             finally
             {
                 desiredPixelSizeHandle.Free();
+            }
+
+            if (bitmapRenderTarget == null)
+            {
+                return null;
             }
 
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
@@ -649,6 +749,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 desiredPixelSizeHandle.Free();
             }
 
+            if (bitmapRenderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
         }
 
@@ -677,6 +782,11 @@ namespace JeremyAnsel.DirectX.D2D1
             finally
             {
                 desiredFormatHandle.Free();
+            }
+
+            if (bitmapRenderTarget == null)
+            {
+                return null;
             }
 
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
@@ -712,6 +822,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 desiredFormatHandle.Free();
             }
 
+            if (bitmapRenderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
         }
 
@@ -743,6 +858,11 @@ namespace JeremyAnsel.DirectX.D2D1
             {
                 desiredPixelSizeHandle.Free();
                 desiredFormatHandle.Free();
+            }
+
+            if (bitmapRenderTarget == null)
+            {
+                return null;
             }
 
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
@@ -781,6 +901,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 desiredFormatHandle.Free();
             }
 
+            if (bitmapRenderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
         }
 
@@ -791,14 +916,17 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1BitmapRenderTarget CreateCompatibleRenderTarget()
         {
-            ID2D1BitmapRenderTarget bitmapRenderTarget;
-
             this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
                 IntPtr.Zero,
                 IntPtr.Zero,
                 IntPtr.Zero,
                 D2D1CompatibleRenderTargetOptions.None,
-                out bitmapRenderTarget);
+                out ID2D1BitmapRenderTarget bitmapRenderTarget);
+
+            if (bitmapRenderTarget == null)
+            {
+                return null;
+            }
 
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
         }
@@ -827,6 +955,11 @@ namespace JeremyAnsel.DirectX.D2D1
             finally
             {
                 desiredSizeHandle.Free();
+            }
+
+            if (bitmapRenderTarget == null)
+            {
+                return null;
             }
 
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
@@ -859,6 +992,11 @@ namespace JeremyAnsel.DirectX.D2D1
             {
                 desiredSizeHandle.Free();
                 desiredPixelSizeHandle.Free();
+            }
+
+            if (bitmapRenderTarget == null)
+            {
+                return null;
             }
 
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
@@ -896,6 +1034,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 desiredFormatHandle.Free();
             }
 
+            if (bitmapRenderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1BitmapRenderTarget(bitmapRenderTarget);
         }
 
@@ -906,8 +1049,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1Layer CreateLayer()
         {
-            ID2D1Layer layer;
-            this.GetHandle<ID2D1RenderTarget>().CreateLayer(IntPtr.Zero, out layer);
+            this.GetHandle<ID2D1RenderTarget>().CreateLayer(IntPtr.Zero, out ID2D1Layer layer);
+
+            if (layer == null)
+            {
+                return null;
+            }
+
             return new D2D1Layer(layer);
         }
 
@@ -932,6 +1080,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 sizeHandle.Free();
             }
 
+            if (layer == null)
+            {
+                return null;
+            }
+
             return new D2D1Layer(layer);
         }
 
@@ -942,8 +1095,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1Mesh CreateMesh()
         {
-            ID2D1Mesh mesh;
-            this.GetHandle<ID2D1RenderTarget>().CreateMesh(out mesh);
+            this.GetHandle<ID2D1RenderTarget>().CreateMesh(out ID2D1Mesh mesh);
+
+            if (mesh == null)
+            {
+                return null;
+            }
+
             return new D2D1Mesh(mesh);
         }
 
@@ -1814,8 +1972,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteRenderingParams GetTextRenderingParams()
         {
-            IDWriteRenderingParams textRenderingParams;
-            this.GetHandle<ID2D1RenderTarget>().GetTextRenderingParams(out textRenderingParams);
+            this.GetHandle<ID2D1RenderTarget>().GetTextRenderingParams(out IDWriteRenderingParams textRenderingParams);
 
             if (textRenderingParams == null)
             {
@@ -1880,9 +2037,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Flush()
         {
-            ulong tag1;
-            ulong tag2;
-            this.GetHandle<ID2D1RenderTarget>().Flush(out tag1, out tag2);
+            this.GetHandle<ID2D1RenderTarget>().Flush(out _, out _);
         }
 
         /// <summary>
@@ -2000,9 +2155,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void EndDraw()
         {
-            ulong tag1;
-            ulong tag2;
-            this.GetHandle<ID2D1RenderTarget>().EndDraw(out tag1, out tag2);
+            this.GetHandle<ID2D1RenderTarget>().EndDraw(out _, out _);
         }
 
         /// <summary>

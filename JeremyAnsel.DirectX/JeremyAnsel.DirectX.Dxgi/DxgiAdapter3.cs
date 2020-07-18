@@ -58,11 +58,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public IEnumerable<DxgiOutput3> EnumOutputs()
         {
-            IDxgiOutput output;
-
-            for (uint i = 0; !this.adapter.EnumOutputs(i, out output); i++)
+            for (uint i = 0; !this.adapter.EnumOutputs(i, out IDxgiOutput output); i++)
             {
-                yield return new DxgiOutput3((IDxgiOutput2)output);
+                yield return output == null ? null : new DxgiOutput3((IDxgiOutput2)output);
             }
         }
 
@@ -75,7 +73,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         public DxgiFactory3 GetParent()
         {
             Guid riid = typeof(IDxgiFactory3).GUID;
-            return new DxgiFactory3((IDxgiFactory3)this.adapter.GetParent(ref riid));
+            object parent = this.adapter.GetParent(ref riid);
+
+            if (parent == null)
+            {
+                return null;
+            }
+
+            return new DxgiFactory3((IDxgiFactory3)parent);
         }
     }
 }

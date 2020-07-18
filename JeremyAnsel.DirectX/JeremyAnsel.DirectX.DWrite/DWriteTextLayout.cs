@@ -21,7 +21,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite text layout interface.
         /// </summary>
-        private IDWriteTextLayout handle;
+        private readonly IDWriteTextLayout handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteTextLayout"/> class.
@@ -224,8 +224,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteTrimming GetTrimming()
         {
-            DWriteTrimming trimmingOptions;
-            this.handle.GetTrimming(out trimmingOptions, IntPtr.Zero);
+            this.handle.GetTrimming(out DWriteTrimming trimmingOptions, IntPtr.Zero);
             return trimmingOptions;
         }
 
@@ -252,8 +251,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontCollection GetFontCollection()
         {
-            IDWriteFontCollection fontCollection;
-            this.handle.GetFontCollection(out fontCollection);
+            this.handle.GetFontCollection(out IDWriteFontCollection fontCollection);
+
+            if (fontCollection == null)
+            {
+                return null;
+            }
+
             return new DWriteFontCollection(fontCollection);
         }
 
@@ -421,8 +425,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontCollection GetFontCollection(uint currentPosition, out DWriteTextRange textRange)
         {
-            IDWriteFontCollection fontCollection;
-            this.handle.GetFontCollection(currentPosition, out fontCollection, out textRange);
+            this.handle.GetFontCollection(currentPosition, out IDWriteFontCollection fontCollection, out textRange);
+
+            if (fontCollection == null)
+            {
+                return null;
+            }
+
             return new DWriteFontCollection(fontCollection);
         }
 
@@ -436,8 +445,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string GetFontFamilyName(uint currentPosition, out DWriteTextRange textRange)
         {
-            uint length;
-            this.handle.GetFontFamilyNameLength(currentPosition, out length, out textRange);
+            this.handle.GetFontFamilyNameLength(currentPosition, out uint length, out _);
             length++;
 
             StringBuilder name = new StringBuilder((int)length);
@@ -466,8 +474,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontWeight GetFontWeight(uint currentPosition, out DWriteTextRange textRange)
         {
-            DWriteFontWeight fontWeight;
-            this.handle.GetFontWeight(currentPosition, out fontWeight, out textRange);
+            this.handle.GetFontWeight(currentPosition, out DWriteFontWeight fontWeight, out textRange);
             return fontWeight;
         }
 
@@ -491,8 +498,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontStyle GetFontStyle(uint currentPosition, out DWriteTextRange textRange)
         {
-            DWriteFontStyle fontStyle;
-            this.handle.GetFontStyle(currentPosition, out fontStyle, out textRange);
+            this.handle.GetFontStyle(currentPosition, out DWriteFontStyle fontStyle, out textRange);
             return fontStyle;
         }
 
@@ -516,8 +522,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontStretch GetFontStretch(uint currentPosition, out DWriteTextRange textRange)
         {
-            DWriteFontStretch fontStretch;
-            this.handle.GetFontStretch(currentPosition, out fontStretch, out textRange);
+            this.handle.GetFontStretch(currentPosition, out DWriteFontStretch fontStretch, out textRange);
             return fontStretch;
         }
 
@@ -541,8 +546,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float GetFontSize(uint currentPosition, out DWriteTextRange textRange)
         {
-            float fontSize;
-            this.handle.GetFontSize(currentPosition, out fontSize, out textRange);
+            this.handle.GetFontSize(currentPosition, out float fontSize, out textRange);
             return fontSize;
         }
 
@@ -556,8 +560,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool GetUnderline(uint currentPosition, out DWriteTextRange textRange)
         {
-            bool hasUnderline;
-            this.handle.GetUnderline(currentPosition, out hasUnderline, out textRange);
+            this.handle.GetUnderline(currentPosition, out bool hasUnderline, out textRange);
             return hasUnderline;
         }
 
@@ -571,8 +574,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool GetStrikethrough(uint currentPosition, out DWriteTextRange textRange)
         {
-            bool hasStrikethrough;
-            this.handle.GetStrikethrough(currentPosition, out hasStrikethrough, out textRange);
+            this.handle.GetStrikethrough(currentPosition, out bool hasStrikethrough, out textRange);
             return hasStrikethrough;
         }
 
@@ -586,8 +588,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteTypography GetTypography(uint currentPosition, out DWriteTextRange textRange)
         {
-            IDWriteTypography typography;
-            this.handle.GetTypography(currentPosition, out typography, out textRange);
+            this.handle.GetTypography(currentPosition, out IDWriteTypography typography, out textRange);
+
+            if (typography == null)
+            {
+                return null;
+            }
+
             return new DWriteTypography(typography);
         }
 
@@ -601,8 +608,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string GetLocaleName(uint currentPosition, out DWriteTextRange textRange)
         {
-            uint length;
-            this.handle.GetLocaleNameLength(currentPosition, out length, out textRange);
+            this.handle.GetLocaleNameLength(currentPosition, out uint length, out _);
             length++;
 
             StringBuilder name = new StringBuilder((int)length);
@@ -625,8 +631,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteTextMetrics GetMetrics()
         {
-            DWriteTextMetrics textMetrics;
-            this.handle.GetMetrics(out textMetrics);
+            this.handle.GetMetrics(out DWriteTextMetrics textMetrics);
             return textMetrics;
         }
 
@@ -644,8 +649,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteOverhangMetrics GetOverhangMetrics()
         {
-            DWriteOverhangMetrics overhangs;
-            this.handle.GetOverhangMetrics(out overhangs);
+            this.handle.GetOverhangMetrics(out DWriteOverhangMetrics overhangs);
             return overhangs;
         }
 
@@ -657,8 +661,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float DetermineMinWidth()
         {
-            float minWidth;
-            this.handle.DetermineMinWidth(out minWidth);
+            this.handle.DetermineMinWidth(out float minWidth);
             return minWidth;
         }
 
@@ -683,8 +686,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteHitTestMetrics HitTestPoint(float pointX, float pointY, out bool isTrailingHit, out bool isInside)
         {
-            DWriteHitTestMetrics hitTestMetrics;
-            this.handle.HitTestPoint(pointX, pointY, out isTrailingHit, out isInside, out hitTestMetrics);
+            this.handle.HitTestPoint(pointX, pointY, out isTrailingHit, out isInside, out DWriteHitTestMetrics hitTestMetrics);
             return hitTestMetrics;
         }
 
@@ -717,8 +719,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteHitTestMetrics HitTestTextPosition(uint textPosition, bool isTrailingHit, out float pointX, out float pointY)
         {
-            DWriteHitTestMetrics hitTestMetrics;
-            this.handle.HitTestTextPosition(textPosition, isTrailingHit, out pointX, out pointY, out hitTestMetrics);
+            this.handle.HitTestTextPosition(textPosition, isTrailingHit, out pointX, out pointY, out DWriteHitTestMetrics hitTestMetrics);
             return hitTestMetrics;
         }
     }

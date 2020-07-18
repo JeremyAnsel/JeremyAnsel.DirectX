@@ -98,8 +98,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1GradientStopCollection GetGradientStopCollection()
         {
-            ID2D1GradientStopCollection gradientStopCollection;
-            this.brush.GetGradientStopCollection(out gradientStopCollection);
+            this.brush.GetGradientStopCollection(out ID2D1GradientStopCollection gradientStopCollection);
+
+            if (gradientStopCollection == null)
+            {
+                return null;
+            }
+
             return new D2D1GradientStopCollection(gradientStopCollection);
         }
     }

@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite factory interface.
         /// </summary>
-        private IDWriteFactory handle;
+        private readonly IDWriteFactory handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteFactory"/> class.
@@ -68,8 +68,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static DWriteFactory Create(DWriteFactoryType factoryType)
         {
-            IDWriteFactory factory;
-            NativeMethods.DWriteCreateFactory(factoryType, typeof(IDWriteFactory).GUID, out factory);
+            NativeMethods.DWriteCreateFactory(factoryType, typeof(IDWriteFactory).GUID, out IDWriteFactory factory);
+
+            if (factory == null)
+            {
+                return null;
+            }
+
             return new DWriteFactory(factory);
         }
 
@@ -110,8 +115,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontCollection GetSystemFontCollection()
         {
-            IDWriteFontCollection fontCollection;
-            this.handle.GetSystemFontCollection(out fontCollection, false);
+            this.handle.GetSystemFontCollection(out IDWriteFontCollection fontCollection, false);
+
+            if (fontCollection == null)
+            {
+                return null;
+            }
+
             return new DWriteFontCollection(fontCollection);
         }
 
@@ -126,8 +136,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontCollection GetSystemFontCollection(bool checkForUpdates)
         {
-            IDWriteFontCollection fontCollection;
-            this.handle.GetSystemFontCollection(out fontCollection, checkForUpdates);
+            this.handle.GetSystemFontCollection(out IDWriteFontCollection fontCollection, checkForUpdates);
+
+            if (fontCollection == null)
+            {
+                return null;
+            }
+
             return new DWriteFontCollection(fontCollection);
         }
 
@@ -144,8 +159,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontFile CreateFontFileReference(string filePath, ulong lastWriteTime)
         {
-            IDWriteFontFile fontFile;
-            this.handle.CreateFontFileReference(filePath, ref lastWriteTime, out fontFile);
+            this.handle.CreateFontFileReference(filePath, ref lastWriteTime, out IDWriteFontFile fontFile);
+
+            if (fontFile == null)
+            {
+                return null;
+            }
+
             return new DWriteFontFile(fontFile);
         }
 
@@ -167,8 +187,13 @@ namespace JeremyAnsel.DirectX.DWrite
                 throw new ArgumentNullException(nameof(fontFiles));
             }
 
-            IDWriteFontFace fontFace;
-            this.handle.CreateFontFace(fontFaceType, (uint)fontFiles.Length, Array.ConvertAll(fontFiles, t => (IDWriteFontFile)t.Handle), faceIndex, fontFaceSimulation, out fontFace);
+            this.handle.CreateFontFace(fontFaceType, (uint)fontFiles.Length, Array.ConvertAll(fontFiles, t => (IDWriteFontFile)t.Handle), faceIndex, fontFaceSimulation, out IDWriteFontFace fontFace);
+
+            if (fontFace == null)
+            {
+                return null;
+            }
+
             return new DWriteFontFace(fontFace);
         }
 
@@ -179,8 +204,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteRenderingParams CreateRenderingParams()
         {
-            IDWriteRenderingParams renderingParams;
-            this.handle.CreateRenderingParams(out renderingParams);
+            this.handle.CreateRenderingParams(out IDWriteRenderingParams renderingParams);
+
+            if (renderingParams == null)
+            {
+                return null;
+            }
+
             return new DWriteRenderingParams(renderingParams);
         }
 
@@ -192,8 +222,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteRenderingParams CreateMonitorRenderingParams(IntPtr monitor)
         {
-            IDWriteRenderingParams renderingParams;
-            this.handle.CreateMonitorRenderingParams(monitor, out renderingParams);
+            this.handle.CreateMonitorRenderingParams(monitor, out IDWriteRenderingParams renderingParams);
+
+            if (renderingParams == null)
+            {
+                return null;
+            }
+
             return new DWriteRenderingParams(renderingParams);
         }
 
@@ -209,8 +244,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteRenderingParams CreateCustomRenderingParams(float gamma, float enhancedContrast, float clearTypeLevel, DWritePixelGeometry pixelGeometry, DWriteRenderingMode renderingMode)
         {
-            IDWriteRenderingParams renderingParams;
-            this.handle.CreateCustomRenderingParams(gamma, enhancedContrast, clearTypeLevel, pixelGeometry, renderingMode, out renderingParams);
+            this.handle.CreateCustomRenderingParams(gamma, enhancedContrast, clearTypeLevel, pixelGeometry, renderingMode, out IDWriteRenderingParams renderingParams);
+
+            if (renderingParams == null)
+            {
+                return null;
+            }
+
             return new DWriteRenderingParams(renderingParams);
         }
 
@@ -235,7 +275,6 @@ namespace JeremyAnsel.DirectX.DWrite
             float fontSize,
             string localeName)
         {
-            IDWriteTextFormat textFormat;
             this.handle.CreateTextFormat(
                 fontFamilyName,
                 fontCollection == null ? null : (IDWriteFontCollection)fontCollection.Handle,
@@ -244,7 +283,13 @@ namespace JeremyAnsel.DirectX.DWrite
                 fontStretch,
                 fontSize,
                 localeName,
-                out textFormat);
+                out IDWriteTextFormat textFormat);
+
+            if (textFormat == null)
+            {
+                return null;
+            }
+
             return new DWriteTextFormat(textFormat);
         }
 
@@ -255,8 +300,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteTypography CreateTypography()
         {
-            IDWriteTypography typography;
-            this.handle.CreateTypography(out typography);
+            this.handle.CreateTypography(out IDWriteTypography typography);
+
+            if (typography == null)
+            {
+                return null;
+            }
+
             return new DWriteTypography(typography);
         }
 
@@ -283,8 +333,13 @@ namespace JeremyAnsel.DirectX.DWrite
                 throw new ArgumentNullException(nameof(textFormat));
             }
 
-            IDWriteTextLayout textLayout;
-            this.handle.CreateTextLayout(text, (uint)text.Length, (IDWriteTextFormat)textFormat.Handle, maxWidth, maxHeight, out textLayout);
+            this.handle.CreateTextLayout(text, (uint)text.Length, (IDWriteTextFormat)textFormat.Handle, maxWidth, maxHeight, out IDWriteTextLayout textLayout);
+
+            if (textLayout == null)
+            {
+                return null;
+            }
+
             return new DWriteTextLayout(textLayout);
         }
     }

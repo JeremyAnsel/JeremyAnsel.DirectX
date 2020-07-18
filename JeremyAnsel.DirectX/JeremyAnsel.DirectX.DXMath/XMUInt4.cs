@@ -140,8 +140,7 @@ namespace JeremyAnsel.DirectX.DXMath
         [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMUInt4(XMVector value)
         {
-            XMUInt4 ret;
-            value.StoreUInt4(out ret);
+            value.StoreUInt4(out XMUInt4 ret);
             return ret;
         }
 

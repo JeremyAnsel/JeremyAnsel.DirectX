@@ -498,9 +498,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             float f = (cxx * cyy) + (cyy * czz) + (czz * cxx) - (cxy * cxy) - (cxz * cxz) - (cyz * cyz);
             float g = (cxy * cxy * czz) + (cxz * cxz * cyy) + (cyz * cyz * cxx) - (cxy * cyz * cxz * 2.0f) - (cxx * cyy * czz);
 
-            float ev1, ev2, ev3;
-
-            if (!Internal.SolveCubic(e, f, g, out ev1, out ev2, out ev3))
+            if (!Internal.SolveCubic(e, f, g, out float ev1, out float ev2, out float ev3))
             {
                 // set them to arbitrary orthonormal basis set
                 pV1 = XMGlobalConstants.IdentityR0;

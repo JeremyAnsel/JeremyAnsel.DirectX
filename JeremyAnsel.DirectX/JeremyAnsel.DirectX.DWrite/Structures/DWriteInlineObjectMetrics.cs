@@ -17,25 +17,25 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// Width of the inline object.
         /// </summary>
-        private float width;
+        private readonly float width;
 
         /// <summary>
         /// Height of the inline object as measured from top to bottom.
         /// </summary>
-        private float height;
+        private readonly float height;
 
         /// <summary>
         /// Distance from the top of the object to the baseline where it is lined up with the adjacent text.
         /// If the baseline is at the bottom, baseline simply equals height.
         /// </summary>
-        private float baseline;
+        private readonly float baseline;
 
         /// <summary>
         /// Flag indicating whether the object is to be placed upright or alongside the text baseline
         /// for vertical text.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool supportsSideways;
+        private readonly bool supportsSideways;
 
         /// <summary>
         /// Gets the width of the inline object.

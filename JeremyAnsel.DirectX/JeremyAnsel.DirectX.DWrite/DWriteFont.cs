@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite font interface.
         /// </summary>
-        private IDWriteFont handle;
+        private readonly IDWriteFont handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteFont"/> class.
@@ -133,8 +133,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontFamily GetFontFamily()
         {
-            IDWriteFontFamily fontFamily;
-            this.handle.GetFontFamily(out fontFamily);
+            this.handle.GetFontFamily(out IDWriteFontFamily fontFamily);
+
+            if (fontFamily == null)
+            {
+                return null;
+            }
+
             return new DWriteFontFamily(fontFamily);
         }
 
@@ -146,8 +151,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteLocalizedStrings GetFaceNames()
         {
-            IDWriteLocalizedStrings names;
-            this.handle.GetFaceNames(out names);
+            this.handle.GetFaceNames(out IDWriteLocalizedStrings names);
+
+            if (names == null)
+            {
+                return null;
+            }
+
             return new DWriteLocalizedStrings(names);
         }
 
@@ -163,11 +173,14 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteLocalizedStrings GetInformationalStrings(DWriteInformationalStringId informationalStringId)
         {
-            IDWriteLocalizedStrings informationalStrings;
-            bool exists;
-            this.handle.GetInformationalStrings(informationalStringId, out informationalStrings, out exists);
+            this.handle.GetInformationalStrings(informationalStringId, out IDWriteLocalizedStrings informationalStrings, out bool exists);
 
             if (!exists)
+            {
+                return null;
+            }
+
+            if (informationalStrings == null)
             {
                 return null;
             }
@@ -184,8 +197,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontMetrics GetMetrics()
         {
-            DWriteFontMetrics fontMetrics;
-            this.handle.GetMetrics(out fontMetrics);
+            this.handle.GetMetrics(out DWriteFontMetrics fontMetrics);
             return fontMetrics;
         }
 
@@ -197,8 +209,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool HasCharacter(uint unicodeValue)
         {
-            bool exists;
-            this.handle.HasCharacter(unicodeValue, out exists);
+            this.handle.HasCharacter(unicodeValue, out bool exists);
             return exists;
         }
 
@@ -209,8 +220,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontFace CreateFontFace()
         {
-            IDWriteFontFace fontFace;
-            this.handle.CreateFontFace(out fontFace);
+            this.handle.CreateFontFace(out IDWriteFontFace fontFace);
+
+            if (fontFace == null)
+            {
+                return null;
+            }
+
             return new DWriteFontFace(fontFace);
         }
     }

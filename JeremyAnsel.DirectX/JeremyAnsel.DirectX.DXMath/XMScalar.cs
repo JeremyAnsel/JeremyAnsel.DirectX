@@ -40,14 +40,14 @@ namespace JeremyAnsel.DirectX.DXMath
             // around a precision error on numbers that are close to PI
 
             // Normalize the range from 0.0f to XM_2PI
-            angle = angle + XMMath.PI;
+            angle += XMMath.PI;
 
             // Perform the modulo, unsigned
             float temp = Math.Abs(angle);
-            temp = temp - (XMMath.TwoPI * (float)(int)(temp / XMMath.TwoPI));
+            temp -= XMMath.TwoPI * (int)(temp / XMMath.TwoPI);
 
             // Restore the number to the range of -XM_PI to XM_PI-epsilon
-            temp = temp - XMMath.PI;
+            temp -= XMMath.PI;
 
             // If the modulo'd value was negative, restore negation
             if (angle < 0.0f)

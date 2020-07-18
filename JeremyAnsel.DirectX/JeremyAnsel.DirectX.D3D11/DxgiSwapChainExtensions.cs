@@ -28,7 +28,14 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(swapChain));
             }
 
-            return new D3D11Texture2D((ID3D11Texture2D)swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID));
+            object texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture2D((ID3D11Texture2D)texture);
         }
 
         /// <summary>
@@ -45,7 +52,14 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(swapChain));
             }
 
-            return new D3D11Texture2D((ID3D11Texture2D)swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID));
+            object texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture2D((ID3D11Texture2D)texture);
         }
 
         /// <summary>
@@ -62,7 +76,14 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(swapChain));
             }
 
-            return new D3D11Texture2D((ID3D11Texture2D)swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID));
+            object texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture2D((ID3D11Texture2D)texture);
         }
 
         /// <summary>
@@ -79,7 +100,14 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(swapChain));
             }
 
-            return new D3D11Texture2D((ID3D11Texture2D)swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID));
+            object texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture2D((ID3D11Texture2D)texture);
         }
     }
 }

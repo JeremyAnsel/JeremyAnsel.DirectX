@@ -46,8 +46,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D2D1RectF rect;
-                this.geometry.GetRect(out rect);
+                this.geometry.GetRect(out D2D1RectF rect);
                 return rect;
             }
         }

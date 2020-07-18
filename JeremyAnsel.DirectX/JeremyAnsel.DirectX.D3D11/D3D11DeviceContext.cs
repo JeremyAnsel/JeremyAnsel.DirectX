@@ -1743,9 +1743,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11PixelShader PixelShaderGetShader()
         {
-            ID3D11PixelShader pixelShader;
             uint numClassInstances = 0;
-            this.deviceContext.PixelShaderGetShader(out pixelShader, null, ref numClassInstances);
+            this.deviceContext.PixelShaderGetShader(out ID3D11PixelShader pixelShader, null, ref numClassInstances);
+
+            if (pixelShader == null)
+            {
+                return null;
+            }
+
             return new D3D11PixelShader(pixelShader);
         }
 
@@ -1760,12 +1765,17 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11PixelShader PixelShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
-            ID3D11PixelShader pixelShader;
             object[] objects1 = new object[numClassInstances];
-            this.deviceContext.PixelShaderGetShader(out pixelShader, objects1, ref numClassInstances);
+            this.deviceContext.PixelShaderGetShader(out ID3D11PixelShader pixelShader, objects1, ref numClassInstances);
             object[] objects2 = new object[numClassInstances];
             Array.Copy(objects1, objects2, numClassInstances);
             classInstances = Array.ConvertAll(objects2, i => i == null ? null : new D3D11ClassInstance((ID3D11ClassInstance)i));
+
+            if (pixelShader == null)
+            {
+                return null;
+            }
+
             return new D3D11PixelShader(pixelShader);
         }
 
@@ -1792,9 +1802,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11VertexShader VertexShaderGetShader()
         {
-            ID3D11VertexShader vertexShader;
             uint numClassInstances = 0;
-            this.deviceContext.VertexShaderGetShader(out vertexShader, null, ref numClassInstances);
+            this.deviceContext.VertexShaderGetShader(out ID3D11VertexShader vertexShader, null, ref numClassInstances);
+
+            if (vertexShader == null)
+            {
+                return null;
+            }
+
             return new D3D11VertexShader(vertexShader);
         }
 
@@ -1809,12 +1824,17 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11VertexShader VertexShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
-            ID3D11VertexShader vertexShader;
             object[] objects1 = new object[numClassInstances];
-            this.deviceContext.VertexShaderGetShader(out vertexShader, objects1, ref numClassInstances);
+            this.deviceContext.VertexShaderGetShader(out ID3D11VertexShader vertexShader, objects1, ref numClassInstances);
             object[] objects2 = new object[numClassInstances];
             Array.Copy(objects1, objects2, numClassInstances);
             classInstances = Array.ConvertAll(objects2, i => i == null ? null : new D3D11ClassInstance((ID3D11ClassInstance)i));
+
+            if (vertexShader == null)
+            {
+                return null;
+            }
+
             return new D3D11VertexShader(vertexShader);
         }
 
@@ -1841,8 +1861,13 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11InputLayout InputAssemblerGetInputLayout()
         {
-            ID3D11InputLayout inputLayout;
-            this.deviceContext.InputAssemblerGetInputLayout(out inputLayout);
+            this.deviceContext.InputAssemblerGetInputLayout(out ID3D11InputLayout inputLayout);
+
+            if (inputLayout == null)
+            {
+                return null;
+            }
+
             return new D3D11InputLayout(inputLayout);
         }
 
@@ -1886,8 +1911,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void InputAssemblerGetIndexBuffer(out D3D11Buffer indexBuffer, out DxgiFormat format, out uint offset)
         {
-            ID3D11Buffer buffer;
-            this.deviceContext.InputAssemblerGetIndexBuffer(out buffer, out format, out offset);
+            this.deviceContext.InputAssemblerGetIndexBuffer(out ID3D11Buffer buffer, out format, out offset);
             indexBuffer = buffer == null ? null : new D3D11Buffer(buffer);
         }
 
@@ -1914,9 +1938,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11GeometryShader GeometryShaderGetShader()
         {
-            ID3D11GeometryShader geometryShader;
             uint numClassInstances = 0;
-            this.deviceContext.GeometryShaderGetShader(out geometryShader, null, ref numClassInstances);
+            this.deviceContext.GeometryShaderGetShader(out ID3D11GeometryShader geometryShader, null, ref numClassInstances);
+
+            if (geometryShader == null)
+            {
+                return null;
+            }
+
             return new D3D11GeometryShader(geometryShader);
         }
 
@@ -1931,12 +1960,17 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11GeometryShader GeometryShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
-            ID3D11GeometryShader geometryShader;
             object[] objects1 = new object[numClassInstances];
-            this.deviceContext.GeometryShaderGetShader(out geometryShader, objects1, ref numClassInstances);
+            this.deviceContext.GeometryShaderGetShader(out ID3D11GeometryShader geometryShader, objects1, ref numClassInstances);
             object[] objects2 = new object[numClassInstances];
             Array.Copy(objects1, objects2, numClassInstances);
             classInstances = Array.ConvertAll(objects2, i => i == null ? null : new D3D11ClassInstance((ID3D11ClassInstance)i));
+
+            if (geometryShader == null)
+            {
+                return null;
+            }
+
             return new D3D11GeometryShader(geometryShader);
         }
 
@@ -1948,8 +1982,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11PrimitiveTopology InputAssemblerGetPrimitiveTopology()
         {
-            D3D11PrimitiveTopology topology;
-            this.deviceContext.InputAssemblerGetPrimitiveTopology(out topology);
+            this.deviceContext.InputAssemblerGetPrimitiveTopology(out D3D11PrimitiveTopology topology);
             return topology;
         }
 
@@ -1994,9 +2027,8 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void GetPredication(out D3D11Predicate predicate, out bool predicateValue)
         {
-            ID3D11Predicate predicateInterface;
-            this.deviceContext.GetPredication(out predicateInterface, out predicateValue);
-            predicate = new D3D11Predicate(predicateInterface);
+            this.deviceContext.GetPredication(out ID3D11Predicate predicateInterface, out predicateValue);
+            predicate = predicateInterface == null ? null : new D3D11Predicate(predicateInterface);
         }
 
         /// <summary>
@@ -2045,10 +2077,9 @@ namespace JeremyAnsel.DirectX.D3D11
             out D3D11DepthStencilView depthStencilView)
         {
             object[] renderTargetViewObjects = new object[numViews];
-            ID3D11DepthStencilView depthStencilViewInterface;
-            this.deviceContext.OutputMergerGetRenderTargets(numViews, renderTargetViewObjects, out depthStencilViewInterface);
+            this.deviceContext.OutputMergerGetRenderTargets(numViews, renderTargetViewObjects, out ID3D11DepthStencilView depthStencilViewInterface);
             renderTargetViews = Array.ConvertAll(renderTargetViewObjects, i => i == null ? null : new D3D11RenderTargetView((ID3D11RenderTargetView)i));
-            depthStencilView = new D3D11DepthStencilView(depthStencilViewInterface);
+            depthStencilView = depthStencilViewInterface == null ? null : new D3D11DepthStencilView(depthStencilViewInterface);
         }
 
         /// <summary>
@@ -2074,19 +2105,18 @@ namespace JeremyAnsel.DirectX.D3D11
             out D3D11UnorderedAccessView[] unorderedAccessViews)
         {
             object[] renderTargetViewObjects = new object[numRenderTargetViews];
-            ID3D11DepthStencilView depthStencilViewInterface;
             object[] unorderedAccessViewObjects = new object[numUnorderedAccessViews];
 
             this.deviceContext.OutputMergerGetRenderTargetsAndUnorderedAccessViews(
                 numRenderTargetViews,
                 renderTargetViewObjects,
-                out depthStencilViewInterface,
+                out ID3D11DepthStencilView depthStencilViewInterface,
                 uavStartSlot,
                 numUnorderedAccessViews,
                 unorderedAccessViewObjects);
 
             renderTargetViews = Array.ConvertAll(renderTargetViewObjects, i => i == null ? null : new D3D11RenderTargetView((ID3D11RenderTargetView)i));
-            depthStencilView = new D3D11DepthStencilView(depthStencilViewInterface);
+            depthStencilView = depthStencilViewInterface == null ? null : new D3D11DepthStencilView(depthStencilViewInterface);
             unorderedAccessViews = Array.ConvertAll(unorderedAccessViewObjects, i => i == null ? null : new D3D11UnorderedAccessView((ID3D11UnorderedAccessView)i));
         }
 
@@ -2103,10 +2133,9 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerGetBlendState(out D3D11BlendState blendState, out float[] blendFactor, out uint sampleMask)
         {
-            ID3D11BlendState blendStateInterface;
             blendFactor = new float[4];
-            this.deviceContext.OutputMergerGetBlendState(out blendStateInterface, blendFactor, out sampleMask);
-            blendState = new D3D11BlendState(blendStateInterface);
+            this.deviceContext.OutputMergerGetBlendState(out ID3D11BlendState blendStateInterface, blendFactor, out sampleMask);
+            blendState = blendStateInterface == null ? null : new D3D11BlendState(blendStateInterface);
         }
 
         /// <summary>
@@ -2120,9 +2149,8 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void OutputMergerGetDepthStencilState(out D3D11DepthStencilState depthStencilState, out uint stencilReference)
         {
-            ID3D11DepthStencilState depthStencilStateInterface;
-            this.deviceContext.OutputMergerGetDepthStencilState(out depthStencilStateInterface, out stencilReference);
-            depthStencilState = new D3D11DepthStencilState(depthStencilStateInterface);
+            this.deviceContext.OutputMergerGetDepthStencilState(out ID3D11DepthStencilState depthStencilStateInterface, out stencilReference);
+            depthStencilState = depthStencilStateInterface == null ? null : new D3D11DepthStencilState(depthStencilStateInterface);
         }
 
         /// <summary>
@@ -2147,8 +2175,13 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11RasterizerState RasterizerStageGetState()
         {
-            ID3D11RasterizerState rasterizerState;
-            this.deviceContext.RasterizerStageGetState(out rasterizerState);
+            this.deviceContext.RasterizerStageGetState(out ID3D11RasterizerState rasterizerState);
+
+            if (rasterizerState == null)
+            {
+                return null;
+            }
+
             return new D3D11RasterizerState(rasterizerState);
         }
 
@@ -2205,9 +2238,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11HullShader HullShaderGetShader()
         {
-            ID3D11HullShader hullShader;
             uint numClassInstances = 0;
-            this.deviceContext.HullShaderGetShader(out hullShader, null, ref numClassInstances);
+            this.deviceContext.HullShaderGetShader(out ID3D11HullShader hullShader, null, ref numClassInstances);
+
+            if (hullShader == null)
+            {
+                return null;
+            }
+
             return new D3D11HullShader(hullShader);
         }
 
@@ -2222,12 +2260,17 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11HullShader HullShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
-            ID3D11HullShader hullShader;
             object[] objects1 = new object[numClassInstances];
-            this.deviceContext.HullShaderGetShader(out hullShader, objects1, ref numClassInstances);
+            this.deviceContext.HullShaderGetShader(out ID3D11HullShader hullShader, objects1, ref numClassInstances);
             object[] objects2 = new object[numClassInstances];
             Array.Copy(objects1, objects2, numClassInstances);
             classInstances = Array.ConvertAll(objects2, i => i == null ? null : new D3D11ClassInstance((ID3D11ClassInstance)i));
+
+            if (hullShader == null)
+            {
+                return null;
+            }
+
             return new D3D11HullShader(hullShader);
         }
 
@@ -2284,9 +2327,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11DomainShader DomainShaderGetShader()
         {
-            ID3D11DomainShader domainShader;
             uint numClassInstances = 0;
-            this.deviceContext.DomainShaderGetShader(out domainShader, null, ref numClassInstances);
+            this.deviceContext.DomainShaderGetShader(out ID3D11DomainShader domainShader, null, ref numClassInstances);
+
+            if (domainShader == null)
+            {
+                return null;
+            }
+
             return new D3D11DomainShader(domainShader);
         }
 
@@ -2301,12 +2349,17 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11DomainShader DomainShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
-            ID3D11DomainShader domainShader;
             object[] objects1 = new object[numClassInstances];
-            this.deviceContext.DomainShaderGetShader(out domainShader, objects1, ref numClassInstances);
+            this.deviceContext.DomainShaderGetShader(out ID3D11DomainShader domainShader, objects1, ref numClassInstances);
             object[] objects2 = new object[numClassInstances];
             Array.Copy(objects1, objects2, numClassInstances);
             classInstances = Array.ConvertAll(objects2, i => i == null ? null : new D3D11ClassInstance((ID3D11ClassInstance)i));
+
+            if (domainShader == null)
+            {
+                return null;
+            }
+
             return new D3D11DomainShader(domainShader);
         }
 
@@ -2378,9 +2431,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11ComputeShader ComputeShaderGetShader()
         {
-            ID3D11ComputeShader computeShader;
             uint numClassInstances = 0;
-            this.deviceContext.ComputeShaderGetShader(out computeShader, null, ref numClassInstances);
+            this.deviceContext.ComputeShaderGetShader(out ID3D11ComputeShader computeShader, null, ref numClassInstances);
+
+            if (computeShader == null)
+            {
+                return null;
+            }
+
             return new D3D11ComputeShader(computeShader);
         }
 
@@ -2395,12 +2453,17 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11ComputeShader ComputeShaderGetShader(uint numClassInstances, out D3D11ClassInstance[] classInstances)
         {
-            ID3D11ComputeShader computeShader;
             object[] objects1 = new object[numClassInstances];
-            this.deviceContext.ComputeShaderGetShader(out computeShader, objects1, ref numClassInstances);
+            this.deviceContext.ComputeShaderGetShader(out ID3D11ComputeShader computeShader, objects1, ref numClassInstances);
             object[] objects2 = new object[numClassInstances];
             Array.Copy(objects1, objects2, numClassInstances);
             classInstances = Array.ConvertAll(objects2, i => i == null ? null : new D3D11ClassInstance((ID3D11ClassInstance)i));
+
+            if (computeShader == null)
+            {
+                return null;
+            }
+
             return new D3D11ComputeShader(computeShader);
         }
 
@@ -2462,7 +2525,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11CommandList FinishCommandList(bool restoreDeferredContextState)
         {
-            return new D3D11CommandList(this.deviceContext.FinishCommandList(restoreDeferredContextState));
+            ID3D11CommandList commandList = this.deviceContext.FinishCommandList(restoreDeferredContextState);
+
+            if (commandList == null)
+            {
+                return null;
+            }
+
+            return new D3D11CommandList(commandList);
         }
     }
 }

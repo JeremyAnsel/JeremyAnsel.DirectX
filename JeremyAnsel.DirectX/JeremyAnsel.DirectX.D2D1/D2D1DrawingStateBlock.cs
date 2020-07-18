@@ -48,8 +48,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D2D1DrawingStateDescription stateDescription;
-                this.drawingStateBlock.GetDescription(out stateDescription);
+                this.drawingStateBlock.GetDescription(out D2D1DrawingStateDescription stateDescription);
                 return stateDescription;
             }
 
@@ -70,8 +69,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                IDWriteRenderingParams textRenderingParams;
-                this.drawingStateBlock.GetTextRenderingParams(out textRenderingParams);
+                this.drawingStateBlock.GetTextRenderingParams(out IDWriteRenderingParams textRenderingParams);
 
                 if (textRenderingParams == null)
                 {

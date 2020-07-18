@@ -19,24 +19,24 @@ namespace JeremyAnsel.DirectX.DWrite
         /// The glyph origin is the current horizontal writing position.
         /// A negative value means the black box extends to the left of the origin (often true for lowercase italic 'f').
         /// </summary>
-        private int leftSideBearing;
+        private readonly int leftSideBearing;
 
         /// <summary>
         /// Specifies the X offset from the origin of the current glyph to the origin of the next glyph when writing horizontally.
         /// </summary>
-        private uint advanceWidth;
+        private readonly uint advanceWidth;
 
         /// <summary>
         /// Specifies the X offset from the right edge of the black box to the origin of the next glyph when writing horizontally.
         /// The value is negative when the right edge of the black box overhangs the layout box.
         /// </summary>
-        private int rightSideBearing;
+        private readonly int rightSideBearing;
 
         /// <summary>
         /// Specifies the vertical offset from the vertical origin to the top of the black box.
         /// Thus, a positive value adds whitespace whereas a negative value means the glyph overhangs the top of the layout box.
         /// </summary>
-        private int topSideBearing;
+        private readonly int topSideBearing;
 
         /// <summary>
         /// Specifies the Y offset from the vertical origin of the current glyph to the vertical origin of the next glyph when writing vertically.
@@ -44,21 +44,21 @@ namespace JeremyAnsel.DirectX.DWrite
         /// Its Y coordinate is specified by verticalOriginY value,
         /// and its X coordinate is half the advanceWidth to the right of the horizontal origin).
         /// </summary>
-        private uint advanceHeight;
+        private readonly uint advanceHeight;
 
         /// <summary>
         /// Specifies the vertical distance from the black box's bottom edge to the advance height.
         /// Positive when the bottom edge of the black box is within the layout box.
         /// Negative when the bottom edge of black box overhangs the layout box.
         /// </summary>
-        private int bottomSideBearing;
+        private readonly int bottomSideBearing;
 
         /// <summary>
         /// Specifies the Y coordinate of a glyph's vertical origin, in the font's design coordinate system.
         /// The y coordinate of a glyph's vertical origin is the sum of the glyph's top side bearing
         /// and the top (i.e. yMax) of the glyph's bounding box.
         /// </summary>
-        private int verticalOriginY;
+        private readonly int verticalOriginY;
 
         /// <summary>
         /// Gets the X offset from the glyph origin to the left edge of the black box.

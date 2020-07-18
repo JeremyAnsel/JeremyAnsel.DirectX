@@ -46,8 +46,7 @@ namespace JeremyAnsel.DirectX.D3D11
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D3D11RenderTargetViewDesc desc;
-                this.renderTargetView.GetDesc(out desc);
+                this.renderTargetView.GetDesc(out D3D11RenderTargetViewDesc desc);
                 return desc;
             }
         }

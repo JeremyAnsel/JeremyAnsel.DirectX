@@ -372,8 +372,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static D2D1Matrix3X2F Rotation(float angle)
         {
-            D2D1Matrix3X2F matrix;
-            NativeMethods.D2D1MakeRotateMatrix(angle, new D2D1Point2F(), out matrix);
+            NativeMethods.D2D1MakeRotateMatrix(angle, new D2D1Point2F(), out D2D1Matrix3X2F matrix);
             return matrix;
         }
 
@@ -386,8 +385,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static D2D1Matrix3X2F Rotation(float angle, D2D1Point2F center)
         {
-            D2D1Matrix3X2F matrix;
-            NativeMethods.D2D1MakeRotateMatrix(angle, center, out matrix);
+            NativeMethods.D2D1MakeRotateMatrix(angle, center, out D2D1Matrix3X2F matrix);
             return matrix;
         }
 
@@ -400,8 +398,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static D2D1Matrix3X2F Skew(float angleX, float angleY)
         {
-            D2D1Matrix3X2F matrix;
-            NativeMethods.D2D1MakeSkewMatrix(angleX, angleY, new D2D1Point2F(), out matrix);
+            NativeMethods.D2D1MakeSkewMatrix(angleX, angleY, new D2D1Point2F(), out D2D1Matrix3X2F matrix);
             return matrix;
         }
 
@@ -415,8 +412,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static D2D1Matrix3X2F Skew(float angleX, float angleY, D2D1Point2F center)
         {
-            D2D1Matrix3X2F matrix;
-            NativeMethods.D2D1MakeSkewMatrix(angleX, angleY, center, out matrix);
+            NativeMethods.D2D1MakeSkewMatrix(angleX, angleY, center, out D2D1Matrix3X2F matrix);
             return matrix;
         }
 

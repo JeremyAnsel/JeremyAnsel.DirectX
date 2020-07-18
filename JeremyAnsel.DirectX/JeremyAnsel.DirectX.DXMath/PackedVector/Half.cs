@@ -22,7 +22,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         /// <summary>
         /// The packed data.
         /// </summary>
-        private ushort half;
+        private readonly ushort half;
 
         /// <summary>
         /// Converts a <see cref="Half"/> value to a <see cref="float"/> value.
@@ -86,7 +86,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator double(Half value)
         {
-            return (double)(float)value;
+            return (float)value;
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
 
             uint i_value = *(uint*)&value;
             uint sign = (i_value & 0x80000000U) >> 16;
-            i_value = i_value & 0x7FFFFFFFU; // Hack off the sign
+            i_value &= 0x7FFFFFFFU; // Hack off the sign
 
             if (i_value > 0x477FE000U)
             {
@@ -134,7 +134,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
                 result = ((i_value + 0x0FFFU + ((i_value >> 13) & 1U)) >> 13) & 0x7FFFU;
             }
 
-            result = result | sign;
+            result |= sign;
 
             return *(Half*)&result;
         }

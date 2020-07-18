@@ -20,7 +20,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite font face interface.
         /// </summary>
-        private IDWriteFontFace handle;
+        private readonly IDWriteFontFace handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteFontFace"/> class.
@@ -132,7 +132,7 @@ namespace JeremyAnsel.DirectX.DWrite
             IDWriteFontFile[] fontFiles = new IDWriteFontFile[numberOfFiles];
             this.handle.GetFiles(ref numberOfFiles, fontFiles);
 
-            return Array.ConvertAll(fontFiles, t => new DWriteFontFile(t));
+            return Array.ConvertAll(fontFiles, t => t == null ? null : new DWriteFontFile(t));
         }
 
         /// <summary>
@@ -146,8 +146,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontMetrics GetMetrics()
         {
-            DWriteFontMetrics fontFaceMetrics;
-            this.handle.GetMetrics(out fontFaceMetrics);
+            this.handle.GetMetrics(out DWriteFontMetrics fontFaceMetrics);
             return fontFaceMetrics;
         }
 
@@ -174,13 +173,13 @@ namespace JeremyAnsel.DirectX.DWrite
             DWriteMeasuringMode measuringMode,
             DWriteRenderingParams renderingParams)
         {
-            DWriteRenderingMode renderingMode;
             this.handle.GetRecommendedRenderingMode(
                 size,
                 pixelsPerDip,
                 measuringMode,
                 renderingParams == null ? null : (IDWriteRenderingParams)renderingParams.Handle,
-                out renderingMode);
+                out DWriteRenderingMode renderingMode);
+
             return renderingMode;
         }
     }

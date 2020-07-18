@@ -45,7 +45,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11ClassInstance GetClassInstance(string name, uint index)
         {
-            return new D3D11ClassInstance(this.classLinkage.GetClassInstance(name, index));
+            ID3D11ClassInstance classInstance = this.classLinkage.GetClassInstance(name, index);
+
+            if (classInstance == null)
+            {
+                return null;
+            }
+
+            return new D3D11ClassInstance(classInstance);
         }
 
         /// <summary>
@@ -65,12 +72,19 @@ namespace JeremyAnsel.DirectX.D3D11
             uint textureOffset,
             uint samplerOffset)
         {
-            return new D3D11ClassInstance(this.classLinkage.CreateClassInstance(
+            ID3D11ClassInstance classInstance = this.classLinkage.CreateClassInstance(
                 classTypeName,
                 constantBufferOffset,
                 constantVectorOffset,
                 textureOffset,
-                samplerOffset));
+                samplerOffset);
+
+            if (classInstance == null)
+            {
+                return null;
+            }
+
+            return new D3D11ClassInstance(classInstance);
         }
     }
 }

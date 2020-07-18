@@ -46,8 +46,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D2D1RoundedRect roundedRect;
-                this.geometry.GetRoundedRect(out roundedRect);
+                this.geometry.GetRoundedRect(out D2D1RoundedRect roundedRect);
                 return roundedRect;
             }
         }

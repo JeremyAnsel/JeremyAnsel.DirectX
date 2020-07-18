@@ -144,8 +144,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMFloat3SharedExponent(XMVector value)
         {
-            XMFloat3 tmp;
-            value.StoreFloat3(out tmp);
+            value.StoreFloat3(out XMFloat3 tmp);
 
             const float Maxf9 = (float)(0x1FF << 7);
             const float Minf9 = (float)(1.0f / (1 << 16));

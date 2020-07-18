@@ -46,8 +46,7 @@ namespace JeremyAnsel.DirectX.D3D11
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
             {
-                D3D11BufferDesc desc;
-                this.buffer.GetDesc(out desc);
+                this.buffer.GetDesc(out D3D11BufferDesc desc);
                 return desc;
             }
         }

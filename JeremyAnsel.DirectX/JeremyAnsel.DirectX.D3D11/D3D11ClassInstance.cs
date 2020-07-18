@@ -48,8 +48,7 @@ namespace JeremyAnsel.DirectX.D3D11
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
             {
-                D3D11ClassInstanceDesc desc;
-                this.classInstance.GetDesc(out desc);
+                this.classInstance.GetDesc(out D3D11ClassInstanceDesc desc);
                 return desc;
             }
         }
@@ -95,8 +94,13 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11ClassLinkage GetClassLinkage()
         {
-            ID3D11ClassLinkage linkage;
-            this.classInstance.GetClassLinkage(out linkage);
+            this.classInstance.GetClassLinkage(out ID3D11ClassLinkage linkage);
+
+            if (linkage == null)
+            {
+                return null;
+            }
+
             return new D3D11ClassLinkage(linkage);
         }
     }

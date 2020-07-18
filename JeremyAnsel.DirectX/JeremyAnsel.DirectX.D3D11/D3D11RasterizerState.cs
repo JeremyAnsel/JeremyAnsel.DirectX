@@ -46,8 +46,7 @@ namespace JeremyAnsel.DirectX.D3D11
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D3D11RasterizerDesc desc;
-                this.rasterizerState.GetDesc(out desc);
+                this.rasterizerState.GetDesc(out D3D11RasterizerDesc desc);
                 return desc;
             }
         }

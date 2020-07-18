@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite typography interface.
         /// </summary>
-        private IDWriteTypography handle;
+        private readonly IDWriteTypography handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteTypography"/> class.
@@ -109,8 +109,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontFeature GetFontFeature(uint fontFeatureIndex)
         {
-            DWriteFontFeature fontFeature;
-            this.handle.GetFontFeature(fontFeatureIndex, out fontFeature);
+            this.handle.GetFontFeature(fontFeatureIndex, out DWriteFontFeature fontFeature);
             return fontFeature;
         }
     }

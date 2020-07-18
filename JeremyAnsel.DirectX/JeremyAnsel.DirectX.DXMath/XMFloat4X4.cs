@@ -399,8 +399,7 @@ namespace JeremyAnsel.DirectX.DXMath
         [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMFloat4X4(XMMatrix value)
         {
-            XMFloat4X4 ret;
-            value.StoreFloat4X4(out ret);
+            value.StoreFloat4X4(out XMFloat4X4 ret);
             return ret;
         }
 

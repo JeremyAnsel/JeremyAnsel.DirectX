@@ -22,7 +22,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite text format interface.
         /// </summary>
-        private IDWriteTextFormat handle;
+        private readonly IDWriteTextFormat handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteTextFormat"/> class.
@@ -237,8 +237,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteTrimming GetTrimming()
         {
-            DWriteTrimming trimmingOptions;
-            this.handle.GetTrimming(out trimmingOptions, IntPtr.Zero);
+            this.handle.GetTrimming(out DWriteTrimming trimmingOptions, IntPtr.Zero);
             return trimmingOptions;
         }
 
@@ -265,8 +264,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontCollection GetFontCollection()
         {
-            IDWriteFontCollection fontCollection;
-            this.handle.GetFontCollection(out fontCollection);
+            this.handle.GetFontCollection(out IDWriteFontCollection fontCollection);
+
+            if (fontCollection == null)
+            {
+                return null;
+            }
+
             return new DWriteFontCollection(fontCollection);
         }
 

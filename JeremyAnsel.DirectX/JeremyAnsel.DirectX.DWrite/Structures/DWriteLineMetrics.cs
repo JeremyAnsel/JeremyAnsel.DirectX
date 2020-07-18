@@ -19,36 +19,36 @@ namespace JeremyAnsel.DirectX.DWrite
         /// The number of total text positions in the line.
         /// This includes any trailing whitespace and newline characters.
         /// </summary>
-        private uint length;
+        private readonly uint length;
 
         /// <summary>
         /// The number of whitespace positions at the end of the line.  Newline
         /// sequences are considered whitespace.
         /// </summary>
-        private uint trailingWhitespaceLength;
+        private readonly uint trailingWhitespaceLength;
 
         /// <summary>
         /// The number of characters in the newline sequence at the end of the line.
         /// If the count is zero, then the line was either wrapped or it is the
         /// end of the text.
         /// </summary>
-        private uint newlineLength;
+        private readonly uint newlineLength;
 
         /// <summary>
         /// Height of the line as measured from top to bottom.
         /// </summary>
-        private float height;
+        private readonly float height;
 
         /// <summary>
         /// Distance from the top of the line to its baseline.
         /// </summary>
-        private float baseline;
+        private readonly float baseline;
 
         /// <summary>
         /// The line is trimmed.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isTrimmed;
+        private readonly bool isTrimmed;
 
         /// <summary>
         /// Gets the number of total text positions in the line.

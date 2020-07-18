@@ -87,7 +87,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DxgiSurface3 CreateSubresourceSurface(uint index)
         {
-            return new DxgiSurface3(this.resource.CreateSubresourceSurface(index));
+            IDxgiSurface2 surface = this.resource.CreateSubresourceSurface(index);
+
+            if (surface == null)
+            {
+                return null;
+            }
+
+            return new DxgiSurface3(surface);
         }
     }
 }

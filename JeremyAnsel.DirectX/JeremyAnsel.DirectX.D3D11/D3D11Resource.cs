@@ -31,8 +31,7 @@ namespace JeremyAnsel.DirectX.D3D11
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
             {
-                D3D11ResourceDimension dimension;
-                this.GetHandle<ID3D11Resource>().GetDimension(out dimension);
+                this.GetHandle<ID3D11Resource>().GetDimension(out D3D11ResourceDimension dimension);
                 return dimension;
             }
         }

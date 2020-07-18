@@ -43,8 +43,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D2D1Matrix3X2F transform;
-                this.GetHandle<ID2D1Brush>().GetTransform(out transform);
+                this.GetHandle<ID2D1Brush>().GetTransform(out D2D1Matrix3X2F transform);
                 return transform;
             }
 

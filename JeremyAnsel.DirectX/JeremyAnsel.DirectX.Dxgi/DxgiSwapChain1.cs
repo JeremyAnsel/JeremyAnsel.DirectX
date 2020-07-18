@@ -7,6 +7,7 @@ namespace JeremyAnsel.DirectX.Dxgi
     using System;
     using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
+    using System.Runtime.InteropServices;
     using JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 
     /// <summary>
@@ -106,7 +107,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         public DxgiSurface1 GetSurface(uint buffer)
         {
             Guid riid = typeof(IDxgiSurface1).GUID;
-            return new DxgiSurface1((IDxgiSurface1)this.swapChain.GetBuffer(buffer, ref riid));
+            object surface = this.swapChain.GetBuffer(buffer, ref riid);
+
+            if (surface == null)
+            {
+                return null;
+            }
+
+            return new DxgiSurface1((IDxgiSurface1)surface);
         }
 
         /// <summary>
@@ -128,7 +136,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetFullscreenState(bool fullscreen, DxgiOutput1 target)
         {
-            this.swapChain.SetFullscreenState(fullscreen, target == null ? null : target.GetHandle<IDxgiOutput>());
+            this.swapChain.SetFullscreenState(fullscreen, target?.GetHandle<IDxgiOutput>());
         }
 
         /// <summary>
@@ -137,9 +145,13 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>A value indicating whether to set the display state to windowed or full screen.</returns>
         public bool GetFullscreenState()
         {
-            bool fullscreen;
-            IDxgiOutput itarget;
-            this.swapChain.GetFullscreenState(out fullscreen, out itarget);
+            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput itarget);
+
+            if (itarget != null)
+            {
+                Marshal.ReleaseComObject(itarget);
+            }
+
             return fullscreen;
         }
 
@@ -151,10 +163,8 @@ namespace JeremyAnsel.DirectX.Dxgi
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         public bool GetFullscreenState(out DxgiOutput1 target)
         {
-            bool fullscreen;
-            IDxgiOutput itarget;
-            this.swapChain.GetFullscreenState(out fullscreen, out itarget);
-            target = new DxgiOutput1(itarget);
+            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput itarget);
+            target = itarget == null ? null : new DxgiOutput1(itarget);
             return fullscreen;
         }
 
@@ -190,7 +200,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DxgiOutput1 GetContainingOutput()
         {
-            return new DxgiOutput1(this.swapChain.GetContainingOutput());
+            IDxgiOutput output = this.swapChain.GetContainingOutput();
+
+            if (output == null)
+            {
+                return null;
+            }
+
+            return new DxgiOutput1(output);
         }
     }
 }

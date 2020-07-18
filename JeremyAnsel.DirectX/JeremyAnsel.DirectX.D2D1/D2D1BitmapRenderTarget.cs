@@ -44,8 +44,13 @@ namespace JeremyAnsel.DirectX.D2D1
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
             {
-                ID2D1Bitmap bitmap;
-                this.renderTarget.GetBitmap(out bitmap);
+                this.renderTarget.GetBitmap(out ID2D1Bitmap bitmap);
+
+                if (bitmap == null)
+                {
+                    return null;
+                }
+
                 return new D2D1Bitmap(bitmap);
             }
         }

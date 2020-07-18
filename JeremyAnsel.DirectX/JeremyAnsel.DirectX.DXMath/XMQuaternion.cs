@@ -253,9 +253,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             XMVector theta = XMVector3.Length(q);
 
-            XMVector sinTheta;
-            XMVector cosTheta;
-            theta.SinCos(out sinTheta, out cosTheta);
+            theta.SinCos(out XMVector sinTheta, out XMVector cosTheta);
 
             XMVector s = XMVector.Divide(sinTheta, theta);
             XMVector result = XMVector.Multiply(q, s);
@@ -540,9 +538,7 @@ namespace JeremyAnsel.DirectX.DXMath
             XMVector sign = XMVector.FromFloat(1.0f, -1.0f, -1.0f, 1.0f);
             XMVector halfAngles = XMVector.Multiply(angles, XMGlobalConstants.OneHalf);
 
-            XMVector sinAngles;
-            XMVector cosAngles;
-            halfAngles.SinCos(out sinAngles, out cosAngles);
+            halfAngles.SinCos(out XMVector sinAngles, out XMVector cosAngles);
 
             XMVector p0 = new XMVector(sinAngles.X, cosAngles.X, cosAngles.X, cosAngles.X);
             XMVector y0 = new XMVector(cosAngles.Y, sinAngles.Y, cosAngles.Y, cosAngles.Y);
@@ -570,9 +566,7 @@ namespace JeremyAnsel.DirectX.DXMath
         {
             XMVector n = XMVector.Select(XMGlobalConstants.One, normalAxis, XMGlobalConstants.Select1110);
 
-            float sinV;
-            float cosV;
-            XMScalar.SinCos(out sinV, out cosV, 0.5f * angle);
+            XMScalar.SinCos(out float sinV, out float cosV, 0.5f * angle);
 
             XMVector scale = new XMVector(sinV, sinV, sinV, cosV);
             return XMVector.Multiply(n, scale);

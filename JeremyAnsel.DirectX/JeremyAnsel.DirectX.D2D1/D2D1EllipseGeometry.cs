@@ -46,8 +46,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D2D1Ellipse ellipse;
-                this.geometry.GetEllipse(out ellipse);
+                this.geometry.GetEllipse(out D2D1Ellipse ellipse);
                 return ellipse;
             }
         }

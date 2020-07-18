@@ -22,19 +22,19 @@ namespace JeremyAnsel.DirectX.DWrite
         /// The concept of em square is used as a reference scale factor when defining font size and device transformation semantics.
         /// The size of one em square is also commonly used to compute the paragraph indentation value.
         /// </summary>
-        private ushort designUnitsPerEM;
+        private readonly ushort designUnitsPerEM;
 
         /// <summary>
         /// Ascent value of the font face in font design units.
         /// Ascent is the distance from the top of font character alignment box to English baseline.
         /// </summary>
-        private ushort ascent;
+        private readonly ushort ascent;
 
         /// <summary>
         /// Descent value of the font face in font design units.
         /// Descent is the distance from the bottom of font character alignment box to English baseline.
         /// </summary>
-        private ushort descent;
+        private readonly ushort descent;
 
         /// <summary>
         /// Line gap in font design units.
@@ -43,44 +43,44 @@ namespace JeremyAnsel.DirectX.DWrite
         /// positive or zero but can be negative, in which case the recommended line spacing is less than the height
         /// of the character alignment box.
         /// </summary>
-        private short lineGap;
+        private readonly short lineGap;
 
         /// <summary>
         /// Cap height value of the font face in font design units.
         /// Cap height is the distance from English baseline to the top of a typical English capital.
         /// Capital "H" is often used as a reference character for the purpose of calculating the cap height value.
         /// </summary>
-        private ushort capitalHeight;
+        private readonly ushort capitalHeight;
 
         /// <summary>
         /// x-height value of the font face in font design units.
         /// x-height is the distance from English baseline to the top of lowercase letter "x", or a similar lowercase character.
         /// </summary>
-        private ushort letterXHeight;
+        private readonly ushort letterXHeight;
 
         /// <summary>
         /// The underline position value of the font face in font design units.
         /// Underline position is the position of underline relative to the English baseline.
         /// The value is usually made negative in order to place the underline below the baseline.
         /// </summary>
-        private short underlinePosition;
+        private readonly short underlinePosition;
 
         /// <summary>
         /// The suggested underline thickness value of the font face in font design units.
         /// </summary>
-        private ushort underlineThickness;
+        private readonly ushort underlineThickness;
 
         /// <summary>
         /// The strikethrough position value of the font face in font design units.
         /// Strikethrough position is the position of strikethrough relative to the English baseline.
         /// The value is usually made positive in order to place the strikethrough above the baseline.
         /// </summary>
-        private short strikethroughPosition;
+        private readonly short strikethroughPosition;
 
         /// <summary>
         /// The suggested strikethrough thickness value of the font face in font design units.
         /// </summary>
-        private ushort strikethroughThickness;
+        private readonly ushort strikethroughThickness;
 
         /// <summary>
         /// Gets the number of font design units per em unit.

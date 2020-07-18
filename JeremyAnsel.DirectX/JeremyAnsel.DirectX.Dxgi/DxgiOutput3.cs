@@ -90,8 +90,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DxgiModeDesc1 FindClosestMatchingMode(DxgiModeDesc1 modeToMatch, object concernedDevice)
         {
-            DxgiModeDesc1 closestMatch;
-            this.output.FindClosestMatchingMode1(ref modeToMatch, out closestMatch, concernedDevice);
+            this.output.FindClosestMatchingMode1(ref modeToMatch, out DxgiModeDesc1 closestMatch, concernedDevice);
             return closestMatch;
         }
 

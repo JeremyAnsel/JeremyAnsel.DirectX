@@ -46,8 +46,13 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                ID2D1Geometry sourceGeometry;
-                this.geometry.GetSourceGeometry(out sourceGeometry);
+                this.geometry.GetSourceGeometry(out ID2D1Geometry sourceGeometry);
+
+                if (sourceGeometry == null)
+                {
+                    return null;
+                }
+
                 return new D2D1GeometryBase(sourceGeometry);
             }
         }
@@ -61,8 +66,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                D2D1Matrix3X2F transform;
-                this.geometry.GetTransform(out transform);
+                this.geometry.GetTransform(out D2D1Matrix3X2F transform);
                 return transform;
             }
         }

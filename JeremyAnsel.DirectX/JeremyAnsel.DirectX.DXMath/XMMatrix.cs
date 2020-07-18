@@ -990,9 +990,7 @@ namespace JeremyAnsel.DirectX.DXMath
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static XMMatrix RotationX(float angle)
         {
-            float sinAngle;
-            float cosAngle;
-            XMScalar.SinCos(out sinAngle, out cosAngle, angle);
+            XMScalar.SinCos(out float sinAngle, out float cosAngle, angle);
 
             return new XMMatrix(
                 1.0f,
@@ -1021,9 +1019,7 @@ namespace JeremyAnsel.DirectX.DXMath
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static XMMatrix RotationY(float angle)
         {
-            float sinAngle;
-            float cosAngle;
-            XMScalar.SinCos(out sinAngle, out cosAngle, angle);
+            XMScalar.SinCos(out float sinAngle, out float cosAngle, angle);
 
             return new XMMatrix(
                 cosAngle,
@@ -1052,9 +1048,7 @@ namespace JeremyAnsel.DirectX.DXMath
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static XMMatrix RotationZ(float angle)
         {
-            float sinAngle;
-            float cosAngle;
-            XMScalar.SinCos(out sinAngle, out cosAngle, angle);
+            XMScalar.SinCos(out float sinAngle, out float cosAngle, angle);
 
             return new XMMatrix(
                 cosAngle,
@@ -1110,9 +1104,7 @@ namespace JeremyAnsel.DirectX.DXMath
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static XMMatrix RotationNormal(XMVector normalAxis, float angle)
         {
-            float sinAngle;
-            float cosAngle;
-            XMScalar.SinCos(out sinAngle, out cosAngle, angle);
+            XMScalar.SinCos(out float sinAngle, out float cosAngle, angle);
 
             XMVector a = new XMVector(sinAngle, cosAngle, 1.0f - cosAngle, 0.0f);
 
@@ -1591,9 +1583,7 @@ namespace JeremyAnsel.DirectX.DXMath
             Debug.Assert(!XMScalar.NearEqual(aspectHByW, 0.0f, 0.00001f), "Reviewed");
             Debug.Assert(!XMScalar.NearEqual(farZ, nearZ, 0.00001f), "Reviewed");
 
-            float sinFov;
-            float cosFov;
-            XMScalar.SinCos(out sinFov, out cosFov, 0.5f * fovAngleY);
+            XMScalar.SinCos(out float sinFov, out float cosFov, 0.5f * fovAngleY);
 
             float height = cosFov / sinFov;
             float width = height / aspectHByW;
@@ -1634,9 +1624,7 @@ namespace JeremyAnsel.DirectX.DXMath
             Debug.Assert(!XMScalar.NearEqual(aspectHByW, 0.0f, 0.00001f), "Reviewed");
             Debug.Assert(!XMScalar.NearEqual(farZ, nearZ, 0.00001f), "Reviewed");
 
-            float sinFov;
-            float cosFov;
-            XMScalar.SinCos(out sinFov, out cosFov, 0.5f * fovAngleY);
+            XMScalar.SinCos(out float sinFov, out float cosFov, 0.5f * fovAngleY);
 
             float height = cosFov / sinFov;
             float width = height / aspectHByW;
@@ -2420,8 +2408,7 @@ namespace JeremyAnsel.DirectX.DXMath
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public XMMatrix Inverse()
         {
-            XMVector determinant;
-            return this.Inverse(out determinant);
+            return this.Inverse(out _);
         }
 
         /// <summary>
@@ -2506,10 +2493,7 @@ namespace JeremyAnsel.DirectX.DXMath
                     XMVector3.Length(((XMVector*)&basis)[2]).X,
                     0.0f);
 
-                int a;
-                int b;
-                int c;
-                XMMatrix.RankDecompose(out a, out b, out c, outScale.X, outScale.Y, outScale.Z);
+                XMMatrix.RankDecompose(out int a, out int b, out int c, outScale.X, outScale.Y, outScale.Z);
 
                 if (((float*)&outScale)[a] < XMMatrix.DecomposeEpsilon)
                 {
@@ -2520,15 +2504,11 @@ namespace JeremyAnsel.DirectX.DXMath
 
                 if (((float*)&outScale)[b] < XMMatrix.DecomposeEpsilon)
                 {
-                    int aa;
-                    int bb;
-                    int cc;
-
                     float f_absX = Math.Abs(((XMVector*)&basis)[a].X);
                     float f_absY = Math.Abs(((XMVector*)&basis)[a].Y);
                     float f_absZ = Math.Abs(((XMVector*)&basis)[a].Z);
 
-                    XMMatrix.RankDecompose(out aa, out bb, out cc, f_absX, f_absY, f_absZ);
+                    XMMatrix.RankDecompose(out int aa, out int bb, out int cc, f_absX, f_absY, f_absZ);
 
                     ((XMVector*)&basis)[b] = XMVector3.Cross(((XMVector*)&basis)[a], ((XMVector*)&canonicalBasis)[cc]);
                 }

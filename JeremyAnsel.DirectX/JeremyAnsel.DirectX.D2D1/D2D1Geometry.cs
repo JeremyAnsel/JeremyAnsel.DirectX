@@ -30,8 +30,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1RectF GetBounds()
         {
-            D2D1RectF bounds;
-            this.GetHandle<ID2D1Geometry>().GetBounds(IntPtr.Zero, out bounds);
+            this.GetHandle<ID2D1Geometry>().GetBounds(IntPtr.Zero, out D2D1RectF bounds);
             return bounds;
         }
 
@@ -70,8 +69,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle strokeStyle, float flatteningTolerance)
         {
-            D2D1RectF bounds;
-            this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out bounds);
+            this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out D2D1RectF bounds);
             return bounds;
         }
 
@@ -113,8 +111,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle strokeStyle)
         {
-            D2D1RectF bounds;
-            this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out bounds);
+            this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out D2D1RectF bounds);
             return bounds;
         }
 
@@ -157,8 +154,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle strokeStyle, float flatteningTolerance)
         {
-            bool contains;
-            this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out contains);
+            this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out bool contains);
             return contains;
         }
 
@@ -202,8 +198,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle strokeStyle)
         {
-            bool contains;
-            this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out contains);
+            this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out bool contains);
             return contains;
         }
 
@@ -244,8 +239,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool FillContainPoint(D2D1Point2F point, float flatteningTolerance)
         {
-            bool contains;
-            this.GetHandle<ID2D1Geometry>().FillContainsPoint(point, IntPtr.Zero, flatteningTolerance, out contains);
+            this.GetHandle<ID2D1Geometry>().FillContainsPoint(point, IntPtr.Zero, flatteningTolerance, out bool contains);
             return contains;
         }
 
@@ -283,8 +277,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool FillContainPoint(D2D1Point2F point)
         {
-            bool contains;
-            this.GetHandle<ID2D1Geometry>().FillContainsPoint(point, IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out contains);
+            this.GetHandle<ID2D1Geometry>().FillContainsPoint(point, IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out bool contains);
             return contains;
         }
 
@@ -328,8 +321,7 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(inputGeometry));
             }
 
-            D2D1GeometryRelation relation;
-            this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), IntPtr.Zero, flatteningTolerance, out relation);
+            this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), IntPtr.Zero, flatteningTolerance, out D2D1GeometryRelation relation);
             return relation;
         }
 
@@ -379,8 +371,7 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(inputGeometry));
             }
 
-            D2D1GeometryRelation relation;
-            this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out relation);
+            this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out D2D1GeometryRelation relation);
             return relation;
         }
 
@@ -795,8 +786,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float ComputeArea(float flatteningTolerance)
         {
-            float area;
-            this.GetHandle<ID2D1Geometry>().ComputeArea(IntPtr.Zero, flatteningTolerance, out area);
+            this.GetHandle<ID2D1Geometry>().ComputeArea(IntPtr.Zero, flatteningTolerance, out float area);
             return area;
         }
 
@@ -832,8 +822,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float ComputeArea()
         {
-            float area;
-            this.GetHandle<ID2D1Geometry>().ComputeArea(IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out area);
+            this.GetHandle<ID2D1Geometry>().ComputeArea(IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out float area);
             return area;
         }
 
@@ -869,8 +858,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float ComputeLength(float flatteningTolerance)
         {
-            float length;
-            this.GetHandle<ID2D1Geometry>().ComputeLength(IntPtr.Zero, flatteningTolerance, out length);
+            this.GetHandle<ID2D1Geometry>().ComputeLength(IntPtr.Zero, flatteningTolerance, out float length);
             return length;
         }
 
@@ -906,8 +894,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float ComputeLength()
         {
-            float length;
-            this.GetHandle<ID2D1Geometry>().ComputeLength(IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out length);
+            this.GetHandle<ID2D1Geometry>().ComputeLength(IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out float length);
             return length;
         }
 

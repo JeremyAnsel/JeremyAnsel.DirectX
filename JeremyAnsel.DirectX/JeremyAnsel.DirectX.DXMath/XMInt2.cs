@@ -101,8 +101,7 @@ namespace JeremyAnsel.DirectX.DXMath
         [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMInt2(XMVector value)
         {
-            XMInt2 ret;
-            value.StoreSInt2(out ret);
+            value.StoreSInt2(out XMInt2 ret);
             return ret;
         }
 

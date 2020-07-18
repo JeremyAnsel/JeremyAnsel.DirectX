@@ -155,8 +155,13 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Device GetDevice()
         {
-            ID3D11Device device;
-            this.GetHandle<ID3D11DeviceChild>().GetDevice(out device);
+            this.GetHandle<ID3D11DeviceChild>().GetDevice(out ID3D11Device device);
+
+            if (device == null)
+            {
+                return null;
+            }
+
             return new D3D11Device(device);
         }
 

@@ -16,49 +16,49 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// First text position within the geometry.
         /// </summary>
-        private uint textPosition;
+        private readonly uint textPosition;
 
         /// <summary>
         /// Number of text positions within the geometry.
         /// </summary>
-        private uint length;
+        private readonly uint length;
 
         /// <summary>
         /// Left position of the top-left coordinate of the geometry.
         /// </summary>
-        private float left;
+        private readonly float left;
 
         /// <summary>
         /// Top position of the top-left coordinate of the geometry.
         /// </summary>
-        private float top;
+        private readonly float top;
 
         /// <summary>
         /// Geometry's width.
         /// </summary>
-        private float width;
+        private readonly float width;
 
         /// <summary>
         /// Geometry's height.
         /// </summary>
-        private float height;
+        private readonly float height;
 
         /// <summary>
         /// Bidi level of text positions enclosed within the geometry.
         /// </summary>
-        private uint bidiLevel;
+        private readonly uint bidiLevel;
 
         /// <summary>
         /// Geometry encloses text?
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isText;
+        private readonly bool isText;
 
         /// <summary>
         /// Range is trimmed.
         /// </summary>
         [MarshalAs(UnmanagedType.Bool)]
-        private bool isTrimmed;
+        private readonly bool isTrimmed;
 
         /// <summary>
         /// Gets the first text position within the geometry.

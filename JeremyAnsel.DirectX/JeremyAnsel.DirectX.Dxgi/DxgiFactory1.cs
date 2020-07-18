@@ -69,8 +69,13 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static DxgiFactory1 Create()
         {
-            IDxgiFactory1 factory;
-            NativeMethods.CreateDxgiFactory1(typeof(IDxgiFactory1).GUID, out factory);
+            NativeMethods.CreateDxgiFactory1(typeof(IDxgiFactory1).GUID, out IDxgiFactory1 factory);
+
+            if (factory == null)
+            {
+                return null;
+            }
+
             return new DxgiFactory1(factory);
         }
 
@@ -81,11 +86,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public IEnumerable<DxgiAdapter1> EnumAdapters()
         {
-            IDxgiAdapter1 adapter;
-
-            for (uint i = 0; !this.factory.EnumAdapters1(i, out adapter); i++)
+            for (uint i = 0; !this.factory.EnumAdapters1(i, out IDxgiAdapter1 adapter); i++)
             {
-                yield return new DxgiAdapter1(adapter);
+                yield return adapter == null ? null : new DxgiAdapter1(adapter);
             }
         }
 
@@ -109,7 +112,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DxgiSwapChain1 CreateSwapChain(object device, DxgiSwapChainDesc desc)
         {
-            return new DxgiSwapChain1(this.factory.CreateSwapChain(device, ref desc));
+            IDxgiSwapChain swapChain = this.factory.CreateSwapChain(device, ref desc);
+
+            if (swapChain == null)
+            {
+                return null;
+            }
+
+            return new DxgiSwapChain1(swapChain);
         }
     }
 }

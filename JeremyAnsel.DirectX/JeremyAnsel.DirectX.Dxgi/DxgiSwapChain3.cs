@@ -191,7 +191,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Present(uint syncInterval, DxgiPresentOptions options)
         {
-            DxgiPresentParameters parameters = default(DxgiPresentParameters);
+            DxgiPresentParameters parameters = default;
 
             this.swapChain.Present1(syncInterval, options, ref parameters);
         }
@@ -216,17 +216,24 @@ namespace JeremyAnsel.DirectX.Dxgi
             var scrollRectHandle = GCHandle.Alloc(scrollRect, GCHandleType.Pinned);
             var scrollOffsetHandle = GCHandle.Alloc(scrollOffset, GCHandleType.Pinned);
 
-            DxgiPresentParameters parameters = new DxgiPresentParameters();
-            parameters.DirtyRectsCount = (uint)dirtyRects.Length;
-            parameters.DirtyRects = dirtyRectsHandle.AddrOfPinnedObject();
-            parameters.ScrollRect = scrollRectHandle.AddrOfPinnedObject();
-            parameters.ScrollOffset = scrollOffsetHandle.AddrOfPinnedObject();
+            try
+            {
+                DxgiPresentParameters parameters = new DxgiPresentParameters
+                {
+                    DirtyRectsCount = (uint)dirtyRects.Length,
+                    DirtyRects = dirtyRectsHandle.AddrOfPinnedObject(),
+                    ScrollRect = scrollRectHandle.AddrOfPinnedObject(),
+                    ScrollOffset = scrollOffsetHandle.AddrOfPinnedObject()
+                };
 
-            this.swapChain.Present1(syncInterval, options, ref parameters);
-
-            dirtyRectsHandle.Free();
-            scrollRectHandle.Free();
-            scrollOffsetHandle.Free();
+                this.swapChain.Present1(syncInterval, options, ref parameters);
+            }
+            finally
+            {
+                dirtyRectsHandle.Free();
+                scrollRectHandle.Free();
+                scrollOffsetHandle.Free();
+            }
         }
 
         /// <summary>
@@ -250,7 +257,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         public DxgiSurface3 GetSurface(uint buffer)
         {
             Guid riid = typeof(IDxgiSurface2).GUID;
-            return new DxgiSurface3((IDxgiSurface2)this.swapChain.GetBuffer(buffer, ref riid));
+            object surface = this.swapChain.GetBuffer(buffer, ref riid);
+
+            if (surface == null)
+            {
+                return null;
+            }
+
+            return new DxgiSurface3((IDxgiSurface2)surface);
         }
 
         /// <summary>
@@ -272,7 +286,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetFullscreenState(bool fullscreen, DxgiOutput3 target)
         {
-            this.swapChain.SetFullscreenState(fullscreen, target == null ? null : target.GetHandle<IDxgiOutput2>());
+            this.swapChain.SetFullscreenState(fullscreen, target?.GetHandle<IDxgiOutput2>());
         }
 
         /// <summary>
@@ -281,9 +295,13 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>A value indicating whether to set the display state to windowed or full screen.</returns>
         public bool GetFullscreenState()
         {
-            bool fullscreen;
-            IDxgiOutput2 itarget;
-            this.swapChain.GetFullscreenState(out fullscreen, out itarget);
+            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput2 itarget);
+
+            if (itarget != null)
+            {
+                Marshal.ReleaseComObject(itarget);
+            }
+
             return fullscreen;
         }
 
@@ -295,10 +313,8 @@ namespace JeremyAnsel.DirectX.Dxgi
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
         public bool GetFullscreenState(out DxgiOutput3 target)
         {
-            bool fullscreen;
-            IDxgiOutput2 itarget;
-            this.swapChain.GetFullscreenState(out fullscreen, out itarget);
-            target = new DxgiOutput3(itarget);
+            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput2 itarget);
+            target = itarget == null ? null : new DxgiOutput3(itarget);
             return fullscreen;
         }
 
@@ -334,7 +350,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DxgiOutput3 GetContainingOutput()
         {
-            return new DxgiOutput3(this.swapChain.GetContainingOutput());
+            IDxgiOutput2 output = this.swapChain.GetContainingOutput();
+
+            if (output == null)
+            {
+                return null;
+            }
+
+            return new DxgiOutput3(output);
         }
 
         /// <summary>
@@ -345,7 +368,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DxgiOutput3 GetRestrictToOutput()
         {
-            return new DxgiOutput3(this.swapChain.GetRestrictToOutput());
+            IDxgiOutput2 output = this.swapChain.GetRestrictToOutput();
+
+            if (output == null)
+            {
+                return null;
+            }
+
+            return new DxgiOutput3(output);
         }
 
         /// <summary>

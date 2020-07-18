@@ -47,8 +47,7 @@ namespace JeremyAnsel.DirectX.D3D11
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
             {
-                D3D11BlendDesc desc;
-                this.blendState.GetDesc(out desc);
+                this.blendState.GetDesc(out D3D11BlendDesc desc);
                 return desc;
             }
         }

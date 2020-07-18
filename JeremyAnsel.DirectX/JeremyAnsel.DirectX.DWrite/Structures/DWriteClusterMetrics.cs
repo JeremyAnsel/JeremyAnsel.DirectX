@@ -17,17 +17,17 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The total advance width of all glyphs in the cluster.
         /// </summary>
-        private float width;
+        private readonly float width;
 
         /// <summary>
         /// The number of text positions in the cluster.
         /// </summary>
-        private ushort length;
+        private readonly ushort length;
 
         /// <summary>
         /// Packed data.
         /// </summary>
-        private ushort data;
+        private readonly ushort data;
 
         /// <summary>
         /// Gets the total advance width of all glyphs in the cluster.

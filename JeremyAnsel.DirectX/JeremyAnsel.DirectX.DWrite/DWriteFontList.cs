@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite font list interface.
         /// </summary>
-        private IDWriteFontList handle;
+        private readonly IDWriteFontList handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteFontList"/> class.
@@ -88,8 +88,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontCollection GetFontCollection()
         {
-            IDWriteFontCollection fontCollection;
-            this.handle.GetFontCollection(out fontCollection);
+            this.handle.GetFontCollection(out IDWriteFontCollection fontCollection);
+
+            if (fontCollection == null)
+            {
+                return null;
+            }
+
             return new DWriteFontCollection(fontCollection);
         }
 
@@ -112,8 +117,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFont GetFont(uint index)
         {
-            IDWriteFont font;
-            this.handle.GetFont(index, out font);
+            this.handle.GetFont(index, out IDWriteFont font);
+
+            if (font == null)
+            {
+                return null;
+            }
+
             return new DWriteFont(font);
         }
     }

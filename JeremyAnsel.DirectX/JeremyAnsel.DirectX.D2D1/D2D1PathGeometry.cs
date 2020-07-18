@@ -46,8 +46,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
             {
-                uint count;
-                this.geometry.GetSegmentCount(out count);
+                this.geometry.GetSegmentCount(out uint count);
                 return count;
             }
         }
@@ -60,8 +59,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
             {
-                uint count;
-                this.geometry.GetFigureCount(out count);
+                this.geometry.GetFigureCount(out uint count);
                 return count;
             }
         }
@@ -73,8 +71,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1GeometrySink Open()
         {
-            ID2D1GeometrySink geometrySink;
-            this.geometry.Open(out geometrySink);
+            this.geometry.Open(out ID2D1GeometrySink geometrySink);
+
+            if (geometrySink == null)
+            {
+                return null;
+            }
+
             return new D2D1GeometrySink(geometrySink);
         }
 

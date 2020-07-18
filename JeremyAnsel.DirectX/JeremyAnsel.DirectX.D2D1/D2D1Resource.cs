@@ -84,8 +84,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1Factory GetFactory()
         {
-            ID2D1Factory factory;
-            this.GetHandle<ID2D1Resource>().GetFactory(out factory);
+            this.GetHandle<ID2D1Resource>().GetFactory(out ID2D1Factory factory);
+
+            if (factory == null)
+            {
+                return null;
+            }
+
             return new D2D1Factory(factory);
         }
 

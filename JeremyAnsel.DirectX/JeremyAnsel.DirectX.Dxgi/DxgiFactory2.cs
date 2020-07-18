@@ -83,8 +83,13 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static DxgiFactory2 Create()
         {
-            IDxgiFactory1 factory;
-            NativeMethods.CreateDxgiFactory1(typeof(IDxgiFactory1).GUID, out factory);
+            NativeMethods.CreateDxgiFactory1(typeof(IDxgiFactory1).GUID, out IDxgiFactory1 factory);
+
+            if (factory == null)
+            {
+                return null;
+            }
+
             return new DxgiFactory2((IDxgiFactory2)factory);
         }
 
@@ -95,11 +100,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public IEnumerable<DxgiAdapter2> EnumAdapters()
         {
-            IDxgiAdapter1 adapter;
-
-            for (uint i = 0; !this.factory.EnumAdapters1(i, out adapter); i++)
+            for (uint i = 0; !this.factory.EnumAdapters1(i, out IDxgiAdapter1 adapter); i++)
             {
-                yield return new DxgiAdapter2((IDxgiAdapter2)adapter);
+                yield return adapter == null ? null : new DxgiAdapter2((IDxgiAdapter2)adapter);
             }
         }
 
@@ -133,14 +136,16 @@ namespace JeremyAnsel.DirectX.Dxgi
             DxgiSwapChainFullscreenDesc? fullscreenDesc,
             DxgiOutput2 restrictToOutput)
         {
+            IDxgiSwapChain1 swapChain;
+
             if (fullscreenDesc == null)
             {
-                return new DxgiSwapChain2(this.factory.CreateSwapChainForWindowHandle(
+                swapChain = this.factory.CreateSwapChainForWindowHandle(
                     device,
                     hwnd,
                     ref desc,
                     IntPtr.Zero,
-                    restrictToOutput == null ? null : restrictToOutput.GetHandle<IDxgiOutput>()));
+                    restrictToOutput?.GetHandle<IDxgiOutput>());
             }
             else
             {
@@ -149,18 +154,26 @@ namespace JeremyAnsel.DirectX.Dxgi
                 try
                 {
                     Marshal.StructureToPtr(fullscreenDesc.Value, fullscreenDescPtr, false);
-                    return new DxgiSwapChain2(this.factory.CreateSwapChainForWindowHandle(
+
+                    swapChain = this.factory.CreateSwapChainForWindowHandle(
                         device,
                         hwnd,
                         ref desc,
                         fullscreenDescPtr,
-                        restrictToOutput == null ? null : restrictToOutput.GetHandle<IDxgiOutput>()));
+                        restrictToOutput?.GetHandle<IDxgiOutput>());
                 }
                 finally
                 {
                     Marshal.FreeHGlobal(fullscreenDescPtr);
                 }
             }
+
+            if (swapChain == null)
+            {
+                return null;
+            }
+
+            return new DxgiSwapChain2(swapChain);
         }
     }
 }

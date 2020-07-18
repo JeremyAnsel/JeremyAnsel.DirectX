@@ -19,7 +19,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite font family interface.
         /// </summary>
-        private IDWriteFontFamily handle;
+        private readonly IDWriteFontFamily handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteFontFamily"/> class.
@@ -89,8 +89,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontCollection GetFontCollection()
         {
-            IDWriteFontCollection fontCollection;
-            this.handle.GetFontCollection(out fontCollection);
+            this.handle.GetFontCollection(out IDWriteFontCollection fontCollection);
+
+            if (fontCollection == null)
+            {
+                return null;
+            }
+
             return new DWriteFontCollection(fontCollection);
         }
 
@@ -113,8 +118,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFont GetFont(uint index)
         {
-            IDWriteFont font;
-            this.handle.GetFont(index, out font);
+            this.handle.GetFont(index, out IDWriteFont font);
+
+            if (font == null)
+            {
+                return null;
+            }
+
             return new DWriteFont(font);
         }
 
@@ -126,8 +136,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteLocalizedStrings GetFamilyNames()
         {
-            IDWriteLocalizedStrings names;
-            this.handle.GetFamilyNames(out names);
+            this.handle.GetFamilyNames(out IDWriteLocalizedStrings names);
+
+            if (names == null)
+            {
+                return null;
+            }
+
             return new DWriteLocalizedStrings(names);
         }
 
@@ -141,8 +156,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFont GetFirstMatchingFont(DWriteFontWeight weight, DWriteFontStretch stretch, DWriteFontStyle style)
         {
-            IDWriteFont matchingFont;
-            this.handle.GetFirstMatchingFont(weight, stretch, style, out matchingFont);
+            this.handle.GetFirstMatchingFont(weight, stretch, style, out IDWriteFont matchingFont);
+
+            if (matchingFont == null)
+            {
+                return null;
+            }
+
             return new DWriteFont(matchingFont);
         }
 
@@ -156,8 +176,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontList GetMatchingFonts(DWriteFontWeight weight, DWriteFontStretch stretch, DWriteFontStyle style)
         {
-            IDWriteFontList matchingFonts;
-            this.handle.GetMatchingFonts(weight, stretch, style, out matchingFonts);
+            this.handle.GetMatchingFonts(weight, stretch, style, out IDWriteFontList matchingFonts);
+
+            if (matchingFonts == null)
+            {
+                return null;
+            }
+
             return new DWriteFontList(matchingFonts);
         }
     }

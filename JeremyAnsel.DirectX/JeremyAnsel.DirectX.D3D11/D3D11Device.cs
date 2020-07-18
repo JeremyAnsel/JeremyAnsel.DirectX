@@ -94,9 +94,6 @@ namespace JeremyAnsel.DirectX.D3D11
             out D3D11FeatureLevel featureLevel,
             out D3D11DeviceContext immediateContext)
         {
-            ID3D11Device deviceInterface;
-            ID3D11DeviceContext immediateContextInterface;
-
             if (featureLevels == null || featureLevels.Length == 0)
             {
                 featureLevels = (D3D11FeatureLevel[])Enum.GetValues(typeof(D3D11FeatureLevel));
@@ -111,12 +108,12 @@ namespace JeremyAnsel.DirectX.D3D11
                 featureLevels,
                 (uint)featureLevels.Length,
                 7, // SDK_VERSION
-                out deviceInterface,
+                out ID3D11Device deviceInterface,
                 out featureLevel,
-                out immediateContextInterface);
+                out ID3D11DeviceContext immediateContextInterface);
 
-            device = new D3D11Device(deviceInterface);
-            immediateContext = new D3D11DeviceContext(immediateContextInterface);
+            device = deviceInterface == null ? null : new D3D11Device(deviceInterface);
+            immediateContext = immediateContextInterface == null ? null : new D3D11DeviceContext(immediateContextInterface);
         }
 
         /// <summary>
@@ -145,9 +142,6 @@ namespace JeremyAnsel.DirectX.D3D11
             out D3D11FeatureLevel featureLevel,
             out D3D11DeviceContext immediateContext)
         {
-            ID3D11Device deviceInterface;
-            ID3D11DeviceContext immediateContextInterface;
-
             if (featureLevels == null || featureLevels.Length == 0)
             {
                 featureLevels = (D3D11FeatureLevel[])Enum.GetValues(typeof(D3D11FeatureLevel));
@@ -164,12 +158,12 @@ namespace JeremyAnsel.DirectX.D3D11
                 7, // SDK_VERSION
                 ref swapChainDesc,
                 out swapChain,
-                out deviceInterface,
+                out ID3D11Device deviceInterface,
                 out featureLevel,
-                out immediateContextInterface);
+                out ID3D11DeviceContext immediateContextInterface);
 
-            device = new D3D11Device(deviceInterface);
-            immediateContext = new D3D11DeviceContext(immediateContextInterface);
+            device = deviceInterface == null ? null : new D3D11Device(deviceInterface);
+            immediateContext = immediateContextInterface == null ? null : new D3D11DeviceContext(immediateContextInterface);
         }
 
         /// <summary>
@@ -278,7 +272,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Buffer CreateBuffer(D3D11BufferDesc desc)
         {
-            return new D3D11Buffer(this.device.CreateBuffer(ref desc, IntPtr.Zero));
+            ID3D11Buffer buffer = this.device.CreateBuffer(ref desc, IntPtr.Zero);
+
+            if (buffer == null)
+            {
+                return null;
+            }
+
+            return new D3D11Buffer(buffer);
         }
 
         /// <summary>
@@ -291,6 +292,8 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Buffer CreateBuffer(D3D11BufferDesc desc, D3D11SubResourceData data)
         {
+            ID3D11Buffer buffer;
+
             D3D11SubResourceDataPtr resource = new D3D11SubResourceDataPtr
             {
                 SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data.Data, 0),
@@ -302,12 +305,19 @@ namespace JeremyAnsel.DirectX.D3D11
 
             try
             {
-                return new D3D11Buffer(this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject()));
+                buffer = this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject());
             }
             finally
             {
                 resourceHandle.Free();
             }
+
+            if (buffer == null)
+            {
+                return null;
+            }
+
+            return new D3D11Buffer(buffer);
         }
 
         /// <summary>
@@ -324,6 +334,8 @@ namespace JeremyAnsel.DirectX.D3D11
         public D3D11Buffer CreateBuffer<T>(D3D11BufferDesc desc, T data, uint sysMemPitch, uint sysMemSlicePitch)
             where T : struct
         {
+            ID3D11Buffer buffer;
+
             int dataSize = Marshal.SizeOf(typeof(T));
             IntPtr dataPtr = Marshal.AllocHGlobal(dataSize);
 
@@ -342,7 +354,7 @@ namespace JeremyAnsel.DirectX.D3D11
 
                 try
                 {
-                    return new D3D11Buffer(this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject()));
+                    buffer = this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject());
                 }
                 finally
                 {
@@ -353,6 +365,13 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 Marshal.FreeHGlobal(dataPtr);
             }
+
+            if (buffer == null)
+            {
+                return null;
+            }
+
+            return new D3D11Buffer(buffer);
         }
 
         /// <summary>
@@ -379,6 +398,8 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentOutOfRangeException(nameof(data));
             }
 
+            ID3D11Buffer buffer;
+
             int dataSize = Marshal.SizeOf(typeof(T));
             IntPtr dataPtr = Marshal.AllocHGlobal(dataSize * data.Length);
 
@@ -400,7 +421,7 @@ namespace JeremyAnsel.DirectX.D3D11
 
                 try
                 {
-                    return new D3D11Buffer(this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject()));
+                    buffer = this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject());
                 }
                 finally
                 {
@@ -411,6 +432,13 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 Marshal.FreeHGlobal(dataPtr);
             }
+
+            if (buffer == null)
+            {
+                return null;
+            }
+
+            return new D3D11Buffer(buffer);
         }
 
         /// <summary>
@@ -421,7 +449,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Texture1D CreateTexture1D(D3D11Texture1DDesc desc)
         {
-            return new D3D11Texture1D(this.device.CreateTexture1D(ref desc, null));
+            ID3D11Texture1D texture = this.device.CreateTexture1D(ref desc, null);
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture1D(texture);
         }
 
         /// <summary>
@@ -433,28 +468,39 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Texture1D CreateTexture1D(D3D11Texture1DDesc desc, D3D11SubResourceData[] data)
         {
+            ID3D11Texture1D texture;
+
             if (data == null)
             {
-                return new D3D11Texture1D(this.device.CreateTexture1D(ref desc, null));
+                texture = this.device.CreateTexture1D(ref desc, null);
             }
-
-            int length = desc.MipLevels == 0 ? (int)desc.ArraySize : (int)(desc.MipLevels * desc.ArraySize);
-
-            if (data.Length != length)
+            else
             {
-                throw new ArgumentOutOfRangeException(nameof(data));
+                int length = desc.MipLevels == 0 ? (int)desc.ArraySize : (int)(desc.MipLevels * desc.ArraySize);
+
+                if (data.Length != length)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(data));
+                }
+
+                var subResources = new D3D11SubResourceDataPtr[length];
+
+                for (int i = 0; i < length; i++)
+                {
+                    subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, 0);
+                    subResources[i].SysMemPitch = data[i].Pitch;
+                    subResources[i].SysMemSlicePitch = data[i].SlicePitch;
+                }
+
+                texture = this.device.CreateTexture1D(ref desc, subResources);
             }
 
-            var subResources = new D3D11SubResourceDataPtr[length];
-
-            for (int i = 0; i < length; i++)
+            if (texture == null)
             {
-                subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, 0);
-                subResources[i].SysMemPitch = data[i].Pitch;
-                subResources[i].SysMemSlicePitch = data[i].SlicePitch;
+                return null;
             }
 
-            return new D3D11Texture1D(this.device.CreateTexture1D(ref desc, subResources));
+            return new D3D11Texture1D(texture);
         }
 
         /// <summary>
@@ -465,7 +511,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Texture2D CreateTexture2D(D3D11Texture2DDesc desc)
         {
-            return new D3D11Texture2D(this.device.CreateTexture2D(ref desc, null));
+            ID3D11Texture2D texture = this.device.CreateTexture2D(ref desc, null);
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture2D(texture);
         }
 
         /// <summary>
@@ -477,28 +530,39 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Texture2D CreateTexture2D(D3D11Texture2DDesc desc, D3D11SubResourceData[] data)
         {
+            ID3D11Texture2D texture;
+
             if (data == null)
             {
-                return new D3D11Texture2D(this.device.CreateTexture2D(ref desc, null));
+                texture = this.device.CreateTexture2D(ref desc, null);
             }
-
-            int length = desc.MipLevels == 0 ? (int)desc.ArraySize : (int)(desc.MipLevels * desc.ArraySize);
-
-            if (data.Length != length)
+            else
             {
-                throw new ArgumentOutOfRangeException(nameof(data));
+                int length = desc.MipLevels == 0 ? (int)desc.ArraySize : (int)(desc.MipLevels * desc.ArraySize);
+
+                if (data.Length != length)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(data));
+                }
+
+                var subResources = new D3D11SubResourceDataPtr[length];
+
+                for (int i = 0; i < length; i++)
+                {
+                    subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, 0);
+                    subResources[i].SysMemPitch = data[i].Pitch;
+                    subResources[i].SysMemSlicePitch = data[i].SlicePitch;
+                }
+
+                texture = this.device.CreateTexture2D(ref desc, subResources);
             }
 
-            var subResources = new D3D11SubResourceDataPtr[length];
-
-            for (int i = 0; i < length; i++)
+            if (texture == null)
             {
-                subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, 0);
-                subResources[i].SysMemPitch = data[i].Pitch;
-                subResources[i].SysMemSlicePitch = data[i].SlicePitch;
+                return null;
             }
 
-            return new D3D11Texture2D(this.device.CreateTexture2D(ref desc, subResources));
+            return new D3D11Texture2D(texture);
         }
 
         /// <summary>
@@ -509,7 +573,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Texture3D CreateTexture3D(D3D11Texture3DDesc desc)
         {
-            return new D3D11Texture3D(this.device.CreateTexture3D(ref desc, null));
+            ID3D11Texture3D texture = this.device.CreateTexture3D(ref desc, null);
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture3D(texture);
         }
 
         /// <summary>
@@ -521,28 +592,39 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Texture3D CreateTexture3D(D3D11Texture3DDesc desc, D3D11SubResourceData[] data)
         {
+            ID3D11Texture3D texture;
+
             if (data == null)
             {
-                return new D3D11Texture3D(this.device.CreateTexture3D(ref desc, null));
+                texture = this.device.CreateTexture3D(ref desc, null);
             }
-
-            int length = desc.MipLevels == 0 ? 1 : (int)desc.MipLevels;
-
-            if (data.Length != length)
+            else
             {
-                throw new ArgumentOutOfRangeException(nameof(data));
+                int length = desc.MipLevels == 0 ? 1 : (int)desc.MipLevels;
+
+                if (data.Length != length)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(data));
+                }
+
+                var subResources = new D3D11SubResourceDataPtr[length];
+
+                for (int i = 0; i < length; i++)
+                {
+                    subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, 0);
+                    subResources[i].SysMemPitch = data[i].Pitch;
+                    subResources[i].SysMemSlicePitch = data[i].SlicePitch;
+                }
+
+                texture = this.device.CreateTexture3D(ref desc, subResources);
             }
 
-            var subResources = new D3D11SubResourceDataPtr[length];
-
-            for (int i = 0; i < length; i++)
+            if (texture == null)
             {
-                subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, 0);
-                subResources[i].SysMemPitch = data[i].Pitch;
-                subResources[i].SysMemSlicePitch = data[i].SlicePitch;
+                return null;
             }
 
-            return new D3D11Texture3D(this.device.CreateTexture3D(ref desc, subResources));
+            return new D3D11Texture3D(texture);
         }
 
         /// <summary>
@@ -561,9 +643,11 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(resource));
             }
 
+            ID3D11ShaderResourceView view;
+
             if (desc == null)
             {
-                return new D3D11ShaderResourceView(this.device.CreateShaderResourceView(resource.GetHandle<ID3D11Resource>(), IntPtr.Zero));
+                view = this.device.CreateShaderResourceView(resource.GetHandle<ID3D11Resource>(), IntPtr.Zero);
             }
             else
             {
@@ -572,13 +656,21 @@ namespace JeremyAnsel.DirectX.D3D11
                 try
                 {
                     Marshal.StructureToPtr(desc.Value, descPtr, false);
-                    return new D3D11ShaderResourceView(this.device.CreateShaderResourceView(resource.GetHandle<ID3D11Resource>(), descPtr));
+
+                    view = this.device.CreateShaderResourceView(resource.GetHandle<ID3D11Resource>(), descPtr);
                 }
                 finally
                 {
                     Marshal.FreeHGlobal(descPtr);
                 }
             }
+
+            if (view == null)
+            {
+                return null;
+            }
+
+            return new D3D11ShaderResourceView(view);
         }
 
         /// <summary>
@@ -597,9 +689,11 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(resource));
             }
 
+            ID3D11UnorderedAccessView view;
+
             if (desc == null)
             {
-                return new D3D11UnorderedAccessView(this.device.CreateUnorderedAccessView(resource.GetHandle<ID3D11Resource>(), IntPtr.Zero));
+                view = this.device.CreateUnorderedAccessView(resource.GetHandle<ID3D11Resource>(), IntPtr.Zero);
             }
             else
             {
@@ -608,13 +702,21 @@ namespace JeremyAnsel.DirectX.D3D11
                 try
                 {
                     Marshal.StructureToPtr(desc.Value, descPtr, false);
-                    return new D3D11UnorderedAccessView(this.device.CreateUnorderedAccessView(resource.GetHandle<ID3D11Resource>(), descPtr));
+
+                    view = this.device.CreateUnorderedAccessView(resource.GetHandle<ID3D11Resource>(), descPtr);
                 }
                 finally
                 {
                     Marshal.FreeHGlobal(descPtr);
                 }
             }
+
+            if (view == null)
+            {
+                return null;
+            }
+
+            return new D3D11UnorderedAccessView(view);
         }
 
         /// <summary>
@@ -633,9 +735,11 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(resource));
             }
 
+            ID3D11RenderTargetView view;
+
             if (desc == null)
             {
-                return new D3D11RenderTargetView(this.device.CreateRenderTargetView(resource.GetHandle<ID3D11Resource>(), IntPtr.Zero));
+                view = this.device.CreateRenderTargetView(resource.GetHandle<ID3D11Resource>(), IntPtr.Zero);
             }
             else
             {
@@ -644,13 +748,21 @@ namespace JeremyAnsel.DirectX.D3D11
                 try
                 {
                     Marshal.StructureToPtr(desc.Value, descPtr, false);
-                    return new D3D11RenderTargetView(this.device.CreateRenderTargetView(resource.GetHandle<ID3D11Resource>(), descPtr));
+
+                    view = this.device.CreateRenderTargetView(resource.GetHandle<ID3D11Resource>(), descPtr);
                 }
                 finally
                 {
                     Marshal.FreeHGlobal(descPtr);
                 }
             }
+
+            if (view == null)
+            {
+                return null;
+            }
+
+            return new D3D11RenderTargetView(view);
         }
 
         /// <summary>
@@ -669,9 +781,11 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(resource));
             }
 
+            ID3D11DepthStencilView view;
+
             if (desc == null)
             {
-                return new D3D11DepthStencilView(this.device.CreateDepthStencilView(resource.GetHandle<ID3D11Resource>(), IntPtr.Zero));
+                view = this.device.CreateDepthStencilView(resource.GetHandle<ID3D11Resource>(), IntPtr.Zero);
             }
             else
             {
@@ -680,13 +794,21 @@ namespace JeremyAnsel.DirectX.D3D11
                 try
                 {
                     Marshal.StructureToPtr(desc.Value, descPtr, false);
-                    return new D3D11DepthStencilView(this.device.CreateDepthStencilView(resource.GetHandle<ID3D11Resource>(), descPtr));
+
+                    view = this.device.CreateDepthStencilView(resource.GetHandle<ID3D11Resource>(), descPtr);
                 }
                 finally
                 {
                     Marshal.FreeHGlobal(descPtr);
                 }
             }
+
+            if (view == null)
+            {
+                return null;
+            }
+
+            return new D3D11DepthStencilView(view);
         }
 
         /// <summary>
@@ -703,11 +825,18 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(elementDescs));
             }
 
-            return new D3D11InputLayout(this.device.CreateInputLayout(
+            ID3D11InputLayout inputLayout = this.device.CreateInputLayout(
                 elementDescs,
                 (uint)elementDescs.Length,
                 shaderBytecodeWithInputSignature,
-                shaderBytecodeWithInputSignature == null ? UIntPtr.Zero : new UIntPtr((uint)shaderBytecodeWithInputSignature.Length)));
+                shaderBytecodeWithInputSignature == null ? UIntPtr.Zero : new UIntPtr((uint)shaderBytecodeWithInputSignature.Length));
+
+            if (inputLayout == null)
+            {
+                return null;
+            }
+
+            return new D3D11InputLayout(inputLayout);
         }
 
         /// <summary>
@@ -725,10 +854,17 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            return new D3D11VertexShader(this.device.CreateVertexShader(
+            ID3D11VertexShader vertexShader = this.device.CreateVertexShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>());
+
+            if (vertexShader == null)
+            {
+                return null;
+            }
+
+            return new D3D11VertexShader(vertexShader);
         }
 
         /// <summary>
@@ -746,10 +882,17 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            return new D3D11GeometryShader(this.device.CreateGeometryShader(
+            ID3D11GeometryShader geometryShader = this.device.CreateGeometryShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>());
+
+            if (geometryShader == null)
+            {
+                return null;
+            }
+
+            return new D3D11GeometryShader(geometryShader);
         }
 
         /// <summary>
@@ -785,7 +928,7 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(bufferStrides));
             }
 
-            return new D3D11GeometryShader(this.device.CreateGeometryShaderWithStreamOutput(
+            ID3D11GeometryShader geometryShader = this.device.CreateGeometryShaderWithStreamOutput(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
                 streamOutputDeclaration,
@@ -793,7 +936,14 @@ namespace JeremyAnsel.DirectX.D3D11
                 bufferStrides,
                 (uint)bufferStrides.Length,
                 rasterizedStream,
-                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>());
+
+            if (geometryShader == null)
+            {
+                return null;
+            }
+
+            return new D3D11GeometryShader(geometryShader);
         }
 
         /// <summary>
@@ -811,10 +961,17 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            return new D3D11PixelShader(this.device.CreatePixelShader(
+            ID3D11PixelShader pixelShader = this.device.CreatePixelShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>());
+
+            if (pixelShader == null)
+            {
+                return null;
+            }
+
+            return new D3D11PixelShader(pixelShader);
         }
 
         /// <summary>
@@ -832,10 +989,17 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            return new D3D11HullShader(this.device.CreateHullShader(
+            ID3D11HullShader hullShader = this.device.CreateHullShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>());
+
+            if (hullShader == null)
+            {
+                return null;
+            }
+
+            return new D3D11HullShader(hullShader);
         }
 
         /// <summary>
@@ -853,10 +1017,17 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            return new D3D11DomainShader(this.device.CreateDomainShader(
+            ID3D11DomainShader domainShader = this.device.CreateDomainShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>());
+
+            if (domainShader == null)
+            {
+                return null;
+            }
+
+            return new D3D11DomainShader(domainShader);
         }
 
         /// <summary>
@@ -874,10 +1045,17 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            return new D3D11ComputeShader(this.device.CreateComputeShader(
+            ID3D11ComputeShader computeShader = this.device.CreateComputeShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
-                classLinkage?.GetHandle<ID3D11ClassLinkage>()));
+                classLinkage?.GetHandle<ID3D11ClassLinkage>());
+
+            if (computeShader == null)
+            {
+                return null;
+            }
+
+            return new D3D11ComputeShader(computeShader);
         }
 
         /// <summary>
@@ -887,7 +1065,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11ClassLinkage CreateClassLinkage()
         {
-            return new D3D11ClassLinkage(this.device.CreateClassLinkage());
+            ID3D11ClassLinkage classLinkage = this.device.CreateClassLinkage();
+
+            if (classLinkage == null)
+            {
+                return null;
+            }
+
+            return new D3D11ClassLinkage(classLinkage);
         }
 
         /// <summary>
@@ -898,7 +1083,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11BlendState CreateBlendState(D3D11BlendDesc desc)
         {
-            return new D3D11BlendState(this.device.CreateBlendState(ref desc));
+            ID3D11BlendState blendState = this.device.CreateBlendState(ref desc);
+
+            if (blendState == null)
+            {
+                return null;
+            }
+
+            return new D3D11BlendState(blendState);
         }
 
         /// <summary>
@@ -909,7 +1101,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11DepthStencilState CreateDepthStencilState(D3D11DepthStencilDesc desc)
         {
-            return new D3D11DepthStencilState(this.device.CreateDepthStencilState(ref desc));
+            ID3D11DepthStencilState depthStencilState = this.device.CreateDepthStencilState(ref desc);
+
+            if (depthStencilState == null)
+            {
+                return null;
+            }
+
+            return new D3D11DepthStencilState(depthStencilState);
         }
 
         /// <summary>
@@ -920,7 +1119,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11RasterizerState CreateRasterizerState(D3D11RasterizerDesc desc)
         {
-            return new D3D11RasterizerState(this.device.CreateRasterizerState(ref desc));
+            ID3D11RasterizerState rasterizerState = this.device.CreateRasterizerState(ref desc);
+
+            if (rasterizerState == null)
+            {
+                return null;
+            }
+
+            return new D3D11RasterizerState(rasterizerState);
         }
 
         /// <summary>
@@ -931,7 +1137,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11SamplerState CreateSamplerState(D3D11SamplerDesc desc)
         {
-            return new D3D11SamplerState(this.device.CreateSamplerState(ref desc));
+            ID3D11SamplerState samplerState = this.device.CreateSamplerState(ref desc);
+
+            if (samplerState == null)
+            {
+                return null;
+            }
+
+            return new D3D11SamplerState(samplerState);
         }
 
         /// <summary>
@@ -942,7 +1155,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Query CreateQuery(D3D11QueryDesc desc)
         {
-            return new D3D11Query(this.device.CreateQuery(ref desc));
+            ID3D11Query query = this.device.CreateQuery(ref desc);
+
+            if (query == null)
+            {
+                return null;
+            }
+
+            return new D3D11Query(query);
         }
 
         /// <summary>
@@ -953,7 +1173,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Predicate CreatePredicate(D3D11QueryDesc desc)
         {
-            return new D3D11Predicate(this.device.CreatePredicate(ref desc));
+            ID3D11Predicate predicate = this.device.CreatePredicate(ref desc);
+
+            if (predicate == null)
+            {
+                return null;
+            }
+
+            return new D3D11Predicate(predicate);
         }
 
         /// <summary>
@@ -964,7 +1191,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11Counter CreateCounter(D3D11CounterDesc desc)
         {
-            return new D3D11Counter(this.device.CreateCounter(ref desc));
+            ID3D11Counter counter = this.device.CreateCounter(ref desc);
+
+            if (counter == null)
+            {
+                return null;
+            }
+
+            return new D3D11Counter(counter);
         }
 
         /// <summary>
@@ -974,7 +1208,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11DeviceContext CreateDeferredContext()
         {
-            return new D3D11DeviceContext(this.device.CreateDeferredContext(0));
+            ID3D11DeviceContext deviceContext = this.device.CreateDeferredContext(0);
+
+            if (deviceContext == null)
+            {
+                return null;
+            }
+
+            return new D3D11DeviceContext(deviceContext);
         }
 
         /// <summary>
@@ -1024,8 +1265,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         public D3D11CounterInfo CheckCounterInfo()
         {
-            D3D11CounterInfo counterInfo;
-            this.device.CheckCounterInfo(out counterInfo);
+            this.device.CheckCounterInfo(out D3D11CounterInfo counterInfo);
             return counterInfo;
         }
 
@@ -1088,8 +1328,8 @@ namespace JeremyAnsel.DirectX.D3D11
 
             this.device.CheckCounter(
                 ref desc,
-                out type,
-                out activeCounters,
+                out _,
+                out _,
                 null,
                 ref nameLength,
                 null,
@@ -1349,8 +1589,13 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D3D11DeviceContext GetImmediateContext()
         {
-            ID3D11DeviceContext immediateContext;
-            this.device.GetImmediateContext(out immediateContext);
+            this.device.GetImmediateContext(out ID3D11DeviceContext immediateContext);
+
+            if (immediateContext == null)
+            {
+                return null;
+            }
+
             return new D3D11DeviceContext(immediateContext);
         }
 
@@ -1365,13 +1610,22 @@ namespace JeremyAnsel.DirectX.D3D11
         private T CheckFeatureSupport<T>(D3D11Feature feature)
             where T : struct
         {
+            T data;
+
             int dataSize = Marshal.SizeOf(typeof(T));
             IntPtr dataPtr = Marshal.AllocHGlobal(dataSize);
 
-            this.device.CheckFeatureSupport(feature, dataPtr, (uint)dataSize);
+            try
+            {
+                this.device.CheckFeatureSupport(feature, dataPtr, (uint)dataSize);
 
-            T data = (T)Marshal.PtrToStructure(dataPtr, typeof(T));
-            Marshal.FreeHGlobal(dataPtr);
+                data = (T)Marshal.PtrToStructure(dataPtr, typeof(T));
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(dataPtr);
+            }
+
             return data;
         }
     }

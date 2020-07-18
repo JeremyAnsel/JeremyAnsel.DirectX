@@ -46,8 +46,7 @@ namespace JeremyAnsel.DirectX.D3D11
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
             {
-                D3D11DepthStencilDesc desc;
-                this.depthStencilState.GetDesc(out desc);
+                this.depthStencilState.GetDesc(out D3D11DepthStencilDesc desc);
                 return desc;
             }
         }

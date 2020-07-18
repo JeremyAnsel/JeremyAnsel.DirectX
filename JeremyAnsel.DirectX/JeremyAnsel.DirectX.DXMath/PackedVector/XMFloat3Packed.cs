@@ -286,8 +286,7 @@ namespace JeremyAnsel.DirectX.DXMath.PackedVector
         [SuppressMessage("Usage", "CA2225:Les surcharges d'opérateur offrent d'autres méthodes nommées", Justification = "Reviewed.")]
         public static implicit operator XMFloat3Packed(XMVector value)
         {
-            XMFloat3 i_value;
-            value.StoreFloat3(out i_value);
+            value.StoreFloat3(out XMFloat3 i_value);
 
             XMUInt3 result;
             uint sign;

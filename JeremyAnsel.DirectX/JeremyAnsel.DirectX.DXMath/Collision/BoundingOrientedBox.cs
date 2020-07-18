@@ -183,8 +183,6 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
                 xy_xz_yz += xxy * yzz;
             }
 
-            XMVector v1, v2, v3;
-
             // Compute the eigenvectors of the inertia tensor.
             Internal.CalculateEigenVectorsFromCovarianceMatrix(
                 xx_yy_zz.X,
@@ -193,9 +191,9 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
                 xy_xz_yz.X,
                 xy_xz_yz.Y,
                 xy_xz_yz.Z,
-                out v1,
-                out v2,
-                out v3);
+                out XMVector v1,
+                out XMVector v2,
+                out XMVector v3);
 
             // Put them in a matrix.
             XMMatrix r;
@@ -330,7 +328,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
 
             XMVector vectorScale = XMVector.Select(dY, dX, XMGlobalConstants.Select1000);
             vectorScale = XMVector.Select(dZ, vectorScale, XMGlobalConstants.Select1100);
-            v_extents = v_extents * vectorScale;
+            v_extents *= vectorScale;
 
             // Store the box.
             return new BoundingOrientedBox(v_center, v_extents, v_orientation);
@@ -363,7 +361,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             v_center = XMVector3.Rotate(v_center * vectorScale, rotation) + translation;
 
             // Scale the box extents.
-            v_extents = v_extents * vectorScale;
+            v_extents *= vectorScale;
 
             // Store the box.
             return new BoundingOrientedBox(v_center, v_extents, v_orientation);
@@ -628,7 +626,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             // Use a dot-product to square them and sum them together.
             XMVector d2 = XMVector3.Dot(d, d);
 
-            return XMVector4.LessOrEqual(d2, XMVector.Multiply(sphereRadius, sphereRadius)) ? true : false;
+            return XMVector4.LessOrEqual(d2, XMVector.Multiply(sphereRadius, sphereRadius));
         }
 
         /// <summary>
@@ -831,7 +829,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             noIntersection = XMVector.OrInt(noIntersection, XMVector.Greater(d.Abs(), XMVector.Add(d_A, d_B)));
 
             // No seperating axis found, boxes must intersect.
-            return XMVector4.NotEqualInt(noIntersection, XMVector.TrueInt) ? true : false;
+            return XMVector4.NotEqualInt(noIntersection, XMVector.TrueInt);
         }
 
         /// <summary>
@@ -893,8 +891,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             // Build the 3x3 rotation matrix that defines the box axes.
             XMMatrix r = XMMatrix.RotationQuaternion(boxOrientation);
 
-            XMVector outside, inside;
-            Internal.FastIntersectOrientedBoxPlane(v_center, v_extents, ((XMVector*)&r)[0], ((XMVector*)&r)[1], ((XMVector*)&r)[2], plane, out outside, out inside);
+            Internal.FastIntersectOrientedBoxPlane(v_center, v_extents, ((XMVector*)&r)[0], ((XMVector*)&r)[1], ((XMVector*)&r)[2], plane, out XMVector outside, out XMVector inside);
 
             // If the box is outside any plane it is outside.
             if (XMVector4.EqualInt(outside, XMVector.TrueInt))
@@ -921,8 +918,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool Intersects(XMVector origin, XMVector direction)
         {
-            float distance;
-            return this.Intersects(origin, direction, out distance);
+            return this.Intersects(origin, direction, out _);
         }
 
         /// <summary>
@@ -1057,10 +1053,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             // Build the 3x3 rotation matrix that defines the box axes.
             XMMatrix r = XMMatrix.RotationQuaternion(boxOrientation);
 
-            XMVector outside, inside;
-
             // Test against each plane.
-            Internal.FastIntersectOrientedBoxPlane(v_center, v_extents, ((XMVector*)&r)[0], ((XMVector*)&r)[1], ((XMVector*)&r)[2], plane0, out outside, out inside);
+            Internal.FastIntersectOrientedBoxPlane(v_center, v_extents, ((XMVector*)&r)[0], ((XMVector*)&r)[1], ((XMVector*)&r)[2], plane0, out XMVector outside, out XMVector inside);
 
             XMVector anyOutside = outside;
             XMVector allInside = inside;

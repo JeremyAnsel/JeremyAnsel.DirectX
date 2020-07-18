@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.D3D10
         /// <summary>
         /// The D3D10 device interface.
         /// </summary>
-        private ID3D10Device1 device;
+        private readonly ID3D10Device1 device;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D10Device1"/> class.
@@ -83,8 +83,13 @@ namespace JeremyAnsel.DirectX.D3D10
             D3D10CreateDeviceOptions options,
             D3D10FeatureLevel featureLevel)
         {
-            ID3D10Device1 device;
-            NativeMethods.D3D10CreateDevice1(adapter, driverType, IntPtr.Zero, options, featureLevel, 0x20, out device);
+            NativeMethods.D3D10CreateDevice1(adapter, driverType, IntPtr.Zero, options, featureLevel, 0x20, out ID3D10Device1 device);
+
+            if (device == null)
+            {
+                return null;
+            }
+
             return new D3D10Device1(device);
         }
 

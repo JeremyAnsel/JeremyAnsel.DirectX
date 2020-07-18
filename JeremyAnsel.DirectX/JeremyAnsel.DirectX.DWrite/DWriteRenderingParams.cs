@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite rendering params interface.
         /// </summary>
-        private IDWriteRenderingParams handle;
+        private readonly IDWriteRenderingParams handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteRenderingParams"/> class.

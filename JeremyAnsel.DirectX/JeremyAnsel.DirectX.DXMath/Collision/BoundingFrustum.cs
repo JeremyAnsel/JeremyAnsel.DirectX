@@ -220,9 +220,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
                 new XMVector(0.0f, 0.0f, 0.0f, 1.0f),     // near
                 new XMVector(0.0f, 0.0f, 1.0f, 1.0f)      // far
             };
-
-            XMVector determinant;
-            XMMatrix matInverse = projection.Inverse(out determinant);
+            XMMatrix matInverse = projection.Inverse(out _);
 
             // Compute the frustum corners in world space.
             XMVector[] points = new XMVector[6];
@@ -1545,7 +1543,6 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             XMVector corners6 = v_origin + (leftTop * v_far);
             XMVector corners7 = v_origin + (leftBottom * v_far);
 
-            XMVector outside, inside;
             Internal.FastIntersectFrustumPlane(
                 corners0,
                 corners1,
@@ -1556,8 +1553,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
                 corners6,
                 corners7,
                 plane,
-                out outside,
-                out inside);
+                out XMVector outside,
+                out XMVector inside);
 
             // If the frustum is outside any plane it is outside.
             if (XMVector4.EqualInt(outside, XMVector.TrueInt))
@@ -1584,8 +1581,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool Intersects(XMVector rayOrigin, XMVector direction)
         {
-            float distance;
-            return this.Intersects(rayOrigin, direction, out distance);
+            return this.Intersects(rayOrigin, direction, out _);
         }
 
         /// <summary>
@@ -1767,8 +1763,6 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             XMVector corners6 = v_origin + (leftTop * v_far);
             XMVector corners7 = v_origin + (leftBottom * v_far);
 
-            XMVector outside, inside;
-
             // Test against each plane.
             Internal.FastIntersectFrustumPlane(
                 corners0,
@@ -1780,8 +1774,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
                 corners6,
                 corners7,
                 plane0,
-                out outside,
-                out inside);
+                out XMVector outside,
+                out XMVector inside);
 
             XMVector anyOutside = outside;
             XMVector allInside = inside;

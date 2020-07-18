@@ -56,7 +56,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DxgiAdapter GetAdapter()
         {
-            return new DxgiAdapter(this.device.GetAdapter());
+            IDxgiAdapter adapter = this.device.GetAdapter();
+
+            if (adapter == null)
+            {
+                return null;
+            }
+
+            return new DxgiAdapter(adapter);
         }
 
         /// <summary>
@@ -75,7 +82,7 @@ namespace JeremyAnsel.DirectX.Dxgi
             DxgiResidency[] residencies = new DxgiResidency[resources.Length];
 
             this.device.QueryResourceResidency(
-                Array.ConvertAll(resources, t => t.GetHandle<IDxgiResource>()),
+                Array.ConvertAll(resources, t => t?.GetHandle<IDxgiResource>()),
                 residencies,
                 (uint)resources.Length);
 

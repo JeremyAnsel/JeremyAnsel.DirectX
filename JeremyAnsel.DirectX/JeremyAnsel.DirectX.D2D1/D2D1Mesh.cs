@@ -43,8 +43,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1TessellationSink Open()
         {
-            ID2D1TessellationSink tessellationSink;
-            this.mesh.Open(out tessellationSink);
+            this.mesh.Open(out ID2D1TessellationSink tessellationSink);
+
+            if (tessellationSink == null)
+            {
+                return null;
+            }
+
             return new D2D1TessellationSink(tessellationSink);
         }
     }

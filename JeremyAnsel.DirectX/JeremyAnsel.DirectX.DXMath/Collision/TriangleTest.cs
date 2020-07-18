@@ -25,10 +25,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2)
         {
-            float coordinateU;
-            float coordinateV;
-            float distance;
-            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out coordinateU, out coordinateV, out distance);
+            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out _, out _, out _);
         }
 
         /// <summary>
@@ -45,9 +42,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float distance)
         {
-            float coordinateU;
-            float coordinateV;
-            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out coordinateU, out coordinateV, out distance);
+            return TriangleTest.Intersects(origin, direction, v0, v1, v2, out _, out _, out distance);
         }
 
         /// <summary>
@@ -207,15 +202,11 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             b_dist = XMVector.Select(b_dist, XMVector3.Dot(n1, b2 - a0), selectZ);
 
             // Ensure robustness with co-planar triangles by zeroing small distances.
-            XMComparisonRecord b_distIsZeroCR;
-            XMVector b_distIsZero = XMVector.GreaterR(out b_distIsZeroCR, CollisionGlobalConstants.RayEpsilon, b_dist.Abs());
+            XMVector b_distIsZero = XMVector.GreaterR(out XMComparisonRecord b_distIsZeroCR, CollisionGlobalConstants.RayEpsilon, b_dist.Abs());
             b_dist = XMVector.Select(b_dist, zero, b_distIsZero);
 
-            XMComparisonRecord b_distIsLessCR;
-            XMVector b_distIsLess = XMVector.GreaterR(out b_distIsLessCR, zero, b_dist);
-
-            XMComparisonRecord b_distIsGreaterCR;
-            XMVector b_distIsGreater = XMVector.GreaterR(out b_distIsGreaterCR, b_dist, zero);
+            XMVector b_distIsLess = XMVector.GreaterR(out XMComparisonRecord b_distIsLessCR, zero, b_dist);
+            XMVector b_distIsGreater = XMVector.GreaterR(out XMComparisonRecord b_distIsGreaterCR, b_dist, zero);
 
             // If all the points are on the same side we don't intersect.
             if (b_distIsLessCR.IsAllTrue || b_distIsGreaterCR.IsAllTrue)
@@ -235,15 +226,11 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             a_dist = XMVector.Select(a_dist, XMVector3.Dot(n2, a2 - b0), selectZ);
 
             // Ensure robustness with co-planar triangles by zeroing small distances.
-            XMComparisonRecord a_distIsZeroCR;
-            XMVector a_distIsZero = XMVector.GreaterR(out a_distIsZeroCR, CollisionGlobalConstants.RayEpsilon, b_dist.Abs());
+            XMVector a_distIsZero = XMVector.GreaterR(out XMComparisonRecord a_distIsZeroCR, CollisionGlobalConstants.RayEpsilon, b_dist.Abs());
             a_dist = XMVector.Select(a_dist, zero, a_distIsZero);
 
-            XMComparisonRecord a_distIsLessCR;
-            XMVector a_distIsLess = XMVector.GreaterR(out a_distIsLessCR, zero, a_dist);
-
-            XMComparisonRecord a_distIsGreaterCR;
-            XMVector a_distIsGreater = XMVector.GreaterR(out a_distIsGreaterCR, a_dist, zero);
+            XMVector a_distIsLess = XMVector.GreaterR(out XMComparisonRecord a_distIsLessCR, zero, a_dist);
+            XMVector a_distIsGreater = XMVector.GreaterR(out XMComparisonRecord a_distIsGreaterCR, a_dist, zero);
 
             // If all the points are on the same side we don't intersect.
             if (a_distIsLessCR.IsAllTrue || a_distIsGreaterCR.IsAllTrue)
@@ -529,8 +516,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             XMVector tV1 = new XMVector(v1.X, v1.Y, v1.Z, one.W);
             XMVector tV2 = new XMVector(v2.X, v2.Y, v2.Z, one.W);
 
-            XMVector outside, inside;
-            Internal.FastIntersectTrianglePlane(tV0, tV1, tV2, plane, out outside, out inside);
+            Internal.FastIntersectTrianglePlane(tV0, tV1, tV2, plane, out XMVector outside, out XMVector inside);
 
             // If the triangle is outside any plane it is outside.
             if (XMVector4.EqualInt(outside, XMVector.TrueInt))
@@ -580,10 +566,8 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
             XMVector tV1 = new XMVector(v1.X, v1.Y, v1.Z, one.W);
             XMVector tV2 = new XMVector(v2.X, v2.Y, v2.Z, one.W);
 
-            XMVector outside, inside;
-
             // Test against each plane.
-            Internal.FastIntersectTrianglePlane(tV0, tV1, tV2, plane0, out outside, out inside);
+            Internal.FastIntersectTrianglePlane(tV0, tV1, tV2, plane0, out XMVector outside, out XMVector inside);
 
             XMVector anyOutside = outside;
             XMVector allInside = inside;

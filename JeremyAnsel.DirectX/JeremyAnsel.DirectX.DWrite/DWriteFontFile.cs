@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite font file interface.
         /// </summary>
-        private IDWriteFontFile handle;
+        private readonly IDWriteFontFile handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteFontFile"/> class.
@@ -87,10 +87,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public byte[] GetReferenceKey()
         {
-            IntPtr fontFileReferenceKey;
-            uint fontFileReferenceKeySize;
-
-            this.handle.GetReferenceKey(out fontFileReferenceKey, out fontFileReferenceKeySize);
+            this.handle.GetReferenceKey(out IntPtr fontFileReferenceKey, out uint fontFileReferenceKeySize);
 
             byte[] key = new byte[fontFileReferenceKeySize];
             Marshal.Copy(fontFileReferenceKey, key, 0, (int)fontFileReferenceKeySize);

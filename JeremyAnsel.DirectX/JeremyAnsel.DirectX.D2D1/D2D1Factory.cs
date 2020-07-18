@@ -61,8 +61,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static D2D1Factory Create(D2D1FactoryType factoryType)
         {
-            ID2D1Factory factory;
-            NativeMethods.D2D1CreateFactory(factoryType, typeof(ID2D1Factory).GUID, IntPtr.Zero, out factory);
+            NativeMethods.D2D1CreateFactory(factoryType, typeof(ID2D1Factory).GUID, IntPtr.Zero, out ID2D1Factory factory);
+
+            if (factory == null)
+            {
+                return null;
+            }
+
             return new D2D1Factory(factory);
         }
 
@@ -86,6 +91,11 @@ namespace JeremyAnsel.DirectX.D2D1
             finally
             {
                 handle.Free();
+            }
+
+            if (factory == null)
+            {
+                return null;
             }
 
             return new D2D1Factory(factory);
@@ -165,8 +175,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1RectangleGeometry CreateRectangleGeometry(D2D1RectF rectangle)
         {
-            ID2D1RectangleGeometry rectangleGeometry;
-            this.factory.CreateRectangleGeometry(ref rectangle, out rectangleGeometry);
+            this.factory.CreateRectangleGeometry(ref rectangle, out ID2D1RectangleGeometry rectangleGeometry);
+
+            if (rectangleGeometry == null)
+            {
+                return null;
+            }
+
             return new D2D1RectangleGeometry(rectangleGeometry);
         }
 
@@ -178,8 +193,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1RoundedRectangleGeometry CreateRoundedRectangleGeometry(D2D1RoundedRect roundedRectangle)
         {
-            ID2D1RoundedRectangleGeometry roundedRectangleGeometry;
-            this.factory.CreateRoundedRectangleGeometry(ref roundedRectangle, out roundedRectangleGeometry);
+            this.factory.CreateRoundedRectangleGeometry(ref roundedRectangle, out ID2D1RoundedRectangleGeometry roundedRectangleGeometry);
+
+            if (roundedRectangleGeometry == null)
+            {
+                return null;
+            }
+
             return new D2D1RoundedRectangleGeometry(roundedRectangleGeometry);
         }
 
@@ -191,8 +211,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1EllipseGeometry CreateEllipseGeometry(D2D1Ellipse ellipse)
         {
-            ID2D1EllipseGeometry ellipseGeometry;
-            this.factory.CreateEllipseGeometry(ref ellipse, out ellipseGeometry);
+            this.factory.CreateEllipseGeometry(ref ellipse, out ID2D1EllipseGeometry ellipseGeometry);
+
+            if (ellipseGeometry == null)
+            {
+                return null;
+            }
+
             return new D2D1EllipseGeometry(ellipseGeometry);
         }
 
@@ -210,8 +235,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(geometries));
             }
 
-            ID2D1GeometryGroup geometryGroup;
-            this.factory.CreateGeometryGroup(fillMode, Array.ConvertAll(geometries, t => t.GetHandle<ID2D1Geometry>()), (uint)geometries.Length, out geometryGroup);
+            this.factory.CreateGeometryGroup(fillMode, Array.ConvertAll(geometries, t => t.GetHandle<ID2D1Geometry>()), (uint)geometries.Length, out ID2D1GeometryGroup geometryGroup);
+
+            if (geometryGroup == null)
+            {
+                return null;
+            }
+
             return new D2D1GeometryGroup(geometryGroup);
         }
 
@@ -230,8 +260,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(sourceGeometry));
             }
 
-            ID2D1TransformedGeometry transformedGeometry;
-            this.factory.CreateTransformedGeometry(sourceGeometry.GetHandle<ID2D1Geometry>(), ref transform, out transformedGeometry);
+            this.factory.CreateTransformedGeometry(sourceGeometry.GetHandle<ID2D1Geometry>(), ref transform, out ID2D1TransformedGeometry transformedGeometry);
+
+            if (transformedGeometry == null)
+            {
+                return null;
+            }
+
             return new D2D1TransformedGeometry(transformedGeometry);
         }
 
@@ -242,8 +277,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1PathGeometry CreatePathGeometry()
         {
-            ID2D1PathGeometry pathGeometry;
-            this.factory.CreatePathGeometry(out pathGeometry);
+            this.factory.CreatePathGeometry(out ID2D1PathGeometry pathGeometry);
+
+            if (pathGeometry == null)
+            {
+                return null;
+            }
+
             return new D2D1PathGeometry(pathGeometry);
         }
 
@@ -261,8 +301,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(dashes));
             }
 
-            ID2D1StrokeStyle strokeStyle;
-            this.factory.CreateStrokeStyle(ref strokeStyleProperties, dashes, (uint)dashes.Length, out strokeStyle);
+            this.factory.CreateStrokeStyle(ref strokeStyleProperties, dashes, (uint)dashes.Length, out ID2D1StrokeStyle strokeStyle);
+
+            if (strokeStyle == null)
+            {
+                return null;
+            }
+
             return new D2D1StrokeStyle(strokeStyle);
         }
 
@@ -273,8 +318,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1DrawingStateBlock CreateDrawingStateBlock()
         {
-            ID2D1DrawingStateBlock drawingStateBlock;
-            this.factory.CreateDrawingStateBlock(IntPtr.Zero, null, out drawingStateBlock);
+            this.factory.CreateDrawingStateBlock(IntPtr.Zero, null, out ID2D1DrawingStateBlock drawingStateBlock);
+
+            if (drawingStateBlock == null)
+            {
+                return null;
+            }
+
             return new D2D1DrawingStateBlock(drawingStateBlock);
         }
 
@@ -299,6 +349,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 drawingStateDescriptionHandle.Free();
             }
 
+            if (drawingStateBlock == null)
+            {
+                return null;
+            }
+
             return new D2D1DrawingStateBlock(drawingStateBlock);
         }
 
@@ -310,8 +365,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1DrawingStateBlock CreateDrawingStateBlock(DWriteRenderingParams textRenderingParams)
         {
-            ID2D1DrawingStateBlock drawingStateBlock;
-            this.factory.CreateDrawingStateBlock(IntPtr.Zero, textRenderingParams == null ? null : (IDWriteRenderingParams)textRenderingParams.Handle, out drawingStateBlock);
+            this.factory.CreateDrawingStateBlock(IntPtr.Zero, textRenderingParams == null ? null : (IDWriteRenderingParams)textRenderingParams.Handle, out ID2D1DrawingStateBlock drawingStateBlock);
+
+            if (drawingStateBlock == null)
+            {
+                return null;
+            }
+
             return new D2D1DrawingStateBlock(drawingStateBlock);
         }
 
@@ -337,6 +397,11 @@ namespace JeremyAnsel.DirectX.D2D1
                 drawingStateDescriptionHandle.Free();
             }
 
+            if (drawingStateBlock == null)
+            {
+                return null;
+            }
+
             return new D2D1DrawingStateBlock(drawingStateBlock);
         }
 
@@ -354,8 +419,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(target));
             }
 
-            ID2D1RenderTarget renderTarget;
-            this.factory.CreateWicBitmapRenderTarget((IWICBitmap)target, ref renderTargetProperties, out renderTarget);
+            this.factory.CreateWicBitmapRenderTarget((IWICBitmap)target, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+
+            if (renderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1RenderTargetBase(renderTarget);
         }
 
@@ -368,8 +438,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1HwndRenderTarget CreateHwndRenderTarget(D2D1RenderTargetProperties renderTargetProperties, D2D1HwndRenderTargetProperties hwndRenderTargetProperties)
         {
-            ID2D1HwndRenderTarget hwndRenderTarget;
-            this.factory.CreateHwndRenderTarget(ref renderTargetProperties, ref hwndRenderTargetProperties, out hwndRenderTarget);
+            this.factory.CreateHwndRenderTarget(ref renderTargetProperties, ref hwndRenderTargetProperties, out ID2D1HwndRenderTarget hwndRenderTarget);
+
+            if (hwndRenderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1HwndRenderTarget(hwndRenderTarget);
         }
 
@@ -388,8 +463,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
-            ID2D1RenderTarget renderTarget;
-            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out renderTarget);
+            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+
+            if (renderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1RenderTargetBase(renderTarget);
         }
 
@@ -408,8 +488,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
-            ID2D1RenderTarget renderTarget;
-            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out renderTarget);
+            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+
+            if (renderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1RenderTargetBase(renderTarget);
         }
 
@@ -428,8 +513,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
-            ID2D1RenderTarget renderTarget;
-            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out renderTarget);
+            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+
+            if (renderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1RenderTargetBase(renderTarget);
         }
 
@@ -448,8 +538,13 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
-            ID2D1RenderTarget renderTarget;
-            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out renderTarget);
+            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+
+            if (renderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1RenderTargetBase(renderTarget);
         }
 
@@ -461,8 +556,13 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1DCRenderTarget CreateDCRenderTarget(D2D1RenderTargetProperties renderTargetProperties)
         {
-            ID2D1DCRenderTarget renderTarget;
-            this.factory.CreateDCRenderTarget(ref renderTargetProperties, out renderTarget);
+            this.factory.CreateDCRenderTarget(ref renderTargetProperties, out ID2D1DCRenderTarget renderTarget);
+
+            if (renderTarget == null)
+            {
+                return null;
+            }
+
             return new D2D1DCRenderTarget(renderTarget);
         }
     }

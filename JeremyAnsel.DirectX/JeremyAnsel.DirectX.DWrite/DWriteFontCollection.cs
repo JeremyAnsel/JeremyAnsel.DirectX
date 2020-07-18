@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite font collection interface.
         /// </summary>
-        private IDWriteFontCollection handle;
+        private readonly IDWriteFontCollection handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteFontCollection"/> class.
@@ -99,8 +99,13 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteFontFamily GetFontFamily(uint index)
         {
-            IDWriteFontFamily fontFamily;
-            this.handle.GetFontFamily(index, out fontFamily);
+            this.handle.GetFontFamily(index, out IDWriteFontFamily fontFamily);
+
+            if (fontFamily == null)
+            {
+                return null;
+            }
+
             return new DWriteFontFamily(fontFamily);
         }
 
@@ -114,8 +119,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool FindFontFamily(string familyName, out uint index)
         {
-            bool exists;
-            this.handle.FindFontFamily(familyName, out index, out exists);
+            this.handle.FindFontFamily(familyName, out index, out bool exists);
             return exists;
         }
 
@@ -136,8 +140,13 @@ namespace JeremyAnsel.DirectX.DWrite
                 throw new ArgumentNullException(nameof(fontFace));
             }
 
-            IDWriteFont font;
-            this.handle.GetFontFromFontFace((IDWriteFontFace)fontFace.Handle, out font);
+            this.handle.GetFontFromFontFace((IDWriteFontFace)fontFace.Handle, out IDWriteFont font);
+
+            if (font == null)
+            {
+                return null;
+            }
+
             return new DWriteFont(font);
         }
     }

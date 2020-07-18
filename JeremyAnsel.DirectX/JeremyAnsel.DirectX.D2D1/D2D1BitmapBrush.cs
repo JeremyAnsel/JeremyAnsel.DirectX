@@ -85,8 +85,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                ID2D1Bitmap bitmap;
-                this.brush.GetBitmap(out bitmap);
+                this.brush.GetBitmap(out ID2D1Bitmap bitmap);
 
                 if (bitmap == null)
                 {

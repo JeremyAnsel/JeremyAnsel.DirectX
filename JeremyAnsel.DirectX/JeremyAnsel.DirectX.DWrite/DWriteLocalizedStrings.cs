@@ -19,7 +19,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The DWrite localized strings interface.
         /// </summary>
-        private IDWriteLocalizedStrings handle;
+        private readonly IDWriteLocalizedStrings handle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DWriteLocalizedStrings"/> class.
@@ -102,8 +102,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public bool FindLocaleName(string localeName, out uint index)
         {
-            bool exists;
-            this.handle.FindLocaleName(localeName, out index, out exists);
+            this.handle.FindLocaleName(localeName, out index, out bool exists);
             return exists;
         }
 
@@ -115,8 +114,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string GetLocaleName(uint index)
         {
-            uint length;
-            this.handle.GetLocaleNameLength(index, out length);
+            this.handle.GetLocaleNameLength(index, out uint length);
             length++;
 
             StringBuilder localeName = new StringBuilder((int)length);
@@ -133,8 +131,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string GetString(uint index)
         {
-            uint length;
-            this.handle.GetStringLength(index, out length);
+            this.handle.GetStringLength(index, out uint length);
             length++;
 
             StringBuilder name = new StringBuilder((int)length);

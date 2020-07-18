@@ -24,22 +24,22 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <summary>
         /// The distance from the left-most visible DIP to its left alignment edge.
         /// </summary>
-        private float left;
+        private readonly float left;
 
         /// <summary>
         /// The distance from the top-most visible DIP to its top alignment edge.
         /// </summary>
-        private float top;
+        private readonly float top;
 
         /// <summary>
         /// The distance from the right-most visible DIP to its right alignment edge.
         /// </summary>
-        private float right;
+        private readonly float right;
 
         /// <summary>
         /// The distance from the bottom-most visible DIP to its bottom alignment edge.
         /// </summary>
-        private float bottom;
+        private readonly float bottom;
 
         /// <summary>
         /// Gets the distance from the left-most visible DIP to its left alignment edge.
