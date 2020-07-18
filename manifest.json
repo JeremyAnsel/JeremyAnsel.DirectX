@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html",
-          "hash": "cCsXVvVkso4ATiRJDKHRDg=="
+          "hash": "eZfKTDxHCYkBPhh5+VDhxQ=="
         }
       },
       "is_incremental": false,
@@ -366,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Factory.html",
-          "hash": "JdnsouyGXOaHcsJSPdvuzg=="
+          "hash": "ajq132V0dnSyPdQwi/vKgQ=="
         }
       },
       "is_incremental": false,
@@ -462,7 +462,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Geometry.html",
-          "hash": "I6bybLAFACMsb2km1vplgA=="
+          "hash": "GqgdJ7FtARCMfxnU3AnNEw=="
         }
       },
       "is_incremental": false,
@@ -678,7 +678,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Matrix3X2F.html",
-          "hash": "WAaG24f1ufOUVLF5UKtVpw=="
+          "hash": "x1Iw5wOh3JZEZTOwf0vhGQ=="
         }
       },
       "is_incremental": false,
@@ -750,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1PathGeometry.html",
-          "hash": "K6yJ6gk/rR+SVbZuBp7HAQ=="
+          "hash": "AymVu3OXnZc4EU+gljG69A=="
         }
       },
       "is_incremental": false,
@@ -918,7 +918,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html",
-          "hash": "ba5pVbXWV9sZo12kDFNAPg=="
+          "hash": "yhnozBlJWxMSjHaPWvcJ3w=="
         }
       },
       "is_incremental": false,
@@ -1110,7 +1110,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1TransformedGeometry.html",
-          "hash": "JXtzjtTjF5qoIwMU/VXpRw=="
+          "hash": "IynL5i+6miVFHy3Isk1v4A=="
         }
       },
       "is_incremental": false,
@@ -1230,7 +1230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10Device1.html",
-          "hash": "d50Fu8J8vBA9jJgTeAgBYw=="
+          "hash": "bxg4kF2TgYB5hPK3+2uBTA=="
         }
       },
       "is_incremental": false,
@@ -1506,7 +1506,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClassInstance.html",
-          "hash": "RZzGfqf7/tB8k5RT/aC+4A=="
+          "hash": "2QA1zCKBQQC6n4yxyg+GvA=="
         }
       },
       "is_incremental": false,
@@ -1530,7 +1530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClassLinkage.html",
-          "hash": "AVyFRX/6f+3JL4I9i+YpQA=="
+          "hash": "XV5zUdv3gy/232LFiH4R4w=="
         }
       },
       "is_incremental": false,
@@ -1794,7 +1794,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Device.html",
-          "hash": "aggX8zJ9tVFOT394PC8B6A=="
+          "hash": "nvdtuj9CXrZzS2vzCb1+kQ=="
         }
       },
       "is_incremental": false,
@@ -1818,7 +1818,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DeviceContext.html",
-          "hash": "GFfMKUbauPsy9TXfvPEBYQ=="
+          "hash": "7sQDTiORpiyQ3ISCcjHZtA=="
         }
       },
       "is_incremental": false,
@@ -2442,7 +2442,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Resource.html",
-          "hash": "3Bkh/WDgzFsQlRzQrSaSQw=="
+          "hash": "rtPiSGPY6J2VVJGLHOh5zQ=="
         }
       },
       "is_incremental": false,
@@ -3138,7 +3138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.D3D11.DxgiSwapChainExtensions.html",
-          "hash": "dyF9EfQbGjRCzXO/yG2YqA=="
+          "hash": "mOrHdSHzOhZFTR8wpVZEwA=="
         }
       },
       "is_incremental": false,
@@ -3282,7 +3282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFactory.html",
-          "hash": "DKeZ+0bJcNArMC1Mx8ADjw=="
+          "hash": "khUuVSw9c+sS5Z5S4hqoRw=="
         }
       },
       "is_incremental": false,
@@ -3318,7 +3318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFont.html",
-          "hash": "InhCFCMgQrlLtaUHoWjbCw=="
+          "hash": "QkMuUCRh7Bqx8tDrfriKWA=="
         }
       },
       "is_incremental": false,
@@ -3330,7 +3330,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html",
-          "hash": "r8+ijqU8YVHbEpLKFCeKDw=="
+          "hash": "/8x01/A/AEPcTFWemsUcNg=="
         }
       },
       "is_incremental": false,
@@ -3342,7 +3342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFace.html",
-          "hash": "czVKprUZtDwTSAxImd2V7Q=="
+          "hash": "RCLdbGqv90F19yJctkX1Zg=="
         }
       },
       "is_incremental": false,
@@ -3366,7 +3366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFamily.html",
-          "hash": "+Y0JJZpOwrQgvA0oHznXHw=="
+          "hash": "dGVKxoPjLfq90UOhHP4OrA=="
         }
       },
       "is_incremental": false,
@@ -3402,7 +3402,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFile.html",
-          "hash": "PPJb88vapSK/SIk+9SuQPw=="
+          "hash": "dPa6GD1P1R/m+/w1V04xuA=="
         }
       },
       "is_incremental": false,
@@ -3426,7 +3426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontList.html",
-          "hash": "WhCQuJlpeiq0kUAP8zqIwg=="
+          "hash": "oMcbI4Y5tS+VNDYikRbzEQ=="
         }
       },
       "is_incremental": false,
@@ -3618,7 +3618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteLocalizedStrings.html",
-          "hash": "LbYG3OGKwV3auNk+RoX+GA=="
+          "hash": "wqIORhe1W38EA7uuotqe5Q=="
         }
       },
       "is_incremental": false,
@@ -3834,7 +3834,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextFormat.html",
-          "hash": "JWURCG7SX+cgr/lo9mAYbQ=="
+          "hash": "Ca+yx+sZNApNRU/fiP4taw=="
         }
       },
       "is_incremental": false,
@@ -3846,7 +3846,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html",
-          "hash": "NKQKur+BCN0R3QUE0HQnOw=="
+          "hash": "NqEG/HNTHejoTHtmSLCLVA=="
         }
       },
       "is_incremental": false,
@@ -3990,7 +3990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html",
-          "hash": "kDyQjFb3yDRdelVkncDOJw=="
+          "hash": "RNVzLrO5Q2iyjdOh3S9/ZQ=="
         }
       },
       "is_incremental": false,
@@ -4002,7 +4002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html",
-          "hash": "hULOBKOxghT60HJW+0nY+g=="
+          "hash": "eEIuy3E3c1LK4jX629UypQ=="
         }
       },
       "is_incremental": false,
@@ -4014,7 +4014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html",
-          "hash": "y1yIlV2h3fSfRUqyD59xQw=="
+          "hash": "SCx0si72wi85si8hDrWRVw=="
         }
       },
       "is_incremental": false,
@@ -4026,7 +4026,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html",
-          "hash": "dyJjH2unSY0hJWoC9QnvRg=="
+          "hash": "orkzkAdw2SRhs9MJiGBZMg=="
         }
       },
       "is_incremental": false,
@@ -4062,7 +4062,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.TriangleTest.html",
-          "hash": "cu0oyFEF9p1Cr+25SyzB1g=="
+          "hash": "v81I6pq57aXXC/DQ8yQCOg=="
         }
       },
       "is_incremental": false,
@@ -4182,7 +4182,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMFloat3Packed.html",
-          "hash": "CVV3U/NUrRX7eLLStmFNnw=="
+          "hash": "Tyki+9HCf4VHZ1v/487QAg=="
         }
       },
       "is_incremental": false,
@@ -4194,7 +4194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMFloat3SharedExponent.html",
-          "hash": "Sm9qrRjl5/fjmDJTcHvJ9A=="
+          "hash": "l1PoG0beXxQgrre7Y+ctHQ=="
         }
       },
       "is_incremental": false,
@@ -4506,7 +4506,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat2.html",
-          "hash": "jXpf7xzeJ0yz90Ml+q7Fkw=="
+          "hash": "2+ofY8VzVcXvKND1Fb9Ptg=="
         }
       },
       "is_incremental": false,
@@ -4518,7 +4518,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat3.html",
-          "hash": "EpqxZl3sufQiLmowdTboew=="
+          "hash": "EQfSMP16IJP7rsOB7tADgw=="
         }
       },
       "is_incremental": false,
@@ -4530,7 +4530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat3X3.html",
-          "hash": "1QkQ56VbtdJu+Fr4G5f3hw=="
+          "hash": "wy3VFVGXlrESuWRALnmkuw=="
         }
       },
       "is_incremental": false,
@@ -4542,7 +4542,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat4.html",
-          "hash": "XAH4N/iiUJqteounkrFOOQ=="
+          "hash": "Xh9tzdCyEN3//hafNwA3VA=="
         }
       },
       "is_incremental": false,
@@ -4554,7 +4554,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat4X3.html",
-          "hash": "VPrH4WtWNmK9A62arL5uGw=="
+          "hash": "y6rJgA7EtSKZA88/q8JCqA=="
         }
       },
       "is_incremental": false,
@@ -4566,7 +4566,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat4X4.html",
-          "hash": "o4a4I6Q7QeqOY0hCKVUSPw=="
+          "hash": "1lxoPrZWURYjwFGFImUbvQ=="
         }
       },
       "is_incremental": false,
@@ -4578,7 +4578,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMInt2.html",
-          "hash": "9utM5o0VWQfLc9Gie+EEfQ=="
+          "hash": "wTVfL5RCnYDgW0nIIMa85Q=="
         }
       },
       "is_incremental": false,
@@ -4590,7 +4590,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMInt3.html",
-          "hash": "dRRZ8OUARlcR9BQa61Xt2g=="
+          "hash": "RzS1nA7WPMcqmRz27Ne8Cw=="
         }
       },
       "is_incremental": false,
@@ -4602,7 +4602,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMInt4.html",
-          "hash": "yRI8BBJZH+MKCCkj143wEQ=="
+          "hash": "R3/tCFPSEqU2Q9YpuEeSnw=="
         }
       },
       "is_incremental": false,
@@ -4638,7 +4638,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMMatrix.html",
-          "hash": "izWC09zUj+PBlO67j7qatg=="
+          "hash": "AStSRucphlh2BtOx0k3K2A=="
         }
       },
       "is_incremental": false,
@@ -4674,7 +4674,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMQuaternion.html",
-          "hash": "lUuAbdtyOUPnwuWmcMBfGA=="
+          "hash": "iZ2OXXrNQXQFmp/Gi8wtUA=="
         }
       },
       "is_incremental": false,
@@ -4722,7 +4722,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMUInt2.html",
-          "hash": "77yT0oIVrRaabb2gGY7cyg=="
+          "hash": "njEsBCPHlsYus3roUGtMtA=="
         }
       },
       "is_incremental": false,
@@ -4734,7 +4734,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMUInt3.html",
-          "hash": "GVM26cHp+LEOZYfV7UbG5A=="
+          "hash": "RZ8m7EmXOl5CRVVBuUi+xA=="
         }
       },
       "is_incremental": false,
@@ -4746,7 +4746,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMUInt4.html",
-          "hash": "A3fnCGo4+3hoeMHiX1CSrg=="
+          "hash": "Zu5jBu/AXDwiH4wIfUbubQ=="
         }
       },
       "is_incremental": false,
@@ -4818,7 +4818,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter.html",
-          "hash": "8TRfdacZpM8HpnMzsJCQmA=="
+          "hash": "QLdYup3QiOLoWarxcRUBWw=="
         }
       },
       "is_incremental": false,
@@ -4830,7 +4830,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter1.html",
-          "hash": "vmeywLGAiwroQGesNSSI1w=="
+          "hash": "whZ42S+2Imva7Ct0mgMOQA=="
         }
       },
       "is_incremental": false,
@@ -4842,7 +4842,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter2.html",
-          "hash": "MWLz8G7+bDRUbp3xUJ7pZg=="
+          "hash": "muW6ICRpIhMAwlfvwawIfw=="
         }
       },
       "is_incremental": false,
@@ -4854,7 +4854,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter3.html",
-          "hash": "ESKMhXFL2EW5vj5MIRfXig=="
+          "hash": "ISxG0L5xPdRl5tuw1w6mCw=="
         }
       },
       "is_incremental": false,
@@ -4986,7 +4986,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice.html",
-          "hash": "ViZCfV6RV2+J7NrV2uEdtg=="
+          "hash": "KOXWRluh/LARm3DFCYqSCg=="
         }
       },
       "is_incremental": false,
@@ -4998,7 +4998,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice1.html",
-          "hash": "ej92SVehfw3CsWyYwVYmog=="
+          "hash": "MMIQxeRys7Xp8JKv/Y2LyQ=="
         }
       },
       "is_incremental": false,
@@ -5010,7 +5010,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice2.html",
-          "hash": "7tIKqihjb4fMBq4CpZyxAA=="
+          "hash": "O5RlubuzLtNpC4IQ6RyMNw=="
         }
       },
       "is_incremental": false,
@@ -5022,7 +5022,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice3.html",
-          "hash": "6+Tdw1nLOsG5nICr0y9SPQ=="
+          "hash": "ELT7P/anMgbihxVz8XkUvw=="
         }
       },
       "is_incremental": false,
@@ -5070,7 +5070,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory.html",
-          "hash": "69wRsOBgSxJLm3VbUP/LkA=="
+          "hash": "CTGiA15KaaNNTAF77YxrYg=="
         }
       },
       "is_incremental": false,
@@ -5082,7 +5082,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory1.html",
-          "hash": "Tn9oa5peA8cEN82dKG2STw=="
+          "hash": "rAxqaCljT8w+r2BGdvj0Kw=="
         }
       },
       "is_incremental": false,
@@ -5094,7 +5094,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory2.html",
-          "hash": "z8cHg6d9OBHoeWGlvLi2ZQ=="
+          "hash": "FkSSe+YqothZwF/UCtx/lw=="
         }
       },
       "is_incremental": false,
@@ -5106,7 +5106,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory3.html",
-          "hash": "B1s6hM7GKXHuvIcaRTDhqg=="
+          "hash": "HlD2F60L9NWQeCddLVHtQA=="
         }
       },
       "is_incremental": false,
@@ -5310,7 +5310,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput.html",
-          "hash": "JVNZwi434f0HOyxiB9aFjA=="
+          "hash": "mybi9uJiIye+2G9JmlZfaA=="
         }
       },
       "is_incremental": false,
@@ -5322,7 +5322,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput1.html",
-          "hash": "hO56+GmxDEmyO/hI4wXj+Q=="
+          "hash": "tddbpSPlkhvjIm/enQF2NQ=="
         }
       },
       "is_incremental": false,
@@ -5334,7 +5334,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput2.html",
-          "hash": "21/6ztQRHurNsv32rirqCQ=="
+          "hash": "yRzt/ZEaN6pFO3q6stxp7Q=="
         }
       },
       "is_incremental": false,
@@ -5346,7 +5346,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput3.html",
-          "hash": "6uIGQxJlAIdkZKESCIRrWw=="
+          "hash": "nl90OXk7bFrMat7Aqizm8g=="
         }
       },
       "is_incremental": false,
@@ -5538,7 +5538,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface.html",
-          "hash": "WShKvPBbGyyERKhoLCVt9Q=="
+          "hash": "rUwqmBkbaLKngrhFU976uQ=="
         }
       },
       "is_incremental": false,
@@ -5550,7 +5550,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface1.html",
-          "hash": "deMVnmhhjMHqTozzEn32mA=="
+          "hash": "ge8klgukcE9GI1TIbUhoWg=="
         }
       },
       "is_incremental": false,
@@ -5562,7 +5562,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface2.html",
-          "hash": "mUbFkgxE66TN6IIyTYVj3Q=="
+          "hash": "CMbbix+S3pQqJUnXO6RBdw=="
         }
       },
       "is_incremental": false,
@@ -5574,7 +5574,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface3.html",
-          "hash": "zLGL1f8BYjHS/F7CSrCTZQ=="
+          "hash": "YBbbR9SxR8e312eXkM4LdQ=="
         }
       },
       "is_incremental": false,
@@ -5598,7 +5598,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain.html",
-          "hash": "iRgM72tEPolyi96pvjehDQ=="
+          "hash": "eK2spz8xdkV08vPGF+edKg=="
         }
       },
       "is_incremental": false,
@@ -5610,7 +5610,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain1.html",
-          "hash": "JEEQOxac26MH/23bTqvKEA=="
+          "hash": "hb1xAisYlrcaFUIgCfT2+A=="
         }
       },
       "is_incremental": false,
@@ -5622,7 +5622,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.html",
-          "hash": "yNNlBVynOQO4deKULY0Hsw=="
+          "hash": "hEz8ajnjI3XF589ZL9WZ5w=="
         }
       },
       "is_incremental": false,
@@ -5634,7 +5634,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain3.html",
-          "hash": "P8PIOF22YUv3apcewH3RFg=="
+          "hash": "T7tcTXX9JuwXNONIi+qm8A=="
         }
       },
       "is_incremental": false,
@@ -5827,16 +5827,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 479,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
           "skipped_file_count": 0
         }
       }
