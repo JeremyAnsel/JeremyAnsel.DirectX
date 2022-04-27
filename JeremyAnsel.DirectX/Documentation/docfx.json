@@ -17,10 +17,7 @@
       ],
       "dest": "api",
       "disableGitFeatures": false,
-      "disableDefaultFilter": false,
-      "properties": {
-        "TargetFramework": "netstandard2.0"
-      }
+      "disableDefaultFilter": false
     }
   ],
   "build": {
@@ -62,10 +59,11 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "statictoc"
     ],
     "postProcessors": [ "ExtractSearchIndex" ],
-    "globalMetadata" : {
+    "globalMetadata": {
+      "_appFooter": "Copyright (c) 2014-2022 J&eacute;r&eacute;my Ansel",
       "_enableSearch": "true"
     },
     "markdownEngineName": "markdig",

@@ -84,11 +84,6 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetPrivateDataText(Guid name, string text)
         {
-            if (name == null)
-            {
-                throw new ArgumentNullException(nameof(name));
-            }
-
             if (string.IsNullOrEmpty(text))
             {
                 text = "<unnamed>";
@@ -111,11 +106,6 @@ namespace JeremyAnsel.DirectX.Dxgi
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string GetPrivateDataText(Guid name)
         {
-            if (name == null)
-            {
-                throw new ArgumentNullException(nameof(name));
-            }
-
             uint dataSize = 256;
             byte[] data = new byte[dataSize];
 
