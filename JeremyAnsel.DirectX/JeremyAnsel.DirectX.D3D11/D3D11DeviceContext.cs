@@ -276,12 +276,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void InputAssemblerSetInputLayout(D3D11InputLayout inputLayout)
         {
-            if (inputLayout == null)
-            {
-                throw new ArgumentNullException(nameof(inputLayout));
-            }
-
-            this.deviceContext.InputAssemblerSetInputLayout(inputLayout.GetHandle<ID3D11InputLayout>());
+            this.deviceContext.InputAssemblerSetInputLayout(inputLayout?.GetHandle<ID3D11InputLayout>());
         }
 
         /// <summary>
