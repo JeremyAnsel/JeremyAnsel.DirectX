@@ -888,12 +888,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void RasterizerStageSetState(D3D11RasterizerState rasterizerState)
         {
-            if (rasterizerState == null)
-            {
-                throw new ArgumentNullException(nameof(rasterizerState));
-            }
-
-            this.deviceContext.RasterizerStageSetState(rasterizerState.GetHandle<ID3D11RasterizerState>());
+            this.deviceContext.RasterizerStageSetState(rasterizerState?.GetHandle<ID3D11RasterizerState>());
         }
 
         /// <summary>
