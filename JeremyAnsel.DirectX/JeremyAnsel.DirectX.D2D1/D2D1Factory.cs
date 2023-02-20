@@ -296,12 +296,7 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public D2D1StrokeStyle CreateStrokeStyle(D2D1StrokeStyleProperties strokeStyleProperties, float[] dashes)
         {
-            if (dashes == null)
-            {
-                throw new ArgumentNullException(nameof(dashes));
-            }
-
-            this.factory.CreateStrokeStyle(ref strokeStyleProperties, dashes, (uint)dashes.Length, out ID2D1StrokeStyle strokeStyle);
+            this.factory.CreateStrokeStyle(ref strokeStyleProperties, dashes, dashes == null ? 0U : (uint)dashes.Length, out ID2D1StrokeStyle strokeStyle);
 
             if (strokeStyle == null)
             {
