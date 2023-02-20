@@ -13,12 +13,5760 @@
       "is_incremental": false
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1AlphaMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1AlphaMode.html",
+          "hash": "khSXftY1f8Goq98SeGaRxoCogau1gkTtrpLrHESNvOQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1AntialiasMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1AntialiasMode.html",
+          "hash": "S+RiRfFjmWer+Zjovyl+Q5Z/6NwuTvVwmbzqOVDVVrM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1ArcSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1ArcSegment.html",
+          "hash": "rU/+hiMTsBcPTLdbeTg5tMe/5Bn2Pq7lFciK3q7BSsU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1ArcSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1ArcSize.html",
+          "hash": "E6XjMOs/nvPkPo7zdO63T4QMzH7S0EC0JAyMP1+CXus="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BezierSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BezierSegment.html",
+          "hash": "B+/fG4LLRZY9BXfIWyYWjVjW/dH8R9sb9woiK5R/Lfw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Bitmap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Bitmap.html",
+          "hash": "RBcHbuCwfAkQpOubVCx/FHvjFei0iy/afRZFVSkk/FA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapBrush.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapBrush.html",
+          "hash": "o76WL3oWMkWftCWZo8Hslo4l1utMbyJyfhDxbpmbqSk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapBrushProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapBrushProperties.html",
+          "hash": "0H8WhLGDQkBkp3EIXEKVgLqUTNclVIKEg4zrRaPti20="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapInterpolationMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapInterpolationMode.html",
+          "hash": "EOVB11B0TXrkAsHpHgwdxCg+isQtZHHZJu/6I5+aN+E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapProperties.html",
+          "hash": "vyJ5PZkAz0Joo7k3TNNzhL1YWL+IUIvS4HZ7A0BkRSg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapRenderTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BitmapRenderTarget.html",
+          "hash": "Qs1ryDQ2TRNSZ/Y+pZAmOyMuO/nPvUgkj/dE9e9ljCs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Brush.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Brush.html",
+          "hash": "XjTa6TOhHdrQ1S+Zp0gqHqQR0p/zFCXHT0l/9AKulv8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BrushProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1BrushProperties.html",
+          "hash": "bR6j+CMNINOVz2ZJNmkNAght/AsV8KqCnmz1CWJlcBE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1CapStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1CapStyle.html",
+          "hash": "d/RSenGT2jGeE4VUjRulAbqcTP2cTRme5dfqqxYqDAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1ColorF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1ColorF.html",
+          "hash": "cp7V3O1IAH7hdrrROdDuFn1kTsgA9tiL70kITW1VO2s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1CombineMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1CombineMode.html",
+          "hash": "tycLnHGDqvN5l6DONldYnTMchkXykc7/i55cF9d9xf8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1CompatibleRenderTargetOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1CompatibleRenderTargetOptions.html",
+          "hash": "20iy0w7oWa+hdFJpyxIpJoPJI/nIlIpEE3hH8JsXirw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Constants.html",
+          "hash": "wly6WG3n9IAVdHcFlDvSvTR7bt6nes7fSwoPgXcpbLI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DCInitializeMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DCInitializeMode.html",
+          "hash": "rXcCjJvDDWXe2jbe/LMj5AIfIp3J2yZRWQDA7/9sFa0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DCRenderTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DCRenderTarget.html",
+          "hash": "y/HyG0J+yi+3SrsLI3FLRzxbZLkrI7zD1hkzFudxEt4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DashStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DashStyle.html",
+          "hash": "1QiEgPuh7ML+JOvb5EqkVuXJagmpHLjDfg0PheVAJyg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DebugLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DebugLevel.html",
+          "hash": "VZ05AgmQQMgq5WLR+6zIn8MDG8Qha9wGdCmKzPx4zaE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DrawTextOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DrawTextOptions.html",
+          "hash": "H3ZmSLkfDzgns+tGZmWxGdE6TjFaATwkU5xn4B/qw58="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html",
+          "hash": "uxyCz5CWIlduHMx7Je6yyhGriDzEj0C/d5AzMGIk9RE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DrawingStateDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1DrawingStateDescription.html",
+          "hash": "3mkO+YNYSr1PbthFhSh1tEcQ2MvuyZU52AJULk0Pp8E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Ellipse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Ellipse.html",
+          "hash": "1NCPEe+b2TTIcMyV2Xn8ghF2KhTPRYPVo08Nx0gDodc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1EllipseGeometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1EllipseGeometry.html",
+          "hash": "0hxCfnlmQH2dvSTRRnm/IWU2a8eCqXlR92F/c4lE45c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Error.html",
+          "hash": "kufjsb0Nc/bFG9h5bNN957e8nbCqQl0YV1nTAvl1B/g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1ExtendMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1ExtendMode.html",
+          "hash": "PlYly0mJQKocKPBWjJlm9qm3GXiCQPA8pUNiokyYYRg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Factory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Factory.html",
+          "hash": "2iNj02n7JB4o1LKPwjNVsx4WyUguoOBG9dTDjENPmRY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FactoryOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FactoryOptions.html",
+          "hash": "2mUNQJGocTRfKF9iAfmzUPo5b/TWeYO5cvX62+rF4cM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FactoryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FactoryType.html",
+          "hash": "tt/LU8mRXY4e0DAWJAcF56uLjhv5if3WvDXnUcxm7MU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FeatureLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FeatureLevel.html",
+          "hash": "SEihfvGq/sThL6oEt23I5jm+FXs3p8M8VgPftsNRzPw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FigureBegin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FigureBegin.html",
+          "hash": "wKWZMiFlTnDpmjX/AIfxLHyGKloXpO1f6yiHwIvdzAg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FigureEnd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FigureEnd.html",
+          "hash": "d2ZqbUexleB9t0gGR+AWtnv9rpha0MVtmzmT78uuWIc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FillMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1FillMode.html",
+          "hash": "3nOF8U6pcEjCsZk+nFxnhhsgmDSisr1so7iWzQPQe+0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Gamma.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Gamma.html",
+          "hash": "pnsJdG9C5OgirL6sF9qobsCZAbJuKP1bW4lic+YpAEA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Geometry.html",
+          "hash": "oI5Fint6lcWc2OZOEb0/VOSQ2CXTNfK/ipW1w3EyTdk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GeometryGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GeometryGroup.html",
+          "hash": "t+FnUICwnzL23dS3dx2RSenxPi8vie1/mnVc5//iASs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GeometryRelation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GeometryRelation.html",
+          "hash": "FzRC4vFBM2usK7Qr3jODWcV0PrUE8G0oz2gwbj13Pgg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GeometrySimplificationOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GeometrySimplificationOption.html",
+          "hash": "gMpy01ahHqtTF0ZZ+0cT3Z04o+i9PK96xaubEQCjws8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GeometrySink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GeometrySink.html",
+          "hash": "wGyh5Ugkh7L8RzAxe9mPtKB6X/6fkzhEc/aqT81jhw0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GradientStop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GradientStop.html",
+          "hash": "3oGrCKuOUypoT8OpwueWaInkVIFnViHSvvc8LtndLR8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection.html",
+          "hash": "rYjjxzBHLxDNVVaWbBKtWb8PfDNKMBATViO+q3PW0q0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTarget.html",
+          "hash": "ttZv8ZUxPmdM3eBCTFhVln+ErPstO3X/qc8oHkRr3/A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTargetProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1HwndRenderTargetProperties.html",
+          "hash": "FeJ7LAdKLau7sGJsYc1Y9g3sJ6BHoX/eVWlU1kdAICs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Image.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Image.html",
+          "hash": "7cRmU6aviQ3JG105Vn13rieqq/AspkUD2XEVca/PlrU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1InterpolationModeDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1InterpolationModeDefinition.html",
+          "hash": "Fbgs4s2UhH1PBMsXFiR7/36mtk1zzvm7f24UvqqW2/I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1KnownColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1KnownColor.html",
+          "hash": "ff5+ro8wnQ39FMfPlbFBktPyelhOFgINadQl3aduaZM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Layer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Layer.html",
+          "hash": "O5KhWODDbdEoRGOLceedFK7NFBmggeB1Gy8i19oZLXI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LayerOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LayerOptions.html",
+          "hash": "47H++BJOLhlKPS55AjnE/QLVSYKnZSZ40I24NjGiPgI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LayerParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LayerParameters.html",
+          "hash": "cLzqhs+s0WZXOZ46kQe2q6OLR9PY5TkYLXZ2pAZoz+c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LineJoin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LineJoin.html",
+          "hash": "oggTpp2uihEeWFLtpbAF4pwh0BnttebCx6ZbBK0CI2w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrush.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrush.html",
+          "hash": "+ry9dS94KBd0vY4pX/BqFZzeuOKVQYyfOCackMS7ahg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrushProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrushProperties.html",
+          "hash": "nT8VIwOt1aPxJ1HF7CZo3FtdrSpj2e17xB3RrzPBKwE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Matrix3X2F.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Matrix3X2F.html",
+          "hash": "KjvF/aFav3Varwf0d5GxCFsOq8NxhcyAONxDOySm4QY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Matrix4X3F.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Matrix4X3F.html",
+          "hash": "gdOzey1hE8lsJF/1DV9CqTioLUMNJup5i2zIpthSZI0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Matrix4X4F.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Matrix4X4F.html",
+          "hash": "MxPrJte8FDY0VzA5RppU3vxTUdLDTjpjWV2dhN8DbC8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Matrix5X4F.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Matrix5X4F.html",
+          "hash": "giYOD4XKtrHur6k5WKj5kHLLUPEBCIg7M1nmoV8d0/A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Mesh.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Mesh.html",
+          "hash": "pjCgIGfshm7XPPSncEIhfh2d6Q8FypP+pnCzduwK4+w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1OpacityMaskContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1OpacityMaskContent.html",
+          "hash": "NSem6BeVkqe3OVK5sWeGINqGdtJDoSyI8BRa1KxO0KM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1PathGeometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1PathGeometry.html",
+          "hash": "d161YnE+AdLDd30o4NBKNB2bPPngnijwwNP/rgL1Bxc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1PathSegmentOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1PathSegmentOptions.html",
+          "hash": "8gP8LVytsL+GO8kXIa7wxsC3gv/PH9iMS9rk5PI/nDw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1PixelFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1PixelFormat.html",
+          "hash": "vexUt9wgw5R+ZHeLZZOLtf5DKrkQ9RoQnAmXJU9DwFI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Point2F.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Point2F.html",
+          "hash": "bGyJXyhkQLkOWB2j/J3VUIsT7DT8xUoDpd83rtI4dk0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Point2L.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Point2L.html",
+          "hash": "vI7e42ZOkd/PdhXOLYltC5AHWw6Wd0TnJhgXWwqDZ5Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Point2U.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Point2U.html",
+          "hash": "JQIcgqG25cuTdHwJSrEk772Ph8Bk4LhLOu+dBgxs/Uo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1PresentOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1PresentOptions.html",
+          "hash": "6H3hiyKxbjcsv+poY5IbFh6SygbkHe+Igq1kzMoG3+g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1QuadraticBezierSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1QuadraticBezierSegment.html",
+          "hash": "+V/vLcnPiC89J97b5D6FeYpwrKFRAYJkFUCciRnA4fU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrush.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrush.html",
+          "hash": "W3LkkMJu27s/Yr7HHGHwXXnoM23DRQ2DMuXE4VtXEQ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrushProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrushProperties.html",
+          "hash": "xItGfHih9KWmtydyoLPMhMwhobOzCiHaszXqIj5objM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RectF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RectF.html",
+          "hash": "EC7AX9IgJo3nCk/PGWQSoNUy740olQMMRZXhjfaGDiA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RectL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RectL.html",
+          "hash": "hLpBpO/m3cYvYkpCD7F7MOJptldYOC6oHgv8ggkx6qw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RectU.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RectU.html",
+          "hash": "guG+nJKwkubic7SrL28tfuTROU5BhxvZzHMZC1gfv0E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RectangleGeometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RectangleGeometry.html",
+          "hash": "2mDxo0aCm9l2Chfr9T4IL8eG3w0PH01kx+CqDy2P5M4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html",
+          "hash": "Q3doGylHIfOdKvuE1NQQqYxEmcLbQEsW4ZPXJSt1m4s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RenderTargetProperties.html",
+          "hash": "43O2t5sQNHxfJyHfxve7JcsyUctSdxm6dJyxDz1m5h0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RenderTargetType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RenderTargetType.html",
+          "hash": "eceOiMhC3sRmkkMZ1w093YHqVu8jJTXmgXOZYmU5utE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RenderTargetUsages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RenderTargetUsages.html",
+          "hash": "KFypopoAefperywjo3Mg74Tp7RSGlOQ+9PJs5b3Hjtw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Resource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Resource.html",
+          "hash": "1+/ZqzF69V5OYN7c2pWsWOa0G55h9IwCe8sYx0nmTSw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RoundedRect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RoundedRect.html",
+          "hash": "qfbUype4OmHvJoMG1qC+BEE72uVtjiHr6RKHFHaNqdg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RoundedRectangleGeometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1RoundedRectangleGeometry.html",
+          "hash": "4hqvSUpYSwGyNZE0EPdTwt9EpZaNs8XbCmhdOKOwjEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SimplifiedGeometrySink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SimplifiedGeometrySink.html",
+          "hash": "iCzY6/5eEAmVo7n+E1bTOYBI52xFyRuJAKBOLlGgX9M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SizeF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SizeF.html",
+          "hash": "oyLUBHF8nXB1SKNn9ZvxAiQZ3UQHlbXqIopvgWZgRQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SizeU.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SizeU.html",
+          "hash": "iYJgBO/YydBOGsM+C6YX/mWhkORBO5fz0jk5i2CED7A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SolidColorBrush.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SolidColorBrush.html",
+          "hash": "sSMA+9zhBKSKOdveN5AX1Unle6PiJZGmu0a761j3DP4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle.html",
+          "hash": "6EZPqNT6cEDgAe5pJ/z0wandLmEVPmrJLHu1TvSFYv4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1StrokeStyleProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1StrokeStyleProperties.html",
+          "hash": "ap5aJU/P/N99shMpkT3QYCnbim0073556/GQJgLuEzQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SweepDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1SweepDirection.html",
+          "hash": "I/wWL5JATquQG4ci/Sih5J0HDPT1Dmh+lkSnFJ0BNo4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1TessellationSink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1TessellationSink.html",
+          "hash": "4YG45E/1CarRmHbcIUkjmMZpzCvRPFWwPZ5Q9IqKen0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1TextAntialiasMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1TextAntialiasMode.html",
+          "hash": "YeNnqJT8oMKoYK9gaqZtz1JBn+y0EYpjMVGHsdl6WWA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1TransformedGeometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1TransformedGeometry.html",
+          "hash": "R+lzV2ndlyAtNC7Xb6IgCQr/1YyYu7uYFZKrIwzeC5s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Triangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Triangle.html",
+          "hash": "hTIWC9Irn1kDNS5YNPW5W6lshNoaEqd7+rNtWS6OReI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Utils.html",
+          "hash": "EXq+RYbaUmuIoLD0WH7/706Tcs+hyRkaxcGOSW9NPwE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Vector2F.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Vector2F.html",
+          "hash": "KJjE20wMnslsqt9lmK6Jz5j2iPXy6BKAc8WRQ4tM+2c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Vector3F.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Vector3F.html",
+          "hash": "GrUJJEIO2OWepjpeXanxvbIxDc3IP6lXZwTMBFkHErM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Vector4F.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1Vector4F.html",
+          "hash": "E+qRfd1UJtvKpEHJF2rwiB2/Ur1bMARno/kn7ytWWQA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1WindowStates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.D2D1WindowStates.html",
+          "hash": "RwuBWIgTs6B7TKW95dqEZz6p/YvnERi3mGMbm7wNKIA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.ID2D1Releasable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.ID2D1Releasable.html",
+          "hash": "GjM+d8KkZRaFRavNMu23Bci3Nsqt5CgHpJQc+cUGEhg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.html",
+          "hash": "m4XfNtCo/vIWyHO19nouzGgRUW/wrnm6Y3JhXr0gdEg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10CreateDeviceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10CreateDeviceOptions.html",
+          "hash": "v1Nu1o1w7gOg8/d1NaN1QXiPEBrXdZnUAfLsW+Bvx2Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10Device1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10Device1.html",
+          "hash": "vkyeH1G3kCu/56mOjET/8hcz6552NN6/gOr87E5B7dM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10DriverType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10DriverType.html",
+          "hash": "4T3eAmaY4I9JRZyUrttv0Rm/LGiQUYnVmyNn0DLavuY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10Error.html",
+          "hash": "KEbszpoW/0GFsoQCjMuSn776pIzlnpkstT3BtAq+Kfc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10FeatureLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10FeatureLevel.html",
+          "hash": "XXY4DfhBBqdyGt+V0pqutOo441tGi5uwDcQVm0CxBLg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D10.D3D10Utils.html",
+          "hash": "FTeLfq5OzJWmto1rS1zPJjW8XheJQZHvwvEnBgqCHV8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D10.ID3D10Releasable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D10.ID3D10Releasable.html",
+          "hash": "ENA+AC9UfaWzzPhl1Ds4AlHO9VQ7uE0n1IAkg2g7OM4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D10.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D10.html",
+          "hash": "Lc1tatgGoBk8veCiURbexpcl/ABn4upiqb8Jt7HiROQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11AsyncGetDataOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11AsyncGetDataOptions.html",
+          "hash": "X94GhxkAuqR2XqebpqozqhPu3Y2m1RESmh90BPEE/kw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Asynchronous.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Asynchronous.html",
+          "hash": "xec9UHkE68Vw75TLJl0U+QbH6e7qzHxvcBpZWzAsQvk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BindOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BindOptions.html",
+          "hash": "ruIHctCNfOvrRIOXSlCM5aCxUcBwjYC3TKxiZPNRnf0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BlendDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BlendDesc.html",
+          "hash": "cYq62AhayeOZgyh6D0E0r2vL1DytvEgl+szsvfYNxdk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BlendOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BlendOperation.html",
+          "hash": "8XPntVwWV5KNX3Zw14/WTXnV98i0Lp6gF9sFwV6s0zU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BlendState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BlendState.html",
+          "hash": "vCOdVqT1gGSI3Jciv6BFq4gqNE5U/6GNRzQ9uK0dnYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BlendValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BlendValue.html",
+          "hash": "iqQ+eE++6jVcaHxGOfKYrT6ISc1z65FdV077mMMp8nw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Box.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Box.html",
+          "hash": "sqBwmHMKmEq/ugaIARyDzA7I+DPma0oh9kVU6B08sYg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Buffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Buffer.html",
+          "hash": "b0BSPI5YPLZQF3tLceurRCYChgn9FlSclGsU+Hgqq8A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferDesc.html",
+          "hash": "rYbS4Le0eG+/mt05me73nyRqJ9ypFE+fd7biFtsbJy0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferExSrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferExSrv.html",
+          "hash": "+jNlK6QWekVY3oQgsQNg+H7p6FecSCOyv/hY0Fm+uFU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferExSrvOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferExSrvOptions.html",
+          "hash": "ab3pADw5jdKHYL9oqfzpvmNKlpyQXBdnWzBg1Zd9znA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferRtv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferRtv.html",
+          "hash": "Rqtte7VgvjQpta/dS+GAccSQ3C+4jKbQ507vi/2bHb0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferSrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferSrv.html",
+          "hash": "fk94JupUGtv/JCelKVVx2aQxTCK55VLe6U92gMpBChg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferUav.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferUav.html",
+          "hash": "fiPZK6icY9u2xQk57BkcXkUWknVN5OA+BDIKSBfbCEc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferUavOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11BufferUavOptions.html",
+          "hash": "Zq8KRSwGdYcnkm7S+J4uf/+SD68VUw/kua/qxUbVTsg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClassInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClassInstance.html",
+          "hash": "9qhE9ySoD7CKT5amjNybUWrqB/AjwbfrjUgCeFQTWPk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClassInstanceDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClassInstanceDesc.html",
+          "hash": "ZKdsH2ZOpBlgN+0sAZR3LDXZlUgZdLpatzB43jTHIfw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClassLinkage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClassLinkage.html",
+          "hash": "6AJYLESFqrIW/NX4NRK7IcuJ+9wGdjhwF2I5r/Si5cs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClearOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ClearOptions.html",
+          "hash": "qIAl3viSNCNyR5IKeRFDnucaaElV+Yd8kZyzcTrG1UM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ColorWriteEnables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ColorWriteEnables.html",
+          "hash": "aesO5KEFfDH8j7NvI1Aczo/E1nhtw4TEFiQP73qJUP4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CommandList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CommandList.html",
+          "hash": "Tpuagct1PgjV1YvARbL2U0gxik2SYBsnkMPHKkb7K3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ComparisonFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ComparisonFunction.html",
+          "hash": "0qI3l6CM2GtRZDEls2CMqq9bjAeHINI3hHrizqRcN3g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ComputeShader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ComputeShader.html",
+          "hash": "Ai38RqJ0VgTGQuZl4B+EgwHuOqKXwAtYx6cHwv2keQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Constants.html",
+          "hash": "r45LCmBI9Su9mVCYPG9lNOaVbKxnC2I9/LesS8AaJ1c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Counter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Counter.html",
+          "hash": "ZQz8msEY4DNKwJdsMaP4G7ZQfy6RxLfux6ggMrykarQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CounterDataType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CounterDataType.html",
+          "hash": "VNkrfaxRtIy9qK47WwsG1Cyt0wFiHiTazC8Xj+hTLr4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CounterDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CounterDesc.html",
+          "hash": "LzR53LRbEnmJCMgc81vjsduUbwPFDKu4SYbU4AGQEiE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CounterInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CounterInfo.html",
+          "hash": "WVRtYzZXWYY8mkHZ2vq58zkZJohpyxuTqqDrnek5tRo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CounterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CounterType.html",
+          "hash": "EQMuukmQ7+c0aAVSkkkGgLbQ9OwVobg/rkkTBA8SnNw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CpuAccessOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CpuAccessOptions.html",
+          "hash": "LYW2ng8iE5DwweKQwYukCf6cImKjTo8D/akqGMaBXKY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CreateDeviceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CreateDeviceOptions.html",
+          "hash": "MIAtxm+40pp4uP+Jbs9QacCvL4lXE2c/3KT0MLsTrsk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CullMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11CullMode.html",
+          "hash": "S6TPf1kDGo8/UEkrUU6LBWpLw2CSCesOTHUrkBwiOjY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilDesc.html",
+          "hash": "t0qrNi1pHCtY+fWEOK5MXktlp8W3y/Nmo9S81/+9cQw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilOperationDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilOperationDesc.html",
+          "hash": "zEtrsegyQIlElu2zp7pW9hEHoyPgI0uKby7uzaXZaVY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilState.html",
+          "hash": "9uCIBsRBN7H36LAA7vqAN/jOAuD13NMRvbs0/FLxq5E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilView.html",
+          "hash": "17IHhdI5kqA5yqO/9ZyB+WycAGYFI21u1ZnYkopD33k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilViewDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilViewDesc.html",
+          "hash": "+eDitFtTDaSNEqY0cT73jCG9TP9d034FvmNM2LMzFyk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilViewOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthStencilViewOptions.html",
+          "hash": "FyBp/O0gc1EQqxP8U1IMVl33mlgceaOmrLZqpDFrePQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthWriteMask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DepthWriteMask.html",
+          "hash": "+AmjMxzmk+UBn2ca5K/wpz/pE6dVpzT/c91ckEuVqxM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Device.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Device.html",
+          "hash": "7i7HjfUJ3GcIVeJ6Ikvhv0v+bH4qhxBy+00E4jUNSyI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DeviceChild.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DeviceChild.html",
+          "hash": "MDyD913GEwPNhRhW+3V+6LD05xYAIG9Wm2XttLUC/jk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DeviceContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DeviceContext.html",
+          "hash": "wW+A7BhAJ5TeO7fwAjySlzD04B4pVTgKBhHZ6NyRfC8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DeviceContextType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DeviceContextType.html",
+          "hash": "j0jISrQ6MWj1sosqRePUR/mAVGnggPJofyHzn8jzBGE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DomainShader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DomainShader.html",
+          "hash": "Z2ti7+5oLrmxXlJKQkP8KFFgur86/ozeE3sMvnjNcvI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DriverType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DriverType.html",
+          "hash": "RwL8wpHmHd8pbE8QZoWWE1Ie7HW5U4QzIWdcGWRNmug="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DsvDimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11DsvDimension.html",
+          "hash": "xHQR53w+E3eZWFSslKfTgPUdSvQjhSTxXqi4RwZACcM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Error.html",
+          "hash": "Gv7OXOhqKTY2n4O7xNK1uZqWeaBt+Wtzn8PVxW3Elm0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Feature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Feature.html",
+          "hash": "wB7M/Dhh0IAt6dLDPjv7EIPYZJHBv2lhd/6WRAUpsOU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataArchitectureInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataArchitectureInfo.html",
+          "hash": "YiCaW5XkRhYNEsQgg0ytJep/mbJoxSrmaT7UrLff2Rc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D10XHardwareOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D10XHardwareOptions.html",
+          "hash": "Aom6YZpipvQll2GuYLTpi3zpf6COF8mOFVvtvf5WjH0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D11Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D11Options.html",
+          "hash": "emzfnnxhYDorMF5WH2yaArTy2AXOpI691IoILgZPcP8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D11Options1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D11Options1.html",
+          "hash": "5SAGJfp4y2eDqlse79mmSG6j346/tnWjVj78XAcArvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D9Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D9Options.html",
+          "hash": "hgOtDShF4KpLJOOTpvIcnmk3Ek2PG4NZQjedeL57g3E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D9Options1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D9Options1.html",
+          "hash": "ZVYrOUFzwX5Q34Ls1Yu6AwsSEBhyblvSOfns3ce9KtM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D9ShadowSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D9ShadowSupport.html",
+          "hash": "TP5K+NZi6Aek58U8tnB/EWdwlj49GEEw4z5vC4osewE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D9SimpleInstancingSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataD3D9SimpleInstancingSupport.html",
+          "hash": "k5tJOeapbENam+Lx9rZj+pC5/PTJIRq7FRw9MeUpDtY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataDoubles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataDoubles.html",
+          "hash": "flBn4JS3Mnnw8nHnu6bLfsyXBv6T0dtNZed/yEhdcyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataFormatSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataFormatSupport.html",
+          "hash": "uHMjggkIMU80dXgEJDum3YYX18bE7rr0AgLrhtaKiZY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataFormatSupport2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataFormatSupport2.html",
+          "hash": "43szxcwYPNbfwHTEsCGRwCH/p15rwOZkpH+YtyHjtwk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataMarkerSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataMarkerSupport.html",
+          "hash": "s+3BBCXKetGgY0roNCY/xgB7VYE8E2lhxEzyI9d3jJw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataShaderMinPrecisionSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataShaderMinPrecisionSupport.html",
+          "hash": "yJjuQsuc2CeNaawO/blrkXdBO4TbaUYzLOD6+6xTjoY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataThreading.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureDataThreading.html",
+          "hash": "CgIuka7f/1Y19XFPAx8XRN4qax4scmM6rvN407ruGL0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel.html",
+          "hash": "lt0iiUMygpLqAjvruiUS1wWdtvXxmc8to27GC4k/2MQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FillMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FillMode.html",
+          "hash": "+LUSzsaJT6pnQ9zKwzpetigtTMk6qg5DtDeW81nk0i8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Filter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Filter.html",
+          "hash": "a/Bh0YsoTiJcV1J6TO/JCbprDFtcVuZo9HT4DYSPuko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FormatSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FormatSupport.html",
+          "hash": "x/MQVtbRkp22qv1DIK0cc+LwUvR69toREugwE0ECNWo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FormatSupport2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11FormatSupport2.html",
+          "hash": "UIXwIPrq1ncvHF+fNKkelnuIaLH6G3ugrZ9Z3RCEpsM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11GeometryShader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11GeometryShader.html",
+          "hash": "4metpO8eA7i1X3HLxgt8iWtd8bJBlXP89Yr0zKI0Na8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11HullShader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11HullShader.html",
+          "hash": "QYTumyapBNRXG89XE0QAyCuGFyfEg3+5ZDf6ub9fBWk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11InputClassification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11InputClassification.html",
+          "hash": "27Fc4IsKchEKzfzCTR4tetZNfW2WrQl8c78Cu81+kYI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11InputElementDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11InputElementDesc.html",
+          "hash": "9Q2yBFQpmEKkXGhS4YLXTWpedpVsNNVtSnLRw6tazJE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11InputLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11InputLayout.html",
+          "hash": "q+vrAIP+zGcps1k7fBbZ1IXlIcx9s55Vtfp4Ux90ok0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11MapCpuPermission.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11MapCpuPermission.html",
+          "hash": "XpI4hyyMKL4Kp5iF9iGtv6rjfMpVLeMRiCpOj7JNFZE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11MapOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11MapOptions.html",
+          "hash": "FJHLVstclE+hUNzoQhQquySJAnEEyWoPfAKxE0YrfrA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11MappedSubResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11MappedSubResource.html",
+          "hash": "aRpOgEVtawn4kZr/eEn3WfyTEohyhWqoK7W6gQ2ZR4E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11PixelShader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11PixelShader.html",
+          "hash": "I025u5ZAqdmfGGDldfXIeGndRdtZPKjtw/gNd7w71Bc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Predicate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Predicate.html",
+          "hash": "E6/70f8XSWoMhKCr5FxkDCNYICLXrxEz2TKQ/RrGrrY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Primitive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Primitive.html",
+          "hash": "FOiBVuPpjHAyCM+fQvGPIfUgua62+yppRVLbWKsl8sk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11PrimitiveTopology.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11PrimitiveTopology.html",
+          "hash": "QBZQzq03NgFUg3A55058XY9qiC+iKBtn/9kSPnQD1dQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Query.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Query.html",
+          "hash": "bEmmFffBCYaW6JojJF0jiupEq2mfvWaBOhI0cOZljsM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryDataPipelineStatistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryDataPipelineStatistics.html",
+          "hash": "5gcIbXG79uuTVqTwdpPJB9csypzRIvKwDrCx/l8i0fk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryDataStreamOutputStatistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryDataStreamOutputStatistics.html",
+          "hash": "/SffP0ML09mCuhwVLv4phxt1xo/nn5awpBF8cnqSqjU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryDataTimestampDisjoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryDataTimestampDisjoint.html",
+          "hash": "5dRdeFl9jmn7r3f49whqE2vl5bYT/5N4FiMscm+fnnQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryDesc.html",
+          "hash": "lVsR8TRV/Vtwq2TCgKcokJEK5X4R4xkFhFTPuyvSA1E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryMiscOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryMiscOptions.html",
+          "hash": "49ZcepkAf9jsJgFt06vR6qjxRkkdXo7j9j+6yhywBac="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11QueryType.html",
+          "hash": "fIdrFvCWoT2Hg5lFBju14lFMA2A/E5laCndMKFuvl3c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RaiseOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RaiseOptions.html",
+          "hash": "NbjWj5h+1Zw9AwkJTLIuHUnETahkhHpqESCyejviZ1k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RasterizerDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RasterizerDesc.html",
+          "hash": "7lDYnEE9STTQhN5kezySKQEd1zmdDIU9R49t6MnTrA4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RasterizerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RasterizerState.html",
+          "hash": "LoAo79jstt+ddLMuG8Hq/nHnjP8iKDyqZ73iFkA69N0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Rect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Rect.html",
+          "hash": "Xs7TIaT7MqANcJ6ir9aPqRQb1BKFiHw9Cmyt8E0H60s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RenderTargetBlendDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RenderTargetBlendDesc.html",
+          "hash": "XJWcfmIQG7GBmckCZ58LunaopU0ikcgioX6TkQN4RCo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RenderTargetView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RenderTargetView.html",
+          "hash": "Q1dGDeL0uhEy/jmHfQ+EYGi4GYOk/I97/Y+bXmyBa4o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RenderTargetViewDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RenderTargetViewDesc.html",
+          "hash": "0vnB7ZNRM7p/M5i0goUI4GlyY9L0Dzfcu34z72oVlCI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Resource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Resource.html",
+          "hash": "XvBclbLM/WYvMOLNXD96kQ/ywF2Z4vCBKQSf/Fm9vJg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ResourceDimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ResourceDimension.html",
+          "hash": "9YQy1Ny5zLUmPilz6bed3nK2HfHWymWWLDvtAQnblgM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ResourceMiscOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ResourceMiscOptions.html",
+          "hash": "TCo2/iOZyrdyeZOjpUOZw3xOi9GhBsZkZIfTyNm+bNg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RtvDimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11RtvDimension.html",
+          "hash": "r4EHWUhmgA2xZU/NeiampxdDiFCdwKHrVffSuNNHU2c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SamplerDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SamplerDesc.html",
+          "hash": "QtnS2GvxMSmqgO+78lOu6j4DM4JChQEbjGbd9nStyDY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SamplerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SamplerState.html",
+          "hash": "ux/YZaiFePbJm20uMLCPv5a/wz7qq9kdNm9OtIB4cFA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ShaderMinPrecisionSupports.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ShaderMinPrecisionSupports.html",
+          "hash": "4i27u/0xDFRtCfJLgb79hWBO13ijkmZwn7ahFgu5tTo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ShaderResourceView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ShaderResourceView.html",
+          "hash": "P1jpTw+UzedEGj35edqgjPIShulz7F9Xw8nQRPQrvas="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ShaderResourceViewDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11ShaderResourceViewDesc.html",
+          "hash": "xTUqiUZjcVnSnZL8iaKxm+VA2BGe1TB3SMnIXssaAx4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SrvDimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SrvDimension.html",
+          "hash": "Z2TdJjLgLyZsHQmbbR0s9SEOuch0C39Wm0qevQFYqpA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11StencilOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11StencilOperation.html",
+          "hash": "UJ6lfZ8qHbYONtwhQPoZD/fSTKqs/hHSGxBODY9sVxA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11StreamOutputDeclarationEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11StreamOutputDeclarationEntry.html",
+          "hash": "Evbgh0IzWeO6E0F9eAHVyuYruIpKUDQKTIJlVUOKJGw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html",
+          "hash": "kdjaMb/i83mBVYApAbXreo0/EFmMwN7TP7zff85kedU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html",
+          "hash": "P0bRTgLfT4UGsba2Z+v/XCMyH5u+p8FgNdZEfrhDMYQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DArrayDsv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DArrayDsv.html",
+          "hash": "s7TenTAUCX2ZCfhtlWYsmjuHW/zz1AGq56bo7gXqWDc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DArrayRtv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DArrayRtv.html",
+          "hash": "G4iQ7AVgJDTTM66IDzhtZZqx03s/XZl89dY1WwxOdDQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DArraySrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DArraySrv.html",
+          "hash": "xIdf09Z2T0NwX/9Nr0O+rgwuCnPkWoDKPLNiTLlNEKI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DArrayUav.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DArrayUav.html",
+          "hash": "CBdzsM+59b0KGlR9264BhQp2zpq5w586bDMlX8sp1R0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DDesc.html",
+          "hash": "Kq8z7U73e2Pu5tXoLbUtjAjhnUz1+AD/3gujnBDfzIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DDsv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DDsv.html",
+          "hash": "rLkxWVp53f8qGQK58dPfY0j4KncPWny0HY3fSFIRrXw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DRtv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DRtv.html",
+          "hash": "LZpPXSOefkWdINQkGES59820gBb3zjFS/yZLU96/dtc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DSrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DSrv.html",
+          "hash": "T3II5SX1MSLC+zJkliT75rAzbslAh95lthzy12gZyBY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DUav.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1DUav.html",
+          "hash": "u/vRjUzXDdLz0Ocf8vqdL6EjYeCVORmou5bMmcILCqI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2D.html",
+          "hash": "IjHjGEHFsWQ6X8zFcmDkJdXWJ3At5D+kVeEVN80Qvvo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DArrayDsv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DArrayDsv.html",
+          "hash": "1dE/0vbiNgWtiH9tqq28lThQEl1VFv4vrCJ24jMu1J4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DArrayRtv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DArrayRtv.html",
+          "hash": "CYNbP/BHbpyuwb4lkqPUP1Ehz7t8KizBkErGVjNVhWQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DArraySrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DArraySrv.html",
+          "hash": "ddWXJGsw0if7t2pS+DefDr6cl1AMzUCnRLLWKBHoUR8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DArrayUav.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DArrayUav.html",
+          "hash": "0HNvN2teu7HomD8XrZjZc0ku+H2sXOBEH2PNfPvQv6Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DDesc.html",
+          "hash": "qMGDSkXWspgsRu7WkM+duFCE8XpIXXdhXVQ8rEWZ3ew="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DDsv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DDsv.html",
+          "hash": "F93NYIpfhLP+7aykc2s7bxG8P/vVNxWkRSi15qTe4sw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsArrayDsv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsArrayDsv.html",
+          "hash": "of0KkeA7jy+rUHM1VAYSxpa3sfMwwQcvDa7dbi46KeM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsArrayRtv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsArrayRtv.html",
+          "hash": "905IbWyxg68s9CKiSgWNdYwIluqpeJxlMXbAuhy9l/E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsArraySrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsArraySrv.html",
+          "hash": "4VUyikrnLs44GRVjADAPjsYe9uiPpFs0MGIccVomZhk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsDsv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsDsv.html",
+          "hash": "B4iT6biFSf45NwSWWCBx3JNcWtKVoyXq5BMdXLaH+6I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsRtv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsRtv.html",
+          "hash": "C6P15TnaWeDaKeolFp8gYJ3aGzJ83r5Pz6gTYHo3S5A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsSrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DMsSrv.html",
+          "hash": "Gp+SN8bCEHv3pZHdRdNN2qw6fqkp0vDTdCunkVYDNqs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DRtv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DRtv.html",
+          "hash": "XebcH3pyFDHheB5I22Fz664Ktxra4PFTOF1ocpp+4KI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DSrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DSrv.html",
+          "hash": "gGBg5QvP9uKwlBQbLq1Hq6FpaWzMWcRJtsbWiHCry5w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DUav.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture2DUav.html",
+          "hash": "oFYbmyufX4P+EQhkHqzJI2tVlXOcJii395aZnhS0uK4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3D.html",
+          "hash": "Nnc2ALYrwe/AsRJj6wfQyqMsgwwstBiy9DpWwRIP4io="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3DDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3DDesc.html",
+          "hash": "iqB/DAi3OC3UP4gSsW4yedCT8izWMj3gx3PwJNJI8lI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3DRtv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3DRtv.html",
+          "hash": "n1abOBt4ge+PrHgkmLoPTZr4Yk01HF2PA08ca3s9kss="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3DSrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3DSrv.html",
+          "hash": "hEaE4BILLP3PqWbqeOAWfGOBquhin+bf+hZOd2r6tNA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3DUav.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture3DUav.html",
+          "hash": "Id37ZXV4TE6wtnBi3LHeUiz/isSSfAUTjjfRdJppo14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TextureAddressMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TextureAddressMode.html",
+          "hash": "mXd7vJ5gcB2u5rO9AFygfAuqvy+6F9WEaoJNxEOzpfc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TextureCubeArraySrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TextureCubeArraySrv.html",
+          "hash": "S4dg0M99kAeq5KNQS8UDlPl8o6TU7tW32A2csW9TFB8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TextureCubeFace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TextureCubeFace.html",
+          "hash": "9S0sFxT3Nt612P+k6d5yuuJyEU8bJZho775SJzESEp0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TextureCubeSrv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TextureCubeSrv.html",
+          "hash": "CcUZGyDamHvsz02cXuIuwm1ke84N3RqMDWvaQkTK2H8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TiledResourcesTier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11TiledResourcesTier.html",
+          "hash": "AfBZHF/Qt26m+M9W+5R9Qn4fSOf3Q0MVTzc1hLC6z/A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11UavDimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11UavDimension.html",
+          "hash": "KAEjJyjLx7RMEaNl8fgdVs4uwLizv5LgfP2cogSF7MQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11UnorderedAccessView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11UnorderedAccessView.html",
+          "hash": "awBepzOZt+upzhWhgmm+i1l/NzxwDQcYgTRJt8LFwHk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11UnorderedAccessViewDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11UnorderedAccessViewDesc.html",
+          "hash": "It0RhMpEUzDd4n+rzi4TH2ayX8dDq2DZjDrIEfOuP+4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Usage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Usage.html",
+          "hash": "ZFHenGRO0yyIpJk9f+Jp+8k3z0S/o5HnRvpPvWiRtyE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Utils.html",
+          "hash": "JSmQo3HTMQRd7FXdbVSMAWmoN14ECHJ31dTN5Gp/w24="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11VertexShader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11VertexShader.html",
+          "hash": "ztFmtlG9OeDE53lBGUa/2Ux+gUALr8KEyg6+jr89DW0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11View.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11View.html",
+          "hash": "2p3ZiEvD7pbBh+aKea9r1UtDXWMEhL4r/exGwy41If8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Viewport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Viewport.html",
+          "hash": "fA3xubTAJvfAkhAuP6ox7eWWbEufOgMK1jUY0eJArgY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11WellKnownPrivateDataId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11WellKnownPrivateDataId.html",
+          "hash": "4fYb8XBVaEzN3ruQkt0eq+/FPcmm6yQJbmO3V42VOkM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.DxgiSwapChainExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.DxgiSwapChainExtensions.html",
+          "hash": "MfHJxSIaLS8I35YvsWA67mWa+fkCUevEByriDAFhBJw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.ID3D11Releasable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.ID3D11Releasable.html",
+          "hash": "NES/HBUHpDoMs2e2zDA7N6iYe2sqxI9ljQJArtbeJIE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.html",
+          "hash": "2b1SwvnTWi/mH1SsEX9lhC7SFsz9wRfCoFkVoy/jxGE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DCompile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DCompile.html",
+          "hash": "OP8Od/tuHDTQAdEM/wbQMwTzR2JhvKVsvq03i6HwTfg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DCompileOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DCompileOptions.html",
+          "hash": "z1xDPrRZC/w9d+pKoZcsNTVHVEFOhro6bPTRXbRZB5w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DDisassembleOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DDisassembleOptions.html",
+          "hash": "PYP2By7BQ6klF3pQ3FXZGagID4s6+q/+8tKnag3e8HU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DShaderMacro.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DShaderMacro.html",
+          "hash": "S/3CjXGN5xvbw4zt4FG8yCcsMyPwbmiP2/+eZ9D/GHw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DTargets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.D3DTargets.html",
+          "hash": "mCZqGt9+fn5nXCSKi17kf/3JeQ4Ka/Eucy6H3O+PzTg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3DCompiler.html",
+          "hash": "hX9FKHAJhiZgcKeEObydcAsKUrsdPQvteIsVvUcoN4o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteBreakCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteBreakCondition.html",
+          "hash": "GUC6WYLFQVlxvqitm4blV5aVT55QlT8C88wNh/t/Nus="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteClusterMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteClusterMetrics.html",
+          "hash": "+0OM22hivpvN39Xoyh80p+Uo2STUR0oNRY4b3G/NZ5M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteError.html",
+          "hash": "GJ5JU0ATQTd2WgmMqcZlICXymQCJ9BhDTCAb6RlO1Ec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFactory.html",
+          "hash": "pwrN1IM9UTFI3ji5yZOBWwIicOGx9WMqBj7lRrmXtAU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFactoryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFactoryType.html",
+          "hash": "ShHUdo14jXUx2vUt9lsW9dnKIngT2OEQP4AjISy09js="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFlowDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFlowDirection.html",
+          "hash": "UmA9f1h3aPCoHXN9ga2HoosHvJ2zW0E4ENN0Q3ypj4E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFont.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFont.html",
+          "hash": "nwiTDU9S0HkUHNEOlYgDCm209zYE/eaiHDudcGxT8mA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontCollection.html",
+          "hash": "5MHhFPh1+PCaXv4fFH3x8ChLWEbXTF6VkCvDXuPRl2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFace.html",
+          "hash": "/u6OVQwiVZ0UDz7eayQz801zMVob1IvrR0rgmF/rdok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFaceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFaceType.html",
+          "hash": "6BjHwLzfP6uxbaDTe25HE5i48vlvcnQcn3IuAp1Cj1c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFamily.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFamily.html",
+          "hash": "3hHDIGeA/qUIEO4g4B5HfVJyqd3LVesepQrhXcCrfNM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFeature.html",
+          "hash": "LXlOx7Vldq6aN2bsopUjx3ubxzOfIpS94ha/LMG7wnY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFeatureTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFeatureTag.html",
+          "hash": "A+1vjMlG0mLejsUQm5jDytVbG+H/eliv+UOV9IIKKfk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFile.html",
+          "hash": "4+Jo2ziWdEbvf0Ei/ec/HKNAdGhWpp1sgZ8mXuGebko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontFileType.html",
+          "hash": "FU82ljfOrQWKGSKP6ZFgLklJ4DTRqF44w7NpHFbdCEU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontList.html",
+          "hash": "r8x5/QuaCbMEu9eWrOoCS29boUfMAuLJ79hwuu+ytoI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontMetrics.html",
+          "hash": "HkL2KgddMnkri6qIgzibLWiQ1XTfqJvc6tXVJetGfaI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontSimulations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontSimulations.html",
+          "hash": "NZ+TSrwCyRwqTK+8GHyQfP9WHkVKuenyPuSfcrkZoaY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontStretch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontStretch.html",
+          "hash": "vT6Hdu5CYCyenJxKu6dFlSJcv1pAFF9dbwG0+c3IaRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontStyle.html",
+          "hash": "jDz5P6JUdQnvDJjvRF3iV9cl0kHy9H/54CzkQoP/ZD4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontWeight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteFontWeight.html",
+          "hash": "5gK2EDIB21YvubdPG7zbW+LriSmLS7XB9KKfvp4/ArM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteGlyphMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteGlyphMetrics.html",
+          "hash": "pd4hK2pSqtRGQMLupPcqtJDqm9deuWSFTa1sTkdAu8k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteGlyphOffset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteGlyphOffset.html",
+          "hash": "uEBeMgPyVR6wZIykFPKvxfImcXsHt3EL7B11GNMXjf4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteGlyphRun.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteGlyphRun.html",
+          "hash": "4+k/MvYxxu0BfEVrqfzYiJmxR3OlpWK8coB8PK6bJDM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteGlyphRunDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteGlyphRunDescription.html",
+          "hash": "n6Q+RbrfwJ4RT7m9CxDw+4qEFFCVqMJVVleHH2YVirw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteHitTestMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteHitTestMetrics.html",
+          "hash": "bjzcPyH9HTqMdqdZl4VT4dvtcAYuPHqA4tq076+E25E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteInformationalStringId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteInformationalStringId.html",
+          "hash": "mqcunsfW8rWRQepkaD0JOej6IO3g669hSRxiNrsubj4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteInlineObjectMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteInlineObjectMetrics.html",
+          "hash": "xnh3kIeLWsv2t1RZJG8S7dJ9YaHJ7g9f6oKx1neFQ+4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteLineBreakpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteLineBreakpoint.html",
+          "hash": "oXpoyyifb7MNu3T5VhcC+NsYUvTPlKeqLNy4yAo0Mrc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteLineMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteLineMetrics.html",
+          "hash": "obKGAdYSWhpzxntU/oDECzM+/y+doYcbKN3Z+kuHSX8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteLineSpacingMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteLineSpacingMethod.html",
+          "hash": "zr3e/84Uvr4EE3suAkQ2i5YPpDqZr0iRBJ5UxLiU9Rc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteLocalizedStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteLocalizedStrings.html",
+          "hash": "5z0izA1WMhHtHhBDz6LdpbzkHjr6yeSNHqEykUAEA7M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteMatrix.html",
+          "hash": "LQmGaxu55lU8yFYGdT/woceHLXkLhrPsBtj/InBqRvY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteMeasuringMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteMeasuringMode.html",
+          "hash": "Pp4os1YmGxEwBzTecXoS0TMoUgN20cFLrxOtVCJAbR8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteNumberSubstitutionMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteNumberSubstitutionMethod.html",
+          "hash": "l4I76zkvRUErn6KTnz/WZbDBMB7r9ohz+n9rX6d3w5k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteOverhangMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteOverhangMetrics.html",
+          "hash": "QX/gfn/gye7aNXVW+30wMltEcvnLTI3L0OGCu5OQDbk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteParagraphAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteParagraphAlignment.html",
+          "hash": "m7v5avBGg8Z9EhK1XUDuDdzst2gsHj8ZA72lqXnACKc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWritePixelGeometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWritePixelGeometry.html",
+          "hash": "BY4kpGmHbZ3OjdYXIkSsdg1KKRVk1Jo4/Mem9mpCsGY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteReadingDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteReadingDirection.html",
+          "hash": "JtgU/ZmYrocg3av2azaLpaBxEfo8E0VcILTPl9q8JBg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteRect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteRect.html",
+          "hash": "WdUwWIosZPFqBowW5gD4N+ziWqwEmtQ4RXHCUK+5lHA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteRenderingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteRenderingMode.html",
+          "hash": "Jd6XFWWEqc42ZjLZVVpMpxSh4EpSn0Su301oYJ/Yn6o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteRenderingParams.html",
+          "hash": "nNcgxPh2oJuide+phziQvt8k7VuWP8fQIbRw75dHOSM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteScriptAnalysis.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteScriptAnalysis.html",
+          "hash": "XGVSEgFGZOIBDIoCPpaEywduZOzEpukmbgTTVDCjmFw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteScriptShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteScriptShape.html",
+          "hash": "UVrCRZfsKSCC0MBBn2vlRpoa74VRuZiOFj7kW2IGNLw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteShapingGlyphProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteShapingGlyphProperties.html",
+          "hash": "rDtvIDWO0CO5OjOysdr7GyWH65Itd6ogF3WJRjqqRCw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteShapingTextProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteShapingTextProperties.html",
+          "hash": "/AbtxonM/bNl+t7gQCphCf8MiApuPMFgfuVPYtv+F7I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteSize.html",
+          "hash": "YOea/9GUWML33DvdqXSik3sC4eW5pO9JGZK1vaA7XvM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteStrikethrough.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteStrikethrough.html",
+          "hash": "Nz7CCrYWOHAcYSmORaEyxCk+fVedkmnOs2vXZi1aIlU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextAlignment.html",
+          "hash": "X1wvY9E7371U+VDw+0KlifQ1NHHWtNpaBnH+ET5iPDQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextFormat.html",
+          "hash": "CDDWRpdKl8FIZF+/2tQJ7D+OLY4xQf2uWmLLFN8kpEA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html",
+          "hash": "bK1NVbG7xs0KRd3r8cOcUPz1TB98nCxZjNjN+7qNt5Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextMetrics.html",
+          "hash": "EekE5hYj6c9GY6vHmY2lPqEJcqU3UA3+xBL9hozly+I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextRange.html",
+          "hash": "ZQoMuWl4O4iFYaSCYRcTR5nK9jJbmOa8rVO+uDkI+1s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextureType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTextureType.html",
+          "hash": "TUhMc3nNm0LYipuCTUvvgRGvT0xB2ZclxSxwEYelhg4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTrimming.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTrimming.html",
+          "hash": "6RfK2XHrOIj5qh3hl9jUsOpOTcck1+j8a/SsRo6UDio="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTrimmingGranularity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTrimmingGranularity.html",
+          "hash": "9h8XpBHV5WUW7BYtBi6gA+/4/PKhtU41GN8Cr+NYeww="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTypography.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteTypography.html",
+          "hash": "bulwoZuvS0QpTVzL7BlY01FRsLSDx/17CnQNZm+vwOk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteUnderline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteUnderline.html",
+          "hash": "uD+5bXkulzhOMTZlVnTiCfgT5vWE9oUXLGSpTDYr8yM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteUtils.html",
+          "hash": "pKmdwFbT3ex9fXYc485Tn6AzPxvPsrYYNvV5Xs7sYPk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteWordWrapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.DWriteWordWrapping.html",
+          "hash": "Op/RFPXybhF1K9ZVk9t/hSbi1Vx5iqemHDe0EBYpZ5M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.IDWriteReleasable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.IDWriteReleasable.html",
+          "hash": "AsScWcczAKI501+nfR7ImvXlkEC7Ik0f8ueezhU0H1w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DWrite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DWrite.html",
+          "hash": "8fEpmD1PTYs/Rb9xVbZxvAFm2L96oJfFp44cHBb7Vck="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingBox.html",
+          "hash": "gFHM46HfakP6NOHqMKUgVzgDoVf0FkxufPuc1k2fIvI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingFrustum.html",
+          "hash": "RmnTymmvlzKgqhBPdW6Qlaj8Q1CfjhU5OKciTtPykbY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingOrientedBox.html",
+          "hash": "YaONbsT1iutpYbUalyg9AWO5+zLQHy2z1Rz3KCd0Bpo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html",
+          "hash": "pCJiKrcx2998h19adoGCX34wCpA3zNmN9TxN8sehzSU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html",
+          "hash": "NO0bkCrXLPndpjsF5GpuRQ0WXxZLTgK5EziNiTGGXKQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.PlaneIntersectionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.PlaneIntersectionType.html",
+          "hash": "xFuUSEs1L7AYjXIB3eNJX0dBVigbkTPMgSCqc4k+5bo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.TriangleTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.TriangleTest.html",
+          "hash": "M46yNCM9sdgeOnCnG2vMgRwjmFNb3bXpg6K9gDCxZVo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.Collision.html",
+          "hash": "XFaXyCBltLPFZu2YuzzbR5Ao8jN74NrQevXg7ALHEMI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.Half.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.Half.html",
+          "hash": "gpBIAa8FxMZ7AA1aMBDtCQ6lxzRkkEE448lW/0IPR6E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMByte2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMByte2.html",
+          "hash": "V4Lb4NDF9RjtvIS6tHED0vrniBkd5EUsdVfWWv4YfIM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMByte4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMByte4.html",
+          "hash": "132MyohkQycG2ffABQDj4FZ/3r/V9eD36TGmepMOFtc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMByteN2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMByteN2.html",
+          "hash": "F7Ii8pO8m9KBnIqrjXWLRkNdpeHmIIQK+MJD8gZYsnE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMByteN4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMByteN4.html",
+          "hash": "iioG9wWj6MYJzgVhYicNNho6Fb+NPhHiMP9cPXNyRMw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMColorRgba.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMColorRgba.html",
+          "hash": "5pif6YiZGIYFnko9Ag5ANzORpA1aNNt+wC/I8fawQdc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMDec4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMDec4.html",
+          "hash": "tEKR/klvVwgEgAMklafS592si7qT0AD81petB4ndcUM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMDecN4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMDecN4.html",
+          "hash": "WPFel8cQPGWQa4zfLyMP66pBKATo/DpyYDy4r3ahMRE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMFloat3Packed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMFloat3Packed.html",
+          "hash": "SSHnvwGZUrxziD5UN/rEbRt84f0IYAVyhZyLBPhQl9M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMFloat3SharedExponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMFloat3SharedExponent.html",
+          "hash": "dDeRmLeZHo+g8m1cf0zPxeJXW/+BtBUPqq6VOWRGMc0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMHalf2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMHalf2.html",
+          "hash": "pcuEwdYh8LibiYqY5Zojbd1wbvuW0R5N5IJZPXYhgKc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMHalf4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMHalf4.html",
+          "hash": "xv1WAeUCBcGIGMKyy9XVwKkLdQ1/bLCdScMeZFdT7rY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMShort2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMShort2.html",
+          "hash": "b7+QNhbBfZCGSoMPIfhkb5nV36htI1IzauZF/xNhjcA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMShort4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMShort4.html",
+          "hash": "buUiuvsYdAitdL9iwnYJd/fhPh+fJ5XXoEGoOoNhmIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMShortN2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMShortN2.html",
+          "hash": "h9fNljPDoOJaC8yOm1l1687boQQ/z31vSoyl321z6uw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMShortN4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMShortN4.html",
+          "hash": "0IbECGy5owLprxWD5BceaG9DYKRjpTaT7mNxnEIN9aY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMU555.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMU555.html",
+          "hash": "56eaBs/yTsHgLB4Pa6dMqCM/2pzj2V0SljqDhWMvTrA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMU565.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMU565.html",
+          "hash": "27KXDUaX0bgwsWRx/V03SG8n198HT6QY4Q6Qa3/3QiY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUByte2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUByte2.html",
+          "hash": "c3N7b6yi4www71iJuhKtiNXsLd1APxL8Pxn9JVNtc2I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUByte4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUByte4.html",
+          "hash": "sbN3YUNiHFP374MJk0SZpCJyiYR5NjBVOe+eIRaayw8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUByteN2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUByteN2.html",
+          "hash": "E7ZYhjEEjWTIE9rJrGBSuxq8dDlu3wMTeW/PHCYaw9g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUByteN4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUByteN4.html",
+          "hash": "dlCqogLw9K+VB0J8TKxZeBxLHUZ2BX8HlVOMEHQXTZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUDec4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUDec4.html",
+          "hash": "4VwGZuHeKKKWeb29FbN2ILGB2dQeqWJSSFd76fBo9f0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUDecN4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUDecN4.html",
+          "hash": "2pby+BWzhdJc6ho+mtt6pjH5dP+k5EUgGVihna8Pa7U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUDecN4XR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUDecN4XR.html",
+          "hash": "bcIoPCSgTAGDJlJxgLJNkUgAutmEQ9+5dX3me5W0BVg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUNibble4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUNibble4.html",
+          "hash": "/QmenCyCrkOh9QpxZGvPov/qDJXyCNUuBXLfpbnzl+Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUShort2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUShort2.html",
+          "hash": "UWx/fVtFqqN35Vp/PF6S+E94qT7lOYof8k4+X1xUQh0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUShort4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUShort4.html",
+          "hash": "gD6n4zbNCwRp9ByUETifACmHT0dj/1pZyi8XwUGl+cw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUShortN2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUShortN2.html",
+          "hash": "0hBIZ1OTVHfgmviYHvaujdpJXIWHDgkP2/yhq5YoIwE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUShortN4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMUShortN4.html",
+          "hash": "YXFDxzaBlJ93XgqxF4BP7fTxwcI4iYQXcVOUt3CYKf0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMXDec4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMXDec4.html",
+          "hash": "qmRiP5+x/M6cH/DqbFipkwP5TOtosVZPZWeUz06GV1Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMXDecN4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.XMXDecN4.html",
+          "hash": "PN/qRprT09qItyzYNzSxuUK/snv069z2/TAbeCoFLGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.PackedVector.html",
+          "hash": "zNygkYU9wPSslbnP0t6ZEo4UfmKUo7Vr3va7VQiHLh8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMColor.html",
+          "hash": "3PvYLtDTZCI6LXTKnMNUPy41HV/WW/lNlT0WuVbFUKM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMComparisonRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMComparisonRecord.html",
+          "hash": "/MhH1ifbwLCQUuTO+U1b/OiWy8NaGIZ0XwlY6IhPj4M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat2.html",
+          "hash": "+AOTx4jdAAg7QbPd/D8YkNMhhVpn9ZZIeGO73dpCSm4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat3.html",
+          "hash": "K6zXPPJzByijCvp338oH354kBKrmwltf35p5KlpmjMs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat3X3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat3X3.html",
+          "hash": "dJI63NdqO+wIwBiiy64U3zN9j06/PEFPLyx8ifFdi1I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat4.html",
+          "hash": "FzUkUX8pzmImz4AYOJU626iWsyeRdEkzyQfDkb3yqxU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat4X3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat4X3.html",
+          "hash": "f6xNA7AZ8oVbV0pVCgihcw3j7RT5iPX6fysFfmpUc24="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat4X4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMFloat4X4.html",
+          "hash": "nu6ZDqDztDKECmKHwUuXfR2E15MW6Ozr+qCrwToeXbE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMInt2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMInt2.html",
+          "hash": "8hLCbufEIkzUg3O6NPQqYxy2egn4cvV9aBIkQu8EoDE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMInt3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMInt3.html",
+          "hash": "b+vkInyznTDmuTJ+wjAVBu/+PolIG8aM5vZ6e/uhJVY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMInt4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMInt4.html",
+          "hash": "w4GOFce2QQOFHJvh4fVQMg2HIP7Uqh/7+4Szz1Uhga0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMKnownColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMKnownColor.html",
+          "hash": "AJibM7usxTHuZiQvvwHKnkSyr9sMl4XDxlzcbVqc/0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMMath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMMath.html",
+          "hash": "+xGjVGLebsCFkrW/PEIac5/tM3LXAMYpBb2Gvu8Nm5E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMMatrix.html",
+          "hash": "7cFR6ujLXQ/ILu64jrqexAjM4H07mjetXg1Fnz5NCQA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMPermutation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMPermutation.html",
+          "hash": "nj+j9mluYnOXNn8goy/Frb3vJ3SB/KI1d+OR9ME7MGE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMPlane.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMPlane.html",
+          "hash": "A4stA7+AM94CWhziJCPeYOFD0wlsQXedW/wCe0N4AEU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMQuaternion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMQuaternion.html",
+          "hash": "UvTTsK9bPCiDUf2p1Fnaab69jrbTePRw2itIA61j0oQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMScalar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMScalar.html",
+          "hash": "SF3pwEPncI6azOYWEhXzY9RX340E8vqfry1tbashhxg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMSelection.html",
+          "hash": "Hry99ltWz1jiPCK0VmYn8da/j9XYYG5hm2rxJmD3jeM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMSwizzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMSwizzle.html",
+          "hash": "G9pzfVRVwnpaJxCTMz4nuNAp/Oi+baMbrgG5kdaCn84="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMUInt2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMUInt2.html",
+          "hash": "Vwh6kVvnX2UTvclLFcedkklHsGm8J4Pdg9BnnKOqxHk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMUInt3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMUInt3.html",
+          "hash": "XJsTlRSCHar5BL22AmpY5KGqFRSzBsKd190PlyiWDSs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMUInt4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMUInt4.html",
+          "hash": "7ju3P+XPphjLEb7szK5N2EimtC2eGCnAzYIGMa6KY38="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMVector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMVector.html",
+          "hash": "6MBsT9cKkgALPzheHQdTvuC7Jn2r9wp7qlPeq0Jvbi0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMVector2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMVector2.html",
+          "hash": "bFdx7NXFQs7gsYTmaJ8isRSPHqgTlLM4lXccr3LE5l4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMVector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMVector3.html",
+          "hash": "3UQPfqjkSLYbJIHb8nRGwL2wrHQ49wA4oVmmD0BKtP4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.XMVector4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.XMVector4.html",
+          "hash": "Rm6HXxOqo0ls9v2tdEf/HaVBfSWRolbH4/luSXBYX9w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DXMath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DXMath.html",
+          "hash": "jcXez2sKmyskJu6WOcrK9KjatUVSMHiCZRxZKG+hufU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter.html",
+          "hash": "ne4fLEaThrWQZrh72b3SXIrErdQ4DaZckFGyciiHPos="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter1.html",
+          "hash": "O6w+QbyI4hiRZkbf008KhrZTQFPRAM/bVVTNVdwKUtg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter2.html",
+          "hash": "cnpbzAmvxaEzkAPq38m3g5T8XoVnJjnApEjVs/EbInU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapter3.html",
+          "hash": "se1QD6N2aKSJbJ8wgfIA3RmQ277NhAzWtP8E5A+EPII="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapterDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapterDesc.html",
+          "hash": "rUtDSpyWoDThuf99ma6H7G+L0Ilpdss7Swy8CuLTOGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapterDesc1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapterDesc1.html",
+          "hash": "11mFCAU6ezq4U5qUyXZugglSYpDcqfqHkFNPVkjDflg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapterDesc2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapterDesc2.html",
+          "hash": "yznuluKBXTkQX6iUJ3r/pg3ggF0TGJVE0EadRAP2its="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAdapterType.html",
+          "hash": "FaVamfWh4MsoTsKhIbdIphuK3XA84e1FVA4kfLsmtIU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAlphaMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiAlphaMode.html",
+          "hash": "TEexu4bqIfgHaxjJ+fotBDIdLtkp3v6DjS/mTK8TXpI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiColorRgb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiColorRgb.html",
+          "hash": "v+bjZ7KYYav2VHjn2xSqqPiYiNgXfgJScoK94OypDS4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiColorRgba.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiColorRgba.html",
+          "hash": "PVXGmRs4IiI4P6GEQ2bo7yxVNfx5H1ss07G7WuNoxfw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiComputePreemptionGranularity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiComputePreemptionGranularity.html",
+          "hash": "9oU7nn2xtXFaxxoivRHLkn+JcgniwGGmtleq04Dsp8U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiCpuAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiCpuAccess.html",
+          "hash": "pkNtyqIQ9V2FTv9gz2ttyzOihDET+6RV6jJEKg2htXc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiCreateFactoryOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiCreateFactoryOptions.html",
+          "hash": "5jS81F36spaIVKESrwzul2cgqELOV1WDzBH1rZUMRAM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice.html",
+          "hash": "7i8NNtLbG9OURQv9F0BbdSCU3E0fYJOUYs5aHajuVIc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice1.html",
+          "hash": "W4zgdqFIfnMGd9bDlEFZ/3heW2szwRWtIaCy23/Dt6I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice2.html",
+          "hash": "p4mmpN93jS/aN0PzoGPlXu1hlOZu9NvgDvxRfnPB3pE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDevice3.html",
+          "hash": "6YjB+bcUhjxcdN2zLOOejdvwdvizlQXcYXtvfvWnZNw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDeviceSubObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiDeviceSubObject.html",
+          "hash": "ludnKfL4SMCJo8iob3vZPyhNY9aN87ZYJiDp/isl4RA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiEnumModes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiEnumModes.html",
+          "hash": "eyff1LB+aEkmIa3RRgXpZ5D1OwH03AP7gNym9l+6VUQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiError.html",
+          "hash": "QcHYYc9ZDvsSIHQbzb0A/HqqMK8fJuT6BuK2ZA0xMEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory.html",
+          "hash": "qfXkMSqTtKv77oNdvDGE49xEC4dzZ9AHGxWycVEO2Sw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory1.html",
+          "hash": "G0iO9iy7TmlZa3Ta1UtXi3L+S62iYAZdrzGNlASuRPU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory2.html",
+          "hash": "cc7oLfwbBrG5MJm0BDv+OJBfxrGRMf7GugMfILuHDy0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFactory3.html",
+          "hash": "eGY/DCEbU8fc12ovNQDej2Hs5n21u8P6rBbn1zRc7uQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFormat.html",
+          "hash": "jL7Ex9HWJ59eOulr7viJOxTTxLm3k45MZriczIf5IS4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFrameStatistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiFrameStatistics.html",
+          "hash": "QzvHCPsOe81zvD21BebGRaIZPlzWUpmX2rqsAzNTNYw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiGammaControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiGammaControl.html",
+          "hash": "r1ivWcPtJEkL2muQJHjo6NLt2lUhEXx6C9iyjjL6Pus="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiGammaControlCapabilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiGammaControlCapabilities.html",
+          "hash": "wHq2UFEZ60ZthttsVtVV5MjUPiNW4GRgYCg1KnYLv0k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiGraphicsPreemptionGranularity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiGraphicsPreemptionGranularity.html",
+          "hash": "EVGz0x0O50OSGRjKgE5YrAzN/dxNoop+U4wKnnLUYTU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiKeyedMutex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiKeyedMutex.html",
+          "hash": "CsNAfZkTciRF3ZHJjecGAQzxrQL8KDI2iA02UbubDY4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiMapOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiMapOptions.html",
+          "hash": "9z64M2Bmk2c99FiCDYpuWlhhPrH2R0gI/7s/my+tGZs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiMappedRect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiMappedRect.html",
+          "hash": "2nfy/jA5l4DdbAWLIsIEUEvFP1UKCFrW9f/n08dsTlo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiMatrix3x2F.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiMatrix3x2F.html",
+          "hash": "HNkdsVEs/dAeTMDAmBMiYA11QQgQKtCfZIw5kFJQm24="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeDesc.html",
+          "hash": "uyQFfBS/GhXofFY/kwj/3vG41VzhO6xnJk5n02qeco4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeDesc1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeDesc1.html",
+          "hash": "03dIWGm0jWvtlnTUeXtb4KvWIgcX77yyDUPcF+F4uYw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeRotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeRotation.html",
+          "hash": "7pp3nwiib9cOQUVoQQQrQOnFrGWFUcUzez/Do53sPLY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeScaling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeScaling.html",
+          "hash": "vIg9lNlO6hRF32R/ue0UtVX0nwafHGV+0Cm91Gzrsmw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeScanlineOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiModeScanlineOrder.html",
+          "hash": "Kjd/2GyLY822bV4Q5ugdJVmi+N3ZgaD+lLsvdnOxiu4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiObject.html",
+          "hash": "vfaohyaFWW+FEs9/zyj8HDDMBlfU1yyGE0ZlAEuccVc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOfferResourcePriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOfferResourcePriority.html",
+          "hash": "y4Sin3X16urIh/YnXRsMos8TsoBKhXG886CWPS4uj1c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput.html",
+          "hash": "+LHjygdTE84YM9ryACqg3t0zboamo56dRBV4yjuPxFM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput1.html",
+          "hash": "yiZ5lPDICJdPCqIdwXd0OwacLxH6GPhd3k5MytBjbAY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput2.html",
+          "hash": "uP52SRgS1xRbhgy+H2fDCJ+7nXXJ+QVNUvkUwVtnzoE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutput3.html",
+          "hash": "P41OYY42dU2u91uO82bgoPAHTZwhIxVf6NLyH2cGrwA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutputDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiOutputDesc.html",
+          "hash": "LzS0M8nt/t7bfi0uEe4abegnLGKNpizrT/kPG6sM2pA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiPoint.html",
+          "hash": "REZ4lS1NvT27mzemVvn/UaWAMD0OFkHhB2J821t065k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.html",
+          "hash": "Pj9bJMBBMdFJe/0WWacp4cnHu5xwPMEwZ0sa9MODyec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiRational.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiRational.html",
+          "hash": "Jr9KWB8zxVm4clSMwZUbWg5I6qhIRLD1PYdkjnpDMMw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiRect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiRect.html",
+          "hash": "OXwp9dyfaqCqJqHhlPQQ6g2raH5e+7qWEVxkenuIg8U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResidency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResidency.html",
+          "hash": "fp9LrI/mSqwJrRSm63y2q7HhoQCCK9Gi9LPq6gP//uU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResource.html",
+          "hash": "oZAo5VeHcB5JUT+8eT8zPW910tabqToYFnV9h+qrOpw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResource1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResource1.html",
+          "hash": "wBwKRY+hRNRh1KC9sUHPCWurZ467fYoLaLskhqmQ8KM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResource2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResource2.html",
+          "hash": "GebPhlMevOixGIqY3dD3+Bwu6RPIdy9tOiBTibzeumE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResource3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResource3.html",
+          "hash": "t5DjNrioswoZ8KJtCoX88Im6Iil4gxnJXgJdDsgoEDg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResourceEvictionPriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiResourceEvictionPriority.html",
+          "hash": "X2coFik5IjeFDAWBAtfvUuwpg9DpJm2D4yePiRz4tbw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSampleDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSampleDesc.html",
+          "hash": "IFLlyaMqA5MQ++rgWI3w0GRcR8b+/zZVxBwd+x/EvCY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiScaling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiScaling.html",
+          "hash": "t16IzAZV4mf67TJJ+D0c4/99WcO5L165rPTZlV7GUuU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSharedResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSharedResource.html",
+          "hash": "M/DwRhI3UblG/Olzbo5XcKPpE8x14x65vmbwMBbfsPk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSharedResourceAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSharedResourceAccess.html",
+          "hash": "N8ndNvNpWklN+OGR3XVFX5lFe/0WjRqCimbhPbhmoWI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface.html",
+          "hash": "AACrUs0eiUsQmKvGX/WYwdcwmbwnqv8UaCZuuIlZfE8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface1.html",
+          "hash": "cgHJr0Er1mVM1vEvCDwC/UFE6uwHh9tpG9Qjd+rX0HI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface2.html",
+          "hash": "pDHdC1xWd9g4W621jVxWsUaNVepgUoLbF6A2Yk9W5qE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurface3.html",
+          "hash": "UxagzedFyjiq0hSUZ5PP47r9VwIxi4mrFkJyIRWlup4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurfaceDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSurfaceDesc.html",
+          "hash": "EuVYqVjtxMEvtOO8IrRBwkiaCaood1D0pYSPbG4xKcg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain.html",
+          "hash": "9/L1rciRu9HePyhWTHeLu+zIArzjGFMlMhQys02XE50="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain1.html",
+          "hash": "2T96Fk2fUTj98nU5AUUynO9UJVhHxpvDDig0ABXV5nw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.html",
+          "hash": "BcJ3zXwG1ql5W3IvVGXT9EuFfY+Rv6ohHpyPXbynX1w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChain3.html",
+          "hash": "UMqEDjA00VLRt/u4xgS6KczTa57+crLSrDdlMlmsHRI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainDesc.html",
+          "hash": "V5sNKGWW71WSLgdOX9wxG7qJ6kxpFdoWnk1bE63VrcI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainDesc1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainDesc1.html",
+          "hash": "uM03b1CeBnDeY2BojqZbgM3jyUpP9sDrxvJ+dMUgHjA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainFullscreenDesc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainFullscreenDesc.html",
+          "hash": "OY4KPgfpaShGFkqv1MTEmleOjEnrZoHbRrnCs/2z3as="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.html",
+          "hash": "Hn2SzKA5fM6VZgvN99NInMcXOp5DbuvoyzSu2L1pv70="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiSwapEffect.html",
+          "hash": "xNgn83lfQ7NMry3C71YodK7j4+izx+fyNKKRbpIFeac="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiUsages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiUsages.html",
+          "hash": "hmSqqBIF4EjBRlVY5JdxAEk3AhrLpUP+2iQnSquhrlg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiUtils.html",
+          "hash": "iME/iZxJ0ZNr2f/YOLnuTjR/5B8NIcyIo/RYC7c7Pt8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiWindowAssociationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.DxgiWindowAssociationOptions.html",
+          "hash": "Fmbqi3If740ueFxiM03Gy04G4r06lvA02q0NjxNLyQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.IDxgiReleasable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.IDxgiReleasable.html",
+          "hash": "Q46ZYIbANrZfUbPRCQIejbu51+lbCPnE29dyHCASTkw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Dxgi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Dxgi.html",
+          "hash": "RPwv5GLEwIMZ9O4zdQKXA3HpxYPKwapp+m6+sx0YFGE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "9zMrVUD9ryy/i7ub68VI4h5Nihp9Z+fDRPSdzOs5eB0="
+          "hash": "JP2zCFuF88/FKOH27pKi/7fha2VEWqbI14VK+dhCUH0="
         }
       },
       "is_incremental": false,
@@ -30,7 +5778,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "OaqYSU/WgonOUFELI5I6BpqWCRQfvl77VdIpjeIACm8="
+          "hash": "6GFLkYwvtmBGPaVvoLo6q4cwS4B45HozRCHderZuirI="
         }
       },
       "is_incremental": false,
@@ -52,6 +5800,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 479,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
