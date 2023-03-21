@@ -556,6 +556,41 @@ namespace JeremyAnsel.DirectX.DXMath
         }
 
         /// <summary>
+        /// Computes rotation about y-axis (y), then x-axis (x), then z-axis (z).
+        /// </summary>
+        /// <param name="quaternion">A quaternion.</param>
+        /// <returns>The Euler angles.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static XMVector ToEuler(XMVector quaternion)
+        {
+            float xx = quaternion.X * quaternion.X;
+            float yy = quaternion.Y * quaternion.Y;
+            float zz = quaternion.Z * quaternion.Z;
+
+            float m31 = 2.0f * quaternion.X * quaternion.Z + 2.0f * quaternion.Y * quaternion.W;
+            float m32 = 2.0f * quaternion.Y * quaternion.Z - 2.0f * quaternion.X * quaternion.W;
+            float m33 = 1.0f - 2.0f * xx - 2.0f * yy;
+
+            float cy = (float)Math.Sqrt(m33 * m33 + m31 * m31);
+            float cx = (float)Math.Atan2(-m32, cy);
+
+            if (cy > 0.00001f)
+            {
+                float m12 = 2.0f * quaternion.X * quaternion.Y + 2.0f * quaternion.Z * quaternion.W;
+                float m22 = 1.0f - 2.0f * xx - 2.0f * zz;
+
+                return new XMVector(cx, (float)Math.Atan2(m31, m33), (float)Math.Atan2(m12, m22), 0.0f);
+            }
+            else
+            {
+                float m11 = 1.0f - 2.0f * yy - 2.0f * zz;
+                float m21 = 2.0f * quaternion.X * quaternion.Y - 2.0f * quaternion.Z * quaternion.W;
+
+                return new XMVector(cx, 0.0f, (float)Math.Atan2(-m21, m11), 0.0f);
+            }
+        }
+
+        /// <summary>
         /// Computes the rotation quaternion about a normal vector.
         /// </summary>
         /// <param name="normalAxis">Normal vector describing the axis of rotation.</param>

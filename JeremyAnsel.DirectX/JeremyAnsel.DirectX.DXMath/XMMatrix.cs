@@ -1096,6 +1096,27 @@ namespace JeremyAnsel.DirectX.DXMath
         }
 
         /// <summary>
+        /// Computes rotation about y-axis (y), then x-axis (x), then z-axis (z).
+        /// </summary>
+        /// <param name="matrix">A matrix.</param>
+        /// <returns>The Euler angles.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static XMVector ToEuler(XMMatrix matrix)
+        {
+            float cy = (float)Math.Sqrt(matrix.M33 * matrix.M33 + matrix.M31 * matrix.M31);
+            float cx = (float)Math.Atan2(-matrix.M32, cy);
+
+            if (cy > 0.00001f)
+            {
+                return new XMVector(cx, (float)Math.Atan2(matrix.M31, matrix.M33), (float)Math.Atan2(matrix.M12, matrix.M22), 0.0f);
+            }
+            else
+            {
+                return new XMVector(cx, 0.0f, (float)Math.Atan2(-matrix.M21, matrix.M11), 0.0f);
+            }
+        }
+
+        /// <summary>
         /// Builds a matrix that rotates around an arbitrary normal vector.
         /// </summary>
         /// <param name="normalAxis">Normal vector describing the axis of rotation.</param>
