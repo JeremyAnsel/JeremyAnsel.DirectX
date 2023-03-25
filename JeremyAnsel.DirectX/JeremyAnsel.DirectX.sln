@@ -3,30 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.DXMath", "JeremyAnsel.DirectX.DXMath\JeremyAnsel.DirectX.DXMath.csproj", "{A723D96B-C0AE-4F4C-BD31-D0E32D165D97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.DXMath", "JeremyAnsel.DirectX.DXMath\JeremyAnsel.DirectX.DXMath.csproj", "{A723D96B-C0AE-4F4C-BD31-D0E32D165D97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.Dxgi", "JeremyAnsel.DirectX.Dxgi\JeremyAnsel.DirectX.Dxgi.csproj", "{71104F97-85BA-447F-8AE1-58FDE4948CCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.Dxgi", "JeremyAnsel.DirectX.Dxgi\JeremyAnsel.DirectX.Dxgi.csproj", "{71104F97-85BA-447F-8AE1-58FDE4948CCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.DWrite", "JeremyAnsel.DirectX.DWrite\JeremyAnsel.DirectX.DWrite.csproj", "{55BE42C4-F93B-4EAA-9EA0-80AB2C119ED4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.DWrite", "JeremyAnsel.DirectX.DWrite\JeremyAnsel.DirectX.DWrite.csproj", "{55BE42C4-F93B-4EAA-9EA0-80AB2C119ED4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D3DCompiler", "JeremyAnsel.DirectX.D3DCompiler\JeremyAnsel.DirectX.D3DCompiler.csproj", "{71F59C12-7267-4715-8E7E-B409021433A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.D3DCompiler", "JeremyAnsel.DirectX.D3DCompiler\JeremyAnsel.DirectX.D3DCompiler.csproj", "{71F59C12-7267-4715-8E7E-B409021433A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D3D11", "JeremyAnsel.DirectX.D3D11\JeremyAnsel.DirectX.D3D11.csproj", "{60386B8A-A4CA-430C-8F28-BD75756F7347}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.D3D11", "JeremyAnsel.DirectX.D3D11\JeremyAnsel.DirectX.D3D11.csproj", "{60386B8A-A4CA-430C-8F28-BD75756F7347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D3D10", "JeremyAnsel.DirectX.D3D10\JeremyAnsel.DirectX.D3D10.csproj", "{9A4F21B3-56FF-4A22-9AFC-465049426696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.D3D10", "JeremyAnsel.DirectX.D3D10\JeremyAnsel.DirectX.D3D10.csproj", "{9A4F21B3-56FF-4A22-9AFC-465049426696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D2D1", "JeremyAnsel.DirectX.D2D1\JeremyAnsel.DirectX.D2D1.csproj", "{6DC9B108-0F71-4581-87D4-0C6E39A5D043}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.D2D1", "JeremyAnsel.DirectX.D2D1\JeremyAnsel.DirectX.D2D1.csproj", "{6DC9B108-0F71-4581-87D4-0C6E39A5D043}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentation\Documentation.csproj", "{1F48988A-96D8-4E66-8456-79BFCD1A7F02}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6DC9B108-0F71-4581-87D4-0C6E39A5D043} = {6DC9B108-0F71-4581-87D4-0C6E39A5D043}
-		{71F59C12-7267-4715-8E7E-B409021433A3} = {71F59C12-7267-4715-8E7E-B409021433A3}
-		{A723D96B-C0AE-4F4C-BD31-D0E32D165D97} = {A723D96B-C0AE-4F4C-BD31-D0E32D165D97}
-		{60386B8A-A4CA-430C-8F28-BD75756F7347} = {60386B8A-A4CA-430C-8F28-BD75756F7347}
-		{71104F97-85BA-447F-8AE1-58FDE4948CCD} = {71104F97-85BA-447F-8AE1-58FDE4948CCD}
-		{9A4F21B3-56FF-4A22-9AFC-465049426696} = {9A4F21B3-56FF-4A22-9AFC-465049426696}
-		{55BE42C4-F93B-4EAA-9EA0-80AB2C119ED4} = {55BE42C4-F93B-4EAA-9EA0-80AB2C119ED4}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation", "Documentation\Documentation.csproj", "{1F48988A-96D8-4E66-8456-79BFCD1A7F02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
