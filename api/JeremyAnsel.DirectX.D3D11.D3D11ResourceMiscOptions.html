@@ -1564,12 +1564,14 @@
             <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.D3D11.D3D11ResourceMiscOptions">
 
 
+
+
   <h1 id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions" data-uid="JeremyAnsel.DirectX.D3D11.D3D11ResourceMiscOptions" class="text-break">Enum D3D11ResourceMiscOptions
 </h1>
   <div class="markdown level0 summary"><p>Identifies options for resources.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <span class="xref">JeremyAnsel</span>.<span class="xref">DirectX</span>.<a class="xref" href="JeremyAnsel.DirectX.D3D11.html">D3D11</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.html">JeremyAnsel</a>.<a class="xref" href="JeremyAnsel.DirectX.html">DirectX</a>.<a class="xref" href="JeremyAnsel.DirectX.D3D11.html">D3D11</a></h6>
   <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.D3D11.dll</h6>
   <h5 id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -1627,11 +1629,6 @@ public enum D3D11ResourceMiscOptions</code></pre>
 </td>
       </tr>
       <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions_RestrictedContent">RestrictedContent</td>
-        <td><p>Set this flag to indicate that the resource might contain protected content; therefore, the operating system should use the resource only when the driver and hardware support content protection. If the driver and hardware do not support content protection and you try to create a resource with this flag, the resource creation fails.</p>
-</td>
-      </tr>
-      <tr>
         <td id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions_RestrictSharedResource">RestrictSharedResource</td>
         <td><p>Set this flag to indicate that the operating system restricts access to the shared surface.</p>
 </td>
@@ -1639,6 +1636,11 @@ public enum D3D11ResourceMiscOptions</code></pre>
       <tr>
         <td id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions_RestrictSharedResourceDriver">RestrictSharedResourceDriver</td>
         <td><p>Set this flag to indicate that the driver restricts access to the shared surface.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions_RestrictedContent">RestrictedContent</td>
+        <td><p>Set this flag to indicate that the resource might contain protected content; therefore, the operating system should use the resource only when the driver and hardware support content protection. If the driver and hardware do not support content protection and you try to create a resource with this flag, the resource creation fails.</p>
 </td>
       </tr>
       <tr>
@@ -1662,13 +1664,13 @@ public enum D3D11ResourceMiscOptions</code></pre>
 </td>
       </tr>
       <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions_Tiled">Tiled</td>
-        <td><p>Set this flag to indicate that the resource is a tiled resource.</p>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions_TilePool">TilePool</td>
+        <td><p>Set this flag to indicate that the resource is a tile pool.</p>
 </td>
       </tr>
       <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions_TilePool">TilePool</td>
-        <td><p>Set this flag to indicate that the resource is a tile pool.</p>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11ResourceMiscOptions_Tiled">Tiled</td>
+        <td><p>Set this flag to indicate that the resource is a tiled resource.</p>
 </td>
       </tr>
     </tbody>

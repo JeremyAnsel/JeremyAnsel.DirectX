@@ -1564,6 +1564,7 @@
             <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2">
 
 
+
   <h1 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2" class="text-break">Class DxgiSwapChain2
 </h1>
   <div class="markdown level0 summary"><p>Provides presentation capabilities that are enhanced from <code>IDXGISwapChain</code>. These presentation capabilities consist of specifying dirty rectangles and scroll rectangle to optimize the presentation.</p>
@@ -1605,19 +1606,19 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode">object.GetHashCode()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">object.GetType()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">object.ReferenceEquals(object, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">object.ToString()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <span class="xref">JeremyAnsel</span>.<span class="xref">DirectX</span>.<a class="xref" href="JeremyAnsel.DirectX.Dxgi.html">Dxgi</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.html">JeremyAnsel</a>.<a class="xref" href="JeremyAnsel.DirectX.html">DirectX</a>.<a class="xref" href="JeremyAnsel.DirectX.Dxgi.html">Dxgi</a></h6>
   <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.Dxgi.dll</h6>
   <h5 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -2162,6 +2163,46 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_System_UInt32_JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present(System.UInt32%2CJeremyAnsel.DirectX.Dxgi.DxgiPresentOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiSwapChain2.cs/#L155">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present*"></a>
+  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_System_UInt32_JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present(System.UInt32,JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions)">Present(uint, DxgiPresentOptions)</h4>
+  <div class="markdown level1 summary"><p>Presents a frame on the display screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Present(uint syncInterval, DxgiPresentOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
+        <td><span class="parametername">syncInterval</span></td>
+        <td><p>An integer that specifies how to synchronize presentation of a frame with the vertical blank.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.html">DxgiPresentOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>An integer value that contains swap-chain presentation options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_System_UInt32_JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_JeremyAnsel_DirectX_Dxgi_DxgiRect___JeremyAnsel_DirectX_Dxgi_DxgiRect_JeremyAnsel_DirectX_Dxgi_DxgiPoint_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present(System.UInt32%2CJeremyAnsel.DirectX.Dxgi.DxgiPresentOptions%2CJeremyAnsel.DirectX.Dxgi.DxgiRect%5B%5D%2CJeremyAnsel.DirectX.Dxgi.DxgiRect%2CJeremyAnsel.DirectX.Dxgi.DxgiPoint)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -2214,46 +2255,6 @@
         <td><a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiPoint.html">DxgiPoint</a></td>
         <td><span class="parametername">scrollOffset</span></td>
         <td><p>The offset of the scrolled area that goes from the source rectangle (of previous frame) to the destination rectangle (of current frame).</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_System_UInt32_JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present(System.UInt32%2CJeremyAnsel.DirectX.Dxgi.DxgiPresentOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiSwapChain2.cs/#L155">View Source</a>
-  </span>
-  <a id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present*"></a>
-  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_System_UInt32_JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present(System.UInt32,JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions)">Present(uint, DxgiPresentOptions)</h4>
-  <div class="markdown level1 summary"><p>Presents a frame on the display screen.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Present(uint syncInterval, DxgiPresentOptions options)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
-        <td><span class="parametername">syncInterval</span></td>
-        <td><p>An integer that specifies how to synchronize presentation of a frame with the vertical blank.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.html">DxgiPresentOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>An integer value that contains swap-chain presentation options.</p>
 </td>
       </tr>
     </tbody>
@@ -2352,6 +2353,40 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_System_Boolean_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState(System.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiSwapChain2.cs/#L238">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState*"></a>
+  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_System_Boolean_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState(System.Boolean)">SetFullscreenState(bool)</h4>
+  <div class="markdown level1 summary"><p>Sets the display state to windowed or full screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFullscreenState(bool fullscreen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">fullscreen</span></td>
+        <td><p>A value indicating whether to set the display state to windowed or full screen.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_System_Boolean_JeremyAnsel_DirectX_Dxgi_DxgiOutput2_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState(System.Boolean%2CJeremyAnsel.DirectX.Dxgi.DxgiOutput2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -2390,43 +2425,9 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_System_Boolean_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState(System.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiSwapChain2.cs/#L238">View Source</a>
-  </span>
-  <a id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState*"></a>
-  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_System_Boolean_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState(System.Boolean)">SetFullscreenState(bool)</h4>
-  <div class="markdown level1 summary"><p>Sets the display state to windowed or full screen.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetFullscreenState(bool fullscreen)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><span class="parametername">fullscreen</span></td>
-        <td><p>A value indicating whether to set the display state to windowed or full screen.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
   <div>
       <a class="xref" href="JeremyAnsel.DirectX.Dxgi.IDxgiReleasable.html">IDxgiReleasable</a>
@@ -2435,6 +2436,7 @@
   <div>
       <a class="xref" href="JeremyAnsel.DirectX.D3D11.DxgiSwapChainExtensions.html#JeremyAnsel_DirectX_D3D11_DxgiSwapChainExtensions_GetTexture2D_JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_System_UInt32_">DxgiSwapChainExtensions.GetTexture2D(DxgiSwapChain2, uint)</a>
   </div>
+
 </article>
           </div>
 

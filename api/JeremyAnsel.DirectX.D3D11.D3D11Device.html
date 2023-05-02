@@ -1564,6 +1564,7 @@
             <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device">
 
 
+
   <h1 id="JeremyAnsel_DirectX_D3D11_D3D11Device" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device" class="text-break">Class D3D11Device
 </h1>
   <div class="markdown level0 summary"><p>The device interface represents a virtual adapter; it is used to create resources.</p>
@@ -1588,19 +1589,19 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode">object.GetHashCode()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">object.GetType()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">object.ReferenceEquals(object, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">object.ToString()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <span class="xref">JeremyAnsel</span>.<span class="xref">DirectX</span>.<a class="xref" href="JeremyAnsel.DirectX.D3D11.html">D3D11</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.html">JeremyAnsel</a>.<a class="xref" href="JeremyAnsel.DirectX.html">DirectX</a>.<a class="xref" href="JeremyAnsel.DirectX.D3D11.html">D3D11</a></h6>
   <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.D3D11.dll</h6>
   <h5 id="JeremyAnsel_DirectX_D3D11_D3D11Device_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -1705,6 +1706,68 @@
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CheckCounter_JeremyAnsel_DirectX_D3D11_D3D11CounterDesc_JeremyAnsel_DirectX_D3D11_D3D11CounterDataType__System_UInt32__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CheckCounter(JeremyAnsel.DirectX.D3D11.D3D11CounterDesc%2CJeremyAnsel.DirectX.D3D11.D3D11CounterDataType%40%2CSystem.UInt32%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L1269">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CheckCounter_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CheckCounter*"></a>
+  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CheckCounter_JeremyAnsel_DirectX_D3D11_D3D11CounterDesc_JeremyAnsel_DirectX_D3D11_D3D11CounterDataType__System_UInt32__" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CheckCounter(JeremyAnsel.DirectX.D3D11.D3D11CounterDesc,JeremyAnsel.DirectX.D3D11.D3D11CounterDataType@,System.UInt32@)">CheckCounter(D3D11CounterDesc, out D3D11CounterDataType, out uint)</h4>
+  <div class="markdown level1 summary"><p>Get the type, name, units of measure, and a description of an existing counter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckCounter(D3D11CounterDesc desc, out D3D11CounterDataType type, out uint activeCounters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11CounterDesc.html">D3D11CounterDesc</a></td>
+        <td><span class="parametername">desc</span></td>
+        <td><p>A counter description.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11CounterDataType.html">D3D11CounterDataType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The data type of a counter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
+        <td><span class="parametername">activeCounters</span></td>
+        <td><p>The number of hardware counters that are needed for this counter type to be created. All instances of the same counter type use the same hardware counters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>A boolean value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CheckCounter_JeremyAnsel_DirectX_D3D11_D3D11CounterDesc_JeremyAnsel_DirectX_D3D11_D3D11CounterDataType__System_UInt32__System_String__System_String__System_String__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CheckCounter(JeremyAnsel.DirectX.D3D11.D3D11CounterDesc%2CJeremyAnsel.DirectX.D3D11.D3D11CounterDataType%40%2CSystem.UInt32%40%2CSystem.String%40%2CSystem.String%40%2CSystem.String%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -1763,68 +1826,6 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">description</span></td>
         <td><p>A description of the counter.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><p>A boolean value.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CheckCounter_JeremyAnsel_DirectX_D3D11_D3D11CounterDesc_JeremyAnsel_DirectX_D3D11_D3D11CounterDataType__System_UInt32__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CheckCounter(JeremyAnsel.DirectX.D3D11.D3D11CounterDesc%2CJeremyAnsel.DirectX.D3D11.D3D11CounterDataType%40%2CSystem.UInt32%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L1269">View Source</a>
-  </span>
-  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CheckCounter_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CheckCounter*"></a>
-  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CheckCounter_JeremyAnsel_DirectX_D3D11_D3D11CounterDesc_JeremyAnsel_DirectX_D3D11_D3D11CounterDataType__System_UInt32__" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CheckCounter(JeremyAnsel.DirectX.D3D11.D3D11CounterDesc,JeremyAnsel.DirectX.D3D11.D3D11CounterDataType@,System.UInt32@)">CheckCounter(D3D11CounterDesc, out D3D11CounterDataType, out uint)</h4>
-  <div class="markdown level1 summary"><p>Get the type, name, units of measure, and a description of an existing counter.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CheckCounter(D3D11CounterDesc desc, out D3D11CounterDataType type, out uint activeCounters)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11CounterDesc.html">D3D11CounterDesc</a></td>
-        <td><span class="parametername">desc</span></td>
-        <td><p>A counter description.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11CounterDataType.html">D3D11CounterDataType</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The data type of a counter.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
-        <td><span class="parametername">activeCounters</span></td>
-        <td><p>The number of hardware counters that are needed for this counter type to be created. All instances of the same counter type use the same hardware counters.</p>
 </td>
       </tr>
     </tbody>
@@ -2545,6 +2546,56 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateBuffer_JeremyAnsel_DirectX_D3D11_D3D11BufferDesc_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateBuffer(JeremyAnsel.DirectX.D3D11.D3D11BufferDesc)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L262">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateBuffer_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateBuffer*"></a>
+  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateBuffer_JeremyAnsel_DirectX_D3D11_D3D11BufferDesc_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateBuffer(JeremyAnsel.DirectX.D3D11.D3D11BufferDesc)">CreateBuffer(D3D11BufferDesc)</h4>
+  <div class="markdown level1 summary"><p>Creates a buffer (vertex buffer, index buffer, or shader constant buffer).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D3D11Buffer CreateBuffer(D3D11BufferDesc desc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11BufferDesc.html">D3D11BufferDesc</a></td>
+        <td><span class="parametername">desc</span></td>
+        <td><p>Describes the buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Buffer.html">D3D11Buffer</a></td>
+        <td><p>The buffer object created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateBuffer_JeremyAnsel_DirectX_D3D11_D3D11BufferDesc_JeremyAnsel_DirectX_D3D11_D3D11SubResourceData_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateBuffer(JeremyAnsel.DirectX.D3D11.D3D11BufferDesc%2CJeremyAnsel.DirectX.D3D11.D3D11SubResourceData)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -2579,56 +2630,6 @@
         <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html">D3D11SubResourceData</a></td>
         <td><span class="parametername">data</span></td>
         <td><p>Describes the initialization data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Buffer.html">D3D11Buffer</a></td>
-        <td><p>The buffer object created.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateBuffer_JeremyAnsel_DirectX_D3D11_D3D11BufferDesc_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateBuffer(JeremyAnsel.DirectX.D3D11.D3D11BufferDesc)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L262">View Source</a>
-  </span>
-  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateBuffer_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateBuffer*"></a>
-  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateBuffer_JeremyAnsel_DirectX_D3D11_D3D11BufferDesc_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateBuffer(JeremyAnsel.DirectX.D3D11.D3D11BufferDesc)">CreateBuffer(D3D11BufferDesc)</h4>
-  <div class="markdown level1 summary"><p>Creates a buffer (vertex buffer, index buffer, or shader constant buffer).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D3D11Buffer CreateBuffer(D3D11BufferDesc desc)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11BufferDesc.html">D3D11BufferDesc</a></td>
-        <td><span class="parametername">desc</span></td>
-        <td><p>Describes the buffer.</p>
 </td>
       </tr>
     </tbody>
@@ -3152,7 +3153,7 @@
       <tr>
         <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel.html">D3D11FeatureLevel</a></td>
         <td><span class="parametername">featureLevel</span></td>
-        <td><p>If successful, returns the first feature level from the <code data-dev-comment-type="paramref" class="paramref">featureLevels</code> array which succeeded.</p>
+        <td><p>If successful, returns the first feature level from the <code class="paramref">featureLevels</code> array which succeeded.</p>
 </td>
       </tr>
       <tr>
@@ -3235,7 +3236,7 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
       <tr>
         <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel.html">D3D11FeatureLevel</a></td>
         <td><span class="parametername">featureLevel</span></td>
-        <td><p>If successful, returns the first feature level from the <code data-dev-comment-type="paramref" class="paramref">featureLevels</code> array which succeeded.</p>
+        <td><p>If successful, returns the first feature level from the <code class="paramref">featureLevels</code> array which succeeded.</p>
 </td>
       </tr>
       <tr>
@@ -3914,6 +3915,56 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture1D_JeremyAnsel_DirectX_D3D11_D3D11Texture1DDesc_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture1D(JeremyAnsel.DirectX.D3D11.D3D11Texture1DDesc)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L439">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture1D_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture1D*"></a>
+  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture1D_JeremyAnsel_DirectX_D3D11_D3D11Texture1DDesc_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture1D(JeremyAnsel.DirectX.D3D11.D3D11Texture1DDesc)">CreateTexture1D(D3D11Texture1DDesc)</h4>
+  <div class="markdown level1 summary"><p>Creates an array of 1D textures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public D3D11Texture1D CreateTexture1D(D3D11Texture1DDesc desc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture1DDesc.html">D3D11Texture1DDesc</a></td>
+        <td><span class="parametername">desc</span></td>
+        <td><p>Describes a 1D texture resource.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html">D3D11Texture1D</a></td>
+        <td><p>The created texture.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture1D_JeremyAnsel_DirectX_D3D11_D3D11Texture1DDesc_JeremyAnsel_DirectX_D3D11_D3D11SubResourceData___.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture1D(JeremyAnsel.DirectX.D3D11.D3D11Texture1DDesc%2CJeremyAnsel.DirectX.D3D11.D3D11SubResourceData%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -3970,19 +4021,19 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture1D_JeremyAnsel_DirectX_D3D11_D3D11Texture1DDesc_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture1D(JeremyAnsel.DirectX.D3D11.D3D11Texture1DDesc)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture2D_JeremyAnsel_DirectX_D3D11_D3D11Texture2DDesc_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture2D(JeremyAnsel.DirectX.D3D11.D3D11Texture2DDesc)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L439">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L501">View Source</a>
   </span>
-  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture1D_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture1D*"></a>
-  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture1D_JeremyAnsel_DirectX_D3D11_D3D11Texture1DDesc_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture1D(JeremyAnsel.DirectX.D3D11.D3D11Texture1DDesc)">CreateTexture1D(D3D11Texture1DDesc)</h4>
-  <div class="markdown level1 summary"><p>Creates an array of 1D textures.</p>
+  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture2D_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture2D*"></a>
+  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture2D_JeremyAnsel_DirectX_D3D11_D3D11Texture2DDesc_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture2D(JeremyAnsel.DirectX.D3D11.D3D11Texture2DDesc)">CreateTexture2D(D3D11Texture2DDesc)</h4>
+  <div class="markdown level1 summary"><p>Create an array of 2D textures.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D3D11Texture1D CreateTexture1D(D3D11Texture1DDesc desc)</code></pre>
+    <pre><code class="lang-csharp hljs">public D3D11Texture2D CreateTexture2D(D3D11Texture2DDesc desc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3995,9 +4046,9 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture1DDesc.html">D3D11Texture1DDesc</a></td>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture2DDesc.html">D3D11Texture2DDesc</a></td>
         <td><span class="parametername">desc</span></td>
-        <td><p>Describes a 1D texture resource.</p>
+        <td><p>Describes a 2D texture resource.</p>
 </td>
       </tr>
     </tbody>
@@ -4012,7 +4063,7 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html">D3D11Texture1D</a></td>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture2D.html">D3D11Texture2D</a></td>
         <td><p>The created texture.</p>
 </td>
       </tr>
@@ -4076,19 +4127,19 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture2D_JeremyAnsel_DirectX_D3D11_D3D11Texture2DDesc_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture2D(JeremyAnsel.DirectX.D3D11.D3D11Texture2DDesc)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture3D_JeremyAnsel_DirectX_D3D11_D3D11Texture3DDesc_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture3D(JeremyAnsel.DirectX.D3D11.D3D11Texture3DDesc)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L501">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L563">View Source</a>
   </span>
-  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture2D_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture2D*"></a>
-  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture2D_JeremyAnsel_DirectX_D3D11_D3D11Texture2DDesc_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture2D(JeremyAnsel.DirectX.D3D11.D3D11Texture2DDesc)">CreateTexture2D(D3D11Texture2DDesc)</h4>
-  <div class="markdown level1 summary"><p>Create an array of 2D textures.</p>
+  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture3D_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture3D*"></a>
+  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture3D_JeremyAnsel_DirectX_D3D11_D3D11Texture3DDesc_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture3D(JeremyAnsel.DirectX.D3D11.D3D11Texture3DDesc)">CreateTexture3D(D3D11Texture3DDesc)</h4>
+  <div class="markdown level1 summary"><p>Create a single 3D texture.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D3D11Texture2D CreateTexture2D(D3D11Texture2DDesc desc)</code></pre>
+    <pre><code class="lang-csharp hljs">public D3D11Texture3D CreateTexture3D(D3D11Texture3DDesc desc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4101,9 +4152,9 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture2DDesc.html">D3D11Texture2DDesc</a></td>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture3DDesc.html">D3D11Texture3DDesc</a></td>
         <td><span class="parametername">desc</span></td>
-        <td><p>Describes a 2D texture resource.</p>
+        <td><p>Describes a 3D texture resource.</p>
 </td>
       </tr>
     </tbody>
@@ -4118,7 +4169,7 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture2D.html">D3D11Texture2D</a></td>
+        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture3D.html">D3D11Texture3D</a></td>
         <td><p>The created texture.</p>
 </td>
       </tr>
@@ -4160,56 +4211,6 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
         <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html">D3D11SubResourceData</a>[]</td>
         <td><span class="parametername">data</span></td>
         <td><p>Describe subresources for the 3D texture resource.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture3D.html">D3D11Texture3D</a></td>
-        <td><p>The created texture.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture3D_JeremyAnsel_DirectX_D3D11_D3D11Texture3DDesc_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture3D(JeremyAnsel.DirectX.D3D11.D3D11Texture3DDesc)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D3D11/D3D11Device.cs/#L563">View Source</a>
-  </span>
-  <a id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture3D_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture3D*"></a>
-  <h4 id="JeremyAnsel_DirectX_D3D11_D3D11Device_CreateTexture3D_JeremyAnsel_DirectX_D3D11_D3D11Texture3DDesc_" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Device.CreateTexture3D(JeremyAnsel.DirectX.D3D11.D3D11Texture3DDesc)">CreateTexture3D(D3D11Texture3DDesc)</h4>
-  <div class="markdown level1 summary"><p>Create a single 3D texture.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D3D11Texture3D CreateTexture3D(D3D11Texture3DDesc desc)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.D3D11.D3D11Texture3DDesc.html">D3D11Texture3DDesc</a></td>
-        <td><span class="parametername">desc</span></td>
-        <td><p>Describes a 3D texture resource.</p>
 </td>
       </tr>
     </tbody>
@@ -4752,11 +4753,12 @@ public static void CreateDeviceAndSwapChain(object adapter, D3D11DriverType driv
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
   </div>
   <div>
       <a class="xref" href="JeremyAnsel.DirectX.D3D11.ID3D11Releasable.html">ID3D11Releasable</a>
   </div>
+
 </article>
           </div>
 

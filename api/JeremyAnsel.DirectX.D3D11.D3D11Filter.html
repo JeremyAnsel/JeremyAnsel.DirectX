@@ -1564,12 +1564,14 @@
             <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Filter">
 
 
+
+
   <h1 id="JeremyAnsel_DirectX_D3D11_D3D11Filter" data-uid="JeremyAnsel.DirectX.D3D11.D3D11Filter" class="text-break">Enum D3D11Filter
 </h1>
   <div class="markdown level0 summary"><p>Filtering options during texture sampling.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <span class="xref">JeremyAnsel</span>.<span class="xref">DirectX</span>.<a class="xref" href="JeremyAnsel.DirectX.D3D11.html">D3D11</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.html">JeremyAnsel</a>.<a class="xref" href="JeremyAnsel.DirectX.html">DirectX</a>.<a class="xref" href="JeremyAnsel.DirectX.D3D11.html">D3D11</a></h6>
   <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.D3D11.dll</h6>
   <h5 id="JeremyAnsel_DirectX_D3D11_D3D11Filter_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -1681,6 +1683,46 @@
 </td>
       </tr>
       <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinLinearMagMipPoint">MinLinearMagMipPoint</td>
+        <td><p>Use linear interpolation for minification; use point sampling for magnification and mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinLinearMagPointMipLinear">MinLinearMagPointMipLinear</td>
+        <td><p>Use linear interpolation for minification; use point sampling for magnification; use linear interpolation for mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagLinearMipPoint">MinMagLinearMipPoint</td>
+        <td><p>Use linear interpolation for minification and magnification; use point sampling for mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagMipLinear">MinMagMipLinear</td>
+        <td><p>Use linear interpolation for minification, magnification, and mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagMipPoint">MinMagMipPoint</td>
+        <td><p>Use point sampling for minification, magnification, and mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagPointMipLinear">MinMagPointMipLinear</td>
+        <td><p>Use point sampling for minification and magnification; use linear interpolation for mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinPointMagLinearMipPoint">MinPointMagLinearMipPoint</td>
+        <td><p>Use point sampling for minification; use linear interpolation for magnification; use point sampling for mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinPointMagMipLinear">MinPointMagMipLinear</td>
+        <td><p>Use point sampling for minification; use linear interpolation for magnification and mip-level sampling.</p>
+</td>
+      </tr>
+      <tr>
         <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumAnisotropic">MinimumAnisotropic</td>
         <td><p>Fetch the same set of texels as <code>D3D11_FILTER_ANISOTROPIC</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
 </td>
@@ -1723,46 +1765,6 @@
       <tr>
         <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinimumMinPointMagMipLinear">MinimumMinPointMagMipLinear</td>
         <td><p>Fetch the same set of texels as <code>D3D11_FILTER_MIN_POINT_MAG_MIP_LINEAR</code> and instead of filtering them return the minimum of the texels. Texels that are weighted 0 during filtering aren't counted towards the minimum.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinLinearMagMipPoint">MinLinearMagMipPoint</td>
-        <td><p>Use linear interpolation for minification; use point sampling for magnification and mip-level sampling.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinLinearMagPointMipLinear">MinLinearMagPointMipLinear</td>
-        <td><p>Use linear interpolation for minification; use point sampling for magnification; use linear interpolation for mip-level sampling.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagLinearMipPoint">MinMagLinearMipPoint</td>
-        <td><p>Use linear interpolation for minification and magnification; use point sampling for mip-level sampling.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagMipLinear">MinMagMipLinear</td>
-        <td><p>Use linear interpolation for minification, magnification, and mip-level sampling.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagMipPoint">MinMagMipPoint</td>
-        <td><p>Use point sampling for minification, magnification, and mip-level sampling.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinMagPointMipLinear">MinMagPointMipLinear</td>
-        <td><p>Use point sampling for minification and magnification; use linear interpolation for mip-level sampling.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinPointMagLinearMipPoint">MinPointMagLinearMipPoint</td>
-        <td><p>Use point sampling for minification; use linear interpolation for magnification; use point sampling for mip-level sampling.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_D3D11_D3D11Filter_MinPointMagMipLinear">MinPointMagMipLinear</td>
-        <td><p>Use point sampling for minification; use linear interpolation for magnification and mip-level sampling.</p>
 </td>
       </tr>
     </tbody>

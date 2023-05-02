@@ -1564,6 +1564,7 @@
             <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere">
 
 
+
   <h1 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere" class="text-break">Struct BoundingSphere
 </h1>
   <div class="markdown level0 summary"><p>A bounding sphere object.</p>
@@ -1576,19 +1577,19 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring">ValueType.ToString()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">object.GetType()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">object.ReferenceEquals(object, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <span class="xref">JeremyAnsel</span>.<span class="xref">DirectX</span>.<a class="xref" href="JeremyAnsel.DirectX.DXMath.html">DXMath</a>.<a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.html">Collision</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.html">JeremyAnsel</a>.<a class="xref" href="JeremyAnsel.DirectX.html">DirectX</a>.<a class="xref" href="JeremyAnsel.DirectX.DXMath.html">DXMath</a>.<a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.html">Collision</a></h6>
   <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DXMath.dll</h6>
   <h5 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -2034,6 +2035,56 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Contains_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Contains(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingSphere.cs/#L413">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Contains_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Contains*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Contains_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Contains(JeremyAnsel.DirectX.DXMath.XMVector)">Contains(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> contains a specified point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType Contains(XMVector point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to test against.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> contains the specified point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Contains_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Contains(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -2090,56 +2141,6 @@
       <tr>
         <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
         <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> contains the specified triangle.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Contains_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Contains(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingSphere.cs/#L413">View Source</a>
-  </span>
-  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Contains_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Contains*"></a>
-  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Contains_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Contains(JeremyAnsel.DirectX.DXMath.XMVector)">Contains(XMVector)</h4>
-  <div class="markdown level1 summary"><p>Tests whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> contains a specified point.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ContainmentType Contains(XMVector point)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
-        <td><span class="parametername">point</span></td>
-        <td><p>The point to test against.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a></td>
-        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.ContainmentType.html">ContainmentType</a> value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> contains the specified point.</p>
 </td>
       </tr>
     </tbody>
@@ -2501,7 +2502,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals#system-valuetype-equals(system-object)">ValueType.Equals(Object)</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_GetHashCode.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.GetHashCode%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -2535,7 +2536,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode#system-valuetype-gethashcode">ValueType.GetHashCode()</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_Collision_BoundingBox_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.Collision.BoundingBox)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -2738,6 +2739,112 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingSphere.cs/#L727">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.XMVector)">Intersects(XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> for intersection with a plane.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlaneIntersectionType Intersects(XMVector plane)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">plane</span></td>
+        <td><p>A vector describing the plane.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.PlaneIntersectionType.html">PlaneIntersectionType</a></td>
+        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.PlaneIntersectionType.html">PlaneIntersectionType</a> value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> intersects the specified plane.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingSphere.cs/#L763">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Intersects(XMVector, XMVector)</h4>
+  <div class="markdown level1 summary"><p>Tests the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> for intersection with a ray.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(XMVector origin, XMVector direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The origin of the ray.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>The direction of the ray.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> contains the specified ray.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -2856,112 +2963,6 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> contains the specified ray.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.XMVector%2CJeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingSphere.cs/#L763">View Source</a>
-  </span>
-  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects*"></a>
-  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.XMVector,JeremyAnsel.DirectX.DXMath.XMVector)">Intersects(XMVector, XMVector)</h4>
-  <div class="markdown level1 summary"><p>Tests the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> for intersection with a ray.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Intersects(XMVector origin, XMVector direction)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
-        <td><span class="parametername">origin</span></td>
-        <td><p>The origin of the ray.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
-        <td><span class="parametername">direction</span></td>
-        <td><p>The direction of the ray.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><p>A boolean value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> contains the specified ray.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/Collision/BoundingSphere.cs/#L727">View Source</a>
-  </span>
-  <a id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects*"></a>
-  <h4 id="JeremyAnsel_DirectX_DXMath_Collision_BoundingSphere_Intersects_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.Intersects(JeremyAnsel.DirectX.DXMath.XMVector)">Intersects(XMVector)</h4>
-  <div class="markdown level1 summary"><p>Tests the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> for intersection with a plane.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlaneIntersectionType Intersects(XMVector plane)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.XMVector.html">XMVector</a></td>
-        <td><span class="parametername">plane</span></td>
-        <td><p>A vector describing the plane.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.PlaneIntersectionType.html">PlaneIntersectionType</a></td>
-        <td><p>A <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.PlaneIntersectionType.html">PlaneIntersectionType</a> value indicating whether the <a class="xref" href="JeremyAnsel.DirectX.DXMath.Collision.BoundingSphere.html">BoundingSphere</a> intersects the specified plane.</p>
 </td>
       </tr>
     </tbody>
@@ -3194,8 +3195,9 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
+
 </article>
           </div>
 
