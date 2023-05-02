@@ -28,8 +28,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <summary>
         /// Gets the size of the layer in device-independent pixels.
         /// </summary>
-        /// <returns>The size of the layer in device-independent pixels.</returns>
+        /// <param name="size">The size of the layer in device-independent pixels.</param>
         [PreserveSig]
-        D2D1SizeF GetSize();
+        void GetSize(
+            [Out] out D2D1SizeF size);
     }
 }

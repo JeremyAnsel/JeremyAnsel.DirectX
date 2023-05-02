@@ -78,7 +78,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1PixelFormat PixelFormat
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.GetHandle<ID2D1RenderTarget>().GetPixelFormat(); }
+            get
+            {
+                this.GetHandle<ID2D1RenderTarget>().GetPixelFormat(out D2D1PixelFormat pixelFormat);
+                return pixelFormat;
+            }
         }
 
         /// <summary>

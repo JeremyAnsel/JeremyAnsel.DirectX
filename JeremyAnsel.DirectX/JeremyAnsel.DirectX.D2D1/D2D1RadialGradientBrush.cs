@@ -43,7 +43,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1Point2F Center
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.brush.GetCenter(); }
+            get
+            {
+                this.brush.GetCenter(out D2D1Point2F center);
+                return center;
+            }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
@@ -56,7 +60,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1Point2F GradientOriginOffset
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.brush.GetGradientOriginOffset(); }
+            get
+            {
+                this.brush.GetGradientOriginOffset(out D2D1Point2F offset);
+                return offset;
+            }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]

@@ -67,8 +67,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <summary>
         /// Retrieves the color of the solid color brush.
         /// </summary>
-        /// <returns>The color of this solid color brush.</returns>
+        /// <param name="color">The color of this solid color brush.</param>
         [PreserveSig]
-        D2D1ColorF GetColor();
+        void GetColor(
+            [Out] out D2D1ColorF color);
     }
 }

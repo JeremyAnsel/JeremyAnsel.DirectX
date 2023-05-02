@@ -43,7 +43,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1ColorF Color
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.brush.GetColor(); }
+            get
+            {
+                this.brush.GetColor(out D2D1ColorF color);
+                return color;
+            }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]

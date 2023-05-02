@@ -91,16 +91,18 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <summary>
         /// Retrieves the center of the gradient ellipse.
         /// </summary>
-        /// <returns>The center of the gradient ellipse. This value is expressed in the brush's coordinate space.</returns>
+        /// <param name="center">The center of the gradient ellipse. This value is expressed in the brush's coordinate space.</param>
         [PreserveSig]
-        D2D1Point2F GetCenter();
+        void GetCenter(
+            [Out] out D2D1Point2F center);
 
         /// <summary>
         /// Retrieves the offset of the gradient origin relative to the gradient ellipse's center.
         /// </summary>
-        /// <returns>The offset of the gradient origin from the center of the gradient ellipse. This value is expressed in the brush's coordinate space.</returns>
+        /// <param name="offset">The offset of the gradient origin from the center of the gradient ellipse. This value is expressed in the brush's coordinate space.</param>
         [PreserveSig]
-        D2D1Point2F GetGradientOriginOffset();
+        void GetGradientOriginOffset(
+            [Out] out D2D1Point2F offset);
 
         /// <summary>
         /// Retrieves the x-radius of the gradient ellipse.

@@ -45,7 +45,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1SizeF Size
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.bitmap.GetSize(); }
+            get
+            {
+                this.bitmap.GetSize(out D2D1SizeF size);
+                return size;
+            }
         }
 
         /// <summary>
@@ -54,7 +58,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1SizeU PixelSize
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.bitmap.GetPixelSize(); }
+            get
+            {
+                this.bitmap.GetPixelSize(out D2D1SizeU size);
+                return size;
+            }
         }
 
         /// <summary>
@@ -63,7 +71,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1PixelFormat PixelFormat
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.bitmap.GetPixelFormat(); }
+            get
+            {
+                this.bitmap.GetPixelFormat(out D2D1PixelFormat pixelFormat);
+                return pixelFormat;
+            }
         }
 
         /// <summary>

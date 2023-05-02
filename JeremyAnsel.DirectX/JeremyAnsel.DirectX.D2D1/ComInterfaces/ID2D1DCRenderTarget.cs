@@ -531,9 +531,10 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <summary>
         /// Retrieves the pixel format and alpha mode of the render target.
         /// </summary>
-        /// <returns>The pixel format and alpha mode of the render target.</returns>
+        /// <param name="pixelFormat">The pixel format and alpha mode of the render target.</param>
         [PreserveSig]
-        D2D1PixelFormat GetPixelFormat();
+        void GetPixelFormat(
+            [Out] out D2D1PixelFormat pixelFormat);
 
         /// <summary>
         /// Sets the dots per inch (DPI) of the render target.

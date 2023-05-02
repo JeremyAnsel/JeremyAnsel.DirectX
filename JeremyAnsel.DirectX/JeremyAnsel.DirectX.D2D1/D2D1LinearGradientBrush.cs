@@ -43,7 +43,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1Point2F StartPoint
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.brush.GetStartPoint(); }
+            get
+            {
+                this.brush.GetStartPoint(out D2D1Point2F point);
+                return point;
+            }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
@@ -56,7 +60,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1Point2F EndPoint
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.brush.GetEndPoint(); }
+            get
+            {
+                this.brush.GetEndPoint(out D2D1Point2F point);
+                return point;
+            }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]

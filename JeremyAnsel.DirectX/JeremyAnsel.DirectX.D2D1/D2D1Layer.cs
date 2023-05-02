@@ -42,7 +42,11 @@ namespace JeremyAnsel.DirectX.D2D1
         public D2D1SizeF Size
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get { return this.layer.GetSize(); }
+            get
+            {
+                this.layer.GetSize(out D2D1SizeF size);
+                return size;
+            }
         }
     }
 }

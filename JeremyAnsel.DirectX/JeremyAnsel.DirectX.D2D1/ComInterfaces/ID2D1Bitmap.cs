@@ -28,23 +28,26 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <summary>
         /// Returns the size of the bitmap in resolution independent units.
         /// </summary>
-        /// <returns><see cref="D2D1SizeF"/></returns>
+        /// <param name="size">The size of the bitmap in resolution independent units</param>
         [PreserveSig]
-        D2D1SizeF GetSize();
+        void GetSize(
+            [Out] out D2D1SizeF size);
 
         /// <summary>
         /// Returns the size of the bitmap in resolution dependent units, (pixels).
         /// </summary>
-        /// <returns><see cref="D2D1SizeU"/></returns>
+        /// <param name="size">The size of the bitmap in resolution dependent units.</param>
         [PreserveSig]
-        D2D1SizeU GetPixelSize();
+        void GetPixelSize(
+            [Out] out D2D1SizeU size);
 
         /// <summary>
         /// Retrieve the format of the bitmap.
         /// </summary>
-        /// <returns><see cref="D2D1PixelFormat"/></returns>
+        /// <param name="pixelFormat">The format of the bitmap.</param>
         [PreserveSig]
-        D2D1PixelFormat GetPixelFormat();
+        void GetPixelFormat(
+            [Out] out D2D1PixelFormat pixelFormat);
 
         /// <summary>
         /// Return the dots per inch (DPI) of the bitmap.

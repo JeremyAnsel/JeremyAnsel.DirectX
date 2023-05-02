@@ -75,16 +75,18 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <summary>
         /// Retrieves the starting coordinates of the linear gradient.
         /// </summary>
-        /// <returns>The starting two-dimensional coordinates of the linear gradient, in the brush's coordinate space.</returns>
+        /// <param name="point">The starting two-dimensional coordinates of the linear gradient, in the brush's coordinate space.</param>
         [PreserveSig]
-        D2D1Point2F GetStartPoint();
+        void GetStartPoint(
+            [Out] out D2D1Point2F point);
 
         /// <summary>
         /// Retrieves the ending coordinates of the linear gradient.
         /// </summary>
-        /// <returns>The ending two-dimensional coordinates of the linear gradient, in the brush's coordinate space.</returns>
+        /// <param name="point">The ending two-dimensional coordinates of the linear gradient, in the brush's coordinate space.</param>
         [PreserveSig]
-        D2D1Point2F GetEndPoint();
+        void GetEndPoint(
+            [Out] out D2D1Point2F point);
 
         /// <summary>
         /// Retrieves the <see cref="ID2D1GradientStopCollection"/> associated with this linear gradient brush.
