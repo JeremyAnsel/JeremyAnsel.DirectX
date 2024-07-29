@@ -382,7 +382,6 @@ namespace JeremyAnsel.DirectX.DWrite
         /// created with CLEARTYPE_NATURAL_QUALITY.
         /// </param>
         /// <param name="glyphIndices">An array of glyph indices to compute the metrics for.</param>
-        /// <param name="glyphCount">The number of elements in the glyphIndices array.</param>
         /// <param name="isSideways">Indicates whether the font is being used in a sideways run.
         /// This can affect the glyph metrics if the font has oblique simulation
         /// because sideways oblique simulation differs from non-sideways oblique simulation.</param>
