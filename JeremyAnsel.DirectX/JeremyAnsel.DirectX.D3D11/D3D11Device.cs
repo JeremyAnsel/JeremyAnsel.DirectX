@@ -1221,6 +1221,58 @@ namespace JeremyAnsel.DirectX.D3D11
         }
 
         /// <summary>
+        /// Give a device access to a shared resource created on a different device.
+        /// </summary>
+        /// <param name="resourceHandle">A resource handle.</param>
+        /// <returns>A pointer to the resource we are gaining access to.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Buffer OpenSharedBuffer(IntPtr resourceHandle)
+        {
+            Guid resourceGuid = new("48570b85-d1ee-4fcd-a250-eb350722b037");
+            var obj = new D3D11Buffer((ID3D11Buffer)this.device.OpenSharedResource(resourceHandle, ref resourceGuid));
+            return obj;
+        }
+
+        /// <summary>
+        /// Give a device access to a shared resource created on a different device.
+        /// </summary>
+        /// <param name="resourceHandle">A resource handle.</param>
+        /// <returns>A pointer to the resource we are gaining access to.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Texture1D OpenSharedTexture1D(IntPtr resourceHandle)
+        {
+            Guid resourceGuid = new("f8fb5c27-c6b3-4f75-a4c8-439af2ef564c");
+            var obj = new D3D11Texture1D((ID3D11Texture1D)this.device.OpenSharedResource(resourceHandle, ref resourceGuid));
+            return obj;
+        }
+
+        /// <summary>
+        /// Give a device access to a shared resource created on a different device.
+        /// </summary>
+        /// <param name="resourceHandle">A resource handle.</param>
+        /// <returns>A pointer to the resource we are gaining access to.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Texture2D OpenSharedTexture2D(IntPtr resourceHandle)
+        {
+            Guid resourceGuid = new("6f15aaf2-d208-4e89-9ab4-489535d34f9c");
+            var obj = new D3D11Texture2D((ID3D11Texture2D)this.device.OpenSharedResource(resourceHandle, ref resourceGuid));
+            return obj;
+        }
+
+        /// <summary>
+        /// Give a device access to a shared resource created on a different device.
+        /// </summary>
+        /// <param name="resourceHandle">A resource handle.</param>
+        /// <returns>A pointer to the resource we are gaining access to.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Texture3D OpenSharedTexture3D(IntPtr resourceHandle)
+        {
+            Guid resourceGuid = new("037e866e-f56d-4357-a8af-9dabbe6e250e");
+            var obj = new D3D11Texture3D((ID3D11Texture3D)this.device.OpenSharedResource(resourceHandle, ref resourceGuid));
+            return obj;
+        }
+
+        /// <summary>
         /// Get the support of a given format on the installed video device.
         /// </summary>
         /// <param name="format">A format for which to check for support.</param>

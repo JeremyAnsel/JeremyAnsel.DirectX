@@ -7,6 +7,7 @@ namespace JeremyAnsel.DirectX.D3D11
     using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
+    using JeremyAnsel.DirectX.Dxgi;
 
     /// <summary>
     /// A buffer interface accesses a buffer resource, which is unstructured memory.
@@ -49,6 +50,18 @@ namespace JeremyAnsel.DirectX.D3D11
                 this.buffer.GetDesc(out D3D11BufferDesc desc);
                 return desc;
             }
+        }
+
+        /// <summary>
+        /// Gets the handle to a shared resource.
+        /// </summary>
+        /// <returns>A handle.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
+        public IntPtr GetSharedHandle()
+        {
+            using var resource = new DxgiResource(this.buffer);
+            IntPtr handle = resource.GetSharedHandle();
+            return handle;
         }
     }
 }
