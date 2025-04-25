@@ -23,6 +23,25 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Initializes a new instance of the <see cref="D2D1Bitmap"/> class.
         /// </summary>
+        /// <param name="resource">A resource interface which implements the <c>ID2D1Bitmap</c> interface.</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D2D1Bitmap(object resource)
+        {
+            IntPtr ptr = Marshal.GetIUnknownForObject(resource);
+
+            try
+            {
+                this.bitmap = (ID2D1Bitmap)Marshal.GetObjectForIUnknown(ptr);
+            }
+            finally
+            {
+                Marshal.Release(ptr);
+            }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="D2D1Bitmap"/> class.
+        /// </summary>
         /// <param name="bitmap">A D2D1 bitmap interface.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal D2D1Bitmap(ID2D1Bitmap bitmap)
