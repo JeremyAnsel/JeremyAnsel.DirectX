@@ -120,15 +120,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(srcBitmap));
             }
 
-            GCHandle destPointHandle = GCHandle.Alloc(destPoint, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Point2U)));
 
             try
             {
-                this.bitmap.CopyFromBitmap(destPointHandle.AddrOfPinnedObject(), srcBitmap.bitmap, IntPtr.Zero);
+                Marshal.StructureToPtr(destPoint, ptr, false);
+
+                this.bitmap.CopyFromBitmap(ptr, srcBitmap.bitmap, IntPtr.Zero);
             }
             finally
             {
-                destPointHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -145,15 +147,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(srcBitmap));
             }
 
-            GCHandle srcRectHandle = GCHandle.Alloc(srcRect, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectU)));
 
             try
             {
-                this.bitmap.CopyFromBitmap(IntPtr.Zero, srcBitmap.bitmap, srcRectHandle.AddrOfPinnedObject());
+                Marshal.StructureToPtr(srcRect, ptr, false);
+
+                this.bitmap.CopyFromBitmap(IntPtr.Zero, srcBitmap.bitmap, ptr);
             }
             finally
             {
-                srcRectHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -171,17 +175,20 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(srcBitmap));
             }
 
-            GCHandle destPointHandle = GCHandle.Alloc(destPoint, GCHandleType.Pinned);
-            GCHandle srcRectHandle = GCHandle.Alloc(srcRect, GCHandleType.Pinned);
+            IntPtr destPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Point2U)));
+            IntPtr srcPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectU)));
 
             try
             {
-                this.bitmap.CopyFromBitmap(destPointHandle.AddrOfPinnedObject(), srcBitmap.bitmap, srcRectHandle.AddrOfPinnedObject());
+                Marshal.StructureToPtr(destPoint, destPtr, false);
+                Marshal.StructureToPtr(srcRect, srcPtr, false);
+
+                this.bitmap.CopyFromBitmap(destPtr, srcBitmap.bitmap, srcPtr);
             }
             finally
             {
-                destPointHandle.Free();
-                srcRectHandle.Free();
+                Marshal.FreeHGlobal(destPtr);
+                Marshal.FreeHGlobal(srcPtr);
             }
         }
 
@@ -215,15 +222,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(renderTarget));
             }
 
-            GCHandle destPointHandle = GCHandle.Alloc(destPoint, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Point2U)));
 
             try
             {
-                this.bitmap.CopyFromRenderTarget(destPointHandle.AddrOfPinnedObject(), renderTarget.GetHandle<ID2D1RenderTarget>(), IntPtr.Zero);
+                Marshal.StructureToPtr(destPoint, ptr, false);
+
+                this.bitmap.CopyFromRenderTarget(ptr, renderTarget.GetHandle<ID2D1RenderTarget>(), IntPtr.Zero);
             }
             finally
             {
-                destPointHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -241,15 +250,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(renderTarget));
             }
 
-            GCHandle srcRectHandle = GCHandle.Alloc(srcRect, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectU)));
 
             try
             {
-                this.bitmap.CopyFromRenderTarget(IntPtr.Zero, renderTarget.GetHandle<ID2D1RenderTarget>(), srcRectHandle.AddrOfPinnedObject());
+                Marshal.StructureToPtr(srcRect, ptr, false);
+
+                this.bitmap.CopyFromRenderTarget(IntPtr.Zero, renderTarget.GetHandle<ID2D1RenderTarget>(), ptr);
             }
             finally
             {
-                srcRectHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -268,17 +279,20 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(renderTarget));
             }
 
-            GCHandle destPointHandle = GCHandle.Alloc(destPoint, GCHandleType.Pinned);
-            GCHandle srcRectHandle = GCHandle.Alloc(srcRect, GCHandleType.Pinned);
+            IntPtr destPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Point2U)));
+            IntPtr srcPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectU)));
 
             try
             {
-                this.bitmap.CopyFromRenderTarget(destPointHandle.AddrOfPinnedObject(), renderTarget.GetHandle<ID2D1RenderTarget>(), srcRectHandle.AddrOfPinnedObject());
+                Marshal.StructureToPtr(destPoint, destPtr, false);
+                Marshal.StructureToPtr(srcRect, srcPtr, false);
+
+                this.bitmap.CopyFromRenderTarget(destPtr, renderTarget.GetHandle<ID2D1RenderTarget>(), srcPtr);
             }
             finally
             {
-                destPointHandle.Free();
-                srcRectHandle.Free();
+                Marshal.FreeHGlobal(destPtr);
+                Marshal.FreeHGlobal(srcPtr);
             }
         }
 
@@ -318,15 +332,17 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void CopyFromMemory(D2D1RectU destRect, IntPtr srcData, uint pitch)
         {
-            GCHandle destRectHandle = GCHandle.Alloc(destRect, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectU)));
 
             try
             {
-                this.bitmap.CopyFromMemory(destRectHandle.AddrOfPinnedObject(), srcData, pitch);
+                Marshal.StructureToPtr(destRect, ptr, false);
+
+                this.bitmap.CopyFromMemory(ptr, srcData, pitch);
             }
             finally
             {
-                destRectHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -344,15 +360,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(srcData));
             }
 
-            GCHandle destRectHandle = GCHandle.Alloc(destRect, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectU)));
 
             try
             {
-                this.bitmap.CopyFromMemory(destRectHandle.AddrOfPinnedObject(), Marshal.UnsafeAddrOfPinnedArrayElement(srcData, 0), pitch);
+                Marshal.StructureToPtr(destRect, ptr, false);
+
+                this.bitmap.CopyFromMemory(ptr, Marshal.UnsafeAddrOfPinnedArrayElement(srcData, 0), pitch);
             }
             finally
             {
-                destRectHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
     }

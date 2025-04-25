@@ -82,15 +82,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1Factory factory;
 
-            GCHandle handle = GCHandle.Alloc(factoryOptions, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1FactoryOptions)));
 
             try
             {
-                NativeMethods.D2D1CreateFactory(factoryType, typeof(ID2D1Factory).GUID, handle.AddrOfPinnedObject(), out factory);
+                Marshal.StructureToPtr(factoryOptions, ptr, false);
+
+                NativeMethods.D2D1CreateFactory(factoryType, typeof(ID2D1Factory).GUID, ptr, out factory);
             }
             finally
             {
-                handle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (factory == null)
@@ -333,15 +335,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1DrawingStateBlock drawingStateBlock;
 
-            GCHandle drawingStateDescriptionHandle = GCHandle.Alloc(drawingStateDescription, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1DrawingStateDescription)));
 
             try
             {
-                this.factory.CreateDrawingStateBlock(drawingStateDescriptionHandle.AddrOfPinnedObject(), null, out drawingStateBlock);
+                Marshal.StructureToPtr(drawingStateDescription, ptr, false);
+
+                this.factory.CreateDrawingStateBlock(ptr, null, out drawingStateBlock);
             }
             finally
             {
-                drawingStateDescriptionHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (drawingStateBlock == null)
@@ -381,15 +385,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1DrawingStateBlock drawingStateBlock;
 
-            GCHandle drawingStateDescriptionHandle = GCHandle.Alloc(drawingStateDescription, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1DrawingStateDescription)));
 
             try
             {
-                this.factory.CreateDrawingStateBlock(drawingStateDescriptionHandle.AddrOfPinnedObject(), textRenderingParams == null ? null : (IDWriteRenderingParams)textRenderingParams.Handle, out drawingStateBlock);
+                Marshal.StructureToPtr(drawingStateDescription, ptr, false);
+
+                this.factory.CreateDrawingStateBlock(ptr, textRenderingParams == null ? null : (IDWriteRenderingParams)textRenderingParams.Handle, out drawingStateBlock);
             }
             finally
             {
-                drawingStateDescriptionHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (drawingStateBlock == null)

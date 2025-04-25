@@ -222,15 +222,17 @@ namespace JeremyAnsel.DirectX.D2D1
 
             ID2D1Bitmap bitmap;
 
-            GCHandle bitmapPropertiesHandle = GCHandle.Alloc(bitmapProperties, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1BitmapProperties)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().CreateBitmapFromWicBitmap((IWICBitmapSource)wicBitmapSource, bitmapPropertiesHandle.AddrOfPinnedObject(), out bitmap);
+                Marshal.StructureToPtr(bitmapProperties, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().CreateBitmapFromWicBitmap((IWICBitmapSource)wicBitmapSource, ptr, out bitmap);
             }
             finally
             {
-                bitmapPropertiesHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (bitmap == null)
@@ -282,15 +284,17 @@ namespace JeremyAnsel.DirectX.D2D1
 
             ID2D1Bitmap bitmap;
 
-            GCHandle bitmapPropertiesHandle = GCHandle.Alloc(bitmapProperties, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1BitmapProperties)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().CreateSharedBitmap(ref riid, data, bitmapPropertiesHandle.AddrOfPinnedObject(), out bitmap);
+                Marshal.StructureToPtr(bitmapProperties, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().CreateSharedBitmap(ref riid, data, ptr, out bitmap);
             }
             finally
             {
-                bitmapPropertiesHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (bitmap == null)
@@ -342,15 +346,17 @@ namespace JeremyAnsel.DirectX.D2D1
 
             ID2D1BitmapBrush bitmapBrush;
 
-            GCHandle bitmapBrushPropertiesHandle = GCHandle.Alloc(bitmapBrushProperties, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1BitmapBrushProperties)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().CreateBitmapBrush(bitmap.GetHandle<ID2D1Bitmap>(), bitmapBrushPropertiesHandle.AddrOfPinnedObject(), IntPtr.Zero, out bitmapBrush);
+                Marshal.StructureToPtr(bitmapBrushProperties, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().CreateBitmapBrush(bitmap.GetHandle<ID2D1Bitmap>(), ptr, IntPtr.Zero, out bitmapBrush);
             }
             finally
             {
-                bitmapBrushPropertiesHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (bitmapBrush == null)
@@ -379,17 +385,20 @@ namespace JeremyAnsel.DirectX.D2D1
 
             ID2D1BitmapBrush bitmapBrush;
 
-            GCHandle bitmapBrushPropertiesHandle = GCHandle.Alloc(bitmapBrushProperties, GCHandleType.Pinned);
-            GCHandle brushPropertiesHandle = GCHandle.Alloc(brushProperties, GCHandleType.Pinned);
+            IntPtr bitmapBrushPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1BitmapBrushProperties)));
+            IntPtr brushPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1BrushProperties)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().CreateBitmapBrush(bitmap.GetHandle<ID2D1Bitmap>(), bitmapBrushPropertiesHandle.AddrOfPinnedObject(), brushPropertiesHandle.AddrOfPinnedObject(), out bitmapBrush);
+                Marshal.StructureToPtr(bitmapBrushProperties, bitmapBrushPtr, false);
+                Marshal.StructureToPtr(brushProperties, brushPtr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().CreateBitmapBrush(bitmap.GetHandle<ID2D1Bitmap>(), bitmapBrushPtr, brushPtr, out bitmapBrush);
             }
             finally
             {
-                bitmapBrushPropertiesHandle.Free();
-                brushPropertiesHandle.Free();
+                Marshal.FreeHGlobal(bitmapBrushPtr);
+                Marshal.FreeHGlobal(brushPtr);
             }
 
             if (bitmapBrush == null)
@@ -429,15 +438,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1SolidColorBrush solidColorBrush;
 
-            GCHandle brushPropertiesHandle = GCHandle.Alloc(brushProperties);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1BrushProperties)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().CreateSolidColorBrush(ref color, brushPropertiesHandle.AddrOfPinnedObject(), out solidColorBrush);
+                Marshal.StructureToPtr(brushProperties, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().CreateSolidColorBrush(ref color, ptr, out solidColorBrush);
             }
             finally
             {
-                brushPropertiesHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (solidColorBrush == null)
@@ -549,15 +560,17 @@ namespace JeremyAnsel.DirectX.D2D1
 
             ID2D1LinearGradientBrush linearGradientBrush;
 
-            GCHandle brushPropertiesHandle = GCHandle.Alloc(brushProperties, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1BrushProperties)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().CreateLinearGradientBrush(ref linearGradientBrushProperties, brushPropertiesHandle.AddrOfPinnedObject(), gradientStopCollection.GetHandle<ID2D1GradientStopCollection>(), out linearGradientBrush);
+                Marshal.StructureToPtr(brushProperties, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().CreateLinearGradientBrush(ref linearGradientBrushProperties, ptr, gradientStopCollection.GetHandle<ID2D1GradientStopCollection>(), out linearGradientBrush);
             }
             finally
             {
-                brushPropertiesHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (linearGradientBrush == null)
@@ -611,15 +624,17 @@ namespace JeremyAnsel.DirectX.D2D1
 
             ID2D1RadialGradientBrush radialGradientBrush;
 
-            GCHandle brushPropertiesHandle = GCHandle.Alloc(brushProperties, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1BrushProperties)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().CreateRadialGradientBrush(ref radialGradientBrushProperties, brushPropertiesHandle.AddrOfPinnedObject(), gradientStopCollection.GetHandle<ID2D1GradientStopCollection>(), out radialGradientBrush);
+                Marshal.StructureToPtr(brushProperties, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().CreateRadialGradientBrush(ref radialGradientBrushProperties, ptr, gradientStopCollection.GetHandle<ID2D1GradientStopCollection>(), out radialGradientBrush);
             }
             finally
             {
-                brushPropertiesHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (radialGradientBrush == null)
@@ -664,12 +679,14 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredSizeHandle = GCHandle.Alloc(desiredSize, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeF)));
 
             try
             {
+                Marshal.StructureToPtr(desiredSize, ptr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
-                    desiredSizeHandle.AddrOfPinnedObject(),
+                    ptr,
                     IntPtr.Zero,
                     IntPtr.Zero,
                     options,
@@ -677,7 +694,7 @@ namespace JeremyAnsel.DirectX.D2D1
             }
             finally
             {
-                desiredSizeHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (bitmapRenderTarget == null)
@@ -699,20 +716,22 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredPixelSizeHandle = GCHandle.Alloc(desiredPixelSize, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeU)));
 
             try
             {
+                Marshal.StructureToPtr(desiredPixelSize, ptr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
                     IntPtr.Zero,
-                    desiredPixelSizeHandle.AddrOfPinnedObject(),
+                    ptr,
                     IntPtr.Zero,
                     options,
                     out bitmapRenderTarget);
             }
             finally
             {
-                desiredPixelSizeHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (bitmapRenderTarget == null)
@@ -735,22 +754,25 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredSizeHandle = GCHandle.Alloc(desiredSize, GCHandleType.Pinned);
-            GCHandle desiredPixelSizeHandle = GCHandle.Alloc(desiredPixelSize, GCHandleType.Pinned);
+            IntPtr sizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeF)));
+            IntPtr pixelSizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeU)));
 
             try
             {
+                Marshal.StructureToPtr(desiredSize, sizePtr, false);
+                Marshal.StructureToPtr(desiredPixelSize, pixelSizePtr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
-                    desiredSizeHandle.AddrOfPinnedObject(),
-                    desiredPixelSizeHandle.AddrOfPinnedObject(),
+                    sizePtr,
+                    pixelSizePtr,
                     IntPtr.Zero,
                     options,
                     out bitmapRenderTarget);
             }
             finally
             {
-                desiredSizeHandle.Free();
-                desiredPixelSizeHandle.Free();
+                Marshal.FreeHGlobal(sizePtr);
+                Marshal.FreeHGlobal(pixelSizePtr);
             }
 
             if (bitmapRenderTarget == null)
@@ -772,20 +794,22 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredFormatHandle = GCHandle.Alloc(desiredFormat, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1PixelFormat)));
 
             try
             {
+                Marshal.StructureToPtr(desiredFormat, ptr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
                     IntPtr.Zero,
                     IntPtr.Zero,
-                    desiredFormatHandle.AddrOfPinnedObject(),
+                    ptr,
                     options,
                     out bitmapRenderTarget);
             }
             finally
             {
-                desiredFormatHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (bitmapRenderTarget == null)
@@ -808,22 +832,25 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredSizeHandle = GCHandle.Alloc(desiredSize, GCHandleType.Pinned);
-            GCHandle desiredFormatHandle = GCHandle.Alloc(desiredFormat, GCHandleType.Pinned);
+            IntPtr sizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeF)));
+            IntPtr formatPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1PixelFormat)));
 
             try
             {
+                Marshal.StructureToPtr(desiredSize, sizePtr, false);
+                Marshal.StructureToPtr(desiredFormat, formatPtr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
-                    desiredSizeHandle.AddrOfPinnedObject(),
+                    sizePtr,
                     IntPtr.Zero,
-                    desiredFormatHandle.AddrOfPinnedObject(),
+                    formatPtr,
                     options,
                     out bitmapRenderTarget);
             }
             finally
             {
-                desiredSizeHandle.Free();
-                desiredFormatHandle.Free();
+                Marshal.FreeHGlobal(sizePtr);
+                Marshal.FreeHGlobal(formatPtr);
             }
 
             if (bitmapRenderTarget == null)
@@ -846,22 +873,25 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredPixelSizeHandle = GCHandle.Alloc(desiredPixelSize, GCHandleType.Pinned);
-            GCHandle desiredFormatHandle = GCHandle.Alloc(desiredFormat, GCHandleType.Pinned);
+            IntPtr sizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeU)));
+            IntPtr formatPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1PixelFormat)));
 
             try
             {
+                Marshal.StructureToPtr(desiredPixelSize, sizePtr, false);
+                Marshal.StructureToPtr(desiredFormat, formatPtr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
                     IntPtr.Zero,
-                    desiredPixelSizeHandle.AddrOfPinnedObject(),
-                    desiredFormatHandle.AddrOfPinnedObject(),
+                    sizePtr,
+                    formatPtr,
                     options,
                     out bitmapRenderTarget);
             }
             finally
             {
-                desiredPixelSizeHandle.Free();
-                desiredFormatHandle.Free();
+                Marshal.FreeHGlobal(sizePtr);
+                Marshal.FreeHGlobal(formatPtr);
             }
 
             if (bitmapRenderTarget == null)
@@ -885,24 +915,28 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredSizeHandle = GCHandle.Alloc(desiredSize, GCHandleType.Pinned);
-            GCHandle desiredPixelSizeHandle = GCHandle.Alloc(desiredPixelSize, GCHandleType.Pinned);
-            GCHandle desiredFormatHandle = GCHandle.Alloc(desiredFormat, GCHandleType.Pinned);
+            IntPtr sizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeF)));
+            IntPtr pixelSizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeU)));
+            IntPtr formatPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1PixelFormat)));
 
             try
             {
+                Marshal.StructureToPtr(desiredSize, sizePtr, false);
+                Marshal.StructureToPtr(desiredPixelSize, pixelSizePtr, false);
+                Marshal.StructureToPtr(desiredFormat, formatPtr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
-                    desiredSizeHandle.AddrOfPinnedObject(),
-                    desiredPixelSizeHandle.AddrOfPinnedObject(),
-                    desiredFormatHandle.AddrOfPinnedObject(),
+                    sizePtr,
+                    pixelSizePtr,
+                    formatPtr,
                     options,
                     out bitmapRenderTarget);
             }
             finally
             {
-                desiredSizeHandle.Free();
-                desiredPixelSizeHandle.Free();
-                desiredFormatHandle.Free();
+                Marshal.FreeHGlobal(sizePtr);
+                Marshal.FreeHGlobal(pixelSizePtr);
+                Marshal.FreeHGlobal(formatPtr);
             }
 
             if (bitmapRenderTarget == null)
@@ -945,12 +979,14 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredSizeHandle = GCHandle.Alloc(desiredSize, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeF)));
 
             try
             {
+                Marshal.StructureToPtr(desiredSize, ptr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
-                    IntPtr.Zero,
+                    ptr,
                     IntPtr.Zero,
                     IntPtr.Zero,
                     D2D1CompatibleRenderTargetOptions.None,
@@ -958,7 +994,7 @@ namespace JeremyAnsel.DirectX.D2D1
             }
             finally
             {
-                desiredSizeHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (bitmapRenderTarget == null)
@@ -980,22 +1016,25 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredSizeHandle = GCHandle.Alloc(desiredSize, GCHandleType.Pinned);
-            GCHandle desiredPixelSizeHandle = GCHandle.Alloc(desiredPixelSize, GCHandleType.Pinned);
+            IntPtr sizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeF)));
+            IntPtr pixelSizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeU)));
 
             try
             {
+                Marshal.StructureToPtr(desiredSize, sizePtr, false);
+                Marshal.StructureToPtr(desiredPixelSize, pixelSizePtr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
-                    desiredSizeHandle.AddrOfPinnedObject(),
-                    desiredPixelSizeHandle.AddrOfPinnedObject(),
+                    sizePtr,
+                    pixelSizePtr,
                     IntPtr.Zero,
                     D2D1CompatibleRenderTargetOptions.None,
                     out bitmapRenderTarget);
             }
             finally
             {
-                desiredSizeHandle.Free();
-                desiredPixelSizeHandle.Free();
+                Marshal.FreeHGlobal(sizePtr);
+                Marshal.FreeHGlobal(pixelSizePtr);
             }
 
             if (bitmapRenderTarget == null)
@@ -1018,24 +1057,28 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1BitmapRenderTarget bitmapRenderTarget;
 
-            GCHandle desiredSizeHandle = GCHandle.Alloc(desiredSize, GCHandleType.Pinned);
-            GCHandle desiredPixelSizeHandle = GCHandle.Alloc(desiredPixelSize, GCHandleType.Pinned);
-            GCHandle desiredFormatHandle = GCHandle.Alloc(desiredFormat, GCHandleType.Pinned);
+            IntPtr sizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeF)));
+            IntPtr pixelSizePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeU)));
+            IntPtr formatPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1PixelFormat)));
 
             try
             {
+                Marshal.StructureToPtr(desiredSize, sizePtr, false);
+                Marshal.StructureToPtr(desiredPixelSize, pixelSizePtr, false);
+                Marshal.StructureToPtr(desiredFormat, formatPtr, false);
+
                 this.GetHandle<ID2D1RenderTarget>().CreateCompatibleRenderTarget(
-                    desiredSizeHandle.AddrOfPinnedObject(),
-                    desiredPixelSizeHandle.AddrOfPinnedObject(),
-                    desiredFormatHandle.AddrOfPinnedObject(),
+                    sizePtr,
+                    pixelSizePtr,
+                    formatPtr,
                     D2D1CompatibleRenderTargetOptions.None,
                     out bitmapRenderTarget);
             }
             finally
             {
-                desiredSizeHandle.Free();
-                desiredPixelSizeHandle.Free();
-                desiredFormatHandle.Free();
+                Marshal.FreeHGlobal(sizePtr);
+                Marshal.FreeHGlobal(pixelSizePtr);
+                Marshal.FreeHGlobal(formatPtr);
             }
 
             if (bitmapRenderTarget == null)
@@ -1073,15 +1116,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             ID2D1Layer layer;
 
-            GCHandle sizeHandle = GCHandle.Alloc(size, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1SizeF)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().CreateLayer(sizeHandle.AddrOfPinnedObject(), out layer);
+                Marshal.StructureToPtr(size, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().CreateLayer(ptr, out layer);
             }
             finally
             {
-                sizeHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             if (layer == null)
@@ -1582,15 +1627,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(brush));
             }
 
-            GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectF)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().FillOpacityMask(opacityMask.GetHandle<ID2D1Bitmap>(), brush.GetHandle<ID2D1Brush>(), content, destinationRectangleHandle.AddrOfPinnedObject(), IntPtr.Zero);
+                Marshal.StructureToPtr(destinationRectangle, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().FillOpacityMask(opacityMask.GetHandle<ID2D1Bitmap>(), brush.GetHandle<ID2D1Brush>(), content, ptr, IntPtr.Zero);
             }
             finally
             {
-                destinationRectangleHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -1617,17 +1664,20 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(brush));
             }
 
-            GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
-            GCHandle sourceRectangleHandle = GCHandle.Alloc(sourceRectangle, GCHandleType.Pinned);
+            IntPtr destinationPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectF)));
+            IntPtr sourcePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectF)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().FillOpacityMask(opacityMask.GetHandle<ID2D1Bitmap>(), brush.GetHandle<ID2D1Brush>(), content, destinationRectangleHandle.AddrOfPinnedObject(), sourceRectangleHandle.AddrOfPinnedObject());
+                Marshal.StructureToPtr(destinationRectangle, destinationPtr, false);
+                Marshal.StructureToPtr(sourceRectangle, sourcePtr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().FillOpacityMask(opacityMask.GetHandle<ID2D1Bitmap>(), brush.GetHandle<ID2D1Brush>(), content, destinationPtr, sourcePtr);
             }
             finally
             {
-                destinationRectangleHandle.Free();
-                sourceRectangleHandle.Free();
+                Marshal.FreeHGlobal(destinationPtr);
+                Marshal.FreeHGlobal(sourcePtr);
             }
         }
 
@@ -1663,15 +1713,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(bitmap));
             }
 
-            GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectF)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().DrawBitmap(bitmap.GetHandle<ID2D1Bitmap>(), destinationRectangleHandle.AddrOfPinnedObject(), 1.0f, D2D1BitmapInterpolationMode.Linear, IntPtr.Zero);
+                Marshal.StructureToPtr(destinationRectangle, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().DrawBitmap(bitmap.GetHandle<ID2D1Bitmap>(), ptr, 1.0f, D2D1BitmapInterpolationMode.Linear, IntPtr.Zero);
             }
             finally
             {
-                destinationRectangleHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -1691,15 +1743,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(bitmap));
             }
 
-            GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectF)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().DrawBitmap(bitmap.GetHandle<ID2D1Bitmap>(), destinationRectangleHandle.AddrOfPinnedObject(), opacity, D2D1BitmapInterpolationMode.Linear, IntPtr.Zero);
+                Marshal.StructureToPtr(destinationRectangle, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().DrawBitmap(bitmap.GetHandle<ID2D1Bitmap>(), ptr, opacity, D2D1BitmapInterpolationMode.Linear, IntPtr.Zero);
             }
             finally
             {
-                destinationRectangleHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -1720,15 +1774,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(bitmap));
             }
 
-            GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectF)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().DrawBitmap(bitmap.GetHandle<ID2D1Bitmap>(), destinationRectangleHandle.AddrOfPinnedObject(), opacity, interpolationMode, IntPtr.Zero);
+                Marshal.StructureToPtr(destinationRectangle, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().DrawBitmap(bitmap.GetHandle<ID2D1Bitmap>(), ptr, opacity, interpolationMode, IntPtr.Zero);
             }
             finally
             {
-                destinationRectangleHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -1750,17 +1806,20 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(bitmap));
             }
 
-            GCHandle destinationRectangleHandle = GCHandle.Alloc(destinationRectangle, GCHandleType.Pinned);
-            GCHandle sourceRectangleHandle = GCHandle.Alloc(sourceRectangle, GCHandleType.Pinned);
+            IntPtr destinationPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectF)));
+            IntPtr sourcePtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1RectF)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().DrawBitmap(bitmap.GetHandle<ID2D1Bitmap>(), destinationRectangleHandle.AddrOfPinnedObject(), opacity, interpolationMode, sourceRectangleHandle.AddrOfPinnedObject());
+                Marshal.StructureToPtr(destinationRectangle, destinationPtr, false);
+                Marshal.StructureToPtr(sourceRectangle, sourcePtr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().DrawBitmap(bitmap.GetHandle<ID2D1Bitmap>(), destinationPtr, opacity, interpolationMode, sourcePtr);
             }
             finally
             {
-                destinationRectangleHandle.Free();
-                sourceRectangleHandle.Free();
+                Marshal.FreeHGlobal(destinationPtr);
+                Marshal.FreeHGlobal(sourcePtr);
             }
         }
 
@@ -2131,15 +2190,17 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Clear(D2D1ColorF clearColor)
         {
-            GCHandle clearColorHandle = GCHandle.Alloc(clearColor, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1ColorF)));
 
             try
             {
-                this.GetHandle<ID2D1RenderTarget>().Clear(clearColorHandle.AddrOfPinnedObject());
+                Marshal.StructureToPtr(clearColor, ptr, false);
+
+                this.GetHandle<ID2D1RenderTarget>().Clear(ptr);
             }
             finally
             {
-                clearColorHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 

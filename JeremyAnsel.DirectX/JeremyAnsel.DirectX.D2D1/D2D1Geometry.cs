@@ -44,15 +44,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             D2D1RectF bounds;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().GetBounds(worldTransformHandle.AddrOfPinnedObject(), out bounds);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().GetBounds(ptr, out bounds);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return bounds;
@@ -87,15 +89,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             D2D1RectF bounds;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out bounds);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), ptr, flatteningTolerance, out bounds);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return bounds;
@@ -128,15 +132,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             D2D1RectF bounds;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out bounds);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), ptr, D2D1Constants.DefaultFlatteningTolerance, out bounds);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return bounds;
@@ -173,15 +179,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             bool contains;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out contains);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), ptr, flatteningTolerance, out contains);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return contains;
@@ -216,15 +224,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             bool contains;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out contains);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), ptr, D2D1Constants.DefaultFlatteningTolerance, out contains);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return contains;
@@ -255,15 +265,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             bool contains;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().FillContainsPoint(point, worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out contains);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().FillContainsPoint(point, ptr, flatteningTolerance, out contains);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return contains;
@@ -292,15 +304,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             bool contains;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().FillContainsPoint(point, worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out contains);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().FillContainsPoint(point, ptr, D2D1Constants.DefaultFlatteningTolerance, out contains);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return contains;
@@ -343,15 +357,17 @@ namespace JeremyAnsel.DirectX.D2D1
 
             D2D1GeometryRelation relation;
 
-            GCHandle inputGeometryTransformHandle = GCHandle.Alloc(inputGeometryTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), inputGeometryTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out relation);
+                Marshal.StructureToPtr(inputGeometryTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), ptr, flatteningTolerance, out relation);
             }
             finally
             {
-                inputGeometryTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return relation;
@@ -392,15 +408,17 @@ namespace JeremyAnsel.DirectX.D2D1
 
             D2D1GeometryRelation relation;
 
-            GCHandle inputGeometryTransformHandle = GCHandle.Alloc(inputGeometryTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), inputGeometryTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out relation);
+                Marshal.StructureToPtr(inputGeometryTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), ptr, D2D1Constants.DefaultFlatteningTolerance, out relation);
             }
             finally
             {
-                inputGeometryTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return relation;
@@ -438,15 +456,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Simplify(simplificationOption, worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().Simplify(simplificationOption, ptr, flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -480,15 +500,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Simplify(simplificationOption, worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().Simplify(simplificationOption, ptr, D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -522,15 +544,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(tessellationSink));
             }
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Tessellate(worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, (ID2D1TessellationSink)tessellationSink.Handle);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().Tessellate(ptr, flatteningTolerance, (ID2D1TessellationSink)tessellationSink.Handle);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -562,15 +586,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(tessellationSink));
             }
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Tessellate(worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, (ID2D1TessellationSink)tessellationSink.Handle);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().Tessellate(ptr, D2D1Constants.DefaultFlatteningTolerance, (ID2D1TessellationSink)tessellationSink.Handle);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -622,15 +648,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            GCHandle inputGeometryTransformHandle = GCHandle.Alloc(inputGeometryTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().CombineWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), combineMode, inputGeometryTransformHandle.AddrOfPinnedObject(), flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                Marshal.StructureToPtr(inputGeometryTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().CombineWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), combineMode, ptr, flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {
-                inputGeometryTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -680,15 +708,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            GCHandle inputGeometryTransformHandle = GCHandle.Alloc(inputGeometryTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().CombineWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), combineMode, inputGeometryTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                Marshal.StructureToPtr(inputGeometryTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().CombineWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), combineMode, ptr, D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {
-                inputGeometryTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -724,15 +754,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Outline(worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().Outline(ptr, flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -766,15 +798,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Outline(worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().Outline(ptr, D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -801,15 +835,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             float area;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().ComputeArea(worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out area);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().ComputeArea(ptr, flatteningTolerance, out area);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return area;
@@ -836,15 +872,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             float area;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().ComputeArea(worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out area);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().ComputeArea(ptr, D2D1Constants.DefaultFlatteningTolerance, out area);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return area;
@@ -873,15 +911,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             float length;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().ComputeLength(worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out length);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().ComputeLength(ptr, flatteningTolerance, out length);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return length;
@@ -908,15 +948,17 @@ namespace JeremyAnsel.DirectX.D2D1
         {
             float length;
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().ComputeLength(worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out length);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().ComputeLength(ptr, D2D1Constants.DefaultFlatteningTolerance, out length);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
 
             return length;
@@ -950,15 +992,17 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ComputePointAtLength(float length, D2D1Matrix3X2F worldTransform, float flatteningTolerance, out D2D1Point2F point, out D2D1Point2F unitTangentVector)
         {
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().ComputePointAtLength(length, worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, out point, out unitTangentVector);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().ComputePointAtLength(length, ptr, flatteningTolerance, out point, out unitTangentVector);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -988,15 +1032,17 @@ namespace JeremyAnsel.DirectX.D2D1
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ComputePointAtLength(float length, D2D1Matrix3X2F worldTransform, out D2D1Point2F point, out D2D1Point2F unitTangentVector)
         {
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().ComputePointAtLength(length, worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, out point, out unitTangentVector);
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().ComputePointAtLength(length, ptr, D2D1Constants.DefaultFlatteningTolerance, out point, out unitTangentVector);
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -1036,15 +1082,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), ptr, flatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
 
@@ -1082,15 +1130,17 @@ namespace JeremyAnsel.DirectX.D2D1
                 throw new ArgumentNullException(nameof(geometrySink));
             }
 
-            GCHandle worldTransformHandle = GCHandle.Alloc(worldTransform, GCHandleType.Pinned);
+            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
             try
             {
-                this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), worldTransformHandle.AddrOfPinnedObject(), D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
+                Marshal.StructureToPtr(worldTransform, ptr, false);
+
+                this.GetHandle<ID2D1Geometry>().Widen(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), ptr, D2D1Constants.DefaultFlatteningTolerance, geometrySink.GetHandle<ID2D1SimplifiedGeometrySink>());
             }
             finally
             {
-                worldTransformHandle.Free();
+                Marshal.FreeHGlobal(ptr);
             }
         }
     }
