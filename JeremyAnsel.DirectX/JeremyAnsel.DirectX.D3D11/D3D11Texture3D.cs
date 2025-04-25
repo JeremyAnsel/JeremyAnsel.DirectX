@@ -6,6 +6,7 @@ namespace JeremyAnsel.DirectX.D3D11
 {
     using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
+    using System.Runtime.InteropServices;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
     using JeremyAnsel.DirectX.Dxgi;
 
@@ -18,6 +19,25 @@ namespace JeremyAnsel.DirectX.D3D11
         /// The D3D11 texture 3D interface.
         /// </summary>
         private readonly ID3D11Texture3D texture3D;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="D3D11Texture3D"/> class.
+        /// </summary>
+        /// <param name="resource">A resource interface which implements the <c>ID3D11Texture3D</c> interface.</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Texture3D(object resource)
+        {
+            IntPtr ptr = Marshal.GetIUnknownForObject(resource);
+
+            try
+            {
+                this.texture3D = (ID3D11Texture3D)Marshal.GetObjectForIUnknown(ptr);
+            }
+            finally
+            {
+                Marshal.Release(ptr);
+            }
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11Texture3D"/> class.
@@ -59,7 +79,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         public IntPtr GetSharedHandle()
         {
-            using var resource = new DxgiResource(this.texture3D);
+            var resource = new DxgiResource(this.texture3D);
             IntPtr handle = resource.GetSharedHandle();
             return handle;
         }

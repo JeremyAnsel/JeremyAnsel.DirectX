@@ -6,6 +6,7 @@ namespace JeremyAnsel.DirectX.D3D11
 {
     using System.Diagnostics.CodeAnalysis;
     using System.Runtime.CompilerServices;
+    using System.Runtime.InteropServices;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
     using JeremyAnsel.DirectX.Dxgi;
 
@@ -18,6 +19,25 @@ namespace JeremyAnsel.DirectX.D3D11
         /// The D3D11 buffer interface.
         /// </summary>
         private readonly ID3D11Buffer buffer;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="D3D11Buffer"/> class.
+        /// </summary>
+        /// <param name="resource">A resource interface which implements the <c>ID3D11Buffer</c> interface.</param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Buffer(object resource)
+        {
+            IntPtr ptr = Marshal.GetIUnknownForObject(resource);
+
+            try
+            {
+                this.buffer = (ID3D11Buffer)Marshal.GetObjectForIUnknown(ptr);
+            }
+            finally
+            {
+                Marshal.Release(ptr);
+            }
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="D3D11Buffer"/> class.
@@ -59,7 +79,7 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         public IntPtr GetSharedHandle()
         {
-            using var resource = new DxgiResource(this.buffer);
+            var resource = new DxgiResource(this.buffer);
             IntPtr handle = resource.GetSharedHandle();
             return handle;
         }
