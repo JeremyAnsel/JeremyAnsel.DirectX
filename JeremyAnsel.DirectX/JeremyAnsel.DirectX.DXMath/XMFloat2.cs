@@ -44,7 +44,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="array">The components of the vector.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public XMFloat2(float[] array)
+        public XMFloat2(float[]? array)
         {
             if (array == null)
             {
@@ -145,7 +145,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (!(obj is XMFloat2))
             {

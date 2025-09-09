@@ -52,7 +52,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="array">The components of the array.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public XMInt3(int[] array)
+        public XMInt3(int[]? array)
         {
             if (array == null)
             {
@@ -164,7 +164,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (!(obj is XMInt3))
             {

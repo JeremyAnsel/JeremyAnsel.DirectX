@@ -61,7 +61,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="array">The components.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public XMVector(float[] array)
+        public XMVector(float[]? array)
         {
             if (array == null)
             {
@@ -84,7 +84,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="array">The components.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public XMVector(int[] array)
+        public XMVector(int[]? array)
         {
             if (array == null)
             {
@@ -110,7 +110,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="array">The components.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public XMVector(uint[] array)
+        public XMVector(uint[]? array)
         {
             if (array == null)
             {
@@ -136,7 +136,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="array">The components.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public XMVector(byte[] array)
+        public XMVector(byte[]? array)
         {
             if (array == null)
             {
@@ -618,7 +618,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="constants">An array of binary number.</param>
         /// <returns>Returns a vector, each of whose components is either 0.0f or 1.0f.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static XMVector FromBinaryConstant(uint[] constants)
+        public static XMVector FromBinaryConstant(uint[]? constants)
         {
             if (constants == null)
             {
@@ -732,7 +732,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="source">The data to load.</param>
         /// <returns>Returns a vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static XMVector LoadInt2(uint[] source)
+        public static XMVector LoadInt2(uint[]? source)
         {
             if (source == null)
             {
@@ -810,7 +810,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="source">The data to load.</param>
         /// <returns>Returns a vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static XMVector LoadInt3(uint[] source)
+        public static XMVector LoadInt3(uint[]? source)
         {
             if (source == null)
             {
@@ -888,7 +888,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="source">The data to load.</param>
         /// <returns>Returns a vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static XMVector LoadInt4(uint[] source)
+        public static XMVector LoadInt4(uint[]? source)
         {
             if (source == null)
             {
@@ -1167,7 +1167,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="indexes">Indexes that determines which vector will be selected.</param>
         /// <returns>Returns the control vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static XMVector SelectControl(uint[] indexes)
+        public static XMVector SelectControl(uint[]? indexes)
         {
             if (indexes == null)
             {
@@ -2650,7 +2650,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (!(obj is XMVector))
             {
@@ -3107,7 +3107,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// <param name="elements">The swizzle indexes.</param>
         /// <returns>Returns the swizzled vector.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public XMVector Swizzle(XMSwizzle[] elements)
+        public XMVector Swizzle(XMSwizzle[]? elements)
         {
             if (elements == null)
             {

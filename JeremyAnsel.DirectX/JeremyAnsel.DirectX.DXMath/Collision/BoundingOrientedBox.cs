@@ -129,7 +129,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         /// <param name="points">The points to create the <see cref="BoundingOrientedBox"/> from.</param>
         /// <returns>The new <see cref="BoundingOrientedBox"/> containing the specified points.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static BoundingOrientedBox CreateFromPoints(XMFloat3[] points)
+        public static BoundingOrientedBox CreateFromPoints(XMFloat3[]? points)
         {
             ////-----------------------------------------------------------------------------
             //// Find the approximate minimum oriented bounding box containing a set of 
@@ -254,9 +254,9 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (!(obj is BoundingOrientedBox))
+            if (obj is not BoundingOrientedBox)
             {
                 return false;
             }
@@ -1006,7 +1006,7 @@ namespace JeremyAnsel.DirectX.DXMath.Collision
         /// <param name="planes">The planes describing the frustum.</param>
         /// <returns>A <see cref="ContainmentType"/> indicating whether the frustum contains the <see cref="BoundingOrientedBox"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public ContainmentType ContainedBy(XMVector[] planes)
+        public ContainmentType ContainedBy(XMVector[]? planes)
         {
             if (planes == null)
             {

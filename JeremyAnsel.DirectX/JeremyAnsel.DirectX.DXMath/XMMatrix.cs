@@ -134,7 +134,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="rows">The rows.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public XMMatrix(XMVector[] rows)
+        public XMMatrix(XMVector[]? rows)
         {
             if (rows == null)
             {
@@ -225,7 +225,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="array">The values.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public XMMatrix(float[] array)
+        public XMMatrix(float[]? array)
         {
             if (array == null)
             {
@@ -1971,7 +1971,7 @@ namespace JeremyAnsel.DirectX.DXMath
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (!(obj is XMMatrix))
             {
