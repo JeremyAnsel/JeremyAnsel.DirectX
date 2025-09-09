@@ -23,6 +23,7 @@
     <PackageTags>DirectX DWrite</PackageTags>
     <PackageProjectUrl>https://github.com/JeremyAnsel/JeremyAnsel.DirectX</PackageProjectUrl>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <NoWarn>CA1416</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
