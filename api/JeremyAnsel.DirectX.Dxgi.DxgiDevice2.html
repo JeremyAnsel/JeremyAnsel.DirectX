@@ -1751,7 +1751,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DxgiAdapter2 GetAdapter()</code></pre>
+    <pre><code class="lang-csharp hljs">public DxgiAdapter2? GetAdapter()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -1777,13 +1777,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiDevice2.cs/#L116">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_Dxgi_DxgiDevice2_OfferResources_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiDevice2.OfferResources*"></a>
-  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiDevice2_OfferResources_JeremyAnsel_DirectX_Dxgi_DxgiResource2___JeremyAnsel_DirectX_Dxgi_DxgiOfferResourcePriority_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiDevice2.OfferResources(JeremyAnsel.DirectX.Dxgi.DxgiResource2[],JeremyAnsel.DirectX.Dxgi.DxgiOfferResourcePriority)">OfferResources(DxgiResource2[], DxgiOfferResourcePriority)</h4>
+  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiDevice2_OfferResources_JeremyAnsel_DirectX_Dxgi_DxgiResource2___JeremyAnsel_DirectX_Dxgi_DxgiOfferResourcePriority_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiDevice2.OfferResources(JeremyAnsel.DirectX.Dxgi.DxgiResource2[],JeremyAnsel.DirectX.Dxgi.DxgiOfferResourcePriority)">OfferResources(DxgiResource2?[]?, DxgiOfferResourcePriority)</h4>
   <div class="markdown level1 summary"><p>Allows the operating system to free the video memory of resources by discarding their content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OfferResources(DxgiResource2[] resources, DxgiOfferResourcePriority priority)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OfferResources(DxgiResource2?[]? resources, DxgiOfferResourcePriority priority)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1817,13 +1817,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiDevice2.cs/#L93">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_Dxgi_DxgiDevice2_QueryResourceResidency_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiDevice2.QueryResourceResidency*"></a>
-  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiDevice2_QueryResourceResidency_JeremyAnsel_DirectX_Dxgi_DxgiResource2___" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiDevice2.QueryResourceResidency(JeremyAnsel.DirectX.Dxgi.DxgiResource2[])">QueryResourceResidency(DxgiResource2[])</h4>
+  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiDevice2_QueryResourceResidency_JeremyAnsel_DirectX_Dxgi_DxgiResource2___" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiDevice2.QueryResourceResidency(JeremyAnsel.DirectX.Dxgi.DxgiResource2[])">QueryResourceResidency(DxgiResource2?[]?)</h4>
   <div class="markdown level1 summary"><p>Gets the residency status of an array of resources.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DxgiResidency[] QueryResourceResidency(DxgiResource2[] resources)</code></pre>
+    <pre><code class="lang-csharp hljs">public DxgiResidency?[] QueryResourceResidency(DxgiResource2?[]? resources)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1853,7 +1853,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiResidency.html">DxgiResidency</a>[]</td>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Dxgi.DxgiResidency.html">DxgiResidency</a>?[]</td>
         <td><p>An array of <code>DXGI_RESIDENCY</code> flags. Each element describes the residency status for corresponding element in the <code>resources</code> argument array.</p>
 </td>
       </tr>
@@ -1867,13 +1867,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiDevice2.cs/#L135">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_Dxgi_DxgiDevice2_ReclaimResources_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiDevice2.ReclaimResources*"></a>
-  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiDevice2_ReclaimResources_JeremyAnsel_DirectX_Dxgi_DxgiResource2___" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiDevice2.ReclaimResources(JeremyAnsel.DirectX.Dxgi.DxgiResource2[])">ReclaimResources(DxgiResource2[])</h4>
+  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiDevice2_ReclaimResources_JeremyAnsel_DirectX_Dxgi_DxgiResource2___" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiDevice2.ReclaimResources(JeremyAnsel.DirectX.Dxgi.DxgiResource2[])">ReclaimResources(DxgiResource2?[]?)</h4>
   <div class="markdown level1 summary"><p>Restores access to resources that were previously offered by calling <code>IDXGIDevice2::OfferResources</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool[] ReclaimResources(DxgiResource2[] resources)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool[] ReclaimResources(DxgiResource2?[]? resources)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">

@@ -1932,7 +1932,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object GetBuffer(uint buffer, Guid riid)</code></pre>
+    <pre><code class="lang-csharp hljs">public object? GetBuffer(uint buffer, Guid riid)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1988,7 +1988,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DxgiOutput2 GetContainingOutput()</code></pre>
+    <pre><code class="lang-csharp hljs">public DxgiOutput2? GetContainingOutput()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -2046,13 +2046,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiSwapChain2.cs/#L277">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_GetFullscreenState_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.GetFullscreenState*"></a>
-  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_GetFullscreenState_JeremyAnsel_DirectX_Dxgi_DxgiOutput2__" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.GetFullscreenState(JeremyAnsel.DirectX.Dxgi.DxgiOutput2@)">GetFullscreenState(out DxgiOutput2)</h4>
+  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_GetFullscreenState_JeremyAnsel_DirectX_Dxgi_DxgiOutput2__" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.GetFullscreenState(JeremyAnsel.DirectX.Dxgi.DxgiOutput2@)">GetFullscreenState(out DxgiOutput2?)</h4>
   <div class="markdown level1 summary"><p>Get the state associated with full-screen mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool GetFullscreenState(out DxgiOutput2 target)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool GetFullscreenState(out DxgiOutput2? target)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2102,7 +2102,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DxgiOutput2 GetRestrictToOutput()</code></pre>
+    <pre><code class="lang-csharp hljs">public DxgiOutput2? GetRestrictToOutput()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -2134,7 +2134,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DxgiSurface2 GetSurface(uint buffer)</code></pre>
+    <pre><code class="lang-csharp hljs">public DxgiSurface2? GetSurface(uint buffer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2218,13 +2218,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiSwapChain2.cs/#L171">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present*"></a>
-  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_System_UInt32_JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_JeremyAnsel_DirectX_Dxgi_DxgiRect___JeremyAnsel_DirectX_Dxgi_DxgiRect_JeremyAnsel_DirectX_Dxgi_DxgiPoint_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present(System.UInt32,JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions,JeremyAnsel.DirectX.Dxgi.DxgiRect[],JeremyAnsel.DirectX.Dxgi.DxgiRect,JeremyAnsel.DirectX.Dxgi.DxgiPoint)">Present(uint, DxgiPresentOptions, DxgiRect[], DxgiRect, DxgiPoint)</h4>
+  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_Present_System_UInt32_JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_JeremyAnsel_DirectX_Dxgi_DxgiRect___JeremyAnsel_DirectX_Dxgi_DxgiRect_JeremyAnsel_DirectX_Dxgi_DxgiPoint_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.Present(System.UInt32,JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions,JeremyAnsel.DirectX.Dxgi.DxgiRect[],JeremyAnsel.DirectX.Dxgi.DxgiRect,JeremyAnsel.DirectX.Dxgi.DxgiPoint)">Present(uint, DxgiPresentOptions, DxgiRect[]?, DxgiRect, DxgiPoint)</h4>
   <div class="markdown level1 summary"><p>Presents a frame on the display screen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Present(uint syncInterval, DxgiPresentOptions options, DxgiRect[] dirtyRects, DxgiRect scrollRect, DxgiPoint scrollOffset)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Present(uint syncInterval, DxgiPresentOptions options, DxgiRect[]? dirtyRects, DxgiRect scrollRect, DxgiPoint scrollOffset)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2402,13 +2402,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.Dxgi/DxgiSwapChain2.cs/#L249">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState*"></a>
-  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_System_Boolean_JeremyAnsel_DirectX_Dxgi_DxgiOutput2_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState(System.Boolean,JeremyAnsel.DirectX.Dxgi.DxgiOutput2)">SetFullscreenState(bool, DxgiOutput2)</h4>
+  <h4 id="JeremyAnsel_DirectX_Dxgi_DxgiSwapChain2_SetFullscreenState_System_Boolean_JeremyAnsel_DirectX_Dxgi_DxgiOutput2_" data-uid="JeremyAnsel.DirectX.Dxgi.DxgiSwapChain2.SetFullscreenState(System.Boolean,JeremyAnsel.DirectX.Dxgi.DxgiOutput2)">SetFullscreenState(bool, DxgiOutput2?)</h4>
   <div class="markdown level1 summary"><p>Sets the display state to windowed or full screen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetFullscreenState(bool fullscreen, DxgiOutput2 target)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetFullscreenState(bool fullscreen, DxgiOutput2? target)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
