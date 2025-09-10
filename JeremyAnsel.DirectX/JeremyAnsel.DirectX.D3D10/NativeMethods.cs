@@ -17,12 +17,12 @@ namespace JeremyAnsel.DirectX.D3D10
     {
         [DllImport("D3D10_1.dll", EntryPoint = "D3D10CreateDevice1", PreserveSig = false)]
         public static extern void D3D10CreateDevice1(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object adapter,
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? adapter,
             [In] D3D10DriverType driverType,
             [In] IntPtr software,
             [In] D3D10CreateDeviceOptions options,
             [In] D3D10FeatureLevel featureLevel,
             [In] uint sdkVersion,
-            [Out] out ID3D10Device1 device);
+            [Out] out ID3D10Device1? device);
     }
 }

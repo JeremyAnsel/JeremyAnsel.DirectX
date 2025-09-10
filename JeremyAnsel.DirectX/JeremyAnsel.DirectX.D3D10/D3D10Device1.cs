@@ -63,7 +63,7 @@ namespace JeremyAnsel.DirectX.D3D10
         /// <param name="value">A D3D10 device.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(D3D10Device1 value)
+        public static implicit operator bool(D3D10Device1? value)
         {
             return value != null && value.Handle != null;
         }
@@ -77,13 +77,13 @@ namespace JeremyAnsel.DirectX.D3D10
         /// <param name="featureLevel">The version of hardware that is available for acceleration.</param>
         /// <returns><see cref="D3D10Device1"/></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static D3D10Device1 CreateDevice(
-            object adapter,
+        public static D3D10Device1? CreateDevice(
+            object? adapter,
             D3D10DriverType driverType,
             D3D10CreateDeviceOptions options,
             D3D10FeatureLevel featureLevel)
         {
-            NativeMethods.D3D10CreateDevice1(adapter, driverType, IntPtr.Zero, options, featureLevel, 0x20, out ID3D10Device1 device);
+            NativeMethods.D3D10CreateDevice1(adapter, driverType, IntPtr.Zero, options, featureLevel, 0x20, out ID3D10Device1? device);
 
             if (device == null)
             {
@@ -139,7 +139,7 @@ namespace JeremyAnsel.DirectX.D3D10
         /// <param name="returnedInterface">The globally unique identifier (GUID) for the resource interface.</param>
         /// <returns>The resource we are gaining access to.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public object OpenSharedResource(IntPtr resourceHandle, Guid returnedInterface)
+        public object? OpenSharedResource(IntPtr resourceHandle, Guid returnedInterface)
         {
             return this.device.OpenSharedResource(resourceHandle, ref returnedInterface);
         }

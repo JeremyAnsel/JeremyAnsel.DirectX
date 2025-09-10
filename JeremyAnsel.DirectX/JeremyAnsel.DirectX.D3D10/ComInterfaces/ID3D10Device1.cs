@@ -487,7 +487,7 @@ namespace JeremyAnsel.DirectX.D3D10.ComInterfaces
         /// <param name="returnedInterface">The globally unique identifier (GUID) for the resource interface.</param>
         /// <returns>The resource we are gaining access to.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object OpenSharedResource(
+        object? OpenSharedResource(
             [In] IntPtr resourceHandle,
             [In] ref Guid returnedInterface);
 
