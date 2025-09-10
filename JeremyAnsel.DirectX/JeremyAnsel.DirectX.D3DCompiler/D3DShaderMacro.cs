@@ -38,7 +38,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             return obj is D3DShaderMacro macro && Equals(macro);
         }

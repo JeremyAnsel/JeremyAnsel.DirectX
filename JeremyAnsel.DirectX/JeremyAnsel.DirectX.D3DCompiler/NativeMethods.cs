@@ -33,17 +33,17 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         [DllImport("D3dcompiler_47.dll", EntryPoint = "D3DCompile", PreserveSig = true)]
         [SuppressMessage("Globalization", "CA2101:Spécifier le marshaling pour les arguments de chaîne P/Invoke", Justification = "Reviewed.")]
         public static extern int D3DCompile(
-            [In, MarshalAs(UnmanagedType.LPStr)] string srcData,
+            [In, MarshalAs(UnmanagedType.LPStr)] string? srcData,
             [In] IntPtr srcDataSize,
-            [In, MarshalAs(UnmanagedType.LPStr)] string sourceName,
-            [In, MarshalAs(UnmanagedType.LPArray)] IntPtr[] pDefines,
+            [In, MarshalAs(UnmanagedType.LPStr)] string? sourceName,
+            [In, MarshalAs(UnmanagedType.LPArray)] IntPtr[]? pDefines,
             [In] IntPtr pInclude,
-            [In, MarshalAs(UnmanagedType.LPStr)] string entrypoint,
-            [In, MarshalAs(UnmanagedType.LPStr)] string target,
+            [In, MarshalAs(UnmanagedType.LPStr)] string? entrypoint,
+            [In, MarshalAs(UnmanagedType.LPStr)] string? target,
             [In] D3DCompileOptions flags1,
             [In] uint flags2,
-            [Out] out ID3DBlob ppCode,
-            [Out] out ID3DBlob ppErrorMsgs);
+            [Out] out ID3DBlob? ppCode,
+            [Out] out ID3DBlob? ppErrorMsgs);
 
         /// <summary>
         /// Disassembles compiled HLSL code.
@@ -56,10 +56,10 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         [DllImport("D3dcompiler_47.dll", EntryPoint = "D3DDisassemble", PreserveSig = false)]
         [SuppressMessage("Globalization", "CA2101:Spécifier le marshaling pour les arguments de chaîne P/Invoke", Justification = "Reviewed.")]
         public static extern void D3DDisassemble(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] sourceData,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? sourceData,
             [In] IntPtr sourceDataSize,
             [In] D3DDisassembleOptions flags,
-            [In, MarshalAs(UnmanagedType.LPStr)] string comments,
-            [Out] out ID3DBlob ppDisassembly);
+            [In, MarshalAs(UnmanagedType.LPStr)] string? comments,
+            [Out] out ID3DBlob? ppDisassembly);
     }
 }

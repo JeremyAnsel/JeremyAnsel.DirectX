@@ -17,7 +17,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
     /// </summary>
     public static class D3DCompile
     {
-        private static string _includeRootDirectory;
+        private static string? _includeRootDirectory;
         private static readonly Stack<string> _includeDirectories = new Stack<string>();
 
         private static readonly IncludeOpenCallBack _includeOpenCallback = new IncludeOpenCallBack(IncludeOpen);
@@ -31,8 +31,8 @@ namespace JeremyAnsel.DirectX.D3DCompiler
 
         private static int IncludeOpen(IntPtr thisPtr, D3DIncludeLocation includeLocation, IntPtr fileNameRef, IntPtr pParentData, out IntPtr dataRef, out int bytesRef)
         {
-            string fileName = Marshal.PtrToStringAnsi(fileNameRef);
-            string includeDirectory = includeLocation == D3DIncludeLocation.Local ? _includeDirectories.Peek() : _includeRootDirectory;
+            string fileName = Marshal.PtrToStringAnsi(fileNameRef)!;
+            string includeDirectory = includeLocation == D3DIncludeLocation.Local ? _includeDirectories.Peek() : _includeRootDirectory!;
             string sourceFileName = Path.GetFullPath(Path.Combine(includeDirectory, fileName));
 
             string sourceData = File.ReadAllText(sourceFileName);
@@ -42,7 +42,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
             bytesRef = sourceBytes.Length;
             Marshal.Copy(sourceBytes, 0, dataRef, sourceBytes.Length);
 
-            _includeDirectories.Push(Path.GetDirectoryName(sourceFileName));
+            _includeDirectories.Push(Path.GetDirectoryName(sourceFileName)!);
             return 0;
         }
 
@@ -66,7 +66,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         /// <param name="code">A pointer to a variable that receives the compiled code.</param>
         /// <param name="errorMessages">A pointer to a variable that receives compiler error messages, or <c>NULL</c> if there are no errors.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void Compile(string sourceData, string sourceName, D3DShaderMacro[] defines, string entrypoint, string target, D3DCompileOptions options, out byte[] code, out string errorMessages)
+        public static void Compile(string? sourceData, string? sourceName, D3DShaderMacro[]? defines, string? entrypoint, string? target, D3DCompileOptions options, out byte[]? code, out string? errorMessages)
         {
             if (string.IsNullOrEmpty(sourceData))
             {
@@ -88,7 +88,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
                 throw new ArgumentNullException(nameof(target));
             }
 
-            IntPtr[] definesPtr = null;
+            IntPtr[]? definesPtr = null;
 
             if (defines != null && defines.Length != 0)
             {
@@ -115,8 +115,8 @@ namespace JeremyAnsel.DirectX.D3DCompiler
             }
 
             int hr = 0;
-            ID3DBlob codeBlob = null;
-            ID3DBlob errorMessagesBlob = null;
+            ID3DBlob? codeBlob = null;
+            ID3DBlob? errorMessagesBlob = null;
 
             try
             {
@@ -209,7 +209,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         /// <param name="code">A pointer to a variable that receives the compiled code.</param>
         /// <param name="errorMessages">A pointer to a variable that receives compiler error messages, or <c>NULL</c> if there are no errors.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void Compile(string sourceData, string sourceName, string entrypoint, string target, D3DCompileOptions options, out byte[] code, out string errorMessages)
+        public static void Compile(string? sourceData, string? sourceName, string? entrypoint, string? target, D3DCompileOptions options, out byte[]? code, out string? errorMessages)
         {
             D3DCompile.Compile(sourceData, sourceName, null, entrypoint, target, options, out code, out errorMessages);
         }
@@ -225,7 +225,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         /// <param name="code">A pointer to a variable that receives the compiled code.</param>
         /// <param name="errorMessages">A pointer to a variable that receives compiler error messages, or <c>NULL</c> if there are no errors.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void CompileFromFile(string sourceFileName, D3DShaderMacro[] defines, string entrypoint, string target, D3DCompileOptions options, out byte[] code, out string errorMessages)
+        public static void CompileFromFile(string? sourceFileName, D3DShaderMacro[]? defines, string? entrypoint, string? target, D3DCompileOptions options, out byte[]? code, out string? errorMessages)
         {
             if (string.IsNullOrEmpty(sourceFileName))
             {
@@ -234,7 +234,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
 
             string sourceData = File.ReadAllText(sourceFileName);
 
-            _includeRootDirectory = Path.GetDirectoryName(sourceFileName);
+            _includeRootDirectory = Path.GetDirectoryName(sourceFileName)!;
             _includeDirectories.Push(_includeRootDirectory);
 
             try
@@ -258,7 +258,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         /// <param name="code">A pointer to a variable that receives the compiled code.</param>
         /// <param name="errorMessages">A pointer to a variable that receives compiler error messages, or <c>NULL</c> if there are no errors.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void CompileFromFile(string sourceFileName, string entrypoint, string target, D3DCompileOptions options, out byte[] code, out string errorMessages)
+        public static void CompileFromFile(string? sourceFileName, string? entrypoint, string? target, D3DCompileOptions options, out byte[]? code, out string? errorMessages)
         {
             D3DCompile.CompileFromFile(sourceFileName, null, entrypoint, target, options, out code, out errorMessages);
         }
@@ -271,7 +271,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         /// <param name="comments">The comment string at the top of the shader that identifies the shader constants and variables.</param>
         /// <returns>The assembly text.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static string Disassemble(byte[] sourceData, D3DDisassembleOptions options, string comments)
+        public static string Disassemble(byte[]? sourceData, D3DDisassembleOptions options, string? comments)
         {
             if (sourceData == null)
             {
@@ -283,7 +283,12 @@ namespace JeremyAnsel.DirectX.D3DCompiler
                 comments += "\n";
             }
 
-            NativeMethods.D3DDisassemble(sourceData, new IntPtr(sourceData.Length), options, comments, out ID3DBlob disassemblyBlob);
+            NativeMethods.D3DDisassemble(sourceData, new IntPtr(sourceData.Length), options, comments, out ID3DBlob? disassemblyBlob);
+
+            if (disassemblyBlob is null)
+            {
+                throw new InvalidDataException();
+            }
 
             try
             {
@@ -310,7 +315,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         /// <param name="options">Flags affecting the behavior of <c>D3DDisassemble</c>.</param>
         /// <returns>The assembly text.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static string Disassemble(byte[] sourceData, D3DDisassembleOptions options)
+        public static string Disassemble(byte[]? sourceData, D3DDisassembleOptions options)
         {
             return D3DCompile.Disassemble(sourceData, options, null);
         }
@@ -321,7 +326,7 @@ namespace JeremyAnsel.DirectX.D3DCompiler
         /// <param name="sourceData">The source data as compiled HLSL code.</param>
         /// <returns>The assembly text.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static string Disassemble(byte[] sourceData)
+        public static string Disassemble(byte[]? sourceData)
         {
             return D3DCompile.Disassemble(sourceData, D3DDisassembleOptions.None, null);
         }
