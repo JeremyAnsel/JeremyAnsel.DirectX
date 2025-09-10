@@ -55,9 +55,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// </summary>
         /// <returns>A <see cref="DxgiFactory"/> object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static DxgiFactory Create()
+        public static DxgiFactory? Create()
         {
-            NativeMethods.CreateDxgiFactory(typeof(IDxgiFactory).GUID, out IDxgiFactory factory);
+            NativeMethods.CreateDxgiFactory(typeof(IDxgiFactory).GUID, out IDxgiFactory? factory);
 
             if (factory == null)
             {
@@ -72,9 +72,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// </summary>
         /// <returns>An IEnumerable of <see cref="DxgiAdapter"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public IEnumerable<DxgiAdapter> EnumAdapters()
+        public IEnumerable<DxgiAdapter?> EnumAdapters()
         {
-            for (uint i = 0; !this.factory.EnumAdapters(i, out IDxgiAdapter adapter); i++)
+            for (uint i = 0; !this.factory.EnumAdapters(i, out IDxgiAdapter? adapter); i++)
             {
                 yield return adapter == null ? null : new DxgiAdapter(adapter);
             }
@@ -98,9 +98,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="desc">A <c>DXGI_SWAP_CHAIN_DESC</c> structure for the swap-chain description.</param>
         /// <returns>An <c>IDXGISwapChain</c> interface for the swap chain</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiSwapChain CreateSwapChain(object device, DxgiSwapChainDesc desc)
+        public DxgiSwapChain? CreateSwapChain(object? device, DxgiSwapChainDesc desc)
         {
-            IDxgiSwapChain swapChain = this.factory.CreateSwapChain(device, ref desc);
+            IDxgiSwapChain? swapChain = this.factory.CreateSwapChain(device, ref desc);
 
             if (swapChain == null)
             {

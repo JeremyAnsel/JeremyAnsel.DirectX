@@ -76,7 +76,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="concernedDevice">The Direct3D device interface. If this parameter is <value>null</value>, only modes whose format matches that of <c>modeToMatch</c> will be returned; otherwise, only those formats that are supported for scan-out by the device are returned.</param>
         /// <returns>The mode that most closely matches <c>modeToMatch</c>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiModeDesc FindClosestMatchingMode(DxgiModeDesc modeToMatch, object concernedDevice)
+        public DxgiModeDesc FindClosestMatchingMode(DxgiModeDesc modeToMatch, object? concernedDevice)
         {
             this.output.FindClosestMatchingMode(ref modeToMatch, out DxgiModeDesc closestMatch, concernedDevice);
             return closestMatch;
@@ -97,7 +97,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="destination">A destination surface.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void GetDisplaySurfaceData(DxgiSurface destination)
+        public void GetDisplaySurfaceData(DxgiSurface? destination)
         {
             if (destination == null)
             {

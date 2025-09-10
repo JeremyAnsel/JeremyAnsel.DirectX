@@ -73,9 +73,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>The adapter for the specified device.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiAdapter2 GetAdapter()
+        public DxgiAdapter2? GetAdapter()
         {
-            IDxgiAdapter adapter = this.device.GetAdapter();
+            IDxgiAdapter? adapter = this.device.GetAdapter();
 
             if (adapter == null)
             {
@@ -91,14 +91,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="resources">An array of <c>IDXGIResource</c> interfaces.</param>
         /// <returns>An array of <c>DXGI_RESIDENCY</c> flags. Each element describes the residency status for corresponding element in the <c>resources</c> argument array.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiResidency[] QueryResourceResidency(DxgiResource2[] resources)
+        public DxgiResidency?[] QueryResourceResidency(DxgiResource2?[]? resources)
         {
             if (resources == null)
             {
                 throw new ArgumentNullException(nameof(resources));
             }
 
-            DxgiResidency[] residencies = new DxgiResidency[resources.Length];
+            DxgiResidency?[] residencies = new DxgiResidency?[resources.Length];
 
             this.device.QueryResourceResidency(
                 Array.ConvertAll(resources, t => t?.GetHandle<IDxgiResource>()),
@@ -114,7 +114,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="resources">An array of pointers to <c>IDXGIResource</c> interfaces for the resources to offer.</param>
         /// <param name="priority">A <c>DXGI_OFFER_RESOURCE_PRIORITY</c>-typed value that indicates how valuable data is.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void OfferResources(DxgiResource2[] resources, DxgiOfferResourcePriority priority)
+        public void OfferResources(DxgiResource2?[]? resources, DxgiOfferResourcePriority priority)
         {
             if (resources == null)
             {
@@ -133,7 +133,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="resources">An array of pointers to <c>IDXGIResource</c> interfaces for the resources to reclaim.</param>
         /// <returns>A pointer to an array that receives Boolean values. Each value in the array corresponds to a resource at the same index that the ppResources parameter specifies. The runtime sets each Boolean value to <value>TRUE</value> if the corresponding resource’s content was discarded and is now undefined, or to <value>FALSE</value> if the corresponding resource’s old content is still intact. The caller can pass in <value>NULL</value>, if the caller intends to fill the resources with new content regardless of whether the old content was discarded.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool[] ReclaimResources(DxgiResource2[] resources)
+        public bool[] ReclaimResources(DxgiResource2?[]? resources)
         {
             if (resources == null)
             {

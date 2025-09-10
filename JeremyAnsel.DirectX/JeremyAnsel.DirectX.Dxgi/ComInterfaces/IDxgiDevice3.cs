@@ -26,7 +26,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void SetPrivateData(
             [In] ref Guid name,
             [In] uint dataSize,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Set an interface in the object's private data.
@@ -35,7 +35,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="unknown">The interface to set.</param>
         void SetPrivateDataInterface(
             [In] ref Guid name,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object unknown);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? unknown);
 
         /// <summary>
         /// Get a pointer to the object's data.
@@ -46,7 +46,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void GetPrivateData(
             [In] ref Guid name,
             [In, Out] ref uint dataSize,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Gets the parent of the object.
@@ -54,14 +54,14 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="riid">The ID of the requested interface.</param>
         /// <returns>The address of a pointer to the parent object.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object GetParent(
+        object? GetParent(
             [In] ref Guid riid);
 
         /// <summary>
         /// Returns the adapter for the specified device.
         /// </summary>
         /// <returns>The adapter for the specified device.</returns>
-        IDxgiAdapter GetAdapter();
+        IDxgiAdapter? GetAdapter();
 
         /// <summary>
         /// Returns a surface. This method is used internally and you should not call it directly in your application.
@@ -76,7 +76,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
             [In] uint numSurfaces,
             [In] DxgiUsages usage,
             [In] ref DxgiSharedResource sharedResource,
-            [Out, MarshalAs(UnmanagedType.LPArray)] IDxgiSurface[] surface);
+            [Out, MarshalAs(UnmanagedType.LPArray)] IDxgiSurface[]? surface);
 
         /// <summary>
         /// Gets the residency status of an array of resources.
@@ -85,8 +85,8 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="residencyStatus">An array of <c>DXGI_RESIDENCY</c> flags. Each element describes the residency status for corresponding element in the <c>resources</c> argument array.</param>
         /// <param name="numResources">The number of resources in the argument arrays.</param>
         void QueryResourceResidency(
-            [In, MarshalAs(UnmanagedType.LPArray)] IDxgiResource[] resources,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DxgiResidency[] residencyStatus,
+            [In, MarshalAs(UnmanagedType.LPArray)] IDxgiResource?[]? resources,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DxgiResidency?[]? residencyStatus,
             [In] uint numResources);
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="priority">A <c>DXGI_OFFER_RESOURCE_PRIORITY</c>-typed value that indicates how valuable data is.</param>
         void OfferResources(
             [In] uint numResources,
-            [In, MarshalAs(UnmanagedType.LPArray)] IDxgiResource[] resources,
+            [In, MarshalAs(UnmanagedType.LPArray)] IDxgiResource?[]? resources,
             [In] DxgiOfferResourcePriority priority);
 
         /// <summary>
@@ -134,8 +134,8 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="discarded">A pointer to an array that receives Boolean values. Each value in the array corresponds to a resource at the same index that the ppResources parameter specifies. The runtime sets each Boolean value to <value>TRUE</value> if the corresponding resource’s content was discarded and is now undefined, or to <value>FALSE</value> if the corresponding resource’s old content is still intact. The caller can pass in <value>NULL</value>, if the caller intends to fill the resources with new content regardless of whether the old content was discarded.</param>
         void ReclaimResources(
             [In] uint numResources,
-            [In, MarshalAs(UnmanagedType.LPArray)] IDxgiResource[] resources,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.Bool)] bool[] discarded);
+            [In, MarshalAs(UnmanagedType.LPArray)] IDxgiResource?[]? resources,
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.Bool)] bool[]? discarded);
 
         /// <summary>
         /// Flushes any outstanding rendering commands and sets the specified event object to the signaled state after all previously submitted rendering commands complete.

@@ -92,9 +92,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (!(obj is DxgiPresentParameters))
+            if (obj is not DxgiPresentParameters)
             {
                 return false;
             }

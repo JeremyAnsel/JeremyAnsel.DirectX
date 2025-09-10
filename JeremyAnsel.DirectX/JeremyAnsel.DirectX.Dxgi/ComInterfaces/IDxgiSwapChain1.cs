@@ -26,7 +26,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void SetPrivateData(
             [In] ref Guid name,
             [In] uint dataSize,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Set an interface in the object's private data.
@@ -35,7 +35,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="unknown">The interface to set.</param>
         void SetPrivateDataInterface(
             [In] ref Guid name,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object unknown);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? unknown);
 
         /// <summary>
         /// Get a pointer to the object's data.
@@ -46,7 +46,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void GetPrivateData(
             [In] ref Guid name,
             [In, Out] ref uint dataSize,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Gets the parent of the object.
@@ -54,7 +54,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="riid">The ID of the requested interface.</param>
         /// <returns>The address of a pointer to the parent object.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object GetParent(
+        object? GetParent(
             [In] ref Guid riid);
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="riid">The reference id for the device.</param>
         /// <returns>The address of a pointer to the device.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object GetDevice(
+        object? GetDevice(
             [In] ref Guid riid);
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="riid">The type of interface used to manipulate the buffer.</param>
         /// <returns>A pointer to a back-buffer interface.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object GetBuffer(
+        object? GetBuffer(
             [In] uint buffer,
             [In] ref Guid riid);
 
@@ -93,7 +93,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="target">A pointer to an <c>IDXGIOutput1</c> interface for the output target that contains the swap chain.</param>
         void SetFullscreenState(
             [In, MarshalAs(UnmanagedType.Bool)] bool fullscreen,
-            [In] IDxgiOutput1 target);
+            [In] IDxgiOutput1? target);
 
         /// <summary>
         /// Get the state associated with full-screen mode.
@@ -102,7 +102,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="target">The output target when the mode is full screen.</param>
         void GetFullscreenState(
             [Out, MarshalAs(UnmanagedType.Bool)] out bool fullscreen,
-            [Out] out IDxgiOutput1 target);
+            [Out] out IDxgiOutput1? target);
 
         /// <summary>
         /// Get a description of the swap chain.
@@ -136,7 +136,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// Get the output (the display monitor) that contains the majority of the client area of the target window.
         /// </summary>
         /// <returns>The output interface.</returns>
-        IDxgiOutput1 GetContainingOutput();
+        IDxgiOutput1? GetContainingOutput();
 
         /// <summary>
         /// Gets performance statistics about the last render frame.
@@ -199,7 +199,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// Gets the output (the display monitor) to which you can restrict the contents of a present operation.
         /// </summary>
         /// <returns>The <c>IDXGIOutput</c> interface for the restrict-to output.</returns>
-        IDxgiOutput1 GetRestrictToOutput();
+        IDxgiOutput1? GetRestrictToOutput();
 
         /// <summary>
         /// Changes the background color of the swap chain.

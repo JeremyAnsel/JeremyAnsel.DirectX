@@ -81,9 +81,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// </summary>
         /// <returns>A <see cref="DxgiFactory2"/> object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static DxgiFactory2 Create()
+        public static DxgiFactory2? Create()
         {
-            NativeMethods.CreateDxgiFactory1(typeof(IDxgiFactory1).GUID, out IDxgiFactory1 factory);
+            NativeMethods.CreateDxgiFactory1(typeof(IDxgiFactory1).GUID, out IDxgiFactory1? factory);
 
             if (factory == null)
             {
@@ -98,9 +98,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// </summary>
         /// <returns>An IEnumerable of <see cref="DxgiAdapter2"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public IEnumerable<DxgiAdapter2> EnumAdapters()
+        public IEnumerable<DxgiAdapter2?> EnumAdapters()
         {
-            for (uint i = 0; !this.factory.EnumAdapters1(i, out IDxgiAdapter1 adapter); i++)
+            for (uint i = 0; !this.factory.EnumAdapters1(i, out IDxgiAdapter1? adapter); i++)
             {
                 yield return adapter == null ? null : new DxgiAdapter2((IDxgiAdapter2)adapter);
             }
@@ -129,14 +129,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiSwapChain2 CreateSwapChainForWindowHandle(
-            object device,
+        public DxgiSwapChain2? CreateSwapChainForWindowHandle(
+            object? device,
             IntPtr hwnd,
             DxgiSwapChainDesc1 desc,
             DxgiSwapChainFullscreenDesc? fullscreenDesc,
-            DxgiOutput2 restrictToOutput)
+            DxgiOutput2? restrictToOutput)
         {
-            IDxgiSwapChain1 swapChain;
+            IDxgiSwapChain1? swapChain;
 
             if (fullscreenDesc == null)
             {

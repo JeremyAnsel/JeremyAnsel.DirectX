@@ -41,7 +41,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="value">A DXGI object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(DxgiObject value)
+        public static implicit operator bool(DxgiObject? value)
         {
             return value != null && value.Handle != null;
         }
@@ -82,14 +82,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="name">A GUID that identifies the data.</param>
         /// <param name="text">The object's text.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetPrivateDataText(Guid name, string text)
+        public void SetPrivateDataText(Guid name, string? text)
         {
             if (string.IsNullOrEmpty(text))
             {
                 text = "<unnamed>";
             }
 
-            if (text.Length > 255)
+            if (text!.Length > 255)
             {
                 text = text.Substring(0, 255);
             }

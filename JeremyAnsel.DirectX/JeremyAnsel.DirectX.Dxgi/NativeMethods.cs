@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         [DllImport("dxgi.dll", EntryPoint = "CreateDXGIFactory", PreserveSig = false)]
         public static extern void CreateDxgiFactory(
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid riid,
-            [Out] out IDxgiFactory factory);
+            [Out] out IDxgiFactory? factory);
 
         /// <summary>
         /// Creates a DXGI 1.1 factory that you can use to generate other DXGI objects.
@@ -33,7 +33,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         [DllImport("dxgi.dll", EntryPoint = "CreateDXGIFactory1", PreserveSig = false)]
         public static extern void CreateDxgiFactory1(
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid riid,
-            [Out] out IDxgiFactory1 factory);
+            [Out] out IDxgiFactory1? factory);
 
         /// <summary>
         /// Creates a DXGI 1.3 factory that you can use to generate other DXGI objects.
@@ -45,6 +45,6 @@ namespace JeremyAnsel.DirectX.Dxgi
         public static extern void CreateDxgiFactory2(
             [In] DxgiCreateFactoryOptions options,
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid riid,
-            [Out] out IDxgiFactory2 factory);
+            [Out] out IDxgiFactory2? factory);
     }
 }

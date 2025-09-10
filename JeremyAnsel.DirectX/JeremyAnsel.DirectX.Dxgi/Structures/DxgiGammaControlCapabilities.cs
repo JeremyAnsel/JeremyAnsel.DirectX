@@ -38,7 +38,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// An array of values describing control points; the maximum length of control points is 1025.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1025)]
-        private readonly float[] gammaControlPointPositions;
+        private readonly float[]? gammaControlPointPositions;
 
         /// <summary>
         /// Gets a value indicating whether scaling and offset operations are supported during gamma correction.
@@ -90,7 +90,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// Gets an array of values describing control points; the maximum length of control points is 1025.
         /// </summary>
         /// <returns>An array of values describing control points.</returns>
-        public float[] GetGammaControlPointPositions()
+        public float[]? GetGammaControlPointPositions()
         {
             if (this.gammaControlPointPositions == null)
             {
@@ -108,9 +108,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (!(obj is DxgiGammaControlCapabilities))
+            if (obj is not DxgiGammaControlCapabilities)
             {
                 return false;
             }

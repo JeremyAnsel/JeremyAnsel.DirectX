@@ -26,7 +26,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void SetPrivateData(
             [In] ref Guid name,
             [In] uint dataSize,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Set an interface in the object's private data.
@@ -35,7 +35,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="unknown">The interface to set.</param>
         void SetPrivateDataInterface(
             [In] ref Guid name,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object unknown);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? unknown);
 
         /// <summary>
         /// Get a pointer to the object's data.
@@ -46,7 +46,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void GetPrivateData(
             [In] ref Guid name,
             [In, Out] ref uint dataSize,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Gets the parent of the object.
@@ -54,14 +54,14 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="riid">The ID of the requested interface.</param>
         /// <returns>The address of a pointer to the parent object.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object GetParent(
+        object? GetParent(
             [In] ref Guid riid);
 
         /// <summary>
         /// Returns the adapter for the specified device.
         /// </summary>
         /// <returns>The adapter for the specified device.</returns>
-        IDxgiAdapter GetAdapter();
+        IDxgiAdapter? GetAdapter();
 
         /// <summary>
         /// Returns a surface. This method is used internally and you should not call it directly in your application.
@@ -76,7 +76,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
             [In] uint numSurfaces,
             [In] DxgiUsages usage,
             [In] ref DxgiSharedResource sharedResource,
-            [Out, MarshalAs(UnmanagedType.LPArray)] IDxgiSurface[] surface);
+            [Out, MarshalAs(UnmanagedType.LPArray)] IDxgiSurface[]? surface);
 
         /// <summary>
         /// Gets the residency status of an array of resources.
@@ -85,8 +85,8 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="residencyStatus">An array of <c>DXGI_RESIDENCY</c> flags. Each element describes the residency status for corresponding element in the <c>resources</c> argument array.</param>
         /// <param name="numResources">The number of resources in the argument arrays.</param>
         void QueryResourceResidency(
-            [In, MarshalAs(UnmanagedType.LPArray)] IDxgiResource[] resources,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DxgiResidency[] residencyStatus,
+            [In, MarshalAs(UnmanagedType.LPArray)] IDxgiResource?[]? resources,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DxgiResidency?[]? residencyStatus,
             [In] uint numResources);
 
         /// <summary>

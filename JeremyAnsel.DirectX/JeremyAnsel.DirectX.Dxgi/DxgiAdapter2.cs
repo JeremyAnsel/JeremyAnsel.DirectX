@@ -56,9 +56,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// </summary>
         /// <returns>An IEnumerable of <see cref="DxgiOutput2"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public IEnumerable<DxgiOutput2> EnumOutputs()
+        public IEnumerable<DxgiOutput2?> EnumOutputs()
         {
-            for (uint i = 0; !this.adapter.EnumOutputs(i, out IDxgiOutput output); i++)
+            for (uint i = 0; !this.adapter.EnumOutputs(i, out IDxgiOutput? output); i++)
             {
                 yield return output == null ? null : new DxgiOutput2((IDxgiOutput1)output);
             }
@@ -70,10 +70,10 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>The parent of the object.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiFactory2 GetParent()
+        public DxgiFactory2? GetParent()
         {
             Guid riid = typeof(IDxgiFactory2).GUID;
-            object parent = this.adapter.GetParent(ref riid);
+            object? parent = this.adapter.GetParent(ref riid);
 
             if (parent == null)
             {

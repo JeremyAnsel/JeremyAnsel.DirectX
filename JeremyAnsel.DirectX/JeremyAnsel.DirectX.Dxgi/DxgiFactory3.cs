@@ -93,9 +93,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// </summary>
         /// <returns>A <see cref="DxgiFactory3"/> object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static DxgiFactory3 Create()
+        public static DxgiFactory3? Create()
         {
-            NativeMethods.CreateDxgiFactory2(DxgiCreateFactoryOptions.None, typeof(IDxgiFactory3).GUID, out IDxgiFactory2 factory);
+            NativeMethods.CreateDxgiFactory2(DxgiCreateFactoryOptions.None, typeof(IDxgiFactory3).GUID, out IDxgiFactory2? factory);
 
             if (factory == null)
             {
@@ -111,9 +111,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="options">The creation options.</param>
         /// <returns>A <see cref="DxgiFactory3"/> object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static DxgiFactory3 Create(DxgiCreateFactoryOptions options)
+        public static DxgiFactory3? Create(DxgiCreateFactoryOptions options)
         {
-            NativeMethods.CreateDxgiFactory2(options, typeof(IDxgiFactory3).GUID, out IDxgiFactory2 factory);
+            NativeMethods.CreateDxgiFactory2(options, typeof(IDxgiFactory3).GUID, out IDxgiFactory2? factory);
 
             if (factory == null)
             {
@@ -128,9 +128,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// </summary>
         /// <returns>An IEnumerable of <see cref="DxgiAdapter3"/>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public IEnumerable<DxgiAdapter3> EnumAdapters()
+        public IEnumerable<DxgiAdapter3?> EnumAdapters()
         {
-            for (uint i = 0; !this.factory.EnumAdapters1(i, out IDxgiAdapter1 adapter); i++)
+            for (uint i = 0; !this.factory.EnumAdapters1(i, out IDxgiAdapter1? adapter); i++)
             {
                 yield return adapter == null ? null : new DxgiAdapter3((IDxgiAdapter2)adapter);
             }
@@ -159,14 +159,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiSwapChain3 CreateSwapChainForWindowHandle(
-            object device,
+        public DxgiSwapChain3? CreateSwapChainForWindowHandle(
+            object? device,
             IntPtr hwnd,
             DxgiSwapChainDesc1 desc,
             DxgiSwapChainFullscreenDesc? fullscreenDesc,
-            DxgiOutput3 restrictToOutput)
+            DxgiOutput3? restrictToOutput)
         {
-            IDxgiSwapChain1 swapChain;
+            IDxgiSwapChain1? swapChain;
 
             if (fullscreenDesc == null)
             {

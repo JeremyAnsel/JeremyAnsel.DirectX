@@ -169,7 +169,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="scrollRect">The rectangle of the previous frame from which the runtime bit-block transfers content.</param>
         /// <param name="scrollOffset">The offset of the scrolled area that goes from the source rectangle (of previous frame) to the destination rectangle (of current frame).</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Present(uint syncInterval, DxgiPresentOptions options, DxgiRect[] dirtyRects, DxgiRect scrollRect, DxgiPoint scrollOffset)
+        public void Present(uint syncInterval, DxgiPresentOptions options, DxgiRect[]? dirtyRects, DxgiRect scrollRect, DxgiPoint scrollOffset)
         {
             if (dirtyRects == null)
             {
@@ -207,7 +207,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="riid">The type of interface used to manipulate the buffer.</param>
         /// <returns>A pointer to a back-buffer interface.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public object GetBuffer(uint buffer, Guid riid)
+        public object? GetBuffer(uint buffer, Guid riid)
         {
             return this.swapChain.GetBuffer(buffer, ref riid);
         }
@@ -218,10 +218,10 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="buffer">A zero-based buffer index.</param>
         /// <returns>A back-buffer surface.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiSurface2 GetSurface(uint buffer)
+        public DxgiSurface2? GetSurface(uint buffer)
         {
             Guid riid = typeof(IDxgiSurface2).GUID;
-            object surface = this.swapChain.GetBuffer(buffer, ref riid);
+            object? surface = this.swapChain.GetBuffer(buffer, ref riid);
 
             if (surface == null)
             {
@@ -248,7 +248,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="target">A pointer to an <c>DXGIOutput2</c> interface for the output target that contains the swap chain.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetFullscreenState(bool fullscreen, DxgiOutput2 target)
+        public void SetFullscreenState(bool fullscreen, DxgiOutput2? target)
         {
             this.swapChain.SetFullscreenState(fullscreen, target?.GetHandle<IDxgiOutput1>());
         }
@@ -259,7 +259,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>A value indicating whether to set the display state to windowed or full screen.</returns>
         public bool GetFullscreenState()
         {
-            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput1 itarget);
+            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput1? itarget);
 
             if (itarget != null)
             {
@@ -275,9 +275,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="target">The output target when the mode is full screen.</param>
         /// <returns>A value indicating whether to set the display state to windowed or full screen.</returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
-        public bool GetFullscreenState(out DxgiOutput2 target)
+        public bool GetFullscreenState(out DxgiOutput2? target)
         {
-            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput1 itarget);
+            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput1? itarget);
             target = itarget == null ? null : new DxgiOutput2(itarget);
             return fullscreen;
         }
@@ -312,9 +312,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>The output interface.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiOutput2 GetContainingOutput()
+        public DxgiOutput2? GetContainingOutput()
         {
-            IDxgiOutput1 output = this.swapChain.GetContainingOutput();
+            IDxgiOutput1? output = this.swapChain.GetContainingOutput();
 
             if (output == null)
             {
@@ -330,9 +330,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>The <c>DXGIOutput2</c> interface for the restrict-to output.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiOutput2 GetRestrictToOutput()
+        public DxgiOutput2? GetRestrictToOutput()
         {
-            IDxgiOutput1 output = this.swapChain.GetRestrictToOutput();
+            IDxgiOutput1? output = this.swapChain.GetRestrictToOutput();
 
             if (output == null)
             {

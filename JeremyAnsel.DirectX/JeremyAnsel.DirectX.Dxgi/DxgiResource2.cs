@@ -85,9 +85,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="index">The index of the sub-resource surface object to enumerate.</param>
         /// <returns>A <c>IDXGISurface2</c> interface that represents the created sub-resource surface object at the position specified.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiSurface2 CreateSubresourceSurface(uint index)
+        public DxgiSurface2? CreateSubresourceSurface(uint index)
         {
-            IDxgiSurface2 surface = this.resource.CreateSubresourceSurface(index);
+            IDxgiSurface2? surface = this.resource.CreateSubresourceSurface(index);
 
             if (surface == null)
             {

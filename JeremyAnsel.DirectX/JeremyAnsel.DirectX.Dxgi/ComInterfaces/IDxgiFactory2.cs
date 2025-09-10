@@ -26,7 +26,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void SetPrivateData(
             [In] ref Guid name,
             [In] uint dataSize,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Set an interface in the object's private data.
@@ -35,7 +35,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="unknown">The interface to set.</param>
         void SetPrivateDataInterface(
             [In] ref Guid name,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object unknown);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? unknown);
 
         /// <summary>
         /// Get a pointer to the object's data.
@@ -46,7 +46,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void GetPrivateData(
             [In] ref Guid name,
             [In, Out] ref uint dataSize,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Gets the parent of the object.
@@ -54,7 +54,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="riid">The ID of the requested interface.</param>
         /// <returns>The address of a pointer to the parent object.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object GetParent(
+        object? GetParent(
             [In] ref Guid riid);
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         [return: MarshalAs(UnmanagedType.Bool)]
         bool EnumAdapters(
             [In] uint index,
-            [Out] out IDxgiAdapter adapter);
+            [Out] out IDxgiAdapter? adapter);
 
         /// <summary>
         /// Allows DXGI to monitor an application's message queue for the alt-enter key sequence (which causes the application to switch from windowed to full screen or vice versa).
@@ -90,8 +90,8 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="device">A Direct3D device that will write 2D images to the swap chain.</param>
         /// <param name="desc">A <c>DXGI_SWAP_CHAIN_DESC</c> structure for the swap-chain description.</param>
         /// <returns>An <c>IDXGISwapChain</c> interface for the swap chain</returns>
-        IDxgiSwapChain CreateSwapChain(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object device,
+        IDxgiSwapChain? CreateSwapChain(
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? device,
             [In] ref DxgiSwapChainDesc desc);
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// </summary>
         /// <param name="module">Handle to the software adapter's dll.</param>
         /// <returns>An adapter.</returns>
-        IDxgiAdapter CreateSoftwareAdapter(
+        IDxgiAdapter? CreateSoftwareAdapter(
             [In] IntPtr module);
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         [return: MarshalAs(UnmanagedType.Bool)]
         bool EnumAdapters1(
             [In] uint index,
-            [Out] out IDxgiAdapter1 adapter);
+            [Out] out IDxgiAdapter1? adapter);
 
         /// <summary>
         /// Informs an application of the possible need to re-enumerate adapters.
@@ -139,12 +139,12 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="fullscreenDesc">A <c>DXGI_SWAP_CHAIN_FULLSCREEN_DESC</c> structure for the description of a full-screen swap chain.</param>
         /// <param name="restrictToOutput">The <c>IDXGIOutput</c> interface for the output to restrict content to.</param>
         /// <returns>The <c>IDXGISwapChain1</c> interface for the swap chain.</returns>
-        IDxgiSwapChain1 CreateSwapChainForWindowHandle(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object device,
+        IDxgiSwapChain1? CreateSwapChainForWindowHandle(
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? device,
             [In] IntPtr hwnd,
             [In] ref DxgiSwapChainDesc1 desc,
             [In] IntPtr fullscreenDesc,
-            [In] IDxgiOutput restrictToOutput);
+            [In] IDxgiOutput? restrictToOutput);
 
         /// <summary>
         /// Creates a swap chain that is associated with the <c>CoreWindow</c> object for the output window for the swap chain.
@@ -154,11 +154,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="desc">A <c>DXGI_SWAP_CHAIN_DESC1</c> structure for the swap-chain description.</param>
         /// <param name="restrictToOutput">The <c>IDXGIOutput</c> interface for the output to restrict content to.</param>
         /// <returns>The <c>IDXGISwapChain1</c> interface for the swap chain.</returns>
-        IDxgiSwapChain1 CreateSwapChainForCoreWindow(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object device,
+        IDxgiSwapChain1? CreateSwapChainForCoreWindow(
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? device,
             [In] IntPtr window,
             [In] ref DxgiSwapChainDesc1 desc,
-            [In] IDxgiOutput restrictToOutput);
+            [In] IDxgiOutput? restrictToOutput);
 
         /// <summary>
         /// Identifies the adapter on which a shared resource object was created.
@@ -232,8 +232,8 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="restrictToOutput">The <c>IDXGIOutput</c> interface for the output to restrict content to.</param>
         /// <returns>The <c>IDXGISwapChain1</c> interface for the swap chain.</returns>
         IDxgiSwapChain1 CreateSwapChainForComposition(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object device,
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? device,
             [In] ref DxgiSwapChainDesc1 desc,
-            [In] IDxgiOutput restrictToOutput);
+            [In] IDxgiOutput? restrictToOutput);
     }
 }

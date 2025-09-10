@@ -73,9 +73,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>The adapter for the specified device.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiAdapter1 GetAdapter()
+        public DxgiAdapter1? GetAdapter()
         {
-            IDxgiAdapter adapter = this.device.GetAdapter();
+            IDxgiAdapter? adapter = this.device.GetAdapter();
 
             if (adapter == null)
             {
@@ -91,14 +91,14 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="resources">An array of <c>IDXGIResource</c> interfaces.</param>
         /// <returns>An array of <c>DXGI_RESIDENCY</c> flags. Each element describes the residency status for corresponding element in the <c>resources</c> argument array.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiResidency[] QueryResourceResidency(DxgiResource1[] resources)
+        public DxgiResidency?[] QueryResourceResidency(DxgiResource1?[]? resources)
         {
             if (resources == null)
             {
                 throw new ArgumentNullException(nameof(resources));
             }
 
-            DxgiResidency[] residencies = new DxgiResidency[resources.Length];
+            DxgiResidency?[] residencies = new DxgiResidency?[resources.Length];
 
             this.device.QueryResourceResidency(
                 Array.ConvertAll(resources, t => t?.GetHandle<IDxgiResource>()),

@@ -93,7 +93,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="riid">The type of interface used to manipulate the buffer.</param>
         /// <returns>A pointer to a back-buffer interface.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public object GetBuffer(uint buffer, Guid riid)
+        public object? GetBuffer(uint buffer, Guid riid)
         {
             return this.swapChain.GetBuffer(buffer, ref riid);
         }
@@ -104,10 +104,10 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="buffer">A zero-based buffer index.</param>
         /// <returns>A back-buffer surface.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiSurface GetSurface(uint buffer)
+        public DxgiSurface? GetSurface(uint buffer)
         {
             Guid riid = typeof(IDxgiSurface).GUID;
-            object surface = this.swapChain.GetBuffer(buffer, ref riid);
+            object? surface = this.swapChain.GetBuffer(buffer, ref riid);
 
             if (surface == null)
             {
@@ -134,7 +134,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="target">A pointer to an <c>DXGIOutput</c> interface for the output target that contains the swap chain.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetFullscreenState(bool fullscreen, DxgiOutput target)
+        public void SetFullscreenState(bool fullscreen, DxgiOutput? target)
         {
             this.swapChain.SetFullscreenState(fullscreen, target?.GetHandle<IDxgiOutput>());
         }
@@ -145,7 +145,7 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>A value indicating whether to set the display state to windowed or full screen.</returns>
         public bool GetFullscreenState()
         {
-            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput itarget);
+            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput? itarget);
 
             if (itarget != null)
             {
@@ -161,9 +161,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <param name="target">The output target when the mode is full screen.</param>
         /// <returns>A value indicating whether to set the display state to windowed or full screen.</returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "0#", Justification = "Reviewed")]
-        public bool GetFullscreenState(out DxgiOutput target)
+        public bool GetFullscreenState(out DxgiOutput? target)
         {
-            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput itarget);
+            this.swapChain.GetFullscreenState(out bool fullscreen, out IDxgiOutput? itarget);
             target = itarget == null ? null : new DxgiOutput(itarget);
             return fullscreen;
         }
@@ -198,9 +198,9 @@ namespace JeremyAnsel.DirectX.Dxgi
         /// <returns>The output interface.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DxgiOutput GetContainingOutput()
+        public DxgiOutput? GetContainingOutput()
         {
-            IDxgiOutput output = this.swapChain.GetContainingOutput();
+            IDxgiOutput? output = this.swapChain.GetContainingOutput();
 
             if (output == null)
             {

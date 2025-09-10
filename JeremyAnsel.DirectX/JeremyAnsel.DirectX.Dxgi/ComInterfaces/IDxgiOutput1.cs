@@ -26,7 +26,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void SetPrivateData(
             [In] ref Guid name,
             [In] uint dataSize,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Set an interface in the object's private data.
@@ -35,7 +35,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="unknown">The interface to set.</param>
         void SetPrivateDataInterface(
             [In] ref Guid name,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object unknown);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? unknown);
 
         /// <summary>
         /// Get a pointer to the object's data.
@@ -46,7 +46,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void GetPrivateData(
             [In] ref Guid name,
             [In, Out] ref uint dataSize,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Gets the parent of the object.
@@ -54,7 +54,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="riid">The ID of the requested interface.</param>
         /// <returns>The address of a pointer to the parent object.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object GetParent(
+        object? GetParent(
             [In] ref Guid riid);
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
             [In] DxgiFormat format,
             [In] DxgiEnumModes modes,
             [In, Out] ref uint numModes,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DxgiModeDesc[] desc);
+            [Out, MarshalAs(UnmanagedType.LPArray)] DxgiModeDesc[]? desc);
 
         /// <summary>
         /// Finds the display mode that most closely matches the requested display mode.
@@ -85,7 +85,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void FindClosestMatchingMode(
             [In] ref DxgiModeDesc modeToMatch,
             [Out] out DxgiModeDesc closestMatch,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object concernedDevice);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? concernedDevice);
 
         /// <summary>
         /// Halt a thread until the next vertical blank occurs.
@@ -98,7 +98,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="device">The <c>IUnknown</c> interface of a device.</param>
         /// <param name="exclusive">Set to <value>true</value> to enable other threads or applications to take ownership of the device; otherwise, set to <value>false</value>.</param>
         void TakeOwnership(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object device,
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? device,
             [In, MarshalAs(UnmanagedType.Bool)] bool exclusive);
 
         /// <summary>
@@ -131,14 +131,14 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// </summary>
         /// <param name="scanoutSurface">A surface used for rendering an image to the screen. The surface must have been created as a back buffer.</param>
         void SetDisplaySurface(
-            [In] IDxgiSurface scanoutSurface);
+            [In] IDxgiSurface? scanoutSurface);
 
         /// <summary>
         /// Gets a copy of the current display surface.
         /// </summary>
         /// <param name="destination">A destination surface.</param>
         void GetDisplaySurfaceData(
-            [In] IDxgiSurface destination);
+            [In] IDxgiSurface? destination);
 
         /// <summary>
         /// Gets statistics about recently rendered frames.
@@ -157,7 +157,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
             [In] DxgiFormat format,
             [In] DxgiEnumModes modes,
             [In, Out] ref uint numModes,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DxgiModeDesc1[] desc);
+            [Out, MarshalAs(UnmanagedType.LPArray)] DxgiModeDesc1[]? desc);
 
         /// <summary>
         /// Finds the display mode that most closely matches the requested display mode.
@@ -168,14 +168,14 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void FindClosestMatchingMode1(
             [In] ref DxgiModeDesc1 modeToMatch,
             [Out] out DxgiModeDesc1 closestMatch,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object concernedDevice);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? concernedDevice);
 
         /// <summary>
         /// Copies the display surface (front buffer) to a user-provided resource.
         /// </summary>
         /// <param name="destination">A resource interface that represents the resource to which copies the display surface.</param>
         void GetDisplaySurfaceData1(
-            [In] IDxgiResource destination);
+            [In] IDxgiResource? destination);
 
         /// <summary>
         /// Creates a desktop duplication interface from the <c>IDXGIOutput1</c> interface that represents an adapter output.
@@ -183,6 +183,6 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="device">The Direct3D device interface that you can use to process the desktop image. This device must be created from the adapter to which the output is connected.</param>
         /// <returns>The new <c>IDXGIOutputDuplication</c> interface.</returns>
         IntPtr DuplicateOutput(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object device);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? device);
     }
 }

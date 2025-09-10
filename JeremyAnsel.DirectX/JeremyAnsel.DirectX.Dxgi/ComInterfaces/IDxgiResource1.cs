@@ -26,7 +26,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void SetPrivateData(
             [In] ref Guid name,
             [In] uint dataSize,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Set an interface in the object's private data.
@@ -35,7 +35,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="unknown">The interface to set.</param>
         void SetPrivateDataInterface(
             [In] ref Guid name,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object unknown);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? unknown);
 
         /// <summary>
         /// Get a pointer to the object's data.
@@ -46,7 +46,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         void GetPrivateData(
             [In] ref Guid name,
             [In, Out] ref uint dataSize,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Gets the parent of the object.
@@ -54,7 +54,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="riid">The ID of the requested interface.</param>
         /// <returns>The address of a pointer to the parent object.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object GetParent(
+        object? GetParent(
             [In] ref Guid riid);
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// <param name="riid">The reference id for the device.</param>
         /// <returns>The address of a pointer to the device.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object GetDevice(
+        object? GetDevice(
             [In] ref Guid riid);
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         /// </summary>
         /// <param name="index">The index of the sub-resource surface object to enumerate.</param>
         /// <returns>A <c>IDXGISurface2</c> interface that represents the created sub-resource surface object at the position specified.</returns>
-        IDxgiSurface2 CreateSubresourceSurface(
+        IDxgiSurface2? CreateSubresourceSurface(
             [In] uint index);
 
         /// <summary>
@@ -109,6 +109,6 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces
         IntPtr CreateSharedHandle(
             [In] IntPtr securityAttributes,
             [In] DxgiSharedResourceAccess access,
-            [In, MarshalAs(UnmanagedType.LPWStr)] string name);
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? name);
     }
 }
