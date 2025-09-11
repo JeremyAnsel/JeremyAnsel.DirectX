@@ -1833,13 +1833,13 @@ the return value is zero.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFace.cs/#L174">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetDesignGlyphMetrics_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetDesignGlyphMetrics*"></a>
-  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetDesignGlyphMetrics_System_UInt16___System_Boolean_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetDesignGlyphMetrics(System.UInt16[],System.Boolean)">GetDesignGlyphMetrics(ushort[], bool)</h4>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetDesignGlyphMetrics_System_UInt16___System_Boolean_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetDesignGlyphMetrics(System.UInt16[],System.Boolean)">GetDesignGlyphMetrics(ushort[]?, bool)</h4>
   <div class="markdown level1 summary"><p>Obtains ideal glyph metrics in font design units. Design glyphs metrics are used for glyph positioning.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DWriteGlyphMetrics[] GetDesignGlyphMetrics(ushort[] glyphIndices, bool isSideways)</code></pre>
+    <pre><code class="lang-csharp hljs">public DWriteGlyphMetrics[] GetDesignGlyphMetrics(ushort[]? glyphIndices, bool isSideways)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1926,14 +1926,14 @@ because sideways oblique simulation differs from non-sideways oblique simulation
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFace.cs/#L394">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetGdiCompatibleGlyphMetrics_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetGdiCompatibleGlyphMetrics*"></a>
-  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetGdiCompatibleGlyphMetrics_System_Single_System_Single_System_Nullable_JeremyAnsel_DirectX_DWrite_DWriteMatrix__System_Boolean_System_UInt16___System_Boolean_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetGdiCompatibleGlyphMetrics(System.Single,System.Single,System.Nullable{JeremyAnsel.DirectX.DWrite.DWriteMatrix},System.Boolean,System.UInt16[],System.Boolean)">GetGdiCompatibleGlyphMetrics(float, float, DWriteMatrix?, bool, ushort[], bool)</h4>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetGdiCompatibleGlyphMetrics_System_Single_System_Single_System_Nullable_JeremyAnsel_DirectX_DWrite_DWriteMatrix__System_Boolean_System_UInt16___System_Boolean_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetGdiCompatibleGlyphMetrics(System.Single,System.Single,System.Nullable{JeremyAnsel.DirectX.DWrite.DWriteMatrix},System.Boolean,System.UInt16[],System.Boolean)">GetGdiCompatibleGlyphMetrics(float, float, DWriteMatrix?, bool, ushort[]?, bool)</h4>
   <div class="markdown level1 summary"><p>Obtains glyph metrics in font design units with the return values compatible with what GDI would produce.
 Glyphs metrics are used for positioning of individual glyphs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DWriteGlyphMetrics[] GetGdiCompatibleGlyphMetrics(float size, float pixelsPerDip, DWriteMatrix? transform, bool useGdiNatural, ushort[] glyphIndices, bool isSideways)</code></pre>
+    <pre><code class="lang-csharp hljs">public DWriteGlyphMetrics[] GetGdiCompatibleGlyphMetrics(float size, float pixelsPerDip, DWriteMatrix? transform, bool useGdiNatural, ushort[]? glyphIndices, bool isSideways)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2086,7 +2086,7 @@ scaling specified by the font size and pixelsPerDip.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFace.cs/#L197">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetGlyphIndices_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetGlyphIndices*"></a>
-  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetGlyphIndices_System_UInt32___" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetGlyphIndices(System.UInt32[])">GetGlyphIndices(uint[])</h4>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetGlyphIndices_System_UInt32___" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetGlyphIndices(System.UInt32[])">GetGlyphIndices(uint[]?)</h4>
   <div class="markdown level1 summary"><p>Returns the nominal mapping of UTF-32 Unicode code points to glyph indices as defined by the font 'cmap' table.
 Note that this mapping is primarily provided for line layout engines built on top of the physical font API.
 Because of OpenType glyph substitution and line layout character substitution, the nominal conversion does not always correspond
@@ -2097,7 +2097,7 @@ This call will always return the default variant.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ushort[] GetGlyphIndices(uint[] codePoints)</code></pre>
+    <pre><code class="lang-csharp hljs">public ushort[] GetGlyphIndices(uint[]? codePoints)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2141,13 +2141,13 @@ This call will always return the default variant.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFace.cs/#L272">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetGlyphRunOutline_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetGlyphRunOutline*"></a>
-  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetGlyphRunOutline_System_Single_System_UInt16___System_Single___JeremyAnsel_DirectX_DWrite_DWriteGlyphOffset___System_Boolean_System_Boolean_System_Object_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetGlyphRunOutline(System.Single,System.UInt16[],System.Single[],JeremyAnsel.DirectX.DWrite.DWriteGlyphOffset[],System.Boolean,System.Boolean,System.Object)">GetGlyphRunOutline(float, ushort[], float[], DWriteGlyphOffset[], bool, bool, object)</h4>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetGlyphRunOutline_System_Single_System_UInt16___System_Single___JeremyAnsel_DirectX_DWrite_DWriteGlyphOffset___System_Boolean_System_Boolean_System_Object_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetGlyphRunOutline(System.Single,System.UInt16[],System.Single[],JeremyAnsel.DirectX.DWrite.DWriteGlyphOffset[],System.Boolean,System.Boolean,System.Object)">GetGlyphRunOutline(float, ushort[]?, float[]?, DWriteGlyphOffset[]?, bool, bool, object?)</h4>
   <div class="markdown level1 summary"><p>Computes the outline of a run of glyphs by calling back to the outline sink interface.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GetGlyphRunOutline(float size, ushort[] glyphIndices, float[] glyphAdvances, DWriteGlyphOffset[] glyphOffsets, bool isSideways, bool isRightToLeft, object geometrySink)</code></pre>
+    <pre><code class="lang-csharp hljs">public void GetGlyphRunOutline(float size, ushort[]? glyphIndices, float[]? glyphAdvances, DWriteGlyphOffset[]? glyphOffsets, bool isSideways, bool isRightToLeft, object? geometrySink)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2250,13 +2250,13 @@ These metrics are applicable to all the glyphs within a font face and are used b
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFace.cs/#L314">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetRecommendedRenderingMode_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetRecommendedRenderingMode*"></a>
-  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetRecommendedRenderingMode_System_Single_System_Single_JeremyAnsel_DirectX_DWrite_DWriteMeasuringMode_JeremyAnsel_DirectX_DWrite_DWriteRenderingParams_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetRecommendedRenderingMode(System.Single,System.Single,JeremyAnsel.DirectX.DWrite.DWriteMeasuringMode,JeremyAnsel.DirectX.DWrite.DWriteRenderingParams)">GetRecommendedRenderingMode(float, float, DWriteMeasuringMode, DWriteRenderingParams)</h4>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_GetRecommendedRenderingMode_System_Single_System_Single_JeremyAnsel_DirectX_DWrite_DWriteMeasuringMode_JeremyAnsel_DirectX_DWrite_DWriteRenderingParams_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.GetRecommendedRenderingMode(System.Single,System.Single,JeremyAnsel.DirectX.DWrite.DWriteMeasuringMode,JeremyAnsel.DirectX.DWrite.DWriteRenderingParams)">GetRecommendedRenderingMode(float, float, DWriteMeasuringMode, DWriteRenderingParams?)</h4>
   <div class="markdown level1 summary"><p>Determines the recommended rendering mode for the font given the specified size and rendering parameters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DWriteRenderingMode GetRecommendedRenderingMode(float size, float pixelsPerDip, DWriteMeasuringMode measuringMode, DWriteRenderingParams renderingParams)</code></pre>
+    <pre><code class="lang-csharp hljs">public DWriteRenderingMode GetRecommendedRenderingMode(float size, float pixelsPerDip, DWriteMeasuringMode measuringMode, DWriteRenderingParams? renderingParams)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2498,13 +2498,13 @@ so each one must be held and released separately.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFontFace.cs/#L98">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_op_Implicit_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.op_Implicit*"></a>
-  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteFontFace__System_Boolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteFontFace)~System.Boolean">implicit operator bool(DWriteFontFace)</h4>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFontFace_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteFontFace__System_Boolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFontFace.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteFontFace)~System.Boolean">implicit operator bool(DWriteFontFace?)</h4>
   <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator bool(DWriteFontFace value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator bool(DWriteFontFace? value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">

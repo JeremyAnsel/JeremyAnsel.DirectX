@@ -1820,7 +1820,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DWriteFontFace CreateFontFace()</code></pre>
+    <pre><code class="lang-csharp hljs">public DWriteFontFace? CreateFontFace()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -1868,7 +1868,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DWriteLocalizedStrings GetFaceNames()</code></pre>
+    <pre><code class="lang-csharp hljs">public DWriteLocalizedStrings? GetFaceNames()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -1900,7 +1900,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DWriteFontFamily GetFontFamily()</code></pre>
+    <pre><code class="lang-csharp hljs">public DWriteFontFamily? GetFontFamily()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -1932,7 +1932,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DWriteLocalizedStrings GetInformationalStrings(DWriteInformationalStringId informationalStringId)</code></pre>
+    <pre><code class="lang-csharp hljs">public DWriteLocalizedStrings? GetInformationalStrings(DWriteInformationalStringId informationalStringId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2112,13 +2112,13 @@ informationalStrings receives a NULL pointer and exists receives the value FALSE
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteFont.cs/#L92">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteFont_op_Implicit_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFont.op_Implicit*"></a>
-  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFont_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteFont__System_Boolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFont.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteFont)~System.Boolean">implicit operator bool(DWriteFont)</h4>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteFont_op_Implicit_JeremyAnsel_DirectX_DWrite_DWriteFont__System_Boolean" data-uid="JeremyAnsel.DirectX.DWrite.DWriteFont.op_Implicit(JeremyAnsel.DirectX.DWrite.DWriteFont)~System.Boolean">implicit operator bool(DWriteFont?)</h4>
   <div class="markdown level1 summary"><p>Gets a boolean indicating if the handle is not null.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator bool(DWriteFont value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator bool(DWriteFont? value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
