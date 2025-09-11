@@ -43,9 +43,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="index">The index of the class instance.</param>
         /// <returns>A class instance interface.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11ClassInstance GetClassInstance(string name, uint index)
+        public D3D11ClassInstance? GetClassInstance(string name, uint index)
         {
-            ID3D11ClassInstance classInstance = this.classLinkage.GetClassInstance(name, index);
+            ID3D11ClassInstance? classInstance = this.classLinkage.GetClassInstance(name, index);
 
             if (classInstance == null)
             {
@@ -65,14 +65,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="samplerOffset">The sampler slot for the first sampler; there may be multiple samplers following the offset.</param>
         /// <returns>A class instance interface.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11ClassInstance CreateClassInstance(
+        public D3D11ClassInstance? CreateClassInstance(
             string classTypeName,
             uint constantBufferOffset,
             uint constantVectorOffset,
             uint textureOffset,
             uint samplerOffset)
         {
-            ID3D11ClassInstance classInstance = this.classLinkage.CreateClassInstance(
+            ID3D11ClassInstance? classInstance = this.classLinkage.CreateClassInstance(
                 classTypeName,
                 constantBufferOffset,
                 constantVectorOffset,

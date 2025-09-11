@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="device">A device.</param>
         [PreserveSig]
         void GetDevice(
-            [Out] out ID3D11Device device);
+            [Out] out ID3D11Device? device);
 
         /// <summary>
         /// Get application-defined data from a device.
@@ -34,7 +34,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void GetPrivateData(
             [In] ref Guid name,
             [In, Out] ref uint dataSize,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Set data to a device and associate that data with a guid.
@@ -45,7 +45,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void SetPrivateData(
             [In] ref Guid name,
             [In] uint dataSize,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Associate an IUnknown-derived interface with this device child and associate that interface with an application-defined guid.
@@ -54,7 +54,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="unknown">An <c>IUnknown</c>-derived interface to be associated with the device child.</param>
         void SetPrivateDataInterface(
             [In] ref Guid name,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object unknown);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? unknown);
 
         /// <summary>
         /// Get the size of the data (in bytes) that is output when calling <c>GetData</c>.

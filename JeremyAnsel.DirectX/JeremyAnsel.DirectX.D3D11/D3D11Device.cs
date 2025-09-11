@@ -66,7 +66,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="value">A D3D11 device.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(D3D11Device value)
+        public static implicit operator bool(D3D11Device? value)
         {
             return value != null && value.Handle != null;
         }
@@ -86,13 +86,13 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "6#", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CreateDevice(
-            object adapter,
+            object? adapter,
             D3D11DriverType driverType,
             D3D11CreateDeviceOptions options,
-            D3D11FeatureLevel[] featureLevels,
-            out D3D11Device device,
+            D3D11FeatureLevel[]? featureLevels,
+            out D3D11Device? device,
             out D3D11FeatureLevel featureLevel,
-            out D3D11DeviceContext immediateContext)
+            out D3D11DeviceContext? immediateContext)
         {
             if (featureLevels == null || featureLevels.Length == 0)
             {
@@ -108,9 +108,9 @@ namespace JeremyAnsel.DirectX.D3D11
                 featureLevels,
                 (uint)featureLevels.Length,
                 7, // SDK_VERSION
-                out ID3D11Device deviceInterface,
+                out ID3D11Device? deviceInterface,
                 out featureLevel,
-                out ID3D11DeviceContext immediateContextInterface);
+                out ID3D11DeviceContext? immediateContextInterface);
 
             device = deviceInterface == null ? null : new D3D11Device(deviceInterface);
             immediateContext = immediateContextInterface == null ? null : new D3D11DeviceContext(immediateContextInterface);
@@ -132,15 +132,15 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1007:UseGenericsWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CreateDeviceAndSwapChain(
-            object adapter,
+            object? adapter,
             D3D11DriverType driverType,
             D3D11CreateDeviceOptions options,
-            D3D11FeatureLevel[] featureLevels,
+            D3D11FeatureLevel[]? featureLevels,
             DxgiSwapChainDesc swapChainDesc,
-            out object swapChain,
-            out D3D11Device device,
+            out object? swapChain,
+            out D3D11Device? device,
             out D3D11FeatureLevel featureLevel,
-            out D3D11DeviceContext immediateContext)
+            out D3D11DeviceContext? immediateContext)
         {
             if (featureLevels == null || featureLevels.Length == 0)
             {
@@ -158,9 +158,9 @@ namespace JeremyAnsel.DirectX.D3D11
                 7, // SDK_VERSION
                 ref swapChainDesc,
                 out swapChain,
-                out ID3D11Device deviceInterface,
+                out ID3D11Device? deviceInterface,
                 out featureLevel,
-                out ID3D11DeviceContext immediateContextInterface);
+                out ID3D11DeviceContext? immediateContextInterface);
 
             device = deviceInterface == null ? null : new D3D11Device(deviceInterface);
             immediateContext = immediateContextInterface == null ? null : new D3D11DeviceContext(immediateContextInterface);
@@ -200,14 +200,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="name">A GUID that identifies the data.</param>
         /// <param name="text">The object's text.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetPrivateDataText(Guid name, string text)
+        public void SetPrivateDataText(Guid name, string? text)
         {
             if (string.IsNullOrEmpty(text))
             {
                 text = "<unnamed>";
             }
 
-            if (text.Length > 255)
+            if (text!.Length > 255)
             {
                 text = text.Substring(0, 255);
             }
@@ -238,7 +238,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="name">The friendly name.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetDebugName(string name)
+        public void SetDebugName(string? name)
         {
             this.SetPrivateDataText(D3D11WellKnownPrivateDataId.DebugObjectName, name);
         }
@@ -260,9 +260,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">Describes the buffer.</param>
         /// <returns>The buffer object created.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Buffer CreateBuffer(D3D11BufferDesc desc)
+        public D3D11Buffer? CreateBuffer(D3D11BufferDesc desc)
         {
-            ID3D11Buffer buffer = this.device.CreateBuffer(ref desc, IntPtr.Zero);
+            ID3D11Buffer? buffer = this.device.CreateBuffer(ref desc, IntPtr.Zero);
 
             if (buffer == null)
             {
@@ -280,9 +280,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The buffer object created.</returns>
         [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Buffer CreateBuffer(D3D11BufferDesc desc, D3D11SubResourceData data)
+        public D3D11Buffer? CreateBuffer(D3D11BufferDesc desc, D3D11SubResourceData data)
         {
-            ID3D11Buffer buffer;
+            ID3D11Buffer? buffer;
 
             D3D11SubResourceDataPtr resource = new D3D11SubResourceDataPtr
             {
@@ -321,10 +321,10 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The buffer object created.</returns>
         [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Buffer CreateBuffer<T>(D3D11BufferDesc desc, T data, uint sysMemPitch, uint sysMemSlicePitch)
+        public D3D11Buffer? CreateBuffer<T>(D3D11BufferDesc desc, T data, uint sysMemPitch, uint sysMemSlicePitch)
             where T : struct
         {
-            ID3D11Buffer buffer;
+            ID3D11Buffer? buffer;
 
             int dataSize = Marshal.SizeOf(typeof(T));
             IntPtr dataPtr = Marshal.AllocHGlobal(dataSize);
@@ -375,7 +375,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The buffer object created.</returns>
         [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Buffer CreateBuffer<T>(D3D11BufferDesc desc, T[] data, uint sysMemPitch, uint sysMemSlicePitch)
+        public D3D11Buffer? CreateBuffer<T>(D3D11BufferDesc desc, T[]? data, uint sysMemPitch, uint sysMemSlicePitch)
             where T : struct
         {
             if (data == null)
@@ -388,7 +388,7 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentOutOfRangeException(nameof(data));
             }
 
-            ID3D11Buffer buffer;
+            ID3D11Buffer? buffer;
 
             int dataSize = Marshal.SizeOf(typeof(T));
             IntPtr dataPtr = Marshal.AllocHGlobal(dataSize * data.Length);
@@ -437,9 +437,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">Describes a 1D texture resource.</param>
         /// <returns>The created texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Texture1D CreateTexture1D(D3D11Texture1DDesc desc)
+        public D3D11Texture1D? CreateTexture1D(D3D11Texture1DDesc desc)
         {
-            ID3D11Texture1D texture = this.device.CreateTexture1D(ref desc, null);
+            ID3D11Texture1D? texture = this.device.CreateTexture1D(ref desc, null);
 
             if (texture == null)
             {
@@ -456,9 +456,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="data">Describe subresources for the 1D texture resource.</param>
         /// <returns>The created texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Texture1D CreateTexture1D(D3D11Texture1DDesc desc, D3D11SubResourceData[] data)
+        public D3D11Texture1D? CreateTexture1D(D3D11Texture1DDesc desc, D3D11SubResourceData[]? data)
         {
-            ID3D11Texture1D texture;
+            ID3D11Texture1D? texture;
 
             if (data == null)
             {
@@ -499,9 +499,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">Describes a 2D texture resource.</param>
         /// <returns>The created texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Texture2D CreateTexture2D(D3D11Texture2DDesc desc)
+        public D3D11Texture2D? CreateTexture2D(D3D11Texture2DDesc desc)
         {
-            ID3D11Texture2D texture = this.device.CreateTexture2D(ref desc, null);
+            ID3D11Texture2D? texture = this.device.CreateTexture2D(ref desc, null);
 
             if (texture == null)
             {
@@ -518,9 +518,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="data">Describe subresources for the 2D texture resource.</param>
         /// <returns>The created texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Texture2D CreateTexture2D(D3D11Texture2DDesc desc, D3D11SubResourceData[] data)
+        public D3D11Texture2D? CreateTexture2D(D3D11Texture2DDesc desc, D3D11SubResourceData[]? data)
         {
-            ID3D11Texture2D texture;
+            ID3D11Texture2D? texture;
 
             if (data == null)
             {
@@ -561,9 +561,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">Describes a 3D texture resource.</param>
         /// <returns>The created texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Texture3D CreateTexture3D(D3D11Texture3DDesc desc)
+        public D3D11Texture3D? CreateTexture3D(D3D11Texture3DDesc desc)
         {
-            ID3D11Texture3D texture = this.device.CreateTexture3D(ref desc, null);
+            ID3D11Texture3D? texture = this.device.CreateTexture3D(ref desc, null);
 
             if (texture == null)
             {
@@ -580,9 +580,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="data">Describe subresources for the 3D texture resource.</param>
         /// <returns>The created texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Texture3D CreateTexture3D(D3D11Texture3DDesc desc, D3D11SubResourceData[] data)
+        public D3D11Texture3D? CreateTexture3D(D3D11Texture3DDesc desc, D3D11SubResourceData[]? data)
         {
-            ID3D11Texture3D texture;
+            ID3D11Texture3D? texture;
 
             if (data == null)
             {
@@ -626,14 +626,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11ShaderResourceView CreateShaderResourceView(D3D11Resource resource, D3D11ShaderResourceViewDesc? desc)
+        public D3D11ShaderResourceView? CreateShaderResourceView(D3D11Resource? resource, D3D11ShaderResourceViewDesc? desc)
         {
             if (resource == null)
             {
                 throw new ArgumentNullException(nameof(resource));
             }
 
-            ID3D11ShaderResourceView view;
+            ID3D11ShaderResourceView? view;
 
             if (desc == null)
             {
@@ -672,14 +672,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11UnorderedAccessView CreateUnorderedAccessView(D3D11Resource resource, D3D11UnorderedAccessViewDesc? desc)
+        public D3D11UnorderedAccessView? CreateUnorderedAccessView(D3D11Resource? resource, D3D11UnorderedAccessViewDesc? desc)
         {
             if (resource == null)
             {
                 throw new ArgumentNullException(nameof(resource));
             }
 
-            ID3D11UnorderedAccessView view;
+            ID3D11UnorderedAccessView? view;
 
             if (desc == null)
             {
@@ -718,14 +718,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11RenderTargetView CreateRenderTargetView(D3D11Resource resource, D3D11RenderTargetViewDesc? desc)
+        public D3D11RenderTargetView? CreateRenderTargetView(D3D11Resource? resource, D3D11RenderTargetViewDesc? desc)
         {
             if (resource == null)
             {
                 throw new ArgumentNullException(nameof(resource));
             }
 
-            ID3D11RenderTargetView view;
+            ID3D11RenderTargetView? view;
 
             if (desc == null)
             {
@@ -764,14 +764,14 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11DepthStencilView CreateDepthStencilView(D3D11Resource resource, D3D11DepthStencilViewDesc? desc)
+        public D3D11DepthStencilView? CreateDepthStencilView(D3D11Resource? resource, D3D11DepthStencilViewDesc? desc)
         {
             if (resource == null)
             {
                 throw new ArgumentNullException(nameof(resource));
             }
 
-            ID3D11DepthStencilView view;
+            ID3D11DepthStencilView? view;
 
             if (desc == null)
             {
@@ -808,14 +808,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="shaderBytecodeWithInputSignature">The compiled shader. The compiled shader code contains a input signature which is validated against the array of elements.</param>
         /// <returns>The created input-layout object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11InputLayout CreateInputLayout(D3D11InputElementDesc[] elementDescs, byte[] shaderBytecodeWithInputSignature)
+        public D3D11InputLayout? CreateInputLayout(D3D11InputElementDesc[]? elementDescs, byte[]? shaderBytecodeWithInputSignature)
         {
             if (elementDescs == null)
             {
                 throw new ArgumentNullException(nameof(elementDescs));
             }
 
-            ID3D11InputLayout inputLayout = this.device.CreateInputLayout(
+            ID3D11InputLayout? inputLayout = this.device.CreateInputLayout(
                 elementDescs,
                 (uint)elementDescs.Length,
                 shaderBytecodeWithInputSignature,
@@ -837,14 +837,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The created vertex shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11VertexShader CreateVertexShader(byte[] shaderBytecode, D3D11ClassLinkage classLinkage)
+        public D3D11VertexShader? CreateVertexShader(byte[]? shaderBytecode, D3D11ClassLinkage? classLinkage)
         {
             if (shaderBytecode == null)
             {
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            ID3D11VertexShader vertexShader = this.device.CreateVertexShader(
+            ID3D11VertexShader? vertexShader = this.device.CreateVertexShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
                 classLinkage?.GetHandle<ID3D11ClassLinkage>());
@@ -865,14 +865,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The created geometry shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11GeometryShader CreateGeometryShader(byte[] shaderBytecode, D3D11ClassLinkage classLinkage)
+        public D3D11GeometryShader? CreateGeometryShader(byte[]? shaderBytecode, D3D11ClassLinkage? classLinkage)
         {
             if (shaderBytecode == null)
             {
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            ID3D11GeometryShader geometryShader = this.device.CreateGeometryShader(
+            ID3D11GeometryShader? geometryShader = this.device.CreateGeometryShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
                 classLinkage?.GetHandle<ID3D11ClassLinkage>());
@@ -896,12 +896,12 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The created geometry shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11GeometryShader CreateGeometryShaderWithStreamOutput(
-            byte[] shaderBytecode,
-            D3D11StreamOutputDeclarationEntry[] streamOutputDeclaration,
-            uint[] bufferStrides,
+        public D3D11GeometryShader? CreateGeometryShaderWithStreamOutput(
+            byte[]? shaderBytecode,
+            D3D11StreamOutputDeclarationEntry[]? streamOutputDeclaration,
+            uint[]? bufferStrides,
             uint rasterizedStream,
-            D3D11ClassLinkage classLinkage)
+            D3D11ClassLinkage? classLinkage)
         {
             if (shaderBytecode == null)
             {
@@ -918,7 +918,7 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(bufferStrides));
             }
 
-            ID3D11GeometryShader geometryShader = this.device.CreateGeometryShaderWithStreamOutput(
+            ID3D11GeometryShader? geometryShader = this.device.CreateGeometryShaderWithStreamOutput(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
                 streamOutputDeclaration,
@@ -944,14 +944,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The created pixel shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11PixelShader CreatePixelShader(byte[] shaderBytecode, D3D11ClassLinkage classLinkage)
+        public D3D11PixelShader? CreatePixelShader(byte[]? shaderBytecode, D3D11ClassLinkage? classLinkage)
         {
             if (shaderBytecode == null)
             {
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            ID3D11PixelShader pixelShader = this.device.CreatePixelShader(
+            ID3D11PixelShader? pixelShader = this.device.CreatePixelShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
                 classLinkage?.GetHandle<ID3D11ClassLinkage>());
@@ -972,14 +972,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The created hull shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11HullShader CreateHullShader(byte[] shaderBytecode, D3D11ClassLinkage classLinkage)
+        public D3D11HullShader? CreateHullShader(byte[]? shaderBytecode, D3D11ClassLinkage? classLinkage)
         {
             if (shaderBytecode == null)
             {
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            ID3D11HullShader hullShader = this.device.CreateHullShader(
+            ID3D11HullShader? hullShader = this.device.CreateHullShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
                 classLinkage?.GetHandle<ID3D11ClassLinkage>());
@@ -1000,14 +1000,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The created domain shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11DomainShader CreateDomainShader(byte[] shaderBytecode, D3D11ClassLinkage classLinkage)
+        public D3D11DomainShader? CreateDomainShader(byte[]? shaderBytecode, D3D11ClassLinkage? classLinkage)
         {
             if (shaderBytecode == null)
             {
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            ID3D11DomainShader domainShader = this.device.CreateDomainShader(
+            ID3D11DomainShader? domainShader = this.device.CreateDomainShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
                 classLinkage?.GetHandle<ID3D11ClassLinkage>());
@@ -1028,14 +1028,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The created compute shader.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11ComputeShader CreateComputeShader(byte[] shaderBytecode, D3D11ClassLinkage classLinkage)
+        public D3D11ComputeShader? CreateComputeShader(byte[]? shaderBytecode, D3D11ClassLinkage? classLinkage)
         {
             if (shaderBytecode == null)
             {
                 throw new ArgumentNullException(nameof(shaderBytecode));
             }
 
-            ID3D11ComputeShader computeShader = this.device.CreateComputeShader(
+            ID3D11ComputeShader? computeShader = this.device.CreateComputeShader(
                 shaderBytecode,
                 new UIntPtr((uint)shaderBytecode.Length),
                 classLinkage?.GetHandle<ID3D11ClassLinkage>());
@@ -1053,9 +1053,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>The created class linkage.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11ClassLinkage CreateClassLinkage()
+        public D3D11ClassLinkage? CreateClassLinkage()
         {
-            ID3D11ClassLinkage classLinkage = this.device.CreateClassLinkage();
+            ID3D11ClassLinkage? classLinkage = this.device.CreateClassLinkage();
 
             if (classLinkage == null)
             {
@@ -1071,9 +1071,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">A blend-state description.</param>
         /// <returns>The created blend-state object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11BlendState CreateBlendState(D3D11BlendDesc desc)
+        public D3D11BlendState? CreateBlendState(D3D11BlendDesc desc)
         {
-            ID3D11BlendState blendState = this.device.CreateBlendState(ref desc);
+            ID3D11BlendState? blendState = this.device.CreateBlendState(ref desc);
 
             if (blendState == null)
             {
@@ -1089,9 +1089,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">A depth-stencil state description.</param>
         /// <returns>The created depth-stencil state object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11DepthStencilState CreateDepthStencilState(D3D11DepthStencilDesc desc)
+        public D3D11DepthStencilState? CreateDepthStencilState(D3D11DepthStencilDesc desc)
         {
-            ID3D11DepthStencilState depthStencilState = this.device.CreateDepthStencilState(ref desc);
+            ID3D11DepthStencilState? depthStencilState = this.device.CreateDepthStencilState(ref desc);
 
             if (depthStencilState == null)
             {
@@ -1107,9 +1107,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">A rasterizer state description.</param>
         /// <returns>The created rasterizer state object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11RasterizerState CreateRasterizerState(D3D11RasterizerDesc desc)
+        public D3D11RasterizerState? CreateRasterizerState(D3D11RasterizerDesc desc)
         {
-            ID3D11RasterizerState rasterizerState = this.device.CreateRasterizerState(ref desc);
+            ID3D11RasterizerState? rasterizerState = this.device.CreateRasterizerState(ref desc);
 
             if (rasterizerState == null)
             {
@@ -1125,9 +1125,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">A sampler state description.</param>
         /// <returns>The created sampler-state object.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11SamplerState CreateSamplerState(D3D11SamplerDesc desc)
+        public D3D11SamplerState? CreateSamplerState(D3D11SamplerDesc desc)
         {
-            ID3D11SamplerState samplerState = this.device.CreateSamplerState(ref desc);
+            ID3D11SamplerState? samplerState = this.device.CreateSamplerState(ref desc);
 
             if (samplerState == null)
             {
@@ -1143,9 +1143,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">A query description.</param>
         /// <returns>The created query.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Query CreateQuery(D3D11QueryDesc desc)
+        public D3D11Query? CreateQuery(D3D11QueryDesc desc)
         {
-            ID3D11Query query = this.device.CreateQuery(ref desc);
+            ID3D11Query? query = this.device.CreateQuery(ref desc);
 
             if (query == null)
             {
@@ -1161,9 +1161,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">A query description for a predicate.</param>
         /// <returns>The created predicate.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Predicate CreatePredicate(D3D11QueryDesc desc)
+        public D3D11Predicate? CreatePredicate(D3D11QueryDesc desc)
         {
-            ID3D11Predicate predicate = this.device.CreatePredicate(ref desc);
+            ID3D11Predicate? predicate = this.device.CreatePredicate(ref desc);
 
             if (predicate == null)
             {
@@ -1179,9 +1179,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="desc">A counter description.</param>
         /// <returns>The created counter.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Counter CreateCounter(D3D11CounterDesc desc)
+        public D3D11Counter? CreateCounter(D3D11CounterDesc desc)
         {
-            ID3D11Counter counter = this.device.CreateCounter(ref desc);
+            ID3D11Counter? counter = this.device.CreateCounter(ref desc);
 
             if (counter == null)
             {
@@ -1196,9 +1196,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <returns>The created deferred context.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11DeviceContext CreateDeferredContext()
+        public D3D11DeviceContext? CreateDeferredContext()
         {
-            ID3D11DeviceContext deviceContext = this.device.CreateDeferredContext(0);
+            ID3D11DeviceContext? deviceContext = this.device.CreateDeferredContext(0);
 
             if (deviceContext == null)
             {
@@ -1215,7 +1215,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="returnedInterface">The globally unique identifier (GUID) for the resource interface.</param>
         /// <returns>A pointer to the resource we are gaining access to.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public object OpenSharedResource(IntPtr resourceHandle, Guid returnedInterface)
+        public object? OpenSharedResource(IntPtr resourceHandle, Guid returnedInterface)
         {
             return this.device.OpenSharedResource(resourceHandle, ref returnedInterface);
         }
@@ -1226,10 +1226,17 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="resourceHandle">A resource handle.</param>
         /// <returns>A pointer to the resource we are gaining access to.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Buffer OpenSharedBuffer(IntPtr resourceHandle)
+        public D3D11Buffer? OpenSharedBuffer(IntPtr resourceHandle)
         {
             Guid resourceGuid = new("48570b85-d1ee-4fcd-a250-eb350722b037");
-            var obj = new D3D11Buffer((ID3D11Buffer)this.device.OpenSharedResource(resourceHandle, ref resourceGuid));
+            object? res = this.device.OpenSharedResource(resourceHandle, ref resourceGuid);
+
+            if (res is null)
+            {
+                return null;
+            }
+
+            var obj = new D3D11Buffer((ID3D11Buffer)res);
             return obj;
         }
 
@@ -1239,10 +1246,17 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="resourceHandle">A resource handle.</param>
         /// <returns>A pointer to the resource we are gaining access to.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Texture1D OpenSharedTexture1D(IntPtr resourceHandle)
+        public D3D11Texture1D? OpenSharedTexture1D(IntPtr resourceHandle)
         {
             Guid resourceGuid = new("f8fb5c27-c6b3-4f75-a4c8-439af2ef564c");
-            var obj = new D3D11Texture1D((ID3D11Texture1D)this.device.OpenSharedResource(resourceHandle, ref resourceGuid));
+            object? res = this.device.OpenSharedResource(resourceHandle, ref resourceGuid);
+
+            if (res is null)
+            {
+                return null;
+            }
+
+            var obj = new D3D11Texture1D((ID3D11Texture1D)res);
             return obj;
         }
 
@@ -1252,10 +1266,17 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="resourceHandle">A resource handle.</param>
         /// <returns>A pointer to the resource we are gaining access to.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Texture2D OpenSharedTexture2D(IntPtr resourceHandle)
+        public D3D11Texture2D? OpenSharedTexture2D(IntPtr resourceHandle)
         {
             Guid resourceGuid = new("6f15aaf2-d208-4e89-9ab4-489535d34f9c");
-            var obj = new D3D11Texture2D((ID3D11Texture2D)this.device.OpenSharedResource(resourceHandle, ref resourceGuid));
+            object? res = this.device.OpenSharedResource(resourceHandle, ref resourceGuid);
+
+            if (res is null)
+            {
+                return null;
+            }
+
+            var obj = new D3D11Texture2D((ID3D11Texture2D)res);
             return obj;
         }
 
@@ -1265,10 +1286,17 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="resourceHandle">A resource handle.</param>
         /// <returns>A pointer to the resource we are gaining access to.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Texture3D OpenSharedTexture3D(IntPtr resourceHandle)
+        public D3D11Texture3D? OpenSharedTexture3D(IntPtr resourceHandle)
         {
             Guid resourceGuid = new("037e866e-f56d-4357-a8af-9dabbe6e250e");
-            var obj = new D3D11Texture3D((ID3D11Texture3D)this.device.OpenSharedResource(resourceHandle, ref resourceGuid));
+            object? res = this.device.OpenSharedResource(resourceHandle, ref resourceGuid);
+
+            if (res is null)
+            {
+                return null;
+            }
+
+            var obj = new D3D11Texture3D((ID3D11Texture3D)res);
             return obj;
         }
 
@@ -1604,7 +1632,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <returns>The removed reason exception.</returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Exception GetDeviceRemovedReason()
+        public Exception? GetDeviceRemovedReason()
         {
             return Marshal.GetExceptionForHR(this.device.GetDeviceRemovedReason());
         }
@@ -1629,9 +1657,9 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11DeviceContext GetImmediateContext()
+        public D3D11DeviceContext? GetImmediateContext()
         {
-            this.device.GetImmediateContext(out ID3D11DeviceContext immediateContext);
+            this.device.GetImmediateContext(out ID3D11DeviceContext? immediateContext);
 
             if (immediateContext == null)
             {
@@ -1661,7 +1689,7 @@ namespace JeremyAnsel.DirectX.D3D11
             {
                 this.device.CheckFeatureSupport(feature, dataPtr, (uint)dataSize);
 
-                data = (T)Marshal.PtrToStructure(dataPtr, typeof(T));
+                data = (T)Marshal.PtrToStructure(dataPtr, typeof(T))!;
             }
             finally
             {

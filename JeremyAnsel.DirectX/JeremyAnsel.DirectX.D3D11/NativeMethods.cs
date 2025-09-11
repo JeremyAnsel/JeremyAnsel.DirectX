@@ -31,16 +31,16 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="immediateContext">The device context.</param>
         [DllImport("d3d11.dll", EntryPoint = "D3D11CreateDevice", PreserveSig = false)]
         public static extern void D3D11CreateDevice(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object adapter,
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? adapter,
             [In] D3D11DriverType driverType,
             [In] IntPtr software,
             [In] D3D11CreateDeviceOptions options,
-            [In, MarshalAs(UnmanagedType.LPArray)] D3D11FeatureLevel[] featureLevels,
+            [In, MarshalAs(UnmanagedType.LPArray)] D3D11FeatureLevel[]? featureLevels,
             [In] uint numFeatureLevels,
             [In] uint sdkVersion,
-            [Out] out ID3D11Device device,
+            [Out] out ID3D11Device? device,
             [Out] out D3D11FeatureLevel featureLevel,
-            [Out] out ID3D11DeviceContext immediateContext);
+            [Out] out ID3D11DeviceContext? immediateContext);
 
         /// <summary>
         /// Creates a device that represents the display adapter and a swap chain used for rendering.
@@ -59,17 +59,17 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="immediateContext">The device context.</param>
         [DllImport("d3d11.dll", EntryPoint = "D3D11CreateDeviceAndSwapChain", PreserveSig = false)]
         public static extern void D3D11CreateDeviceAndSwapChain(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object adapter,
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? adapter,
             [In] D3D11DriverType driverType,
             [In] IntPtr software,
             [In] D3D11CreateDeviceOptions options,
-            [In, MarshalAs(UnmanagedType.LPArray)] D3D11FeatureLevel[] featureLevels,
+            [In, MarshalAs(UnmanagedType.LPArray)] D3D11FeatureLevel[]? featureLevels,
             [In] uint numFeatureLevels,
             [In] uint sdkVersion,
             [In] ref DxgiSwapChainDesc swapChainDesc,
-            [Out, MarshalAs(UnmanagedType.IUnknown)] out object swapChain,
-            [Out] out ID3D11Device device,
+            [Out, MarshalAs(UnmanagedType.IUnknown)] out object? swapChain,
+            [Out] out ID3D11Device? device,
             [Out] out D3D11FeatureLevel featureLevel,
-            [Out] out ID3D11DeviceContext immediateContext);
+            [Out] out ID3D11DeviceContext? immediateContext);
     }
 }

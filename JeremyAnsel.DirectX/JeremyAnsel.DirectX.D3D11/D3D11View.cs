@@ -28,9 +28,9 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Resource GetResource()
+        public D3D11Resource? GetResource()
         {
-            this.GetHandle<ID3D11View>().GetResource(out ID3D11Resource resource);
+            this.GetHandle<ID3D11View>().GetResource(out ID3D11Resource? resource);
 
             if (resource == null)
             {

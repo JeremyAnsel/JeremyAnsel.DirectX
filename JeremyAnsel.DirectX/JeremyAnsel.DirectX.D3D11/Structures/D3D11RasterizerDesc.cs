@@ -243,9 +243,9 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (!(obj is D3D11RasterizerDesc))
+            if (obj is not D3D11RasterizerDesc)
             {
                 return false;
             }

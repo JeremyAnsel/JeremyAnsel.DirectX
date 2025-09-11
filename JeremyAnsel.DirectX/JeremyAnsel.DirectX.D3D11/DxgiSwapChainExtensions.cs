@@ -21,14 +21,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="buffer">A zero-based buffer index.</param>
         /// <returns>A 2D texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static D3D11Texture2D GetTexture2D(this DxgiSwapChain swapChain, uint buffer)
+        public static D3D11Texture2D? GetTexture2D(this DxgiSwapChain? swapChain, uint buffer)
         {
             if (swapChain == null)
             {
                 throw new ArgumentNullException(nameof(swapChain));
             }
 
-            object texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
+            object? texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
 
             if (texture == null)
             {
@@ -45,14 +45,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="buffer">A zero-based buffer index.</param>
         /// <returns>A 2D texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static D3D11Texture2D GetTexture2D(this DxgiSwapChain1 swapChain, uint buffer)
+        public static D3D11Texture2D? GetTexture2D(this DxgiSwapChain1? swapChain, uint buffer)
         {
             if (swapChain == null)
             {
                 throw new ArgumentNullException(nameof(swapChain));
             }
 
-            object texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
+            object? texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
 
             if (texture == null)
             {
@@ -69,14 +69,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="buffer">A zero-based buffer index.</param>
         /// <returns>A 2D texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static D3D11Texture2D GetTexture2D(this DxgiSwapChain2 swapChain, uint buffer)
+        public static D3D11Texture2D? GetTexture2D(this DxgiSwapChain2? swapChain, uint buffer)
         {
             if (swapChain == null)
             {
                 throw new ArgumentNullException(nameof(swapChain));
             }
 
-            object texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
+            object? texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
 
             if (texture == null)
             {
@@ -93,14 +93,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="buffer">A zero-based buffer index.</param>
         /// <returns>A 2D texture.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static D3D11Texture2D GetTexture2D(this DxgiSwapChain3 swapChain, uint buffer)
+        public static D3D11Texture2D? GetTexture2D(this DxgiSwapChain3? swapChain, uint buffer)
         {
             if (swapChain == null)
             {
                 throw new ArgumentNullException(nameof(swapChain));
             }
 
-            object texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
+            object? texture = swapChain.GetBuffer(buffer, typeof(ID3D11Texture2D).GUID);
 
             if (texture == null)
             {

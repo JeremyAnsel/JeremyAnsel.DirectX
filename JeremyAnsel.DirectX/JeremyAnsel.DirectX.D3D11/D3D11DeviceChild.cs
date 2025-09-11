@@ -11,7 +11,6 @@ namespace JeremyAnsel.DirectX.D3D11
     using System.Text;
     using JeremyAnsel.DirectX.D3D11.ComInterfaces;
 
-
     /// <summary>
     /// A device-child interface accesses data used by a device.
     /// </summary>
@@ -41,7 +40,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="value">A D3D11 device child.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(D3D11DeviceChild value)
+        public static implicit operator bool(D3D11DeviceChild? value)
         {
             return value != null && value.Handle != null;
         }
@@ -82,14 +81,14 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <param name="name">A GUID that identifies the data.</param>
         /// <param name="text">The object's text.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetPrivateDataText(Guid name, string text)
+        public void SetPrivateDataText(Guid name, string? text)
         {
             if (string.IsNullOrEmpty(text))
             {
                 text = "<unnamed>";
             }
 
-            if (text.Length > 255)
+            if (text!.Length > 255)
             {
                 text = text.Substring(0, 255);
             }
@@ -120,7 +119,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// </summary>
         /// <param name="name">The friendly name.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetDebugName(string name)
+        public void SetDebugName(string? name)
         {
             this.SetPrivateDataText(D3D11WellKnownPrivateDataId.DebugObjectName, name);
         }
@@ -143,9 +142,9 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11Device GetDevice()
+        public D3D11Device? GetDevice()
         {
-            this.GetHandle<ID3D11DeviceChild>().GetDevice(out ID3D11Device device);
+            this.GetHandle<ID3D11DeviceChild>().GetDevice(out ID3D11Device? device);
 
             if (device == null)
             {

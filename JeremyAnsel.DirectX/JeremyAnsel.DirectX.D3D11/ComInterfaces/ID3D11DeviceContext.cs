@@ -24,7 +24,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="device">A device.</param>
         [PreserveSig]
         void GetDevice(
-            [Out] out ID3D11Device device);
+            [Out] out ID3D11Device? device);
 
         /// <summary>
         /// Get application-defined data from a device.
@@ -35,7 +35,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void GetPrivateData(
             [In] ref Guid name,
             [In, Out] ref uint dataSize,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Set data to a device and associate that data with a guid.
@@ -46,7 +46,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void SetPrivateData(
             [In] ref Guid name,
             [In] uint dataSize,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Associate an IUnknown-derived interface with this device child and associate that interface with an application-defined guid.
@@ -55,7 +55,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="unknown">An <c>IUnknown</c>-derived interface to be associated with the device child.</param>
         void SetPrivateDataInterface(
             [In] ref Guid name,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object unknown);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? unknown);
 
         /// <summary>
         /// Sets the constant buffers used by the vertex shader pipeline stage.
@@ -67,7 +67,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void VertexShaderSetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer[] constantBuffers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer?[]? constantBuffers);
 
         /// <summary>
         /// Bind an array of shader resources to the pixel shader stage.
@@ -79,7 +79,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void PixelShaderSetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView[] shaderResourceViews);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView?[]? shaderResourceViews);
 
         /// <summary>
         /// Sets a pixel shader to the device.
@@ -89,8 +89,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance interfaces in the array.</param>
         [PreserveSig]
         void PixelShaderSetShader(
-            [In] ID3D11PixelShader pixelShader,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance[] classInstances,
+            [In] ID3D11PixelShader? pixelShader,
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance?[]? classInstances,
             [In] uint numClassInstances);
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void PixelShaderSetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState[] samplers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState?[]? samplers);
 
         /// <summary>
         /// Set a vertex shader to the device.
@@ -113,8 +113,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance interfaces in the array.</param>
         [PreserveSig]
         void VertexShaderSetShader(
-            [In] ID3D11VertexShader vertexShader,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance[] classInstances,
+            [In] ID3D11VertexShader? vertexShader,
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance?[]? classInstances,
             [In] uint numClassInstances);
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="mapOptions">Specifies what the CPU does when the GPU is busy.</param>
         /// <returns>The mapped subresource.</returns>
         D3D11MappedSubResource Map(
-            [In] ID3D11Resource resource,
+            [In] ID3D11Resource? resource,
             [In] uint subresource,
             [In] D3D11MapCpuPermission mapType,
             [In] D3D11MapOptions mapOptions);
@@ -160,7 +160,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="subresource">A subresource to be unmapped.</param>
         [PreserveSig]
         void Unmap(
-            [In] ID3D11Resource resource,
+            [In] ID3D11Resource? resource,
             [In] uint subresource);
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void PixelShaderSetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer[] constantBuffers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer?[]? constantBuffers);
 
         /// <summary>
         /// Bind an input-layout object to the input-assembler stage.
@@ -181,7 +181,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="inputLayout">The input-layout object.</param>
         [PreserveSig]
         void InputAssemblerSetInputLayout(
-            [In] ID3D11InputLayout inputLayout);
+            [In] ID3D11InputLayout? inputLayout);
 
         /// <summary>
         /// Bind an array of vertex buffers to the input-assembler stage.
@@ -195,9 +195,9 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void InputAssemblerSetVertexBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer[] vertexBuffers,
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] strides,
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] offsets);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer?[]? vertexBuffers,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? strides,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? offsets);
 
         /// <summary>
         /// Bind an index buffer to the input-assembler stage.
@@ -207,7 +207,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="offset">Offset (in bytes) from the start of the index buffer to the first index to use.</param>
         [PreserveSig]
         void InputAssemblerSetIndexBuffer(
-            [In] ID3D11Buffer indexBuffer,
+            [In] ID3D11Buffer? indexBuffer,
             [In] DxgiFormat format,
             [In] uint offset);
 
@@ -251,7 +251,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void GeometryShaderSetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer[] constantBuffers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer?[]? constantBuffers);
 
         /// <summary>
         /// Set a geometry shader to the device.
@@ -261,8 +261,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance interfaces in the array.</param>
         [PreserveSig]
         void GeometryShaderSetShader(
-            [In] ID3D11GeometryShader shader,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance[] classInstances,
+            [In] ID3D11GeometryShader? shader,
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance?[]? classInstances,
             [In] uint numClassInstances);
 
         /// <summary>
@@ -283,7 +283,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void VertexShaderSetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView[] shaderResourceViews);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView?[]? shaderResourceViews);
 
         /// <summary>
         /// Set an array of sampler states to the vertex shader pipeline stage.
@@ -295,7 +295,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void VertexShaderSetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState[] samplers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState?[]? samplers);
 
         /// <summary>
         /// Mark the beginning of a series of commands.
@@ -303,7 +303,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="async">An <see cref="ID3D11Asynchronous"/> interface.</param>
         [PreserveSig]
         void Begin(
-            [In] ID3D11Asynchronous async);
+            [In] ID3D11Asynchronous? async);
 
         /// <summary>
         /// Mark the end of a series of commands.
@@ -311,7 +311,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="async">An <see cref="ID3D11Asynchronous"/> interface.</param>
         [PreserveSig]
         void End(
-            [In] ID3D11Asynchronous async);
+            [In] ID3D11Asynchronous? async);
 
         /// <summary>
         /// Get data from the graphics processing unit (GPU) asynchronously.
@@ -324,7 +324,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         [return: MarshalAs(UnmanagedType.Bool)]
         bool GetData(
-            [In] ID3D11Asynchronous async,
+            [In] ID3D11Asynchronous? async,
             [Out] IntPtr dataPtr,
             [In] uint dataSize,
             [In] D3D11AsyncGetDataOptions options);
@@ -336,7 +336,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="predicateValue">A value indicating whether rendering will be affected by when the predicate's conditions are met or not met.</param>
         [PreserveSig]
         void SetPredication(
-            [In] ID3D11Predicate predicate,
+            [In] ID3D11Predicate? predicate,
             [In, MarshalAs(UnmanagedType.Bool)] bool predicateValue);
 
         /// <summary>
@@ -349,7 +349,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void GeometryShaderSetShaderResources(
             [In] uint startSlot,
             [In] uint numView,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView[] shaderResourceViews);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView?[]? shaderResourceViews);
 
         /// <summary>
         /// Set an array of sampler states to the geometry shader pipeline stage.
@@ -361,7 +361,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void GeometryShaderSetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState[] samplers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState?[]? samplers);
 
         /// <summary>
         /// Bind one or more render targets atomically and the depth-stencil buffer to the output-merger stage.
@@ -372,8 +372,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void OutputMergerSetRenderTargets(
             [In] uint numViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11RenderTargetView[] renderTargetViews,
-            [In] ID3D11DepthStencilView depthStencilView);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11RenderTargetView?[]? renderTargetViews,
+            [In] ID3D11DepthStencilView? depthStencilView);
 
         /// <summary>
         /// Binds resources to the output-merger stage.
@@ -388,12 +388,12 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void OutputMergerSetRenderTargetsAndUnorderedAccessViews(
             [In] uint numRenderTargetViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11RenderTargetView[] renderTargetViews,
-            [In] ID3D11DepthStencilView depthStencilView,
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11RenderTargetView?[]? renderTargetViews,
+            [In] ID3D11DepthStencilView? depthStencilView,
             [In] uint uavStartSlot,
             [In] uint numUnorderedAccessViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11UnorderedAccessView[] unorderedAccessViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] uavInitialCounts);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11UnorderedAccessView?[]? unorderedAccessViews,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? uavInitialCounts);
 
         /// <summary>
         /// Set the blend state of the output-merger stage.
@@ -403,8 +403,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="sampleMask">32-bit sample coverage. The default value is <value>0xffffffff</value>.</param>
         [PreserveSig]
         void OutputMergerSetBlendState(
-            [In] ID3D11BlendState blendState,
-            [In, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] float[] blendFactor,
+            [In] ID3D11BlendState? blendState,
+            [In, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] float[]? blendFactor,
             [In] uint sampleMask);
 
         /// <summary>
@@ -414,7 +414,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="stencilReference">Reference value to perform against when doing a depth-stencil test.</param>
         [PreserveSig]
         void OutputMergerSetDepthStencilState(
-            [In] ID3D11DepthStencilState depthStencilState,
+            [In] ID3D11DepthStencilState? depthStencilState,
             [In] uint stencilReference);
 
         /// <summary>
@@ -426,8 +426,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void StreamOutputSetTargets(
             [In] uint numBuffers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer[] targets,
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] offsets);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer?[]? targets,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? offsets);
 
         /// <summary>
         /// Draw geometry of an unknown size.
@@ -442,7 +442,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="alignedByteOffsetForArgs">Offset to the start of the GPU generated primitives.</param>
         [PreserveSig]
         void DrawIndexedInstancedIndirect(
-            [In] ID3D11Buffer bufferForArgs,
+            [In] ID3D11Buffer? bufferForArgs,
             [In] uint alignedByteOffsetForArgs);
 
         /// <summary>
@@ -452,7 +452,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="alignedByteOffsetForArgs">Offset to the start of the GPU generated primitives.</param>
         [PreserveSig]
         void DrawInstancedIndirect(
-            [In] ID3D11Buffer bufferForArgs,
+            [In] ID3D11Buffer? bufferForArgs,
             [In] uint alignedByteOffsetForArgs);
 
         /// <summary>
@@ -474,7 +474,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="alignedByteOffsetForArgs">A byte-aligned offset between the start of the buffer and the arguments.</param>
         [PreserveSig]
         void DispatchIndirect(
-            [In] ID3D11Buffer bufferForArgs,
+            [In] ID3D11Buffer? bufferForArgs,
             [In] uint alignedByteOffsetForArgs);
 
         /// <summary>
@@ -483,7 +483,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="rasterizerState">A rasterizer-state interface.</param>
         [PreserveSig]
         void RasterizerStageSetState(
-            [In] ID3D11RasterizerState rasterizerState);
+            [In] ID3D11RasterizerState? rasterizerState);
 
         /// <summary>
         /// Bind an array of viewports to the rasterizer stage of the pipeline.
@@ -493,7 +493,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void RasterizerStageSetViewports(
             [In] uint numViewports,
-            [In, MarshalAs(UnmanagedType.LPArray)] D3D11Viewport[] viewports);
+            [In, MarshalAs(UnmanagedType.LPArray)] D3D11Viewport[]? viewports);
 
         /// <summary>
         /// Bind an array of scissor rectangles to the rasterizer stage.
@@ -503,7 +503,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void RasterizerStageSetScissorRects(
             [In] uint numRects,
-            [In, MarshalAs(UnmanagedType.LPArray)] D3D11Rect[] rects);
+            [In, MarshalAs(UnmanagedType.LPArray)] D3D11Rect[]? rects);
 
         /// <summary>
         /// Copy a region from a source resource to a destination resource.
@@ -518,12 +518,12 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="sourceBox">A 3D box that defines the source subresource that can be copied.</param>
         [PreserveSig]
         void CopySubresourceRegion(
-            [In] ID3D11Resource destinationResource,
+            [In] ID3D11Resource? destinationResource,
             [In] uint destinationSubresource,
             [In] uint destinationX,
             [In] uint destinationY,
             [In] uint destinationZ,
-            [In] ID3D11Resource sourceResource,
+            [In] ID3D11Resource? sourceResource,
             [In] uint sourceSubresource,
             [In] ref D3D11Box sourceBox);
 
@@ -534,8 +534,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="sourceResource">The source resource.</param>
         [PreserveSig]
         void CopyResource(
-            [In] ID3D11Resource destinationResource,
-            [In] ID3D11Resource sourceResource);
+            [In] ID3D11Resource? destinationResource,
+            [In] ID3D11Resource? sourceResource);
 
         /// <summary>
         /// The CPU copies data from memory to a subresource created in non-mappable memory.
@@ -548,7 +548,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="sourceDepthPitch">The size of one depth slice of source data.</param>
         [PreserveSig]
         void UpdateSubresource(
-            [In] ID3D11Resource destinationResource,
+            [In] ID3D11Resource? destinationResource,
             [In] uint destinationSubresource,
             [In] IntPtr destinationBox,
             [In] IntPtr sourceData,
@@ -563,9 +563,9 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="sourceView">A structured buffer resource.</param>
         [PreserveSig]
         void CopyStructureCount(
-            [In] ID3D11Buffer destinationBuffer,
+            [In] ID3D11Buffer? destinationBuffer,
             [In] uint destinationAlignedByteOffset,
-            [In] ID3D11UnorderedAccessView sourceView);
+            [In] ID3D11UnorderedAccessView? sourceView);
 
         /// <summary>
         /// Set all the elements in a render target to one value.
@@ -574,8 +574,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="colorRGBA">A 4-component array that represents the color to fill the render target with.</param>
         [PreserveSig]
         void ClearRenderTargetView(
-            [In] ID3D11RenderTargetView renderTargetView,
-            [In, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] float[] colorRGBA);
+            [In] ID3D11RenderTargetView? renderTargetView,
+            [In, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] float[]? colorRGBA);
 
         /// <summary>
         /// Clears an unordered access resource with bit-precise values.
@@ -584,8 +584,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="values">Values to copy to corresponding channels.</param>
         [PreserveSig]
         void ClearUnorderedAccessViewUInt(
-            [In] ID3D11UnorderedAccessView unorderedAccessView,
-            [In, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] uint[] values);
+            [In] ID3D11UnorderedAccessView? unorderedAccessView,
+            [In, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] uint[]? values);
 
         /// <summary>
         /// Clears an unordered access resource with a float value.
@@ -594,8 +594,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="values">Values to copy to corresponding channels.</param>
         [PreserveSig]
         void ClearUnorderedAccessViewFloat(
-            [In] ID3D11UnorderedAccessView unorderedAccessView,
-            [In, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] float[] values);
+            [In] ID3D11UnorderedAccessView? unorderedAccessView,
+            [In, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] float[]? values);
 
         /// <summary>
         /// Clears the depth-stencil resource.
@@ -606,7 +606,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="stencil">Clear the stencil buffer with this value.</param>
         [PreserveSig]
         void ClearDepthStencilView(
-            [In] ID3D11DepthStencilView depthStencilView,
+            [In] ID3D11DepthStencilView? depthStencilView,
             [In] D3D11ClearOptions clearOptions,
             [In] float depth,
             [In] byte stencil);
@@ -617,7 +617,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="shaderResourceView">The shader resource.</param>
         [PreserveSig]
         void GenerateMips(
-            [In] ID3D11ShaderResourceView shaderResourceView);
+            [In] ID3D11ShaderResourceView? shaderResourceView);
 
         /// <summary>
         /// Sets the minimum level-of-detail (LOD) for a resource.
@@ -626,7 +626,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="minLod">The level-of-detail, which ranges between 0 and the maximum number of mipmap levels of the resource.</param>
         [PreserveSig]
         void SetResourceMinLod(
-            [In] ID3D11Resource resource,
+            [In] ID3D11Resource? resource,
             [In] float minLod);
 
         /// <summary>
@@ -636,7 +636,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <returns>The minimum LOD.</returns>
         [PreserveSig]
         float GetResourceMinLod(
-            [In] ID3D11Resource resource);
+            [In] ID3D11Resource? resource);
 
         /// <summary>
         /// Copy a multisampled resource into a non-multisampled resource.
@@ -648,9 +648,9 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="format">Indicates how the multisampled resource will be resolved to a single-sampled resource.</param>
         [PreserveSig]
         void ResolveSubresource(
-            [In] ID3D11Resource destinationResource,
+            [In] ID3D11Resource? destinationResource,
             [In] uint destinationSubresource,
-            [In] ID3D11Resource sourceResource,
+            [In] ID3D11Resource? sourceResource,
             [In] uint sourceSubresource,
             [In] DxgiFormat format);
 
@@ -661,7 +661,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="restoreContextState">A value indicating whether the target context state is saved prior to and restored after the execution of a command list.</param>
         [PreserveSig]
         void ExecuteCommandList(
-            [In] ID3D11CommandList commandList,
+            [In] ID3D11CommandList? commandList,
             [In, MarshalAs(UnmanagedType.Bool)] bool restoreContextState);
 
         /// <summary>
@@ -674,7 +674,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void HullShaderSetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView[] shaderResourceViews);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView?[]? shaderResourceViews);
 
         /// <summary>
         /// Set a hull shader to the device.
@@ -684,8 +684,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance interfaces in the array.</param>
         [PreserveSig]
         void HullShaderSetShader(
-            [In] ID3D11HullShader hullShader,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance[] classInstances,
+            [In] ID3D11HullShader? hullShader,
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance?[]? classInstances,
             [In] uint numClassInstances);
 
         /// <summary>
@@ -698,7 +698,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void HullShaderSetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState[] samplers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState?[]? samplers);
 
         /// <summary>
         /// Set the constant buffers used by the hull shader stage.
@@ -710,7 +710,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void HullShaderSetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer[] constantBuffers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer?[]? constantBuffers);
 
         /// <summary>
         /// Bind an array of shader resources to the domain shader stage.
@@ -722,7 +722,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void DomainShaderSetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView[] shaderResourceViews);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView?[]? shaderResourceViews);
 
         /// <summary>
         /// Set a domain shader to the device.
@@ -732,8 +732,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance interfaces in the array.</param>
         [PreserveSig]
         void DomainShaderSetShader(
-            [In] ID3D11DomainShader domainShader,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance[] classInstances,
+            [In] ID3D11DomainShader? domainShader,
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance?[]? classInstances,
             [In] uint numClassInstances);
 
         /// <summary>
@@ -746,7 +746,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void DomainShaderSetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState[] samplers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState?[]? samplers);
 
         /// <summary>
         /// Sets the constant buffers used by the domain shader stage.
@@ -758,7 +758,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void DomainShaderSetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer[] constantBuffers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer?[]? constantBuffers);
 
         /// <summary>
         /// Bind an array of shader resources to the compute shader stage.
@@ -770,7 +770,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void ComputeShaderSetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView[] shaderResourceViews);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ShaderResourceView?[]? shaderResourceViews);
 
         /// <summary>
         /// Sets an array of views for an unordered resource.
@@ -783,8 +783,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void ComputeShaderSetUnorderedAccessViews(
             [In] uint startSlot,
             [In] uint numUnorderedAccessViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11UnorderedAccessView[] unorderedAccessViews,
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] uavInitialCounts);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11UnorderedAccessView?[]? unorderedAccessViews,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? uavInitialCounts);
 
         /// <summary>
         /// Set a compute shader to the device.
@@ -794,8 +794,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance interfaces in the array.</param>
         [PreserveSig]
         void ComputeShaderSetShader(
-            [In] ID3D11ComputeShader computeShader,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance[] classInstances,
+            [In] ID3D11ComputeShader? computeShader,
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11ClassInstance?[]? classInstances,
             [In] uint numClassInstances);
 
         /// <summary>
@@ -808,7 +808,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void ComputeShaderSetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState[] samplers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11SamplerState?[]? samplers);
 
         /// <summary>
         /// Sets the constant buffers used by the compute shader stage.
@@ -820,7 +820,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void ComputeShaderSetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer[] constantBuffers);
+            [In, MarshalAs(UnmanagedType.LPArray)] ID3D11Buffer?[]? constantBuffers);
 
         /// <summary>
         /// Get the constant buffers used by the vertex shader pipeline stage.
@@ -832,7 +832,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void VertexShaderGetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] constantBuffers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? constantBuffers);
 
         /// <summary>
         /// Get the pixel shader resources.
@@ -844,7 +844,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void PixelShaderGetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] shaderResourceViews);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? shaderResourceViews);
 
         /// <summary>
         /// Get the pixel shader currently set on the device.
@@ -854,8 +854,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance elements in the array.</param>
         [PreserveSig]
         void PixelShaderGetShader(
-            [Out] out ID3D11PixelShader pixelShader,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] classInstances,
+            [Out] out ID3D11PixelShader? pixelShader,
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? classInstances,
             [In, Out] ref uint numClassInstances);
 
         /// <summary>
@@ -868,7 +868,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void PixelShaderGetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] samplers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? samplers);
 
         /// <summary>
         /// Get the vertex shader currently set on the device.
@@ -878,8 +878,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance elements in the array.</param>
         [PreserveSig]
         void VertexShaderGetShader(
-            [Out] out ID3D11VertexShader vertexShader,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] classInstances,
+            [Out] out ID3D11VertexShader? vertexShader,
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? classInstances,
             [In, Out] ref uint numClassInstances);
 
         /// <summary>
@@ -892,7 +892,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void PixelShaderGetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] constantBuffers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? constantBuffers);
 
         /// <summary>
         /// Get a pointer to the input-layout object that is bound to the input-assembler stage.
@@ -900,7 +900,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="inputLayout">The input-layout object.</param>
         [PreserveSig]
         void InputAssemblerGetInputLayout(
-            [Out] out ID3D11InputLayout inputLayout);
+            [Out] out ID3D11InputLayout? inputLayout);
 
         /// <summary>
         /// Get the vertex buffers bound to the input-assembler stage.
@@ -914,9 +914,9 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void InputAssemblerGetVertexBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] vertexBuffers,
-            [Out, MarshalAs(UnmanagedType.LPArray)] uint[] strides,
-            [Out, MarshalAs(UnmanagedType.LPArray)] uint[] offsets);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? vertexBuffers,
+            [Out, MarshalAs(UnmanagedType.LPArray)] uint[]? strides,
+            [Out, MarshalAs(UnmanagedType.LPArray)] uint[]? offsets);
 
         /// <summary>
         /// Get a pointer to the index buffer that is bound to the input-assembler stage.
@@ -926,7 +926,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="offset">Offset (in bytes) from the start of the index buffer, to the first index to use.</param>
         [PreserveSig]
         void InputAssemblerGetIndexBuffer(
-            [Out] out ID3D11Buffer indexBuffer,
+            [Out] out ID3D11Buffer? indexBuffer,
             [Out] out DxgiFormat format,
             [Out] out uint offset);
 
@@ -940,7 +940,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void GeometryShaderGetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] constantBuffers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? constantBuffers);
 
         /// <summary>
         /// Get the geometry shader currently set on the device.
@@ -950,8 +950,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance elements in the array.</param>
         [PreserveSig]
         void GeometryShaderGetShader(
-            [Out] out ID3D11GeometryShader geometryShader,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] classInstances,
+            [Out] out ID3D11GeometryShader? geometryShader,
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? classInstances,
             [In, Out] ref uint numClassInstances);
 
         /// <summary>
@@ -972,7 +972,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void VertexShaderGetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] shaderResourceViews);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? shaderResourceViews);
 
         /// <summary>
         /// Get an array of sampler states from the vertex shader pipeline stage.
@@ -984,7 +984,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void VertexShaderGetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] samplers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? samplers);
 
         /// <summary>
         /// Get the rendering predicate state.
@@ -993,7 +993,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="predicateValue">The predicate comparison value.</param>
         [PreserveSig]
         void GetPredication(
-            [Out] out ID3D11Predicate predicate,
+            [Out] out ID3D11Predicate? predicate,
             [Out, MarshalAs(UnmanagedType.Bool)] out bool predicateValue);
 
         /// <summary>
@@ -1006,7 +1006,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void GeometryShaderGetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] shaderResourceViews);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? shaderResourceViews);
 
         /// <summary>
         /// Get an array of sampler state interfaces from the geometry shader pipeline stage.
@@ -1018,7 +1018,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void GeometryShaderGetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] samplers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? samplers);
 
         /// <summary>
         /// Get pointers to the resources bound to the output-merger stage.
@@ -1029,8 +1029,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void OutputMergerGetRenderTargets(
             [In] uint numViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] renderTargetViews,
-            [Out] out ID3D11DepthStencilView depthStencilView);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? renderTargetViews,
+            [Out] out ID3D11DepthStencilView? depthStencilView);
 
         /// <summary>
         /// Get pointers to the resources bound to the output-merger stage.
@@ -1044,11 +1044,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void OutputMergerGetRenderTargetsAndUnorderedAccessViews(
             [In] uint numRenderTargetViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] renderTargetViews,
-            [Out] out ID3D11DepthStencilView depthStencilView,
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? renderTargetViews,
+            [Out] out ID3D11DepthStencilView? depthStencilView,
             [In] uint uavStartSlot,
             [In] uint numUnorderedAccessViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] unorderedAccessViews);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? unorderedAccessViews);
 
         /// <summary>
         /// Get the blend state of the output-merger stage.
@@ -1058,8 +1058,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="sampleMask">A sample mask.</param>
         [PreserveSig]
         void OutputMergerGetBlendState(
-            [Out] out ID3D11BlendState blendState,
-            [Out, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] float[] blendFactor,
+            [Out] out ID3D11BlendState? blendState,
+            [Out, MarshalAs(UnmanagedType.LPArray, SizeConst = 4)] float[]? blendFactor,
             [Out] out uint sampleMask);
 
         /// <summary>
@@ -1069,7 +1069,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="stencilReference">The stencil reference value used in the depth-stencil test.</param>
         [PreserveSig]
         void OutputMergerGetDepthStencilState(
-            [Out] out ID3D11DepthStencilState depthStencilState,
+            [Out] out ID3D11DepthStencilState? depthStencilState,
             [Out] out uint stencilReference);
 
         /// <summary>
@@ -1080,7 +1080,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void StreamOutputGetTargets(
             [In] uint numBuffers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] targets);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? targets);
 
         /// <summary>
         /// Get the rasterizer state from the rasterizer stage of the pipeline.
@@ -1088,7 +1088,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="rasterizerState">A rasterizer-state interface.</param>
         [PreserveSig]
         void RasterizerStageGetState(
-            [Out] out ID3D11RasterizerState rasterizerState);
+            [Out] out ID3D11RasterizerState? rasterizerState);
 
         /// <summary>
         /// Gets the array of viewports bound to the rasterizer stage.
@@ -1098,7 +1098,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void RasterizerStageGetViewports(
             [In, Out] ref uint numViewports,
-            [Out, MarshalAs(UnmanagedType.LPArray)] D3D11Viewport[] viewports);
+            [Out, MarshalAs(UnmanagedType.LPArray)] D3D11Viewport[]? viewports);
 
         /// <summary>
         /// Get the array of scissor rectangles bound to the rasterizer stage.
@@ -1108,7 +1108,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         [PreserveSig]
         void RasterizerStageGetScissorRects(
             [In, Out] ref uint numRects,
-            [Out, MarshalAs(UnmanagedType.LPArray)] D3D11Rect[] rects);
+            [Out, MarshalAs(UnmanagedType.LPArray)] D3D11Rect[]? rects);
 
         /// <summary>
         /// Get the hull shader resources.
@@ -1120,7 +1120,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void HullShaderGetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] shaderResourceViews);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? shaderResourceViews);
 
         /// <summary>
         /// Get the hull shader currently set on the device.
@@ -1130,8 +1130,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance elements in the array.</param>
         [PreserveSig]
         void HullShaderGetShader(
-            [Out] out ID3D11HullShader hullShader,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] classInstances,
+            [Out] out ID3D11HullShader? hullShader,
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? classInstances,
             [In, Out] ref uint numClassInstances);
 
         /// <summary>
@@ -1144,7 +1144,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void HullShaderGetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] samplers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? samplers);
 
         /// <summary>
         /// Get the constant buffers used by the hull shader stage.
@@ -1156,7 +1156,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void HullShaderGetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] constantBuffers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? constantBuffers);
 
         /// <summary>
         /// Get the domain shader resources.
@@ -1168,7 +1168,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void DomainShaderGetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] shaderResourceViews);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? shaderResourceViews);
 
         /// <summary>
         /// Get the domain shader currently set on the device.
@@ -1178,8 +1178,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance elements in the array.</param>
         [PreserveSig]
         void DomainShaderGetShader(
-            [Out] out ID3D11DomainShader domainShader,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] classInstances,
+            [Out] out ID3D11DomainShader? domainShader,
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? classInstances,
             [In, Out] ref uint numClassInstances);
 
         /// <summary>
@@ -1192,7 +1192,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void DomainShaderGetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] samplers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? samplers);
 
         /// <summary>
         /// Get the constant buffers used by the domain shader stage.
@@ -1204,7 +1204,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void DomainShaderGetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] constantBuffers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? constantBuffers);
 
         /// <summary>
         /// Get the compute shader resources.
@@ -1216,7 +1216,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void ComputeShaderGetShaderResources(
             [In] uint startSlot,
             [In] uint numViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] shaderResourceViews);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? shaderResourceViews);
 
         /// <summary>
         /// Gets an array of views for an unordered resource.
@@ -1228,7 +1228,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void ComputeShaderGetUnorderedAccessViews(
             [In] uint startSlot,
             [In] uint numUnorderedAccessViews,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] unorderedAccessViews);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? unorderedAccessViews);
 
         /// <summary>
         /// Get the compute shader currently set on the device.
@@ -1238,8 +1238,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="numClassInstances">The number of class-instance elements in the array.</param>
         [PreserveSig]
         void ComputeShaderGetShader(
-            [Out] out ID3D11ComputeShader computeShader,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] classInstances,
+            [Out] out ID3D11ComputeShader? computeShader,
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? classInstances,
             [In, Out] ref uint numClassInstances);
 
         /// <summary>
@@ -1252,7 +1252,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void ComputeShaderGetSamplers(
             [In] uint startSlot,
             [In] uint numSamplers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] samplers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? samplers);
 
         /// <summary>
         /// Get the constant buffers used by the compute shader stage.
@@ -1264,7 +1264,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void ComputeShaderGetConstantBuffers(
             [In] uint startSlot,
             [In] uint numBuffers,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object[] constantBuffers);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.IUnknown)] object?[]? constantBuffers);
 
         /// <summary>
         /// Restore all default settings.
@@ -1297,7 +1297,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// </summary>
         /// <param name="restoreDeferredContextState">A value indicating whether the runtime saves deferred context state before it executes <c>FinishCommandList</c> and restores it afterwards.</param>
         /// <returns>The recorded command list.</returns>
-        ID3D11CommandList FinishCommandList(
+        ID3D11CommandList? FinishCommandList(
             [In, MarshalAs(UnmanagedType.Bool)] bool restoreDeferredContextState);
     }
 }

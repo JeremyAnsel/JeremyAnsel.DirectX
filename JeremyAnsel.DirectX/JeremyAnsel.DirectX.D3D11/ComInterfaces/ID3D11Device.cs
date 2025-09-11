@@ -24,7 +24,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="desc">Describes the buffer.</param>
         /// <param name="initialData">Describes the initialization data.</param>
         /// <returns>The buffer object created.</returns>
-        ID3D11Buffer CreateBuffer(
+        ID3D11Buffer? CreateBuffer(
             [In] ref D3D11BufferDesc desc,
             [In] IntPtr initialData);
 
@@ -34,9 +34,9 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="desc">Describes a 1D texture resource.</param>
         /// <param name="initialData">Describe subresources for the 1D texture resource.</param>
         /// <returns>The created texture.</returns>
-        ID3D11Texture1D CreateTexture1D(
+        ID3D11Texture1D? CreateTexture1D(
             [In] ref D3D11Texture1DDesc desc,
-            [In, MarshalAs(UnmanagedType.LPArray)] D3D11SubResourceDataPtr[] initialData);
+            [In, MarshalAs(UnmanagedType.LPArray)] D3D11SubResourceDataPtr[]? initialData);
 
         /// <summary>
         /// Create an array of 2D textures.
@@ -44,9 +44,9 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="desc">Describes a 2D texture resource.</param>
         /// <param name="initialData">Describe subresources for the 2D texture resource.</param>
         /// <returns>The created texture.</returns>
-        ID3D11Texture2D CreateTexture2D(
+        ID3D11Texture2D? CreateTexture2D(
             [In] ref D3D11Texture2DDesc desc,
-            [In, MarshalAs(UnmanagedType.LPArray)] D3D11SubResourceDataPtr[] initialData);
+            [In, MarshalAs(UnmanagedType.LPArray)] D3D11SubResourceDataPtr[]? initialData);
 
         /// <summary>
         /// Create a single 3D texture.
@@ -54,9 +54,9 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="desc">Describes a 3D texture resource.</param>
         /// <param name="initialData">Describe subresources for the 3D texture resource.</param>
         /// <returns>The created texture.</returns>
-        ID3D11Texture3D CreateTexture3D(
+        ID3D11Texture3D? CreateTexture3D(
             [In] ref D3D11Texture3DDesc desc,
-            [In, MarshalAs(UnmanagedType.LPArray)] D3D11SubResourceDataPtr[] initialData);
+            [In, MarshalAs(UnmanagedType.LPArray)] D3D11SubResourceDataPtr[]? initialData);
 
         /// <summary>
         /// Create a shader resource view for accessing data in a resource.
@@ -64,8 +64,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="resource">The resource that will serve as input to a shader.</param>
         /// <param name="desc">A pointer to a shader resource view description.</param>
         /// <returns>The created shader resource view.</returns>
-        ID3D11ShaderResourceView CreateShaderResourceView(
-            [In] ID3D11Resource resource,
+        ID3D11ShaderResourceView? CreateShaderResourceView(
+            [In] ID3D11Resource? resource,
             [In] IntPtr desc);
 
         /// <summary>
@@ -74,8 +74,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="resource">A resources that will serve as an input to a shader.</param>
         /// <param name="desc">A pointer to a shader resource view description.</param>
         /// <returns>The created unordered-access view.</returns>
-        ID3D11UnorderedAccessView CreateUnorderedAccessView(
-            [In] ID3D11Resource resource,
+        ID3D11UnorderedAccessView? CreateUnorderedAccessView(
+            [In] ID3D11Resource? resource,
             [In] IntPtr desc);
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="resource">A render target resource.</param>
         /// <param name="desc">A pointer to a render-target view description.</param>
         /// <returns>The created render target view.</returns>
-        ID3D11RenderTargetView CreateRenderTargetView(
-            [In] ID3D11Resource resource,
+        ID3D11RenderTargetView? CreateRenderTargetView(
+            [In] ID3D11Resource? resource,
             [In] IntPtr desc);
 
         /// <summary>
@@ -94,8 +94,8 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="resource">The resource that will serve as the depth-stencil surface.</param>
         /// <param name="desc">A pointer to a depth-stencil-view description.</param>
         /// <returns>The created depth-stencil view.</returns>
-        ID3D11DepthStencilView CreateDepthStencilView(
-            [In] ID3D11Resource resource,
+        ID3D11DepthStencilView? CreateDepthStencilView(
+            [In] ID3D11Resource? resource,
             [In] IntPtr desc);
 
         /// <summary>
@@ -106,10 +106,10 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="shaderBytecodeWithInputSignature">The compiled shader. The compiled shader code contains a input signature which is validated against the array of elements.</param>
         /// <param name="bytecodeLength">The size of the compiled shader.</param>
         /// <returns>The created input-layout object.</returns>
-        ID3D11InputLayout CreateInputLayout(
-            [In, MarshalAs(UnmanagedType.LPArray)] D3D11InputElementDesc[] inputElementDescs,
+        ID3D11InputLayout? CreateInputLayout(
+            [In, MarshalAs(UnmanagedType.LPArray)] D3D11InputElementDesc[]? inputElementDescs,
             [In] uint numElements,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] shaderBytecodeWithInputSignature,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? shaderBytecodeWithInputSignature,
             [In] UIntPtr bytecodeLength);
 
         /// <summary>
@@ -119,10 +119,10 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="bytecodeLength">The size of the compiled vertex shader.</param>
         /// <param name="classLinkage">A class linkage interface.</param>
         /// <returns>The created vertex shader.</returns>
-        ID3D11VertexShader CreateVertexShader(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] shaderBytecode,
+        ID3D11VertexShader? CreateVertexShader(
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? shaderBytecode,
             [In] UIntPtr bytecodeLength,
-            [In] ID3D11ClassLinkage classLinkage);
+            [In] ID3D11ClassLinkage? classLinkage);
 
         /// <summary>
         /// Create a geometry shader.
@@ -131,10 +131,10 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="bytecodeLength">The size of the compiled geometry shader.</param>
         /// <param name="classLinkage">A class linkage interface.</param>
         /// <returns>The created geometry shader.</returns>
-        ID3D11GeometryShader CreateGeometryShader(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] shaderBytecode,
+        ID3D11GeometryShader? CreateGeometryShader(
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? shaderBytecode,
             [In] UIntPtr bytecodeLength,
-            [In] ID3D11ClassLinkage classLinkage);
+            [In] ID3D11ClassLinkage? classLinkage);
 
         /// <summary>
         /// Creates a geometry shader that can write to streaming output buffers.
@@ -148,15 +148,15 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="rasterizedStream">The index number of the stream to be sent to the rasterizer stage.</param>
         /// <param name="classLinkage">A class linkage interface.</param>
         /// <returns>The created geometry shader.</returns>
-        ID3D11GeometryShader CreateGeometryShaderWithStreamOutput(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] shaderBytecode,
+        ID3D11GeometryShader? CreateGeometryShaderWithStreamOutput(
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? shaderBytecode,
             [In] UIntPtr bytecodeLength,
-            [In, MarshalAs(UnmanagedType.LPArray)] D3D11StreamOutputDeclarationEntry[] streamOutputDeclaration,
+            [In, MarshalAs(UnmanagedType.LPArray)] D3D11StreamOutputDeclarationEntry[]? streamOutputDeclaration,
             [In] uint numEntries,
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] bufferStrides,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? bufferStrides,
             [In] uint numStrides,
             [In] uint rasterizedStream,
-            [In] ID3D11ClassLinkage classLinkage);
+            [In] ID3D11ClassLinkage? classLinkage);
 
         /// <summary>
         /// Create a pixel shader.
@@ -165,10 +165,10 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="bytecodeLength">The size of the compiled pixel shader.</param>
         /// <param name="classLinkage">A class linkage interface.</param>
         /// <returns>The created pixel shader.</returns>
-        ID3D11PixelShader CreatePixelShader(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] shaderBytecode,
+        ID3D11PixelShader? CreatePixelShader(
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? shaderBytecode,
             [In] UIntPtr bytecodeLength,
-            [In] ID3D11ClassLinkage classLinkage);
+            [In] ID3D11ClassLinkage? classLinkage);
 
         /// <summary>
         /// Create a hull shader.
@@ -177,10 +177,10 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="bytecodeLength">The size of the compiled shader.</param>
         /// <param name="classLinkage">A class linkage interface.</param>
         /// <returns>The created hull shader.</returns>
-        ID3D11HullShader CreateHullShader(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] shaderBytecode,
+        ID3D11HullShader? CreateHullShader(
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? shaderBytecode,
             [In] UIntPtr bytecodeLength,
-            [In] ID3D11ClassLinkage classLinkage);
+            [In] ID3D11ClassLinkage? classLinkage);
 
         /// <summary>
         /// Create a domain shader.
@@ -189,10 +189,10 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="bytecodeLength">The size of the compiled shader.</param>
         /// <param name="classLinkage">A class linkage interface.</param>
         /// <returns>The created domain shader.</returns>
-        ID3D11DomainShader CreateDomainShader(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] shaderBytecode,
+        ID3D11DomainShader? CreateDomainShader(
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? shaderBytecode,
             [In] UIntPtr bytecodeLength,
-            [In] ID3D11ClassLinkage classLinkage);
+            [In] ID3D11ClassLinkage? classLinkage);
 
         /// <summary>
         /// Create a compute shader.
@@ -201,23 +201,23 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="bytecodeLength">The size of the compiled shader.</param>
         /// <param name="classLinkage">A class linkage interface.</param>
         /// <returns>The created compute shader.</returns>
-        ID3D11ComputeShader CreateComputeShader(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] shaderBytecode,
+        ID3D11ComputeShader? CreateComputeShader(
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? shaderBytecode,
             [In] UIntPtr bytecodeLength,
-            [In] ID3D11ClassLinkage classLinkage);
+            [In] ID3D11ClassLinkage? classLinkage);
 
         /// <summary>
         /// Creates class linkage libraries to enable dynamic shader linkage.
         /// </summary>
         /// <returns>The created class linkage.</returns>
-        ID3D11ClassLinkage CreateClassLinkage();
+        ID3D11ClassLinkage? CreateClassLinkage();
 
         /// <summary>
         /// Create a blend-state object that encapsules blend state for the output-merger stage.
         /// </summary>
         /// <param name="desc">A blend-state description.</param>
         /// <returns>The created blend-state object.</returns>
-        ID3D11BlendState CreateBlendState(
+        ID3D11BlendState? CreateBlendState(
             [In] ref D3D11BlendDesc desc);
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// </summary>
         /// <param name="desc">A depth-stencil state description.</param>
         /// <returns>The created depth-stencil state object.</returns>
-        ID3D11DepthStencilState CreateDepthStencilState(
+        ID3D11DepthStencilState? CreateDepthStencilState(
             [In] ref D3D11DepthStencilDesc desc);
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// </summary>
         /// <param name="desc">A rasterizer state description.</param>
         /// <returns>The created rasterizer state object.</returns>
-        ID3D11RasterizerState CreateRasterizerState(
+        ID3D11RasterizerState? CreateRasterizerState(
             [In] ref D3D11RasterizerDesc desc);
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// </summary>
         /// <param name="desc">A sampler state description.</param>
         /// <returns>The created sampler-state object.</returns>
-        ID3D11SamplerState CreateSamplerState(
+        ID3D11SamplerState? CreateSamplerState(
             [In] ref D3D11SamplerDesc desc);
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// </summary>
         /// <param name="desc">A query description.</param>
         /// <returns>The created query.</returns>
-        ID3D11Query CreateQuery(
+        ID3D11Query? CreateQuery(
             [In] ref D3D11QueryDesc desc);
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// </summary>
         /// <param name="desc">A query description for a predicate.</param>
         /// <returns>The created predicate.</returns>
-        ID3D11Predicate CreatePredicate(
+        ID3D11Predicate? CreatePredicate(
             [In] ref D3D11QueryDesc desc);
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// </summary>
         /// <param name="desc">A counter description.</param>
         /// <returns>The created counter.</returns>
-        ID3D11Counter CreateCounter(
+        ID3D11Counter? CreateCounter(
             [In] ref D3D11CounterDesc desc);
 
         /// <summary>
@@ -273,7 +273,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// </summary>
         /// <param name="contextOptions">Reserved for future use.</param>
         /// <returns>The created deferred context.</returns>
-        ID3D11DeviceContext CreateDeferredContext(
+        ID3D11DeviceContext? CreateDeferredContext(
             [In] uint contextOptions);
 
         /// <summary>
@@ -283,7 +283,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="returnedInterface">The globally unique identifier (GUID) for the resource interface.</param>
         /// <returns>A pointer to the resource we are gaining access to.</returns>
         [return: MarshalAs(UnmanagedType.IUnknown)]
-        object OpenSharedResource(
+        object? OpenSharedResource(
             [In] IntPtr resourceHandle,
             [In] ref Guid returnedInterface);
 
@@ -340,11 +340,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
             [In] ref D3D11CounterDesc desc,
             [Out] out D3D11CounterDataType type,
             [Out] out uint activeCounters,
-            [Out, MarshalAs(UnmanagedType.LPStr)] StringBuilder name,
+            [Out, MarshalAs(UnmanagedType.LPStr)] StringBuilder? name,
             [In, Out] ref uint nameLength,
-            [Out, MarshalAs(UnmanagedType.LPStr)] StringBuilder units,
+            [Out, MarshalAs(UnmanagedType.LPStr)] StringBuilder? units,
             [In, Out] ref uint unitsLength,
-            [Out, MarshalAs(UnmanagedType.LPStr)] StringBuilder description,
+            [Out, MarshalAs(UnmanagedType.LPStr)] StringBuilder? description,
             [In, Out] ref uint descriptionLength);
 
         /// <summary>
@@ -370,7 +370,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void GetPrivateData(
             [In] ref Guid name,
             [In, Out] ref uint dataSize,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Set data to a device and associate that data with a guid.
@@ -381,7 +381,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         void SetPrivateData(
             [In] ref Guid name,
             [In] uint dataSize,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] data);
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? data);
 
         /// <summary>
         /// Associate an IUnknown-derived interface with this device child and associate that interface with an application-defined guid.
@@ -390,7 +390,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="unknown">An <c>IUnknown</c>-derived interface to be associated with the device child.</param>
         void SetPrivateDataInterface(
             [In] ref Guid name,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object unknown);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? unknown);
 
         /// <summary>
         /// Gets the feature level of the hardware device.
@@ -419,7 +419,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
         /// <param name="immediateContext">An immediate context.</param>
         [PreserveSig]
         void GetImmediateContext(
-            [Out] out ID3D11DeviceContext immediateContext);
+            [Out] out ID3D11DeviceContext? immediateContext);
 
         /// <summary>
         /// Set the exception-mode options.

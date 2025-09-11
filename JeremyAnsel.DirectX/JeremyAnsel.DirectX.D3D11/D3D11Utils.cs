@@ -18,7 +18,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <typeparam name="T">A releasable type.</typeparam>
         /// <param name="o">The object.</param>
         [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference", MessageId = "0#", Justification = "Reviewed")]
-        public static void DisposeAndNull<T>(ref T o) where T : class, ID3D11Releasable
+        public static void DisposeAndNull<T>(ref T? o) where T : class, ID3D11Releasable
         {
             if (o != null)
             {
@@ -33,7 +33,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <typeparam name="T">A releasable type.</typeparam>
         /// <param name="o">The COM interface.</param>
         [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference", MessageId = "0#", Justification = "Reviewed")]
-        public static void ReleaseAndNull<T>(ref T o) where T : class, ID3D11Releasable
+        public static void ReleaseAndNull<T>(ref T? o) where T : class, ID3D11Releasable
         {
             if (o != null)
             {

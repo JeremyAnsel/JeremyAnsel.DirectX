@@ -92,9 +92,9 @@ namespace JeremyAnsel.DirectX.D3D11
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D3D11ClassLinkage GetClassLinkage()
+        public D3D11ClassLinkage? GetClassLinkage()
         {
-            this.classInstance.GetClassLinkage(out ID3D11ClassLinkage linkage);
+            this.classInstance.GetClassLinkage(out ID3D11ClassLinkage? linkage);
 
             if (linkage == null)
             {
