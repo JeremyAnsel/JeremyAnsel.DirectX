@@ -1939,7 +1939,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Bitmap CreateBitmap(D2D1SizeU size, D2D1BitmapProperties bitmapProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Bitmap? CreateBitmap(D2D1SizeU size, D2D1BitmapProperties bitmapProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1989,13 +1989,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L154">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmap_JeremyAnsel_DirectX_D2D1_D2D1SizeU_System_Byte___System_UInt32_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmap(JeremyAnsel.DirectX.D2D1.D2D1SizeU,System.Byte[],System.UInt32,JeremyAnsel.DirectX.D2D1.D2D1BitmapProperties)">CreateBitmap(D2D1SizeU, byte[], uint, D2D1BitmapProperties)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmap_JeremyAnsel_DirectX_D2D1_D2D1SizeU_System_Byte___System_UInt32_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmap(JeremyAnsel.DirectX.D2D1.D2D1SizeU,System.Byte[],System.UInt32,JeremyAnsel.DirectX.D2D1.D2D1BitmapProperties)">CreateBitmap(D2D1SizeU, byte[]?, uint, D2D1BitmapProperties)</h4>
   <div class="markdown level1 summary"><p>Creates a Direct2D bitmap from a pointer to in-memory source data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Bitmap CreateBitmap(D2D1SizeU size, byte[] srcData, uint pitch, D2D1BitmapProperties bitmapProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Bitmap? CreateBitmap(D2D1SizeU size, byte[]? srcData, uint pitch, D2D1BitmapProperties bitmapProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2063,7 +2063,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Bitmap CreateBitmap(D2D1SizeU size, nint srcData, uint pitch, D2D1BitmapProperties bitmapProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Bitmap? CreateBitmap(D2D1SizeU size, nint srcData, uint pitch, D2D1BitmapProperties bitmapProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2125,13 +2125,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L313">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapBrush*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapBrush(JeremyAnsel.DirectX.D2D1.D2D1Bitmap)">CreateBitmapBrush(D2D1Bitmap)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapBrush(JeremyAnsel.DirectX.D2D1.D2D1Bitmap)">CreateBitmapBrush(D2D1Bitmap?)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1BitmapBrush.html">D2D1BitmapBrush</a> from the specified bitmap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapBrush CreateBitmapBrush(D2D1Bitmap bitmap)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapBrush? CreateBitmapBrush(D2D1Bitmap? bitmap)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2175,13 +2175,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L338">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapBrush*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1BitmapBrushProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapBrush(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1BitmapBrushProperties)">CreateBitmapBrush(D2D1Bitmap, D2D1BitmapBrushProperties)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1BitmapBrushProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapBrush(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1BitmapBrushProperties)">CreateBitmapBrush(D2D1Bitmap?, D2D1BitmapBrushProperties)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1BitmapBrush.html">D2D1BitmapBrush</a> from the specified bitmap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapBrush CreateBitmapBrush(D2D1Bitmap bitmap, D2D1BitmapBrushProperties bitmapBrushProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapBrush? CreateBitmapBrush(D2D1Bitmap? bitmap, D2D1BitmapBrushProperties bitmapBrushProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2231,13 +2231,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L377">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapBrush*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1BitmapBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapBrush(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1BitmapBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1BrushProperties)">CreateBitmapBrush(D2D1Bitmap, D2D1BitmapBrushProperties, D2D1BrushProperties)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapBrush_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1BitmapBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapBrush(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1BitmapBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1BrushProperties)">CreateBitmapBrush(D2D1Bitmap?, D2D1BitmapBrushProperties, D2D1BrushProperties)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1BitmapBrush.html">D2D1BitmapBrush</a> from the specified bitmap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapBrush CreateBitmapBrush(D2D1Bitmap bitmap, D2D1BitmapBrushProperties bitmapBrushProperties, D2D1BrushProperties brushProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapBrush? CreateBitmapBrush(D2D1Bitmap? bitmap, D2D1BitmapBrushProperties bitmapBrushProperties, D2D1BrushProperties brushProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2293,13 +2293,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L191">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapFromWicBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapFromWicBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapFromWicBitmap_System_Object_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapFromWicBitmap(System.Object)">CreateBitmapFromWicBitmap(object)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapFromWicBitmap_System_Object_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapFromWicBitmap(System.Object)">CreateBitmapFromWicBitmap(object?)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.html">D2D1Bitmap</a> by copying the specified Microsoft Windows Imaging Component (WIC) bitmap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Bitmap CreateBitmapFromWicBitmap(object wicBitmapSource)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Bitmap? CreateBitmapFromWicBitmap(object? wicBitmapSource)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2343,13 +2343,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L215">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapFromWicBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapFromWicBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapFromWicBitmap_System_Object_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapFromWicBitmap(System.Object,JeremyAnsel.DirectX.D2D1.D2D1BitmapProperties)">CreateBitmapFromWicBitmap(object, D2D1BitmapProperties)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateBitmapFromWicBitmap_System_Object_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateBitmapFromWicBitmap(System.Object,JeremyAnsel.DirectX.D2D1.D2D1BitmapProperties)">CreateBitmapFromWicBitmap(object?, D2D1BitmapProperties)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.html">D2D1Bitmap</a> by copying the specified Microsoft Windows Imaging Component (WIC) bitmap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Bitmap CreateBitmapFromWicBitmap(object wicBitmapSource, D2D1BitmapProperties bitmapProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Bitmap? CreateBitmapFromWicBitmap(object? wicBitmapSource, D2D1BitmapProperties bitmapProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2405,7 +2405,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget()</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -2437,7 +2437,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1CompatibleRenderTargetOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1CompatibleRenderTargetOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2487,7 +2487,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1PixelFormat desiredFormat, D2D1CompatibleRenderTargetOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1PixelFormat desiredFormat, D2D1CompatibleRenderTargetOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2543,7 +2543,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1SizeF desiredSize)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1SizeF desiredSize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2593,7 +2593,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1CompatibleRenderTargetOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1CompatibleRenderTargetOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2649,7 +2649,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1PixelFormat desiredFormat, D2D1CompatibleRenderTargetOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1PixelFormat desiredFormat, D2D1CompatibleRenderTargetOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2711,7 +2711,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1SizeU desiredPixelSize)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1SizeU desiredPixelSize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2767,7 +2767,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1SizeU desiredPixelSize, D2D1CompatibleRenderTargetOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1SizeU desiredPixelSize, D2D1CompatibleRenderTargetOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2829,7 +2829,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1SizeU desiredPixelSize, D2D1PixelFormat desiredFormat)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1SizeU desiredPixelSize, D2D1PixelFormat desiredFormat)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2891,7 +2891,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1SizeU desiredPixelSize, D2D1PixelFormat desiredFormat, D2D1CompatibleRenderTargetOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1SizeF desiredSize, D2D1SizeU desiredPixelSize, D2D1PixelFormat desiredFormat, D2D1CompatibleRenderTargetOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2959,7 +2959,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1SizeU desiredPixelSize, D2D1CompatibleRenderTargetOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1SizeU desiredPixelSize, D2D1CompatibleRenderTargetOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3015,7 +3015,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget CreateCompatibleRenderTarget(D2D1SizeU desiredPixelSize, D2D1PixelFormat desiredFormat, D2D1CompatibleRenderTargetOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1BitmapRenderTarget? CreateCompatibleRenderTarget(D2D1SizeU desiredPixelSize, D2D1PixelFormat desiredFormat, D2D1CompatibleRenderTargetOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3071,13 +3071,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L497">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateGradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateGradientStopCollection*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateGradientStopCollection_JeremyAnsel_DirectX_D2D1_D2D1GradientStop___" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateGradientStopCollection(JeremyAnsel.DirectX.D2D1.D2D1GradientStop[])">CreateGradientStopCollection(D2D1GradientStop[])</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateGradientStopCollection_JeremyAnsel_DirectX_D2D1_D2D1GradientStop___" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateGradientStopCollection(JeremyAnsel.DirectX.D2D1.D2D1GradientStop[])">CreateGradientStopCollection(D2D1GradientStop[]?)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection.html">D2D1GradientStopCollection</a> from the specified gradient stops, color interpolation gamma, and extend mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1GradientStopCollection CreateGradientStopCollection(D2D1GradientStop[] gradientStops)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1GradientStopCollection? CreateGradientStopCollection(D2D1GradientStop[]? gradientStops)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3121,13 +3121,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L469">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateGradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateGradientStopCollection*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateGradientStopCollection_JeremyAnsel_DirectX_D2D1_D2D1GradientStop___JeremyAnsel_DirectX_D2D1_D2D1Gamma_JeremyAnsel_DirectX_D2D1_D2D1ExtendMode_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateGradientStopCollection(JeremyAnsel.DirectX.D2D1.D2D1GradientStop[],JeremyAnsel.DirectX.D2D1.D2D1Gamma,JeremyAnsel.DirectX.D2D1.D2D1ExtendMode)">CreateGradientStopCollection(D2D1GradientStop[], D2D1Gamma, D2D1ExtendMode)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateGradientStopCollection_JeremyAnsel_DirectX_D2D1_D2D1GradientStop___JeremyAnsel_DirectX_D2D1_D2D1Gamma_JeremyAnsel_DirectX_D2D1_D2D1ExtendMode_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateGradientStopCollection(JeremyAnsel.DirectX.D2D1.D2D1GradientStop[],JeremyAnsel.DirectX.D2D1.D2D1Gamma,JeremyAnsel.DirectX.D2D1.D2D1ExtendMode)">CreateGradientStopCollection(D2D1GradientStop[]?, D2D1Gamma, D2D1ExtendMode)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection.html">D2D1GradientStopCollection</a> from the specified gradient stops, color interpolation gamma, and extend mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1GradientStopCollection CreateGradientStopCollection(D2D1GradientStop[] gradientStops, D2D1Gamma colorInterpolationGamma, D2D1ExtendMode extendMode)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1GradientStopCollection? CreateGradientStopCollection(D2D1GradientStop[]? gradientStops, D2D1Gamma colorInterpolationGamma, D2D1ExtendMode extendMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3189,7 +3189,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Layer CreateLayer()</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Layer? CreateLayer()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -3221,7 +3221,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Layer CreateLayer(D2D1SizeF size)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Layer? CreateLayer(D2D1SizeF size)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3265,13 +3265,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L552">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLinearGradientBrush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateLinearGradientBrush*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLinearGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1LinearGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateLinearGradientBrush(JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1BrushProperties,JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection)">CreateLinearGradientBrush(D2D1LinearGradientBrushProperties, D2D1BrushProperties, D2D1GradientStopCollection)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLinearGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1LinearGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateLinearGradientBrush(JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1BrushProperties,JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection)">CreateLinearGradientBrush(D2D1LinearGradientBrushProperties, D2D1BrushProperties, D2D1GradientStopCollection?)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrush.html">D2D1LinearGradientBrush</a> that contains the specified gradient stops and has the specified transform and base opacity.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1LinearGradientBrush CreateLinearGradientBrush(D2D1LinearGradientBrushProperties linearGradientBrushProperties, D2D1BrushProperties brushProperties, D2D1GradientStopCollection gradientStopCollection)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1LinearGradientBrush? CreateLinearGradientBrush(D2D1LinearGradientBrushProperties linearGradientBrushProperties, D2D1BrushProperties brushProperties, D2D1GradientStopCollection? gradientStopCollection)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3327,13 +3327,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L526">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLinearGradientBrush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateLinearGradientBrush*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLinearGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1LinearGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateLinearGradientBrush(JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection)">CreateLinearGradientBrush(D2D1LinearGradientBrushProperties, D2D1GradientStopCollection)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateLinearGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1LinearGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateLinearGradientBrush(JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection)">CreateLinearGradientBrush(D2D1LinearGradientBrushProperties, D2D1GradientStopCollection?)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1LinearGradientBrush.html">D2D1LinearGradientBrush</a> that contains the specified gradient stops and has the specified transform and base opacity.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1LinearGradientBrush CreateLinearGradientBrush(D2D1LinearGradientBrushProperties linearGradientBrushProperties, D2D1GradientStopCollection gradientStopCollection)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1LinearGradientBrush? CreateLinearGradientBrush(D2D1LinearGradientBrushProperties linearGradientBrushProperties, D2D1GradientStopCollection? gradientStopCollection)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3389,7 +3389,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Mesh CreateMesh()</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Mesh? CreateMesh()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -3415,13 +3415,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L616">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateRadialGradientBrush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateRadialGradientBrush*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateRadialGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1RadialGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateRadialGradientBrush(JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1BrushProperties,JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection)">CreateRadialGradientBrush(D2D1RadialGradientBrushProperties, D2D1BrushProperties, D2D1GradientStopCollection)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateRadialGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1RadialGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1BrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateRadialGradientBrush(JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1BrushProperties,JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection)">CreateRadialGradientBrush(D2D1RadialGradientBrushProperties, D2D1BrushProperties, D2D1GradientStopCollection?)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrush.html">D2D1RadialGradientBrush</a> that contains the specified gradient stops and has the specified transform and base opacity.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1RadialGradientBrush CreateRadialGradientBrush(D2D1RadialGradientBrushProperties radialGradientBrushProperties, D2D1BrushProperties brushProperties, D2D1GradientStopCollection gradientStopCollection)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1RadialGradientBrush? CreateRadialGradientBrush(D2D1RadialGradientBrushProperties radialGradientBrushProperties, D2D1BrushProperties brushProperties, D2D1GradientStopCollection? gradientStopCollection)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3477,13 +3477,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L590">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateRadialGradientBrush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateRadialGradientBrush*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateRadialGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1RadialGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateRadialGradientBrush(JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection)">CreateRadialGradientBrush(D2D1RadialGradientBrushProperties, D2D1GradientStopCollection)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateRadialGradientBrush_JeremyAnsel_DirectX_D2D1_D2D1RadialGradientBrushProperties_JeremyAnsel_DirectX_D2D1_D2D1GradientStopCollection_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateRadialGradientBrush(JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrushProperties,JeremyAnsel.DirectX.D2D1.D2D1GradientStopCollection)">CreateRadialGradientBrush(D2D1RadialGradientBrushProperties, D2D1GradientStopCollection?)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RadialGradientBrush.html">D2D1RadialGradientBrush</a> that contains the specified gradient stops and has the specified transform and base opacity.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1RadialGradientBrush CreateRadialGradientBrush(D2D1RadialGradientBrushProperties radialGradientBrushProperties, D2D1GradientStopCollection gradientStopCollection)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1RadialGradientBrush? CreateRadialGradientBrush(D2D1RadialGradientBrushProperties radialGradientBrushProperties, D2D1GradientStopCollection? gradientStopCollection)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3533,13 +3533,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L252">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSharedBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateSharedBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSharedBitmap_System_Guid_System_Object_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateSharedBitmap(System.Guid,System.Object)">CreateSharedBitmap(Guid, object)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSharedBitmap_System_Guid_System_Object_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateSharedBitmap(System.Guid,System.Object)">CreateSharedBitmap(Guid, object?)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.html">D2D1Bitmap</a> whose data is shared with another resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Bitmap CreateSharedBitmap(Guid riid, object data)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Bitmap? CreateSharedBitmap(Guid riid, object? data)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3589,13 +3589,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L277">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSharedBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateSharedBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSharedBitmap_System_Guid_System_Object_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateSharedBitmap(System.Guid,System.Object,JeremyAnsel.DirectX.D2D1.D2D1BitmapProperties)">CreateSharedBitmap(Guid, object, D2D1BitmapProperties)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_CreateSharedBitmap_System_Guid_System_Object_JeremyAnsel_DirectX_D2D1_D2D1BitmapProperties_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.CreateSharedBitmap(System.Guid,System.Object,JeremyAnsel.DirectX.D2D1.D2D1BitmapProperties)">CreateSharedBitmap(Guid, object?, D2D1BitmapProperties)</h4>
   <div class="markdown level1 summary"><p>Creates an <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1Bitmap.html">D2D1Bitmap</a> whose data is shared with another resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Bitmap CreateSharedBitmap(Guid riid, object data, D2D1BitmapProperties bitmapProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Bitmap? CreateSharedBitmap(Guid riid, object? data, D2D1BitmapProperties bitmapProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3657,7 +3657,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1SolidColorBrush CreateSolidColorBrush(D2D1ColorF color)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1SolidColorBrush? CreateSolidColorBrush(D2D1ColorF color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3707,7 +3707,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1SolidColorBrush CreateSolidColorBrush(D2D1ColorF color, D2D1BrushProperties brushProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1SolidColorBrush? CreateSolidColorBrush(D2D1ColorF color, D2D1BrushProperties brushProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3757,13 +3757,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1688">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap)">DrawBitmap(D2D1Bitmap)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap)">DrawBitmap(D2D1Bitmap?)</h4>
   <div class="markdown level1 summary"><p>Draws the specified bitmap after scaling it to the size of the specified rectangle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap bitmap)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap? bitmap)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3791,13 +3791,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1706">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectF)">DrawBitmap(D2D1Bitmap, D2D1RectF)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectF)">DrawBitmap(D2D1Bitmap?, D2D1RectF)</h4>
   <div class="markdown level1 summary"><p>Draws the specified bitmap after scaling it to the size of the specified rectangle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap bitmap, D2D1RectF destinationRectangle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap? bitmap, D2D1RectF destinationRectangle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3831,13 +3831,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1736">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectF,System.Single)">DrawBitmap(D2D1Bitmap, D2D1RectF, float)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectF,System.Single)">DrawBitmap(D2D1Bitmap?, D2D1RectF, float)</h4>
   <div class="markdown level1 summary"><p>Draws the specified bitmap after scaling it to the size of the specified rectangle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap bitmap, D2D1RectF destinationRectangle, float opacity)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap? bitmap, D2D1RectF destinationRectangle, float opacity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3877,13 +3877,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1767">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_System_Single_JeremyAnsel_DirectX_D2D1_D2D1BitmapInterpolationMode_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectF,System.Single,JeremyAnsel.DirectX.D2D1.D2D1BitmapInterpolationMode)">DrawBitmap(D2D1Bitmap, D2D1RectF, float, D2D1BitmapInterpolationMode)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_System_Single_JeremyAnsel_DirectX_D2D1_D2D1BitmapInterpolationMode_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectF,System.Single,JeremyAnsel.DirectX.D2D1.D2D1BitmapInterpolationMode)">DrawBitmap(D2D1Bitmap?, D2D1RectF, float, D2D1BitmapInterpolationMode)</h4>
   <div class="markdown level1 summary"><p>Draws the specified bitmap after scaling it to the size of the specified rectangle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap bitmap, D2D1RectF destinationRectangle, float opacity, D2D1BitmapInterpolationMode interpolationMode)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap? bitmap, D2D1RectF destinationRectangle, float opacity, D2D1BitmapInterpolationMode interpolationMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3929,13 +3929,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1799">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_System_Single_JeremyAnsel_DirectX_D2D1_D2D1BitmapInterpolationMode_JeremyAnsel_DirectX_D2D1_D2D1RectF_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectF,System.Single,JeremyAnsel.DirectX.D2D1.D2D1BitmapInterpolationMode,JeremyAnsel.DirectX.D2D1.D2D1RectF)">DrawBitmap(D2D1Bitmap, D2D1RectF, float, D2D1BitmapInterpolationMode, D2D1RectF)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1RectF_System_Single_JeremyAnsel_DirectX_D2D1_D2D1BitmapInterpolationMode_JeremyAnsel_DirectX_D2D1_D2D1RectF_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1RectF,System.Single,JeremyAnsel.DirectX.D2D1.D2D1BitmapInterpolationMode,JeremyAnsel.DirectX.D2D1.D2D1RectF)">DrawBitmap(D2D1Bitmap?, D2D1RectF, float, D2D1BitmapInterpolationMode, D2D1RectF)</h4>
   <div class="markdown level1 summary"><p>Draws the specified bitmap after scaling it to the size of the specified rectangle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap bitmap, D2D1RectF destinationRectangle, float opacity, D2D1BitmapInterpolationMode interpolationMode, D2D1RectF sourceRectangle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawBitmap(D2D1Bitmap? bitmap, D2D1RectF destinationRectangle, float opacity, D2D1BitmapInterpolationMode interpolationMode, D2D1RectF sourceRectangle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3987,13 +3987,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1372">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawEllipse*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawEllipse(JeremyAnsel.DirectX.D2D1.D2D1Ellipse,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawEllipse(D2D1Ellipse, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawEllipse(JeremyAnsel.DirectX.D2D1.D2D1Ellipse,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawEllipse(D2D1Ellipse, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of the specified ellipse using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawEllipse(D2D1Ellipse ellipse, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawEllipse(D2D1Ellipse ellipse, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4027,13 +4027,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1391">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawEllipse*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawEllipse(JeremyAnsel.DirectX.D2D1.D2D1Ellipse,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawEllipse(D2D1Ellipse, D2D1Brush, float)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawEllipse(JeremyAnsel.DirectX.D2D1.D2D1Ellipse,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawEllipse(D2D1Ellipse, D2D1Brush?, float)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of the specified ellipse using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawEllipse(D2D1Ellipse ellipse, D2D1Brush brush, float strokeWidth)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawEllipse(D2D1Ellipse ellipse, D2D1Brush? brush, float strokeWidth)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4073,13 +4073,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1411">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawEllipse*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawEllipse(JeremyAnsel.DirectX.D2D1.D2D1Ellipse,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawEllipse(D2D1Ellipse, D2D1Brush, float, D2D1StrokeStyle)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawEllipse(JeremyAnsel.DirectX.D2D1.D2D1Ellipse,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawEllipse(D2D1Ellipse, D2D1Brush?, float, D2D1StrokeStyle?)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of the specified ellipse using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawEllipse(D2D1Ellipse ellipse, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawEllipse(D2D1Ellipse ellipse, D2D1Brush? brush, float strokeWidth, D2D1StrokeStyle? strokeStyle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4125,13 +4125,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1447">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGeometry*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawGeometry(D2D1Geometry, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawGeometry(D2D1Geometry?, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of the specified geometry using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawGeometry(D2D1Geometry geometry, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawGeometry(D2D1Geometry? geometry, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4165,13 +4165,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1471">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGeometry*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawGeometry(D2D1Geometry, D2D1Brush, float)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawGeometry(D2D1Geometry?, D2D1Brush?, float)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of the specified geometry using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawGeometry(D2D1Geometry geometry, D2D1Brush brush, float strokeWidth)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawGeometry(D2D1Geometry? geometry, D2D1Brush? brush, float strokeWidth)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4211,13 +4211,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1496">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGeometry*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawGeometry(D2D1Geometry, D2D1Brush, float, D2D1StrokeStyle)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawGeometry(D2D1Geometry?, D2D1Brush?, float, D2D1StrokeStyle?)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of the specified geometry using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawGeometry(D2D1Geometry geometry, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawGeometry(D2D1Geometry? geometry, D2D1Brush? brush, float strokeWidth, D2D1StrokeStyle? strokeStyle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4263,13 +4263,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1974">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGlyphRun_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGlyphRun*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGlyphRun(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.DWrite.DWriteGlyphRun,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawGlyphRun(D2D1Point2F, DWriteGlyphRun, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGlyphRun(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.DWrite.DWriteGlyphRun,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawGlyphRun(D2D1Point2F, DWriteGlyphRun, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Draws the specified glyphs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawGlyphRun(D2D1Point2F baselineOrigin, DWriteGlyphRun glyphRun, D2D1Brush foregroundBrush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawGlyphRun(D2D1Point2F baselineOrigin, DWriteGlyphRun glyphRun, D2D1Brush? foregroundBrush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4309,13 +4309,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1994">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGlyphRun_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGlyphRun*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_DWrite_DWriteMeasuringMode_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGlyphRun(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.DWrite.DWriteGlyphRun,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.DWrite.DWriteMeasuringMode)">DrawGlyphRun(D2D1Point2F, DWriteGlyphRun, D2D1Brush, DWriteMeasuringMode)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteGlyphRun_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_DWrite_DWriteMeasuringMode_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawGlyphRun(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.DWrite.DWriteGlyphRun,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.DWrite.DWriteMeasuringMode)">DrawGlyphRun(D2D1Point2F, DWriteGlyphRun, D2D1Brush?, DWriteMeasuringMode)</h4>
   <div class="markdown level1 summary"><p>Draws the specified glyphs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawGlyphRun(D2D1Point2F baselineOrigin, DWriteGlyphRun glyphRun, D2D1Brush foregroundBrush, DWriteMeasuringMode measuringMode)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawGlyphRun(D2D1Point2F baselineOrigin, DWriteGlyphRun glyphRun, D2D1Brush? foregroundBrush, DWriteMeasuringMode measuringMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4361,13 +4361,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1163">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawLine*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawLine(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawLine(D2D1Point2F, D2D1Point2F, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawLine(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawLine(D2D1Point2F, D2D1Point2F, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Draws a line between the specified points using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawLine(D2D1Point2F point0, D2D1Point2F point1, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawLine(D2D1Point2F point0, D2D1Point2F point1, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4407,13 +4407,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1183">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawLine*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawLine(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawLine(D2D1Point2F, D2D1Point2F, D2D1Brush, float)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawLine(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawLine(D2D1Point2F, D2D1Point2F, D2D1Brush?, float)</h4>
   <div class="markdown level1 summary"><p>Draws a line between the specified points using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawLine(D2D1Point2F point0, D2D1Point2F point1, D2D1Brush brush, float strokeWidth)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawLine(D2D1Point2F point0, D2D1Point2F point1, D2D1Brush? brush, float strokeWidth)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4459,13 +4459,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1204">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawLine*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawLine(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawLine(D2D1Point2F, D2D1Point2F, D2D1Brush, float, D2D1StrokeStyle)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawLine_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawLine(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawLine(D2D1Point2F, D2D1Point2F, D2D1Brush?, float, D2D1StrokeStyle?)</h4>
   <div class="markdown level1 summary"><p>Draws a line between the specified points using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawLine(D2D1Point2F point0, D2D1Point2F point1, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawLine(D2D1Point2F point0, D2D1Point2F point1, D2D1Brush? brush, float strokeWidth, D2D1StrokeStyle? strokeStyle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4517,13 +4517,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1222">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRectangle*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRectangle(JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawRectangle(D2D1RectF, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRectangle(JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawRectangle(D2D1RectF, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of a rectangle that has the specified dimensions and stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawRectangle(D2D1RectF rect, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawRectangle(D2D1RectF rect, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4557,13 +4557,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1241">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRectangle*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRectangle(JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawRectangle(D2D1RectF, D2D1Brush, float)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRectangle(JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawRectangle(D2D1RectF, D2D1Brush?, float)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of a rectangle that has the specified dimensions and stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawRectangle(D2D1RectF rect, D2D1Brush brush, float strokeWidth)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawRectangle(D2D1RectF rect, D2D1Brush? brush, float strokeWidth)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4603,13 +4603,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1261">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRectangle*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRectangle(JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawRectangle(D2D1RectF, D2D1Brush, float, D2D1StrokeStyle)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRectangle(JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawRectangle(D2D1RectF, D2D1Brush?, float, D2D1StrokeStyle?)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of a rectangle that has the specified dimensions and stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawRectangle(D2D1RectF rect, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawRectangle(D2D1RectF rect, D2D1Brush? brush, float strokeWidth, D2D1StrokeStyle? strokeStyle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4655,13 +4655,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1297">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRoundedRectangle*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRoundedRectangle(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawRoundedRectangle(D2D1RoundedRect, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRoundedRectangle(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawRoundedRectangle(D2D1RoundedRect, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of the specified rounded rectangle using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4695,13 +4695,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1316">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRoundedRectangle*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRoundedRectangle(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawRoundedRectangle(D2D1RoundedRect, D2D1Brush, float)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRoundedRectangle(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single)">DrawRoundedRectangle(D2D1RoundedRect, D2D1Brush?, float)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of the specified rounded rectangle using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush brush, float strokeWidth)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush? brush, float strokeWidth)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4741,13 +4741,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1336">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRoundedRectangle*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRoundedRectangle(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawRoundedRectangle(D2D1RoundedRect, D2D1Brush, float, D2D1StrokeStyle)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_System_Single_JeremyAnsel_DirectX_D2D1_D2D1StrokeStyle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawRoundedRectangle(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect,JeremyAnsel.DirectX.D2D1.D2D1Brush,System.Single,JeremyAnsel.DirectX.D2D1.D2D1StrokeStyle)">DrawRoundedRectangle(D2D1RoundedRect, D2D1Brush?, float, D2D1StrokeStyle?)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of the specified rounded rectangle using the specified stroke style.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush brush, float strokeWidth, D2D1StrokeStyle strokeStyle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush? brush, float strokeWidth, D2D1StrokeStyle? strokeStyle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4793,13 +4793,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1833">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawText*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawText(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextFormat,JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawText(string, DWriteTextFormat, D2D1RectF, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawText(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextFormat,JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawText(string?, DWriteTextFormat?, D2D1RectF, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Draws the specified text using the format information provided by an <a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextFormat.html">DWriteTextFormat</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawText(string text, DWriteTextFormat textFormat, D2D1RectF layoutRect, D2D1Brush defaultForegroundBrush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawText(string? text, DWriteTextFormat? textFormat, D2D1RectF layoutRect, D2D1Brush? defaultForegroundBrush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4845,13 +4845,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1864">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawText*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1DrawTextOptions_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawText(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextFormat,JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1DrawTextOptions)">DrawText(string, DWriteTextFormat, D2D1RectF, D2D1Brush, D2D1DrawTextOptions)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1DrawTextOptions_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawText(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextFormat,JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1DrawTextOptions)">DrawText(string?, DWriteTextFormat?, D2D1RectF, D2D1Brush?, D2D1DrawTextOptions)</h4>
   <div class="markdown level1 summary"><p>Draws the specified text using the format information provided by an <a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextFormat.html">DWriteTextFormat</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawText(string text, DWriteTextFormat textFormat, D2D1RectF layoutRect, D2D1Brush defaultForegroundBrush, D2D1DrawTextOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawText(string? text, DWriteTextFormat? textFormat, D2D1RectF layoutRect, D2D1Brush? defaultForegroundBrush, D2D1DrawTextOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4903,13 +4903,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1896">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawText*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1DrawTextOptions_JeremyAnsel_DirectX_DWrite_DWriteMeasuringMode_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawText(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextFormat,JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1DrawTextOptions,JeremyAnsel.DirectX.DWrite.DWriteMeasuringMode)">DrawText(string, DWriteTextFormat, D2D1RectF, D2D1Brush, D2D1DrawTextOptions, DWriteMeasuringMode)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawText_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextFormat_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1DrawTextOptions_JeremyAnsel_DirectX_DWrite_DWriteMeasuringMode_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawText(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextFormat,JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1DrawTextOptions,JeremyAnsel.DirectX.DWrite.DWriteMeasuringMode)">DrawText(string?, DWriteTextFormat?, D2D1RectF, D2D1Brush?, D2D1DrawTextOptions, DWriteMeasuringMode)</h4>
   <div class="markdown level1 summary"><p>Draws the specified text using the format information provided by an <a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextFormat.html">DWriteTextFormat</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawText(string text, DWriteTextFormat textFormat, D2D1RectF layoutRect, D2D1Brush defaultForegroundBrush, D2D1DrawTextOptions options, DWriteMeasuringMode measuringMode)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawText(string? text, DWriteTextFormat? textFormat, D2D1RectF layoutRect, D2D1Brush? defaultForegroundBrush, D2D1DrawTextOptions options, DWriteMeasuringMode measuringMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4967,13 +4967,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1925">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawTextLayout_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawTextLayout*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawTextLayout(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.DWrite.DWriteTextLayout,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawTextLayout(D2D1Point2F, DWriteTextLayout, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawTextLayout(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.DWrite.DWriteTextLayout,JeremyAnsel.DirectX.D2D1.D2D1Brush)">DrawTextLayout(D2D1Point2F, DWriteTextLayout?, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Draws the formatted text described by the specified <a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html">DWriteTextLayout</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawTextLayout(D2D1Point2F origin, DWriteTextLayout textLayout, D2D1Brush defaultForegroundBrush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawTextLayout(D2D1Point2F origin, DWriteTextLayout? textLayout, D2D1Brush? defaultForegroundBrush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5013,13 +5013,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1950">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawTextLayout_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawTextLayout*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1DrawTextOptions_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawTextLayout(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.DWrite.DWriteTextLayout,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1DrawTextOptions)">DrawTextLayout(D2D1Point2F, DWriteTextLayout, D2D1Brush, D2D1DrawTextOptions)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Point2F_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1DrawTextOptions_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawTextLayout(JeremyAnsel.DirectX.D2D1.D2D1Point2F,JeremyAnsel.DirectX.DWrite.DWriteTextLayout,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1DrawTextOptions)">DrawTextLayout(D2D1Point2F, DWriteTextLayout?, D2D1Brush?, D2D1DrawTextOptions)</h4>
   <div class="markdown level1 summary"><p>Draws the formatted text described by the specified <a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html">DWriteTextLayout</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawTextLayout(D2D1Point2F origin, DWriteTextLayout textLayout, D2D1Brush defaultForegroundBrush, D2D1DrawTextOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawTextLayout(D2D1Point2F origin, DWriteTextLayout? textLayout, D2D1Brush? defaultForegroundBrush, D2D1DrawTextOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5137,13 +5137,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1429">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillEllipse_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillEllipse*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillEllipse(JeremyAnsel.DirectX.D2D1.D2D1Ellipse,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillEllipse(D2D1Ellipse, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillEllipse_JeremyAnsel_DirectX_D2D1_D2D1Ellipse_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillEllipse(JeremyAnsel.DirectX.D2D1.D2D1Ellipse,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillEllipse(D2D1Ellipse, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Paints the interior of the specified ellipse.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void FillEllipse(D2D1Ellipse ellipse, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FillEllipse(D2D1Ellipse ellipse, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5177,13 +5177,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1519">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillGeometry*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillGeometry(D2D1Geometry, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillGeometry(D2D1Geometry?, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Paints the interior of the specified geometry.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void FillGeometry(D2D1Geometry geometry, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FillGeometry(D2D1Geometry? geometry, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5217,13 +5217,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1543">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillGeometry_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillGeometry*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillGeometry(D2D1Geometry, D2D1Brush, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillGeometry_JeremyAnsel_DirectX_D2D1_D2D1Geometry_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillGeometry(JeremyAnsel.DirectX.D2D1.D2D1Geometry,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillGeometry(D2D1Geometry?, D2D1Brush?, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Paints the interior of the specified geometry.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void FillGeometry(D2D1Geometry geometry, D2D1Brush brush, D2D1Brush opacityBrush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FillGeometry(D2D1Geometry? geometry, D2D1Brush? brush, D2D1Brush? opacityBrush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5263,13 +5263,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1566">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillMesh_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillMesh*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillMesh_JeremyAnsel_DirectX_D2D1_D2D1Mesh_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillMesh(JeremyAnsel.DirectX.D2D1.D2D1Mesh,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillMesh(D2D1Mesh, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillMesh_JeremyAnsel_DirectX_D2D1_D2D1Mesh_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillMesh(JeremyAnsel.DirectX.D2D1.D2D1Mesh,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillMesh(D2D1Mesh?, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Paints the interior of the specified mesh.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void FillMesh(D2D1Mesh mesh, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FillMesh(D2D1Mesh? mesh, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5303,13 +5303,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1590">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillOpacityMask*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1OpacityMaskContent_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillOpacityMask(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1OpacityMaskContent)">FillOpacityMask(D2D1Bitmap, D2D1Brush, D2D1OpacityMaskContent)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1OpacityMaskContent_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillOpacityMask(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1OpacityMaskContent)">FillOpacityMask(D2D1Bitmap?, D2D1Brush?, D2D1OpacityMaskContent)</h4>
   <div class="markdown level1 summary"><p>Applies the opacity mask described by the specified bitmap to a brush and uses that brush to paint a region of the render target.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void FillOpacityMask(D2D1Bitmap opacityMask, D2D1Brush brush, D2D1OpacityMaskContent content)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FillOpacityMask(D2D1Bitmap? opacityMask, D2D1Brush? brush, D2D1OpacityMaskContent content)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5349,13 +5349,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1615">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillOpacityMask*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1OpacityMaskContent_JeremyAnsel_DirectX_D2D1_D2D1RectF_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillOpacityMask(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1OpacityMaskContent,JeremyAnsel.DirectX.D2D1.D2D1RectF)">FillOpacityMask(D2D1Bitmap, D2D1Brush, D2D1OpacityMaskContent, D2D1RectF)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1OpacityMaskContent_JeremyAnsel_DirectX_D2D1_D2D1RectF_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillOpacityMask(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1OpacityMaskContent,JeremyAnsel.DirectX.D2D1.D2D1RectF)">FillOpacityMask(D2D1Bitmap?, D2D1Brush?, D2D1OpacityMaskContent, D2D1RectF)</h4>
   <div class="markdown level1 summary"><p>Applies the opacity mask described by the specified bitmap to a brush and uses that brush to paint a region of the render target.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void FillOpacityMask(D2D1Bitmap opacityMask, D2D1Brush brush, D2D1OpacityMaskContent content, D2D1RectF destinationRectangle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FillOpacityMask(D2D1Bitmap? opacityMask, D2D1Brush? brush, D2D1OpacityMaskContent content, D2D1RectF destinationRectangle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5401,13 +5401,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1652">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillOpacityMask*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1OpacityMaskContent_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1RectF_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillOpacityMask(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1OpacityMaskContent,JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1RectF)">FillOpacityMask(D2D1Bitmap, D2D1Brush, D2D1OpacityMaskContent, D2D1RectF, D2D1RectF)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillOpacityMask_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_D2D1_D2D1OpacityMaskContent_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1RectF_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillOpacityMask(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.D2D1.D2D1OpacityMaskContent,JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1RectF)">FillOpacityMask(D2D1Bitmap?, D2D1Brush?, D2D1OpacityMaskContent, D2D1RectF, D2D1RectF)</h4>
   <div class="markdown level1 summary"><p>Applies the opacity mask described by the specified bitmap to a brush and uses that brush to paint a region of the render target.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void FillOpacityMask(D2D1Bitmap opacityMask, D2D1Brush brush, D2D1OpacityMaskContent content, D2D1RectF destinationRectangle, D2D1RectF sourceRectangle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FillOpacityMask(D2D1Bitmap? opacityMask, D2D1Brush? brush, D2D1OpacityMaskContent content, D2D1RectF destinationRectangle, D2D1RectF sourceRectangle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5459,13 +5459,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1279">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillRectangle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillRectangle*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillRectangle(JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillRectangle(D2D1RectF, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillRectangle_JeremyAnsel_DirectX_D2D1_D2D1RectF_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillRectangle(JeremyAnsel.DirectX.D2D1.D2D1RectF,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillRectangle(D2D1RectF, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Paints the interior of the specified rectangle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void FillRectangle(D2D1RectF rect, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FillRectangle(D2D1RectF rect, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5499,13 +5499,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L1354">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillRoundedRectangle_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillRoundedRectangle*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillRoundedRectangle(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillRoundedRectangle(D2D1RoundedRect, D2D1Brush)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_FillRoundedRectangle_JeremyAnsel_DirectX_D2D1_D2D1RoundedRect_JeremyAnsel_DirectX_D2D1_D2D1Brush_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.FillRoundedRectangle(JeremyAnsel.DirectX.D2D1.D2D1RoundedRect,JeremyAnsel.DirectX.D2D1.D2D1Brush)">FillRoundedRectangle(D2D1RoundedRect, D2D1Brush?)</h4>
   <div class="markdown level1 summary"><p>Paints the interior of the specified rounded rectangle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void FillRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush brush)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FillRoundedRectangle(D2D1RoundedRect roundedRect, D2D1Brush? brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5681,7 +5681,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DWriteRenderingParams GetTextRenderingParams()</code></pre>
+    <pre><code class="lang-csharp hljs">public DWriteRenderingParams? GetTextRenderingParams()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -5774,7 +5774,7 @@
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PopLayer_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.PopLayer*"></a>
   <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PopLayer" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.PopLayer">PopLayer()</h4>
-  <div class="markdown level1 summary"><p>Stops redirecting drawing operations to the layer that is specified by the last <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PushLayer_JeremyAnsel_DirectX_D2D1_D2D1LayerParameters_JeremyAnsel_DirectX_D2D1_D2D1Layer_">PushLayer(D2D1LayerParameters, D2D1Layer)</a> call.</p>
+  <div class="markdown level1 summary"><p>Stops redirecting drawing operations to the layer that is specified by the last <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PushLayer_JeremyAnsel_DirectX_D2D1_D2D1LayerParameters_JeremyAnsel_DirectX_D2D1_D2D1Layer_">PushLayer(D2D1LayerParameters, D2D1Layer?)</a> call.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -5829,13 +5829,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L2079">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PushLayer_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.PushLayer*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PushLayer_JeremyAnsel_DirectX_D2D1_D2D1LayerParameters_JeremyAnsel_DirectX_D2D1_D2D1Layer_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.PushLayer(JeremyAnsel.DirectX.D2D1.D2D1LayerParameters,JeremyAnsel.DirectX.D2D1.D2D1Layer)">PushLayer(D2D1LayerParameters, D2D1Layer)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PushLayer_JeremyAnsel_DirectX_D2D1_D2D1LayerParameters_JeremyAnsel_DirectX_D2D1_D2D1Layer_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.PushLayer(JeremyAnsel.DirectX.D2D1.D2D1LayerParameters,JeremyAnsel.DirectX.D2D1.D2D1Layer)">PushLayer(D2D1LayerParameters, D2D1Layer?)</h4>
   <div class="markdown level1 summary"><p>Adds the specified layer to the render target so that it receives all subsequent drawing operations until <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_PopLayer">PopLayer()</a> is called.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PushLayer(D2D1LayerParameters layerParameters, D2D1Layer layer)</code></pre>
+    <pre><code class="lang-csharp hljs">public void PushLayer(D2D1LayerParameters layerParameters, D2D1Layer? layer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5869,13 +5869,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L2140">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_RestoreDrawingState_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.RestoreDrawingState*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_RestoreDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.RestoreDrawingState(JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock)">RestoreDrawingState(D2D1DrawingStateBlock)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_RestoreDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.RestoreDrawingState(JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock)">RestoreDrawingState(D2D1DrawingStateBlock?)</h4>
   <div class="markdown level1 summary"><p>Sets the render target's drawing state to that of the specified <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RestoreDrawingState(D2D1DrawingStateBlock drawingStateBlock)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RestoreDrawingState(D2D1DrawingStateBlock? drawingStateBlock)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5903,13 +5903,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L2123">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SaveDrawingState_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.SaveDrawingState*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SaveDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.SaveDrawingState(JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock)">SaveDrawingState(D2D1DrawingStateBlock)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SaveDrawingState_JeremyAnsel_DirectX_D2D1_D2D1DrawingStateBlock_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.SaveDrawingState(JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock)">SaveDrawingState(D2D1DrawingStateBlock?)</h4>
   <div class="markdown level1 summary"><p>Saves the current drawing state to the specified <a class="xref" href="JeremyAnsel.DirectX.D2D1.D2D1DrawingStateBlock.html">D2D1DrawingStateBlock</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SaveDrawingState(D2D1DrawingStateBlock drawingStateBlock)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SaveDrawingState(D2D1DrawingStateBlock? drawingStateBlock)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -6033,13 +6033,13 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.D2D1/D2D1RenderTarget.cs/#L2021">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SetTextRenderingParams_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.SetTextRenderingParams*"></a>
-  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SetTextRenderingParams_JeremyAnsel_DirectX_DWrite_DWriteRenderingParams_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.SetTextRenderingParams(JeremyAnsel.DirectX.DWrite.DWriteRenderingParams)">SetTextRenderingParams(DWriteRenderingParams)</h4>
+  <h4 id="JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_SetTextRenderingParams_JeremyAnsel_DirectX_DWrite_DWriteRenderingParams_" data-uid="JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.SetTextRenderingParams(JeremyAnsel.DirectX.DWrite.DWriteRenderingParams)">SetTextRenderingParams(DWriteRenderingParams?)</h4>
   <div class="markdown level1 summary"><p>Specifies text rendering options to be applied to all subsequent text and glyph drawing operations.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetTextRenderingParams(DWriteRenderingParams textRenderingParams)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetTextRenderingParams(DWriteRenderingParams? textRenderingParams)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
