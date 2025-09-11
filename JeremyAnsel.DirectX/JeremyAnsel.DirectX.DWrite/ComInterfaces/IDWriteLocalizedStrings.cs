@@ -35,7 +35,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// but *index is UINT_MAX and *exists is FALSE.
         /// </remarks>
         void FindLocaleName(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string localeName,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? localeName,
             [Out] out uint index,
             [Out, MarshalAs(UnmanagedType.Bool)] out bool exists);
 
@@ -57,7 +57,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// null character.</param>
         void GetLocaleName(
             [In] uint index,
-            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder localeName,
+            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder? localeName,
             [In] uint size);
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// null character.</param>
         void GetString(
             [In] uint index,
-            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder stringBuffer,
+            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder? stringBuffer,
             [In] uint size);
     }
 }

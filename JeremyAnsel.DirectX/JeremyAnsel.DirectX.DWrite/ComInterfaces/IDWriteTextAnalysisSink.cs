@@ -40,7 +40,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         void SetLineBreakpoints(
             [In] uint textPosition,
             [In] uint textLength,
-            [In, MarshalAs(UnmanagedType.LPArray)] DWriteLineBreakpoint[] lineBreakpoints);
+            [In, MarshalAs(UnmanagedType.LPArray)] DWriteLineBreakpoint[]? lineBreakpoints);
 
         /// <summary>
         /// Set bidirectional level on the range, called once per each
@@ -76,6 +76,6 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         void SetNumberSubstitution(
             [In] uint textPosition,
             [In] uint textLength,
-            [In] IDWriteNumberSubstitution numberSubstitution);
+            [In] IDWriteNumberSubstitution? numberSubstitution);
     }
 }

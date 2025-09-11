@@ -90,7 +90,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="value">A DWrite object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(DWriteFont value)
+        public static implicit operator bool(DWriteFont? value)
         {
             return value != null && value.handle != null;
         }
@@ -131,9 +131,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <returns><see cref="DWriteFontFamily"/></returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteFontFamily GetFontFamily()
+        public DWriteFontFamily? GetFontFamily()
         {
-            this.handle.GetFontFamily(out IDWriteFontFamily fontFamily);
+            this.handle.GetFontFamily(out IDWriteFontFamily? fontFamily);
 
             if (fontFamily == null)
             {
@@ -149,9 +149,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <returns><see cref="DWriteLocalizedStrings"/></returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteLocalizedStrings GetFaceNames()
+        public DWriteLocalizedStrings? GetFaceNames()
         {
-            this.handle.GetFaceNames(out IDWriteLocalizedStrings names);
+            this.handle.GetFaceNames(out IDWriteLocalizedStrings? names);
 
             if (names == null)
             {
@@ -171,9 +171,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// </remarks>
         /// <returns><see cref="DWriteLocalizedStrings"/></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteLocalizedStrings GetInformationalStrings(DWriteInformationalStringId informationalStringId)
+        public DWriteLocalizedStrings? GetInformationalStrings(DWriteInformationalStringId informationalStringId)
         {
-            this.handle.GetInformationalStrings(informationalStringId, out IDWriteLocalizedStrings informationalStrings, out bool exists);
+            this.handle.GetInformationalStrings(informationalStringId, out IDWriteLocalizedStrings? informationalStrings, out bool exists);
 
             if (!exists)
             {
@@ -218,9 +218,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// </summary>
         /// <returns><see cref="DWriteFontFace"/></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteFontFace CreateFontFace()
+        public DWriteFontFace? CreateFontFace()
         {
-            this.handle.CreateFontFace(out IDWriteFontFace fontFace);
+            this.handle.CreateFontFace(out IDWriteFontFace? fontFace);
 
             if (fontFace == null)
             {

@@ -30,7 +30,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontFamily">Receives a pointer the newly created font family object.</param>
         void GetFontFamily(
             [In] uint index,
-            [Out] out IDWriteFontFamily fontFamily);
+            [Out] out IDWriteFontFamily? fontFamily);
 
         /// <summary>
         /// Finds the font family with the specified family name.
@@ -42,7 +42,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// If the specified family name does not exist, the return value is S_OK, but *index is UINT_MAX and *exists is FALSE.
         /// </remarks>
         void FindFontFamily(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string familyName,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? familyName,
             [Out] out uint index,
             [Out, MarshalAs(UnmanagedType.Bool)] out bool exists);
 
@@ -56,7 +56,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// If the specified physical font is not part of the font collection the return value is DWRITE_E_NOFONT.
         /// </remarks>
         void GetFontFromFontFace(
-            [In] IDWriteFontFace fontFace,
-            [Out] out IDWriteFont font);
+            [In] IDWriteFontFace? fontFace,
+            [Out] out IDWriteFont? font);
     }
 }

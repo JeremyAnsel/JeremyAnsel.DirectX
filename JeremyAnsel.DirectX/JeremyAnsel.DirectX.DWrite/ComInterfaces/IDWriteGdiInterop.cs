@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="font">Receives a newly created font object if successful, or NULL in case of error.</param>
         void CreateFontFromLogFont(
             [In] IntPtr logFont,
-            [Out] out IDWriteFont font);
+            [Out] out IDWriteFont? font);
 
         /// <summary>
         /// Initializes a LOGFONT structure based on the GDI-compatible properties of the specified font.
@@ -33,7 +33,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="isSystemFont">Contains TRUE if the specified font object is part of the system font collection
         /// or FALSE otherwise.</param>
         void ConvertFontToLogFont(
-            [In] IDWriteFont font,
+            [In] IDWriteFont? font,
             [Out] IntPtr logFont,
             [Out, MarshalAs(UnmanagedType.Bool)] out bool isSystemFont);
 
@@ -43,7 +43,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="font">Specifies a font face.</param>
         /// <param name="logFont">Structure that receives a GDI-compatible font description.</param>
         void ConvertFontFaceToLogFont(
-            [In] IDWriteFontFace font,
+            [In] IDWriteFontFace? font,
             [Out] IntPtr logFont);
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontFace">Contains the newly created font face object, or NULL in case of failure.</param>
         void CreateFontFaceFromHdc(
             [In] IntPtr hdc,
-            [Out] out IDWriteFontFace fontFace);
+            [Out] out IDWriteFontFace? fontFace);
 
         /// <summary>
         /// Creates an object that encapsulates a bitmap and memory DC which can be used for rendering glyphs.
@@ -68,6 +68,6 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] IntPtr hdc,
             [In] uint width,
             [In] uint height,
-            [Out] out IDWriteBitmapRenderTarget renderTarget);
+            [Out] out IDWriteBitmapRenderTarget? renderTarget);
     }
 }

@@ -103,7 +103,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="value">A DWrite object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(DWriteRenderingParams value)
+        public static implicit operator bool(DWriteRenderingParams? value)
         {
             return value != null && value.handle != null;
         }

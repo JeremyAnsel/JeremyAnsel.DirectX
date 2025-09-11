@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </summary>
         /// <param name="fontCollection">Receives a pointer to the font collection object.</param>
         void GetFontCollection(
-            [Out] out IDWriteFontCollection fontCollection);
+            [Out] out IDWriteFontCollection? fontCollection);
 
         /// <summary>
         /// Gets the number of fonts in the font list.
@@ -39,14 +39,14 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="font">Receives a pointer to the newly created font object.</param>
         void GetFont(
             [In] uint index,
-            [Out] out IDWriteFont font);
+            [Out] out IDWriteFont? font);
 
         /// <summary>
         /// Creates a localized strings object that contains the family names for the font family, indexed by locale name.
         /// </summary>
         /// <param name="names">Receives a pointer to the newly created localized strings object.</param>
         void GetFamilyNames(
-            [Out] out IDWriteLocalizedStrings names);
+            [Out] out IDWriteLocalizedStrings? names);
 
         /// <summary>
         /// Gets the font that best matches the specified properties.
@@ -59,7 +59,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] DWriteFontWeight weight,
             [In] DWriteFontStretch stretch,
             [In] DWriteFontStyle style,
-            [Out] out IDWriteFont matchingFont);
+            [Out] out IDWriteFont? matchingFont);
 
         /// <summary>
         /// Gets a list of fonts in the font family ranked in order of how well they match the specified properties.
@@ -72,6 +72,6 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] DWriteFontWeight weight,
             [In] DWriteFontStretch stretch,
             [In] DWriteFontStyle style,
-            [Out] out IDWriteFontList matchingFonts);
+            [Out] out IDWriteFontList? matchingFonts);
     }
 }

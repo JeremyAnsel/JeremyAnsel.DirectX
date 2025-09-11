@@ -85,7 +85,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </remarks>
         void SetTrimming(
             [In] ref DWriteTrimming trimmingOptions,
-            [In] IDWriteInlineObject trimmingSign);
+            [In] IDWriteInlineObject? trimmingSign);
 
         /// <summary>
         /// Set line spacing.
@@ -169,7 +169,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </summary>
         /// <param name="fontCollection">The current font collection.</param>
         void GetFontCollection(
-            [Out] out IDWriteFontCollection fontCollection);
+            [Out] out IDWriteFontCollection? fontCollection);
 
         /// <summary>
         /// Get the length of the font family name, in characters, not including the terminating NULL character.
@@ -184,7 +184,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontFamilyName">Character array that receives the current font family name</param>
         /// <param name="nameSize">Size of the character array in character count including the terminated NULL character.</param>
         void GetFontFamilyName(
-            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder fontFamilyName,
+            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder? fontFamilyName,
             [In] uint nameSize);
 
         /// <summary>
@@ -228,7 +228,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="localeName">Character array that receives the current locale name</param>
         /// <param name="nameSize">Size of the character array in character count including the terminated NULL character.</param>
         void GetLocaleName(
-            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder localeName,
+            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder? localeName,
             [In] uint nameSize);
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontCollection">The font collection to set</param>
         /// <param name="textRange">Text range to which this change applies.</param>
         void SetFontCollection(
-            [In] IDWriteFontCollection fontCollection,
+            [In] IDWriteFontCollection? fontCollection,
             [In] DWriteTextRange textRange);
 
         /// <summary>
@@ -260,7 +260,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontFamilyName">Font family name</param>
         /// <param name="textRange">Text range to which this change applies.</param>
         void SetFontFamilyName(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string fontFamilyName,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? fontFamilyName,
             [In] DWriteTextRange textRange);
 
         /// <summary>
@@ -327,7 +327,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// to the application via the callback when the range is drawn at drawing time.
         /// </remarks>
         void SetDrawingEffect(
-            [In, MarshalAs(UnmanagedType.IUnknown)] object drawingEffect,
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? drawingEffect,
             [In] DWriteTextRange textRange);
 
         /// <summary>
@@ -341,7 +341,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// Any text in that range will be suppressed.
         /// </remarks>
         void SetInlineObject(
-            [In] IDWriteInlineObject inlineObject,
+            [In] IDWriteInlineObject? inlineObject,
             [In] DWriteTextRange textRange);
 
         /// <summary>
@@ -350,7 +350,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="typography">Pointer to font typography setting.</param>
         /// <param name="textRange">Text range to which this change applies.</param>
         void SetTypography(
-            [In] IDWriteTypography typography,
+            [In] IDWriteTypography? typography,
             [In] DWriteTextRange textRange);
 
         /// <summary>
@@ -359,7 +359,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="localeName">Locale name</param>
         /// <param name="textRange">Text range to which this change applies.</param>
         void SetLocaleName(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string localeName,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? localeName,
             [In] DWriteTextRange textRange);
 
         /// <summary>
@@ -384,7 +384,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="textRange">Text range to which this change applies.</param>
         void GetFontCollection(
             [In] uint currentPosition,
-            [Out] out IDWriteFontCollection fontCollection,
+            [Out] out IDWriteFontCollection? fontCollection,
             [Out] out DWriteTextRange textRange);
 
         /// <summary>
@@ -407,7 +407,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="textRange">The position range of the current format.</param>
         void GetFontFamilyName(
             [In] uint currentPosition,
-            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder fontFamilyName,
+            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder? fontFamilyName,
             [In] uint nameSize,
             [Out] out DWriteTextRange textRange);
 
@@ -485,7 +485,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="textRange">The position range of the current format.</param>
         void GetDrawingEffect(
             [In] uint currentPosition,
-            [Out, MarshalAs(UnmanagedType.IUnknown)] out object drawingEffect,
+            [Out, MarshalAs(UnmanagedType.IUnknown)] out object? drawingEffect,
             [Out] out DWriteTextRange textRange);
 
         /// <summary>
@@ -496,7 +496,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="textRange">The position range of the current format.</param>
         void GetInlineObject(
             [In] uint currentPosition,
-            [Out] out IDWriteInlineObject inlineObject,
+            [Out] out IDWriteInlineObject? inlineObject,
             [Out] out DWriteTextRange textRange);
 
         /// <summary>
@@ -507,7 +507,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="textRange">The position range of the current format.</param>
         void GetTypography(
             [In] uint currentPosition,
-            [Out] out IDWriteTypography typography,
+            [Out] out IDWriteTypography? typography,
             [Out] out DWriteTextRange textRange);
 
         /// <summary>
@@ -530,7 +530,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="textRange">The position range of the current format.</param>
         void GetLocaleName(
             [In] uint currentPosition,
-            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder localeName,
+            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder? localeName,
             [In] uint nameSize,
             [Out] out DWriteTextRange textRange);
 
@@ -545,7 +545,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="originY">Y-coordinate of the layout's top side.</param>
         void Draw(
             [In] IntPtr clientDrawingContext,
-            [In] IDWriteTextRenderer renderer,
+            [In] IDWriteTextRenderer? renderer,
             [In] float originX,
             [In] float originY);
 
@@ -563,7 +563,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// needed.
         /// </remarks>
         void GetLineMetrics(
-            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteLineMetrics[] lineMetrics,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteLineMetrics[]? lineMetrics,
             [In] uint maxLineCount,
             [Out] out uint actualLineCount);
 
@@ -606,7 +606,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// needed.
         /// </remarks>
         void GetClusterMetrics(
-            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteClusterMetrics[] clusterMetrics,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteClusterMetrics[]? clusterMetrics,
             [In] uint maxClusterCount,
             [Out] out uint actualClusterCount);
 
@@ -712,7 +712,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] uint textLength,
             [In] float originX,
             [In] float originY,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteHitTestMetrics[] hitTestMetrics,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteHitTestMetrics[]? hitTestMetrics,
             [In] uint maxHitTestMetricsCount,
             [Out] out uint actualHitTestMetricsCount);
     }

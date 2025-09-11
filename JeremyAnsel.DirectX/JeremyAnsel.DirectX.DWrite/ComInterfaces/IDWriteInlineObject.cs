@@ -31,19 +31,19 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="clientDrawingEffect">The drawing effect set in IDWriteTextLayout::SetDrawingEffect.</param>
         void Draw(
             [In] IntPtr clientDrawingContext,
-            [In] IDWriteTextRenderer renderer,
+            [In] IDWriteTextRenderer? renderer,
             [In] float originX,
             [In] float originY,
             [In, MarshalAs(UnmanagedType.Bool)] bool isSideways,
             [In, MarshalAs(UnmanagedType.Bool)] bool isRightToLeft,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object clientDrawingEffect);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? clientDrawingEffect);
 
         /// <summary>
         /// TextLayout calls this callback function to get the measurement of the inline object.
         /// </summary>
         /// <param name="metrics">Returned metrics</param>
         void GetMetrics(
-            [Out] out DWriteInlineObjectMetrics metrics);
+            [Out] out DWriteInlineObjectMetrics? metrics);
 
         /// <summary>
         /// TextLayout calls this callback function to get the visible extents (in DIPs) of the inline object.
@@ -59,7 +59,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// return a width/height of 60x60 and four overhangs of 20 DIPs.
         /// </remarks>
         void GetOverhangMetrics(
-            [Out] out DWriteOverhangMetrics overhangs);
+            [Out] out DWriteOverhangMetrics? overhangs);
 
         /// <summary>
         /// Layout uses this to determine the line breaking behavior of the inline object

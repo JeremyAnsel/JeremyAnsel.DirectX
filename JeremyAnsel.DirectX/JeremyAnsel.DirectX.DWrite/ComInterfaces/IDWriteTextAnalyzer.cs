@@ -26,10 +26,10 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="textLength">Length to analyze.</param>
         /// <param name="analysisSink">Callback object.</param>
         void AnalyzeScript(
-            [In] IDWriteTextAnalysisSource analysisSource,
+            [In] IDWriteTextAnalysisSource? analysisSource,
             [In] uint textPosition,
             [In] uint textLength,
-            [In] IDWriteTextAnalysisSink analysisSink);
+            [In] IDWriteTextAnalysisSink? analysisSink);
 
         /// <summary>
         /// Analyzes a text range for script directionality, reading attributes
@@ -49,10 +49,10 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// Embedded control codes (LRE/LRO/RLE/RLO/PDF) are taken into account.
         /// </remarks>
         void AnalyzeBidi(
-            [In] IDWriteTextAnalysisSource analysisSource,
+            [In] IDWriteTextAnalysisSource? analysisSource,
             [In] uint textPosition,
             [In] uint textLength,
-            [In] IDWriteTextAnalysisSink analysisSink);
+            [In] IDWriteTextAnalysisSink? analysisSink);
 
         /// <summary>
         /// Analyzes a text range for spans where number substitution is applicable,
@@ -73,10 +73,10 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// Embedded control codes (LRE/LRO/RLE/RLO/PDF) are taken into account.
         /// </remarks>
         void AnalyzeNumberSubstitution(
-            [In] IDWriteTextAnalysisSource analysisSource,
+            [In] IDWriteTextAnalysisSource? analysisSource,
             [In] uint textPosition,
             [In] uint textLength,
-            [In] IDWriteTextAnalysisSink analysisSink);
+            [In] IDWriteTextAnalysisSink? analysisSink);
 
         /// <summary>
         /// Analyzes a text range for potential breakpoint opportunities, reading
@@ -104,10 +104,10 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// Surrogate pairs never break between.
         /// </remarks>
         void AnalyzeLineBreakpoints(
-            [In] IDWriteTextAnalysisSource analysisSource,
+            [In] IDWriteTextAnalysisSource? analysisSource,
             [In] uint textPosition,
             [In] uint textLength,
-            [In] IDWriteTextAnalysisSink analysisSink);
+            [In] IDWriteTextAnalysisSink? analysisSink);
 
         /// <summary>
         /// Parses the input text string and maps it to the set of glyphs and associated glyph data
@@ -151,22 +151,22 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// will be returned.  The application should allocate a larger buffer and try again.
         /// </remarks>
         void GetGlyphs(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string textString,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? textString,
             [In] uint textLength,
-            [In] IDWriteFontFace fontFace,
+            [In] IDWriteFontFace? fontFace,
             [In, MarshalAs(UnmanagedType.Bool)] bool isSideways,
             [In, MarshalAs(UnmanagedType.Bool)] bool isRightToLeft,
             [In] ref DWriteScriptAnalysis scriptAnalysis,
-            [In, MarshalAs(UnmanagedType.LPWStr)] string localeName,
-            [In] IDWriteNumberSubstitution numberSubstitution,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? localeName,
+            [In] IDWriteNumberSubstitution? numberSubstitution,
             [In] IntPtr features,
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] featureRangeLengths,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? featureRangeLengths,
             [In] uint featureRanges,
             [In] uint maxGlyphCount,
-            [Out, MarshalAs(UnmanagedType.LPArray)] ushort[] clusterMap,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteShapingTextProperties[] textProps,
-            [Out, MarshalAs(UnmanagedType.LPArray)] ushort[] glyphIndices,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteShapingGlyphProperties[] glyphProps,
+            [Out, MarshalAs(UnmanagedType.LPArray)] ushort[]? clusterMap,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteShapingTextProperties[]? textProps,
+            [Out, MarshalAs(UnmanagedType.LPArray)] ushort[]? glyphIndices,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteShapingGlyphProperties[]? glyphProps,
             [Out] out uint actualGlyphCount);
 
         /// <summary>
@@ -198,24 +198,24 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="glyphAdvances">The advance width of each glyph.</param>
         /// <param name="glyphOffsets">The offset of the origin of each glyph.</param>
         void GetGlyphPlacements(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string textString,
-            [In, MarshalAs(UnmanagedType.LPArray)] ushort[] clusterMap,
-            [In, MarshalAs(UnmanagedType.LPArray)] DWriteShapingTextProperties[] textProps,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? textString,
+            [In, MarshalAs(UnmanagedType.LPArray)] ushort[]? clusterMap,
+            [In, MarshalAs(UnmanagedType.LPArray)] DWriteShapingTextProperties[]? textProps,
             [In] uint textLength,
-            [In, MarshalAs(UnmanagedType.LPArray)] ushort[] glyphIndices,
-            [In, MarshalAs(UnmanagedType.LPArray)] DWriteShapingGlyphProperties[] glyphProps,
+            [In, MarshalAs(UnmanagedType.LPArray)] ushort[]? glyphIndices,
+            [In, MarshalAs(UnmanagedType.LPArray)] DWriteShapingGlyphProperties[]? glyphProps,
             [In] uint glyphCount,
-            [In] IDWriteFontFace fontFace,
+            [In] IDWriteFontFace? fontFace,
             [In] float fontEmSize,
             [In, MarshalAs(UnmanagedType.Bool)] bool isSideways,
             [In, MarshalAs(UnmanagedType.Bool)] bool isRightToLeft,
             [In] ref DWriteScriptAnalysis scriptAnalysis,
-            [In, MarshalAs(UnmanagedType.LPWStr)] string localeName,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? localeName,
             [In] IntPtr features,
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] featureRangeLengths,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? featureRangeLengths,
             [In] uint featureRanges,
-            [Out, MarshalAs(UnmanagedType.LPArray)] float[] glyphAdvances,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphOffset[] glyphOffsets);
+            [Out, MarshalAs(UnmanagedType.LPArray)] float[]? glyphAdvances,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphOffset[]? glyphOffsets);
 
         /// <summary>
         /// Place glyphs output from the GetGlyphs method according to the font 
@@ -255,14 +255,14 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="glyphAdvances">The advance width of each glyph.</param>
         /// <param name="glyphOffsets">The offset of the origin of each glyph.</param>
         void GetGdiCompatibleGlyphPlacements(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string textString,
-            [In, MarshalAs(UnmanagedType.LPArray)] ushort[] clusterMap,
-            [In, MarshalAs(UnmanagedType.LPArray)] DWriteShapingTextProperties[] textProps,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? textString,
+            [In, MarshalAs(UnmanagedType.LPArray)] ushort[]? clusterMap,
+            [In, MarshalAs(UnmanagedType.LPArray)] DWriteShapingTextProperties[]? textProps,
             [In] uint textLength,
-            [In, MarshalAs(UnmanagedType.LPArray)] ushort[] glyphIndices,
-            [In, MarshalAs(UnmanagedType.LPArray)] DWriteShapingGlyphProperties[] glyphProps,
+            [In, MarshalAs(UnmanagedType.LPArray)] ushort[]? glyphIndices,
+            [In, MarshalAs(UnmanagedType.LPArray)] DWriteShapingGlyphProperties[]? glyphProps,
             [In] uint glyphCount,
-            [In] IDWriteFontFace fontFace,
+            [In] IDWriteFontFace? fontFace,
             [In] float fontEmSize,
             [In] float pixelsPerDip,
             [In] IntPtr transform,
@@ -270,11 +270,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In, MarshalAs(UnmanagedType.Bool)] bool isSideways,
             [In, MarshalAs(UnmanagedType.Bool)] bool isRightToLeft,
             [In] ref DWriteScriptAnalysis scriptAnalysis,
-            [In, MarshalAs(UnmanagedType.LPWStr)] string localeName,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? localeName,
             [In] IntPtr features,
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] featureRangeLengths,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? featureRangeLengths,
             [In] uint featureRanges,
-            [Out, MarshalAs(UnmanagedType.LPArray)] float[] glyphAdvances,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphOffset[] glyphOffsets);
+            [Out, MarshalAs(UnmanagedType.LPArray)] float[]? glyphAdvances,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphOffset[]? glyphOffsets);
     }
 }

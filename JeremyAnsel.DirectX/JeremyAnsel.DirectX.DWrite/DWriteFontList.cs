@@ -45,7 +45,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="value">A DWrite object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(DWriteFontList value)
+        public static implicit operator bool(DWriteFontList? value)
         {
             return value != null && value.handle != null;
         }
@@ -86,9 +86,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <returns><see cref="DWriteFontCollection"/></returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteFontCollection GetFontCollection()
+        public DWriteFontCollection? GetFontCollection()
         {
-            this.handle.GetFontCollection(out IDWriteFontCollection fontCollection);
+            this.handle.GetFontCollection(out IDWriteFontCollection? fontCollection);
 
             if (fontCollection == null)
             {
@@ -115,9 +115,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="index">Zero-based index of the font in the font list.</param>
         /// <returns><see cref="DWriteFont"/></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteFont GetFont(uint index)
+        public DWriteFont? GetFont(uint index)
         {
-            this.handle.GetFont(index, out IDWriteFont font);
+            this.handle.GetFont(index, out IDWriteFont? font);
 
             if (font == null)
             {

@@ -110,6 +110,6 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         void GetNumberSubstitution(
             [In] uint textPosition,
             [Out] out uint textLength,
-            [Out] out IDWriteNumberSubstitution numberSubstitution);
+            [Out] out IDWriteNumberSubstitution? numberSubstitution);
     }
 }

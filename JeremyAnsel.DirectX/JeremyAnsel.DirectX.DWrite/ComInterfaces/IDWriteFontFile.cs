@@ -31,7 +31,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </summary>
         /// <param name="fontFileLoader">The font file loader associated with the font file object.</param>
         void GetLoader(
-            [Out] out IDWriteFontFileLoader fontFileLoader);
+            [Out] out IDWriteFontFileLoader? fontFileLoader);
 
         /// <summary>
         /// Analyzes a file and returns whether it represents a font, and whether the font type is supported by the font system.

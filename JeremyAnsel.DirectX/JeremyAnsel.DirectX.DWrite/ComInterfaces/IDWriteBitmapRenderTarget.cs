@@ -37,7 +37,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] float baselineOriginY,
             [In] DWriteMeasuringMode measuringMode,
             [In] ref DWriteGlyphRun glyphRun,
-            [In] IDWriteRenderingParams renderingParams,
+            [In] IDWriteRenderingParams? renderingParams,
             [In] uint textColor,
             [Out] out DWriteRect blackBoxRect);
 

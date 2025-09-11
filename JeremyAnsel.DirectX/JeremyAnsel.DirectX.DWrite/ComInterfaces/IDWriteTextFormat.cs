@@ -85,7 +85,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </remarks>
         void SetTrimming(
             [In] ref DWriteTrimming trimmingOptions,
-            [In] IDWriteInlineObject trimmingSign);
+            [In] IDWriteInlineObject? trimmingSign);
 
         /// <summary>
         /// Set line spacing.
@@ -169,7 +169,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </summary>
         /// <param name="fontCollection">The current font collection.</param>
         void GetFontCollection(
-            [Out] out IDWriteFontCollection fontCollection);
+            [Out] out IDWriteFontCollection? fontCollection);
 
         /// <summary>
         /// Get the length of the font family name, in characters, not including the terminating NULL character.
@@ -184,7 +184,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontFamilyName">Character array that receives the current font family name</param>
         /// <param name="nameSize">Size of the character array in character count including the terminated NULL character.</param>
         void GetFontFamilyName(
-            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder fontFamilyName,
+            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder? fontFamilyName,
             [In] uint nameSize);
 
         /// <summary>
@@ -228,7 +228,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="localeName">Character array that receives the current locale name</param>
         /// <param name="nameSize">Size of the character array in character count including the terminated NULL character.</param>
         void GetLocaleName(
-            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder localeName,
+            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder? localeName,
             [In] uint nameSize);
     }
 }

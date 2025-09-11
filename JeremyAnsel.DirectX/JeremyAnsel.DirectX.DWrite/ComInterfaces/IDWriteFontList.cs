@@ -21,7 +21,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </summary>
         /// <param name="fontCollection">Receives a pointer to the font collection object.</param>
         void GetFontCollection(
-            [Out] out IDWriteFontCollection fontCollection);
+            [Out] out IDWriteFontCollection? fontCollection);
 
         /// <summary>
         /// Gets the number of fonts in the font list.
@@ -37,6 +37,6 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="font">Receives a pointer to the newly created font object.</param>
         void GetFont(
             [In] uint index,
-            [Out] out IDWriteFont font);
+            [Out] out IDWriteFont? font);
     }
 }

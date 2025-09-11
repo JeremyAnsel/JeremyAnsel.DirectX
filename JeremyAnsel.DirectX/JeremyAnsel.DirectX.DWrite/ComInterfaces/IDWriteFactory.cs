@@ -25,7 +25,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// there may be some latency. For example, an application might specify TRUE if it has itself just installed a font and wants to 
         /// be sure the font collection contains that font.</param>
         void GetSystemFontCollection(
-            [Out] out IDWriteFontCollection fontCollection,
+            [Out] out IDWriteFontCollection? fontCollection,
             [In, MarshalAs(UnmanagedType.Bool)] bool checkForUpdates);
 
         /// <summary>
@@ -37,24 +37,24 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="collectionKeySize">Size in bytes of the collection key.</param>
         /// <param name="fontCollection">Receives a pointer to the system font collection object, or NULL in case of failure.</param>
         void CreateCustomFontCollection(
-            [In] IDWriteFontCollectionLoader collectionLoader,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] collectionKey,
+            [In] IDWriteFontCollectionLoader? collectionLoader,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? collectionKey,
             [In] uint collectionKeySize,
-            [Out] out IDWriteFontCollection fontCollection);
+            [Out] out IDWriteFontCollection? fontCollection);
 
         /// <summary>
         /// Registers a custom font collection loader with the factory object.
         /// </summary>
         /// <param name="fontCollectionLoader">Application-defined font collection loader.</param>
         void RegisterFontCollectionLoader(
-            [In] IDWriteFontCollectionLoader fontCollectionLoader);
+            [In] IDWriteFontCollectionLoader? fontCollectionLoader);
 
         /// <summary>
         /// Unregisters a custom font collection loader that was previously registered using RegisterFontCollectionLoader.
         /// </summary>
         /// <param name="fontCollectionLoader">Application-defined font collection loader.</param>
         void UnregisterFontCollectionLoader(
-            [In] IDWriteFontCollectionLoader fontCollectionLoader);
+            [In] IDWriteFontCollectionLoader? fontCollectionLoader);
 
         /// <summary>
         /// CreateFontFileReference creates a font file reference object from a local font file.
@@ -67,9 +67,9 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// if the user provided lastWriteTime doesn't match the file on the disk.</param>
         /// <param name="fontFile">Contains newly created font file reference object, or NULL in case of failure.</param>
         void CreateFontFileReference(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string filePath,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? filePath,
             [In] ref ulong lastWriteTime,
-            [Out] out IDWriteFontFile fontFile);
+            [Out] out IDWriteFontFile? fontFile);
 
         /// <summary>
         /// CreateCustomFontFileReference creates a reference to an application specific font file resource.
@@ -88,10 +88,10 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// of the fontFileLoader used in this call.
         /// </remarks>
         void CreateCustomFontFileReference(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] fontFileReferenceKey,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? fontFileReferenceKey,
             [In] uint fontFileReferenceKeySize,
-            [In] IDWriteFontFileLoader fontFileLoader,
-            [Out] out IDWriteFontFile fontFile);
+            [In] IDWriteFontFileLoader? fontFileLoader,
+            [Out] out IDWriteFontFile? fontFile);
 
         /// <summary>
         /// Creates a font face object.
@@ -107,17 +107,17 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         void CreateFontFace(
             [In] DWriteFontFaceType fontFaceType,
             [In] uint numberOfFiles,
-            [In, MarshalAs(UnmanagedType.LPArray)] IDWriteFontFile[] fontFiles,
+            [In, MarshalAs(UnmanagedType.LPArray)] IDWriteFontFile[]? fontFiles,
             [In] uint faceIndex,
             [In] DWriteFontSimulations fontFaceSimulationFlags,
-            [Out] out IDWriteFontFace fontFace);
+            [Out] out IDWriteFontFace? fontFace);
 
         /// <summary>
         /// Creates a rendering parameters object with default settings for the primary monitor.
         /// </summary>
         /// <param name="renderingParams">Holds the newly created rendering parameters object, or NULL in case of failure.</param>
         void CreateRenderingParams(
-            [Out] out IDWriteRenderingParams renderingParams);
+            [Out] out IDWriteRenderingParams? renderingParams);
 
         /// <summary>
         /// Creates a rendering parameters object with default settings for the specified monitor.
@@ -126,7 +126,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="renderingParams">Holds the newly created rendering parameters object, or NULL in case of failure.</param>
         void CreateMonitorRenderingParams(
             [In] IntPtr monitor,
-            [Out] out IDWriteRenderingParams renderingParams);
+            [Out] out IDWriteRenderingParams? renderingParams);
 
         /// <summary>
         /// Creates a rendering parameters object with the specified properties.
@@ -143,7 +143,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] float clearTypeLevel,
             [In] DWritePixelGeometry pixelGeometry,
             [In] DWriteRenderingMode renderingMode,
-            [Out] out IDWriteRenderingParams renderingParams);
+            [Out] out IDWriteRenderingParams? renderingParams);
 
         /// <summary>
         /// Registers a font file loader with DirectWrite.
@@ -162,7 +162,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// outside of the font file loader implementation as a separate step.
         /// </remarks>
         void RegisterFontFileLoader(
-            [In] IDWriteFontFileLoader fontFileLoader);
+            [In] IDWriteFontFileLoader? fontFileLoader);
 
         /// <summary>
         /// Unregisters a font file loader that was previously registered with the DirectWrite font system using RegisterFontFileLoader.
@@ -183,7 +183,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// outside of the font file loader implementation as a separate step.
         /// </remarks>
         void UnregisterFontFileLoader(
-            [In] IDWriteFontFileLoader fontFileLoader);
+            [In] IDWriteFontFileLoader? fontFileLoader);
 
         /// <summary>
         /// Create a text format object used for text layout.
@@ -197,28 +197,28 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="localeName">Locale name</param>
         /// <param name="textFormat">Contains newly created text format object, or NULL in case of failure.</param>
         void CreateTextFormat(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string fontFamilyName,
-            [In] IDWriteFontCollection fontCollection,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? fontFamilyName,
+            [In] IDWriteFontCollection? fontCollection,
             [In] DWriteFontWeight fontWeight,
             [In] DWriteFontStyle fontStyle,
             [In] DWriteFontStretch fontStretch,
             [In] float fontSize,
-            [In, MarshalAs(UnmanagedType.LPWStr)] string localeName,
-            [Out] out IDWriteTextFormat textFormat);
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? localeName,
+            [Out] out IDWriteTextFormat? textFormat);
 
         /// <summary>
         /// Create a typography object used in conjunction with text format for text layout.
         /// </summary>
         /// <param name="typography">Contains newly created typography object, or NULL in case of failure.</param>
         void CreateTypography(
-            [Out] out IDWriteTypography typography);
+            [Out] out IDWriteTypography? typography);
 
         /// <summary>
         /// Create an object used for interoperability with GDI.
         /// </summary>
         /// <param name="gdiInterop">Receives the GDI interop object if successful, or NULL in case of failure.</param>
         void GetGdiInterop(
-            [Out] out IDWriteGdiInterop gdiInterop);
+            [Out] out IDWriteGdiInterop? gdiInterop);
 
         /// <summary>
         /// CreateTextLayout takes a string, format, and associated constraints
@@ -232,12 +232,12 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="maxHeight">Height of the layout box.</param>
         /// <param name="textLayout">The resultant object.</param>
         void CreateTextLayout(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string textString,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? textString,
             [In] uint textLength,
-            [In] IDWriteTextFormat textFormat,
+            [In] IDWriteTextFormat? textFormat,
             [In] float maxWidth,
             [In] float maxHeight,
-            [Out] out IDWriteTextLayout textLayout);
+            [Out] out IDWriteTextLayout? textLayout);
 
         /// <summary>
         /// <see cref="CreateGdiCompatibleTextLayout"/> takes a string, format, and associated constraints
@@ -261,15 +261,15 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </param>
         /// <param name="textLayout">The resultant object.</param>
         void CreateGdiCompatibleTextLayout(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string textString,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? textString,
             [In] uint textLength,
-            [In] IDWriteTextFormat textFormat,
+            [In] IDWriteTextFormat? textFormat,
             [In] float layoutWidth,
             [In] float layoutHeight,
             [In] float pixelsPerDip,
             [In] ref DWriteMatrix transform,
             [In, MarshalAs(UnmanagedType.Bool)] bool useGdiNatural,
-            [Out] out IDWriteTextLayout textLayout);
+            [Out] out IDWriteTextLayout? textLayout);
 
         /// <summary>
         /// The application may call this function to create an inline object for trimming, using an ellipsis as the omission sign.
@@ -279,15 +279,15 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="textFormat">Text format used as a template for the omission sign.</param>
         /// <param name="trimmingSign">Created omission sign.</param>
         void CreateEllipsisTrimmingSign(
-            [In] IDWriteTextFormat textFormat,
-            [Out] IDWriteInlineObject trimmingSign);
+            [In] IDWriteTextFormat? textFormat,
+            [Out] IDWriteInlineObject? trimmingSign);
 
         /// <summary>
         /// Return an interface to perform text analysis with.
         /// </summary>
         /// <param name="textAnalyzer">The resultant object.</param>
         void CreateTextAnalyzer(
-            [Out] out IDWriteTextAnalyzer textAnalyzer);
+            [Out] out IDWriteTextAnalyzer? textAnalyzer);
 
         /// <summary>
         /// Creates a number substitution object using a locale name,
@@ -300,9 +300,9 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="numberSubstitution">Receives a pointer to the newly created object.</param>
         void CreateNumberSubstitution(
             [In] DWriteNumberSubstitutionMethod substitutionMethod,
-            [In, MarshalAs(UnmanagedType.LPWStr)] string localeName,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? localeName,
             [In, MarshalAs(UnmanagedType.Bool)] bool ignoreUserOverride,
-            [Out] out IDWriteNumberSubstitution numberSubstitution);
+            [Out] out IDWriteNumberSubstitution? numberSubstitution);
 
         /// <summary>
         /// Creates a glyph run analysis object, which encapsulates information
@@ -327,6 +327,6 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] DWriteMeasuringMode measuringMode,
             [In] float baselineOriginX,
             [In] float baselineOriginY,
-            [Out] out IDWriteGlyphRunAnalysis glyphRunAnalysis);
+            [Out] out IDWriteGlyphRunAnalysis? glyphRunAnalysis);
     }
 }

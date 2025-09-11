@@ -154,7 +154,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="value">A DWrite object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(DWriteTextLayout value)
+        public static implicit operator bool(DWriteTextLayout? value)
         {
             return value != null && value.handle != null;
         }
@@ -249,9 +249,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <returns><see cref="DWriteFontCollection"/></returns>
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteFontCollection GetFontCollection()
+        public DWriteFontCollection? GetFontCollection()
         {
-            this.handle.GetFontCollection(out IDWriteFontCollection fontCollection);
+            this.handle.GetFontCollection(out IDWriteFontCollection? fontCollection);
 
             if (fontCollection == null)
             {
@@ -301,7 +301,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="fontCollection">The font collection to set</param>
         /// <param name="textRange">Text range to which this change applies.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetFontCollection(DWriteFontCollection fontCollection, DWriteTextRange textRange)
+        public void SetFontCollection(DWriteFontCollection? fontCollection, DWriteTextRange textRange)
         {
             if (fontCollection == null)
             {
@@ -394,7 +394,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="typography">Pointer to font typography setting.</param>
         /// <param name="textRange">Text range to which this change applies.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetTypography(DWriteTypography typography, DWriteTextRange textRange)
+        public void SetTypography(DWriteTypography? typography, DWriteTextRange textRange)
         {
             if (typography == null)
             {
@@ -423,9 +423,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <returns><see cref="DWriteFontCollection"/></returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteFontCollection GetFontCollection(uint currentPosition, out DWriteTextRange textRange)
+        public DWriteFontCollection? GetFontCollection(uint currentPosition, out DWriteTextRange textRange)
         {
-            this.handle.GetFontCollection(currentPosition, out IDWriteFontCollection fontCollection, out textRange);
+            this.handle.GetFontCollection(currentPosition, out IDWriteFontCollection? fontCollection, out textRange);
 
             if (fontCollection == null)
             {
@@ -586,9 +586,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <returns><see cref="DWriteTypography"/></returns>
         [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "1#", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteTypography GetTypography(uint currentPosition, out DWriteTextRange textRange)
+        public DWriteTypography? GetTypography(uint currentPosition, out DWriteTextRange textRange)
         {
-            this.handle.GetTypography(currentPosition, out IDWriteTypography typography, out textRange);
+            this.handle.GetTypography(currentPosition, out IDWriteTypography? typography, out textRange);
 
             if (typography == null)
             {

@@ -31,6 +31,6 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </summary>
         /// <param name="fontFile">Pointer to the newly created font file object.</param>
         void GetCurrentFontFile(
-            [Out] out IDWriteFontFile fontFile);
+            [Out] out IDWriteFontFile? fontFile);
     }
 }

@@ -21,7 +21,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </summary>
         /// <param name="fontFamily">Receives a pointer to the font family object.</param>
         void GetFontFamily(
-            [Out] out IDWriteFontFamily fontFamily);
+            [Out] out IDWriteFontFamily? fontFamily);
 
         /// <summary>
         /// Gets the weight of the specified font.
@@ -57,7 +57,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </summary>
         /// <param name="names">Receives a pointer to the newly created localized strings object.</param>
         void GetFaceNames(
-            [Out] out IDWriteLocalizedStrings names);
+            [Out] out IDWriteLocalizedStrings? names);
 
         /// <summary>
         /// Gets a localized strings collection containing the specified informational strings, indexed by locale name.
@@ -71,7 +71,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </remarks>
         void GetInformationalStrings(
             [In] DWriteInformationalStringId informationalStringID,
-            [Out] out IDWriteLocalizedStrings informationalStrings,
+            [Out] out IDWriteLocalizedStrings? informationalStrings,
             [Out, MarshalAs(UnmanagedType.Bool)] out bool exists);
 
         /// <summary>
@@ -103,6 +103,6 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// </summary>
         /// <param name="fontFace">Receives a pointer to the newly created font face object.</param>
         void CreateFontFace(
-            [Out] out IDWriteFontFace fontFace);
+            [Out] out IDWriteFontFace? fontFace);
     }
 }

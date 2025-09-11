@@ -45,7 +45,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="value">A DWrite object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(DWriteFontCollection value)
+        public static implicit operator bool(DWriteFontCollection? value)
         {
             return value != null && value.handle != null;
         }
@@ -97,9 +97,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="index">Zero-based index of the font family.</param>
         /// <returns><see cref="DWriteFontFamily"/></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteFontFamily GetFontFamily(uint index)
+        public DWriteFontFamily? GetFontFamily(uint index)
         {
-            this.handle.GetFontFamily(index, out IDWriteFontFamily fontFamily);
+            this.handle.GetFontFamily(index, out IDWriteFontFamily? fontFamily);
 
             if (fontFamily == null)
             {
@@ -133,14 +133,14 @@ namespace JeremyAnsel.DirectX.DWrite
         /// </remarks>
         /// <returns><see cref="DWriteFont"/></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteFont GetFontFromFontFace(DWriteFontFace fontFace)
+        public DWriteFont? GetFontFromFontFace(DWriteFontFace? fontFace)
         {
             if (fontFace == null)
             {
                 throw new ArgumentNullException(nameof(fontFace));
             }
 
-            this.handle.GetFontFromFontFace((IDWriteFontFace)fontFace.Handle, out IDWriteFont font);
+            this.handle.GetFontFromFontFace((IDWriteFontFace)fontFace.Handle, out IDWriteFont? font);
 
             if (font == null)
             {

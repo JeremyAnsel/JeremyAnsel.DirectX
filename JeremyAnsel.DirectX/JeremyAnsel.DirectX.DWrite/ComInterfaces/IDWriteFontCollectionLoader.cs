@@ -32,9 +32,9 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="collectionKeySize">Size of the font collection key in bytes.</param>
         /// <param name="fontFileEnumerator">Pointer to the newly created font file enumerator.</param>
         void CreateEnumeratorFromKey(
-            [In] IDWriteFactory factory,
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] collectionKey,
+            [In] IDWriteFactory? factory,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? collectionKey,
             [In] uint collectionKeySize,
-            [Out] out IDWriteFontFileEnumerator fontFileEnumerator);
+            [Out] out IDWriteFontFileEnumerator? fontFileEnumerator);
     }
 }

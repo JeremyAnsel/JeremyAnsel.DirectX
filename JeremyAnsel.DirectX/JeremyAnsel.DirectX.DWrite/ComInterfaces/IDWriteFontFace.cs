@@ -35,7 +35,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// should release them when finished.</param>
         void GetFiles(
             [In, Out] ref uint numberOfFiles,
-            [Out, MarshalAs(UnmanagedType.LPArray)] IDWriteFontFile[] fontFiles);
+            [Out, MarshalAs(UnmanagedType.LPArray)] IDWriteFontFile[]? fontFiles);
 
         /// <summary>
         /// Obtains the zero-based index of the font face in its font file or files. If the font files contain a single face,
@@ -88,9 +88,9 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// This can affect the glyph metrics if the font has oblique simulation
         /// because sideways oblique simulation differs from non-sideways oblique simulation.</param>
         void GetDesignGlyphMetrics(
-            [In, MarshalAs(UnmanagedType.LPArray)] ushort[] glyphIndices,
+            [In, MarshalAs(UnmanagedType.LPArray)] ushort[]? glyphIndices,
             [In] uint glyphCount,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphMetrics[] glyphMetrics,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphMetrics[]? glyphMetrics,
             [In, MarshalAs(UnmanagedType.Bool)] bool isSideways);
 
         /// <summary>
@@ -105,9 +105,9 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="codePointCount">The number of elements in the codePoints array.</param>
         /// <param name="glyphIndices">Array of nominal glyph indices filled by this function.</param>
         void GetGlyphIndices(
-            [In, MarshalAs(UnmanagedType.LPArray)] uint[] codePoints,
+            [In, MarshalAs(UnmanagedType.LPArray)] uint[]? codePoints,
             [In] uint codePointCount,
-            [Out, MarshalAs(UnmanagedType.LPArray)] ushort[] glyphIndices);
+            [Out, MarshalAs(UnmanagedType.LPArray)] ushort[]? glyphIndices);
 
         /// <summary>
         /// Finds the specified OpenType font table if it exists and returns a pointer to it.
@@ -171,13 +171,13 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="geometrySink">Interface the function calls back to draw each element of the geometry.</param>
         void GetGlyphRunOutline(
             [In] float size,
-            [In, MarshalAs(UnmanagedType.LPArray)] ushort[] glyphIndices,
-            [In, MarshalAs(UnmanagedType.LPArray)] float[] glyphAdvances,
-            [In, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphOffset[] glyphOffsets,
+            [In, MarshalAs(UnmanagedType.LPArray)] ushort[]? glyphIndices,
+            [In, MarshalAs(UnmanagedType.LPArray)] float[]? glyphAdvances,
+            [In, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphOffset[]? glyphOffsets,
             [In] uint glyphCount,
             [In, MarshalAs(UnmanagedType.Bool)] bool isSideways,
             [In, MarshalAs(UnmanagedType.Bool)] bool isRightToLeft,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object geometrySink);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? geometrySink);
 
         /// <summary>
         /// Determines the recommended rendering mode for the font given the specified size and rendering parameters.
@@ -199,7 +199,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] float size,
             [In] float pixelsPerDip,
             [In] DWriteMeasuringMode measuringMode,
-            [In] IDWriteRenderingParams renderingParams,
+            [In] IDWriteRenderingParams? renderingParams,
             [Out] out DWriteRenderingMode renderingMode);
 
         /// <summary>
@@ -249,9 +249,9 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] float pixelsPerDip,
             [In] IntPtr transform,
             [In, MarshalAs(UnmanagedType.Bool)] bool useGdiNatural,
-            [In, MarshalAs(UnmanagedType.LPArray)] ushort[] glyphIndices,
+            [In, MarshalAs(UnmanagedType.LPArray)] ushort[]? glyphIndices,
             [In] uint glyphCount,
-            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphMetrics[] glyphMetrics,
+            [Out, MarshalAs(UnmanagedType.LPArray)] DWriteGlyphMetrics[]? glyphMetrics,
             [In, MarshalAs(UnmanagedType.Bool)] bool isSideways);
     }
 }

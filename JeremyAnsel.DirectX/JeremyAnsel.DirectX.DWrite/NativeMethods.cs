@@ -35,6 +35,6 @@ namespace JeremyAnsel.DirectX.DWrite
         public static extern void DWriteCreateFactory(
             [In] DWriteFactoryType factoryType,
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid iid,
-            [Out] out IDWriteFactory factory);
+            [Out] out IDWriteFactory? factory);
     }
 }

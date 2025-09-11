@@ -31,8 +31,8 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontFileReferenceKeySize">Size of font file reference key in bytes.</param>
         /// <param name="fontFileStream">Pointer to the newly created font file stream.</param>
         void CreateStreamFromKey(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] fontFileReferenceKey,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? fontFileReferenceKey,
             [In] uint fontFileReferenceKeySize,
-            [Out] out IDWriteFontFileStream fontFileStream);
+            [Out] out IDWriteFontFileStream? fontFileStream);
     }
 }

@@ -96,7 +96,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="value">A DWrite object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(DWriteFontFace value)
+        public static implicit operator bool(DWriteFontFace? value)
         {
             return value != null && value.handle != null;
         }
@@ -144,7 +144,7 @@ namespace JeremyAnsel.DirectX.DWrite
             IDWriteFontFile[] fontFiles = new IDWriteFontFile[numberOfFiles];
             this.handle.GetFiles(ref numberOfFiles, fontFiles);
 
-            return Array.ConvertAll(fontFiles, t => t == null ? null : new DWriteFontFile(t));
+            return Array.ConvertAll(fontFiles, t => new DWriteFontFile(t));
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// because sideways oblique simulation differs from non-sideways oblique simulation.</param>
         /// <returns>Array of <see cref="DWriteGlyphMetrics"/> structures filled by this function.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteGlyphMetrics[] GetDesignGlyphMetrics(ushort[] glyphIndices, bool isSideways)
+        public DWriteGlyphMetrics[] GetDesignGlyphMetrics(ushort[]? glyphIndices, bool isSideways)
         {
             if (glyphIndices == null)
             {
@@ -195,7 +195,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="codePoints">An array of UTF-32 code points to obtain nominal glyph indices from.</param>
         /// <returns>Array of nominal glyph indices filled by this function.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public ushort[] GetGlyphIndices(uint[] codePoints)
+        public ushort[] GetGlyphIndices(uint[]? codePoints)
         {
             if (codePoints == null)
             {
@@ -270,7 +270,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// <param name="geometrySink">Interface the function calls back to draw each element of the geometry.</param>
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void GetGlyphRunOutline(float size, ushort[] glyphIndices, float[] glyphAdvances, DWriteGlyphOffset[] glyphOffsets, bool isSideways, bool isRightToLeft, object geometrySink)
+        public void GetGlyphRunOutline(float size, ushort[]? glyphIndices, float[]? glyphAdvances, DWriteGlyphOffset[]? glyphOffsets, bool isSideways, bool isRightToLeft, object? geometrySink)
         {
             if (glyphIndices == null)
             {
@@ -316,7 +316,7 @@ namespace JeremyAnsel.DirectX.DWrite
             float size,
             float pixelsPerDip,
             DWriteMeasuringMode measuringMode,
-            DWriteRenderingParams renderingParams)
+            DWriteRenderingParams? renderingParams)
         {
             this.handle.GetRecommendedRenderingMode(
                 size,
@@ -392,7 +392,7 @@ namespace JeremyAnsel.DirectX.DWrite
         /// </remarks>
         /// <returns>Array of DWRITE_GLYPH_METRICS structures filled by this function.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public DWriteGlyphMetrics[] GetGdiCompatibleGlyphMetrics(float size, float pixelsPerDip, DWriteMatrix? transform, bool useGdiNatural, ushort[] glyphIndices, bool isSideways)
+        public DWriteGlyphMetrics[] GetGdiCompatibleGlyphMetrics(float size, float pixelsPerDip, DWriteMatrix? transform, bool useGdiNatural, ushort[]? glyphIndices, bool isSideways)
         {
             if (glyphIndices == null)
             {

@@ -26,7 +26,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// if the specified type.</param>
         void GetAlphaTextureBounds(
             [In] DWriteTextureType textureType,
-            [Out] out DWriteRect textureBounds);
+            [Out] out DWriteRect? textureBounds);
 
         /// <summary>
         /// Creates an alpha texture of the specified type.
@@ -41,7 +41,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         void CreateAlphaTexture(
             [In] DWriteTextureType textureType,
             [In] ref DWriteRect textureBounds,
-            [Out, MarshalAs(UnmanagedType.LPArray)] byte[] alphaValues,
+            [Out, MarshalAs(UnmanagedType.LPArray)] byte[]? alphaValues,
             [In] uint bufferSize);
 
         /// <summary>

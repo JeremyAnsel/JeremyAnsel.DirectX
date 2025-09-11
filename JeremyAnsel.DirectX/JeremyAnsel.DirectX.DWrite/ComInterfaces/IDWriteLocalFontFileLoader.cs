@@ -29,9 +29,9 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontFileReferenceKeySize">Size of font file reference key in bytes.</param>
         /// <param name="fontFileStream">Pointer to the newly created font file stream.</param>
         void CreateStreamFromKey(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] fontFileReferenceKey,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? fontFileReferenceKey,
             [In] uint fontFileReferenceKeySize,
-            [Out] out IDWriteFontFileStream fontFileStream);
+            [Out] out IDWriteFontFileStream? fontFileStream);
 
         /// <summary>
         /// Obtains the length of the absolute file path from the font file reference key.
@@ -41,7 +41,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontFileReferenceKeySize">Size of font file reference key in bytes.</param>
         /// <param name="filePathLength">Length of the file path string not including the terminated NULL character.</param>
         void GetFilePathLengthFromKey(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] fontFileReferenceKey,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? fontFileReferenceKey,
             [In] uint fontFileReferenceKeySize,
             [Out] out uint filePathLength);
 
@@ -54,9 +54,9 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="filePath">Character array that receives the local file path.</param>
         /// <param name="filePathSize">Size of the filePath array in character count including the terminated NULL character.</param>
         void GetFilePathFromKey(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] fontFileReferenceKey,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? fontFileReferenceKey,
             [In] uint fontFileReferenceKeySize,
-            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder filePath,
+            [Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder? filePath,
             [In] uint filePathSize);
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
         /// <param name="fontFileReferenceKeySize">Size of font file reference key in bytes.</param>
         /// <param name="lastWriteTime">Last modified time of the font file.</param>
         void GetLastWriteTimeFromKey(
-            [In, MarshalAs(UnmanagedType.LPArray)] byte[] fontFileReferenceKey,
+            [In, MarshalAs(UnmanagedType.LPArray)] byte[]? fontFileReferenceKey,
             [In] uint fontFileReferenceKeySize,
             [Out] out ulong lastWriteTime);
     }

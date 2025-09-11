@@ -77,7 +77,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] DWriteMeasuringMode measuringMode,
             [In] ref DWriteGlyphRun glyphRun,
             [In] ref DWriteGlyphRunDescription glyphRunDescription,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object clientDrawingEffect);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? clientDrawingEffect);
 
         /// <summary>
         /// <see cref="IDWriteTextLayout.Draw"/> calls this function to instruct the client to draw
@@ -108,7 +108,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] float baselineOriginX,
             [In] float baselineOriginY,
             [In] ref DWriteUnderline underline,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object clientDrawingEffect);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? clientDrawingEffect);
 
         /// <summary>
         /// <see cref="IDWriteTextLayout.Draw"/> calls this function to instruct the client to draw
@@ -135,7 +135,7 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] float baselineOriginX,
             [In] float baselineOriginY,
             [In] ref DWriteStrikethrough strikethrough,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object clientDrawingEffect);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? clientDrawingEffect);
 
         /// <summary>
         /// <see cref="IDWriteTextLayout.Draw"/> calls this application callback when it needs to
@@ -158,9 +158,9 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces
             [In] IntPtr clientDrawingContext,
             [In] float originX,
             [In] float originY,
-            [In] IDWriteInlineObject inlineObject,
+            [In] IDWriteInlineObject? inlineObject,
             [In, MarshalAs(UnmanagedType.Bool)] bool isSideways,
             [In, MarshalAs(UnmanagedType.Bool)] bool isRightToLeft,
-            [In, MarshalAs(UnmanagedType.IUnknown)] object clientDrawingEffect);
+            [In, MarshalAs(UnmanagedType.IUnknown)] object? clientDrawingEffect);
     }
 }

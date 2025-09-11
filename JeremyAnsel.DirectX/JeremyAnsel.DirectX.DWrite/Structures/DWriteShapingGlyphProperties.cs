@@ -125,9 +125,9 @@ namespace JeremyAnsel.DirectX.DWrite
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (!(obj is DWriteShapingGlyphProperties))
+            if (obj is not DWriteShapingGlyphProperties)
             {
                 return false;
             }
