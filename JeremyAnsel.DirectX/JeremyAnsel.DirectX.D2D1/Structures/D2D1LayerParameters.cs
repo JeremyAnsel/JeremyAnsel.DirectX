@@ -22,7 +22,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// The geometric mask specifies the area of the layer that is composited into the render target.
         /// </summary>
-        private ID2D1Geometry geometricMask;
+        private ID2D1Geometry? geometricMask;
 
         /// <summary>
         /// A value that specifies the antialiasing mode for the geometricMask.
@@ -42,7 +42,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// A brush that is used to modify the opacity of the layer. The brush is mapped to the layer, and the alpha channel of each mapped brush pixel is multiplied against the corresponding layer pixel.
         /// </summary>
-        private ID2D1Brush opacityBrush;
+        private ID2D1Brush? opacityBrush;
 
         /// <summary>
         /// A value that specifies whether the layer intends to render text with ClearType antialiasing.
@@ -61,11 +61,11 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="layerOptions">A value that specifies whether the layer intends to render text with ClearType antialiasing.</param>
         public D2D1LayerParameters(
             D2D1RectF contentBounds,
-            D2D1Geometry geometricMask,
+            D2D1Geometry? geometricMask,
             D2D1AntialiasMode maskAntialiasMode,
             D2D1Matrix3X2F maskTransform,
             float opacity,
-            D2D1Brush opacityBrush,
+            D2D1Brush? opacityBrush,
             D2D1LayerOptions layerOptions)
         {
             this.contentBounds = contentBounds;
@@ -97,7 +97,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Gets or sets the geometric mask specifies the area of the layer that is composited into the render target.
         /// </summary>
-        public D2D1Geometry GeometricMask
+        public D2D1Geometry? GeometricMask
         {
             get
             {
@@ -140,7 +140,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Gets or sets a brush that is used to modify the opacity of the layer. The brush is mapped to the layer, and the alpha channel of each mapped brush pixel is multiplied against the corresponding layer pixel.
         /// </summary>
-        public D2D1Brush OpacityBrush
+        public D2D1Brush? OpacityBrush
         {
             get
             {
@@ -189,9 +189,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (!(obj is D2D1LayerParameters))
+            if (obj is not D2D1LayerParameters)
             {
                 return false;
             }

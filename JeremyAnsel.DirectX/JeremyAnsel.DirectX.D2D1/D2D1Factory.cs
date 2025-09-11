@@ -48,7 +48,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="value">A D2D1 object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(D2D1Factory value)
+        public static implicit operator bool(D2D1Factory? value)
         {
             return value != null && value.Handle != null;
         }
@@ -59,9 +59,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="factoryType">The threading model of the factory and the resources it creates.</param>
         /// <returns>The new factory.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static D2D1Factory Create(D2D1FactoryType factoryType)
+        public static D2D1Factory? Create(D2D1FactoryType factoryType)
         {
-            NativeMethods.D2D1CreateFactory(factoryType, typeof(ID2D1Factory).GUID, IntPtr.Zero, out ID2D1Factory factory);
+            NativeMethods.D2D1CreateFactory(factoryType, typeof(ID2D1Factory).GUID, IntPtr.Zero, out ID2D1Factory? factory);
 
             if (factory == null)
             {
@@ -78,9 +78,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="factoryOptions">The level of detail provided to the debugging layer.</param>
         /// <returns>The new factory.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static D2D1Factory Create(D2D1FactoryType factoryType, D2D1FactoryOptions factoryOptions)
+        public static D2D1Factory? Create(D2D1FactoryType factoryType, D2D1FactoryOptions factoryOptions)
         {
-            ID2D1Factory factory;
+            ID2D1Factory? factory;
 
             IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1FactoryOptions)));
 
@@ -110,7 +110,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="debugLevel">The level of detail provided to the debugging layer.</param>
         /// <returns>The new factory.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static D2D1Factory Create(D2D1FactoryType factoryType, D2D1DebugLevel debugLevel)
+        public static D2D1Factory? Create(D2D1FactoryType factoryType, D2D1DebugLevel debugLevel)
         {
             var factoryOptions = new D2D1FactoryOptions(debugLevel);
             return D2D1Factory.Create(factoryType, factoryOptions);
@@ -175,9 +175,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="rectangle">The coordinates of the rectangle geometry.</param>
         /// <returns>The rectangle geometry created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RectangleGeometry CreateRectangleGeometry(D2D1RectF rectangle)
+        public D2D1RectangleGeometry? CreateRectangleGeometry(D2D1RectF rectangle)
         {
-            this.factory.CreateRectangleGeometry(ref rectangle, out ID2D1RectangleGeometry rectangleGeometry);
+            this.factory.CreateRectangleGeometry(ref rectangle, out ID2D1RectangleGeometry? rectangleGeometry);
 
             if (rectangleGeometry == null)
             {
@@ -193,9 +193,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="roundedRectangle">The coordinates and corner radii of the rounded rectangle geometry.</param>
         /// <returns>The rounded rectangle geometry created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RoundedRectangleGeometry CreateRoundedRectangleGeometry(D2D1RoundedRect roundedRectangle)
+        public D2D1RoundedRectangleGeometry? CreateRoundedRectangleGeometry(D2D1RoundedRect roundedRectangle)
         {
-            this.factory.CreateRoundedRectangleGeometry(ref roundedRectangle, out ID2D1RoundedRectangleGeometry roundedRectangleGeometry);
+            this.factory.CreateRoundedRectangleGeometry(ref roundedRectangle, out ID2D1RoundedRectangleGeometry? roundedRectangleGeometry);
 
             if (roundedRectangleGeometry == null)
             {
@@ -211,9 +211,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="ellipse">A value that describes the center point, x-radius, and y-radius of the ellipse geometry.</param>
         /// <returns>The ellipse geometry created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1EllipseGeometry CreateEllipseGeometry(D2D1Ellipse ellipse)
+        public D2D1EllipseGeometry? CreateEllipseGeometry(D2D1Ellipse ellipse)
         {
-            this.factory.CreateEllipseGeometry(ref ellipse, out ID2D1EllipseGeometry ellipseGeometry);
+            this.factory.CreateEllipseGeometry(ref ellipse, out ID2D1EllipseGeometry? ellipseGeometry);
 
             if (ellipseGeometry == null)
             {
@@ -230,14 +230,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometries">An array containing the geometry objects to add to the geometry group.</param>
         /// <returns>The geometry group created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1GeometryGroup CreateGeometryGroup(D2D1FillMode fillMode, D2D1Geometry[] geometries)
+        public D2D1GeometryGroup? CreateGeometryGroup(D2D1FillMode fillMode, D2D1Geometry[]? geometries)
         {
             if (geometries == null)
             {
                 throw new ArgumentNullException(nameof(geometries));
             }
 
-            this.factory.CreateGeometryGroup(fillMode, Array.ConvertAll(geometries, t => t.GetHandle<ID2D1Geometry>()), (uint)geometries.Length, out ID2D1GeometryGroup geometryGroup);
+            this.factory.CreateGeometryGroup(fillMode, Array.ConvertAll(geometries, t => t.GetHandle<ID2D1Geometry>()), (uint)geometries.Length, out ID2D1GeometryGroup? geometryGroup);
 
             if (geometryGroup == null)
             {
@@ -255,14 +255,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The new transformed geometry object.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1TransformedGeometry CreateTransformedGeometry(D2D1Geometry sourceGeometry, D2D1Matrix3X2F transform)
+        public D2D1TransformedGeometry? CreateTransformedGeometry(D2D1Geometry? sourceGeometry, D2D1Matrix3X2F transform)
         {
             if (sourceGeometry == null)
             {
                 throw new ArgumentNullException(nameof(sourceGeometry));
             }
 
-            this.factory.CreateTransformedGeometry(sourceGeometry.GetHandle<ID2D1Geometry>(), ref transform, out ID2D1TransformedGeometry transformedGeometry);
+            this.factory.CreateTransformedGeometry(sourceGeometry.GetHandle<ID2D1Geometry>(), ref transform, out ID2D1TransformedGeometry? transformedGeometry);
 
             if (transformedGeometry == null)
             {
@@ -277,9 +277,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>The path geometry created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1PathGeometry CreatePathGeometry()
+        public D2D1PathGeometry? CreatePathGeometry()
         {
-            this.factory.CreatePathGeometry(out ID2D1PathGeometry pathGeometry);
+            this.factory.CreatePathGeometry(out ID2D1PathGeometry? pathGeometry);
 
             if (pathGeometry == null)
             {
@@ -296,9 +296,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="dashes">An array whose elements are set to the length of each dash and space in the dash pattern. The first element sets the length of a dash, the second element sets the length of a space, the third element sets the length of a dash, and so on. The length of each dash and space in the dash pattern is the product of the element value in the array and the stroke width.</param>
         /// <returns>The stroke style created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1StrokeStyle CreateStrokeStyle(D2D1StrokeStyleProperties strokeStyleProperties, float[] dashes)
+        public D2D1StrokeStyle? CreateStrokeStyle(D2D1StrokeStyleProperties strokeStyleProperties, float[]? dashes)
         {
-            this.factory.CreateStrokeStyle(ref strokeStyleProperties, dashes, dashes == null ? 0U : (uint)dashes.Length, out ID2D1StrokeStyle strokeStyle);
+            this.factory.CreateStrokeStyle(ref strokeStyleProperties, dashes, dashes == null ? 0U : (uint)dashes.Length, out ID2D1StrokeStyle? strokeStyle);
 
             if (strokeStyle == null)
             {
@@ -313,9 +313,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>The new drawing state block created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1DrawingStateBlock CreateDrawingStateBlock()
+        public D2D1DrawingStateBlock? CreateDrawingStateBlock()
         {
-            this.factory.CreateDrawingStateBlock(IntPtr.Zero, null, out ID2D1DrawingStateBlock drawingStateBlock);
+            this.factory.CreateDrawingStateBlock(IntPtr.Zero, null, out ID2D1DrawingStateBlock? drawingStateBlock);
 
             if (drawingStateBlock == null)
             {
@@ -331,9 +331,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="drawingStateDescription">A structure that contains antialiasing, transform, and tags information.</param>
         /// <returns>The new drawing state block created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1DrawingStateBlock CreateDrawingStateBlock(D2D1DrawingStateDescription drawingStateDescription)
+        public D2D1DrawingStateBlock? CreateDrawingStateBlock(D2D1DrawingStateDescription drawingStateDescription)
         {
-            ID2D1DrawingStateBlock drawingStateBlock;
+            ID2D1DrawingStateBlock? drawingStateBlock;
 
             IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1DrawingStateDescription)));
 
@@ -362,9 +362,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="textRenderingParams">Optional text parameters that indicate how text should be rendered.</param>
         /// <returns>The new drawing state block created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1DrawingStateBlock CreateDrawingStateBlock(DWriteRenderingParams textRenderingParams)
+        public D2D1DrawingStateBlock? CreateDrawingStateBlock(DWriteRenderingParams? textRenderingParams)
         {
-            this.factory.CreateDrawingStateBlock(IntPtr.Zero, textRenderingParams == null ? null : (IDWriteRenderingParams)textRenderingParams.Handle, out ID2D1DrawingStateBlock drawingStateBlock);
+            this.factory.CreateDrawingStateBlock(IntPtr.Zero, textRenderingParams == null ? null : (IDWriteRenderingParams)textRenderingParams.Handle, out ID2D1DrawingStateBlock? drawingStateBlock);
 
             if (drawingStateBlock == null)
             {
@@ -381,9 +381,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="textRenderingParams">Optional text parameters that indicate how text should be rendered.</param>
         /// <returns>The new drawing state block created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1DrawingStateBlock CreateDrawingStateBlock(D2D1DrawingStateDescription drawingStateDescription, DWriteRenderingParams textRenderingParams)
+        public D2D1DrawingStateBlock? CreateDrawingStateBlock(D2D1DrawingStateDescription drawingStateDescription, DWriteRenderingParams? textRenderingParams)
         {
-            ID2D1DrawingStateBlock drawingStateBlock;
+            ID2D1DrawingStateBlock? drawingStateBlock;
 
             IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1DrawingStateDescription)));
 
@@ -413,14 +413,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="renderTargetProperties">The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</param>
         /// <returns>The <see cref="D2D1RenderTarget"/> object created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RenderTarget CreateWicBitmapRenderTarget(object target, D2D1RenderTargetProperties renderTargetProperties)
+        public D2D1RenderTarget? CreateWicBitmapRenderTarget(object? target, D2D1RenderTargetProperties renderTargetProperties)
         {
             if (target == null)
             {
                 throw new ArgumentNullException(nameof(target));
             }
 
-            this.factory.CreateWicBitmapRenderTarget((IWICBitmap)target, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+            this.factory.CreateWicBitmapRenderTarget((IWICBitmap)target, ref renderTargetProperties, out ID2D1RenderTarget? renderTarget);
 
             if (renderTarget == null)
             {
@@ -437,9 +437,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="hwndRenderTargetProperties">The window handle, initial size (in pixels), and present options.</param>
         /// <returns>The <see cref="D2D1HwndRenderTarget"/> object created by this method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1HwndRenderTarget CreateHwndRenderTarget(D2D1RenderTargetProperties renderTargetProperties, D2D1HwndRenderTargetProperties hwndRenderTargetProperties)
+        public D2D1HwndRenderTarget? CreateHwndRenderTarget(D2D1RenderTargetProperties renderTargetProperties, D2D1HwndRenderTargetProperties hwndRenderTargetProperties)
         {
-            this.factory.CreateHwndRenderTarget(ref renderTargetProperties, ref hwndRenderTargetProperties, out ID2D1HwndRenderTarget hwndRenderTarget);
+            this.factory.CreateHwndRenderTarget(ref renderTargetProperties, ref hwndRenderTargetProperties, out ID2D1HwndRenderTarget? hwndRenderTarget);
 
             if (hwndRenderTarget == null)
             {
@@ -457,14 +457,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The <see cref="D2D1RenderTarget"/> object created by this method.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RenderTarget CreateDxgiSurfaceRenderTarget(DxgiSurface dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)
+        public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)
         {
             if (dxgiSurface == null)
             {
                 throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
-            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget? renderTarget);
 
             if (renderTarget == null)
             {
@@ -482,14 +482,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The <see cref="D2D1RenderTarget"/> object created by this method.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RenderTarget CreateDxgiSurfaceRenderTarget(DxgiSurface1 dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)
+        public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface1? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)
         {
             if (dxgiSurface == null)
             {
                 throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
-            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget? renderTarget);
 
             if (renderTarget == null)
             {
@@ -507,14 +507,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The <see cref="D2D1RenderTarget"/> object created by this method.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RenderTarget CreateDxgiSurfaceRenderTarget(DxgiSurface2 dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)
+        public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface2? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)
         {
             if (dxgiSurface == null)
             {
                 throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
-            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget? renderTarget);
 
             if (renderTarget == null)
             {
@@ -532,14 +532,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The <see cref="D2D1RenderTarget"/> object created by this method.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RenderTarget CreateDxgiSurfaceRenderTarget(DxgiSurface3 dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)
+        public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface3? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)
         {
             if (dxgiSurface == null)
             {
                 throw new ArgumentNullException(nameof(dxgiSurface));
             }
 
-            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget renderTarget);
+            this.factory.CreateDxgiSurfaceRenderTarget((IDxgiSurface)dxgiSurface.Handle, ref renderTargetProperties, out ID2D1RenderTarget? renderTarget);
 
             if (renderTarget == null)
             {
@@ -555,9 +555,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="renderTargetProperties">The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</param>
         /// <returns>The <see cref="D2D1DCRenderTarget"/> created by the method.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1DCRenderTarget CreateDCRenderTarget(D2D1RenderTargetProperties renderTargetProperties)
+        public D2D1DCRenderTarget? CreateDCRenderTarget(D2D1RenderTargetProperties renderTargetProperties)
         {
-            this.factory.CreateDCRenderTarget(ref renderTargetProperties, out ID2D1DCRenderTarget renderTarget);
+            this.factory.CreateDCRenderTarget(ref renderTargetProperties, out ID2D1DCRenderTarget? renderTarget);
 
             if (renderTarget == null)
             {

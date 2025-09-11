@@ -63,13 +63,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Gets or sets the text-rendering configuration of the drawing state.
         /// </summary>
-        public DWriteRenderingParams TextRenderingParams
+        public DWriteRenderingParams? TextRenderingParams
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                this.drawingStateBlock.GetTextRenderingParams(out IDWriteRenderingParams textRenderingParams);
+                this.drawingStateBlock.GetTextRenderingParams(out IDWriteRenderingParams? textRenderingParams);
 
                 if (textRenderingParams == null)
                 {

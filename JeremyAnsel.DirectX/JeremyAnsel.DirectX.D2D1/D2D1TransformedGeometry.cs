@@ -40,13 +40,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Gets the source geometry of this transformed geometry object.
         /// </summary>
-        public D2D1Geometry SourceGeometry
+        public D2D1Geometry? SourceGeometry
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                this.geometry.GetSourceGeometry(out ID2D1Geometry sourceGeometry);
+                this.geometry.GetSourceGeometry(out ID2D1Geometry? sourceGeometry);
 
                 if (sourceGeometry == null)
                 {

@@ -39,12 +39,12 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Gets the bitmap for this render target. The returned bitmap can be used for drawing operations.
         /// </summary>
-        public D2D1Bitmap Bitmap
+        public D2D1Bitmap? Bitmap
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get
             {
-                this.renderTarget.GetBitmap(out ID2D1Bitmap bitmap);
+                this.renderTarget.GetBitmap(out ID2D1Bitmap? bitmap);
 
                 if (bitmap == null)
                 {

@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="factory">When this method returns, contains a pointer to a pointer to the factory that created this resource.</param>
         [PreserveSig]
         void GetFactory(
-            [Out] out ID2D1Factory factory);
+            [Out] out ID2D1Factory? factory);
 
         /// <summary>
         /// Sets the opacity for when the brush is drawn over the entire fill of the brush.
@@ -88,7 +88,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="bitmap">The bitmap source used by the brush.</param>
         [PreserveSig]
         void SetBitmap(
-            [In] ID2D1Bitmap bitmap);
+            [In] ID2D1Bitmap? bitmap);
 
         /// <summary>
         /// Gets the method by which the brush horizontally tiles those areas that extend past its bitmap.

@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="factory">When this method returns, contains a pointer to a pointer to the factory that created this resource.</param>
         [PreserveSig]
         void GetFactory(
-            [Out] out ID2D1Factory factory);
+            [Out] out ID2D1Factory? factory);
 
         /// <summary>
         /// Returns the size of the bitmap in resolution independent units.
@@ -67,7 +67,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="srcRect">The area of bitmap to copy.</param>
         void CopyFromBitmap(
             [In] IntPtr destPoint,
-            [In] ID2D1Bitmap bitmap,
+            [In] ID2D1Bitmap? bitmap,
             [In] IntPtr srcRect);
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="srcRect">The area of renderTarget to copy.</param>
         void CopyFromRenderTarget(
             [In] IntPtr destPoint,
-            [In] ID2D1RenderTarget renderTarget,
+            [In] ID2D1RenderTarget? renderTarget,
             [In] IntPtr srcRect);
 
         /// <summary>

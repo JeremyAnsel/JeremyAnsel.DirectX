@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="factory">When this method returns, contains a pointer to a pointer to the factory that created this resource.</param>
         [PreserveSig]
         void GetFactory(
-            [Out] out ID2D1Factory factory);
+            [Out] out ID2D1Factory? factory);
 
         /// <summary>
         /// RRetrieves the bounds of the geometry.
@@ -44,7 +44,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="bounds">The bounds of the widened geometry.</param>
         void GetWidenedBounds(
             [In] float strokeWidth,
-            [In] ID2D1StrokeStyle strokeStyle,
+            [In] ID2D1StrokeStyle? strokeStyle,
             [In] IntPtr worldTransform,
             [In] float flatteningTolerance,
             [Out] out D2D1RectF bounds);
@@ -61,7 +61,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         void StrokeContainsPoint(
             [In] D2D1Point2F point,
             [In] float strokeWidth,
-            [In] ID2D1StrokeStyle strokeStyle,
+            [In] ID2D1StrokeStyle? strokeStyle,
             [In] IntPtr worldTransform,
             [In] float flatteningTolerance,
             [Out, MarshalAs(UnmanagedType.Bool)] out bool contains);
@@ -87,7 +87,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="flatteningTolerance">The maximum error allowed when constructing a polygonal approximation of the geometry. No point in the polygonal representation will diverge from the original geometry by more than the flattening tolerance.</param>
         /// <param name="relation">A value that describes how this geometry is related to inputGeometry.</param>
         void CompareWithGeometry(
-            [In] ID2D1Geometry inputGeometry,
+            [In] ID2D1Geometry? inputGeometry,
             [In] IntPtr inputGeometryTransform,
             [In] float flatteningTolerance,
             [Out] out D2D1GeometryRelation relation);
@@ -103,7 +103,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
             [In] D2D1GeometrySimplificationOption simplificationOptions,
             [In] IntPtr worldTransform,
             [In] float flatteningTolerance,
-            [In] ID2D1SimplifiedGeometrySink geometrySink);
+            [In] ID2D1SimplifiedGeometrySink? geometrySink);
 
         /// <summary>
         /// Tessellates a geometry into triangles.
@@ -114,7 +114,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         void Tessellate(
             [In] IntPtr worldTransform,
             [In] float flatteningTolerance,
-            [In] ID2D1TessellationSink tessellationSink);
+            [In] ID2D1TessellationSink? tessellationSink);
 
         /// <summary>
         /// Performs a combine operation between the two geometries to produce a resulting
@@ -126,11 +126,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="flatteningTolerance">The maximum error allowed when constructing a polygonal approximation of the geometry. No point in the polygonal representation will diverge from the original geometry by more than the flattening tolerance.</param>
         /// <param name="geometrySink">The result of the combine operation.</param>
         void CombineWithGeometry(
-            [In] ID2D1Geometry inputGeometry,
+            [In] ID2D1Geometry? inputGeometry,
             [In] D2D1CombineMode combineMode,
             [In] IntPtr inputGeometryTransform,
             [In] float flatteningTolerance,
-            [In] ID2D1SimplifiedGeometrySink geometrySink);
+            [In] ID2D1SimplifiedGeometrySink? geometrySink);
 
         /// <summary>
         /// Computes the outline of the geometry. The result is written back into a
@@ -142,7 +142,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         void Outline(
             [In] IntPtr worldTransform,
             [In] float flatteningTolerance,
-            [In] ID2D1SimplifiedGeometrySink geometrySink);
+            [In] ID2D1SimplifiedGeometrySink? geometrySink);
 
         /// <summary>
         /// Computes the area of the geometry.
@@ -191,24 +191,24 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="geometrySink">The <see cref="ID2D1SimplifiedGeometrySink"/> to which the widened geometry is appended.</param>
         void Widen(
             [In] float strokeWidth,
-            [In] ID2D1StrokeStyle strokeStyle,
+            [In] ID2D1StrokeStyle? strokeStyle,
             [In] IntPtr worldTransform,
             [In] float flatteningTolerance,
-            [In] ID2D1SimplifiedGeometrySink geometrySink);
+            [In] ID2D1SimplifiedGeometrySink? geometrySink);
 
         /// <summary>
         /// Retrieves the geometry sink that is used to populate the path geometry with figures and segments.
         /// </summary>
         /// <param name="geometrySink">The geometry sink that is used to populate the path geometry with figures and segments.</param>
         void Open(
-            [Out] out ID2D1GeometrySink geometrySink);
+            [Out] out ID2D1GeometrySink? geometrySink);
 
         /// <summary>
         /// Copies the contents of the path geometry to the specified <see cref="ID2D1GeometrySink"/>.
         /// </summary>
         /// <param name="geometrySink">The sink to which the path geometry's contents are copied. Modifying this sink does not change the contents of this path geometry.</param>
         void Stream(
-            [In] ID2D1GeometrySink geometrySink);
+            [In] ID2D1GeometrySink? geometrySink);
 
         /// <summary>
         /// Retrieves the number of segments in the path geometry.

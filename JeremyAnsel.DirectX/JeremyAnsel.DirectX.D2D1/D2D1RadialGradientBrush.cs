@@ -104,9 +104,9 @@ namespace JeremyAnsel.DirectX.D2D1
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1GradientStopCollection GetGradientStopCollection()
+        public D2D1GradientStopCollection? GetGradientStopCollection()
         {
-            this.brush.GetGradientStopCollection(out ID2D1GradientStopCollection gradientStopCollection);
+            this.brush.GetGradientStopCollection(out ID2D1GradientStopCollection? gradientStopCollection);
 
             if (gradientStopCollection == null)
             {

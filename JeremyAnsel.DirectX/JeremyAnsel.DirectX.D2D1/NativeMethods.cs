@@ -27,7 +27,7 @@ namespace JeremyAnsel.DirectX.D2D1
             [In] D2D1FactoryType factoryType,
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid riid,
             [In] IntPtr factoryOptions,
-            [Out] out ID2D1Factory factory);
+            [Out] out ID2D1Factory? factory);
 
         /// <summary>
         /// Creates a rotation transformation that rotates by the specified angle about the specified point.

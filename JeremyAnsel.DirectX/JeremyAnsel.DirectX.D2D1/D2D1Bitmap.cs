@@ -116,7 +116,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="srcBitmap">The bitmap to copy from.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromBitmap(D2D1Bitmap srcBitmap)
+        public void CopyFromBitmap(D2D1Bitmap? srcBitmap)
         {
             if (srcBitmap == null)
             {
@@ -132,7 +132,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="destPoint">In the current bitmap, the upper-left corner of the area to which the region is copied.</param>
         /// <param name="srcBitmap">The bitmap to copy from.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromBitmap(D2D1Point2U destPoint, D2D1Bitmap srcBitmap)
+        public void CopyFromBitmap(D2D1Point2U destPoint, D2D1Bitmap? srcBitmap)
         {
             if (srcBitmap == null)
             {
@@ -159,7 +159,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="srcBitmap">The bitmap to copy from.</param>
         /// <param name="srcRect">The area of bitmap to copy.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromBitmap(D2D1Bitmap srcBitmap, D2D1RectU srcRect)
+        public void CopyFromBitmap(D2D1Bitmap? srcBitmap, D2D1RectU srcRect)
         {
             if (srcBitmap == null)
             {
@@ -187,7 +187,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="srcBitmap">The bitmap to copy from.</param>
         /// <param name="srcRect">The area of bitmap to copy.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromBitmap(D2D1Point2U destPoint, D2D1Bitmap srcBitmap, D2D1RectU srcRect)
+        public void CopyFromBitmap(D2D1Point2U destPoint, D2D1Bitmap? srcBitmap, D2D1RectU srcRect)
         {
             if (srcBitmap == null)
             {
@@ -217,7 +217,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="renderTarget">The render target that contains the region to copy.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromRenderTarget(D2D1RenderTarget renderTarget)
+        public void CopyFromRenderTarget(D2D1RenderTarget? renderTarget)
         {
             if (renderTarget == null)
             {
@@ -234,7 +234,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="renderTarget">The render target that contains the region to copy.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromRenderTarget(D2D1Point2U destPoint, D2D1RenderTarget renderTarget)
+        public void CopyFromRenderTarget(D2D1Point2U destPoint, D2D1RenderTarget? renderTarget)
         {
             if (renderTarget == null)
             {
@@ -262,7 +262,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="srcRect">The area of renderTarget to copy.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromRenderTarget(D2D1RenderTarget renderTarget, D2D1RectU srcRect)
+        public void CopyFromRenderTarget(D2D1RenderTarget? renderTarget, D2D1RectU srcRect)
         {
             if (renderTarget == null)
             {
@@ -291,7 +291,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="srcRect">The area of renderTarget to copy.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromRenderTarget(D2D1Point2U destPoint, D2D1RenderTarget renderTarget, D2D1RectU srcRect)
+        public void CopyFromRenderTarget(D2D1Point2U destPoint, D2D1RenderTarget? renderTarget, D2D1RectU srcRect)
         {
             if (renderTarget == null)
             {
@@ -332,7 +332,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="srcData">The data to copy.</param>
         /// <param name="pitch">The stride, or pitch, of the source bitmap stored in <paramref name="srcData"/>. The stride is the byte count of a scanline (one row of pixels in memory). The stride can be computed from the following formula: <c>pixel width * bytes per pixel + memory padding</c>.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromMemory(byte[] srcData, uint pitch)
+        public void CopyFromMemory(byte[]? srcData, uint pitch)
         {
             if (srcData == null)
             {
@@ -372,7 +372,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="srcData">The data to copy.</param>
         /// <param name="pitch">The stride, or pitch, of the source bitmap stored in <paramref name="srcData"/>. The stride is the byte count of a scanline (one row of pixels in memory). The stride can be computed from the following formula: <c>pixel width * bytes per pixel + memory padding</c>.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CopyFromMemory(D2D1RectU destRect, byte[] srcData, uint pitch)
+        public void CopyFromMemory(D2D1RectU destRect, byte[]? srcData, uint pitch)
         {
             if (srcData == null)
             {

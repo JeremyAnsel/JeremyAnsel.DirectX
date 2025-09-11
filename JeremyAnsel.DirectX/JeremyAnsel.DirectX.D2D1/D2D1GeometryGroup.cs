@@ -71,7 +71,7 @@ namespace JeremyAnsel.DirectX.D2D1
             ID2D1Geometry[] geometries = new ID2D1Geometry[count];
             this.geometry.GetSourceGeometries(geometries, count);
 
-            return Array.ConvertAll(geometries, t => t == null ? null : new D2D1GeometryBase(t));
+            return Array.ConvertAll(geometries, t => new D2D1GeometryBase(t));
         }
     }
 }

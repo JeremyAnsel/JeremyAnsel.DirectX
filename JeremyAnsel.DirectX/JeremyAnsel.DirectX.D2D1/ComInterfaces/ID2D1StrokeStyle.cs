@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="factory">When this method returns, contains a pointer to a pointer to the factory that created this resource.</param>
         [PreserveSig]
         void GetFactory(
-            [Out] out ID2D1Factory factory);
+            [Out] out ID2D1Factory? factory);
 
         /// <summary>
         /// Retrieves the type of shape used at the beginning of a stroke.
@@ -88,7 +88,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="dahsesCount">The number of dashes to copy.</param>
         [PreserveSig]
         void GetDashes(
-            [Out, MarshalAs(UnmanagedType.LPArray)] float[] dashes,
+            [Out, MarshalAs(UnmanagedType.LPArray)] float[]? dashes,
             [In] uint dahsesCount);
     }
 }

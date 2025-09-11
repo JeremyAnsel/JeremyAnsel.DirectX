@@ -77,7 +77,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="beziers">An array of a sequence of quadratic Bezier segments.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
-        public void AddQuadraticBeziers(D2D1QuadraticBezierSegment[] beziers)
+        public void AddQuadraticBeziers(D2D1QuadraticBezierSegment[]? beziers)
         {
             if (beziers == null)
             {

@@ -88,9 +88,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (!(obj is D2D1PixelFormat))
+            if (obj is not D2D1PixelFormat)
             {
                 return false;
             }

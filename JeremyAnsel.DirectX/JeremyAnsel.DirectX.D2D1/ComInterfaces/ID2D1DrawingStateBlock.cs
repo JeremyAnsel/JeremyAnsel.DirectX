@@ -24,7 +24,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="factory">When this method returns, contains a pointer to a pointer to the factory that created this resource.</param>
         [PreserveSig]
         void GetFactory(
-            [Out] out ID2D1Factory factory);
+            [Out] out ID2D1Factory? factory);
 
         /// <summary>
         /// Retrieves the antialiasing mode, transform, and tags portion of the drawing state.
@@ -48,7 +48,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="textRenderingParams">The text-rendering configuration of the drawing state, or NULL to use default settings.</param>
         [PreserveSig]
         void SetTextRenderingParams(
-            [In] IDWriteRenderingParams textRenderingParams);
+            [In] IDWriteRenderingParams? textRenderingParams);
 
         /// <summary>
         /// Retrieves the text-rendering configuration of the drawing state.
@@ -56,6 +56,6 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="textRenderingParams">An <see cref="IDWriteRenderingParams"/> object that describes the text-rendering configuration of the drawing state.</param>
         [PreserveSig]
         void GetTextRenderingParams(
-            [Out] out IDWriteRenderingParams textRenderingParams);
+            [Out] out IDWriteRenderingParams? textRenderingParams);
     }
 }

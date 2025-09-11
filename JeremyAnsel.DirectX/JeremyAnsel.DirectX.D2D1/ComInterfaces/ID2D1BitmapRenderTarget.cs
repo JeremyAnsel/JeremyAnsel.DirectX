@@ -25,7 +25,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="factory">When this method returns, contains a pointer to a pointer to the factory that created this resource.</param>
         [PreserveSig]
         void GetFactory(
-            [Out] out ID2D1Factory factory);
+            [Out] out ID2D1Factory? factory);
 
         /// <summary>
         /// Creates a Direct2D bitmap from a pointer to in-memory source data.
@@ -40,7 +40,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
             [In] IntPtr srcData,
             [In] uint pitch,
             [In] ref D2D1BitmapProperties bitmapProperties,
-            [Out] out ID2D1Bitmap bitmap);
+            [Out] out ID2D1Bitmap? bitmap);
 
         /// <summary>
         /// Creates an <see cref="ID2D1Bitmap"/> by copying the specified Microsoft Windows Imaging Component (WIC) bitmap.
@@ -49,9 +49,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="bitmapProperties">The pixel format and DPI of the bitmap to create.</param>
         /// <param name="bitmap">The new bitmap.</param>
         void CreateBitmapFromWicBitmap(
-            [In] IWICBitmapSource wicBitmapSource,
+            [In] IWICBitmapSource? wicBitmapSource,
             [In] IntPtr bitmapProperties,
-            [Out] out ID2D1Bitmap bitmap);
+            [Out] out ID2D1Bitmap? bitmap);
 
         /// <summary>
         /// Creates an <see cref="ID2D1Bitmap"/> whose data is shared with another resource.
@@ -64,7 +64,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
             [In] ref Guid riid,
             [In, Out] IntPtr data,
             [In] IntPtr bitmapProperties,
-            [Out] out ID2D1Bitmap bitmap);
+            [Out] out ID2D1Bitmap? bitmap);
 
         /// <summary>
         /// Creates an ID2D1BitmapBrush from the specified bitmap.
@@ -74,10 +74,10 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="brushProperties">A structure that contains the opacity and transform of the new brush.</param>
         /// <param name="bitmapBrush">The new brush.</param>
         void CreateBitmapBrush(
-            [In] ID2D1Bitmap bitmap,
+            [In] ID2D1Bitmap? bitmap,
             [In] IntPtr bitmapBrushProperties,
             [In] IntPtr brushProperties,
-            [Out] out ID2D1BitmapBrush bitmapBrush);
+            [Out] out ID2D1BitmapBrush? bitmapBrush);
 
         /// <summary>
         /// Creates a new <see cref="ID2D1SolidColorBrush"/> that has the specified color and opacity.
@@ -88,7 +88,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         void CreateSolidColorBrush(
             [In] ref D2D1ColorF color,
             [In] IntPtr brushProperties,
-            [Out] out ID2D1SolidColorBrush solidColorBrush);
+            [Out] out ID2D1SolidColorBrush? solidColorBrush);
 
         /// <summary>
         /// Creates an <see cref="ID2D1GradientStopCollection"/> from the specified gradient stops, color interpolation gamma, and extend mode.
@@ -99,11 +99,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="extendMode">The behavior of the gradient outside the [0,1] normalized range.</param>
         /// <param name="gradientStopCollection">The new gradient stop collection.</param>
         void CreateGradientStopCollection(
-            [In, MarshalAs(UnmanagedType.LPArray)] D2D1GradientStop[] gradientStops,
+            [In, MarshalAs(UnmanagedType.LPArray)] D2D1GradientStop[]? gradientStops,
             [In] uint gradientStopsCount,
             [In] D2D1Gamma colorInterpolationGamma,
             [In] D2D1ExtendMode extendMode,
-            [Out] out ID2D1GradientStopCollection gradientStopCollection);
+            [Out] out ID2D1GradientStopCollection? gradientStopCollection);
 
         /// <summary>
         /// Creates an <see cref="ID2D1LinearGradientBrush"/> that contains the specified gradient stops and has the specified transform and base opacity.
@@ -115,8 +115,8 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         void CreateLinearGradientBrush(
             [In] ref D2D1LinearGradientBrushProperties linearGradientBrushProperties,
             [In] IntPtr brushProperties,
-            [In] ID2D1GradientStopCollection gradientStopCollection,
-            [Out] out ID2D1LinearGradientBrush linearGradientBrush);
+            [In] ID2D1GradientStopCollection? gradientStopCollection,
+            [Out] out ID2D1LinearGradientBrush? linearGradientBrush);
 
         /// <summary>
         /// Creates an <see cref="ID2D1RadialGradientBrush"/> that contains the specified gradient stops and has the specified transform and base opacity.
@@ -128,8 +128,8 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         void CreateRadialGradientBrush(
             [In] ref D2D1RadialGradientBrushProperties radialGradientBrushProperties,
             [In] IntPtr brushProperties,
-            [In] ID2D1GradientStopCollection gradientStopCollection,
-            [Out] out ID2D1RadialGradientBrush radialGradientBrush);
+            [In] ID2D1GradientStopCollection? gradientStopCollection,
+            [Out] out ID2D1RadialGradientBrush? radialGradientBrush);
 
         /// <summary>
         /// Creates a bitmap render target for use during intermediate offscreen drawing that is compatible with the current render target.
@@ -144,7 +144,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
             [In] IntPtr desiredPixelSize,
             [In] IntPtr desiredFormat,
             [In] D2D1CompatibleRenderTargetOptions options,
-            [Out] out ID2D1BitmapRenderTarget bitmapRenderTarget);
+            [Out] out ID2D1BitmapRenderTarget? bitmapRenderTarget);
 
         /// <summary>
         /// Creates a layer resource that can be used with this render target and its compatible render targets. The new layer has the specified initial size.
@@ -153,14 +153,14 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="layer">The new layer.</param>
         void CreateLayer(
             [In] IntPtr size,
-            [Out] out ID2D1Layer layer);
+            [Out] out ID2D1Layer? layer);
 
         /// <summary>
         /// Create a mesh that uses triangles to describe a shape.
         /// </summary>
         /// <param name="mesh">The new mesh.</param>
         void CreateMesh(
-            [Out] out ID2D1Mesh mesh);
+            [Out] out ID2D1Mesh? mesh);
 
         /// <summary>
         /// Draws a line between the specified points using the specified stroke style.
@@ -174,9 +174,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         void DrawLine(
             [In] D2D1Point2F point0,
             [In] D2D1Point2F point1,
-            [In] ID2D1Brush brush,
+            [In] ID2D1Brush? brush,
             [In] float strokeWidth,
-            [In] ID2D1StrokeStyle strokeStyle);
+            [In] ID2D1StrokeStyle? strokeStyle);
 
         /// <summary>
         /// Draws the outline of a rectangle that has the specified dimensions and stroke style.
@@ -188,9 +188,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         [PreserveSig]
         void DrawRectangle(
             [In] ref D2D1RectF rect,
-            [In] ID2D1Brush brush,
+            [In] ID2D1Brush? brush,
             [In] float strokeWidth,
-            [In] ID2D1StrokeStyle strokeStyle);
+            [In] ID2D1StrokeStyle? strokeStyle);
 
         /// <summary>
         /// Paints the interior of the specified rectangle.
@@ -200,7 +200,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         [PreserveSig]
         void FillRectangle(
             [In] ref D2D1RectF rect,
-            [In] ID2D1Brush brush);
+            [In] ID2D1Brush? brush);
 
         /// <summary>
         /// Draws the outline of the specified rounded rectangle using the specified stroke style.
@@ -212,9 +212,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         [PreserveSig]
         void DrawRoundedRectangle(
             [In] ref D2D1RoundedRect roundedRect,
-            [In] ID2D1Brush brush,
+            [In] ID2D1Brush? brush,
             [In] float strokeWidth,
-            [In] ID2D1StrokeStyle strokeStyle);
+            [In] ID2D1StrokeStyle? strokeStyle);
 
         /// <summary>
         /// Paints the interior of the specified rounded rectangle.
@@ -224,7 +224,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         [PreserveSig]
         void FillRoundedRectangle(
             [In] ref D2D1RoundedRect roundedRect,
-            [In] ID2D1Brush brush);
+            [In] ID2D1Brush? brush);
 
         /// <summary>
         /// Draws the outline of the specified ellipse using the specified stroke style.
@@ -236,9 +236,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         [PreserveSig]
         void DrawEllipse(
             [In] ref D2D1Ellipse ellipse,
-            [In] ID2D1Brush brush,
+            [In] ID2D1Brush? brush,
             [In] float strokeWidth,
-            [In] ID2D1StrokeStyle strokeStyle);
+            [In] ID2D1StrokeStyle? strokeStyle);
 
         /// <summary>
         /// Paints the interior of the specified ellipse.
@@ -248,7 +248,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         [PreserveSig]
         void FillEllipse(
             [In] ref D2D1Ellipse ellipse,
-            [In] ID2D1Brush brush);
+            [In] ID2D1Brush? brush);
 
         /// <summary>
         /// Draws the outline of the specified geometry using the specified stroke style.
@@ -259,10 +259,10 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="strokeStyle">The style of stroke to apply to the geometry's outline.</param>
         [PreserveSig]
         void DrawGeometry(
-            [In] ID2D1Geometry geometry,
-            [In] ID2D1Brush brush,
+            [In] ID2D1Geometry? geometry,
+            [In] ID2D1Brush? brush,
             [In] float strokeWidth,
-            [In] ID2D1StrokeStyle strokeStyle);
+            [In] ID2D1StrokeStyle? strokeStyle);
 
         /// <summary>
         /// Paints the interior of the specified geometry.
@@ -272,9 +272,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="opacityBrush">The opacity mask to apply to the geometry.</param>
         [PreserveSig]
         void FillGeometry(
-            [In] ID2D1Geometry geometry,
-            [In] ID2D1Brush brush,
-            [In] ID2D1Brush opacityBrush);
+            [In] ID2D1Geometry? geometry,
+            [In] ID2D1Brush? brush,
+            [In] ID2D1Brush? opacityBrush);
 
         /// <summary>
         /// Paints the interior of the specified mesh.
@@ -283,8 +283,8 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="brush">The brush used to paint the mesh.</param>
         [PreserveSig]
         void FillMesh(
-            [In] ID2D1Mesh mesh,
-            [In] ID2D1Brush brush);
+            [In] ID2D1Mesh? mesh,
+            [In] ID2D1Brush? brush);
 
         /// <summary>
         /// Applies the opacity mask described by the specified bitmap to a brush and uses that brush to paint a region of the render target.
@@ -296,8 +296,8 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="sourceRectangle">The region of the bitmap to use as the opacity mask, in device-independent pixels.</param>
         [PreserveSig]
         void FillOpacityMask(
-            [In] ID2D1Bitmap opacityMask,
-            [In] ID2D1Brush brush,
+            [In] ID2D1Bitmap? opacityMask,
+            [In] ID2D1Brush? brush,
             [In] D2D1OpacityMaskContent content,
             [In] IntPtr destinationRectangle,
             [In] IntPtr sourceRectangle);
@@ -312,7 +312,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="sourceRectangle">The size and position, in device-independent pixels in the bitmap's coordinate space, of the area within the bitmap to be drawn.</param>
         [PreserveSig]
         void DrawBitmap(
-            [In] ID2D1Bitmap bitmap,
+            [In] ID2D1Bitmap? bitmap,
             [In] IntPtr destinationRectangle,
             [In] float opacity,
             [In] D2D1BitmapInterpolationMode interpolationMode,
@@ -330,11 +330,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="measuringMode">A value that indicates how glyph metrics are used to measure text when it is formatted.</param>
         [PreserveSig]
         void DrawText(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string text,
+            [In, MarshalAs(UnmanagedType.LPWStr)] string? text,
             [In] uint textLength,
-            [In] IDWriteTextFormat textFormat,
+            [In] IDWriteTextFormat? textFormat,
             [In] ref D2D1RectF layoutRect,
-            [In] ID2D1Brush defaultForegroundBrush,
+            [In] ID2D1Brush? defaultForegroundBrush,
             [In] D2D1DrawTextOptions options,
             [In] DWriteMeasuringMode measuringMode);
 
@@ -348,8 +348,8 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         [PreserveSig]
         void DrawTextLayout(
             [In] D2D1Point2F origin,
-            [In] IDWriteTextLayout textLayout,
-            [In] ID2D1Brush defaultForegroundBrush,
+            [In] IDWriteTextLayout? textLayout,
+            [In] ID2D1Brush? defaultForegroundBrush,
             [In] D2D1DrawTextOptions options);
 
         /// <summary>
@@ -363,7 +363,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         void DrawGlyphRun(
             [In] D2D1Point2F baselineOrigin,
             [In] ref DWriteGlyphRun glyphRun,
-            [In] ID2D1Brush foregroundBrush,
+            [In] ID2D1Brush? foregroundBrush,
             [In] DWriteMeasuringMode measuringMode);
 
         /// <summary>
@@ -418,7 +418,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="textRenderingParams">The text rendering options to be applied to all subsequent text and glyph drawing operations.</param>
         [PreserveSig]
         void SetTextRenderingParams(
-            [In] IDWriteRenderingParams textRenderingParams);
+            [In] IDWriteRenderingParams? textRenderingParams);
 
         /// <summary>
         /// Retrieves the render target's current text rendering options.
@@ -426,7 +426,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="textRenderingParams">The render target's current text rendering options.</param>
         [PreserveSig]
         void GetTextRenderingParams(
-            [Out] out IDWriteRenderingParams textRenderingParams);
+            [Out] out IDWriteRenderingParams? textRenderingParams);
 
         /// <summary>
         /// Specifies a label for subsequent drawing operations.
@@ -456,7 +456,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         [PreserveSig]
         void PushLayer(
             [In] ref D2D1LayerParameters layerParameters,
-            [In] ID2D1Layer layer);
+            [In] ID2D1Layer? layer);
 
         /// <summary>
         /// Stops redirecting drawing operations to the layer that is specified by the last <see cref="PushLayer"/> call.
@@ -479,7 +479,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="drawingStateBlock">The current drawing state of the render target.</param>
         [PreserveSig]
         void SaveDrawingState(
-            [In, Out] ID2D1DrawingStateBlock drawingStateBlock);
+            [In, Out] ID2D1DrawingStateBlock? drawingStateBlock);
 
         /// <summary>
         /// Sets the render target's drawing state to that of the specified <see cref="ID2D1DrawingStateBlock"/>.
@@ -487,7 +487,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="drawingStateBlock">The new drawing state of the render target.</param>
         [PreserveSig]
         void RestoreDrawingState(
-            [In] ID2D1DrawingStateBlock drawingStateBlock);
+            [In] ID2D1DrawingStateBlock? drawingStateBlock);
 
         /// <summary>
         /// Specifies a rectangle to which all subsequent drawing operations are clipped.
@@ -594,6 +594,6 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// </summary>
         /// <param name="bitmap">The bitmap for this render target.</param>
         void GetBitmap(
-            [Out] out ID2D1Bitmap bitmap);
+            [Out] out ID2D1Bitmap? bitmap);
     }
 }

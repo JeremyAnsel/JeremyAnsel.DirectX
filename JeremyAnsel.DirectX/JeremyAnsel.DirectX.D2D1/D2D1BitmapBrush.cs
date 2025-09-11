@@ -79,13 +79,13 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <summary>
         /// Gets or sets the bitmap source that this brush uses to paint.
         /// </summary>
-        public D2D1Bitmap Bitmap
+        public D2D1Bitmap? Bitmap
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
             get
             {
-                this.brush.GetBitmap(out ID2D1Bitmap bitmap);
+                this.brush.GetBitmap(out ID2D1Bitmap? bitmap);
 
                 if (bitmap == null)
                 {

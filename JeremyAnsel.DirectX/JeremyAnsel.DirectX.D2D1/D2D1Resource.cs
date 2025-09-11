@@ -10,7 +10,6 @@ namespace JeremyAnsel.DirectX.D2D1
     using System.Runtime.InteropServices;
     using JeremyAnsel.DirectX.D2D1.ComInterfaces;
 
-
     /// <summary>
     /// The root interface for all resources in D2D.
     /// </summary>
@@ -40,7 +39,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="value">A D2D1 object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(D2D1Resource value)
+        public static implicit operator bool(D2D1Resource? value)
         {
             return value != null && value.Handle != null;
         }
@@ -82,9 +81,9 @@ namespace JeremyAnsel.DirectX.D2D1
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Reviewed")]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1Factory GetFactory()
+        public D2D1Factory? GetFactory()
         {
-            this.GetHandle<ID2D1Resource>().GetFactory(out ID2D1Factory factory);
+            this.GetHandle<ID2D1Resource>().GetFactory(out ID2D1Factory? factory);
 
             if (factory == null)
             {

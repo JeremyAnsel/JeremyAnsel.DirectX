@@ -69,7 +69,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The bounds of the widened geometry.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle strokeStyle, float flatteningTolerance)
+        public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle? strokeStyle, float flatteningTolerance)
         {
             this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out D2D1RectF bounds);
             return bounds;
@@ -85,7 +85,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The bounds of the widened geometry.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle strokeStyle, D2D1Matrix3X2F worldTransform, float flatteningTolerance)
+        public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle? strokeStyle, D2D1Matrix3X2F worldTransform, float flatteningTolerance)
         {
             D2D1RectF bounds;
 
@@ -113,7 +113,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The bounds of the widened geometry.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle strokeStyle)
+        public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle? strokeStyle)
         {
             this.GetHandle<ID2D1Geometry>().GetWidenedBounds(strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out D2D1RectF bounds);
             return bounds;
@@ -128,7 +128,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>The bounds of the widened geometry.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle strokeStyle, D2D1Matrix3X2F worldTransform)
+        public D2D1RectF GetWidenedBounds(float strokeWidth, D2D1StrokeStyle? strokeStyle, D2D1Matrix3X2F worldTransform)
         {
             D2D1RectF bounds;
 
@@ -158,7 +158,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>A value set to <value>true</value> if the geometry's stroke contains the specified point; otherwise, <value>false</value>.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle strokeStyle, float flatteningTolerance)
+        public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle? strokeStyle, float flatteningTolerance)
         {
             this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, flatteningTolerance, out bool contains);
             return contains;
@@ -175,7 +175,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>A value set to <value>true</value> if the geometry's stroke contains the specified point; otherwise, <value>false</value>.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle strokeStyle, D2D1Matrix3X2F worldTransform, float flatteningTolerance)
+        public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle? strokeStyle, D2D1Matrix3X2F worldTransform, float flatteningTolerance)
         {
             bool contains;
 
@@ -204,7 +204,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>A value set to <value>true</value> if the geometry's stroke contains the specified point; otherwise, <value>false</value>.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle strokeStyle)
+        public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle? strokeStyle)
         {
             this.GetHandle<ID2D1Geometry>().StrokeContainsPoint(point, strokeWidth, strokeStyle?.GetHandle<ID2D1StrokeStyle>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out bool contains);
             return contains;
@@ -220,7 +220,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>A value set to <value>true</value> if the geometry's stroke contains the specified point; otherwise, <value>false</value>.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle strokeStyle, D2D1Matrix3X2F worldTransform)
+        public bool StrokeContainsPoint(D2D1Point2F point, float strokeWidth, D2D1StrokeStyle? strokeStyle, D2D1Matrix3X2F worldTransform)
         {
             bool contains;
 
@@ -328,14 +328,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>A value that describes how this geometry is related to inputGeometry.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1GeometryRelation CompareWithGeometry(D2D1Geometry inputGeometry, float flatteningTolerance)
+        public D2D1GeometryRelation? CompareWithGeometry(D2D1Geometry? inputGeometry, float flatteningTolerance)
         {
             if (inputGeometry == null)
             {
                 throw new ArgumentNullException(nameof(inputGeometry));
             }
 
-            this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), IntPtr.Zero, flatteningTolerance, out D2D1GeometryRelation relation);
+            this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), IntPtr.Zero, flatteningTolerance, out D2D1GeometryRelation? relation);
             return relation;
         }
 
@@ -348,14 +348,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>A value that describes how this geometry is related to inputGeometry.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1GeometryRelation CompareWithGeometry(D2D1Geometry inputGeometry, D2D1Matrix3X2F inputGeometryTransform, float flatteningTolerance)
+        public D2D1GeometryRelation? CompareWithGeometry(D2D1Geometry? inputGeometry, D2D1Matrix3X2F inputGeometryTransform, float flatteningTolerance)
         {
             if (inputGeometry == null)
             {
                 throw new ArgumentNullException(nameof(inputGeometry));
             }
 
-            D2D1GeometryRelation relation;
+            D2D1GeometryRelation? relation;
 
             IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
@@ -380,14 +380,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>A value that describes how this geometry is related to inputGeometry.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1GeometryRelation CompareWithGeometry(D2D1Geometry inputGeometry)
+        public D2D1GeometryRelation? CompareWithGeometry(D2D1Geometry? inputGeometry)
         {
             if (inputGeometry == null)
             {
                 throw new ArgumentNullException(nameof(inputGeometry));
             }
 
-            this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out D2D1GeometryRelation relation);
+            this.GetHandle<ID2D1Geometry>().CompareWithGeometry(inputGeometry.GetHandle<ID2D1Geometry>(), IntPtr.Zero, D2D1Constants.DefaultFlatteningTolerance, out D2D1GeometryRelation? relation);
             return relation;
         }
 
@@ -399,14 +399,14 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <returns>A value that describes how this geometry is related to inputGeometry.</returns>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1GeometryRelation CompareWithGeometry(D2D1Geometry inputGeometry, D2D1Matrix3X2F inputGeometryTransform)
+        public D2D1GeometryRelation? CompareWithGeometry(D2D1Geometry? inputGeometry, D2D1Matrix3X2F inputGeometryTransform)
         {
             if (inputGeometry == null)
             {
                 throw new ArgumentNullException(nameof(inputGeometry));
             }
 
-            D2D1GeometryRelation relation;
+            D2D1GeometryRelation? relation;
 
             IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(D2D1Matrix3X2F)));
 
@@ -431,7 +431,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="flatteningTolerance">The maximum error allowed when constructing a polygonal approximation of the geometry. No point in the polygonal representation will diverge from the original geometry by more than the flattening tolerance.</param>
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the simplified geometry is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Simplify(D2D1GeometrySimplificationOption simplificationOption, float flatteningTolerance, D2D1SimplifiedGeometrySink geometrySink)
+        public void Simplify(D2D1GeometrySimplificationOption simplificationOption, float flatteningTolerance, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -449,7 +449,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="flatteningTolerance">The maximum error allowed when constructing a polygonal approximation of the geometry. No point in the polygonal representation will diverge from the original geometry by more than the flattening tolerance.</param>
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the simplified geometry is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Simplify(D2D1GeometrySimplificationOption simplificationOption, D2D1Matrix3X2F worldTransform, float flatteningTolerance, D2D1SimplifiedGeometrySink geometrySink)
+        public void Simplify(D2D1GeometrySimplificationOption simplificationOption, D2D1Matrix3X2F worldTransform, float flatteningTolerance, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -476,7 +476,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="simplificationOption">A value that specifies whether the simplified geometry should contain curves.</param>
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the simplified geometry is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Simplify(D2D1GeometrySimplificationOption simplificationOption, D2D1SimplifiedGeometrySink geometrySink)
+        public void Simplify(D2D1GeometrySimplificationOption simplificationOption, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -493,7 +493,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="worldTransform">The transform to apply to the simplified geometry.</param>
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the simplified geometry is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Simplify(D2D1GeometrySimplificationOption simplificationOption, D2D1Matrix3X2F worldTransform, D2D1SimplifiedGeometrySink geometrySink)
+        public void Simplify(D2D1GeometrySimplificationOption simplificationOption, D2D1Matrix3X2F worldTransform, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -520,7 +520,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="flatteningTolerance">The maximum error allowed when constructing a polygonal approximation of the geometry. No point in the polygonal representation will diverge from the original geometry by more than the flattening tolerance.</param>
         /// <param name="tessellationSink">The <see cref="D2D1TessellationSink"/> to which the tessellated is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Tessellate(float flatteningTolerance, D2D1TessellationSink tessellationSink)
+        public void Tessellate(float flatteningTolerance, D2D1TessellationSink? tessellationSink)
         {
             if (tessellationSink == null)
             {
@@ -537,7 +537,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="flatteningTolerance">The maximum error allowed when constructing a polygonal approximation of the geometry. No point in the polygonal representation will diverge from the original geometry by more than the flattening tolerance.</param>
         /// <param name="tessellationSink">The <see cref="D2D1TessellationSink"/> to which the tessellated is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Tessellate(D2D1Matrix3X2F worldTransform, float flatteningTolerance, D2D1TessellationSink tessellationSink)
+        public void Tessellate(D2D1Matrix3X2F worldTransform, float flatteningTolerance, D2D1TessellationSink? tessellationSink)
         {
             if (tessellationSink == null)
             {
@@ -563,7 +563,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="tessellationSink">The <see cref="D2D1TessellationSink"/> to which the tessellated is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Tessellate(D2D1TessellationSink tessellationSink)
+        public void Tessellate(D2D1TessellationSink? tessellationSink)
         {
             if (tessellationSink == null)
             {
@@ -579,7 +579,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="worldTransform">The transform to apply to this geometry.</param>
         /// <param name="tessellationSink">The <see cref="D2D1TessellationSink"/> to which the tessellated is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Tessellate(D2D1Matrix3X2F worldTransform, D2D1TessellationSink tessellationSink)
+        public void Tessellate(D2D1Matrix3X2F worldTransform, D2D1TessellationSink? tessellationSink)
         {
             if (tessellationSink == null)
             {
@@ -610,7 +610,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometrySink">The result of the combine operation.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CombineWithGeometry(D2D1Geometry inputGeometry, D2D1CombineMode combineMode, float flatteningTolerance, D2D1SimplifiedGeometrySink geometrySink)
+        public void CombineWithGeometry(D2D1Geometry? inputGeometry, D2D1CombineMode combineMode, float flatteningTolerance, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (inputGeometry == null)
             {
@@ -636,7 +636,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometrySink">The result of the combine operation.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CombineWithGeometry(D2D1Geometry inputGeometry, D2D1CombineMode combineMode, D2D1Matrix3X2F inputGeometryTransform, float flatteningTolerance, D2D1SimplifiedGeometrySink geometrySink)
+        public void CombineWithGeometry(D2D1Geometry? inputGeometry, D2D1CombineMode combineMode, D2D1Matrix3X2F inputGeometryTransform, float flatteningTolerance, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (inputGeometry == null)
             {
@@ -671,7 +671,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometrySink">The result of the combine operation.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CombineWithGeometry(D2D1Geometry inputGeometry, D2D1CombineMode combineMode, D2D1SimplifiedGeometrySink geometrySink)
+        public void CombineWithGeometry(D2D1Geometry? inputGeometry, D2D1CombineMode combineMode, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (inputGeometry == null)
             {
@@ -696,7 +696,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometrySink">The result of the combine operation.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void CombineWithGeometry(D2D1Geometry inputGeometry, D2D1CombineMode combineMode, D2D1Matrix3X2F inputGeometryTransform, D2D1SimplifiedGeometrySink geometrySink)
+        public void CombineWithGeometry(D2D1Geometry? inputGeometry, D2D1CombineMode combineMode, D2D1Matrix3X2F inputGeometryTransform, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (inputGeometry == null)
             {
@@ -729,7 +729,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="flatteningTolerance">The maximum error allowed when constructing a polygonal approximation of the geometry. No point in the polygonal representation will diverge from the original geometry by more than the flattening tolerance.</param>
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the geometry's transformed outline is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Outline(float flatteningTolerance, D2D1SimplifiedGeometrySink geometrySink)
+        public void Outline(float flatteningTolerance, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -747,7 +747,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="flatteningTolerance">The maximum error allowed when constructing a polygonal approximation of the geometry. No point in the polygonal representation will diverge from the original geometry by more than the flattening tolerance.</param>
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the geometry's transformed outline is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Outline(D2D1Matrix3X2F worldTransform, float flatteningTolerance, D2D1SimplifiedGeometrySink geometrySink)
+        public void Outline(D2D1Matrix3X2F worldTransform, float flatteningTolerance, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -774,7 +774,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the geometry's transformed outline is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Outline(D2D1SimplifiedGeometrySink geometrySink)
+        public void Outline(D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -791,7 +791,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="worldTransform">The transform to apply to the geometry outline.</param>
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the geometry's transformed outline is appended.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Outline(D2D1Matrix3X2F worldTransform, D2D1SimplifiedGeometrySink geometrySink)
+        public void Outline(D2D1Matrix3X2F worldTransform, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -1055,7 +1055,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the widened geometry is appended.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Widen(float strokeWidth, D2D1StrokeStyle strokeStyle, float flatteningTolerance, D2D1SimplifiedGeometrySink geometrySink)
+        public void Widen(float strokeWidth, D2D1StrokeStyle? strokeStyle, float flatteningTolerance, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -1075,7 +1075,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the widened geometry is appended.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Widen(float strokeWidth, D2D1StrokeStyle strokeStyle, D2D1Matrix3X2F worldTransform, float flatteningTolerance, D2D1SimplifiedGeometrySink geometrySink)
+        public void Widen(float strokeWidth, D2D1StrokeStyle? strokeStyle, D2D1Matrix3X2F worldTransform, float flatteningTolerance, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -1104,7 +1104,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the widened geometry is appended.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Widen(float strokeWidth, D2D1StrokeStyle strokeStyle, D2D1SimplifiedGeometrySink geometrySink)
+        public void Widen(float strokeWidth, D2D1StrokeStyle? strokeStyle, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {
@@ -1123,7 +1123,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometrySink">The <see cref="D2D1SimplifiedGeometrySink"/> to which the widened geometry is appended.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Widen(float strokeWidth, D2D1StrokeStyle strokeStyle, D2D1Matrix3X2F worldTransform, D2D1SimplifiedGeometrySink geometrySink)
+        public void Widen(float strokeWidth, D2D1StrokeStyle? strokeStyle, D2D1Matrix3X2F worldTransform, D2D1SimplifiedGeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {

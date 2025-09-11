@@ -39,7 +39,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="value">A D2D1 object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(D2D1SimplifiedGeometrySink value)
+        public static implicit operator bool(D2D1SimplifiedGeometrySink? value)
         {
             return value != null && value.Handle != null;
         }
@@ -114,7 +114,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="points">An array of one or more points that describe the lines to draw. A line is drawn from the geometry sink's current point (the end point of the last segment drawn or the location specified by <see cref="BeginFigure"/>) to the first point in the array. if the array contains additional points, a line is drawn from the first point to the second point in the array, from the second point to the third point, and so on.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
-        public void AddLines(D2D1Point2F[] points)
+        public void AddLines(D2D1Point2F[]? points)
         {
             if (points == null)
             {
@@ -130,7 +130,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="beziers">An array of Bezier segments that describes the Bezier curves to create. A curve is drawn from the geometry sink's current point (the end point of the last segment drawn or the location specified by <see cref="BeginFigure"/>) to the end point of the first Bezier segment in the array. if the array contains additional Bezier segments, each subsequent Bezier segment uses the end point of the preceding Bezier segment as its start point.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
-        public void AddBeziers(D2D1BezierSegment[] beziers)
+        public void AddBeziers(D2D1BezierSegment[]? beziers)
         {
             if (beziers == null)
             {

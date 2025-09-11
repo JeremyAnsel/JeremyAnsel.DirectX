@@ -69,9 +69,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>The geometry sink that is used to populate the path geometry with figures and segments.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1GeometrySink Open()
+        public D2D1GeometrySink? Open()
         {
-            this.geometry.Open(out ID2D1GeometrySink geometrySink);
+            this.geometry.Open(out ID2D1GeometrySink? geometrySink);
 
             if (geometrySink == null)
             {
@@ -87,7 +87,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="geometrySink">The sink to which the path geometry's contents are copied. Modifying this sink does not change the contents of this path geometry.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Reviewed")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Stream(D2D1GeometrySink geometrySink)
+        public void Stream(D2D1GeometrySink? geometrySink)
         {
             if (geometrySink == null)
             {

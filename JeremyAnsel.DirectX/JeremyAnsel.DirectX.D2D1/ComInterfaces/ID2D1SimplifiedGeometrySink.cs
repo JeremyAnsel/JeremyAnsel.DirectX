@@ -49,7 +49,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="pointsCount">The number of points in the points array.</param>
         [PreserveSig]
         void AddLines(
-            [In, MarshalAs(UnmanagedType.LPArray)] D2D1Point2F[] points,
+            [In, MarshalAs(UnmanagedType.LPArray)] D2D1Point2F[]? points,
             [In] uint pointsCount);
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="beziersCount">The number of Bezier segments in the beziers array.</param>
         [PreserveSig]
         void AddBeziers(
-            [In, MarshalAs(UnmanagedType.LPArray)] D2D1BezierSegment[] beziers,
+            [In, MarshalAs(UnmanagedType.LPArray)] D2D1BezierSegment[]? beziers,
             [In] uint beziersCount);
 
         /// <summary>

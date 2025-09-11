@@ -45,7 +45,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="value">A D2D1 object.</param>
         /// <returns>A boolean</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator bool(D2D1TessellationSink value)
+        public static implicit operator bool(D2D1TessellationSink? value)
         {
             return value != null && value.Handle != null;
         }
@@ -86,7 +86,7 @@ namespace JeremyAnsel.DirectX.D2D1
         /// <param name="triangles">An array of <see cref="D2D1Triangle"/> structures that describe the triangles to add to the sink.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         [SuppressMessage("Reliability", "CA2010:Toujours consommer la valeur retournée par les méthodes marquées avec PreserveSigAttribute", Justification = "Reviewed.")]
-        public void AddTriangles(D2D1Triangle[] triangles)
+        public void AddTriangles(D2D1Triangle[]? triangles)
         {
             if (triangles == null)
             {

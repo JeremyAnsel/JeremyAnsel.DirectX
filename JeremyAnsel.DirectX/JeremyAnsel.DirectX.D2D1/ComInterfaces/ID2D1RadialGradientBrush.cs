@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="factory">When this method returns, contains a pointer to a pointer to the factory that created this resource.</param>
         [PreserveSig]
         void GetFactory(
-            [Out] out ID2D1Factory factory);
+            [Out] out ID2D1Factory? factory);
 
         /// <summary>
         /// Sets the opacity for when the brush is drawn over the entire fill of the brush.
@@ -124,6 +124,6 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="gradientStopCollection">The <see cref="ID2D1GradientStopCollection"/> object associated with this linear gradient brush object.</param>
         [PreserveSig]
         void GetGradientStopCollection(
-            [Out] out ID2D1GradientStopCollection gradientStopCollection);
+            [Out] out ID2D1GradientStopCollection? gradientStopCollection);
     }
 }

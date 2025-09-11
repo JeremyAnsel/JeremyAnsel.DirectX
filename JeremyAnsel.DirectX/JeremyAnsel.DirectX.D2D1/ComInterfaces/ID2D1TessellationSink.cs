@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="trianglesCount">The number of triangles to copy from the triangles array.</param>
         [PreserveSig]
         void AddTriangles(
-            [In, MarshalAs(UnmanagedType.LPArray)] D2D1Triangle[] triangles,
+            [In, MarshalAs(UnmanagedType.LPArray)] D2D1Triangle[]? triangles,
             [In] uint trianglesCount);
 
         /// <summary>

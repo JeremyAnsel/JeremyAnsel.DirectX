@@ -23,7 +23,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="factory">When this method returns, contains a pointer to a pointer to the factory that created this resource.</param>
         [PreserveSig]
         void GetFactory(
-            [Out] out ID2D1Factory factory);
+            [Out] out ID2D1Factory? factory);
 
         /// <summary>
         /// Retrieves the number of gradient stops in the collection.
@@ -39,7 +39,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="gradientStopsCount">A value indicating the number of gradient stops to copy.</param>
         [PreserveSig]
         void GetGradientStops(
-            [Out, MarshalAs(UnmanagedType.LPArray)] D2D1GradientStop[] gradientStops,
+            [Out, MarshalAs(UnmanagedType.LPArray)] D2D1GradientStop[]? gradientStops,
             [In] uint gradientStopsCount);
 
         /// <summary>

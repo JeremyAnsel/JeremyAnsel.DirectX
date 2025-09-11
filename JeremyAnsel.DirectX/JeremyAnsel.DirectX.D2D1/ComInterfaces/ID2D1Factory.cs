@@ -39,7 +39,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="rectangleGeometry">The rectangle geometry created by this method.</param>
         void CreateRectangleGeometry(
             [In] ref D2D1RectF rectangle,
-            [Out] out ID2D1RectangleGeometry rectangleGeometry);
+            [Out] out ID2D1RectangleGeometry? rectangleGeometry);
 
         /// <summary>
         /// Creates an <see cref="ID2D1RoundedRectangleGeometry"/>.
@@ -48,7 +48,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="roundedRectangleGeometry">The rounded rectangle geometry created by this method.</param>
         void CreateRoundedRectangleGeometry(
             [In] ref D2D1RoundedRect roundedRectangle,
-            [Out] out ID2D1RoundedRectangleGeometry roundedRectangleGeometry);
+            [Out] out ID2D1RoundedRectangleGeometry? roundedRectangleGeometry);
 
         /// <summary>
         /// Creates an <see cref="ID2D1EllipseGeometry"/>.
@@ -57,7 +57,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="ellipseGeometry">The ellipse geometry created by this method.</param>
         void CreateEllipseGeometry(
             [In] ref D2D1Ellipse ellipse,
-            [Out] out ID2D1EllipseGeometry ellipseGeometry);
+            [Out] out ID2D1EllipseGeometry? ellipseGeometry);
 
         /// <summary>
         /// Creates an <see cref="ID2D1GeometryGroup"/>, which is an object that holds other geometries.
@@ -68,9 +68,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="geometryGroup">The geometry group created by this method.</param>
         void CreateGeometryGroup(
             [In] D2D1FillMode fillMode,
-            [In, MarshalAs(UnmanagedType.LPArray)] ID2D1Geometry[] geometries,
+            [In, MarshalAs(UnmanagedType.LPArray)] ID2D1Geometry[]? geometries,
             [In] uint geometriesCount,
-            [Out] out ID2D1GeometryGroup geometryGroup);
+            [Out] out ID2D1GeometryGroup? geometryGroup);
 
         /// <summary>
         /// Transforms the specified geometry and stores the result as an <see cref="ID2D1TransformedGeometry"/> object.
@@ -79,16 +79,16 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="transform">The transformation to apply.</param>
         /// <param name="transformedGeometry">The new transformed geometry object.</param>
         void CreateTransformedGeometry(
-            [In] ID2D1Geometry sourceGeometry,
+            [In] ID2D1Geometry? sourceGeometry,
             [In] ref D2D1Matrix3X2F transform,
-            [Out] out ID2D1TransformedGeometry transformedGeometry);
+            [Out] out ID2D1TransformedGeometry? transformedGeometry);
 
         /// <summary>
         /// Creates an empty <see cref="ID2D1PathGeometry"/>.
         /// </summary>
         /// <param name="pathGeometry">The path geometry created by this method.</param>
         void CreatePathGeometry(
-            [Out] out ID2D1PathGeometry pathGeometry);
+            [Out] out ID2D1PathGeometry? pathGeometry);
 
         /// <summary>
         /// Creates an <see cref="ID2D1StrokeStyle"/> that describes start cap, dash pattern, and other features of a stroke.
@@ -99,9 +99,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="strokeStyle">The stroke style created by this method.</param>
         void CreateStrokeStyle(
             [In] ref D2D1StrokeStyleProperties strokeStyleProperties,
-            [In, MarshalAs(UnmanagedType.LPArray)] float[] dashes,
+            [In, MarshalAs(UnmanagedType.LPArray)] float[]? dashes,
             [In] uint dashesCount,
-            [Out] out ID2D1StrokeStyle strokeStyle);
+            [Out] out ID2D1StrokeStyle? strokeStyle);
 
         /// <summary>
         /// Creates an <see cref="ID2D1DrawingStateBlock"/> that can be used with the <see cref="ID2D1RenderTarget.SaveDrawingState"/> and <see cref="ID2D1RenderTarget.RestoreDrawingState"/> methods of a render target.
@@ -111,8 +111,8 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="drawingStateBlock">The new drawing state block created by this method.</param>
         void CreateDrawingStateBlock(
             [In] IntPtr drawingStateDescription,
-            [In] IDWriteRenderingParams textRenderingParams,
-            [Out] out ID2D1DrawingStateBlock drawingStateBlock);
+            [In] IDWriteRenderingParams? textRenderingParams,
+            [Out] out ID2D1DrawingStateBlock? drawingStateBlock);
 
         /// <summary>
         /// Creates a render target that renders to a Microsoft Windows Imaging Component (WIC) bitmap.
@@ -121,9 +121,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="renderTargetProperties">The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</param>
         /// <param name="renderTarget">The <see cref="ID2D1RenderTarget"/> object created by this method.</param>
         void CreateWicBitmapRenderTarget(
-            [In] IWICBitmap target,
+            [In] IWICBitmap? target,
             [In] ref D2D1RenderTargetProperties renderTargetProperties,
-            [Out] out ID2D1RenderTarget renderTarget);
+            [Out] out ID2D1RenderTarget? renderTarget);
 
         /// <summary>
         /// Creates an <see cref="ID2D1HwndRenderTarget"/>, a render target that renders to a window.
@@ -134,7 +134,7 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         void CreateHwndRenderTarget(
             [In] ref D2D1RenderTargetProperties renderTargetProperties,
             [In] ref D2D1HwndRenderTargetProperties hwndRenderTargetProperties,
-            [Out] out ID2D1HwndRenderTarget hwndRenderTarget);
+            [Out] out ID2D1HwndRenderTarget? hwndRenderTarget);
 
         /// <summary>
         /// Creates a render target that draws to a DirectX Graphics Infrastructure (DXGI) surface.
@@ -143,9 +143,9 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="renderTargetProperties">The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.</param>
         /// <param name="renderTarget">The <see cref="ID2D1RenderTarget"/> object created by this method.</param>
         void CreateDxgiSurfaceRenderTarget(
-            [In] IDxgiSurface dxgiSurface,
+            [In] IDxgiSurface? dxgiSurface,
             [In] ref D2D1RenderTargetProperties renderTargetProperties,
-            [Out] out ID2D1RenderTarget renderTarget);
+            [Out] out ID2D1RenderTarget? renderTarget);
 
         /// <summary>
         /// Creates a render target that draws to a Windows Graphics Device Interface (GDI) device context.
@@ -154,6 +154,6 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces
         /// <param name="renderTarget">The <see cref="ID2D1DCRenderTarget"/> created by the method.</param>
         void CreateDCRenderTarget(
             [In] ref D2D1RenderTargetProperties renderTargetProperties,
-            [Out] out ID2D1DCRenderTarget renderTarget);
+            [Out] out ID2D1DCRenderTarget? renderTarget);
     }
 }

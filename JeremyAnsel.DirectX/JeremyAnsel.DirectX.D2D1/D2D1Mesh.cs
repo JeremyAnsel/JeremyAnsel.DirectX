@@ -41,9 +41,9 @@ namespace JeremyAnsel.DirectX.D2D1
         /// </summary>
         /// <returns>An <see cref="D2D1TessellationSink"/> that is used to populate the mesh.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public D2D1TessellationSink Open()
+        public D2D1TessellationSink? Open()
         {
-            this.mesh.Open(out ID2D1TessellationSink tessellationSink);
+            this.mesh.Open(out ID2D1TessellationSink? tessellationSink);
 
             if (tessellationSink == null)
             {
