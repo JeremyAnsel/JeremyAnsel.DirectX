@@ -10,7 +10,8 @@
             "JeremyAnsel.DirectX.D3DCompiler/**.csproj",
             "JeremyAnsel.DirectX.DWrite/**.csproj",
             "JeremyAnsel.DirectX.Dxgi/**.csproj",
-            "JeremyAnsel.DirectX.DXMath/**.csproj"
+            "JeremyAnsel.DirectX.DXMath/**.csproj",
+            "JeremyAnsel.DirectX.DirectInput/**.csproj"
           ],
           "src": "../"
         }
