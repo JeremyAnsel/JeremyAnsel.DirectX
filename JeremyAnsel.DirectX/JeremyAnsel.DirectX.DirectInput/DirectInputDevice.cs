@@ -74,6 +74,76 @@ public sealed class DirectInputDevice : IDisposable
         return objects;
     }
 
+    public unsafe void GetPropertyUInt(DirectInputPropertyTypes prop, DirectInputHowTypes how, int obj, out uint value)
+    {
+        if (_handle is null)
+        {
+            throw new ObjectDisposedException(nameof(_handle));
+        }
+
+        DIPROPDWORD diProp;
+        diProp.Header.Size = Marshal.SizeOf<DIPROPDWORD>();
+        diProp.Header.HeaderSize = Marshal.SizeOf<DIPROPHEADER>();
+        diProp.Header.How = (DIPH)(uint)how;
+        diProp.Header.Obj = obj;
+
+        _handle.GetProperty(new IntPtr((int)prop), new IntPtr(&diProp));
+        value = diProp.Data;
+    }
+
+    public unsafe void SetPropertyUInt(DirectInputPropertyTypes prop, DirectInputHowTypes how, int obj, uint value)
+    {
+        if (_handle is null)
+        {
+            throw new ObjectDisposedException(nameof(_handle));
+        }
+
+        DIPROPDWORD diProp;
+        diProp.Header.Size = Marshal.SizeOf<DIPROPDWORD>();
+        diProp.Header.HeaderSize = Marshal.SizeOf<DIPROPHEADER>();
+        diProp.Header.How = (DIPH)(uint)how;
+        diProp.Header.Obj = obj;
+        diProp.Data = value;
+
+        _handle.SetProperty(new IntPtr((int)prop), new IntPtr(&diProp));
+    }
+
+    public unsafe void GetPropertyRange(DirectInputPropertyTypes prop, DirectInputHowTypes how, int obj, out int min, out int max)
+    {
+        if (_handle is null)
+        {
+            throw new ObjectDisposedException(nameof(_handle));
+        }
+
+        DIPROPRANGE diProp;
+        diProp.Header.Size = Marshal.SizeOf<DIPROPRANGE>();
+        diProp.Header.HeaderSize = Marshal.SizeOf<DIPROPHEADER>();
+        diProp.Header.How = (DIPH)(uint)how;
+        diProp.Header.Obj = obj;
+
+        _handle.GetProperty(new IntPtr((int)prop), new IntPtr(&diProp));
+        min = diProp.Min;
+        max = diProp.Max;
+    }
+
+    public unsafe void SetPropertyRange(DirectInputPropertyTypes prop, DirectInputHowTypes how, int obj, int min, int max)
+    {
+        if (_handle is null)
+        {
+            throw new ObjectDisposedException(nameof(_handle));
+        }
+
+        DIPROPRANGE diProp;
+        diProp.Header.Size = Marshal.SizeOf<DIPROPRANGE>();
+        diProp.Header.HeaderSize = Marshal.SizeOf<DIPROPHEADER>();
+        diProp.Header.How = (DIPH)(uint)how;
+        diProp.Header.Obj = obj;
+        diProp.Min = min;
+        diProp.Max = max;
+
+        _handle.SetProperty(new IntPtr((int)prop), new IntPtr(&diProp));
+    }
+
     public void Acquire()
     {
         if (_handle is null)
