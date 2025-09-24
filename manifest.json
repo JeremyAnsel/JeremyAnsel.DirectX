@@ -6060,6 +6060,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DirectInput.DirectInputHowTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DirectInput.DirectInputHowTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.DirectX.DirectInput.DirectInputHowTypes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/JeremyAnsel.DirectX.DirectInput.DirectInputJoystick2Objects.yml",
       "output": {
         ".html": {
@@ -6238,6 +6252,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "JeremyAnsel.DirectX.DirectInput.DirectInputObjectDataTypes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.DirectInput.DirectInputPropertyTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.DirectInput.DirectInputPropertyTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.DirectX.DirectInput.DirectInputPropertyTypes",
       "Summary": null
     },
     {
