@@ -11,7 +11,8 @@
             "JeremyAnsel.DirectX.DWrite/**.csproj",
             "JeremyAnsel.DirectX.Dxgi/**.csproj",
             "JeremyAnsel.DirectX.DXMath/**.csproj",
-            "JeremyAnsel.DirectX.DirectInput/**.csproj"
+            "JeremyAnsel.DirectX.DirectInput/**.csproj",
+            "JeremyAnsel.DirectX.WinCodec/**.csproj"
           ],
           "src": "../"
         }

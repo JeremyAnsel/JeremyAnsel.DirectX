@@ -27,4 +27,7 @@ JeremyAnsel.DirectX.D3DCompiler:
 JeremyAnsel.DirectX.DirectInput:
 [![NuGet Version](https://img.shields.io/nuget/v/JeremyAnsel.DirectX.DirectInput)](https://www.nuget.org/packages/JeremyAnsel.DirectX.DirectInput)
 
+JeremyAnsel.DirectX.WinCodec:
+[![NuGet Version](https://img.shields.io/nuget/v/JeremyAnsel.DirectX.WinCodec)](https://www.nuget.org/packages/JeremyAnsel.DirectX.WinCodec)
+
 JeremyAnsel.DirectX contains managed wrappers around DirectX APIs.
