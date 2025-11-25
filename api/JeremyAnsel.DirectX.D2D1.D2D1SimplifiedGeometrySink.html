@@ -749,6 +749,9 @@
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html" title="D3D11SubResourceData" class="">D3D11SubResourceData</a>
                           </li>
                           <li class="">
+                            <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.html" title="D3D11SubResourceDataPtr" class="">D3D11SubResourceDataPtr</a>
+                          </li>
+                          <li class="">
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html" title="D3D11Texture1D" class="">D3D11Texture1D</a>
                           </li>
                           <li class="">
@@ -2076,7 +2079,8 @@
   <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.D2D1.dll</h6>
   <h5 id="JeremyAnsel_DirectX_D2D1_D2D1SimplifiedGeometrySink_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class D2D1SimplifiedGeometrySink : IDisposable, ID2D1Releasable</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1063:Impl&#233;menter IDisposable correctement&quot;, Justification = &quot;Reviewed&quot;)]
+public abstract class D2D1SimplifiedGeometrySink : IDisposable, ID2D1Releasable</code></pre>
   </div>
   <h3 id="properties">Properties
 </h3>
@@ -2127,7 +2131,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddBeziers(D2D1BezierSegment[]? beziers)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Reliability&quot;, &quot;CA2010:Toujours consommer la valeur retourn&#233;e par les m&#233;thodes marqu&#233;es avec PreserveSigAttribute&quot;, Justification = &quot;Reviewed.&quot;)]
+public void AddBeziers(D2D1BezierSegment[]? beziers)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2161,7 +2166,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddLines(D2D1Point2F[]? points)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Reliability&quot;, &quot;CA2010:Toujours consommer la valeur retourn&#233;e par les m&#233;thodes marqu&#233;es avec PreserveSigAttribute&quot;, Justification = &quot;Reviewed.&quot;)]
+public void AddLines(D2D1Point2F[]? points)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2195,7 +2201,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BeginFigure(D2D1Point2F startPoint, D2D1FigureBegin figureBegin)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Reliability&quot;, &quot;CA2010:Toujours consommer la valeur retourn&#233;e par les m&#233;thodes marqu&#233;es avec PreserveSigAttribute&quot;, Justification = &quot;Reviewed.&quot;)]
+public void BeginFigure(D2D1Point2F startPoint, D2D1FigureBegin figureBegin)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2251,7 +2258,9 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1063:ImplementIDisposableCorrectly&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Usage&quot;, &quot;CA1816:CallGCSuppressFinalizeCorrectly&quot;, Justification = &quot;Reviewed&quot;)]
+public void Dispose()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -2267,7 +2276,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void EndFigure(D2D1FigureEnd figureEnd)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Reliability&quot;, &quot;CA2010:Toujours consommer la valeur retourn&#233;e par les m&#233;thodes marqu&#233;es avec PreserveSigAttribute&quot;, Justification = &quot;Reviewed.&quot;)]
+public void EndFigure(D2D1FigureEnd figureEnd)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2317,7 +2327,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetFillMode(D2D1FillMode fillMode)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Reliability&quot;, &quot;CA2010:Toujours consommer la valeur retourn&#233;e par les m&#233;thodes marqu&#233;es avec PreserveSigAttribute&quot;, Justification = &quot;Reviewed.&quot;)]
+public void SetFillMode(D2D1FillMode fillMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2351,7 +2362,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetSegmentOptions(D2D1PathSegmentOptions vertexOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Reliability&quot;, &quot;CA2010:Toujours consommer la valeur retourn&#233;e par les m&#233;thodes marqu&#233;es avec PreserveSigAttribute&quot;, Justification = &quot;Reviewed.&quot;)]
+public void SetSegmentOptions(D2D1PathSegmentOptions vertexOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">

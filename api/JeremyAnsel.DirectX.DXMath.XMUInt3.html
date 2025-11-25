@@ -749,6 +749,9 @@
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html" title="D3D11SubResourceData" class="">D3D11SubResourceData</a>
                           </li>
                           <li class="">
+                            <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.html" title="D3D11SubResourceDataPtr" class="">D3D11SubResourceDataPtr</a>
+                          </li>
+                          <li class="">
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html" title="D3D11Texture1D" class="">D3D11Texture1D</a>
                           </li>
                           <li class="">
@@ -2040,12 +2043,10 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="JeremyAnsel.DirectX.DXMath.XMUInt3.html">XMUInt3</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
-    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
@@ -2060,7 +2061,8 @@
   <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DXMath.dll</h6>
   <h5 id="JeremyAnsel_DirectX_DXMath_XMUInt3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct XMUInt3 : IEquatable&lt;XMUInt3&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1709:IdentifiersShouldBeCasedCorrectly&quot;, MessageId = &quot;XMU&quot;, Justification = &quot;Reviewed&quot;)]
+public struct XMUInt3 : IEquatable&lt;XMUInt3&gt;, IFormattable</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -2069,7 +2071,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3__ctor_System_UInt32_System_UInt32_System_UInt32_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.%23ctor(System.UInt32%2CSystem.UInt32%2CSystem.UInt32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L40">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L41">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3__ctor_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.#ctor*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3__ctor_System_UInt32_System_UInt32_System_UInt32_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.#ctor(System.UInt32,System.UInt32,System.UInt32)">XMUInt3(uint, uint, uint)</h4>
@@ -2078,7 +2080,10 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public XMUInt3(uint x, uint y, uint z)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;x&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;y&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;z&quot;, Justification = &quot;Reviewed&quot;)]
+public XMUInt3(uint x, uint y, uint z)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2115,7 +2120,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3__ctor_System_UInt32___.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.%23ctor(System.UInt32%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L55">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L56">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3__ctor_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.#ctor*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3__ctor_System_UInt32___" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.#ctor(System.UInt32[])">XMUInt3(uint[]?)</h4>
@@ -2151,7 +2156,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_X.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.X%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L76">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L77">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_X_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.X*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_X" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.X">X</h4>
@@ -2160,7 +2165,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint X { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;X&quot;, Justification = &quot;Reviewed&quot;)]
+public uint X { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -2182,7 +2188,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_Y.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.Y%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L86">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L87">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_Y_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.Y*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_Y" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.Y">Y</h4>
@@ -2191,7 +2197,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Y { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;Y&quot;, Justification = &quot;Reviewed&quot;)]
+public uint Y { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -2213,7 +2220,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_Z.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.Z%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L96">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L97">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_Z_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.Z*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_Z" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.Z">Z</h4>
@@ -2222,7 +2229,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Z { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;Z&quot;, Justification = &quot;Reviewed&quot;)]
+public uint Z { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -2246,7 +2254,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_Equals_JeremyAnsel_DirectX_DXMath_XMUInt3_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.Equals(JeremyAnsel.DirectX.DXMath.XMUInt3)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L183">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L184">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_Equals_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.Equals*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_Equals_JeremyAnsel_DirectX_DXMath_XMUInt3_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.Equals(JeremyAnsel.DirectX.DXMath.XMUInt3)">Equals(XMUInt3)</h4>
@@ -2296,7 +2304,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_Equals_System_Object_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.Equals(System.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L168">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L169">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_Equals_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.Equals*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_Equals_System_Object_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.Equals(System.Object)">Equals(object?)</h4>
@@ -2348,7 +2356,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_FromVector_JeremyAnsel_DirectX_DXMath_XMVector_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.FromVector(JeremyAnsel.DirectX.DXMath.XMVector)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L157">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L158">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_FromVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.FromVector*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_FromVector_JeremyAnsel_DirectX_DXMath_XMVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.FromVector(JeremyAnsel.DirectX.DXMath.XMVector)">FromVector(XMVector)</h4>
@@ -2398,7 +2406,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_GetHashCode.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.GetHashCode%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L195">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L196">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_GetHashCode_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.GetHashCode*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_GetHashCode" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.GetHashCode">GetHashCode()</h4>
@@ -2429,10 +2437,104 @@
   <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_ToString.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.ToString%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L218">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_ToString_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.ToString*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_ToString" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>The fully qualified type name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_ToString_System_String_System_IFormatProvider_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.ToString(System.String%2CSystem.IFormatProvider)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L224">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_ToString_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.ToString*"></a>
+  <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_ToString_System_String_System_IFormatProvider_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.ToString(System.String,System.IFormatProvider)">ToString(string?, IFormatProvider?)</h4>
+  <div class="markdown level1 summary"><p>Formats the value of the current instance using the specified format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(string? format, IFormatProvider? formatProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format to use.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic) to use the default format defined for the type of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a> implementation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></td>
+        <td><span class="parametername">formatProvider</span></td>
+        <td><p>The provider to use to format the value.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic) to obtain the numeric format information from the current locale setting of the operating system.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>The value of the current instance in the specified format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_ToVector.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.ToVector%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L210">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L211">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_ToVector_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.ToVector*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_ToVector" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.ToVector">ToVector()</h4>
@@ -2466,7 +2568,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_op_Equality_JeremyAnsel_DirectX_DXMath_XMUInt3_JeremyAnsel_DirectX_DXMath_XMUInt3_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.op_Equality(JeremyAnsel.DirectX.DXMath.XMUInt3%2CJeremyAnsel.DirectX.DXMath.XMUInt3)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L134">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L135">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_op_Equality_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.op_Equality*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_op_Equality_JeremyAnsel_DirectX_DXMath_XMUInt3_JeremyAnsel_DirectX_DXMath_XMUInt3_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.op_Equality(JeremyAnsel.DirectX.DXMath.XMUInt3,JeremyAnsel.DirectX.DXMath.XMUInt3)">operator ==(XMUInt3, XMUInt3)</h4>
@@ -2522,7 +2624,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_op_Implicit_JeremyAnsel_DirectX_DXMath_XMUInt3__JeremyAnsel_DirectX_DXMath_XMVector.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.op_Implicit(JeremyAnsel.DirectX.DXMath.XMUInt3)~JeremyAnsel.DirectX.DXMath.XMVector%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L108">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L109">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_op_Implicit_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.op_Implicit*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_op_Implicit_JeremyAnsel_DirectX_DXMath_XMUInt3__JeremyAnsel_DirectX_DXMath_XMVector" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.op_Implicit(JeremyAnsel.DirectX.DXMath.XMUInt3)~JeremyAnsel.DirectX.DXMath.XMVector">implicit operator XMVector(XMUInt3)</h4>
@@ -2531,7 +2633,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator XMVector(XMUInt3 value)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Usage&quot;, &quot;CA2225:Les surcharges d&#39;op&#233;rateur offrent d&#39;autres m&#233;thodes nomm&#233;es&quot;, Justification = &quot;Reviewed.&quot;)]
+public static implicit operator XMVector(XMUInt3 value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2572,7 +2675,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_op_Implicit_JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMUInt3.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.op_Implicit(JeremyAnsel.DirectX.DXMath.XMVector)~JeremyAnsel.DirectX.DXMath.XMUInt3%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L120">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L121">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_op_Implicit_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.op_Implicit*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_op_Implicit_JeremyAnsel_DirectX_DXMath_XMVector__JeremyAnsel_DirectX_DXMath_XMUInt3" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.op_Implicit(JeremyAnsel.DirectX.DXMath.XMVector)~JeremyAnsel.DirectX.DXMath.XMUInt3">implicit operator XMUInt3(XMVector)</h4>
@@ -2581,7 +2684,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator XMUInt3(XMVector value)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Usage&quot;, &quot;CA2225:Les surcharges d&#39;op&#233;rateur offrent d&#39;autres m&#233;thodes nomm&#233;es&quot;, Justification = &quot;Reviewed.&quot;)]
+public static implicit operator XMUInt3(XMVector value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2622,7 +2726,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3_op_Inequality_JeremyAnsel_DirectX_DXMath_XMUInt3_JeremyAnsel_DirectX_DXMath_XMUInt3_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3.op_Inequality(JeremyAnsel.DirectX.DXMath.XMUInt3%2CJeremyAnsel.DirectX.DXMath.XMUInt3)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L146">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L147">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DXMath_XMUInt3_op_Inequality_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.op_Inequality*"></a>
   <h4 id="JeremyAnsel_DirectX_DXMath_XMUInt3_op_Inequality_JeremyAnsel_DirectX_DXMath_XMUInt3_JeremyAnsel_DirectX_DXMath_XMUInt3_" data-uid="JeremyAnsel.DirectX.DXMath.XMUInt3.op_Inequality(JeremyAnsel.DirectX.DXMath.XMUInt3,JeremyAnsel.DirectX.DXMath.XMUInt3)">operator !=(XMUInt3, XMUInt3)</h4>
@@ -2677,6 +2781,9 @@
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
   </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a>
+  </div>
 
 </article>
           </div>
@@ -2689,7 +2796,7 @@
                     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DXMath_XMUInt3.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DXMath.XMUInt3%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DXMath/XMUInt3.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

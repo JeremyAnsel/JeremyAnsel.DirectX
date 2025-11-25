@@ -749,6 +749,9 @@
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html" title="D3D11SubResourceData" class="">D3D11SubResourceData</a>
                           </li>
                           <li class="">
+                            <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.html" title="D3D11SubResourceDataPtr" class="">D3D11SubResourceDataPtr</a>
+                          </li>
+                          <li class="">
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html" title="D3D11Texture1D" class="">D3D11Texture1D</a>
                           </li>
                           <li class="">
@@ -2126,10 +2129,60 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteUtils_DisposeAndNull__1___0___.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteUtils.DisposeAndNull%60%601(%60%600%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteUtils.cs/#L33">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteUtils_DisposeAndNull_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteUtils.DisposeAndNull*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteUtils_DisposeAndNull__1___0___" data-uid="JeremyAnsel.DirectX.DWrite.DWriteUtils.DisposeAndNull``1(``0[])">DisposeAndNull&lt;T&gt;(T?[]?)</h4>
+  <div class="markdown level1 summary"><p>Immediately releases the unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DisposeAndNull&lt;T&gt;(T?[]? array) where T : class, IDWriteReleasable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">array</span></td>
+        <td><p>The objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>A releasable type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteUtils_ReleaseAndNull__1___0__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteUtils.ReleaseAndNull%60%601(%60%600%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteUtils.cs/#L34">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteUtils.cs/#L51">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteUtils_ReleaseAndNull_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteUtils.ReleaseAndNull*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteUtils_ReleaseAndNull__1___0__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteUtils.ReleaseAndNull``1(``0@)">ReleaseAndNull&lt;T&gt;(ref T?)</h4>
@@ -2154,6 +2207,56 @@
         <td><span class="xref">T</span></td>
         <td><span class="parametername">o</span></td>
         <td><p>The COM interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>A releasable type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteUtils_ReleaseAndNull__1___0___.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteUtils.ReleaseAndNull%60%601(%60%600%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteUtils.cs/#L65">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteUtils_ReleaseAndNull_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteUtils.ReleaseAndNull*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteUtils_ReleaseAndNull__1___0___" data-uid="JeremyAnsel.DirectX.DWrite.DWriteUtils.ReleaseAndNull``1(``0[])">ReleaseAndNull&lt;T&gt;(T?[]?)</h4>
+  <div class="markdown level1 summary"><p>Releases the managed reference to the COM interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseAndNull&lt;T&gt;(T?[]? array) where T : class, IDWriteReleasable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">array</span></td>
+        <td><p>The COM interfaces.</p>
 </td>
       </tr>
     </tbody>

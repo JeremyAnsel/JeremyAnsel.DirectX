@@ -3022,6 +3022,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr",
+      "Summary": "<p sourcefile=\"api/JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.yml\" sourcestartlinenumber=\"1\">Specifies a pointer to data for initializing a subresource.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/JeremyAnsel.DirectX.D3D11.D3D11Texture1D.yml",
       "output": {
         ".html": {

@@ -749,6 +749,9 @@
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html" title="D3D11SubResourceData" class="">D3D11SubResourceData</a>
                           </li>
                           <li class="">
+                            <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.html" title="D3D11SubResourceDataPtr" class="">D3D11SubResourceDataPtr</a>
+                          </li>
+                          <li class="">
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html" title="D3D11Texture1D" class="">D3D11Texture1D</a>
                           </li>
                           <li class="">
@@ -2060,7 +2063,8 @@
   <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DXMath.dll</h6>
   <h5 id="JeremyAnsel_DirectX_DXMath_PackedVector_XMUDecN4_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct XMUDecN4 : IEquatable&lt;XMUDecN4&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1709:IdentifiersShouldBeCasedCorrectly&quot;, MessageId = &quot;XMU&quot;, Justification = &quot;Reviewed&quot;)]
+public struct XMUDecN4 : IEquatable&lt;XMUDecN4&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -2078,7 +2082,11 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public XMUDecN4(float x, float y, float z, float w)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;x&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;y&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;z&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;w&quot;, Justification = &quot;Reviewed&quot;)]
+public XMUDecN4(float x, float y, float z, float w)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2200,7 +2208,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint W { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;W&quot;, Justification = &quot;Reviewed&quot;)]
+public uint W { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -2231,7 +2240,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint X { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;X&quot;, Justification = &quot;Reviewed&quot;)]
+public uint X { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -2262,7 +2272,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Y { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;Y&quot;, Justification = &quot;Reviewed&quot;)]
+public uint Y { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -2293,7 +2304,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Z { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1704:IdentifiersShouldBeSpelledCorrectly&quot;, MessageId = &quot;Z&quot;, Justification = &quot;Reviewed&quot;)]
+public uint Z { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -2684,7 +2696,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator XMVector(XMUDecN4 value)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Usage&quot;, &quot;CA2225:Les surcharges d&#39;op&#233;rateur offrent d&#39;autres m&#233;thodes nomm&#233;es&quot;, Justification = &quot;Reviewed.&quot;)]
+public static implicit operator XMVector(XMUDecN4 value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2734,7 +2747,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator uint(XMUDecN4 value)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Usage&quot;, &quot;CA2225:Les surcharges d&#39;op&#233;rateur offrent d&#39;autres m&#233;thodes nomm&#233;es&quot;, Justification = &quot;Reviewed.&quot;)]
+public static implicit operator uint(XMUDecN4 value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2784,7 +2798,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator XMUDecN4(XMVector value)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Usage&quot;, &quot;CA2225:Les surcharges d&#39;op&#233;rateur offrent d&#39;autres m&#233;thodes nomm&#233;es&quot;, Justification = &quot;Reviewed.&quot;)]
+public static implicit operator XMUDecN4(XMVector value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2834,7 +2849,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator XMUDecN4(uint value)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Usage&quot;, &quot;CA2225:Les surcharges d&#39;op&#233;rateur offrent d&#39;autres m&#233;thodes nomm&#233;es&quot;, Justification = &quot;Reviewed.&quot;)]
+public static implicit operator XMUDecN4(uint value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">

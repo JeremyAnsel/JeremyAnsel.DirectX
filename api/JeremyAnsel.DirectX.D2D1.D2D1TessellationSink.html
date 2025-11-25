@@ -749,6 +749,9 @@
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html" title="D3D11SubResourceData" class="">D3D11SubResourceData</a>
                           </li>
                           <li class="">
+                            <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.html" title="D3D11SubResourceDataPtr" class="">D3D11SubResourceDataPtr</a>
+                          </li>
+                          <li class="">
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html" title="D3D11Texture1D" class="">D3D11Texture1D</a>
                           </li>
                           <li class="">
@@ -2123,7 +2126,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddTriangles(D2D1Triangle[]? triangles)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Reliability&quot;, &quot;CA2010:Toujours consommer la valeur retourn&#233;e par les m&#233;thodes marqu&#233;es avec PreserveSigAttribute&quot;, Justification = &quot;Reviewed.&quot;)]
+public void AddTriangles(D2D1Triangle[]? triangles)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2173,7 +2177,9 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1063:ImplementIDisposableCorrectly&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Usage&quot;, &quot;CA1816:CallGCSuppressFinalizeCorrectly&quot;, Justification = &quot;Reviewed&quot;)]
+public void Dispose()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>

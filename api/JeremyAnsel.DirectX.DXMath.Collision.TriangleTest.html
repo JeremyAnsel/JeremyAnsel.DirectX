@@ -749,6 +749,9 @@
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html" title="D3D11SubResourceData" class="">D3D11SubResourceData</a>
                           </li>
                           <li class="">
+                            <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.html" title="D3D11SubResourceDataPtr" class="">D3D11SubResourceDataPtr</a>
+                          </li>
+                          <li class="">
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html" title="D3D11Texture1D" class="">D3D11Texture1D</a>
                           </li>
                           <li class="">
@@ -2328,7 +2331,10 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Intersects(XMVector a0, XMVector a1, XMVector a2, XMVector b0, XMVector b1, XMVector b2)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Performance&quot;, &quot;CA1809:AvoidExcessiveLocals&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Maintainability&quot;, &quot;CA1502:AvoidExcessiveComplexity&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Maintainability&quot;, &quot;CA1505:AvoidUnmaintainableCode&quot;, Justification = &quot;Reviewed&quot;)]
+public static bool Intersects(XMVector a0, XMVector a1, XMVector a2, XMVector b0, XMVector b1, XMVector b2)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2408,7 +2414,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float distance)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1021:AvoidOutParameters&quot;, MessageId = &quot;5#&quot;, Justification = &quot;Reviewed&quot;)]
+public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float distance)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2488,7 +2495,10 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float coordinateU, out float coordinateV, out float distance)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1021:AvoidOutParameters&quot;, MessageId = &quot;5#&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1021:AvoidOutParameters&quot;, MessageId = &quot;6#&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1021:AvoidOutParameters&quot;, MessageId = &quot;7#&quot;, Justification = &quot;Reviewed&quot;)]
+public static bool Intersects(XMVector origin, XMVector direction, XMVector v0, XMVector v1, XMVector v2, out float coordinateU, out float coordinateV, out float distance)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">

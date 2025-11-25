@@ -749,6 +749,9 @@
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceData.html" title="D3D11SubResourceData" class="">D3D11SubResourceData</a>
                           </li>
                           <li class="">
+                            <a href="JeremyAnsel.DirectX.D3D11.D3D11SubResourceDataPtr.html" title="D3D11SubResourceDataPtr" class="">D3D11SubResourceDataPtr</a>
+                          </li>
+                          <li class="">
                             <a href="JeremyAnsel.DirectX.D3D11.D3D11Texture1D.html" title="D3D11Texture1D" class="">D3D11Texture1D</a>
                           </li>
                           <li class="">
@@ -2523,7 +2526,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1011:ConsiderPassingBaseTypesAsParameters&quot;, Justification = &quot;Reviewed&quot;)]
+public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2579,7 +2583,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface1? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1011:ConsiderPassingBaseTypesAsParameters&quot;, Justification = &quot;Reviewed&quot;)]
+public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface1? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2635,7 +2640,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface2? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1011:ConsiderPassingBaseTypesAsParameters&quot;, Justification = &quot;Reviewed&quot;)]
+public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface2? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -2691,7 +2697,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface3? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1011:ConsiderPassingBaseTypesAsParameters&quot;, Justification = &quot;Reviewed&quot;)]
+public D2D1RenderTarget? CreateDxgiSurfaceRenderTarget(DxgiSurface3? dxgiSurface, D2D1RenderTargetProperties renderTargetProperties)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3097,7 +3104,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1TransformedGeometry? CreateTransformedGeometry(D2D1Geometry? sourceGeometry, D2D1Matrix3X2F transform)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1011:ConsiderPassingBaseTypesAsParameters&quot;, Justification = &quot;Reviewed&quot;)]
+public D2D1TransformedGeometry? CreateTransformedGeometry(D2D1Geometry? sourceGeometry, D2D1Matrix3X2F transform)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -3209,7 +3217,9 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1063:ImplementIDisposableCorrectly&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Usage&quot;, &quot;CA1816:CallGCSuppressFinalizeCorrectly&quot;, Justification = &quot;Reviewed&quot;)]
+public void Dispose()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -3225,7 +3235,10 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GetDesktopDpi(out float dpiX, out float dpiY)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1021:AvoidOutParameters&quot;, MessageId = &quot;0#&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1021:AvoidOutParameters&quot;, MessageId = &quot;1#&quot;, Justification = &quot;Reviewed&quot;)]
+[SuppressMessage(&quot;Reliability&quot;, &quot;CA2010:Toujours consommer la valeur retourn&#233;e par les m&#233;thodes marqu&#233;es avec PreserveSigAttribute&quot;, Justification = &quot;Reviewed.&quot;)]
+public void GetDesktopDpi(out float dpiX, out float dpiY)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
