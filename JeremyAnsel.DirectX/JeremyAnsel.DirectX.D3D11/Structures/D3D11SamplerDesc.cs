@@ -190,7 +190,7 @@ namespace JeremyAnsel.DirectX.D3D11
         /// <summary>
         /// Gets or sets the offset from the calculated mipmap level.
         /// </summary>
-        public float MipLoadBias
+        public float MipLodBias
         {
             get { return this.mipLodBias; }
             set { this.mipLodBias = value; }
