@@ -525,7 +525,7 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces
             [In] uint destinationZ,
             [In] ID3D11Resource? sourceResource,
             [In] uint sourceSubresource,
-            [In] ref D3D11Box sourceBox);
+            [In] IntPtr sourceBox);
 
         /// <summary>
         /// Copy the entire contents of the source resource to the destination resource using the GPU.

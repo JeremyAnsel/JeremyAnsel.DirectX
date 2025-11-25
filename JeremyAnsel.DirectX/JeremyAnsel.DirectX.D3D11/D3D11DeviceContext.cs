@@ -946,7 +946,7 @@ namespace JeremyAnsel.DirectX.D3D11
             uint destinationZ,
             D3D11Resource? sourceResource,
             uint sourceSubresource,
-            D3D11Box sourceBox)
+            D3D11Box? sourceBox)
         {
             if (destinationResource == null)
             {
@@ -958,15 +958,39 @@ namespace JeremyAnsel.DirectX.D3D11
                 throw new ArgumentNullException(nameof(sourceResource));
             }
 
-            this.deviceContext.CopySubresourceRegion(
-                destinationResource.GetHandle<ID3D11Resource>(),
-                destinationSubresource,
-                destinationX,
-                destinationY,
-                destinationZ,
-                sourceResource.GetHandle<ID3D11Resource>(),
-                sourceSubresource,
-                ref sourceBox);
+            if (sourceBox == null)
+            {
+                this.deviceContext.CopySubresourceRegion(
+                    destinationResource.GetHandle<ID3D11Resource>(),
+                    destinationSubresource,
+                    destinationX,
+                    destinationY,
+                    destinationZ,
+                    sourceResource.GetHandle<ID3D11Resource>(),
+                    sourceSubresource,
+                    IntPtr.Zero);
+            }
+            else
+            {
+                GCHandle sourceBoxHandle = GCHandle.Alloc(sourceBox.Value, GCHandleType.Pinned);
+
+                try
+                {
+                    this.deviceContext.CopySubresourceRegion(
+                        destinationResource.GetHandle<ID3D11Resource>(),
+                        destinationSubresource,
+                        destinationX,
+                        destinationY,
+                        destinationZ,
+                        sourceResource.GetHandle<ID3D11Resource>(),
+                        sourceSubresource,
+                        sourceBoxHandle.AddrOfPinnedObject());
+                }
+                finally
+                {
+                    sourceBoxHandle.Free();
+                }
+            }
         }
 
         /// <summary>
