@@ -16,7 +16,6 @@ namespace JeremyAnsel.DirectX.DWrite
         /// </summary>
         /// <typeparam name="T">A releasable type.</typeparam>
         /// <param name="o">The object.</param>
-        [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference", MessageId = "0#", Justification = "Reviewed")]
         public static void DisposeAndNull<T>(ref T? o) where T : class, IDWriteReleasable
         {
             if (o != null)
@@ -27,17 +26,52 @@ namespace JeremyAnsel.DirectX.DWrite
         }
 
         /// <summary>
+        /// Immediately releases the unmanaged resources.
+        /// </summary>
+        /// <typeparam name="T">A releasable type.</typeparam>
+        /// <param name="array">The objects.</param>
+        public static void DisposeAndNull<T>(T?[]? array) where T : class, IDWriteReleasable
+        {
+            if (array is null)
+            {
+                return;
+            }
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                DisposeAndNull(ref array[i]);
+            }
+        }
+
+        /// <summary>
         /// Releases the managed reference to the COM interface.
         /// </summary>
         /// <typeparam name="T">A releasable type.</typeparam>
         /// <param name="o">The COM interface.</param>
-        [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference", MessageId = "0#", Justification = "Reviewed")]
         public static void ReleaseAndNull<T>(ref T? o) where T : class, IDWriteReleasable
         {
             if (o != null)
             {
                 o.Release();
                 o = null;
+            }
+        }
+
+        /// <summary>
+        /// Releases the managed reference to the COM interface.
+        /// </summary>
+        /// <typeparam name="T">A releasable type.</typeparam>
+        /// <param name="array">The COM interfaces.</param>
+        public static void ReleaseAndNull<T>(T?[]? array) where T : class, IDWriteReleasable
+        {
+            if (array is null)
+            {
+                return;
+            }
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                ReleaseAndNull(ref array[i]);
             }
         }
     }
