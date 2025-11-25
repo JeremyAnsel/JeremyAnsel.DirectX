@@ -268,7 +268,7 @@ namespace JeremyAnsel.DirectX.DWrite
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public DWriteTextFormat? CreateTextFormat(
             string fontFamilyName,
-            DWriteFontCollection fontCollection,
+            DWriteFontCollection? fontCollection,
             DWriteFontWeight fontWeight,
             DWriteFontStyle fontStyle,
             DWriteFontStretch fontStretch,
