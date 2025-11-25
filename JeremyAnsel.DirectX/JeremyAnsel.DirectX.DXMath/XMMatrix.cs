@@ -956,6 +956,33 @@ namespace JeremyAnsel.DirectX.DXMath
         }
 
         /// <summary>
+        /// Builds a matrix that scales along the x-axis, y-axis, and z-axis.
+        /// </summary>
+        /// <param name="scale">Scaling factor along the x-axis, y-axis and z-axis.</param>
+        /// <returns>Returns the scaling matrix.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static XMMatrix Scaling(float scale)
+        {
+            return new XMMatrix(
+                scale,
+                0.0f,
+                0.0f,
+                0.0f,
+                0.0f,
+                scale,
+                0.0f,
+                0.0f,
+                0.0f,
+                0.0f,
+                scale,
+                0.0f,
+                0.0f,
+                0.0f,
+                0.0f,
+                1.0f);
+        }
+
+        /// <summary>
         /// Builds a scaling matrix from a 3D vector.
         /// </summary>
         /// <param name="scale">3D vector describing the scaling along the x-axis, y-axis, and z-axis.</param>
