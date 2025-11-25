@@ -6,6 +6,7 @@ namespace JeremyAnsel.DirectX.DXMath
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
+    using System.Globalization;
     using System.Runtime.CompilerServices;
     using System.Runtime.InteropServices;
     using JeremyAnsel.DirectX.DXMath.PackedVector;
@@ -14,7 +15,7 @@ namespace JeremyAnsel.DirectX.DXMath
     /// A vector of four 32-bit floating-point or integer components.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct XMVector : IEquatable<XMVector>
+    public unsafe struct XMVector : IEquatable<XMVector>, IFormattable
     {
         /// <summary>
         /// The x component.
@@ -4335,6 +4336,28 @@ namespace JeremyAnsel.DirectX.DXMath
             float poly = ((((((((0.0208351f * y2) - 0.085133f) * y2) + 0.180141f) * y2) - 0.3302995f) * y2) + 0.999866f) * y;
 
             return sign == 0.0f ? poly : ((sign * XMMath.PIDivTwo) - poly);
+        }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return ToString("F2", CultureInfo.InvariantCulture);
+        }
+
+        /// <inheritdoc/>
+        public string ToString(string? format, IFormatProvider? formatProvider)
+        {
+            return string.Concat(
+                "(",
+                x.ToString(format, formatProvider),
+                ";",
+                y.ToString(format, formatProvider),
+                ";",
+                z.ToString(format, formatProvider),
+                ";",
+                w.ToString(format, formatProvider),
+                ")"
+                );
         }
     }
 }

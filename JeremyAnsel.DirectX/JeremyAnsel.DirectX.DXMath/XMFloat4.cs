@@ -6,6 +6,7 @@ namespace JeremyAnsel.DirectX.DXMath
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
+    using System.Globalization;
     using System.Runtime.CompilerServices;
     using System.Runtime.InteropServices;
 
@@ -13,7 +14,7 @@ namespace JeremyAnsel.DirectX.DXMath
     /// A 4D vector consisting of four single-precision floating-point values.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    public struct XMFloat4 : IEquatable<XMFloat4>
+    public struct XMFloat4 : IEquatable<XMFloat4>, IFormattable
     {
         /// <summary>
         /// The x-coordinate of the vector.
@@ -231,6 +232,28 @@ namespace JeremyAnsel.DirectX.DXMath
         public XMVector ToVector()
         {
             return this;
+        }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return ToString("F2", CultureInfo.InvariantCulture);
+        }
+
+        /// <inheritdoc/>
+        public string ToString(string? format, IFormatProvider? formatProvider)
+        {
+            return string.Concat(
+                "(",
+                x.ToString(format, formatProvider),
+                ";",
+                y.ToString(format, formatProvider),
+                ";",
+                z.ToString(format, formatProvider),
+                ";",
+                w.ToString(format, formatProvider),
+                ")"
+                );
         }
     }
 }

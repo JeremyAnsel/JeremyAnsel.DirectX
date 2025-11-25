@@ -6,6 +6,7 @@ namespace JeremyAnsel.DirectX.DXMath
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
+    using System.Globalization;
     using System.Runtime.CompilerServices;
     using System.Runtime.InteropServices;
 
@@ -14,7 +15,7 @@ namespace JeremyAnsel.DirectX.DXMath
     /// </summary>
     [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "XMU", Justification = "Reviewed")]
     [StructLayout(LayoutKind.Sequential)]
-    public struct XMUInt2 : IEquatable<XMUInt2>
+    public struct XMUInt2 : IEquatable<XMUInt2>, IFormattable
     {
         /// <summary>
         /// The x-coordinate of the vector.
@@ -190,6 +191,24 @@ namespace JeremyAnsel.DirectX.DXMath
         public XMVector ToVector()
         {
             return this;
+        }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return ToString(null, CultureInfo.InvariantCulture);
+        }
+
+        /// <inheritdoc/>
+        public string ToString(string? format, IFormatProvider? formatProvider)
+        {
+            return string.Concat(
+                "(",
+                x.ToString(format, formatProvider),
+                ";",
+                y.ToString(format, formatProvider),
+                ")"
+                );
         }
     }
 }

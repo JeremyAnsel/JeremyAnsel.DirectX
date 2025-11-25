@@ -6,6 +6,7 @@ namespace JeremyAnsel.DirectX.DXMath
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
+    using System.Globalization;
     using System.Runtime.CompilerServices;
     using System.Runtime.InteropServices;
 
@@ -13,7 +14,7 @@ namespace JeremyAnsel.DirectX.DXMath
     /// A 2D vector where each component is a signed integer.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    public struct XMInt2 : IEquatable<XMInt2>
+    public struct XMInt2 : IEquatable<XMInt2>, IFormattable
     {
         /// <summary>
         /// The x-coordinate of the vector.
@@ -189,6 +190,24 @@ namespace JeremyAnsel.DirectX.DXMath
         public XMVector ToVector()
         {
             return this;
+        }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return ToString(null, CultureInfo.InvariantCulture);
+        }
+
+        /// <inheritdoc/>
+        public string ToString(string? format, IFormatProvider? formatProvider)
+        {
+            return string.Concat(
+                "(",
+                x.ToString(format, formatProvider),
+                ";",
+                y.ToString(format, formatProvider),
+                ")"
+                );
         }
     }
 }
