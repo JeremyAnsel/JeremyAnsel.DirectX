@@ -20,6 +20,11 @@ namespace JeremyAnsel.DirectX.D3D11
         private readonly Array data;
 
         /// <summary>
+        /// The initialization index.
+        /// </summary>
+        private readonly int index;
+
+        /// <summary>
         /// The distance (in bytes) from the beginning of one line of a texture to the next line.
         /// </summary>
         private readonly uint pitch;
@@ -37,6 +42,7 @@ namespace JeremyAnsel.DirectX.D3D11
         public D3D11SubResourceData(Array data, uint pitch)
         {
             this.data = data;
+            this.index = 0;
             this.pitch = pitch;
             this.slicePitch = 0;
         }
@@ -50,6 +56,22 @@ namespace JeremyAnsel.DirectX.D3D11
         public D3D11SubResourceData(Array data, uint pitch, uint slicePitch)
         {
             this.data = data;
+            this.index = 0;
+            this.pitch = pitch;
+            this.slicePitch = slicePitch;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="D3D11SubResourceData"/> struct.
+        /// </summary>
+        /// <param name="data">The initialization data.</param>
+        /// <param name="index">The initialization index.</param>
+        /// <param name="pitch">The distance (in bytes) from the beginning of one line of a texture to the next line.</param>
+        /// <param name="slicePitch">The distance (in bytes) from the beginning of one depth level to the next.</param>
+        public D3D11SubResourceData(Array data, int index, uint pitch, uint slicePitch)
+        {
+            this.data = data;
+            this.index = index;
             this.pitch = pitch;
             this.slicePitch = slicePitch;
         }
@@ -61,6 +83,14 @@ namespace JeremyAnsel.DirectX.D3D11
         public Array Data
         {
             get { return this.data; }
+        }
+
+        /// <summary>
+        /// Gets the initialization index.
+        /// </summary>
+        public int Index
+        {
+            get { return this.index; }
         }
 
         /// <summary>

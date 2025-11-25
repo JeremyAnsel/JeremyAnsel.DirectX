@@ -12,7 +12,7 @@ namespace JeremyAnsel.DirectX.D3D11
     /// Specifies a pointer to data for initializing a subresource.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    internal struct D3D11SubResourceDataPtr : IEquatable<D3D11SubResourceDataPtr>
+    public struct D3D11SubResourceDataPtr : IEquatable<D3D11SubResourceDataPtr>
     {
         /// <summary>
         /// A pointer to the initialization data.
@@ -28,6 +28,31 @@ namespace JeremyAnsel.DirectX.D3D11
         /// The distance (in bytes) from the beginning of one depth level to the next.
         /// </summary>
         private uint sysMemSlicePitch;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="D3D11SubResourceData"/> struct.
+        /// </summary>
+        /// <param name="data">The initialization data.</param>
+        /// <param name="pitch">The distance (in bytes) from the beginning of one line of a texture to the next line.</param>
+        public D3D11SubResourceDataPtr(IntPtr data, uint pitch)
+        {
+            this.sysMem = data;
+            this.sysMemPitch = pitch;
+            this.sysMemSlicePitch = 0;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="D3D11SubResourceData"/> struct.
+        /// </summary>
+        /// <param name="data">The initialization data.</param>
+        /// <param name="pitch">The distance (in bytes) from the beginning of one line of a texture to the next line.</param>
+        /// <param name="slicePitch">The distance (in bytes) from the beginning of one depth level to the next.</param>
+        public D3D11SubResourceDataPtr(IntPtr data, uint pitch, uint slicePitch)
+        {
+            this.sysMem = data;
+            this.sysMemPitch = pitch;
+            this.sysMemSlicePitch = slicePitch;
+        }
 
         /// <summary>
         /// Gets or sets a pointer to the initialization data.

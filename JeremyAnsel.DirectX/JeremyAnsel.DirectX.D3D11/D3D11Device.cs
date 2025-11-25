@@ -286,12 +286,43 @@ namespace JeremyAnsel.DirectX.D3D11
 
             D3D11SubResourceDataPtr resource = new D3D11SubResourceDataPtr
             {
-                SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data.Data, 0),
+                SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data.Data, data.Index),
                 SysMemPitch = data.Pitch,
                 SysMemSlicePitch = data.SlicePitch
             };
 
             GCHandle resourceHandle = GCHandle.Alloc(resource, GCHandleType.Pinned);
+
+            try
+            {
+                buffer = this.device.CreateBuffer(ref desc, resourceHandle.AddrOfPinnedObject());
+            }
+            finally
+            {
+                resourceHandle.Free();
+            }
+
+            if (buffer == null)
+            {
+                return null;
+            }
+
+            return new D3D11Buffer(buffer);
+        }
+
+        /// <summary>
+        /// Creates a buffer (vertex buffer, index buffer, or shader constant buffer).
+        /// </summary>
+        /// <param name="desc">Describes the buffer.</param>
+        /// <param name="data">Describes the initialization data.</param>
+        /// <returns>The buffer object created.</returns>
+        [SuppressMessage("Microsoft.Reliability", "CA2000:Supprimer les objets avant la mise hors de portée", Justification = "Reviewed")]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Buffer? CreateBuffer(D3D11BufferDesc desc, D3D11SubResourceDataPtr data)
+        {
+            ID3D11Buffer? buffer;
+
+            GCHandle resourceHandle = GCHandle.Alloc(data, GCHandleType.Pinned);
 
             try
             {
@@ -477,12 +508,47 @@ namespace JeremyAnsel.DirectX.D3D11
 
                 for (int i = 0; i < length; i++)
                 {
-                    subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, 0);
+                    subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, data[i].Index);
                     subResources[i].SysMemPitch = data[i].Pitch;
                     subResources[i].SysMemSlicePitch = data[i].SlicePitch;
                 }
 
                 texture = this.device.CreateTexture1D(ref desc, subResources);
+            }
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture1D(texture);
+        }
+
+        /// <summary>
+        /// Creates an array of 1D textures.
+        /// </summary>
+        /// <param name="desc">Describes a 1D texture resource.</param>
+        /// <param name="data">Describe subresources for the 1D texture resource.</param>
+        /// <returns>The created texture.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Texture1D? CreateTexture1D(D3D11Texture1DDesc desc, D3D11SubResourceDataPtr[]? data)
+        {
+            ID3D11Texture1D? texture;
+
+            if (data == null)
+            {
+                texture = this.device.CreateTexture1D(ref desc, null);
+            }
+            else
+            {
+                int length = desc.MipLevels == 0 ? (int)desc.ArraySize : (int)(desc.MipLevels * desc.ArraySize);
+
+                if (data.Length != length)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(data));
+                }
+
+                texture = this.device.CreateTexture1D(ref desc, data);
             }
 
             if (texture == null)
@@ -539,12 +605,47 @@ namespace JeremyAnsel.DirectX.D3D11
 
                 for (int i = 0; i < length; i++)
                 {
-                    subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, 0);
+                    subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, data[i].Index);
                     subResources[i].SysMemPitch = data[i].Pitch;
                     subResources[i].SysMemSlicePitch = data[i].SlicePitch;
                 }
 
                 texture = this.device.CreateTexture2D(ref desc, subResources);
+            }
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture2D(texture);
+        }
+
+        /// <summary>
+        /// Create an array of 2D textures.
+        /// </summary>
+        /// <param name="desc">Describes a 2D texture resource.</param>
+        /// <param name="data">Describe subresources for the 2D texture resource.</param>
+        /// <returns>The created texture.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Texture2D? CreateTexture2D(D3D11Texture2DDesc desc, D3D11SubResourceDataPtr[]? data)
+        {
+            ID3D11Texture2D? texture;
+
+            if (data == null)
+            {
+                texture = this.device.CreateTexture2D(ref desc, null);
+            }
+            else
+            {
+                int length = desc.MipLevels == 0 ? (int)desc.ArraySize : (int)(desc.MipLevels * desc.ArraySize);
+
+                if (data.Length != length)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(data));
+                }
+
+                texture = this.device.CreateTexture2D(ref desc, data);
             }
 
             if (texture == null)
@@ -601,12 +702,47 @@ namespace JeremyAnsel.DirectX.D3D11
 
                 for (int i = 0; i < length; i++)
                 {
-                    subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, 0);
+                    subResources[i].SysMem = Marshal.UnsafeAddrOfPinnedArrayElement(data[i].Data, data[i].Index);
                     subResources[i].SysMemPitch = data[i].Pitch;
                     subResources[i].SysMemSlicePitch = data[i].SlicePitch;
                 }
 
                 texture = this.device.CreateTexture3D(ref desc, subResources);
+            }
+
+            if (texture == null)
+            {
+                return null;
+            }
+
+            return new D3D11Texture3D(texture);
+        }
+
+        /// <summary>
+        /// Create a single 3D texture.
+        /// </summary>
+        /// <param name="desc">Describes a 3D texture resource.</param>
+        /// <param name="data">Describe subresources for the 3D texture resource.</param>
+        /// <returns>The created texture.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public D3D11Texture3D? CreateTexture3D(D3D11Texture3DDesc desc, D3D11SubResourceDataPtr[]? data)
+        {
+            ID3D11Texture3D? texture;
+
+            if (data == null)
+            {
+                texture = this.device.CreateTexture3D(ref desc, null);
+            }
+            else
+            {
+                int length = desc.MipLevels == 0 ? 1 : (int)desc.MipLevels;
+
+                if (data.Length != length)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(data));
+                }
+
+                texture = this.device.CreateTexture3D(ref desc, data);
             }
 
             if (texture == null)
