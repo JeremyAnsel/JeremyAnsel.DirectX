@@ -1,0 +1,22 @@
+﻿// <copyright file="D3D11AsyncGetDataOptions.cs" company="Jérémy Ansel">
+// Copyright (c) 2014-2026 Jérémy Ansel
+// </copyright>
+
+namespace JeremyAnsel.DirectX.D3D11;
+
+/// <summary>
+/// Optional flags that control the behavior of GetData.
+/// </summary>
+[Flags]
+public enum D3D11AsyncGetDataOptions
+{
+    /// <summary>
+    /// No option.
+    /// </summary>
+    None = 0,
+
+    /// <summary>
+    /// Do not flush the command buffer. This can potentially cause an infinite loop.
+    /// </summary>
+    DoNotFlush = 0x1,
+}

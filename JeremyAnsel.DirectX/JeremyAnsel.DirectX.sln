@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37216.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentation\Documentation.csproj", "{98426E0F-B807-B916-F73B-2FDE25FA81C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.DXCommon", "JeremyAnsel.DirectX.DXCommon\JeremyAnsel.DirectX.DXCommon.csproj", "{F3E8AF91-BE19-6E57-9500-3F3FF2A25AF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D3DCompiler", "JeremyAnsel.DirectX.D3DCompiler\JeremyAnsel.DirectX.D3DCompiler.csproj", "{19B75B73-FC7B-D2D3-80C4-F59F5A3C29FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.DirectInput", "JeremyAnsel.DirectX.DirectInput\JeremyAnsel.DirectX.DirectInput.csproj", "{3A4735B5-DD0B-CA4C-C6EE-8278E7C4BBFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.DWrite", "JeremyAnsel.DirectX.DWrite\JeremyAnsel.DirectX.DWrite.csproj", "{CEEC0314-4AEB-4138-2294-22B8BA3502BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.Dxgi", "JeremyAnsel.DirectX.Dxgi\JeremyAnsel.DirectX.Dxgi.csproj", "{6C5765E1-5C3A-0C53-D09A-4A32788726A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.DXMath", "JeremyAnsel.DirectX.DXMath\JeremyAnsel.DirectX.DXMath.csproj", "{6FFEC121-EBA2-CEF3-5D32-C7A7599AF6DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.WinCodec", "JeremyAnsel.DirectX.WinCodec\JeremyAnsel.DirectX.WinCodec.csproj", "{E8E84A44-1A05-EA35-39A5-F8B27ECEF80E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D3D10", "JeremyAnsel.DirectX.D3D10\JeremyAnsel.DirectX.D3D10.csproj", "{A66B1E11-7B3C-F142-6A66-53F22260AF72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D3D11", "JeremyAnsel.DirectX.D3D11\JeremyAnsel.DirectX.D3D11.csproj", "{5FAAFD44-9B47-4CC9-D00D-77333E78516F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D2D1", "JeremyAnsel.DirectX.D2D1\JeremyAnsel.DirectX.D2D1.csproj", "{A8948E03-1DAC-1383-D813-8437100F94AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98426E0F-B807-B916-F73B-2FDE25FA81C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98426E0F-B807-B916-F73B-2FDE25FA81C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98426E0F-B807-B916-F73B-2FDE25FA81C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98426E0F-B807-B916-F73B-2FDE25FA81C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E8AF91-BE19-6E57-9500-3F3FF2A25AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E8AF91-BE19-6E57-9500-3F3FF2A25AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E8AF91-BE19-6E57-9500-3F3FF2A25AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E8AF91-BE19-6E57-9500-3F3FF2A25AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B75B73-FC7B-D2D3-80C4-F59F5A3C29FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B75B73-FC7B-D2D3-80C4-F59F5A3C29FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B75B73-FC7B-D2D3-80C4-F59F5A3C29FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B75B73-FC7B-D2D3-80C4-F59F5A3C29FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A4735B5-DD0B-CA4C-C6EE-8278E7C4BBFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A4735B5-DD0B-CA4C-C6EE-8278E7C4BBFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A4735B5-DD0B-CA4C-C6EE-8278E7C4BBFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A4735B5-DD0B-CA4C-C6EE-8278E7C4BBFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEEC0314-4AEB-4138-2294-22B8BA3502BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEEC0314-4AEB-4138-2294-22B8BA3502BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEEC0314-4AEB-4138-2294-22B8BA3502BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEEC0314-4AEB-4138-2294-22B8BA3502BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5765E1-5C3A-0C53-D09A-4A32788726A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5765E1-5C3A-0C53-D09A-4A32788726A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5765E1-5C3A-0C53-D09A-4A32788726A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5765E1-5C3A-0C53-D09A-4A32788726A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFEC121-EBA2-CEF3-5D32-C7A7599AF6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFEC121-EBA2-CEF3-5D32-C7A7599AF6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFEC121-EBA2-CEF3-5D32-C7A7599AF6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFEC121-EBA2-CEF3-5D32-C7A7599AF6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E84A44-1A05-EA35-39A5-F8B27ECEF80E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E84A44-1A05-EA35-39A5-F8B27ECEF80E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E84A44-1A05-EA35-39A5-F8B27ECEF80E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E84A44-1A05-EA35-39A5-F8B27ECEF80E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66B1E11-7B3C-F142-6A66-53F22260AF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66B1E11-7B3C-F142-6A66-53F22260AF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66B1E11-7B3C-F142-6A66-53F22260AF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66B1E11-7B3C-F142-6A66-53F22260AF72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FAAFD44-9B47-4CC9-D00D-77333E78516F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FAAFD44-9B47-4CC9-D00D-77333E78516F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FAAFD44-9B47-4CC9-D00D-77333E78516F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FAAFD44-9B47-4CC9-D00D-77333E78516F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8948E03-1DAC-1383-D813-8437100F94AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8948E03-1DAC-1383-D813-8437100F94AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8948E03-1DAC-1383-D813-8437100F94AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8948E03-1DAC-1383-D813-8437100F94AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC20D152-A439-4BA4-B683-53C9441FF90B}
+	EndGlobalSection
+EndGlobal
