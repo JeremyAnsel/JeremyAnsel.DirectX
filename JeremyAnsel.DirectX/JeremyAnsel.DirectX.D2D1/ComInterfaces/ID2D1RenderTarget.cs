@@ -122,7 +122,7 @@ internal unsafe readonly struct ID2D1RenderTarget
     /// <param name="brush">The brush used to paint the line's stroke.</param>
     /// <param name="strokeWidth">The width of the stroke, in device-independent pixels. The value must be greater than or equal to 0.0f. If this parameter isn't specified, it defaults to 1.0f. The stroke is centered on the line.</param>
     /// <param name="strokeStyle">The style of stroke to paint.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, float, float, float, nint, float, nint, void> DrawLine;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1Point2F, D2D1Point2F, nint, float, nint, void> DrawLine;
 
     /// <summary>
     /// Draws the outline of a rectangle that has the specified dimensions and stroke style.
@@ -235,7 +235,7 @@ internal unsafe readonly struct ID2D1RenderTarget
     /// <param name="textLayout">The formatted text to draw.</param>
     /// <param name="defaultForegroundBrush">The brush used to paint any text in textLayout that does not already have a brush associated with it as a drawing effect.</param>
     /// <param name="options">A value that indicates whether the text should be snapped to pixel boundaries and whether the text should be clipped to the layout rectangle.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, float, nint, nint, D2D1DrawTextOptions, void> DrawTextLayout;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1Point2F, nint, nint, D2D1DrawTextOptions, void> DrawTextLayout;
 
     /// <summary>
     /// Draws the specified glyphs.
@@ -244,7 +244,7 @@ internal unsafe readonly struct ID2D1RenderTarget
     /// <param name="glyphRun">The glyphs to render.</param>
     /// <param name="foregroundBrush">The brush used to paint the specified glyphs.</param>
     /// <param name="measuringMode">A value that indicates how glyph metrics are used to measure text when it is formatted.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, float, void*, nint, DWriteMeasuringMode, void> DrawGlyphRun;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1Point2F, void*, nint, DWriteMeasuringMode, void> DrawGlyphRun;
 
     /// <summary>
     /// Applies the specified transform to the render target, replacing the existing transformation. All subsequent drawing operations occur in the transformed space.

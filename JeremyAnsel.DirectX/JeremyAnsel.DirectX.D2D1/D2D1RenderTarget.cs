@@ -1004,7 +1004,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
             throw new ArgumentNullException(nameof(brush));
         }
 
-        _comImpl->DrawLine(_comPtr, point0.X, point0.Y, point1.X, point1.Y, brush.Handle, 1.0f, 0);
+        _comImpl->DrawLine(_comPtr, point0, point1, brush.Handle, 1.0f, 0);
     }
 
     /// <summary>
@@ -1021,7 +1021,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
             throw new ArgumentNullException(nameof(brush));
         }
 
-        _comImpl->DrawLine(_comPtr, point0.X, point0.Y, point1.X, point1.Y, brush.Handle, strokeWidth, 0);
+        _comImpl->DrawLine(_comPtr, point0, point1, brush.Handle, strokeWidth, 0);
     }
 
     /// <summary>
@@ -1040,7 +1040,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         }
 
         nint strokeStylePtr = strokeStyle is null ? 0 : strokeStyle.Handle;
-        _comImpl->DrawLine(_comPtr, point0.X, point0.Y, point1.X, point1.Y, brush.Handle, strokeWidth, strokeStylePtr);
+        _comImpl->DrawLine(_comPtr, point0, point1, brush.Handle, strokeWidth, strokeStylePtr);
     }
 
     /// <summary>
@@ -1729,7 +1729,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
             throw new ArgumentNullException(nameof(defaultForegroundBrush));
         }
 
-        _comImpl->DrawTextLayout(_comPtr, origin.X, origin.Y, textLayout.Handle, defaultForegroundBrush.Handle, D2D1DrawTextOptions.None);
+        _comImpl->DrawTextLayout(_comPtr, origin, textLayout.Handle, defaultForegroundBrush.Handle, D2D1DrawTextOptions.None);
     }
 
     /// <summary>
@@ -1751,7 +1751,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
             throw new ArgumentNullException(nameof(defaultForegroundBrush));
         }
 
-        _comImpl->DrawTextLayout(_comPtr, origin.X, origin.Y, textLayout.Handle, defaultForegroundBrush.Handle, options);
+        _comImpl->DrawTextLayout(_comPtr, origin, textLayout.Handle, defaultForegroundBrush.Handle, options);
     }
 
     /// <summary>
@@ -1770,7 +1770,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         int size = DWriteGlyphRun.NativeRequiredSize();
         byte* ptr = stackalloc byte[size];
         DWriteGlyphRun.NativeWriteTo((nint)ptr, glyphRun);
-        _comImpl->DrawGlyphRun(_comPtr, baselineOrigin.X, baselineOrigin.Y, ptr, foregroundBrush.Handle, DWriteMeasuringMode.Natural);
+        _comImpl->DrawGlyphRun(_comPtr, baselineOrigin, ptr, foregroundBrush.Handle, DWriteMeasuringMode.Natural);
     }
 
     /// <summary>
@@ -1790,7 +1790,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         int size = DWriteGlyphRun.NativeRequiredSize();
         byte* ptr = stackalloc byte[size];
         DWriteGlyphRun.NativeWriteTo((nint)ptr, glyphRun);
-        _comImpl->DrawGlyphRun(_comPtr, baselineOrigin.X, baselineOrigin.Y, ptr, foregroundBrush.Handle, measuringMode);
+        _comImpl->DrawGlyphRun(_comPtr, baselineOrigin, ptr, foregroundBrush.Handle, measuringMode);
     }
 
     /// <summary>
