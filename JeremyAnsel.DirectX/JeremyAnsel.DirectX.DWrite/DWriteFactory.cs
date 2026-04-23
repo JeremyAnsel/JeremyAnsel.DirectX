@@ -320,9 +320,16 @@ public unsafe class DWriteFactory : DXComObject
         fixed (char* fontFamilyNamePtr = fontFamilyName)
         fixed (char* localeNamePtr = localeName)
         {
+            char* locale = stackalloc char[1];
+            locale[0] = '\0';
+            if (localeNamePtr != null)
+            {
+                locale = localeNamePtr;
+            }
+
             nint fontCollectionPtr = fontCollection is null ? 0 : fontCollection.Handle;
             nint ptr;
-            int hr = _comImpl->CreateTextFormat(_comPtr, fontFamilyNamePtr, fontCollectionPtr, fontWeight, fontStyle, fontStretch, fontSize, localeNamePtr, &ptr);
+            int hr = _comImpl->CreateTextFormat(_comPtr, fontFamilyNamePtr, fontCollectionPtr, fontWeight, fontStyle, fontStretch, fontSize, locale, &ptr);
             Marshal.ThrowExceptionForHR(hr);
             return new DWriteTextFormat(ptr);
         }

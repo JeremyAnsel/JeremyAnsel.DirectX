@@ -105,7 +105,7 @@ public unsafe class WicBitmapDecoder : DXComObject
         nint ptr;
         int hr = _comImpl->GetPreview(_comPtr, &ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return new WicBitmapSource(hr);
+        return new WicBitmapSource(ptr);
     }
 
     /// <summary>

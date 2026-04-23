@@ -460,7 +460,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         nint ptr;
         int hr = _comImpl->CreateSolidColorBrush(_comPtr, colorPtr, null, &ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return new D2D1SolidColorBrush(hr);
+        return new D2D1SolidColorBrush(ptr);
     }
 
     /// <summary>
@@ -480,7 +480,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         nint ptr;
         int hr = _comImpl->CreateSolidColorBrush(_comPtr, colorPtr, brushPropertiesPtr, &ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return new D2D1SolidColorBrush(hr);
+        return new D2D1SolidColorBrush(ptr);
     }
 
     /// <summary>
@@ -626,7 +626,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         nint ptr;
         int hr = _comImpl->CreateRadialGradientBrush(_comPtr, radialGradientBrushPropertiesPtr, null, gradientStopCollection.Handle, &ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return new D2D1RadialGradientBrush(hr);
+        return new D2D1RadialGradientBrush(ptr);
     }
 
     /// <summary>
@@ -652,7 +652,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         nint ptr;
         int hr = _comImpl->CreateRadialGradientBrush(_comPtr, radialGradientBrushPropertiesPtr, brushPropertiesPtr, gradientStopCollection.Handle, &ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return new D2D1RadialGradientBrush(hr);
+        return new D2D1RadialGradientBrush(ptr);
     }
 
     /// <summary>

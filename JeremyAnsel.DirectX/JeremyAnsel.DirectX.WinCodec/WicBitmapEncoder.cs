@@ -69,7 +69,7 @@ public unsafe class WicBitmapEncoder : DXComObject
         nint ptr;
         int hr = _comImpl->GetEncoderInfo(_comPtr, &ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return new WicBitmapEncoderInfo(hr);
+        return new WicBitmapEncoderInfo(ptr);
     }
 
     /// <summary>

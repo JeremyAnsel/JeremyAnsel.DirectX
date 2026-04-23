@@ -372,7 +372,7 @@ public unsafe class D2D1Factory : DXComObject
         nint ptr;
         int hr = _comImpl->CreateHwndRenderTarget(_comPtr, renderTargetPropertiesPtr, hwndRenderTargetPropertiesPtr, &ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return new D2D1HwndRenderTarget(hr);
+        return new D2D1HwndRenderTarget(ptr);
     }
 
     /// <summary>

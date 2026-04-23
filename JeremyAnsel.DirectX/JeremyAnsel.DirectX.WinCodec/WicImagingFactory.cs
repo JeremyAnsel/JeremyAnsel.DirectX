@@ -177,7 +177,7 @@ public unsafe class WicImagingFactory : DXComObject
         nint ptr;
         int hr = _comImpl->CreatePalette(_comPtr, &ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return new WicPalette(hr);
+        return new WicPalette(ptr);
     }
 
     /// <summary>
@@ -279,7 +279,7 @@ public unsafe class WicImagingFactory : DXComObject
         nint ptr;
         int hr = _comImpl->CreateBitmapFromSource(_comPtr, pIBitmapSource.Handle, option, &ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return new WicBitmap(hr);
+        return new WicBitmap(ptr);
     }
 
     /// <summary>
