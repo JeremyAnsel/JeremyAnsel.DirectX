@@ -64,7 +64,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (constantBuffers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(constantBuffers));
+            return;
         }
 
         nint* buffers = stackalloc nint[constantBuffers.Length];
@@ -107,7 +107,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (shaderResourceViews.Length == 0)
         {
-            throw new ArgumentNullException(nameof(shaderResourceViews));
+            return;
         }
 
         nint* views = stackalloc nint[shaderResourceViews.Length];
@@ -200,7 +200,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (samplers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(samplers));
+            return;
         }
 
         nint* samplersPtr = stackalloc nint[samplers.Length];
@@ -355,7 +355,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (constantBuffers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(constantBuffers));
+            return;
         }
 
         nint* buffers = stackalloc nint[constantBuffers.Length];
@@ -411,7 +411,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (vertexBuffers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(vertexBuffers));
+            return;
         }
 
         if (strides.Length == 0)
@@ -480,7 +480,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (vertexBuffers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(vertexBuffers));
+            return;
         }
 
         nint* buffers = stackalloc nint[vertexBuffers.Length];
@@ -587,7 +587,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (constantBuffers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(constantBuffers));
+            return;
         }
 
         nint* buffers = stackalloc nint[constantBuffers.Length];
@@ -678,7 +678,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (shaderResourceViews.Length == 0)
         {
-            throw new ArgumentNullException(nameof(shaderResourceViews));
+            return;
         }
 
         nint* views = stackalloc nint[shaderResourceViews.Length];
@@ -721,7 +721,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (samplers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(samplers));
+            return;
         }
 
         nint* samplersPtr = stackalloc nint[samplers.Length];
@@ -867,7 +867,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (shaderResourceViews.Length == 0)
         {
-            throw new ArgumentNullException(nameof(shaderResourceViews));
+            return;
         }
 
         nint* views = stackalloc nint[shaderResourceViews.Length];
@@ -910,7 +910,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (samplers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(samplers));
+            return;
         }
 
         nint* samplersPtr = stackalloc nint[samplers.Length];
@@ -1278,7 +1278,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (viewports.Length == 0)
         {
-            throw new ArgumentNullException(nameof(viewports));
+            return;
         }
 
         int size = D3D11Viewport.NativeRequiredSize(viewports.Length);
@@ -1316,7 +1316,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (rects.Length == 0)
         {
-            throw new ArgumentNullException(nameof(rects));
+            return;
         }
 
         int size = D3D11Rect.NativeRequiredSize(rects.Length);
@@ -1881,7 +1881,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (shaderResourceViews.Length == 0)
         {
-            throw new ArgumentNullException(nameof(shaderResourceViews));
+            return;
         }
 
         nint* views = stackalloc nint[shaderResourceViews.Length];
@@ -1974,7 +1974,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (samplers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(samplers));
+            return;
         }
 
         nint* samplersPtr = stackalloc nint[samplers.Length];
@@ -2017,7 +2017,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (constantBuffers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(constantBuffers));
+            return;
         }
 
         nint* buffers = stackalloc nint[constantBuffers.Length];
@@ -2060,7 +2060,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (shaderResourceViews.Length == 0)
         {
-            throw new ArgumentNullException(nameof(shaderResourceViews));
+            return;
         }
 
         nint* views = stackalloc nint[shaderResourceViews.Length];
@@ -2153,7 +2153,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (samplers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(samplers));
+            return;
         }
 
         nint* samplersPtr = stackalloc nint[samplers.Length];
@@ -2196,7 +2196,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (constantBuffers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(constantBuffers));
+            return;
         }
 
         nint* buffers = stackalloc nint[constantBuffers.Length];
@@ -2239,7 +2239,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (shaderResourceViews.Length == 0)
         {
-            throw new ArgumentNullException(nameof(shaderResourceViews));
+            return;
         }
 
         nint* views = stackalloc nint[shaderResourceViews.Length];
@@ -2284,7 +2284,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (unorderedAccessViews.Length == 0)
         {
-            throw new ArgumentNullException(nameof(unorderedAccessViews));
+            return;
         }
 
         if (uavInitialCounts.Length == 0)
@@ -2391,7 +2391,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (samplers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(samplers));
+            return;
         }
 
         nint* samplersPtr = stackalloc nint[samplers.Length];
@@ -2434,7 +2434,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         if (constantBuffers.Length == 0)
         {
-            throw new ArgumentNullException(nameof(constantBuffers));
+            return;
         }
 
         nint* buffers = stackalloc nint[constantBuffers.Length];
