@@ -314,10 +314,11 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
             throw new ArgumentNullException(nameof(resource));
         }
 
-        nint ptr;
-        int hr = _comImpl->Map(_comPtr, resource.Handle, subresource, cpuPermission, options, &ptr);
+        int size = D3D11MappedSubResource.NativeRequiredSize();
+        byte* ptr = stackalloc byte[size];
+        int hr = _comImpl->Map(_comPtr, resource.Handle, subresource, cpuPermission, options, ptr);
         Marshal.ThrowExceptionForHR(hr);
-        return D3D11MappedSubResource.NativeReadFrom(ptr);
+        return D3D11MappedSubResource.NativeReadFrom((nint)ptr);
     }
 
     /// <summary>

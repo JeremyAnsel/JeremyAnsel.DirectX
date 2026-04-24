@@ -85,7 +85,7 @@ internal unsafe readonly struct ID3D11DeviceContext
     /// <param name="mapType">The CPU's read and write permissions for a resource.</param>
     /// <param name="mapOptions">Specifies what the CPU does when the GPU is busy.</param>
     /// <returns>The mapped subresource.</returns>
-    public readonly delegate* unmanaged[Stdcall]<nint, nint, uint, D3D11MapCpuPermission, D3D11MapOptions, nint*, int> Map;
+    public readonly delegate* unmanaged[Stdcall]<nint, nint, uint, D3D11MapCpuPermission, D3D11MapOptions, void*, int> Map;
 
     /// <summary>
     /// Invalidate the pointer to a resource and reenable the GPU's access to that resource.
