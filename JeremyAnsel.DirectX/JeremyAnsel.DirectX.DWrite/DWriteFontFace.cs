@@ -87,7 +87,7 @@ public unsafe class DWriteFontFace : DXComObject
     /// </summary>
     public uint GetFilesCount()
     {
-        uint count;
+        uint count = 0;
         int hr = _comImpl->GetFiles(_comPtr, &count, null);
         Marshal.ThrowExceptionForHR(hr);
         return count;

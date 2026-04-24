@@ -114,7 +114,7 @@ public unsafe class WicPalette : DXComObject
     /// <exception cref="ObjectDisposedException"></exception>
     public uint GetColorCount()
     {
-        uint count;
+        uint count = 0;
         int hr = _comImpl->GetColorCount(_comPtr, &count);
         Marshal.ThrowExceptionForHR(hr);
         return count;

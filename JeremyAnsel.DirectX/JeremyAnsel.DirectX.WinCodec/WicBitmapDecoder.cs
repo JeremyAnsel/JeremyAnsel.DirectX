@@ -170,7 +170,7 @@ public unsafe class WicBitmapDecoder : DXComObject
     /// <returns></returns>
     public uint GetFrameCount()
     {
-        uint count;
+        uint count = 0;
         int hr = _comImpl->GetFrameCount(_comPtr, &count);
         Marshal.ThrowExceptionForHR(hr);
         return count;

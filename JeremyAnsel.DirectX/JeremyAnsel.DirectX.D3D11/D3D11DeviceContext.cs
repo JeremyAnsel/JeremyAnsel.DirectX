@@ -3166,7 +3166,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     /// <returns></returns>
     public uint RasterizerStageGetViewportsCount()
     {
-        uint count;
+        uint count = 0;
         _comImpl->RasterizerStageGetViewports(_comPtr, &count, null);
         return count;
     }
@@ -3177,7 +3177,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     /// <returns>The viewports that are bound to the rasterizer stage.</returns>
     public D3D11Viewport[] RasterizerStageGetViewports()
     {
-        uint count;
+        uint count = 0;
         _comImpl->RasterizerStageGetViewports(_comPtr, &count, null);
         int size = D3D11Viewport.NativeRequiredSize((int)count);
         byte* ptr = stackalloc byte[size];
@@ -3193,7 +3193,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     /// <param name="viewports">The viewports that are bound to the rasterizer stage.</param>
     public void RasterizerStageGetViewports(Span<D3D11Viewport> viewports)
     {
-        uint count;
+        uint count = 0;
         _comImpl->RasterizerStageGetViewports(_comPtr, &count, null);
 
         if (viewports.Length > count)
@@ -3208,12 +3208,23 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    public uint RasterizerStageGetScissorRectsCount()
+    {
+        uint count = 0;
+        _comImpl->RasterizerStageGetScissorRects(_comPtr, &count, null);
+        return count;
+    }
+
+    /// <summary>
     /// Get the array of scissor rectangles bound to the rasterizer stage.
     /// </summary>
     /// <returns>An array of scissor rectangles.</returns>
     public D3D11Rect[] RasterizerStageGetScissorRects()
     {
-        uint count;
+        uint count = 0;
         _comImpl->RasterizerStageGetScissorRects(_comPtr, &count, null);
         int size = D3D11Rect.NativeRequiredSize((int)count);
         byte* ptr = stackalloc byte[size];
@@ -3229,7 +3240,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     /// <returns>An array of scissor rectangles.</returns>
     public void RasterizerStageGetScissorRects(Span<D3D11Rect> rects)
     {
-        uint count;
+        uint count = 0;
         _comImpl->RasterizerStageGetScissorRects(_comPtr, &count, null);
 
         if (rects.Length > count)
