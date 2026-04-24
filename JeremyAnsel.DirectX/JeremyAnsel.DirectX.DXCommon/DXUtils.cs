@@ -131,7 +131,7 @@ public unsafe static class DXUtils
     {
         fixed (char* ptr = buffer)
         {
-            NativeMethods.StrFormatByteSize(filesize, ptr, 32);
+            NativeMethods.StrFormatByteSize(filesize, ptr, buffer.Length);
         }
     }
 }
