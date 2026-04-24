@@ -32,6 +32,7 @@ public unsafe struct DxgiMappedRect : IEquatable<DxgiMappedRect>
         int size = 0;
         size += sizeof(int);
         size += sizeof(nint);
+        size += DXMarshal.PaddingSize();
         return size * count;
     }
 
@@ -61,6 +62,7 @@ public unsafe struct DxgiMappedRect : IEquatable<DxgiMappedRect>
             ref readonly var obj = ref objects[index];
 
             DXMarshal.Write(ref buffer, obj.pitch);
+            DXMarshal.WritePadding(ref buffer);
             DXMarshal.Write(ref buffer, obj.bitsPointer);
         }
     }
@@ -74,6 +76,7 @@ public unsafe struct DxgiMappedRect : IEquatable<DxgiMappedRect>
     {
         DxgiMappedRect obj;
         obj.pitch = DXMarshal.ReadInt32(ref buffer);
+        buffer += DXMarshal.PaddingSize();
         obj.bitsPointer = DXMarshal.ReadIntPtr(ref buffer);
         return obj;
     }

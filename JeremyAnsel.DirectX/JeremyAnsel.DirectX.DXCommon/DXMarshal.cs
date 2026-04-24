@@ -15,6 +15,30 @@ public static unsafe class DXMarshal
     /// <summary>
     /// 
     /// </summary>
+    /// <returns></returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static int PaddingSize()
+    {
+        return sizeof(nint) - 4;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="buffer"></param>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void WritePadding(ref nint buffer)
+    {
+        int size = PaddingSize();
+        for (int i = 0; i < size; i++)
+        {
+            Write(ref buffer, (byte)0);
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]

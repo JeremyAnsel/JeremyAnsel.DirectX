@@ -33,6 +33,7 @@ public unsafe struct D3D11DepthStencilDesc : IEquatable<D3D11DepthStencilDesc>
         size += sizeof(int) * 2;
         size += sizeof(int) * 2;
         size += sizeof(byte) * 2;
+        size += 2; // padding
         size += D3D11DepthStencilOperationDesc.NativeRequiredSize(2);
         return size * count;
     }
@@ -68,6 +69,8 @@ public unsafe struct D3D11DepthStencilDesc : IEquatable<D3D11DepthStencilDesc>
             DXMarshal.Write(ref buffer, obj.isStencilEnabled);
             DXMarshal.Write(ref buffer, obj.stencilReadMask);
             DXMarshal.Write(ref buffer, obj.stencilWriteMask);
+            DXMarshal.Write(ref buffer, (byte)0); // padding
+            DXMarshal.Write(ref buffer, (byte)0); // padding
             D3D11DepthStencilOperationDesc.NativeWriteTo(buffer, obj.frontFace);
             buffer += D3D11DepthStencilOperationDesc.NativeRequiredSize();
             D3D11DepthStencilOperationDesc.NativeWriteTo(buffer, obj.backFace);
@@ -89,6 +92,7 @@ public unsafe struct D3D11DepthStencilDesc : IEquatable<D3D11DepthStencilDesc>
         obj.isStencilEnabled = DXMarshal.ReadBool(ref buffer);
         obj.stencilReadMask = DXMarshal.ReadByte(ref buffer);
         obj.stencilWriteMask = DXMarshal.ReadByte(ref buffer);
+        buffer += 2;  // padding
         obj.frontFace = D3D11DepthStencilOperationDesc.NativeReadFrom(buffer);
         buffer += D3D11DepthStencilOperationDesc.NativeRequiredSize();
         obj.backFace = D3D11DepthStencilOperationDesc.NativeReadFrom(buffer);

@@ -33,6 +33,7 @@ public unsafe struct D3D11CounterInfo : IEquatable<D3D11CounterInfo>
         size += sizeof(int);
         size += sizeof(uint);
         size += sizeof(byte);
+        size += 3; // padding
         return size * count;
     }
 
@@ -64,6 +65,9 @@ public unsafe struct D3D11CounterInfo : IEquatable<D3D11CounterInfo>
             DXMarshal.Write(ref buffer, (int)obj.lastDeviceDependentCounter);
             DXMarshal.Write(ref buffer, obj.numSimultaneousCounters);
             DXMarshal.Write(ref buffer, obj.numDetectableParallelUnits);
+            DXMarshal.Write(ref buffer, (byte)0); // padding
+            DXMarshal.Write(ref buffer, (byte)0); // padding
+            DXMarshal.Write(ref buffer, (byte)0); // padding
         }
     }
 
@@ -78,6 +82,7 @@ public unsafe struct D3D11CounterInfo : IEquatable<D3D11CounterInfo>
         obj.lastDeviceDependentCounter = (D3D11CounterType)DXMarshal.ReadInt32(ref buffer);
         obj.numSimultaneousCounters = DXMarshal.ReadUnsignedInt32(ref buffer);
         obj.numDetectableParallelUnits = DXMarshal.ReadByte(ref buffer);
+        buffer += 3; // padding
         return obj;
     }
 

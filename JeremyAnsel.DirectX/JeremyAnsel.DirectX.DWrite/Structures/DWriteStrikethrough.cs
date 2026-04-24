@@ -35,6 +35,7 @@ public unsafe struct DWriteStrikethrough : IEquatable<DWriteStrikethrough>
         size += sizeof(float) * 3;
         size += sizeof(int) * 3; // enum
         size += sizeof(nint);
+        size += DXMarshal.PaddingSize() * 2;
         return size * count;
     }
 
@@ -68,8 +69,10 @@ public unsafe struct DWriteStrikethrough : IEquatable<DWriteStrikethrough>
             DXMarshal.Write(ref buffer, obj.offset);
             DXMarshal.Write(ref buffer, (int)obj.readingDirection);
             DXMarshal.Write(ref buffer, (int)obj.flowDirection);
+            DXMarshal.WritePadding(ref buffer);
             DXMarshal.Write(ref buffer, (nint)obj.localeName);
             DXMarshal.Write(ref buffer, (int)obj.measuringMode);
+            DXMarshal.WritePadding(ref buffer);
         }
     }
 
@@ -86,8 +89,10 @@ public unsafe struct DWriteStrikethrough : IEquatable<DWriteStrikethrough>
         obj.offset = DXMarshal.ReadSingle(ref buffer);
         obj.readingDirection = (DWriteReadingDirection)DXMarshal.ReadInt32(ref buffer);
         obj.flowDirection = (DWriteFlowDirection)DXMarshal.ReadInt32(ref buffer);
+        buffer += DXMarshal.PaddingSize();
         obj.localeName = (char*)DXMarshal.ReadIntPtr(ref buffer);
         obj.measuringMode = (DWriteMeasuringMode)DXMarshal.ReadInt32(ref buffer);
+        buffer += DXMarshal.PaddingSize();
         return obj;
     }
 

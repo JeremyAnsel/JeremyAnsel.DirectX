@@ -33,6 +33,7 @@ public unsafe struct DWriteGlyphRunDescription : IEquatable<DWriteGlyphRunDescri
         int size = 0;
         size += sizeof(nint) * 3;
         size += sizeof(uint) * 2;
+        size += DXMarshal.PaddingSize() * 2;
         return size * count;
     }
 
@@ -64,8 +65,10 @@ public unsafe struct DWriteGlyphRunDescription : IEquatable<DWriteGlyphRunDescri
             DXMarshal.Write(ref buffer, (nint)obj.localeName);
             DXMarshal.Write(ref buffer, (nint)obj.textString);
             DXMarshal.Write(ref buffer, (nint)obj.textLength);
+            DXMarshal.WritePadding(ref buffer);
             DXMarshal.Write(ref buffer, (nint)obj.clusterMap);
             DXMarshal.Write(ref buffer, obj.textPosition);
+            DXMarshal.WritePadding(ref buffer);
         }
     }
 
@@ -80,8 +83,10 @@ public unsafe struct DWriteGlyphRunDescription : IEquatable<DWriteGlyphRunDescri
         obj.localeName = (char*)DXMarshal.ReadIntPtr(ref buffer);
         obj.textString = (char*)DXMarshal.ReadIntPtr(ref buffer);
         obj.textLength = DXMarshal.ReadUnsignedInt32(ref buffer);
+        buffer += DXMarshal.PaddingSize();
         obj.clusterMap = (ushort*)DXMarshal.ReadIntPtr(ref buffer);
         obj.textPosition = DXMarshal.ReadUnsignedInt32(ref buffer);
+        buffer += DXMarshal.PaddingSize();
         return obj;
     }
 

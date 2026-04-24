@@ -41,8 +41,10 @@ public unsafe struct D3D11StreamOutputDeclarationEntry : IEquatable<D3D11StreamO
     {
         int size = 0;
         size += sizeof(uint) * 2;
+        size += DXMarshal.PaddingSize();
         size += sizeof(nint);
         size += sizeof(byte) * 3;
+        size += 1; // padding
         return size;
     }
 
@@ -74,12 +76,14 @@ public unsafe struct D3D11StreamOutputDeclarationEntry : IEquatable<D3D11StreamO
             ref readonly var obj = ref objects[index];
 
             DXMarshal.Write(ref buffer, obj.stream);
+            DXMarshal.WritePadding(ref buffer);
             int nameLength = obj.GetSemanticNameCharCount();
             DXMarshal.Write(ref buffer, nameLength == 0 ? 0 : (namesOffset + index * Buffer64.Length));
             DXMarshal.Write(ref buffer, obj.semanticIndex);
             DXMarshal.Write(ref buffer, obj.startComponent);
             DXMarshal.Write(ref buffer, obj.componentCount);
             DXMarshal.Write(ref buffer, obj.outputSlot);
+            DXMarshal.Write(ref buffer, (byte)0); // padding
         }
 
         for (int index = 0; index < objects.Length; index++)
@@ -103,6 +107,7 @@ public unsafe struct D3D11StreamOutputDeclarationEntry : IEquatable<D3D11StreamO
         D3D11StreamOutputDeclarationEntry obj = default;
 
         obj.stream = DXMarshal.ReadUnsignedInt32(ref buffer);
+        buffer += DXMarshal.PaddingSize();
 
         nint ptr = DXMarshal.ReadIntPtr(ref buffer);
         int bytesCount = ptr == 0 ? 0 : Math.Min(DXMarshal.GetNullTerminatedStringCountAnsi(ptr), Buffer64.Length - 1);
@@ -121,6 +126,7 @@ public unsafe struct D3D11StreamOutputDeclarationEntry : IEquatable<D3D11StreamO
         obj.startComponent = DXMarshal.ReadByte(ref buffer);
         obj.componentCount = DXMarshal.ReadByte(ref buffer);
         obj.outputSlot = DXMarshal.ReadByte(ref buffer);
+        buffer += 1; // padding
         return obj;
     }
 

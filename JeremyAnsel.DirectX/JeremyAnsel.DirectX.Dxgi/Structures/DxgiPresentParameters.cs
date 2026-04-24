@@ -32,6 +32,7 @@ public unsafe struct DxgiPresentParameters : IEquatable<DxgiPresentParameters>
         int size = 0;
         size += sizeof(int);
         size += sizeof(nint) * 3;
+        size += DXMarshal.PaddingSize();
         return size * count;
     }
 
@@ -62,6 +63,7 @@ public unsafe struct DxgiPresentParameters : IEquatable<DxgiPresentParameters>
             ref readonly var obj = ref objects[index];
 
             DXMarshal.Write(ref buffer, obj.dirtyRectsCount);
+            DXMarshal.WritePadding(ref buffer);
             DXMarshal.Write(ref buffer, obj.dirtyRects);
             DXMarshal.Write(ref buffer, obj.scrollRect);
             DXMarshal.Write(ref buffer, obj.scrollOffset);
@@ -77,6 +79,7 @@ public unsafe struct DxgiPresentParameters : IEquatable<DxgiPresentParameters>
     {
         DxgiPresentParameters obj;
         obj.dirtyRectsCount = DXMarshal.ReadUnsignedInt32(ref buffer);
+        buffer += DXMarshal.PaddingSize();
         obj.dirtyRects = DXMarshal.ReadIntPtr(ref buffer);
         obj.scrollRect = DXMarshal.ReadIntPtr(ref buffer);
         obj.scrollOffset = DXMarshal.ReadIntPtr(ref buffer);

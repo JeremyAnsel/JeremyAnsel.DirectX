@@ -35,6 +35,7 @@ public unsafe struct D2D1LayerParameters : IEquatable<D2D1LayerParameters>
         size += sizeof(int) * 2; // enum
         size += D2D1Matrix3X2F.NativeRequiredSize();
         size += sizeof(float);
+        size += DXMarshal.PaddingSize();
         return size * count;
     }
 
@@ -72,6 +73,7 @@ public unsafe struct D2D1LayerParameters : IEquatable<D2D1LayerParameters>
             DXMarshal.Write(ref buffer, obj.opacity);
             DXMarshal.Write(ref buffer, obj.opacityBrush);
             DXMarshal.Write(ref buffer, (int)obj.layerOptions);
+            DXMarshal.WritePadding(ref buffer);
         }
     }
 
@@ -92,6 +94,7 @@ public unsafe struct D2D1LayerParameters : IEquatable<D2D1LayerParameters>
         obj.opacity = DXMarshal.ReadSingle(ref buffer);
         obj.opacityBrush = DXMarshal.ReadIntPtr(ref buffer);
         obj.layerOptions = (D2D1LayerOptions)DXMarshal.ReadInt32(ref buffer);
+        buffer += DXMarshal.PaddingSize();
         return obj;
     }
 
