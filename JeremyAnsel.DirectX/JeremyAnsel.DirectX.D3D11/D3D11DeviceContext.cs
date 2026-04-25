@@ -89,6 +89,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Sets the constant buffers used by the vertex shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers being given to the device.</param>
+    /// <param name="constantBuffers1">Array of constant buffers being given to the device.</param>
+    public void VertexShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1)
+    {
+        nint* buffers = stackalloc nint[2];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        _comImpl->VertexShaderSetConstantBuffers(_comPtr, startSlot, 2, buffers);
+    }
+
+    /// <summary>
+    /// Sets the constant buffers used by the vertex shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers being given to the device.</param>
+    /// <param name="constantBuffers1">Array of constant buffers being given to the device.</param>
+    /// <param name="constantBuffers2">Array of constant buffers being given to the device.</param>
+    public void VertexShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1, D3D11Buffer? constantBuffers2)
+    {
+        nint* buffers = stackalloc nint[3];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        buffers[2] = constantBuffers2 is null ? 0 : constantBuffers2.Handle;
+        _comImpl->VertexShaderSetConstantBuffers(_comPtr, startSlot, 3, buffers);
+    }
+
+    /// <summary>
     /// Bind an array of shader resources to the pixel shader stage.
     /// </summary>
     /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
@@ -129,6 +159,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         nint views = shaderResourceViews is null ? 0 : shaderResourceViews.Handle;
         _comImpl->PixelShaderSetShaderResources(_comPtr, startSlot, 1, &views);
+    }
+
+    /// <summary>
+    /// Bind an array of shader resources to the pixel shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    public void PixelShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1)
+    {
+        nint* views = stackalloc nint[2];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        _comImpl->PixelShaderSetShaderResources(_comPtr, startSlot, 2, views);
+    }
+
+    /// <summary>
+    /// Bind an array of shader resources to the pixel shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews2">Array of shader resource view interfaces to set to the device.</param>
+    public void PixelShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1, D3D11ShaderResourceView? shaderResourceViews2)
+    {
+        nint* views = stackalloc nint[3];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        views[2] = shaderResourceViews2 is null ? 0 : shaderResourceViews2.Handle;
+        _comImpl->PixelShaderSetShaderResources(_comPtr, startSlot, 3, views);
     }
 
     /// <summary>
@@ -222,6 +282,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         nint samplersPtr = samplers is null ? 0 : samplers.Handle;
         _comImpl->PixelShaderSetSamplers(_comPtr, startSlot, 1, &samplersPtr);
+    }
+
+    /// <summary>
+    /// Set an array of sampler states to the pixel shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    public void PixelShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1)
+    {
+        nint* samplersPtr = stackalloc nint[2];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        _comImpl->PixelShaderSetSamplers(_comPtr, startSlot, 2, samplersPtr);
+    }
+
+    /// <summary>
+    /// Set an array of sampler states to the pixel shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    /// <param name="samplers2">An array of sampler-state interfaces.</param>
+    public void PixelShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1, D3D11SamplerState? samplers2)
+    {
+        nint* samplersPtr = stackalloc nint[3];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        samplersPtr[2] = samplers2 is null ? 0 : samplers2.Handle;
+        _comImpl->PixelShaderSetSamplers(_comPtr, startSlot, 3, samplersPtr);
     }
 
     /// <summary>
@@ -377,6 +467,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         nint buffers = constantBuffers is null ? 0 : constantBuffers.Handle;
         _comImpl->PixelShaderSetConstantBuffers(_comPtr, startSlot, 1, &buffers);
+    }
+
+    /// <summary>
+    /// Sets the constant buffers used by the pixel shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers.</param>
+    /// <param name="constantBuffers1">Array of constant buffers.</param>
+    public void PixelShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1)
+    {
+        nint* buffers = stackalloc nint[2];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        _comImpl->PixelShaderSetConstantBuffers(_comPtr, startSlot, 2, buffers);
+    }
+
+    /// <summary>
+    /// Sets the constant buffers used by the pixel shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers.</param>
+    /// <param name="constantBuffers1">Array of constant buffers.</param>
+    /// <param name="constantBuffers2">Array of constant buffers.</param>
+    public void PixelShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1, D3D11Buffer? constantBuffers2)
+    {
+        nint* buffers = stackalloc nint[3];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        buffers[2] = constantBuffers2 is null ? 0 : constantBuffers2.Handle;
+        _comImpl->PixelShaderSetConstantBuffers(_comPtr, startSlot, 3, buffers);
     }
 
     /// <summary>
@@ -601,6 +721,47 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Sets the constant buffers used by the geometry shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers">Array of constant buffers.</param>
+    public void GeometryShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers)
+    {
+        nint buffers = constantBuffers is null ? 0 : constantBuffers.Handle;
+        _comImpl->PixelShaderSetConstantBuffers(_comPtr, startSlot, 1, &buffers);
+    }
+
+    /// <summary>
+    /// Sets the constant buffers used by the geometry shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers.</param>
+    /// <param name="constantBuffers1">Array of constant buffers.</param>
+    public void GeometryShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1)
+    {
+        nint* buffers = stackalloc nint[2];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        _comImpl->PixelShaderSetConstantBuffers(_comPtr, startSlot, 2, buffers);
+    }
+
+    /// <summary>
+    /// Sets the constant buffers used by the geometry shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers.</param>
+    /// <param name="constantBuffers1">Array of constant buffers.</param>
+    /// <param name="constantBuffers2">Array of constant buffers.</param>
+    public void GeometryShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1, D3D11Buffer? constantBuffers2)
+    {
+        nint* buffers = stackalloc nint[3];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        buffers[2] = constantBuffers2 is null ? 0 : constantBuffers2.Handle;
+        _comImpl->PixelShaderSetConstantBuffers(_comPtr, startSlot, 3, buffers);
+    }
+
+    /// <summary>
     /// Set a geometry shader to the device.
     /// </summary>
     /// <param name="geometryShader">A geometry shader.</param>
@@ -703,6 +864,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Bind an array of shader resources to the vertex shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    public void VertexShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1)
+    {
+        nint* views = stackalloc nint[2];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        _comImpl->VertexShaderSetShaderResources(_comPtr, startSlot, 2, views);
+    }
+
+    /// <summary>
+    /// Bind an array of shader resources to the vertex shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews2">Array of shader resource view interfaces to set to the device.</param>
+    public void VertexShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1, D3D11ShaderResourceView? shaderResourceViews2)
+    {
+        nint* views = stackalloc nint[3];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        views[2] = shaderResourceViews2 is null ? 0 : shaderResourceViews2.Handle;
+        _comImpl->VertexShaderSetShaderResources(_comPtr, startSlot, 3, views);
+    }
+
+    /// <summary>
     /// Set an array of sampler states to the vertex shader pipeline stage.
     /// </summary>
     /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
@@ -743,6 +934,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         nint samplersPtr = samplers is null ? 0 : samplers.Handle;
         _comImpl->VertexShaderSetSamplers(_comPtr, startSlot, 1, &samplersPtr);
+    }
+
+    /// <summary>
+    /// Set an array of sampler states to the vertex shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    public void VertexShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1)
+    {
+        nint* samplersPtr = stackalloc nint[2];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        _comImpl->VertexShaderSetSamplers(_comPtr, startSlot, 2, samplersPtr);
+    }
+
+    /// <summary>
+    /// Set an array of sampler states to the vertex shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    /// <param name="samplers2">An array of sampler-state interfaces.</param>
+    public void VertexShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1, D3D11SamplerState? samplers2)
+    {
+        nint* samplersPtr = stackalloc nint[3];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        samplersPtr[2] = samplers2 is null ? 0 : samplers2.Handle;
+        _comImpl->VertexShaderSetSamplers(_comPtr, startSlot, 3, samplersPtr);
     }
 
     /// <summary>
@@ -892,6 +1113,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Bind an array of shader resources to the geometry shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    public void GeometryShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1)
+    {
+        nint* views = stackalloc nint[2];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        _comImpl->GeometryShaderSetShaderResources(_comPtr, startSlot, 2, views);
+    }
+
+    /// <summary>
+    /// Bind an array of shader resources to the geometry shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews2">Array of shader resource view interfaces to set to the device.</param>
+    public void GeometryShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1, D3D11ShaderResourceView? shaderResourceViews2)
+    {
+        nint* views = stackalloc nint[3];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        views[2] = shaderResourceViews2 is null ? 0 : shaderResourceViews2.Handle;
+        _comImpl->GeometryShaderSetShaderResources(_comPtr, startSlot, 3, views);
+    }
+
+    /// <summary>
     /// Set an array of sampler states to the geometry shader pipeline stage.
     /// </summary>
     /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
@@ -932,6 +1183,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         nint samplersPtr = samplers is null ? 0 : samplers.Handle;
         _comImpl->GeometryShaderSetSamplers(_comPtr, startSlot, 1, &samplersPtr);
+    }
+
+    /// <summary>
+    /// Set an array of sampler states to the geometry shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    public void GeometryShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1)
+    {
+        nint* samplersPtr = stackalloc nint[2];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        _comImpl->GeometryShaderSetSamplers(_comPtr, startSlot, 2, samplersPtr);
+    }
+
+    /// <summary>
+    /// Set an array of sampler states to the geometry shader pipeline stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    /// <param name="samplers2">An array of sampler-state interfaces.</param>
+    public void GeometryShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1, D3D11SamplerState? samplers2)
+    {
+        nint* samplersPtr = stackalloc nint[3];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        samplersPtr[2] = samplers2 is null ? 0 : samplers2.Handle;
+        _comImpl->GeometryShaderSetSamplers(_comPtr, startSlot, 3, samplersPtr);
     }
 
     /// <summary>
@@ -980,6 +1261,38 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
         nint views = renderTargetViews is null ? 0 : renderTargetViews.Handle;
         nint ptr = depthStencilView is null ? 0 : depthStencilView.Handle;
         _comImpl->OutputMergerSetRenderTargets(_comPtr, 1, &views, ptr);
+    }
+
+    /// <summary>
+    /// Bind one or more render targets atomically and the depth-stencil buffer to the output-merger stage.
+    /// </summary>
+    /// <param name="renderTargetViews0">The render targets to bind to the device.</param>
+    /// <param name="renderTargetViews1">The render targets to bind to the device.</param>
+    /// <param name="depthStencilView">The depth-stencil view to bind to the device.</param>
+    public void OutputMergerSetRenderTargets(D3D11RenderTargetView? renderTargetViews0, D3D11RenderTargetView? renderTargetViews1, D3D11DepthStencilView? depthStencilView)
+    {
+        nint* views = stackalloc nint[2];
+        views[0] = renderTargetViews0 is null ? 0 : renderTargetViews0.Handle;
+        views[1] = renderTargetViews1 is null ? 0 : renderTargetViews1.Handle;
+        nint ptr = depthStencilView is null ? 0 : depthStencilView.Handle;
+        _comImpl->OutputMergerSetRenderTargets(_comPtr, 2, views, ptr);
+    }
+
+    /// <summary>
+    /// Bind one or more render targets atomically and the depth-stencil buffer to the output-merger stage.
+    /// </summary>
+    /// <param name="renderTargetViews0">The render targets to bind to the device.</param>
+    /// <param name="renderTargetViews1">The render targets to bind to the device.</param>
+    /// <param name="renderTargetViews2">The render targets to bind to the device.</param>
+    /// <param name="depthStencilView">The depth-stencil view to bind to the device.</param>
+    public void OutputMergerSetRenderTargets(D3D11RenderTargetView? renderTargetViews0, D3D11RenderTargetView? renderTargetViews1, D3D11RenderTargetView? renderTargetViews2, D3D11DepthStencilView? depthStencilView)
+    {
+        nint* views = stackalloc nint[3];
+        views[0] = renderTargetViews0 is null ? 0 : renderTargetViews0.Handle;
+        views[1] = renderTargetViews1 is null ? 0 : renderTargetViews1.Handle;
+        views[2] = renderTargetViews2 is null ? 0 : renderTargetViews2.Handle;
+        nint ptr = depthStencilView is null ? 0 : depthStencilView.Handle;
+        _comImpl->OutputMergerSetRenderTargets(_comPtr, 3, views, ptr);
     }
 
     /// <summary>
@@ -1189,6 +1502,46 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Reference value to perform against when doing a depth-stencil test.
+    /// </summary>
+    /// <param name="targets0">The array of output buffers to bind to the device.</param>
+    /// <param name="offsets0">Array of offsets to the output buffers.</param>
+    /// <param name="targets1">The array of output buffers to bind to the device.</param>
+    /// <param name="offsets1">Array of offsets to the output buffers.</param>
+    public void StreamOutputSetTargets(D3D11Buffer? targets0, uint offsets0, D3D11Buffer? targets1, uint offsets1)
+    {
+        nint* targetsPtr = stackalloc nint[2];
+        targetsPtr[0] = targets0 is null ? 0 : targets0.Handle;
+        targetsPtr[1] = targets1 is null ? 0 : targets1.Handle;
+        uint* offsetsPtr = stackalloc uint[2];
+        offsetsPtr[0] = offsets0;
+        offsetsPtr[1] = offsets1;
+        _comImpl->StreamOutputSetTargets(_comPtr, 2, targetsPtr, offsetsPtr);
+    }
+
+    /// <summary>
+    /// Reference value to perform against when doing a depth-stencil test.
+    /// </summary>
+    /// <param name="targets0">The array of output buffers to bind to the device.</param>
+    /// <param name="offsets0">Array of offsets to the output buffers.</param>
+    /// <param name="targets1">The array of output buffers to bind to the device.</param>
+    /// <param name="offsets1">Array of offsets to the output buffers.</param>
+    /// <param name="targets2">The array of output buffers to bind to the device.</param>
+    /// <param name="offsets2">Array of offsets to the output buffers.</param>
+    public void StreamOutputSetTargets(D3D11Buffer? targets0, uint offsets0, D3D11Buffer? targets1, uint offsets1, D3D11Buffer? targets2, uint offsets2)
+    {
+        nint* targetsPtr = stackalloc nint[3];
+        targetsPtr[0] = targets0 is null ? 0 : targets0.Handle;
+        targetsPtr[1] = targets1 is null ? 0 : targets1.Handle;
+        targetsPtr[2] = targets2 is null ? 0 : targets2.Handle;
+        uint* offsetsPtr = stackalloc uint[3];
+        offsetsPtr[0] = offsets0;
+        offsetsPtr[1] = offsets1;
+        offsetsPtr[2] = offsets2;
+        _comImpl->StreamOutputSetTargets(_comPtr, 3, targetsPtr, offsetsPtr);
+    }
+
+    /// <summary>
     /// Draw geometry of an unknown size.
     /// </summary>
     public void DrawAuto()
@@ -1300,6 +1653,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Bind an array of viewports to the rasterizer stage of the pipeline.
+    /// </summary>
+    /// <param name="viewports0">An array of <see cref="D3D11Viewport"/> structures to bind to the device.</param>
+    /// <param name="viewports1">An array of <see cref="D3D11Viewport"/> structures to bind to the device.</param>
+    public void RasterizerStageSetViewports(in D3D11Viewport viewports0, in D3D11Viewport viewports1)
+    {
+        int size = D3D11Viewport.NativeRequiredSize();
+        byte* ptr = stackalloc byte[size * 2];
+        D3D11Viewport.NativeWriteTo((nint)ptr, viewports0);
+        D3D11Viewport.NativeWriteTo((nint)ptr + size, viewports1);
+        _comImpl->RasterizerStageSetViewports(_comPtr, 2, ptr);
+    }
+
+    /// <summary>
+    /// Bind an array of viewports to the rasterizer stage of the pipeline.
+    /// </summary>
+    /// <param name="viewports0">An array of <see cref="D3D11Viewport"/> structures to bind to the device.</param>
+    /// <param name="viewports1">An array of <see cref="D3D11Viewport"/> structures to bind to the device.</param>
+    /// <param name="viewports2">An array of <see cref="D3D11Viewport"/> structures to bind to the device.</param>
+    public void RasterizerStageSetViewports(in D3D11Viewport viewports0, in D3D11Viewport viewports1, in D3D11Viewport viewports2)
+    {
+        int size = D3D11Viewport.NativeRequiredSize();
+        byte* ptr = stackalloc byte[size * 3];
+        D3D11Viewport.NativeWriteTo((nint)ptr, viewports0);
+        D3D11Viewport.NativeWriteTo((nint)ptr + size, viewports1);
+        D3D11Viewport.NativeWriteTo((nint)ptr + size * 2, viewports2);
+        _comImpl->RasterizerStageSetViewports(_comPtr, 3, ptr);
+    }
+
+    /// <summary>
     /// Bind an array of scissor rectangles to the rasterizer stage.
     /// </summary>
     /// <param name="rects">An array of scissor rectangles.</param>
@@ -1335,6 +1718,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
         byte* ptr = stackalloc byte[size];
         D3D11Rect.NativeWriteTo((nint)ptr, rects);
         _comImpl->RasterizerStageSetScissorRects(_comPtr, 1, ptr);
+    }
+
+    /// <summary>
+    /// Bind an array of scissor rectangles to the rasterizer stage.
+    /// </summary>
+    /// <param name="rects0">An array of scissor rectangles.</param>
+    /// <param name="rects1">An array of scissor rectangles.</param>
+    public void RasterizerStageSetScissorRects(in D3D11Rect rects0, in D3D11Rect rects1)
+    {
+        int size = D3D11Rect.NativeRequiredSize();
+        byte* ptr = stackalloc byte[size * 2];
+        D3D11Rect.NativeWriteTo((nint)ptr, rects0);
+        D3D11Rect.NativeWriteTo((nint)ptr + size, rects1);
+        _comImpl->RasterizerStageSetScissorRects(_comPtr, 2, ptr);
+    }
+
+    /// <summary>
+    /// Bind an array of scissor rectangles to the rasterizer stage.
+    /// </summary>
+    /// <param name="rects0">An array of scissor rectangles.</param>
+    /// <param name="rects1">An array of scissor rectangles.</param>
+    /// <param name="rects2">An array of scissor rectangles.</param>
+    public void RasterizerStageSetScissorRects(in D3D11Rect rects0, in D3D11Rect rects1, in D3D11Rect rects2)
+    {
+        int size = D3D11Rect.NativeRequiredSize();
+        byte* ptr = stackalloc byte[size * 3];
+        D3D11Rect.NativeWriteTo((nint)ptr, rects0);
+        D3D11Rect.NativeWriteTo((nint)ptr + size, rects1);
+        D3D11Rect.NativeWriteTo((nint)ptr + size * 2, rects2);
+        _comImpl->RasterizerStageSetScissorRects(_comPtr, 3, ptr);
     }
 
     /// <summary>
@@ -1906,6 +2319,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Bind an array of shader resources to the hull shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    public void HullShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1)
+    {
+        nint* views = stackalloc nint[2];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        _comImpl->HullShaderSetShaderResources(_comPtr, startSlot, 2, views);
+    }
+
+    /// <summary>
+    /// Bind an array of shader resources to the hull shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews2">Array of shader resource view interfaces to set to the device.</param>
+    public void HullShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1, D3D11ShaderResourceView? shaderResourceViews2)
+    {
+        nint* views = stackalloc nint[3];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        views[2] = shaderResourceViews2 is null ? 0 : shaderResourceViews2.Handle;
+        _comImpl->HullShaderSetShaderResources(_comPtr, startSlot, 3, views);
+    }
+
+    /// <summary>
     /// Set a hull shader to the device.
     /// </summary>
     /// <param name="hullShader">A hull shader.</param>
@@ -1999,6 +2442,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Set an array of sampler states to the hull shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    public void HullShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1)
+    {
+        nint* samplersPtr = stackalloc nint[2];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        _comImpl->HullShaderSetSamplers(_comPtr, startSlot, 2, samplersPtr);
+    }
+
+    /// <summary>
+    /// Set an array of sampler states to the hull shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    /// <param name="samplers2">An array of sampler-state interfaces.</param>
+    public void HullShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1, D3D11SamplerState? samplers2)
+    {
+        nint* samplersPtr = stackalloc nint[3];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        samplersPtr[2] = samplers2 is null ? 0 : samplers2.Handle;
+        _comImpl->HullShaderSetSamplers(_comPtr, startSlot, 3, samplersPtr);
+    }
+
+    /// <summary>
     /// Set the constant buffers used by the hull shader stage.
     /// </summary>
     /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
@@ -2042,6 +2515,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Set the constant buffers used by the hull shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers being given to the device.</param>
+    /// <param name="constantBuffers1">Array of constant buffers being given to the device.</param>
+    public void HullShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1)
+    {
+        nint* buffers = stackalloc nint[2];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        _comImpl->HullShaderSetConstantBuffers(_comPtr, startSlot, 2, buffers);
+    }
+
+    /// <summary>
+    /// Set the constant buffers used by the hull shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers being given to the device.</param>
+    /// <param name="constantBuffers1">Array of constant buffers being given to the device.</param>
+    /// <param name="constantBuffers2">Array of constant buffers being given to the device.</param>
+    public void HullShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1, D3D11Buffer? constantBuffers2)
+    {
+        nint* buffers = stackalloc nint[3];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        buffers[2] = constantBuffers2 is null ? 0 : constantBuffers2.Handle;
+        _comImpl->HullShaderSetConstantBuffers(_comPtr, startSlot, 3, buffers);
+    }
+
+    /// <summary>
     /// Bind an array of shader resources to the domain shader stage.
     /// </summary>
     /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
@@ -2082,6 +2585,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         nint views = shaderResourceViews is null ? 0 : shaderResourceViews.Handle;
         _comImpl->DomainShaderSetShaderResources(_comPtr, startSlot, 1, &views);
+    }
+
+    /// <summary>
+    /// Bind an array of shader resources to the domain shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    public void DomainShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1)
+    {
+        nint* views = stackalloc nint[2];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        _comImpl->DomainShaderSetShaderResources(_comPtr, startSlot, 2, views);
+    }
+
+    /// <summary>
+    /// Bind an array of shader resources to the domain shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews2">Array of shader resource view interfaces to set to the device.</param>
+    public void DomainShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1, D3D11ShaderResourceView? shaderResourceViews2)
+    {
+        nint* views = stackalloc nint[3];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        views[2] = shaderResourceViews2 is null ? 0 : shaderResourceViews2.Handle;
+        _comImpl->DomainShaderSetShaderResources(_comPtr, startSlot, 3, views);
     }
 
     /// <summary>
@@ -2178,6 +2711,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Set an array of sampler states to the domain shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    public void DomainShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1)
+    {
+        nint* samplersPtr = stackalloc nint[2];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        _comImpl->DomainShaderSetSamplers(_comPtr, startSlot, 2, samplersPtr);
+    }
+
+    /// <summary>
+    /// Set an array of sampler states to the domain shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    /// <param name="samplers2">An array of sampler-state interfaces.</param>
+    public void DomainShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1, D3D11SamplerState? samplers2)
+    {
+        nint* samplersPtr = stackalloc nint[3];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        samplersPtr[2] = samplers2 is null ? 0 : samplers2.Handle;
+        _comImpl->DomainShaderSetSamplers(_comPtr, startSlot, 3, samplersPtr);
+    }
+
+    /// <summary>
     /// Sets the constant buffers used by the domain shader stage.
     /// </summary>
     /// <param name="startSlot">Index into the zero-based array to begin setting constant buffers to.</param>
@@ -2221,6 +2784,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Sets the constant buffers used by the domain shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers being given to the device.</param>
+    /// <param name="constantBuffers1">Array of constant buffers being given to the device.</param>
+    public void DomainShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1)
+    {
+        nint* buffers = stackalloc nint[2];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        _comImpl->DomainShaderSetConstantBuffers(_comPtr, startSlot, 2, buffers);
+    }
+
+    /// <summary>
+    /// Sets the constant buffers used by the domain shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers being given to the device.</param>
+    /// <param name="constantBuffers1">Array of constant buffers being given to the device.</param>
+    /// <param name="constantBuffers2">Array of constant buffers being given to the device.</param>
+    public void DomainShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1, D3D11Buffer? constantBuffers2)
+    {
+        nint* buffers = stackalloc nint[3];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        buffers[2] = constantBuffers2 is null ? 0 : constantBuffers2.Handle;
+        _comImpl->DomainShaderSetConstantBuffers(_comPtr, startSlot, 3, buffers);
+    }
+
+    /// <summary>
     /// Bind an array of shader resources to the compute shader stage.
     /// </summary>
     /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
@@ -2261,6 +2854,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         nint views = shaderResourceViews is null ? 0 : shaderResourceViews.Handle;
         _comImpl->ComputeShaderSetShaderResources(_comPtr, startSlot, 1, &views);
+    }
+
+    /// <summary>
+    /// Bind an array of shader resources to the compute shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    public void ComputeShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1)
+    {
+        nint* views = stackalloc nint[2];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        _comImpl->ComputeShaderSetShaderResources(_comPtr, startSlot, 2, views);
+    }
+
+    /// <summary>
+    /// Bind an array of shader resources to the compute shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting shader resources to.</param>
+    /// <param name="shaderResourceViews0">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews1">Array of shader resource view interfaces to set to the device.</param>
+    /// <param name="shaderResourceViews2">Array of shader resource view interfaces to set to the device.</param>
+    public void ComputeShaderSetShaderResources(uint startSlot, D3D11ShaderResourceView? shaderResourceViews0, D3D11ShaderResourceView? shaderResourceViews1, D3D11ShaderResourceView? shaderResourceViews2)
+    {
+        nint* views = stackalloc nint[3];
+        views[0] = shaderResourceViews0 is null ? 0 : shaderResourceViews0.Handle;
+        views[1] = shaderResourceViews1 is null ? 0 : shaderResourceViews1.Handle;
+        views[2] = shaderResourceViews2 is null ? 0 : shaderResourceViews2.Handle;
+        _comImpl->ComputeShaderSetShaderResources(_comPtr, startSlot, 3, views);
     }
 
     /// <summary>
@@ -2416,6 +3039,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     }
 
     /// <summary>
+    /// Set an array of sampler states to the compute shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    public void ComputeShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1)
+    {
+        nint* samplersPtr = stackalloc nint[2];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        _comImpl->ComputeShaderSetSamplers(_comPtr, startSlot, 2, samplersPtr);
+    }
+
+    /// <summary>
+    /// Set an array of sampler states to the compute shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the device's zero-based array to begin setting samplers to.</param>
+    /// <param name="samplers0">An array of sampler-state interfaces.</param>
+    /// <param name="samplers1">An array of sampler-state interfaces.</param>
+    /// <param name="samplers2">An array of sampler-state interfaces.</param>
+    public void ComputeShaderSetSamplers(uint startSlot, D3D11SamplerState? samplers0, D3D11SamplerState? samplers1, D3D11SamplerState? samplers2)
+    {
+        nint* samplersPtr = stackalloc nint[3];
+        samplersPtr[0] = samplers0 is null ? 0 : samplers0.Handle;
+        samplersPtr[1] = samplers1 is null ? 0 : samplers1.Handle;
+        samplersPtr[2] = samplers2 is null ? 0 : samplers2.Handle;
+        _comImpl->ComputeShaderSetSamplers(_comPtr, startSlot, 3, samplersPtr);
+    }
+
+    /// <summary>
     /// Sets the constant buffers used by the compute shader stage.
     /// </summary>
     /// <param name="startSlot">Index into the zero-based array to begin setting constant buffers to.</param>
@@ -2456,6 +3109,36 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     {
         nint buffers = constantBuffers is null ? 0 : constantBuffers.Handle;
         _comImpl->ComputeShaderSetConstantBuffers(_comPtr, startSlot, 1, &buffers);
+    }
+
+    /// <summary>
+    /// Sets the constant buffers used by the compute shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers.</param>
+    /// <param name="constantBuffers1">Array of constant buffers.</param>
+    public void ComputeShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1)
+    {
+        nint* buffers = stackalloc nint[2];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        _comImpl->ComputeShaderSetConstantBuffers(_comPtr, startSlot, 2, buffers);
+    }
+
+    /// <summary>
+    /// Sets the constant buffers used by the compute shader stage.
+    /// </summary>
+    /// <param name="startSlot">Index into the zero-based array to begin setting constant buffers to.</param>
+    /// <param name="constantBuffers0">Array of constant buffers.</param>
+    /// <param name="constantBuffers1">Array of constant buffers.</param>
+    /// <param name="constantBuffers2">Array of constant buffers.</param>
+    public void ComputeShaderSetConstantBuffers(uint startSlot, D3D11Buffer? constantBuffers0, D3D11Buffer? constantBuffers1, D3D11Buffer? constantBuffers2)
+    {
+        nint* buffers = stackalloc nint[3];
+        buffers[0] = constantBuffers0 is null ? 0 : constantBuffers0.Handle;
+        buffers[1] = constantBuffers1 is null ? 0 : constantBuffers1.Handle;
+        buffers[2] = constantBuffers2 is null ? 0 : constantBuffers2.Handle;
+        _comImpl->ComputeShaderSetConstantBuffers(_comPtr, startSlot, 3, buffers);
     }
 
     /// <summary>
