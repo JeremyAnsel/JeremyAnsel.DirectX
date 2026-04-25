@@ -39,7 +39,7 @@ public unsafe class D2D1GeometrySink : D2D1SimplifiedGeometrySink
     /// <param name="point">The end point of the line to draw.</param>
     public void AddLine(in D2D1Point2F point)
     {
-        _comImpl->AddLine(_comPtr, point.X, point.Y);
+        _comImpl->AddLine(_comPtr, point);
     }
 
     /// <summary>

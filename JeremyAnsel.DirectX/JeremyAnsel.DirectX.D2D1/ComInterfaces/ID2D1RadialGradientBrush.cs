@@ -26,13 +26,13 @@ internal unsafe readonly struct ID2D1RadialGradientBrush
     /// Specifies the center of the gradient ellipse in the brush's coordinate space.
     /// </summary>
     /// <param name="center">The center of the gradient ellipse, in the brush's coordinate space.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, float, void> SetCenter;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1Point2F, void> SetCenter;
 
     /// <summary>
     /// Specifies the offset of the gradient origin relative to the gradient ellipse's center.
     /// </summary>
     /// <param name="gradientOriginOffset">The offset of the gradient origin from the center of the gradient ellipse.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, float, void> SetGradientOriginOffset;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1Point2F, void> SetGradientOriginOffset;
 
     /// <summary>
     /// Specifies the x-radius of the gradient ellipse, in the brush's coordinate space.

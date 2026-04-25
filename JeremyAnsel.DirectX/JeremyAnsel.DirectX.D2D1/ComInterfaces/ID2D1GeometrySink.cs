@@ -28,7 +28,7 @@ internal unsafe readonly struct ID2D1GeometrySink
     /// Creates a line segment between the current point and the specified end point and adds it to the geometry sink.
     /// </summary>
     /// <param name="point">The end point of the line to draw.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, float, void> AddLine;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1Point2F, void> AddLine;
 
     /// <summary>
     /// Creates a cubic Bezier curve between the current point and the specified endpoint.

@@ -44,7 +44,7 @@ internal unsafe readonly struct ID2D1Geometry
     /// <param name="worldTransform">The transform to apply to the stroked geometry.</param>
     /// <param name="flatteningTolerance">The numeric accuracy with which the precise geometric path and path intersection is calculated. Points missing the stroke by less than the tolerance are still considered inside. Smaller values produce more accurate results but cause slower execution.</param>
     /// <param name="contains">A value set to <value>true</value> if the geometry's stroke contains the specified point; otherwise, <value>false</value>.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, float, float, nint, void*, float, int*, int> StrokeContainsPoint;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1Point2F, float, nint, void*, float, int*, int> StrokeContainsPoint;
 
     /// <summary>
     /// Indicates whether the area filled by the geometry would contain the specified point.
@@ -53,7 +53,7 @@ internal unsafe readonly struct ID2D1Geometry
     /// <param name="worldTransform">The transform to apply to the geometry prior to testing for containment.</param>
     /// <param name="flatteningTolerance">The numeric accuracy with which the precise geometric path and path intersection is calculated. Points missing the fill by less than the tolerance are still considered inside.</param>
     /// <param name="contains">When this method returns, contains a boolean value that is <value>true</value> if the area filled by the geometry contains point; otherwise, <value>false</value>.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, float, void*, float, int*, int> FillContainsPoint;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1Point2F, void*, float, int*, int> FillContainsPoint;
 
     /// <summary>
     /// Describes the intersection between this geometry and the specified geometry.

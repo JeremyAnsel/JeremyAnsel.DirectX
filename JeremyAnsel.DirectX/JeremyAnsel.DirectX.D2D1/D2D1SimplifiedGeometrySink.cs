@@ -60,7 +60,7 @@ public unsafe class D2D1SimplifiedGeometrySink : DXComObject
     /// <param name="figureBegin">Whether the new figure should be hollow or filled.</param>
     public void BeginFigure(in D2D1Point2F startPoint, D2D1FigureBegin figureBegin)
     {
-        _comImpl->BeginFigure(_comPtr, startPoint.X, startPoint.Y, figureBegin);
+        _comImpl->BeginFigure(_comPtr, startPoint, figureBegin);
     }
 
     /// <summary>

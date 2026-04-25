@@ -141,7 +141,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         byte* bitmapPropertiesPtr = stackalloc byte[bitmapPropertiesSize];
         D2D1BitmapProperties.NativeWriteTo((nint)bitmapPropertiesPtr, bitmapProperties);
         nint ptr;
-        int hr = _comImpl->CreateBitmap(_comPtr, size.Width, size.Height, (void*)srcData, pitch, bitmapPropertiesPtr, &ptr);
+        int hr = _comImpl->CreateBitmap(_comPtr, size, (void*)srcData, pitch, bitmapPropertiesPtr, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return new D2D1Bitmap(ptr);
     }
@@ -176,7 +176,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         fixed (byte* srcDataPtr = srcData)
         {
             nint ptr;
-            int hr = _comImpl->CreateBitmap(_comPtr, size.Width, size.Height, srcDataPtr, pitch, bitmapPropertiesPtr, &ptr);
+            int hr = _comImpl->CreateBitmap(_comPtr, size, srcDataPtr, pitch, bitmapPropertiesPtr, &ptr);
             Marshal.ThrowExceptionForHR(hr);
             return new D2D1Bitmap(ptr);
         }
@@ -194,7 +194,7 @@ public unsafe class D2D1RenderTarget : D2D1Resource
         byte* bitmapPropertiesPtr = stackalloc byte[bitmapPropertiesSize];
         D2D1BitmapProperties.NativeWriteTo((nint)bitmapPropertiesPtr, bitmapProperties);
         nint ptr;
-        int hr = _comImpl->CreateBitmap(_comPtr, size.Width, size.Height, null, 0, bitmapPropertiesPtr, &ptr);
+        int hr = _comImpl->CreateBitmap(_comPtr, size, null, 0, bitmapPropertiesPtr, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return new D2D1Bitmap(ptr);
     }

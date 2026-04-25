@@ -48,7 +48,7 @@ public unsafe class D2D1RadialGradientBrush : D2D1Brush
 
         set
         {
-            _comImpl->SetCenter(_comPtr, value.X, value.Y);
+            _comImpl->SetCenter(_comPtr, value);
         }
     }
 
@@ -67,7 +67,7 @@ public unsafe class D2D1RadialGradientBrush : D2D1Brush
 
         set
         {
-            _comImpl->SetGradientOriginOffset(_comPtr, value.X, value.Y);
+            _comImpl->SetGradientOriginOffset(_comPtr, value);
         }
     }
 

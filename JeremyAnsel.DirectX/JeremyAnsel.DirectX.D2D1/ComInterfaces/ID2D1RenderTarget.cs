@@ -27,7 +27,7 @@ internal unsafe readonly struct ID2D1RenderTarget
     /// <param name="pitch">The byte count of each scanline, which is equal to <c>(the image width in pixels × the number of bytes per pixel) + memory padding</c>. If srcData is NULL, this value is ignored. (Note that pitch is also sometimes called stride.)</param>
     /// <param name="bitmapProperties">The pixel format and dots per inch (DPI) of the bitmap to create.</param>
     /// <param name="bitmap">The new bitmap.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, uint, uint, void*, uint, void*, nint*, int> CreateBitmap;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1SizeU, void*, uint, void*, nint*, int> CreateBitmap;
 
     /// <summary>
     /// Creates an <see cref="ID2D1Bitmap"/> by copying the specified Microsoft Windows Imaging Component (WIC) bitmap.

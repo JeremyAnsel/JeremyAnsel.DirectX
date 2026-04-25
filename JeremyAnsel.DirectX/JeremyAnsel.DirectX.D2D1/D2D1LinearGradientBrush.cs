@@ -48,7 +48,7 @@ public unsafe class D2D1LinearGradientBrush : D2D1Brush
 
         set
         {
-            _comImpl->SetStartPoint(_comPtr, value.X, value.Y);
+            _comImpl->SetStartPoint(_comPtr, value);
         }
     }
 
@@ -67,7 +67,7 @@ public unsafe class D2D1LinearGradientBrush : D2D1Brush
 
         set
         {
-            _comImpl->SetEndPoint(_comPtr, value.X, value.Y);
+            _comImpl->SetEndPoint(_comPtr, value);
         }
     }
 

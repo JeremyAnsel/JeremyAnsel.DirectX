@@ -33,7 +33,7 @@ internal unsafe readonly struct ID2D1SimplifiedGeometrySink
     /// </summary>
     /// <param name="startPoint">The point at which to begin the new figure.</param>
     /// <param name="figureBegin">Whether the new figure should be hollow or filled.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, float, D2D1FigureBegin, void> BeginFigure;
+    public readonly delegate* unmanaged[Stdcall]<nint, D2D1Point2F, D2D1FigureBegin, void> BeginFigure;
 
     /// <summary>
     /// Creates a sequence of lines using the specified points and adds them to the geometry sink.

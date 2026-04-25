@@ -146,7 +146,7 @@ public unsafe class D2D1Geometry : D2D1Resource
     {
         nint strokeStylePtr = strokeStyle is null ? 0 : strokeStyle.Handle;
         int ptr;
-        int hr = _comImpl->StrokeContainsPoint(_comPtr, point.X, point.Y, strokeWidth, strokeStylePtr, null, flatteningTolerance, &ptr);
+        int hr = _comImpl->StrokeContainsPoint(_comPtr, point, strokeWidth, strokeStylePtr, null, flatteningTolerance, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return ptr != 0;
     }
@@ -167,7 +167,7 @@ public unsafe class D2D1Geometry : D2D1Resource
         byte* worldTransformPtr = stackalloc byte[worldTransformSize];
         D2D1Matrix3X2F.NativeWriteTo((nint)worldTransformPtr, worldTransform);
         int ptr;
-        int hr = _comImpl->StrokeContainsPoint(_comPtr, point.X, point.Y, strokeWidth, strokeStylePtr, worldTransformPtr, flatteningTolerance, &ptr);
+        int hr = _comImpl->StrokeContainsPoint(_comPtr, point, strokeWidth, strokeStylePtr, worldTransformPtr, flatteningTolerance, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return ptr != 0;
     }
@@ -183,7 +183,7 @@ public unsafe class D2D1Geometry : D2D1Resource
     {
         nint strokeStylePtr = strokeStyle is null ? 0 : strokeStyle.Handle;
         int ptr;
-        int hr = _comImpl->StrokeContainsPoint(_comPtr, point.X, point.Y, strokeWidth, strokeStylePtr, null, D2D1Constants.DefaultFlatteningTolerance, &ptr);
+        int hr = _comImpl->StrokeContainsPoint(_comPtr, point, strokeWidth, strokeStylePtr, null, D2D1Constants.DefaultFlatteningTolerance, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return ptr != 0;
     }
@@ -203,7 +203,7 @@ public unsafe class D2D1Geometry : D2D1Resource
         byte* worldTransformPtr = stackalloc byte[worldTransformSize];
         D2D1Matrix3X2F.NativeWriteTo((nint)worldTransformPtr, worldTransform);
         int ptr;
-        int hr = _comImpl->StrokeContainsPoint(_comPtr, point.X, point.Y, strokeWidth, strokeStylePtr, worldTransformPtr, D2D1Constants.DefaultFlatteningTolerance, &ptr);
+        int hr = _comImpl->StrokeContainsPoint(_comPtr, point, strokeWidth, strokeStylePtr, worldTransformPtr, D2D1Constants.DefaultFlatteningTolerance, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return ptr != 0;
     }
@@ -217,7 +217,7 @@ public unsafe class D2D1Geometry : D2D1Resource
     public bool FillContainsPoint(in D2D1Point2F point, float flatteningTolerance)
     {
         int ptr;
-        int hr = _comImpl->FillContainsPoint(_comPtr, point.X, point.Y, null, flatteningTolerance, &ptr);
+        int hr = _comImpl->FillContainsPoint(_comPtr, point, null, flatteningTolerance, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return ptr != 0;
     }
@@ -235,7 +235,7 @@ public unsafe class D2D1Geometry : D2D1Resource
         byte* worldTransformPtr = stackalloc byte[worldTransformSize];
         D2D1Matrix3X2F.NativeWriteTo((nint)worldTransformPtr, worldTransform);
         int ptr;
-        int hr = _comImpl->FillContainsPoint(_comPtr, point.X, point.Y, worldTransformPtr, flatteningTolerance, &ptr);
+        int hr = _comImpl->FillContainsPoint(_comPtr, point, worldTransformPtr, flatteningTolerance, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return ptr != 0;
     }
@@ -248,7 +248,7 @@ public unsafe class D2D1Geometry : D2D1Resource
     public bool FillContainsPoint(in D2D1Point2F point)
     {
         int ptr;
-        int hr = _comImpl->FillContainsPoint(_comPtr, point.X, point.Y, null, D2D1Constants.DefaultFlatteningTolerance, &ptr);
+        int hr = _comImpl->FillContainsPoint(_comPtr, point, null, D2D1Constants.DefaultFlatteningTolerance, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return ptr != 0;
     }
@@ -265,7 +265,7 @@ public unsafe class D2D1Geometry : D2D1Resource
         byte* worldTransformPtr = stackalloc byte[worldTransformSize];
         D2D1Matrix3X2F.NativeWriteTo((nint)worldTransformPtr, worldTransform);
         int ptr;
-        int hr = _comImpl->FillContainsPoint(_comPtr, point.X, point.Y, worldTransformPtr, D2D1Constants.DefaultFlatteningTolerance, &ptr);
+        int hr = _comImpl->FillContainsPoint(_comPtr, point, worldTransformPtr, D2D1Constants.DefaultFlatteningTolerance, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return ptr != 0;
     }
