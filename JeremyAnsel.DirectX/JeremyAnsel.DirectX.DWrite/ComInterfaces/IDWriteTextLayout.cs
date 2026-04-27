@@ -61,56 +61,56 @@ internal unsafe readonly struct IDWriteTextLayout
     /// </summary>
     /// <param name="fontCollection">The font collection to set</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, nint, uint, uint, int> SetFontCollection;
+    public readonly delegate* unmanaged[Stdcall]<nint, nint, DWriteTextRange, int> SetFontCollection;
 
     /// <summary>
     /// Set null-terminated font family name.
     /// </summary>
     /// <param name="fontFamilyName">Font family name</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, char*, uint, uint, int> SetFontFamilyName;
+    public readonly delegate* unmanaged[Stdcall]<nint, char*, DWriteTextRange, int> SetFontFamilyName;
 
     /// <summary>
     /// Set font weight.
     /// </summary>
     /// <param name="fontWeight">Font weight</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, DWriteFontWeight, uint, uint, int> SetFontWeight;
+    public readonly delegate* unmanaged[Stdcall]<nint, DWriteFontWeight, DWriteTextRange, int> SetFontWeight;
 
     /// <summary>
     /// Set font style.
     /// </summary>
     /// <param name="fontStyle">Font style</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, DWriteFontStyle, uint, uint, int> SetFontStyle;
+    public readonly delegate* unmanaged[Stdcall]<nint, DWriteFontStyle, DWriteTextRange, int> SetFontStyle;
 
     /// <summary>
     /// Set font stretch.
     /// </summary>
     /// <param name="fontStretch">font stretch</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, DWriteFontStretch, uint, uint, int> SetFontStretch;
+    public readonly delegate* unmanaged[Stdcall]<nint, DWriteFontStretch, DWriteTextRange, int> SetFontStretch;
 
     /// <summary>
     /// Set font em height.
     /// </summary>
     /// <param name="fontSize">Font em height</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, float, uint, uint, int> SetFontSize;
+    public readonly delegate* unmanaged[Stdcall]<nint, float, DWriteTextRange, int> SetFontSize;
 
     /// <summary>
     /// Set underline.
     /// </summary>
     /// <param name="hasUnderline">The Boolean flag indicates whether underline takes place</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, int, uint, uint, int> SetUnderline;
+    public readonly delegate* unmanaged[Stdcall]<nint, int, DWriteTextRange, int> SetUnderline;
 
     /// <summary>
     /// Set strikethrough.
     /// </summary>
     /// <param name="hasStrikethrough">The Boolean flag indicates whether strikethrough takes place</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, int, uint, uint, int> SetStrikethrough;
+    public readonly delegate* unmanaged[Stdcall]<nint, int, DWriteTextRange, int> SetStrikethrough;
 
     /// <summary>
     /// Set application-defined drawing effect.
@@ -140,14 +140,14 @@ internal unsafe readonly struct IDWriteTextLayout
     /// </summary>
     /// <param name="typography">Pointer to font typography setting.</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, nint, uint, uint, int> SetTypography;
+    public readonly delegate* unmanaged[Stdcall]<nint, nint, DWriteTextRange, int> SetTypography;
 
     /// <summary>
     /// Set locale name.
     /// </summary>
     /// <param name="localeName">Locale name</param>
     /// <param name="textRange">Text range to which this change applies.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, char*, uint, uint, int> SetLocaleName;
+    public readonly delegate* unmanaged[Stdcall]<nint, char*, DWriteTextRange, int> SetLocaleName;
 
     /// <summary>
     /// Get layout maximum width

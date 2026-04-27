@@ -20,7 +20,7 @@ internal unsafe readonly struct IDWriteTypography
     /// Add font feature.
     /// </summary>
     /// <param name="fontFeature">The font feature to add.</param>
-    public readonly delegate* unmanaged[Stdcall]<nint, DWriteFontFeatureTag, uint, int> AddFontFeature;
+    public readonly delegate* unmanaged[Stdcall]<nint, DWriteFontFeature, int> AddFontFeature;
 
     /// <summary>
     /// Get the number of font features.

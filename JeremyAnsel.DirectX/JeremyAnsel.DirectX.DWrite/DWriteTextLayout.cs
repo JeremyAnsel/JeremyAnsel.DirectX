@@ -68,7 +68,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
             throw new ArgumentNullException(nameof(fontCollection));
         }
 
-        int hr = _comImpl->SetFontCollection(_comPtr, fontCollection.Handle, textRange.StartPosition, textRange.Length);
+        int hr = _comImpl->SetFontCollection(_comPtr, fontCollection.Handle, textRange);
         Marshal.ThrowExceptionForHR(hr);
     }
 
@@ -91,7 +91,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     {
         fixed (char* ptr = fontFamilyName)
         {
-            int hr = _comImpl->SetFontFamilyName(_comPtr, ptr, textRange.StartPosition, textRange.Length);
+            int hr = _comImpl->SetFontFamilyName(_comPtr, ptr, textRange);
             Marshal.ThrowExceptionForHR(hr);
         }
     }
@@ -103,7 +103,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     /// <param name="textRange">Text range to which this change applies.</param>
     public void SetFontWeight(DWriteFontWeight fontWeight, DWriteTextRange textRange)
     {
-        int hr = _comImpl->SetFontWeight(_comPtr, fontWeight, textRange.StartPosition, textRange.Length);
+        int hr = _comImpl->SetFontWeight(_comPtr, fontWeight, textRange);
         Marshal.ThrowExceptionForHR(hr);
     }
 
@@ -114,7 +114,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     /// <param name="textRange">Text range to which this change applies.</param>
     public void SetFontStyle(DWriteFontStyle fontStyle, DWriteTextRange textRange)
     {
-        int hr = _comImpl->SetFontStyle(_comPtr, fontStyle, textRange.StartPosition, textRange.Length);
+        int hr = _comImpl->SetFontStyle(_comPtr, fontStyle, textRange);
         Marshal.ThrowExceptionForHR(hr);
     }
 
@@ -125,7 +125,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     /// <param name="textRange">Text range to which this change applies.</param>
     public void SetFontStretch(DWriteFontStretch fontStretch, DWriteTextRange textRange)
     {
-        int hr = _comImpl->SetFontStretch(_comPtr, fontStretch, textRange.StartPosition, textRange.Length);
+        int hr = _comImpl->SetFontStretch(_comPtr, fontStretch, textRange);
         Marshal.ThrowExceptionForHR(hr);
     }
 
@@ -136,7 +136,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     /// <param name="textRange">Text range to which this change applies.</param>
     public void SetFontSize(float fontSize, DWriteTextRange textRange)
     {
-        int hr = _comImpl->SetFontSize(_comPtr, fontSize, textRange.StartPosition, textRange.Length);
+        int hr = _comImpl->SetFontSize(_comPtr, fontSize, textRange);
         Marshal.ThrowExceptionForHR(hr);
     }
 
@@ -147,7 +147,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     /// <param name="textRange">Text range to which this change applies.</param>
     public void SetUnderline(bool hasUnderline, DWriteTextRange textRange)
     {
-        int hr = _comImpl->SetUnderline(_comPtr, hasUnderline ? 1 : 0, textRange.StartPosition, textRange.Length);
+        int hr = _comImpl->SetUnderline(_comPtr, hasUnderline ? 1 : 0, textRange);
         Marshal.ThrowExceptionForHR(hr);
     }
 
@@ -158,7 +158,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     /// <param name="textRange">Text range to which this change applies.</param>
     public void SetStrikethrough(bool hasStrikethrough, DWriteTextRange textRange)
     {
-        int hr = _comImpl->SetStrikethrough(_comPtr, hasStrikethrough ? 1 : 0, textRange.StartPosition, textRange.Length);
+        int hr = _comImpl->SetStrikethrough(_comPtr, hasStrikethrough ? 1 : 0, textRange);
         Marshal.ThrowExceptionForHR(hr);
     }
 
@@ -174,7 +174,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
             throw new ArgumentNullException(nameof(typography));
         }
 
-        int hr = _comImpl->SetTypography(_comPtr, typography.Handle, textRange.StartPosition, textRange.Length);
+        int hr = _comImpl->SetTypography(_comPtr, typography.Handle, textRange);
         Marshal.ThrowExceptionForHR(hr);
     }
 
@@ -197,7 +197,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     {
         fixed (char* ptr = localeName)
         {
-            int hr = _comImpl->SetLocaleName(_comPtr, ptr, textRange.StartPosition, textRange.Length);
+            int hr = _comImpl->SetLocaleName(_comPtr, ptr, textRange);
             Marshal.ThrowExceptionForHR(hr);
         }
     }

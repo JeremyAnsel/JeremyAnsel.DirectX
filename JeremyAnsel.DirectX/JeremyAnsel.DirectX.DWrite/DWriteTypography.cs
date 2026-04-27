@@ -42,7 +42,7 @@ public unsafe class DWriteTypography : DXComObject
     /// <param name="fontFeature">The font feature to add.</param>
     public void AddFontFeature(DWriteFontFeature fontFeature)
     {
-        int hr = _comImpl->AddFontFeature(_comPtr, fontFeature.NameTag, fontFeature.Parameter);
+        int hr = _comImpl->AddFontFeature(_comPtr, fontFeature);
         Marshal.ThrowExceptionForHR(hr);
     }
 
