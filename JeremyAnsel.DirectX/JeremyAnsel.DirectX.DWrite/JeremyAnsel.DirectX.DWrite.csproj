@@ -23,7 +23,12 @@
     <PackageTags>DirectX DWrite</PackageTags>
     <PackageProjectUrl>https://github.com/JeremyAnsel/JeremyAnsel.DirectX</PackageProjectUrl>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <NoWarn>CA1416;IDE0130;IDE0070;CS0649;CS0169;CS1572;IDE0290</NoWarn>
+    <IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">true</IsAotCompatible>
+    <VerifyReferenceAotCompatibility>true</VerifyReferenceAotCompatibility>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <NoWarn>CA1416;CS1591;IDE0130;IDE0070;CS0649;CS0169;CS1572;IDE0290</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
