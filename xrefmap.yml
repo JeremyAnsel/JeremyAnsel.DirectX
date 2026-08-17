@@ -91512,6 +91512,12 @@ references:
   commentId: T:JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions
   fullName: JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions
   nameWithType: DxgiPresentOptions
+- uid: JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.AllowTearing
+  name: AllowTearing
+  href: api/JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.html#JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_AllowTearing
+  commentId: F:JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.AllowTearing
+  fullName: JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.AllowTearing
+  nameWithType: DxgiPresentOptions.AllowTearing
 - uid: JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.DoNotSequence
   name: DoNotSequence
   href: api/JeremyAnsel.DirectX.Dxgi.DxgiPresentOptions.html#JeremyAnsel_DirectX_Dxgi_DxgiPresentOptions_DoNotSequence
@@ -95995,6 +96001,12 @@ references:
   commentId: F:JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.AllowModeSwitch
   fullName: JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.AllowModeSwitch
   nameWithType: DxgiSwapChainOptions.AllowModeSwitch
+- uid: JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.AllowTearing
+  name: AllowTearing
+  href: api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.html#JeremyAnsel_DirectX_Dxgi_DxgiSwapChainOptions_AllowTearing
+  commentId: F:JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.AllowTearing
+  fullName: JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.AllowTearing
+  nameWithType: DxgiSwapChainOptions.AllowTearing
 - uid: JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.DisplayOnly
   name: DisplayOnly
   href: api/JeremyAnsel.DirectX.Dxgi.DxgiSwapChainOptions.html#JeremyAnsel_DirectX_Dxgi_DxgiSwapChainOptions_DisplayOnly
