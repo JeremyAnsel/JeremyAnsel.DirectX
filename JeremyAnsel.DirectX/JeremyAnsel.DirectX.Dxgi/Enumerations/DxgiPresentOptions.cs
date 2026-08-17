@@ -55,5 +55,10 @@ public enum DxgiPresentOptions
     /// <summary>
     /// Must be set by media apps that are currently using a custom present duration (custom refresh rate).
     /// </summary>
-    UseDuration = 1 << 8
+    UseDuration = 1 << 8,
+
+    /// <summary>
+    /// Allowing tearing is a requirement of variable refresh rate displays.
+    /// </summary>
+    AllowTearing = 1 << 9
 }

@@ -61,5 +61,10 @@ public enum DxgiSwapChainOptions
     /// <summary>
     /// Full screen video.
     /// </summary>
-    FullscreenVideo = 1 << 8
+    FullscreenVideo = 1 << 8,
+
+    /// <summary>
+    /// Tearing support is a requirement to enable displays that support variable refresh rates to function properly when the application presents a swap chain tied to a full screen borderless window.
+    /// </summary>
+    AllowTearing = 1 << 11
 }
