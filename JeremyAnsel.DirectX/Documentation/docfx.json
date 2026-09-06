@@ -9,6 +9,7 @@
             "JeremyAnsel.DirectX.D3D11/**.csproj",
             "JeremyAnsel.DirectX.D3DCompiler/**.csproj",
             "JeremyAnsel.DirectX.DirectInput/**.csproj",
+            "JeremyAnsel.DirectX.DirectSound/**.csproj",
             "JeremyAnsel.DirectX.DWrite/**.csproj",
             "JeremyAnsel.DirectX.DXCommon/**.csproj",
             "JeremyAnsel.DirectX.Dxgi/**.csproj",

@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D3D11",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.D2D1", "JeremyAnsel.DirectX.D2D1\JeremyAnsel.DirectX.D2D1.csproj", "{A8948E03-1DAC-1383-D813-8437100F94AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.DirectSound", "JeremyAnsel.DirectX.DirectSound\JeremyAnsel.DirectX.DirectSound.csproj", "{41850694-6527-4B60-868A-7AEA20CE1241}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{A8948E03-1DAC-1383-D813-8437100F94AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8948E03-1DAC-1383-D813-8437100F94AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8948E03-1DAC-1383-D813-8437100F94AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41850694-6527-4B60-868A-7AEA20CE1241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41850694-6527-4B60-868A-7AEA20CE1241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41850694-6527-4B60-868A-7AEA20CE1241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41850694-6527-4B60-868A-7AEA20CE1241}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

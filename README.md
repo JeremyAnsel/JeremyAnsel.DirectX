@@ -30,6 +30,9 @@ JeremyAnsel.DirectX.D3DCompiler:
 JeremyAnsel.DirectX.DirectInput:
 [![NuGet Version](https://img.shields.io/nuget/v/JeremyAnsel.DirectX.DirectInput)](https://www.nuget.org/packages/JeremyAnsel.DirectX.DirectInput)
 
+JeremyAnsel.DirectX.DirectSound:
+[![NuGet Version](https://img.shields.io/nuget/v/JeremyAnsel.DirectX.DirectSound)](https://www.nuget.org/packages/JeremyAnsel.DirectX.DirectSound)
+
 JeremyAnsel.DirectX.WinCodec:
 [![NuGet Version](https://img.shields.io/nuget/v/JeremyAnsel.DirectX.WinCodec)](https://www.nuget.org/packages/JeremyAnsel.DirectX.WinCodec)
 
