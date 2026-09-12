@@ -166,6 +166,11 @@ public unsafe class DirectSoundBuffer : DXComObject
         UpdateBuffer(position, bytes.AsSpan());
     }
 
+    public void UpdateBuffer(int position, byte[] bytes, int length)
+    {
+        UpdateBuffer(position, bytes.AsSpan(0, length));
+    }
+
     public void UpdateBuffer(int position, ReadOnlySpan<byte> bytes)
     {
         position = (position * GetFormat().nBlockAlign) % GetCaps().dwBufferBytes;
@@ -174,7 +179,14 @@ public unsafe class DirectSoundBuffer : DXComObject
         nint ptr2;
         int count2;
         Lock(position, bytes.Length, &ptr1, &count1, &ptr2, &count2, DsBufferLock.None);
-        bytes.CopyTo(new Span<byte>((void*)ptr1, count1));
+        if (count1 != 0)
+        {
+            bytes[..count1].CopyTo(new Span<byte>((void*)ptr1, count1));
+        }
+        if (count2 != 0)
+        {
+            bytes.Slice(count1, count2).CopyTo(new Span<byte>((void*)ptr2, count2));
+        }
         Unlock(ptr1, count1, ptr2, count2);
     }
 }
