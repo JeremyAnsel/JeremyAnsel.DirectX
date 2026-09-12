@@ -84896,6 +84896,15 @@ references:
   fullName.vb: JeremyAnsel.DirectX.DirectSound.DirectSoundBuffer.UpdateBuffer(Integer, Byte())
   nameWithType: DirectSoundBuffer.UpdateBuffer(int, byte[])
   nameWithType.vb: DirectSoundBuffer.UpdateBuffer(Integer, Byte())
+- uid: JeremyAnsel.DirectX.DirectSound.DirectSoundBuffer.UpdateBuffer(System.Int32,System.Byte[],System.Int32)
+  name: UpdateBuffer(int, byte[], int)
+  href: api/JeremyAnsel.DirectX.DirectSound.DirectSoundBuffer.html#JeremyAnsel_DirectX_DirectSound_DirectSoundBuffer_UpdateBuffer_System_Int32_System_Byte___System_Int32_
+  commentId: M:JeremyAnsel.DirectX.DirectSound.DirectSoundBuffer.UpdateBuffer(System.Int32,System.Byte[],System.Int32)
+  name.vb: UpdateBuffer(Integer, Byte(), Integer)
+  fullName: JeremyAnsel.DirectX.DirectSound.DirectSoundBuffer.UpdateBuffer(int, byte[], int)
+  fullName.vb: JeremyAnsel.DirectX.DirectSound.DirectSoundBuffer.UpdateBuffer(Integer, Byte(), Integer)
+  nameWithType: DirectSoundBuffer.UpdateBuffer(int, byte[], int)
+  nameWithType.vb: DirectSoundBuffer.UpdateBuffer(Integer, Byte(), Integer)
 - uid: JeremyAnsel.DirectX.DirectSound.DirectSoundBuffer.UpdateBuffer(System.Int32,System.ReadOnlySpan{System.Byte})
   name: UpdateBuffer(int, ReadOnlySpan<byte>)
   href: api/JeremyAnsel.DirectX.DirectSound.DirectSoundBuffer.html#JeremyAnsel_DirectX_DirectSound_DirectSoundBuffer_UpdateBuffer_System_Int32_System_ReadOnlySpan_System_Byte__
