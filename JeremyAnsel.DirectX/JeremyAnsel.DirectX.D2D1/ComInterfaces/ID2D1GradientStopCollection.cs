@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Represents an collection of <see cref="D2D1GradientStop"/> objects for linear and radial gradient brushes.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1Resource"/></remarks>
-[Guid("2cd906a7-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1GradientStopCollection
 {
+    public const string Guid = "2cd906a7-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

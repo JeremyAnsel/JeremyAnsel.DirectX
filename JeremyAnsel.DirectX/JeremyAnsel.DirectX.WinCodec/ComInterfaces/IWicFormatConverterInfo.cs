@@ -7,9 +7,11 @@ using System.Runtime.InteropServices;
 namespace JeremyAnsel.DirectX.WinCodec.ComInterfaces;
 
 /// <remarks>Inherited from <see cref="IWicComponentInfo"/></remarks>
-[Guid("9F34FB65-13F4-4f15-BC57-3726B5E53D9F")]
+[Guid(Guid)]
 internal unsafe readonly struct IWicFormatConverterInfo
 {
+    public const string Guid = "9F34FB65-13F4-4f15-BC57-3726B5E53D9F";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <summary>
 /// The IDWriteFont interface represents a physical font in a font collection.
 /// </summary>
-[Guid("acd16696-8c14-4f5d-877e-fe3fc1d32737")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteFont
 {
+    public const string Guid = "acd16696-8c14-4f5d-877e-fe3fc1d32737";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

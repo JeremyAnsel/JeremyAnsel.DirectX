@@ -6,9 +6,11 @@ using System.Runtime.InteropServices;
 
 namespace JeremyAnsel.DirectX.WinCodec.ComInterfaces;
 
-[Guid("0c599495-a120-4222-9130-a8c29410bd0b")]
+[Guid(Guid)]
 internal unsafe readonly struct IWicBitmapFrameChainReader
 {
+    public const string Guid = "0c599495-a120-4222-9130-a8c29410bd0b";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

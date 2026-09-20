@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// An <c>IDXGIResource</c> interface allows resource sharing and identifies the memory that a resource resides in.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiDeviceSubObject"/></remarks>
-[Guid("035f3ab4-482e-4e50-b41f-8a7f8bd8960b")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiResource
 {
+    public const string Guid = "035f3ab4-482e-4e50-b41f-8a7f8bd8960b";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

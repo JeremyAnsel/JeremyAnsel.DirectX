@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// The rasterizer-state interface holds a description for rasterizer state that you can bind to the rasterizer stage.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("9bb4ab81-ab1a-4d8f-b506-fc04200b6ee7")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11RasterizerState
 {
+    public const string Guid = "9bb4ab81-ab1a-4d8f-b506-fc04200b6ee7";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

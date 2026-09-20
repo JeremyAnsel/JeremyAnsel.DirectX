@@ -12,9 +12,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// All coordinates are in device independent pixels (DIPs).
 /// </summary>
 /// <remarks>Inherited from <see cref="IDWriteTextFormat"/></remarks>
-[Guid("53737037-6d14-410b-9bfe-0b182bb70961")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteTextLayout
 {
+    public const string Guid = "53737037-6d14-410b-9bfe-0b182bb70961";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

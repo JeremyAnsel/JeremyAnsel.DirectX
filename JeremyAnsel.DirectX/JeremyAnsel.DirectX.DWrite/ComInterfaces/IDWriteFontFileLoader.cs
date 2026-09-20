@@ -15,9 +15,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// Instead, registration and unregistration of font file loaders with DirectWrite factory should be performed
 /// outside of the font file loader implementation as a separate step.
 /// </summary>
-[Guid("727cad4e-d6af-4c9e-8a08-d695b11caa49")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteFontFileLoader
 {
+    public const string Guid = "727cad4e-d6af-4c9e-8a08-d695b11caa49";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

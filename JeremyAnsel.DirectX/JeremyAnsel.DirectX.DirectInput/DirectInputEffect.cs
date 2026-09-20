@@ -19,7 +19,7 @@ public unsafe class DirectInputEffect : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DirectInputEffectGuid = typeof(IDirectInputEffect).GUID;
+    public static readonly Guid DirectInputEffectGuid = new(IDirectInputEffect.Guid);
 
     private readonly nint _comPtr;
     private readonly IDirectInputEffect* _comImpl;

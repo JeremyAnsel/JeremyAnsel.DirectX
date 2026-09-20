@@ -19,7 +19,7 @@ public unsafe class WicBitmapFlipRotator : WicBitmapSource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicBitmapFlipRotatorGuid = typeof(IWicBitmapFlipRotator).GUID;
+    public static readonly Guid WicBitmapFlipRotatorGuid = new(IWicBitmapFlipRotator.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicBitmapFlipRotator* _comImpl;

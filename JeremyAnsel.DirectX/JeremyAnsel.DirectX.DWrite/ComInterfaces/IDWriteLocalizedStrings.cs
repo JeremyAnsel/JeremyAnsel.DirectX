@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <summary>
 /// Represents a collection of strings indexed by locale name.
 /// </summary>
-[Guid("08256209-099a-4b34-b86d-c22b110e7771")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteLocalizedStrings
 {
+    public const string Guid = "08256209-099a-4b34-b86d-c22b110e7771";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

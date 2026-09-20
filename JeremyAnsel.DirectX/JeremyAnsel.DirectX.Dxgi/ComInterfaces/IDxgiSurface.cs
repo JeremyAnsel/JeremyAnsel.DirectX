@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// The <c>IDXGISurface</c> interface implements methods for image-data objects.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiDeviceSubObject"/></remarks>
-[Guid("cafcb56c-6ac3-4889-bf47-9e23bbd260ec")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiSurface
 {
+    public const string Guid = "cafcb56c-6ac3-4889-bf47-9e23bbd260ec";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -20,7 +20,7 @@ public unsafe class DWriteFactory : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DWriteFactoryGuid = typeof(IDWriteFactory).GUID;
+    public static readonly Guid DWriteFactoryGuid = new(IDWriteFactory.Guid);
 
     private readonly nint _comPtr;
     private readonly IDWriteFactory* _comImpl;
@@ -72,7 +72,7 @@ public unsafe class DWriteFactory : DXComObject
     public static DWriteFactory Create(DWriteFactoryType factoryType)
     {
         nint ptr;
-        int hr = NativeMethods.DWriteCreateFactory(factoryType, typeof(IDWriteFactory).GUID, &ptr);
+        int hr = NativeMethods.DWriteCreateFactory(factoryType, new(IDWriteFactory.Guid), &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return new DWriteFactory(ptr);
     }

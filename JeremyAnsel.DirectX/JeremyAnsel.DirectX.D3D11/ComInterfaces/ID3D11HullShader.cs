@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A hull shader interface manages an executable program (a hull shader) that controls the hull shader stage.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("8e5c6061-628a-4c8e-8264-bbe45cb3d5dd")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11HullShader
 {
+    public const string Guid = "8e5c6061-628a-4c8e-8264-bbe45cb3d5dd";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

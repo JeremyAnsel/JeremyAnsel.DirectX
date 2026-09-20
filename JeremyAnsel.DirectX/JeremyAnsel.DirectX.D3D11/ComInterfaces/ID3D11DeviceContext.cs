@@ -11,9 +11,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// Represents a device context which generates rendering commands.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("c0bfa96c-e089-44fb-8eaf-26f8796190da")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11DeviceContext
 {
+    public const string Guid = "c0bfa96c-e089-44fb-8eaf-26f8796190da";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

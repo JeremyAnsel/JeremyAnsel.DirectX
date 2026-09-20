@@ -19,7 +19,7 @@ public unsafe class D2D1DrawingStateBlock : D2D1Resource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1DrawingStateBlockGuid = typeof(ID2D1DrawingStateBlock).GUID;
+    public static readonly Guid D2D1DrawingStateBlockGuid = new(ID2D1DrawingStateBlock.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1DrawingStateBlock* _comImpl;

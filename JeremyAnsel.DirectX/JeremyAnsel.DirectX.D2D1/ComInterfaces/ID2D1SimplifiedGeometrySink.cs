@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// <summary>
 /// Describes a geometric path that does not contain quadratic bezier curves or arcs.
 /// </summary>
-[Guid("2cd9069e-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1SimplifiedGeometrySink
 {
+    public const string Guid = "2cd9069e-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

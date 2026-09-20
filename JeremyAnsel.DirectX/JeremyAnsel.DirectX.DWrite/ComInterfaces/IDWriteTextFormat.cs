@@ -12,9 +12,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <remarks>
 /// This object may not be thread-safe and it may carry the state of text format change.
 /// </remarks>
-[Guid("9c906818-31d7-4fd3-a151-7c5e225db55a")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteTextFormat
 {
+    public const string Guid = "9c906818-31d7-4fd3-a151-7c5e225db55a";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

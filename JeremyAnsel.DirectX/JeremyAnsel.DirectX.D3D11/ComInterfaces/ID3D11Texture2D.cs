@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A 2D texture interface manages texel data, which is structured memory.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11Resource"/></remarks>
-[Guid("6f15aaf2-d208-4e89-9ab4-489535d34f9c")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11Texture2D
 {
+    public const string Guid = "6f15aaf2-d208-4e89-9ab4-489535d34f9c";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

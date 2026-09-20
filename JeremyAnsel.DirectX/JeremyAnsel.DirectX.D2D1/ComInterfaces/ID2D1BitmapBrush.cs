@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// A bitmap brush allows a bitmap to be used to fill a geometry.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1Brush"/></remarks>
-[Guid("2cd906aa-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1BitmapBrush
 {
+    public const string Guid = "2cd906aa-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

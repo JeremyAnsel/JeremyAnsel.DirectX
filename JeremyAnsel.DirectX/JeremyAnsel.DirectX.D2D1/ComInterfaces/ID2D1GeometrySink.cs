@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Describes a geometric path that can contain lines, arcs, cubic Bezier curves, and quadratic Bezier curves.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1SimplifiedGeometrySink"/></remarks>
-[Guid("2cd9069f-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1GeometrySink
 {
+    public const string Guid = "2cd9069f-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

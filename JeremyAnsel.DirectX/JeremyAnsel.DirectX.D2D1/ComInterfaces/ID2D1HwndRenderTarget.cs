@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Renders drawing instructions to a window.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1RenderTarget"/></remarks>
-[Guid("2cd90698-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1HwndRenderTarget
 {
+    public const string Guid = "2cd90698-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

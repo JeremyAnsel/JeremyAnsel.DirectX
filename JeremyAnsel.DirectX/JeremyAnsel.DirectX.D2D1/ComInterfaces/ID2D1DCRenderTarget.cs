@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Issues drawing commands to a GDI device context.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1RenderTarget"/></remarks>
-[Guid("1c51bc64-de61-46fd-9899-63a5d8f03950")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1DCRenderTarget
 {
+    public const string Guid = "1c51bc64-de61-46fd-9899-63a5d8f03950";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

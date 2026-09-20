@@ -20,7 +20,7 @@ public unsafe class D3D11Buffer : D3D11Resource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11BufferGuid = typeof(ID3D11Buffer).GUID;
+    public static readonly Guid D3D11BufferGuid = new(ID3D11Buffer.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11Buffer* _comImpl;

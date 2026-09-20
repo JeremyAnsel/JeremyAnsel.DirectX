@@ -19,7 +19,7 @@ public unsafe class D3D11BlendState : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11BlendStateGuid = typeof(ID3D11BlendState).GUID;
+    public static readonly Guid D3D11BlendStateGuid = new(ID3D11BlendState.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11BlendState* _comImpl;

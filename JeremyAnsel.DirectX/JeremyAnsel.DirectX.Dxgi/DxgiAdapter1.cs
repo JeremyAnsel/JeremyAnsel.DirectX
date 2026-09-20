@@ -20,7 +20,7 @@ public unsafe class DxgiAdapter1 : DxgiObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DxgiAdapter1Guid = typeof(IDxgiAdapter1).GUID;
+    public static readonly Guid DxgiAdapter1Guid = new(IDxgiAdapter1.Guid);
 
     private readonly nint _comPtr;
     private readonly IDxgiAdapter1* _comImpl;

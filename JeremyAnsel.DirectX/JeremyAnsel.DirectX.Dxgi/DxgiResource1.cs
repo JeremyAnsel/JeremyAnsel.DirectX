@@ -19,7 +19,7 @@ public unsafe class DxgiResource1 : DxgiDeviceSubObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DxgiResource1Guid = typeof(IDxgiResource).GUID;
+    public static readonly Guid DxgiResource1Guid = new(IDxgiResource.Guid);
 
     private readonly nint _comPtr;
     private readonly IDxgiResource* _comImpl;

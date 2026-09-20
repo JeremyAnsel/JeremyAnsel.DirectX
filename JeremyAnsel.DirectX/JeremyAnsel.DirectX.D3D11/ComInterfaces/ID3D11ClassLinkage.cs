@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// This interface encapsulates an HLSL dynamic linkage.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("ddf57cba-9543-46e4-a12b-f207a0fe7fed")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11ClassLinkage
 {
+    public const string Guid = "ddf57cba-9543-46e4-a12b-f207a0fe7fed";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

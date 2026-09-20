@@ -19,7 +19,7 @@ public unsafe class D2D1PathGeometry : D2D1Geometry
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1PathGeometryGuid = typeof(ID2D1PathGeometry).GUID;
+    public static readonly Guid D2D1PathGeometryGuid = new(ID2D1PathGeometry.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1PathGeometry* _comImpl;

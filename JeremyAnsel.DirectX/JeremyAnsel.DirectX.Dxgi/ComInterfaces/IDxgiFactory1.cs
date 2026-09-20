@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// The <c>IDXGIFactory1</c> interface implements methods for generating DXGI objects.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiFactory"/></remarks>
-[Guid("770aae78-f26f-4dba-a829-253c83d1b387")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiFactory1
 {
+    public const string Guid = "770aae78-f26f-4dba-a829-253c83d1b387";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

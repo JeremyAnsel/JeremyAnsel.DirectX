@@ -19,7 +19,7 @@ public unsafe class WicColorTransform : WicBitmapSource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicColorTransformGuid = typeof(IWicColorTransform).GUID;
+    public static readonly Guid WicColorTransformGuid = new(IWicColorTransform.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicColorTransform* _comImpl;

@@ -19,7 +19,7 @@ public unsafe class D3D11UnorderedAccessView : D3D11View
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11UnorderedAccessViewGuid = typeof(ID3D11UnorderedAccessView).GUID;
+    public static readonly Guid D3D11UnorderedAccessViewGuid = new(ID3D11UnorderedAccessView.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11UnorderedAccessView* _comImpl;

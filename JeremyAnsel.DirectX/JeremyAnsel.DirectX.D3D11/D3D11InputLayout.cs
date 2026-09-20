@@ -19,7 +19,7 @@ public unsafe class D3D11InputLayout : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11InputLayoutGuid = typeof(ID3D11InputLayout).GUID;
+    public static readonly Guid D3D11InputLayoutGuid = new(ID3D11InputLayout.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11InputLayout* _comImpl;

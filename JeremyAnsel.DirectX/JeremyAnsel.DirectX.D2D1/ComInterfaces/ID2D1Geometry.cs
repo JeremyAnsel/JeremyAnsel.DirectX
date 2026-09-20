@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Represents a geometry resource and defines a set of helper methods for manipulating and measuring geometric shapes. Interfaces that inherit from <see cref="ID2D1Geometry"/> define specific shapes.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1Resource"/></remarks>
-[Guid("2cd906a1-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1Geometry
 {
+    public const string Guid = "2cd906a1-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

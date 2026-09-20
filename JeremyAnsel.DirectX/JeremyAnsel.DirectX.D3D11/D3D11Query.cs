@@ -19,7 +19,7 @@ public unsafe class D3D11Query : D3D11Asynchronous
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11QueryGuid = typeof(ID3D11Query).GUID;
+    public static readonly Guid D3D11QueryGuid = new(ID3D11Query.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11Query* _comImpl;

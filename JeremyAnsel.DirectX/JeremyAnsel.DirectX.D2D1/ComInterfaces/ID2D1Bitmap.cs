@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Root bitmap resource, linearly scaled on a draw call.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1Image"/></remarks>
-[Guid("a2296057-ea42-4099-983b-539fb6505426")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1Bitmap
 {
+    public const string Guid = "a2296057-ea42-4099-983b-539fb6505426";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

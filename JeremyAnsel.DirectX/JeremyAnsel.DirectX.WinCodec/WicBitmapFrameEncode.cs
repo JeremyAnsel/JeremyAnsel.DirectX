@@ -20,7 +20,7 @@ public unsafe class WicBitmapFrameEncode : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicBitmapFrameEncodeGuid = typeof(IWicBitmapFrameEncode).GUID;
+    public static readonly Guid WicBitmapFrameEncodeGuid = new(IWicBitmapFrameEncode.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicBitmapFrameEncode* _comImpl;

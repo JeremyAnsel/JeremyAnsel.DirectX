@@ -19,7 +19,7 @@ public unsafe class DxgiOutput : DxgiObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DxgiOutputGuid = typeof(IDxgiOutput).GUID;
+    public static readonly Guid DxgiOutputGuid = new(IDxgiOutput.Guid);
 
     private readonly nint _comPtr;
     private readonly IDxgiOutput* _comImpl;

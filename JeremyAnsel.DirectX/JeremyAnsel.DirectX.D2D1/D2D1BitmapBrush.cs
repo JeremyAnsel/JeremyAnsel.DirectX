@@ -18,7 +18,7 @@ public unsafe class D2D1BitmapBrush : D2D1Brush
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1BitmapBrushGuid = typeof(ID2D1BitmapBrush).GUID;
+    public static readonly Guid D2D1BitmapBrushGuid = new(ID2D1BitmapBrush.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1BitmapBrush* _comImpl;

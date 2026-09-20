@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// The root brush interface. All brushes can be used to fill or pen a geometry.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1Resource"/></remarks>
-[Guid("2cd906a8-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1Brush
 {
+    public const string Guid = "2cd906a8-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

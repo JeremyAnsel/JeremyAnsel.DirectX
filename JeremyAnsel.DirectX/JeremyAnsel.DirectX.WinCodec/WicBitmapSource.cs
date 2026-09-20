@@ -20,7 +20,7 @@ public unsafe class WicBitmapSource : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicBitmapSourceGuid = typeof(IWicBitmapSource).GUID;
+    public static readonly Guid WicBitmapSourceGuid = new(IWicBitmapSource.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicBitmapSource* _comImpl;

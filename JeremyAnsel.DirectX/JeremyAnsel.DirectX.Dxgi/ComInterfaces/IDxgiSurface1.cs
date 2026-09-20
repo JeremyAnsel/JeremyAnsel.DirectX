@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// The <c>IDXGISurface1</c> interface extends the <c>IDXGISurface</c> by adding support for using Windows Graphics Device Interface (GDI) to render to a Microsoft DirectX Graphics Infrastructure (DXGI) surface.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiSurface"/></remarks>
-[Guid("4AE63092-6327-4c1b-80AE-BFE12EA32B86")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiSurface1
 {
+    public const string Guid = "4AE63092-6327-4c1b-80AE-BFE12EA32B86";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

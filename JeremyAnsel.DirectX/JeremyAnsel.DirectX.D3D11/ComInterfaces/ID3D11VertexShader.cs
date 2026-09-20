@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A vertex shader interface manages an executable program (a vertex shader) that controls the vertex shader stage.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("3b301d64-d678-4289-8897-22f8928b72f3")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11VertexShader
 {
+    public const string Guid = "3b301d64-d678-4289-8897-22f8928b72f3";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

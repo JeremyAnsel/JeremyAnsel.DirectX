@@ -19,7 +19,7 @@ public unsafe class WicPlanarFormatConverter : WicBitmapSource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicPlanarFormatConverterGuid = typeof(IWicPlanarFormatConverter).GUID;
+    public static readonly Guid WicPlanarFormatConverterGuid = new(IWicPlanarFormatConverter.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicPlanarFormatConverter* _comImpl;

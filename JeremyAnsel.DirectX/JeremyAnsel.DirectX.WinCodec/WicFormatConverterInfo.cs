@@ -19,7 +19,7 @@ public unsafe class WicFormatConverterInfo : WicComponentInfo
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicFormatConverterInfoGuid = typeof(IWicFormatConverterInfo).GUID;
+    public static readonly Guid WicFormatConverterInfoGuid = new(IWicFormatConverterInfo.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicFormatConverterInfo* _comImpl;

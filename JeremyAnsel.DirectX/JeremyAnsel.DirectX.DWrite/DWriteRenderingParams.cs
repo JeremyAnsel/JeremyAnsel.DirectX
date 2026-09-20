@@ -21,7 +21,7 @@ public unsafe class DWriteRenderingParams : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DWriteRenderingParamsGuid = typeof(IDWriteRenderingParams).GUID;
+    public static readonly Guid DWriteRenderingParamsGuid = new(IDWriteRenderingParams.Guid);
 
     private readonly nint _comPtr;
     private readonly IDWriteRenderingParams* _comImpl;

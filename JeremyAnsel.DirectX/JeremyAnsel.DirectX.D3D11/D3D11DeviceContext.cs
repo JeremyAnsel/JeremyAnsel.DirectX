@@ -22,7 +22,7 @@ public unsafe class D3D11DeviceContext : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11DeviceContextGuid = typeof(ID3D11DeviceContext).GUID;
+    public static readonly Guid D3D11DeviceContextGuid = new(ID3D11DeviceContext.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11DeviceContext* _comImpl;

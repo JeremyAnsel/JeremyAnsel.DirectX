@@ -12,9 +12,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// Font file references created using CreateFontFileReference use this font file loader.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDWriteFontFileLoader"/></remarks>
-[Guid("b2d9f3ec-c9fe-4a11-a2ec-d86208f7c0a2")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteLocalFontFileLoader
 {
+    public const string Guid = "b2d9f3ec-c9fe-4a11-a2ec-d86208f7c0a2";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

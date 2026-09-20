@@ -19,7 +19,7 @@ public unsafe class D3D11RasterizerState : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11RasterizerStateGuid = typeof(ID3D11RasterizerState).GUID;
+    public static readonly Guid D3D11RasterizerStateGuid = new(ID3D11RasterizerState.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11RasterizerState* _comImpl;

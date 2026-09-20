@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Renders to an intermediate texture created by the <see cref="CreateCompatibleRenderTarget"/> method.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1RenderTarget"/></remarks>
-[Guid("2cd90695-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1BitmapRenderTarget
 {
+    public const string Guid = "2cd90695-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

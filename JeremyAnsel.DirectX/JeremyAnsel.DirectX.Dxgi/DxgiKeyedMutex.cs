@@ -19,7 +19,7 @@ public unsafe class DxgiKeyedMutex : DxgiDeviceSubObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DxgiKeyedMutexGuid = typeof(IDxgiKeyedMutex).GUID;
+    public static readonly Guid DxgiKeyedMutexGuid = new(IDxgiKeyedMutex.Guid);
 
     private readonly nint _comPtr;
     private readonly IDxgiKeyedMutex* _comImpl;

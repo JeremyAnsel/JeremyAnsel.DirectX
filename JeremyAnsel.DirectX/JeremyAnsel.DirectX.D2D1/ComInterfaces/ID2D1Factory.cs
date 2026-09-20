@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// <summary>
 /// Creates Direct2D resources.
 /// </summary>
-[Guid("06152247-6f50-465a-9245-118bfd3b6007")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1Factory
 {
+    public const string Guid = "06152247-6f50-465a-9245-118bfd3b6007";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

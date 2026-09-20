@@ -19,7 +19,7 @@ public unsafe class D2D1Resource : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1ResourceGuid = typeof(ID2D1Resource).GUID;
+    public static readonly Guid D2D1ResourceGuid = new(ID2D1Resource.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1Resource* _comImpl;

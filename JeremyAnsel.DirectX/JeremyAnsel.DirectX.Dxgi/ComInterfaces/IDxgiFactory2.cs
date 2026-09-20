@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// The <c>IDXGIFactory2</c> interface includes methods to create a newer version swap chain with more features than <c>IDXGISwapChain</c> and to monitor stereoscopic 3D capabilities.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiFactory1"/></remarks>
-[Guid("50c83a1c-e072-4c48-87b0-3630fa36a6d0")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiFactory2
 {
+    public const string Guid = "50c83a1c-e072-4c48-87b0-3630fa36a6d0";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

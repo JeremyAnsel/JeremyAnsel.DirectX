@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// The blend-state interface holds a description for blending state that you can bind to the output-merger stage.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("75b68faa-347d-4159-8f45-a0640f01cd9a")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11BlendState
 {
+    public const string Guid = "75b68faa-347d-4159-8f45-a0640f01cd9a";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

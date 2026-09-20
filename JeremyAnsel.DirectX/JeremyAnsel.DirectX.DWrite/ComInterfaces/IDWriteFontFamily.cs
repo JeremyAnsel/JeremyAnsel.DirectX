@@ -11,9 +11,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// by weight, stretch, and style.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDWriteFontList"/></remarks>
-[Guid("da20d8ef-812a-4c43-9802-62ec4abd7add")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteFontFamily
 {
+    public const string Guid = "da20d8ef-812a-4c43-9802-62ec4abd7add";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -20,7 +20,7 @@ public unsafe class D3D11ClassLinkage : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11ClassLinkageGuid = typeof(ID3D11ClassLinkage).GUID;
+    public static readonly Guid D3D11ClassLinkageGuid = new(ID3D11ClassLinkage.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11ClassLinkage* _comImpl;

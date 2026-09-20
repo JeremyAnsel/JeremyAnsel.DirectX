@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <summary>
 /// Interface that encapsulates information used to render a glyph run.
 /// </summary>
-[Guid("7d97dbf7-e085-42d4-81e3-6a883bded118")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteGlyphRunAnalysis
 {
+    public const string Guid = "7d97dbf7-e085-42d4-81e3-6a883bded118";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -7,9 +7,11 @@ using System.Runtime.InteropServices;
 namespace JeremyAnsel.DirectX.WinCodec.ComInterfaces;
 
 /// <remarks>Inherited from IStream</remarks>
-[Guid("135FF860-22B7-4ddf-B0F6-218F4F299A43")]
+[Guid(Guid)]
 internal unsafe readonly struct IWicStream
 {
+    public const string Guid = "135FF860-22B7-4ddf-B0F6-218F4F299A43";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

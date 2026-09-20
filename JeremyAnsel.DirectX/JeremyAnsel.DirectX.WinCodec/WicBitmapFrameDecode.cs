@@ -19,7 +19,7 @@ public unsafe class WicBitmapFrameDecode : WicBitmapSource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicBitmapFrameDecodeGuid = typeof(IWicBitmapFrameDecode).GUID;
+    public static readonly Guid WicBitmapFrameDecodeGuid = new(IWicBitmapFrameDecode.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicBitmapFrameDecode* _comImpl;

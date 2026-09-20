@@ -18,7 +18,7 @@ public unsafe class D2D1TransformedGeometry : D2D1Geometry
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1TransformedGeometryGuid = typeof(ID2D1TransformedGeometry).GUID;
+    public static readonly Guid D2D1TransformedGeometryGuid = new(ID2D1TransformedGeometry.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1TransformedGeometry* _comImpl;

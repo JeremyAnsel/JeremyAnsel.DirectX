@@ -16,9 +16,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// stop prematurely and return a callback error. Rather than return E_NOTIMPL,
 /// an application should stub the method and return a constant/null and S_OK.
 /// </summary>
-[Guid("688e1a58-5094-47c8-adc8-fbcea60ae92b")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteTextAnalysisSource
 {
+    public const string Guid = "688e1a58-5094-47c8-adc8-fbcea60ae92b";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

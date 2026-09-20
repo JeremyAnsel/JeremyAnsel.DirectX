@@ -12,9 +12,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// state of the analysis sink, therefore a Set method call on a range
 /// overwrites the previously set analysis result of the same range. 
 /// </summary>
-[Guid("5810cd44-0ca0-4701-b3fa-bec5182ae4f6")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteTextAnalysisSink
 {
+    public const string Guid = "5810cd44-0ca0-4701-b3fa-bec5182ae4f6";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

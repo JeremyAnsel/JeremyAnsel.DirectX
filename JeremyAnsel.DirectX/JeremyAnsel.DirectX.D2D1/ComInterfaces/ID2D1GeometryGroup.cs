@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Represents a composite geometry, composed of other <see cref="ID2D1Geometry"/> objects.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1Geometry"/></remarks>
-[Guid("2cd906a6-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1GeometryGroup
 {
+    public const string Guid = "2cd906a6-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

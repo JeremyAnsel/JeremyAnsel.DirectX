@@ -11,9 +11,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Represents the drawing state of a render target: the antialiasing mode, transform, tags, and text-rendering options.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1Resource"/></remarks>
-[Guid("28506e39-ebf6-46a1-bb47-fd85565ab957")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1DrawingStateBlock
 {
+    public const string Guid = "28506e39-ebf6-46a1-bb47-fd85565ab957";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

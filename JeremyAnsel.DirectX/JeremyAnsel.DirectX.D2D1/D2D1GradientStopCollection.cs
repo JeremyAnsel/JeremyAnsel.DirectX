@@ -18,7 +18,7 @@ public unsafe class D2D1GradientStopCollection : D2D1Resource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1GradientStopCollectionGuid = typeof(ID2D1GradientStopCollection).GUID;
+    public static readonly Guid D2D1GradientStopCollectionGuid = new(ID2D1GradientStopCollection.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1GradientStopCollection* _comImpl;

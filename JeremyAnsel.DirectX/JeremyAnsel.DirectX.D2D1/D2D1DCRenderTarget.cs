@@ -19,7 +19,7 @@ public unsafe class D2D1DCRenderTarget : D2D1RenderTarget
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1DCRenderTargetGuid = typeof(ID2D1DCRenderTarget).GUID;
+    public static readonly Guid D2D1DCRenderTargetGuid = new(ID2D1DCRenderTarget.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1DCRenderTarget* _comImpl;

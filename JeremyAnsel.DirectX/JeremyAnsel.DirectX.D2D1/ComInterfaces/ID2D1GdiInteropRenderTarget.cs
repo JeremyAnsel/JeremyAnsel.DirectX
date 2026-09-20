@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// <summary>
 /// Provides access to an device context that can accept GDI drawing commands.
 /// </summary>
-[Guid("e0db51c3-6f77-4bae-b3d5-e47509b35838")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1GdiInteropRenderTarget
 {
+    public const string Guid = "e0db51c3-6f77-4bae-b3d5-e47509b35838";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

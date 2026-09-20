@@ -19,7 +19,7 @@ public unsafe class D2D1Mesh : D2D1Resource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1MeshGuid = typeof(ID2D1Mesh).GUID;
+    public static readonly Guid D2D1MeshGuid = new(ID2D1Mesh.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1Mesh* _comImpl;

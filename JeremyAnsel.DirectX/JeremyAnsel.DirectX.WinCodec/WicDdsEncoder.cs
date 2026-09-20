@@ -20,7 +20,7 @@ public unsafe class WicDdsEncoder : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicDdsEncoderGuid = typeof(IWicDdsEncoder).GUID;
+    public static readonly Guid WicDdsEncoderGuid = new(IWicDdsEncoder.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicDdsEncoder* _comImpl;

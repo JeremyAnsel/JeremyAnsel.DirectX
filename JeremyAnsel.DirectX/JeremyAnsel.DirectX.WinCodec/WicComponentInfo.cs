@@ -20,7 +20,7 @@ public unsafe class WicComponentInfo : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicComponentInfoGuid = typeof(IWicComponentInfo).GUID;
+    public static readonly Guid WicComponentInfoGuid = new(IWicComponentInfo.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicComponentInfo* _comImpl;

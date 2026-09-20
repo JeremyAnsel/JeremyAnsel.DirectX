@@ -20,7 +20,7 @@ public unsafe class WicColorContext : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicColorContextGuid = typeof(IWicColorContext).GUID;
+    public static readonly Guid WicColorContextGuid = new(IWicColorContext.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicColorContext* _comImpl;

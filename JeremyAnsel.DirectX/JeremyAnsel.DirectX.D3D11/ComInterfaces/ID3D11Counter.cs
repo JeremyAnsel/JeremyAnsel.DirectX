@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// This interface encapsulates methods for measuring GPU performance.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11Asynchronous"/></remarks>
-[Guid("6e8c49fb-a371-4770-b440-29086022b741")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11Counter
 {
+    public const string Guid = "6e8c49fb-a371-4770-b440-29086022b741";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// The sampler-state interface holds a description for sampler state that you can bind to any shader stage of the pipeline for reference by texture sample operations.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("da6fea51-564c-4487-9810-f0d0f9b4e3a5")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11SamplerState
 {
+    public const string Guid = "da6fea51-564c-4487-9810-f0d0f9b4e3a5";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

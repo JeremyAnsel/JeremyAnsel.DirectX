@@ -12,9 +12,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// such as underlines.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDWritePixelSnapping"/></remarks>
-[Guid("ef8a8135-5cc6-45fe-8825-c5a0724eb819")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteTextRenderer
 {
+    public const string Guid = "ef8a8135-5cc6-45fe-8825-c5a0724eb819";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -19,7 +19,7 @@ public unsafe class D3D11PixelShader : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11PixelShaderGuid = typeof(ID3D11PixelShader).GUID;
+    public static readonly Guid D3D11PixelShaderGuid = new(ID3D11PixelShader.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11PixelShader* _comImpl;

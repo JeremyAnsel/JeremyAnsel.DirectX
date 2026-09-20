@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <summary>
 /// The root factory interface for all DWrite objects.
 /// </summary>
-[Guid("b859ee5a-d838-4b5b-a2e8-1adc7d93db48")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteFactory
 {
+    public const string Guid = "b859ee5a-d838-4b5b-a2e8-1adc7d93db48";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

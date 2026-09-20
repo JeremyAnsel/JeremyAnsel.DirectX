@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.D3D10.ComInterfaces;
 /// <summary>
 /// The device interface represents a virtual adapter for Direct3D 10.1; it is used to perform rendering and create Direct3D resources.
 /// </summary>
-[Guid("9B7E4C8F-342C-4106-A19F-4F2704F689F0")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D10Device1
 {
+    public const string Guid = "9B7E4C8F-342C-4106-A19F-4F2704F689F0";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

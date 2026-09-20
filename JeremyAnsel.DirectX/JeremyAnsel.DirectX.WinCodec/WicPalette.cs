@@ -20,7 +20,7 @@ public unsafe class WicPalette : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicPaletteGuid = typeof(IWicPalette).GUID;
+    public static readonly Guid WicPaletteGuid = new(IWicPalette.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicPalette* _comImpl;

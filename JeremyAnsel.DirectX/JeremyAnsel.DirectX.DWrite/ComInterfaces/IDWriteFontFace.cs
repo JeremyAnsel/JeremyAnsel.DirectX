@@ -11,9 +11,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// It contains font face type, appropriate file references and face identification data.
 /// Various font data such as metrics, names and glyph outlines is obtained from IDWriteFontFace.
 /// </summary>
-[Guid("5f49804d-7024-4d43-bfa9-d25984f53849")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteFontFace
 {
+    public const string Guid = "5f49804d-7024-4d43-bfa9-d25984f53849";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

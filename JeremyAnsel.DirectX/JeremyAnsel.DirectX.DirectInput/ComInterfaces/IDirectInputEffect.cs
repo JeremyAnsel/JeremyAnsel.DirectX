@@ -6,9 +6,11 @@ using System.Runtime.InteropServices;
 
 namespace JeremyAnsel.DirectX.DirectInput;
 
-[Guid(DirectInputGuids.IDirectInputEffectString)]
+[Guid(Guid)]
 internal unsafe readonly struct IDirectInputEffect
 {
+    public const string Guid = DirectInputGuids.IDirectInputEffectString;
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

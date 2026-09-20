@@ -19,7 +19,7 @@ public unsafe class DirectInputFactory : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DirectInputFactoryGuid = typeof(IDirectInput8).GUID;
+    public static readonly Guid DirectInputFactoryGuid = new(IDirectInput8.Guid);
 
     private readonly nint _comPtr;
     private readonly IDirectInput8* _comImpl;

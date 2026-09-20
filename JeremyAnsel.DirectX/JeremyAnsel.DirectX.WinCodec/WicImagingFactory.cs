@@ -22,7 +22,7 @@ public unsafe class WicImagingFactory : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicImagingFactoryGuid = typeof(IWicImagingFactory).GUID;
+    public static readonly Guid WicImagingFactoryGuid = new(IWicImagingFactory.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicImagingFactory* _comImpl;

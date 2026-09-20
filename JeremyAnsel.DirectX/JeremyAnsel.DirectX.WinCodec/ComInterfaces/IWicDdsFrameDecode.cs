@@ -6,9 +6,11 @@ using System.Runtime.InteropServices;
 
 namespace JeremyAnsel.DirectX.WinCodec.ComInterfaces;
 
-[Guid("3d4c0c61-18a4-41e4-bd80-481a4fc9f464")]
+[Guid(Guid)]
 internal unsafe readonly struct IWicDdsFrameDecode
 {
+    public const string Guid = "3d4c0c61-18a4-41e4-bd80-481a4fc9f464";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

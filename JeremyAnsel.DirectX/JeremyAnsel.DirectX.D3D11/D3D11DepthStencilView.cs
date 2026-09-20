@@ -19,7 +19,7 @@ public unsafe class D3D11DepthStencilView : D3D11View
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11DepthStencilViewGuid = typeof(ID3D11DepthStencilView).GUID;
+    public static readonly Guid D3D11DepthStencilViewGuid = new(ID3D11DepthStencilView.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11DepthStencilView* _comImpl;

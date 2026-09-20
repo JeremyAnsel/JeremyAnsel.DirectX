@@ -18,7 +18,7 @@ public unsafe class D2D1Layer : D2D1Resource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1LayerGuid = typeof(ID2D1Layer).GUID;
+    public static readonly Guid D2D1LayerGuid = new(ID2D1Layer.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1Layer* _comImpl;

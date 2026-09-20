@@ -18,7 +18,7 @@ public unsafe class D3D11Asynchronous : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11AsynchronousGuid = typeof(ID3D11Asynchronous).GUID;
+    public static readonly Guid D3D11AsynchronousGuid = new(ID3D11Asynchronous.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11Asynchronous* _comImpl;

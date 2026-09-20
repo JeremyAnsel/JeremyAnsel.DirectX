@@ -18,7 +18,7 @@ public unsafe class D2D1StrokeStyle : D2D1Resource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1StrokeStyleGuid = typeof(ID2D1StrokeStyle).GUID;
+    public static readonly Guid D2D1StrokeStyleGuid = new(ID2D1StrokeStyle.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1StrokeStyle* _comImpl;

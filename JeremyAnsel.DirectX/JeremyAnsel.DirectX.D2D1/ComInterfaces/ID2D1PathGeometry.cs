@@ -10,9 +10,12 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Represents a complex shape that may be composed of arcs, curves, and lines.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1Geometry"/></remarks>
-[Guid("2cd906a5-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1PathGeometry
 {
+
+    public const string Guid = "2cd906a5-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -19,7 +19,7 @@ public unsafe class D3D11Counter : D3D11Asynchronous
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11CounterGuid = typeof(ID3D11Counter).GUID;
+    public static readonly Guid D3D11CounterGuid = new(ID3D11Counter.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11Counter* _comImpl;

@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// Enables creating Microsoft DirectX Graphics Infrastructure (DXGI) objects.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiFactory2"/></remarks>
-[Guid("25483823-cd46-4c7d-86ca-47aa95b837bd")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiFactory3
 {
+    public const string Guid = "25483823-cd46-4c7d-86ca-47aa95b837bd";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

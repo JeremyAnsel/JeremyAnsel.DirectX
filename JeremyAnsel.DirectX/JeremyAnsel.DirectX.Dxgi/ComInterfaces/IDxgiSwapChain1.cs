@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// Provides presentation capabilities that are enhanced from <c>IDXGISwapChain</c>. These presentation capabilities consist of specifying dirty rectangles and scroll rectangle to optimize the presentation.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiSwapChain"/></remarks>
-[Guid("790a45f7-0d42-4876-983a-0a55cfe6f4aa")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiSwapChain1
 {
+    public const string Guid = "790a45f7-0d42-4876-983a-0a55cfe6f4aa";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -20,7 +20,7 @@ public unsafe class D3D11Texture3D : D3D11Resource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11Texture3DGuid = typeof(ID3D11Texture3D).GUID;
+    public static readonly Guid D3D11Texture3DGuid = new(ID3D11Texture3D.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11Texture3D* _comImpl;

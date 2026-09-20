@@ -18,7 +18,7 @@ public unsafe class D2D1Image : D2D1Resource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1ImageGuid = typeof(ID2D1Image).GUID;
+    public static readonly Guid D2D1ImageGuid = new(ID2D1Image.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1Image* _comImpl;

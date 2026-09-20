@@ -19,7 +19,7 @@ public unsafe class WicBitmapEncoderInfo : WicBitmapCodecInfo
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicBitmapEncoderInfoGuid = typeof(IWicBitmapEncoderInfo).GUID;
+    public static readonly Guid WicBitmapEncoderInfoGuid = new(IWicBitmapEncoderInfo.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicBitmapEncoderInfo* _comImpl;

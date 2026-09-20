@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D2D1.ComInterfaces;
 /// Paints an area with a linear gradient.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID2D1Brush"/></remarks>
-[Guid("2cd906ab-12e2-11dc-9fed-001143a055f9")]
+[Guid(Guid)]
 internal unsafe readonly struct ID2D1LinearGradientBrush
 {
+    public const string Guid = "2cd906ab-12e2-11dc-9fed-001143a055f9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

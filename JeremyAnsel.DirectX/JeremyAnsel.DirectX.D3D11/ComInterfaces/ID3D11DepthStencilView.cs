@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A depth-stencil-view interface accesses a texture resource during depth-stencil testing.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11View"/></remarks>
-[Guid("9fdac92a-1876-48c3-afad-25b94f84a9b6")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11DepthStencilView
 {
+    public const string Guid = "9fdac92a-1876-48c3-afad-25b94f84a9b6";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

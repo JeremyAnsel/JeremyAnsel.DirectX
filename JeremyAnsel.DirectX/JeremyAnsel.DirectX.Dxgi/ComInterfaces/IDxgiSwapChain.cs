@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// An <c>IDXGISwapChain</c> interface implements one or more surfaces for storing rendered data before presenting it to an output.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiDeviceSubObject"/></remarks>
-[Guid("310d36a0-d2e7-4c0a-aa04-6a9d23b8886a")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiSwapChain
 {
+    public const string Guid = "310d36a0-d2e7-4c0a-aa04-6a9d23b8886a";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

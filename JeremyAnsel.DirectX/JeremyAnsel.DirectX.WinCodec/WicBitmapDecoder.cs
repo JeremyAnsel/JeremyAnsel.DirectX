@@ -21,7 +21,7 @@ public unsafe class WicBitmapDecoder : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicBitmapDecoderGuid = typeof(IWicBitmapDecoder).GUID;
+    public static readonly Guid WicBitmapDecoderGuid = new(IWicBitmapDecoder.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicBitmapDecoder* _comImpl;

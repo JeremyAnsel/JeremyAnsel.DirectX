@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// <summary>
 /// A device-child interface accesses data used by a device.
 /// </summary>
-[Guid("1841e5c8-16b0-489b-bcc8-44cfb0d5deae")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11DeviceChild
 {
+    public const string Guid = "1841e5c8-16b0-489b-bcc8-44cfb0d5deae";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

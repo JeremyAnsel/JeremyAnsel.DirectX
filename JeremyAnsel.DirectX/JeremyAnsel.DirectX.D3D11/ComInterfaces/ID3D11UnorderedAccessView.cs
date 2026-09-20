@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A view interface specifies the parts of a resource the pipeline can access during rendering.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11View"/></remarks>
-[Guid("28acf509-7f5c-48f6-8611-f316010a6380")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11UnorderedAccessView
 {
+    public const string Guid = "28acf509-7f5c-48f6-8611-f316010a6380";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

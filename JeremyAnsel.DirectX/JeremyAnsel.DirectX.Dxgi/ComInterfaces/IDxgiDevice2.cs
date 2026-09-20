@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// The <c>IDXGIDevice2</c> interface implements a derived class for DXGI objects that produce image data. The interface exposes methods to block CPU processing until the GPU completes processing, and to offer resources to the operating system.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiDevice1"/></remarks>
-[Guid("05008617-fbfd-4051-a790-144884b4f6a9")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiDevice2
 {
+    public const string Guid = "05008617-fbfd-4051-a790-144884b4f6a9";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -20,7 +20,7 @@ public unsafe class D2D1SimplifiedGeometrySink : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1SimplifiedGeometrySinkGuid = typeof(ID2D1SimplifiedGeometrySink).GUID;
+    public static readonly Guid D2D1SimplifiedGeometrySinkGuid = new(ID2D1SimplifiedGeometrySink.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1SimplifiedGeometrySink* _comImpl;

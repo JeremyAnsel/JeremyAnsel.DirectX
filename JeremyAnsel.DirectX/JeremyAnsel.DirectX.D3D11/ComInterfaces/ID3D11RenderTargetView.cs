@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A render-target-view interface identifies the render-target subresources that can be accessed during rendering.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11View"/></remarks>
-[Guid("dfdba067-0b8d-4865-875b-d7b4516cc164")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11RenderTargetView
 {
+    public const string Guid = "dfdba067-0b8d-4865-875b-d7b4516cc164";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

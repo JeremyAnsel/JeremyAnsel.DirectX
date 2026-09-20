@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A buffer interface accesses a buffer resource, which is unstructured memory.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11Resource"/></remarks>
-[Guid("48570b85-d1ee-4fcd-a250-eb350722b037")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11Buffer
 {
+    public const string Guid = "48570b85-d1ee-4fcd-a250-eb350722b037";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

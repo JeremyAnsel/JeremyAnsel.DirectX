@@ -20,7 +20,7 @@ public unsafe class D2D1Bitmap : D2D1Image
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1BitmapGuid = typeof(ID2D1Bitmap).GUID;
+    public static readonly Guid D2D1BitmapGuid = new(ID2D1Bitmap.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1Bitmap* _comImpl;

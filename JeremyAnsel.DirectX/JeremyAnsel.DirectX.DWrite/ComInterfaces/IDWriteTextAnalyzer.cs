@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <summary>
 /// Analyzes various text properties for complex script processing.
 /// </summary>
-[Guid("b7e6163e-7f46-43b4-84b3-e4e6249c365d")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteTextAnalyzer
 {
+    public const string Guid = "b7e6163e-7f46-43b4-84b3-e4e6249c365d";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

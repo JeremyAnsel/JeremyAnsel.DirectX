@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// Represents a keyed mutex, which allows exclusive access to a shared resource that is used by multiple devices.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiDeviceSubObject"/></remarks>
-[Guid("9d8e1289-d7b3-465f-8126-250e349af85d")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiKeyedMutex
 {
+    public const string Guid = "9d8e1289-d7b3-465f-8126-250e349af85d";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

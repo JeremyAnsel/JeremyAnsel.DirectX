@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// Encapsulates a list of graphics commands for play back.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("a24bc4d1-769e-43f7-8013-98ff566c18e2")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11CommandList
 {
+    public const string Guid = "a24bc4d1-769e-43f7-8013-98ff566c18e2";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

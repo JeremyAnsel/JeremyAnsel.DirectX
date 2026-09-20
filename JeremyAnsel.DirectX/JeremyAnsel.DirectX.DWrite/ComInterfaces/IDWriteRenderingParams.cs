@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <summary>
 /// The interface that represents text rendering settings for glyph rasterization and filtering.
 /// </summary>
-[Guid("2f0da53a-2add-47cd-82ee-d9ec34688e75")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteRenderingParams
 {
+    public const string Guid = "2f0da53a-2add-47cd-82ee-d9ec34688e75";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

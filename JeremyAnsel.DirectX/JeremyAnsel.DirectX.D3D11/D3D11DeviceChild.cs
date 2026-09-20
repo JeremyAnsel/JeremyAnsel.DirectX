@@ -21,7 +21,7 @@ public unsafe class D3D11DeviceChild : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11DeviceChildGuid = typeof(ID3D11DeviceChild).GUID;
+    public static readonly Guid D3D11DeviceChildGuid = new(ID3D11DeviceChild.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11DeviceChild* _comImpl;

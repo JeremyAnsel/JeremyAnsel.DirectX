@@ -6,9 +6,11 @@ using System.Runtime.InteropServices;
 
 namespace JeremyAnsel.DirectX.WinCodec.Interop;
 
-[Guid("0000000C-0000-0000-C000-000000000046")]
+[Guid(Guid)]
 internal unsafe struct IWicWin32Stream
 {
+    public const string Guid = "0000000C-0000-0000-C000-000000000046";
+
     public delegate* unmanaged[Stdcall]<nint, in Guid, nint*, int> QueryInterface;
     public delegate* unmanaged[Stdcall]<nint, int> AddRef;
     public delegate* unmanaged[Stdcall]<nint, int> Release;

@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// The depth-stencil-state interface holds a description for depth-stencil state that you can bind to the output-merger stage.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("03823efb-8d8f-4e1c-9aa2-f64bb2cbfdf1")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11DepthStencilState
 {
+    public const string Guid = "03823efb-8d8f-4e1c-9aa2-f64bb2cbfdf1";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -18,7 +18,7 @@ public unsafe class D2D1RoundedRectangleGeometry : D2D1Geometry
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1RoundedRectangleGeometryGuid = typeof(ID2D1RoundedRectangleGeometry).GUID;
+    public static readonly Guid D2D1RoundedRectangleGeometryGuid = new(ID2D1RoundedRectangleGeometry.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1RoundedRectangleGeometry* _comImpl;

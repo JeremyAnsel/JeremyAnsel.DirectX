@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <summary>
 /// The IDWritePixelSnapping interface defines the pixel snapping properties of a text renderer.
 /// </summary>
-[Guid("eaf3a2da-ecf4-4d24-b644-b34f6842024b")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWritePixelSnapping
 {
+    public const string Guid = "eaf3a2da-ecf4-4d24-b644-b34f6842024b";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

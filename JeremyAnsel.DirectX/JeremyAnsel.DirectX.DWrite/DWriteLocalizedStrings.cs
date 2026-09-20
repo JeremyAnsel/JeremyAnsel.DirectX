@@ -21,7 +21,7 @@ public unsafe class DWriteLocalizedStrings : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DWriteLocalizedStringsGuid = typeof(IDWriteLocalizedStrings).GUID;
+    public static readonly Guid DWriteLocalizedStringsGuid = new(IDWriteLocalizedStrings.Guid);
 
     private readonly nint _comPtr;
     private readonly IDWriteLocalizedStrings* _comImpl;

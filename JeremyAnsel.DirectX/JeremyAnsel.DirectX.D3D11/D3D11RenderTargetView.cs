@@ -19,7 +19,7 @@ public unsafe class D3D11RenderTargetView : D3D11View
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11RenderTargetViewGuid = typeof(ID3D11RenderTargetView).GUID;
+    public static readonly Guid D3D11RenderTargetViewGuid = new(ID3D11RenderTargetView.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11RenderTargetView* _comImpl;

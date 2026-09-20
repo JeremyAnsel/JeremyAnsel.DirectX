@@ -22,7 +22,7 @@ public unsafe class DWriteFontFamily : DWriteFontList
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DWriteFontFamilyGuid = typeof(IDWriteFontFamily).GUID;
+    public static readonly Guid DWriteFontFamilyGuid = new(IDWriteFontFamily.Guid);
 
     private readonly nint _comPtr;
     private readonly IDWriteFontFamily* _comImpl;

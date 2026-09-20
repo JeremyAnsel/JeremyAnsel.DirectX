@@ -23,7 +23,7 @@ public unsafe class D2D1Factory : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1FactoryGuid = typeof(ID2D1Factory).GUID;
+    public static readonly Guid D2D1FactoryGuid = new(ID2D1Factory.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1Factory* _comImpl;
@@ -46,7 +46,7 @@ public unsafe class D2D1Factory : DXComObject
     public static D2D1Factory Create(D2D1FactoryType factoryType)
     {
         nint ptr;
-        int hr = NativeMethods.D2D1CreateFactory(factoryType, typeof(ID2D1Factory).GUID, null, &ptr);
+        int hr = NativeMethods.D2D1CreateFactory(factoryType, new Guid(ID2D1Factory.Guid), null, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return new D2D1Factory(ptr);
     }
@@ -63,7 +63,7 @@ public unsafe class D2D1Factory : DXComObject
         byte* factoryOptionsPtr = stackalloc byte[size];
         D2D1FactoryOptions.NativeWriteTo((nint)factoryOptionsPtr, factoryOptions);
         nint ptr;
-        int hr = NativeMethods.D2D1CreateFactory(factoryType, typeof(ID2D1Factory).GUID, factoryOptionsPtr, &ptr);
+        int hr = NativeMethods.D2D1CreateFactory(factoryType, new Guid(ID2D1Factory.Guid), factoryOptionsPtr, &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return new D2D1Factory(ptr);
     }

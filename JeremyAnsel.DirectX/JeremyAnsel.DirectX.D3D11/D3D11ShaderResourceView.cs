@@ -19,7 +19,7 @@ public unsafe class D3D11ShaderResourceView : D3D11View
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11ShaderResourceViewGuid = typeof(ID3D11ShaderResourceView).GUID;
+    public static readonly Guid D3D11ShaderResourceViewGuid = new(ID3D11ShaderResourceView.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11ShaderResourceView* _comImpl;

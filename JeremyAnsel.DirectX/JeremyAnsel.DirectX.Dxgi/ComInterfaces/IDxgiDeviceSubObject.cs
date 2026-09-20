@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// Inherited from objects that are tied to the device so that they can retrieve a pointer to it.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiObject"/></remarks>
-[Guid("3d3e0379-f9de-4d58-bb6c-18d62992f1a6")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiDeviceSubObject
 {
+    public const string Guid = "3d3e0379-f9de-4d58-bb6c-18d62992f1a6";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

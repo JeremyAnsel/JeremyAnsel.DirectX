@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// This interface encapsulates methods for retrieving data from the GPU asynchronously.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("4b35d0cd-1e15-4258-9c98-1b1333f6dd3b")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11Asynchronous
 {
+    public const string Guid = "4b35d0cd-1e15-4258-9c98-1b1333f6dd3b";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

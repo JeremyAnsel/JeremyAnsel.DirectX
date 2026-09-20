@@ -18,7 +18,7 @@ public unsafe class D2D1SolidColorBrush : D2D1Brush
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1SolidColorBrushGuid = typeof(ID2D1SolidColorBrush).GUID;
+    public static readonly Guid D2D1SolidColorBrushGuid = new(ID2D1SolidColorBrush.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1SolidColorBrush* _comImpl;

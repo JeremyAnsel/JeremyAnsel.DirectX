@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A predicate interface determines whether geometry should be processed depending on the results of a previous draw call.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11Query"/></remarks>
-[Guid("9eb576dd-9f77-4d86-81aa-8bab5fe490e2")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11Predicate
 {
+    public const string Guid = "9eb576dd-9f77-4d86-81aa-8bab5fe490e2";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

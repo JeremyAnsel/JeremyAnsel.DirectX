@@ -11,9 +11,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A resource interface provides common actions on all resources.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("dc8e63f3-d12b-4952-b47b-5e45026a862d")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11Resource
 {
+    public const string Guid = "dc8e63f3-d12b-4952-b47b-5e45026a862d";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -18,7 +18,7 @@ public unsafe class D2D1GeometrySink : D2D1SimplifiedGeometrySink
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1GeometrySinkGuid = typeof(ID2D1GeometrySink).GUID;
+    public static readonly Guid D2D1GeometrySinkGuid = new(ID2D1GeometrySink.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1GeometrySink* _comImpl;

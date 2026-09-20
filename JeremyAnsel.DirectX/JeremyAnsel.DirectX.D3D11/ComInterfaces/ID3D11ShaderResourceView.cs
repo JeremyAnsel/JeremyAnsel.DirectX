@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A shader-resource-view interface specifies the subresources a shader can access during rendering.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11View"/></remarks>
-[Guid("b0e06fe0-8192-4e1a-b1ca-36d7414710b2")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11ShaderResourceView
 {
+    public const string Guid = "b0e06fe0-8192-4e1a-b1ca-36d7414710b2";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -20,7 +20,7 @@ public unsafe class DxgiFactory : DxgiObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DxgiFactoryGuid = typeof(IDxgiFactory).GUID;
+    public static readonly Guid DxgiFactoryGuid = new(IDxgiFactory.Guid);
 
     private readonly nint _comPtr;
     private readonly IDxgiFactory* _comImpl;
@@ -56,7 +56,7 @@ public unsafe class DxgiFactory : DxgiObject
     public static DxgiFactory Create()
     {
         nint ptr;
-        int hr = NativeMethods.CreateDxgiFactory(typeof(IDxgiFactory).GUID, &ptr);
+        int hr = NativeMethods.CreateDxgiFactory(new(IDxgiFactory.Guid), &ptr);
         Marshal.ThrowExceptionForHR(hr);
         return new DxgiFactory(ptr);
     }

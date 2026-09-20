@@ -18,7 +18,7 @@ public unsafe class D3D11Predicate : D3D11Query
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11PredicateGuid = typeof(ID3D11Predicate).GUID;
+    public static readonly Guid D3D11PredicateGuid = new(ID3D11Predicate.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11Predicate* _comImpl;

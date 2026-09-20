@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// An <c>IDXGIOutput</c> interface represents an adapter output (such as a monitor).
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiObject"/></remarks>
-[Guid("ae02eedb-c735-4690-8d52-5a8dc20213aa")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiOutput
 {
+    public const string Guid = "ae02eedb-c735-4690-8d52-5a8dc20213aa";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

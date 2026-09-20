@@ -18,7 +18,7 @@ public unsafe class D2D1EllipseGeometry : D2D1Geometry
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1EllipseGeometryGuid = typeof(ID2D1EllipseGeometry).GUID;
+    public static readonly Guid D2D1EllipseGeometryGuid = new(ID2D1EllipseGeometry.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1EllipseGeometry* _comImpl;

@@ -18,7 +18,7 @@ public unsafe class D2D1Brush : D2D1Resource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1BrushGuid = typeof(ID2D1Brush).GUID;
+    public static readonly Guid D2D1BrushGuid = new(ID2D1Brush.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1Brush* _comImpl;

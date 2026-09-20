@@ -23,7 +23,7 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DWriteTextLayoutGuid = typeof(IDWriteTextLayout).GUID;
+    public static readonly Guid DWriteTextLayoutGuid = new(IDWriteTextLayout.Guid);
 
     private readonly nint _comPtr;
     private readonly IDWriteTextLayout* _comImpl;

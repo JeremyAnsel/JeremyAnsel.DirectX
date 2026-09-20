@@ -18,7 +18,7 @@ public unsafe class D2D1RadialGradientBrush : D2D1Brush
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1RadialGradientBrushGuid = typeof(ID2D1RadialGradientBrush).GUID;
+    public static readonly Guid D2D1RadialGradientBrushGuid = new(ID2D1RadialGradientBrush.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1RadialGradientBrush* _comImpl;

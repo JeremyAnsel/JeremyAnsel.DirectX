@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// This interface encapsulates an HLSL class.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11DeviceChild"/></remarks>
-[Guid("a6cd7faa-b0b7-4a2f-9436-8662a65797cb")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11ClassInstance
 {
+    public const string Guid = "a6cd7faa-b0b7-4a2f-9436-8662a65797cb";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

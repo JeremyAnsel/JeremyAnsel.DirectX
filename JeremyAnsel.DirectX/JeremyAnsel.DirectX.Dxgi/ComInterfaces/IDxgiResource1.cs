@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// An <c>IDXGIResource1</c> interface extends the <c>IDXGIResource</c> interface by adding support for creating a sub-resource surface object and for creating a handle to a shared resource.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiResource"/></remarks>
-[Guid("30961379-4609-4a41-998e-54fe567ee0c1")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiResource1
 {
+    public const string Guid = "30961379-4609-4a41-998e-54fe567ee0c1";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

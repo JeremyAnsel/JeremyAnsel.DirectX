@@ -19,7 +19,7 @@ public unsafe class D3D11GeometryShader : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11GeometryShaderGuid = typeof(ID3D11GeometryShader).GUID;
+    public static readonly Guid D3D11GeometryShaderGuid = new(ID3D11GeometryShader.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11GeometryShader* _comImpl;

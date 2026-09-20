@@ -20,7 +20,7 @@ public unsafe class D3D10Device1 : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D10Device1Guid = typeof(ID3D10Device1).GUID;
+    public static readonly Guid D3D10Device1Guid = new(ID3D10Device1.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D10Device1* _comImpl;

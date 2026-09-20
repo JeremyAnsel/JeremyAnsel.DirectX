@@ -20,7 +20,7 @@ public unsafe class DxgiDevice2 : DxgiObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DxgiDevice2Guid = typeof(IDxgiDevice2).GUID;
+    public static readonly Guid DxgiDevice2Guid = new(IDxgiDevice2.Guid);
 
     private readonly nint _comPtr;
     private readonly IDxgiDevice2* _comImpl;

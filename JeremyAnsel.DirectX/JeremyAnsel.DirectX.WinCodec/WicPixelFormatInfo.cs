@@ -19,7 +19,7 @@ public unsafe class WicPixelFormatInfo : WicComponentInfo
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicPixelFormatInfoGuid = typeof(IWicPixelFormatInfo2).GUID;
+    public static readonly Guid WicPixelFormatInfoGuid = new(IWicPixelFormatInfo2.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicPixelFormatInfo2* _comImpl;

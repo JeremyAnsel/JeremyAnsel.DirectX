@@ -21,7 +21,7 @@ public unsafe class DxgiSwapChain2 : DxgiDeviceSubObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DxgiSwapChain2Guid = typeof(IDxgiSwapChain1).GUID;
+    public static readonly Guid DxgiSwapChain2Guid = new(IDxgiSwapChain1.Guid);
 
     private readonly nint _comPtr;
     private readonly IDxgiSwapChain1* _comImpl;

@@ -24,7 +24,7 @@ public unsafe class DWriteTextFormat : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DWriteTextFormatGuid = typeof(IDWriteTextFormat).GUID;
+    public static readonly Guid DWriteTextFormatGuid = new(IDWriteTextFormat.Guid);
 
     private readonly nint _comPtr;
     private readonly IDWriteTextFormat* _comImpl;

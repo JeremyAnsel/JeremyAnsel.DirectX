@@ -12,9 +12,11 @@ internal delegate int LPDIENUMEFFECTSCALLBACK(nint pdei, nint pvRef);
 
 internal delegate int LPDIENUMCREATEDEFFECTOBJECTSCALLBACK(nint peff, nint pvRef);
 
-[Guid(DirectInputGuids.IDirectInputDevice8WString)]
+[Guid(Guid)]
 internal unsafe readonly struct IDirectInputDevice8
 {
+    public const string Guid = DirectInputGuids.IDirectInputDevice8WString;
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

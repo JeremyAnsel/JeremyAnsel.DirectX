@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// The <c>IDXGIDevice3</c> interface implements a derived class for DXGI objects that produce image data. The interface exposes a method to trim graphics memory usage by the DXGI device.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiDevice2"/></remarks>
-[Guid("6007896c-3244-4afd-bf18-a6d3beda5023")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiDevice3
 {
+    public const string Guid = "6007896c-3244-4afd-bf18-a6d3beda5023";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// The <c>IDXGIAdapter2</c> interface represents a display sub-system, which includes one or more GPUs, DACs, and video memory.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiAdapter1"/></remarks>
-[Guid("0AA1AE0A-FA0E-4B84-8644-E05FF8E5ACB5")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiAdapter2
 {
+    public const string Guid = "0AA1AE0A-FA0E-4B84-8644-E05FF8E5ACB5";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

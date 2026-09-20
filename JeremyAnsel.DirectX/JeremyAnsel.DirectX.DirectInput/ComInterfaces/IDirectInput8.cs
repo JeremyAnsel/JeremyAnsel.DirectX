@@ -10,9 +10,11 @@ internal delegate int LPDIENUMDEVICESCALLBACK(nint lpddi, nint pvRef);
 
 internal delegate int LPDIENUMDEVICESBYSEMANTICSCB(nint lpddi, nint lpdid, DIEDBS dwFlags, int dwRemaining, nint pvRef);
 
-[Guid(DirectInputGuids.IDirectInput8WString)]
+[Guid(Guid)]
 internal unsafe readonly struct IDirectInput8
 {
+    public const string Guid = DirectInputGuids.IDirectInput8WString;
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

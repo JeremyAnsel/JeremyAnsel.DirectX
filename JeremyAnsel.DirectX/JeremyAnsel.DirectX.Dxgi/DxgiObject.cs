@@ -21,7 +21,7 @@ public unsafe class DxgiObject : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DxgiObjectGuid = typeof(IDxgiObject).GUID;
+    public static readonly Guid DxgiObjectGuid = new(IDxgiObject.Guid);
 
     private readonly nint _comPtr;
     private readonly IDxgiObject* _comImpl;

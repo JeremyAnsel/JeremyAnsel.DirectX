@@ -11,9 +11,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// <summary>
 /// The device interface represents a virtual adapter; it is used to create resources.
 /// </summary>
-[Guid("db6f6ddb-ac77-4e88-8253-819df9bbf140")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11Device
 {
+    public const string Guid = "db6f6ddb-ac77-4e88-8253-819df9bbf140";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

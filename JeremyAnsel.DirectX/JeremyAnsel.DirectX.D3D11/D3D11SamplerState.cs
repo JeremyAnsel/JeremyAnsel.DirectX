@@ -19,7 +19,7 @@ public unsafe class D3D11SamplerState : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11SamplerStateGuid = typeof(ID3D11SamplerState).GUID;
+    public static readonly Guid D3D11SamplerStateGuid = new(ID3D11SamplerState.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11SamplerState* _comImpl;

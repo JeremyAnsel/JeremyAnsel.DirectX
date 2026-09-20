@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// The font file enumerator interface encapsulates a collection of font files. The font system uses this interface
 /// to enumerate font files when building a font collection.
 /// </summary>
-[Guid("72755049-5ff7-435d-8348-4be97cfa6c7c")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteFontFileEnumerator
 {
+    public const string Guid = "72755049-5ff7-435d-8348-4be97cfa6c7c";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

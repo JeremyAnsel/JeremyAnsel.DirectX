@@ -23,7 +23,7 @@ public unsafe class DWriteFontFace : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DWriteFontFaceGuid = typeof(IDWriteFontFace).GUID;
+    public static readonly Guid DWriteFontFaceGuid = new(IDWriteFontFace.Guid);
 
     private readonly nint _comPtr;
     private readonly IDWriteFontFace* _comImpl;

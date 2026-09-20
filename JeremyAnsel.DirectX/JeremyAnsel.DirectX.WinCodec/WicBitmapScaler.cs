@@ -19,7 +19,7 @@ public unsafe class WicBitmapScaler : WicBitmapSource
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicBitmapScalerGuid = typeof(IWicBitmapScaler).GUID;
+    public static readonly Guid WicBitmapScalerGuid = new(IWicBitmapScaler.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicBitmapScaler* _comImpl;

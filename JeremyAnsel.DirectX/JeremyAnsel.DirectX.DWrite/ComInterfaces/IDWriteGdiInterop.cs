@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <summary>
 /// The GDI interop interface provides interoperability with GDI.
 /// </summary>
-[Guid("1edd9491-9853-4299-898f-6432983b6f3a")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteGdiInterop
 {
+    public const string Guid = "1edd9491-9853-4299-898f-6432983b6f3a";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

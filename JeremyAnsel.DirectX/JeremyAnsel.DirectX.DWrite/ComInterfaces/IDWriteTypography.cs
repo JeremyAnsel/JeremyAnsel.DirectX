@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.DWrite.ComInterfaces;
 /// <summary>
 /// Font typography setting.
 /// </summary>
-[Guid("55f1112b-1dc2-4b3c-9541-f46894ed85b6")]
+[Guid(Guid)]
 internal unsafe readonly struct IDWriteTypography
 {
+    public const string Guid = "55f1112b-1dc2-4b3c-9541-f46894ed85b6";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

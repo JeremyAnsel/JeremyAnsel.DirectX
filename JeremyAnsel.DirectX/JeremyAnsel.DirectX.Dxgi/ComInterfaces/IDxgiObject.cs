@@ -9,9 +9,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// <summary>
 /// An <c>IDXGIObject</c> interface is a base interface for all DXGI objects. <c>IDXGIObject</c> supports associating caller-defined (private data) with an object and retrieval of an interface to the parent object.
 /// </summary>
-[Guid("aec22fb8-76f3-4639-9be0-28eb43a67a2e")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiObject
 {
+    public const string Guid = "aec22fb8-76f3-4639-9be0-28eb43a67a2e";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

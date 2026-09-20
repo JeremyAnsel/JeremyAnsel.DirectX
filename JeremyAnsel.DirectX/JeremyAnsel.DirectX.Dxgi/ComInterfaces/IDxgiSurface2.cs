@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// The <c>IDXGISurface2</c> interface extends the <c>IDXGISurface1</c> interface by adding support for sub-resource surfaces and getting a handle to a shared resource.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiSurface1"/></remarks>
-[Guid("aba496dd-b617-4cb8-a866-bc44d7eb1fa2")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiSurface2
 {
+    public const string Guid = "aba496dd-b617-4cb8-a866-bc44d7eb1fa2";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

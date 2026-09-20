@@ -20,7 +20,7 @@ public unsafe class WicDdsFrameDecode : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid WicDdsFrameDecodeGuid = typeof(IWicDdsFrameDecode).GUID;
+    public static readonly Guid WicDdsFrameDecodeGuid = new(IWicDdsFrameDecode.Guid);
 
     private readonly nint _comPtr;
     private readonly IWicDdsFrameDecode* _comImpl;

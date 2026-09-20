@@ -31,7 +31,7 @@ public unsafe class DirectInputDevice : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DirectInputDeviceGuid = typeof(IDirectInputDevice8).GUID;
+    public static readonly Guid DirectInputDeviceGuid = new(IDirectInputDevice8.Guid);
 
     private readonly nint _comPtr;
     private readonly IDirectInputDevice8* _comImpl;

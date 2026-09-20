@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.D3D11.ComInterfaces;
 /// A 1D texture interface accesses texel data, which is structured memory.
 /// </summary>
 /// <remarks>Inherited from <see cref="ID3D11Resource"/></remarks>
-[Guid("f8fb5c27-c6b3-4f75-a4c8-439af2ef564c")]
+[Guid(Guid)]
 internal unsafe readonly struct ID3D11Texture1D
 {
+    public const string Guid = "f8fb5c27-c6b3-4f75-a4c8-439af2ef564c";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

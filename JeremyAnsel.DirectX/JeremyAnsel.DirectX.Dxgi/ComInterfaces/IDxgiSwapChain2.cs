@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// Extends <c>IDXGISwapChain1</c> with methods to support swap back buffer scaling and lower-latency swap chains.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiSwapChain1"/></remarks>
-[Guid("a8be2ac4-199f-4946-b331-79599fb98de7")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiSwapChain2
 {
+    public const string Guid = "a8be2ac4-199f-4946-b331-79599fb98de7";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

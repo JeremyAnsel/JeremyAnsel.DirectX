@@ -21,7 +21,7 @@ public unsafe class DWriteTypography : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid DWriteTypographyGuid = typeof(IDWriteTypography).GUID;
+    public static readonly Guid DWriteTypographyGuid = new(IDWriteTypography.Guid);
 
     private readonly nint _comPtr;
     private readonly IDWriteTypography* _comImpl;

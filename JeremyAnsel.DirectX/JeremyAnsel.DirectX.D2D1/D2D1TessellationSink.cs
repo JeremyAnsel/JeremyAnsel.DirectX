@@ -19,7 +19,7 @@ public unsafe class D2D1TessellationSink : DXComObject
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D2D1TessellationSinkGuid = typeof(ID2D1TessellationSink).GUID;
+    public static readonly Guid D2D1TessellationSinkGuid = new(ID2D1TessellationSink.Guid);
 
     private readonly nint _comPtr;
     private readonly ID2D1TessellationSink* _comImpl;

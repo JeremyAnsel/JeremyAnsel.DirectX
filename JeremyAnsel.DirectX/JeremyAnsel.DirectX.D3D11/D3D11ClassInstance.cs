@@ -19,7 +19,7 @@ public unsafe class D3D11ClassInstance : D3D11DeviceChild
     /// <summary>
     /// The interface GUID.
     /// </summary>
-    public static readonly Guid D3D11ClassInstanceGuid = typeof(ID3D11ClassInstance).GUID;
+    public static readonly Guid D3D11ClassInstanceGuid = new(ID3D11ClassInstance.Guid);
 
     private readonly nint _comPtr;
     private readonly ID3D11ClassInstance* _comImpl;

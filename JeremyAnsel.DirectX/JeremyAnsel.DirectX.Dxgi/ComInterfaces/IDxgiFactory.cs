@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// An <c>IDXGIFactory</c> interface implements methods for generating DXGI objects (which handle full screen transitions).
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiObject"/></remarks>
-[Guid("7b7166ec-21c7-44ae-b21a-c9ae321ae369")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiFactory
 {
+    public const string Guid = "7b7166ec-21c7-44ae-b21a-c9ae321ae369";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;

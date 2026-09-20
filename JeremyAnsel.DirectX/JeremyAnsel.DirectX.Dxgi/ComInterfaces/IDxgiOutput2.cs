@@ -10,9 +10,11 @@ namespace JeremyAnsel.DirectX.Dxgi.ComInterfaces;
 /// Represents an adapter output (such as a monitor). The <c>IDXGIOutput2</c> interface exposes a method to check for multi-plane overlay support on the primary output adapter.
 /// </summary>
 /// <remarks>Inherited from <see cref="IDxgiOutput1"/></remarks>
-[Guid("595e39d1-2724-4663-99b1-da969de28364")]
+[Guid(Guid)]
 internal unsafe readonly struct IDxgiOutput2
 {
+    public const string Guid = "595e39d1-2724-4663-99b1-da969de28364";
+
     private readonly nint QueryInterface;
     private readonly nint AddRef;
     private readonly nint Release;
