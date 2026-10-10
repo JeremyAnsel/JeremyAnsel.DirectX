@@ -2244,7 +2244,7 @@ All coordinates are in device independent pixels (DIPs).</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.html">JeremyAnsel</a>.<a class="xref" href="JeremyAnsel.DirectX.html">DirectX</a>.<a class="xref" href="JeremyAnsel.DirectX.DWrite.html">DWrite</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">JeremyAnsel</span>.<span class="xref">DirectX</span>.<a class="xref" href="JeremyAnsel.DirectX.DWrite.html">DWrite</a></h6>
   <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.DWrite.dll</h6>
   <h5 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -2389,7 +2389,7 @@ public class DWriteTextLayout : DWriteTextFormat, IDisposable</code></pre>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_DetermineMinWidth.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.DetermineMinWidth%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L492">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L523">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_DetermineMinWidth_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.DetermineMinWidth*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_DetermineMinWidth" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.DetermineMinWidth">DetermineMinWidth()</h4>
@@ -2419,10 +2419,65 @@ emergency breaking between the characters of whole words.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetDrawingEffect_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L398">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetDrawingEffect_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetDrawingEffect_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetDrawingEffect(uint, out DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Get the application-defined drawing effect where the current position is at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public nint GetDrawingEffect(uint currentPosition, out DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
+        <td><span class="parametername">currentPosition</span></td>
+        <td><p>The current text position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>The position range of the current format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L211">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L226">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontCollection(uint, out DWriteTextRange)</h4>
@@ -2478,7 +2533,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L245">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L260">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontFamilyName(uint, out DWriteTextRange)</h4>
@@ -2534,7 +2589,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__System_Span_System_Char__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40%2CSystem.Span%7BSystem.Char%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L263">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L278">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__System_Span_System_Char__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyName(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@,System.Span{System.Char})">GetFontFamilyName(uint, out DWriteTextRange, Span&lt;char&gt;)</h4>
@@ -2580,7 +2635,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyNameLength_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyNameLength(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L228">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L243">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyNameLength_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyNameLength*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontFamilyNameLength_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontFamilyNameLength(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontFamilyNameLength(uint, out DWriteTextRange)</h4>
@@ -2635,7 +2690,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontSize_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontSize(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L333">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L348">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontSize_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontSize*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontSize_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontSize(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontSize(uint, out DWriteTextRange)</h4>
@@ -2691,7 +2746,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStretch_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStretch(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L316">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L331">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStretch_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStretch*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStretch_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStretch(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontStretch(uint, out DWriteTextRange)</h4>
@@ -2747,7 +2802,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStyle_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStyle(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L299">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L314">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStyle_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStyle*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontStyle_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontStyle(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontStyle(uint, out DWriteTextRange)</h4>
@@ -2803,7 +2858,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontWeight_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontWeight(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L282">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L297">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontWeight_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontWeight*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontWeight_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontWeight(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetFontWeight(uint, out DWriteTextRange)</h4>
@@ -2859,7 +2914,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L418">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L449">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetLocaleName(uint, out DWriteTextRange)</h4>
@@ -2915,7 +2970,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__System_Span_System_Char__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40%2CSystem.Span%7BSystem.Char%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L436">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L467">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleName_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__System_Span_System_Char__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleName(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@,System.Span{System.Char})">GetLocaleName(uint, out DWriteTextRange, Span&lt;char&gt;)</h4>
@@ -2961,7 +3016,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleNameLength_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleNameLength(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L401">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L432">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleNameLength_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleNameLength*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetLocaleNameLength_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetLocaleNameLength(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetLocaleNameLength(uint, out DWriteTextRange)</h4>
@@ -3016,7 +3071,7 @@ emergency breaking between the characters of whole words.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetMetrics.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetMetrics%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L459">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L490">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetMetrics_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetMetrics*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetMetrics" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetMetrics">GetMetrics()</h4>
@@ -3054,7 +3109,7 @@ adornments may extend outside the returned width and height.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetOverhangMetrics.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetOverhangMetrics%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L478">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L509">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetOverhangMetrics_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetOverhangMetrics*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetOverhangMetrics" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetOverhangMetrics">GetOverhangMetrics()</h4>
@@ -3092,7 +3147,7 @@ is allowed to draw them in any variety of styles.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetStrikethrough_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetStrikethrough(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L367">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L382">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetStrikethrough_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetStrikethrough*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetStrikethrough_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetStrikethrough(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetStrikethrough(uint, out DWriteTextRange)</h4>
@@ -3148,7 +3203,7 @@ is allowed to draw them in any variety of styles.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetTypography_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetTypography(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L384">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L415">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetTypography_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetTypography*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetTypography_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetTypography(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetTypography(uint, out DWriteTextRange)</h4>
@@ -3204,7 +3259,7 @@ is allowed to draw them in any variety of styles.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetUnderline_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetUnderline(System.UInt32%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L350">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L365">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetUnderline_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetUnderline*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetUnderline_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetUnderline(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)">GetUnderline(uint, out DWriteTextRange)</h4>
@@ -3260,7 +3315,7 @@ is allowed to draw them in any variety of styles.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestPoint_System_Single_System_Single_System_Boolean__System_Boolean__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestPoint(System.Single%2CSystem.Single%2CSystem.Boolean%40%2CSystem.Boolean%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L516">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L547">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestPoint_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestPoint*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestPoint_System_Single_System_Single_System_Boolean__System_Boolean__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestPoint(System.Single,System.Single,System.Boolean@,System.Boolean@)">HitTestPoint(float, float, out bool, out bool)</h4>
@@ -3336,7 +3391,7 @@ When false, the position nearest the text's edge is returned.</p>
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestTextPosition_System_UInt32_System_Boolean_System_Single__System_Single__.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestTextPosition(System.UInt32%2CSystem.Boolean%2CSystem.Single%40%2CSystem.Single%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L553">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L584">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestTextPosition_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestTextPosition*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_HitTestTextPosition_System_UInt32_System_Boolean_System_Single__System_Single__" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.HitTestTextPosition(System.UInt32,System.Boolean,System.Single@,System.Single@)">HitTestTextPosition(uint, bool, out float, out float)</h4>
@@ -3414,6 +3469,50 @@ However, the returned X coordinate will be correct for either case.
 You can get a text length back that is larger than a single character.
 This happens for complex scripts when multiple characters form a single cluster,
 when diacritics join their base character, or when you test a surrogate pair.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetDrawingEffect_System_IntPtr_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect(System.IntPtr%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L174">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetDrawingEffect_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect*"></a>
+  <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetDrawingEffect_System_IntPtr_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect(System.IntPtr,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetDrawingEffect(nint, DWriteTextRange)</h4>
+  <div class="markdown level1 summary"><p>Set application-defined drawing effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDrawingEffect(nint drawingEffect, DWriteTextRange textRange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></td>
+        <td><span class="parametername">drawingEffect</span></td>
+        <td><p>Pointer to an application-defined drawing effect.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.DWrite.DWriteTextRange.html">DWriteTextRange</a></td>
+        <td><span class="parametername">textRange</span></td>
+        <td><p>Text range to which this change applies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetDrawingEffect_System_IntPtr_JeremyAnsel_DirectX_DWrite_DWriteTextRange__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This drawing effect is associated with the specified range and will be passed back
+to the application via the callback when the range is drawn at drawing time.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -3700,7 +3799,7 @@ when diacritics join their base character, or when you test a surrogate pair.</p
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLocaleName_System_ReadOnlySpan_System_Char__JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLocaleName(System.ReadOnlySpan%7BSystem.Char%7D%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L196">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L211">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLocaleName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLocaleName*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLocaleName_System_ReadOnlySpan_System_Char__JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLocaleName(System.ReadOnlySpan{System.Char},JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetLocaleName(ReadOnlySpan&lt;char&gt;, DWriteTextRange)</h4>
@@ -3740,7 +3839,7 @@ when diacritics join their base character, or when you test a surrogate pair.</p
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLocaleName_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLocaleName(System.String%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L186">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L201">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLocaleName_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLocaleName*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetLocaleName_System_String_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetLocaleName(System.String,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetLocaleName(string, DWriteTextRange)</h4>
@@ -3820,7 +3919,7 @@ when diacritics join their base character, or when you test a surrogate pair.</p
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetTypography_JeremyAnsel_DirectX_DWrite_DWriteTypography_JeremyAnsel_DirectX_DWrite_DWriteTextRange_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetTypography(JeremyAnsel.DirectX.DWrite.DWriteTypography%2CJeremyAnsel.DirectX.DWrite.DWriteTextRange)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L170">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX/blob/master/JeremyAnsel.DirectX/JeremyAnsel.DirectX.DWrite/DWriteTextLayout.cs/#L185">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetTypography_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetTypography*"></a>
   <h4 id="JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetTypography_JeremyAnsel_DirectX_DWrite_DWriteTypography_JeremyAnsel_DirectX_DWrite_DWriteTextRange_" data-uid="JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetTypography(JeremyAnsel.DirectX.DWrite.DWriteTypography,JeremyAnsel.DirectX.DWrite.DWriteTextRange)">SetTypography(DWriteTypography?, DWriteTextRange)</h4>

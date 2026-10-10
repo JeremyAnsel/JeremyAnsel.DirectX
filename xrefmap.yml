@@ -11077,6 +11077,15 @@ references:
   fullName.vb: JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap, JeremyAnsel.DirectX.D2D1.D2D1RectF, Single, JeremyAnsel.DirectX.D2D1.D2D1BitmapInterpolationMode, JeremyAnsel.DirectX.D2D1.D2D1RectF)
   nameWithType: D2D1RenderTarget.DrawBitmap(D2D1Bitmap?, in D2D1RectF, float, D2D1BitmapInterpolationMode, in D2D1RectF)
   nameWithType.vb: D2D1RenderTarget.DrawBitmap(D2D1Bitmap, D2D1RectF, Single, D2D1BitmapInterpolationMode, D2D1RectF)
+- uid: JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,System.Single)
+  name: DrawBitmap(D2D1Bitmap?, float)
+  href: api/JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_JeremyAnsel_DirectX_D2D1_D2D1Bitmap_System_Single_
+  commentId: M:JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap,System.Single)
+  name.vb: DrawBitmap(D2D1Bitmap, Single)
+  fullName: JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap?, float)
+  fullName.vb: JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap(JeremyAnsel.DirectX.D2D1.D2D1Bitmap, Single)
+  nameWithType: D2D1RenderTarget.DrawBitmap(D2D1Bitmap?, float)
+  nameWithType.vb: D2D1RenderTarget.DrawBitmap(D2D1Bitmap, Single)
 - uid: JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.DrawBitmap*
   name: DrawBitmap
   href: api/JeremyAnsel.DirectX.D2D1.D2D1RenderTarget.html#JeremyAnsel_DirectX_D2D1_D2D1RenderTarget_DrawBitmap_
@@ -53197,6 +53206,22 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.DetermineMinWidth
   nameWithType: DWriteTextLayout.DetermineMinWidth
+- uid: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)
+  name: GetDrawingEffect(uint, out DWriteTextRange)
+  href: api/JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html#JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetDrawingEffect_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__
+  commentId: M:JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)
+  name.vb: GetDrawingEffect(UInteger, DWriteTextRange)
+  fullName: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect(uint, out JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  fullName.vb: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect(UInteger, JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  nameWithType: DWriteTextLayout.GetDrawingEffect(uint, out DWriteTextRange)
+  nameWithType.vb: DWriteTextLayout.GetDrawingEffect(UInteger, DWriteTextRange)
+- uid: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect*
+  name: GetDrawingEffect
+  href: api/JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html#JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetDrawingEffect_
+  commentId: Overload:JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetDrawingEffect
+  nameWithType: DWriteTextLayout.GetDrawingEffect
 - uid: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.GetFontCollection(System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)
   name: GetFontCollection(uint, out DWriteTextRange)
   href: api/JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html#JeremyAnsel_DirectX_DWrite_DWriteTextLayout_GetFontCollection_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__
@@ -53491,6 +53516,22 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.MaxWidth
   nameWithType: DWriteTextLayout.MaxWidth
+- uid: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect(System.IntPtr,JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  name: SetDrawingEffect(nint, DWriteTextRange)
+  href: api/JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html#JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetDrawingEffect_System_IntPtr_JeremyAnsel_DirectX_DWrite_DWriteTextRange_
+  commentId: M:JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect(System.IntPtr,JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  name.vb: SetDrawingEffect(IntPtr, DWriteTextRange)
+  fullName: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect(nint, JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  fullName.vb: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect(System.IntPtr, JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  nameWithType: DWriteTextLayout.SetDrawingEffect(nint, DWriteTextRange)
+  nameWithType.vb: DWriteTextLayout.SetDrawingEffect(IntPtr, DWriteTextRange)
+- uid: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect*
+  name: SetDrawingEffect
+  href: api/JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html#JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetDrawingEffect_
+  commentId: Overload:JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetDrawingEffect
+  nameWithType: DWriteTextLayout.SetDrawingEffect
 - uid: JeremyAnsel.DirectX.DWrite.DWriteTextLayout.SetFontCollection(JeremyAnsel.DirectX.DWrite.DWriteFontCollection,JeremyAnsel.DirectX.DWrite.DWriteTextRange)
   name: SetFontCollection(DWriteFontCollection?, DWriteTextRange)
   href: api/JeremyAnsel.DirectX.DWrite.DWriteTextLayout.html#JeremyAnsel_DirectX_DWrite_DWriteTextLayout_SetFontCollection_JeremyAnsel_DirectX_DWrite_DWriteFontCollection_JeremyAnsel_DirectX_DWrite_DWriteTextRange_
