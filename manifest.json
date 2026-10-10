@@ -1371,6 +1371,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/JeremyAnsel.DirectX.D2D1.yml",
       "output": {
         ".html": {

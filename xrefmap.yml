@@ -14487,6 +14487,44 @@ references:
   commentId: F:JeremyAnsel.DirectX.D2D1.D2D1WindowStates.Occluded
   fullName: JeremyAnsel.DirectX.D2D1.D2D1WindowStates.Occluded
   nameWithType: D2D1WindowStates.Occluded
+- uid: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions
+  name: DWriteTextLayoutExtensions
+  href: api/JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.html
+  commentId: T:JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions
+  fullName: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions
+  nameWithType: DWriteTextLayoutExtensions
+- uid: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.GetForegroundBrush(JeremyAnsel.DirectX.DWrite.DWriteTextLayout,System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)
+  name: GetForegroundBrush(DWriteTextLayout, uint, out DWriteTextRange)
+  href: api/JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.html#JeremyAnsel_DirectX_D2D1_DWriteTextLayoutExtensions_GetForegroundBrush_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_System_UInt32_JeremyAnsel_DirectX_DWrite_DWriteTextRange__
+  commentId: M:JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.GetForegroundBrush(JeremyAnsel.DirectX.DWrite.DWriteTextLayout,System.UInt32,JeremyAnsel.DirectX.DWrite.DWriteTextRange@)
+  name.vb: GetForegroundBrush(DWriteTextLayout, UInteger, DWriteTextRange)
+  fullName: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.GetForegroundBrush(JeremyAnsel.DirectX.DWrite.DWriteTextLayout, uint, out JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  fullName.vb: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.GetForegroundBrush(JeremyAnsel.DirectX.DWrite.DWriteTextLayout, UInteger, JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  nameWithType: DWriteTextLayoutExtensions.GetForegroundBrush(DWriteTextLayout, uint, out DWriteTextRange)
+  nameWithType.vb: DWriteTextLayoutExtensions.GetForegroundBrush(DWriteTextLayout, UInteger, DWriteTextRange)
+- uid: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.GetForegroundBrush*
+  name: GetForegroundBrush
+  href: api/JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.html#JeremyAnsel_DirectX_D2D1_DWriteTextLayoutExtensions_GetForegroundBrush_
+  commentId: Overload:JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.GetForegroundBrush
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.GetForegroundBrush
+  nameWithType: DWriteTextLayoutExtensions.GetForegroundBrush
+- uid: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.SetForegroundBrush(JeremyAnsel.DirectX.DWrite.DWriteTextLayout,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  name: SetForegroundBrush(DWriteTextLayout, D2D1Brush?, DWriteTextRange)
+  href: api/JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.html#JeremyAnsel_DirectX_D2D1_DWriteTextLayoutExtensions_SetForegroundBrush_JeremyAnsel_DirectX_DWrite_DWriteTextLayout_JeremyAnsel_DirectX_D2D1_D2D1Brush_JeremyAnsel_DirectX_DWrite_DWriteTextRange_
+  commentId: M:JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.SetForegroundBrush(JeremyAnsel.DirectX.DWrite.DWriteTextLayout,JeremyAnsel.DirectX.D2D1.D2D1Brush,JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  name.vb: SetForegroundBrush(DWriteTextLayout, D2D1Brush, DWriteTextRange)
+  fullName: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.SetForegroundBrush(JeremyAnsel.DirectX.DWrite.DWriteTextLayout, JeremyAnsel.DirectX.D2D1.D2D1Brush?, JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  fullName.vb: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.SetForegroundBrush(JeremyAnsel.DirectX.DWrite.DWriteTextLayout, JeremyAnsel.DirectX.D2D1.D2D1Brush, JeremyAnsel.DirectX.DWrite.DWriteTextRange)
+  nameWithType: DWriteTextLayoutExtensions.SetForegroundBrush(DWriteTextLayout, D2D1Brush?, DWriteTextRange)
+  nameWithType.vb: DWriteTextLayoutExtensions.SetForegroundBrush(DWriteTextLayout, D2D1Brush, DWriteTextRange)
+- uid: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.SetForegroundBrush*
+  name: SetForegroundBrush
+  href: api/JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.html#JeremyAnsel_DirectX_D2D1_DWriteTextLayoutExtensions_SetForegroundBrush_
+  commentId: Overload:JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.SetForegroundBrush
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.D2D1.DWriteTextLayoutExtensions.SetForegroundBrush
+  nameWithType: DWriteTextLayoutExtensions.SetForegroundBrush
 - uid: JeremyAnsel.DirectX.D3D10
   name: JeremyAnsel.DirectX.D3D10
   href: api/JeremyAnsel.DirectX.D3D10.html
