@@ -123,7 +123,7 @@ internal unsafe readonly struct IDWriteTextLayout
     /// This drawing effect is associated with the specified range and will be passed back
     /// to the application via the callback when the range is drawn at drawing time.
     /// </remarks>
-    public readonly delegate* unmanaged[Stdcall]<nint, nint, uint, uint, int> SetDrawingEffect;
+    public readonly delegate* unmanaged[Stdcall]<nint, nint, DWriteTextRange, int> SetDrawingEffect;
 
     /// <summary>
     /// Set inline object.

@@ -163,6 +163,21 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
     }
 
     /// <summary>
+    /// Set application-defined drawing effect.
+    /// </summary>
+    /// <param name="drawingEffect">Pointer to an application-defined drawing effect.</param>
+    /// <param name="textRange">Text range to which this change applies.</param>
+    /// <remarks>
+    /// This drawing effect is associated with the specified range and will be passed back
+    /// to the application via the callback when the range is drawn at drawing time.
+    /// </remarks>
+    public void SetDrawingEffect(nint drawingEffect, DWriteTextRange textRange)
+    {
+        int hr = _comImpl->SetDrawingEffect(_comPtr, drawingEffect, textRange);
+        Marshal.ThrowExceptionForHR(hr);
+    }
+
+    /// <summary>
     /// Set font typography features.
     /// </summary>
     /// <param name="typography">Pointer to font typography setting.</param>
@@ -373,6 +388,22 @@ public unsafe class DWriteTextLayout : DWriteTextFormat
         Marshal.ThrowExceptionForHR(hr);
         textRange = DWriteTextRange.NativeReadFrom((nint)rangePtr);
         return strikethrough != 0;
+    }
+
+    /// <summary>
+    /// Get the application-defined drawing effect where the current position is at.
+    /// </summary>
+    /// <param name="currentPosition">The current text position.</param>
+    /// <param name="textRange">The position range of the current format.</param>
+    public nint GetDrawingEffect(uint currentPosition, out DWriteTextRange textRange)
+    {
+        int size = DWriteTextRange.NativeRequiredSize();
+        byte* rangePtr = stackalloc byte[size];
+        nint effect;
+        int hr = _comImpl->GetDrawingEffect(_comPtr, currentPosition, &effect, rangePtr);
+        Marshal.ThrowExceptionForHR(hr);
+        textRange = DWriteTextRange.NativeReadFrom((nint)rangePtr);
+        return effect;
     }
 
     /// <summary>
