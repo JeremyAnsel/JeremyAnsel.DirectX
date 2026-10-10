@@ -1508,6 +1508,21 @@ public unsafe class D2D1RenderTarget : D2D1Resource
     /// Draws the specified bitmap after scaling it to the size of the specified rectangle.
     /// </summary>
     /// <param name="bitmap">The bitmap to render.</param>
+    /// <param name="opacity">A value between 0.0f and 1.0f, inclusive, that specifies an opacity value to apply to the bitmap; this value is multiplied against the alpha values of the bitmap's contents.</param>
+    public void DrawBitmap(D2D1Bitmap? bitmap, float opacity)
+    {
+        if (bitmap is null)
+        {
+            throw new ArgumentNullException(nameof(bitmap));
+        }
+
+        _comImpl->DrawBitmap(_comPtr, bitmap.Handle, null, opacity, D2D1BitmapInterpolationMode.Linear, null);
+    }
+
+    /// <summary>
+    /// Draws the specified bitmap after scaling it to the size of the specified rectangle.
+    /// </summary>
+    /// <param name="bitmap">The bitmap to render.</param>
     /// <param name="destinationRectangle">The size and position, in device-independent pixels in the render target's coordinate space, of the area to which the bitmap is drawn.</param>
     /// <param name="opacity">A value between 0.0f and 1.0f, inclusive, that specifies an opacity value to apply to the bitmap; this value is multiplied against the alpha values of the bitmap's contents.</param>
     public void DrawBitmap(D2D1Bitmap? bitmap, in D2D1RectF destinationRectangle, float opacity)
